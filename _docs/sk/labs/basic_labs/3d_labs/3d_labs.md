@@ -1,9 +1,9 @@
 ---
 lang: sk
-title: "3D Basic Labs"
+title: "Základné laboratóriá 3D"
 ---
 
-# 3D Basic Labs
+# Základné laboratóriá 3D
 
 [Lab01 Block Forging]({{ '/docs/sk/labs/basic_labs/3d_labs/lab01_block_forging/' | relative_url }})
 

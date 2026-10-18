@@ -1,128 +1,128 @@
 ---
 lang: sk
-title: "Lab 10 Hydraulic press"
+title: "Laboratórna úloha č. 10: Hydraulický lis"
 ---
 
-# Lab 10 Hydraulic press
+# Laboratórna práca č. 10 – Hydraulický lis
 
-Requirement: To setup this operation, First we have to setup [Lab 03 Spike Isothermal Lab]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_03_spike_isothermal/' | relative_url }}).
+Požiadavka: Na nastavenie tejto operácie musíme najprv nastaviť [Lab 03 Spike Isothermal Lab]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_03_spike_isothermal/' | relative_url }}).
 
-This lab will repeat the spike isothermal forging simulation on a 1000 ton hydraulic press. The deformation results will appear similar to the previous spike forging labs, but the velocity will decrease as the press runs out of power during the end of the stroke. An initial die speed of 2”/second will be applied to the top die. As the forming load increases, it will require more power than the press can deliver with subsequent deceleration of the moving die.
+V tomto laboratórnom cvičení sa zopakuje simulácia izotermického kovania hrotu na 1000-tonovom hydraulickom lise. Výsledky deformácie budú podobné ako v predchádzajúcich laboratórnych cvičeniach zameraných na kovanie hrotu, avšak rýchlosť sa zníži, keďže lisovi na konci zdvihu dôjde výkon. Na hornú matricu bude pôsobiť počiatočná rýchlosť 2 palce za sekundu. S rastúcim zaťažením pri tvárnení bude potrebný vyšší výkon, než aký je lis schopný dodať, čo bude mať za následok spomalenie pohybu matrice.
 
-10.1. Creating a New Problem
+10.1. Vytvorenie novej úlohy
 
-10.2. Adding Operation
+10.2. Pridanie operácie
 
-10.3. Importing Database
+10.3. Importovanie databázy
 
-10.4. Assigning Hydraulic movement for Top Die
+10.4. Nastavenie hydraulického pohybu hornej matrice
 
-10.5. Generating Database
+10.5. Vytvorenie databázy
 
-10.6. Starting the Simulation
+10.6. Spustenie simulácie
 
-10.7. Post-Processing the Results
+10.7. Následné spracovanie výsledkov
 
-## Creating a New Problem
+## Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte položku DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte položku **DEFORM GUI Main** vxx.xx. Zobrazí sa hlavné okno DEFORM GUI Main.
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** " radio button in unit field. Define Problem Name as " ******Spike_Hydraulic** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte prepínač „**Anglický**“. Názov úlohy zadajte ako „******Spike_Hydraulic**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak políčko „Zobraziť dialógové okno s možnosťami“ nezaškrtnete, nezobrazí sa dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili novú úlohu s použitím integrovaného výrobného procesu Deform.
 
-Multiple operation wizard will open with the New Project dialog (See Fig. L10.1.), at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this lab we use ‘**Spike_Hydraulic** ’ as the project name.
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom Nový projekt (pozri obr. L10.1.), kde bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tomto cvičení použijeme ako názov projektu „**Spike_Hydraulic**“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_10_hydraulic_press/2d_mobl10_image0001.jpg' | relative_url }})
 
-Assigning Project name
+Priradenie názvu projektu
 
-User can also change the Unit system, project saving file location and add operation by selecting from First operation pull down list and checkbox (see Fig. L10.1.). Using copy Existing project option we can import previous saved projects as new project. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Používateľ môže tiež zmeniť systém jednotiek, umiestnenie súboru na uloženie projektu a pridať operáciu výberom z roletového zoznamu „Prvá operácia“ a zaškrtnutím príslušného políčka (pozri obr. L10.1.). Pomocou možnosti „Kopírovať existujúci projekt“ môžeme importovať predtým uložené projekty ako nové projekty. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.
 
-## Adding Operation
+## Pridanie operácie
 
-Multiple Operation wizard will open. Add 2D Forming operation from the Explorer Operations list. Operation can be add by clicking on 2D Forming operation ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button or user can also add by drag and drop into the Operation Editor.
+Otvorí sa sprievodca viacerými operáciami. Zoznamu operácií v prehliadači pridajte operáciu 2D tvarovania. Operáciu je možné pridať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) pre operáciu 2D tvarovania alebo ju môžete pridať aj pretiahnutím do editora operácií.
 
-## Importing Database
+## Importovanie databázy
 
-Using Import option ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}), Load the database of problem **Spike_Isothermal** , select**-1** step in the Step selection window (see Fig. L10.2.), then click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button until Top Die movement page.
+Pomocou možnosti Importu ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}) načítajte databázu úlohy **Spike_Isothermal**, v okne výberu krokov (pozri obr. L10.2.) vyberte krok **-1** a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}). Klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Pohyb hornej matrice.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_10_hydraulic_press/2d_mobl10_image0002.jpg' | relative_url }})
 
-Selecting step in Step Selection window
+Výber kroku v okne „Výber kroku“
 
-**Note** :
+**Poznámka**:
 
-Two parameters are required to run the hydraulic press model.
+Na spustenie modelu hydraulického lisu sú potrebné dva parametre.
 
-1\. A control speed or nominal starting speed should be supplied to the movement control field. If the press is being run at maximum possible speed, then the speed should be identical to the speed at no load. Any controls within the power envelope are possible including speed (or load) as a function of time or stroke.
+1\. Do poľa riadenia pohybu by sa mala zadávať riadiaca rýchlosť alebo menovitá počiatočná rýchlosť. Ak lis beží pri maximálnej možnej rýchlosti, táto rýchlosť by mala byť zhodná s rýchlosťou bez zaťaženia. Možné sú akékoľvek nastavenia v rámci výkonového rozsahu, vrátane rýchlosti (alebo zaťaženia) ako funkcie času alebo zdvihu.
 
-2\. The power envelope defining the maximum speed available at any load can be described in data pairs. This data is constant for any press configuration. Typically five or more points can adequately define this limit with DEFORM® interpolating data between points. One point at zero load and one at zero force should be included.
+2\. Výkonový rozsah, ktorý určuje maximálnu rýchlosť dostupnú pri akomkoľvek zaťažení, možno opísať pomocou dvojíc údajov. Tieto údaje sú konštantné pre akúkoľvek konfiguráciu lisu. Zvyčajne stačí päť alebo viac bodov na adekvátne stanovenie tohto limitu, pričom systém DEFORM® interpoluje údaje medzi jednotlivými bodmi. Mal by sa zahrnúť jeden bod pri nulovom zaťažení a jeden pri nulovej sile.
 
-Stopping controls such as maximum stroke, maximum load or minimum velocity are all available when using the hydraulic press model.
+Pri používaní tohto modelu hydraulického lisu sú k dispozícii všetky ovládacie prvky na zastavenie, ako napríklad maximálny zdvih, maximálne zaťaženie alebo minimálna rýchlosť.
 
-## Assigning Hydraulic movement for Top Die
+## Nastavenie hydraulického pohybu hornej matrice
 
-Select **Hydraulic****movement** type, define Constant **speed** as **2** in/sec, **check** the **power****limit** check box and click on ![]({{ '/assets/icons/pre_icons/mo_define..._button2.jpg' | relative_url }}) button and define the below power limit curve values in the table (see Fig. L10.3.). Then click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to close the Function window. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Generate DB page.
+Vyberte typ **hydraulického****pohonu**, nastavte konštantnú **rýchlosť** na hodnotu **2** palce/sek., **zaškrtnite** políčko **limit výkonu******výkonu** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define..._button2.jpg' | relative_url }}) a v tabuľke zadajte nižšie uvedené hodnoty krivky obmedzenia výkonu (pozri obr. L10.3.). Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste zatvorili okno Funkcia. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Generovať databázu.
 
-**Force (Klb-s)** |  **Speed (in/s)**  
+**Sila (Klb-s)** |  **Rýchlosť (in/s)**  
 ---|---  
-0 |  2.51  
-100 |  2.50  
-250 |  2.46  
-450 |  2.40  
-700 |  2.26  
-1000 |  1.98  
-1250 |  1.65  
-1500 |  1.25  
-1750 |  0.75  
-2000 |  0.0  
+0 |  2,51  
+100 |  2,50  
+250 |  2,46  
+450 |  2,40  
+700 |  2,26  
+1000 |  1,98  
+1250 |  1,65  
+1500 |  1,25  
+1750 |  0,75  
+2000 |  0,0  
   
-Top Die Movement- Power Limit Curve data
+Údaje o krivke obmedzenia výkonu pri pohybe hornej matrice
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_10_hydraulic_press/2d_mobl10_image0003.jpg' | relative_url }})
 
-Top Die Movement Power limit definition dialog
+Dialógové okno na definovanie limitu výkonu pohybu hornej matrice
 
-## Generating Database
+## Vytvorenie databázy
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process:
+Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) spustíte kontrolu programu, či sa pri nastavení úlohy niečo nevynechalo. Počas kontroly:
 
-Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data). 
+Správy v červenej farbe označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli zadať údaje o materiáloch). 
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, click on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab to run simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Akonáhle program dokončí zapisovanie databázy, kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}), aby ste spustili simuláciu.
 
-## Starting the Simulation
+## Spustenie simulácie
 
-Click on ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) under the simulation tab, as we click on the Run option, Run simulation dialog will open, use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) na karte „Simulácia“. Po kliknutí na možnosť „Spustiť“ sa otvorí dialógové okno „Spustiť simuláciu“. Použite predvolenú možnosť **Pokračovať v spúšťaní** na výber možnosti „**Pokračovať od posledného kroku**“ a potom nastavte režim simulácie na **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie.
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message and Simulation Graphics in Simulation mode. Click the Simulation Message tab to view the Message file. As long as the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked, which is the default setting, the Message file will refresh every couple of seconds.
+Priebeh simulácie je možné sledovať počas jej behu prostredníctvom okien „Simulation Message“ a „Simulation Graphics“ v režime simulácie. Kliknutím na kartu „Simulation Message“ zobrazíte súbor správ. Pokiaľ je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) (čo je predvolené nastavenie), súbor správ sa bude aktualizovať každých pár sekúnd.
 
-The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.
+Súbor „Message“ obsahuje informácie o tom, v ktorom simulačnom kroku sa simulácia momentálne nachádza, a zároveň poskytuje údaje o tom, ako dobre simulácia prebieha.
 
-When the simulation has finished, the following message will be added to the end of the Message file:
+Po ukončení simulácie sa na koniec súboru „Message“ pridá nasledujúca správa:
 
-"******Message*******
+"******Správa*******
 
-Simulation is completed and stopped at the user specified time step".
+„Simulácia bola dokončená a zastavená v časovom kroku zadanom používateľom“.
 
-## Post-Processing the Results
+## Následné spracovanie výsledkov
 
-After simulation has been completed, click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab, MO post processor will open.
+Po dokončení simulácie kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), čím sa otvorí postprocesor MO.
 
-**Load-Stroke Graph:**
+**Graf zaťaženia a zdvihu:**
 
-Plot **Load-Stroke** and **Speed- Stroke graph** and observe the graph as shown in Fig. L10.4. and Fig. L10.5.
+Vytvorte grafy **zaťaženie – zdvih** a **rýchlosť – zdvih** a sledujte ich tak, ako je znázornené na obr. L10.4 a obr. L10.5.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_10_hydraulic_press/2d_mobl10_image0004.jpg' | relative_url }})
 
-Load-Stroke Graph plot
+Graf závislosti zaťaženia od zdvihu
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_10_hydraulic_press/2d_mobl10_image0005.jpg' | relative_url }})
 
-Speed-Stoke Graph plot
+Graf rýchlosti a ťahu
 
 ****
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [15\. Movement Controls Settings]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 

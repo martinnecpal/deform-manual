@@ -1,297 +1,297 @@
 ---
 lang: sk
-title: "Hot Forming"
+title: "Tvárnenie za tepla"
 ---
 
-# Hot Forming
+Tvárnenie za tepla
 
-When simulating hot forming, it is important to simulate all steps of the process including transfer from the furnace, and resting on the die, since the temperature loss due to transfer from the furnace and from die chilling can influence flow behavior. The procedure for simulating a multi-station process is detailed at the end of this section.
+Pri simulácii tvárnenia za tepla je dôležité simulovať všetky kroky procesu vrátane prenosu z pece a odpočinku na matrici, pretože teplotná strata spôsobená prenosom z pece a chladením matrice môže ovplyvniť správanie prietoku. Postup simulácie viacpolohového procesu je podrobne opísaný na konci tejto časti.
 
-This section will outline the setup procedure for the following operations:
+V tejto časti sa načrtne postup nastavenia pre nasledujúce operácie:
 
-  1. Set uniform object temperature to simulate full furnace soak.
+1. Nastavte jednotnú teplotu objektu na simuláciu úplného namočenia pece.
 
-  2. Cool in air to simulate transfer from the furnace to the dies
+2. Ochlaďte na vzduchu, aby ste simulovali prenos z pece do lisovníc
 
-  3. Rest on dies
+3. Odpočívajte na matriciach
 
-  4. Forge
+4. Kováčstvo
 
-  5. Repeat for multiple forging blows
+5. Opakujte pre viacnásobné kovanie úderov
 
-  1. **Create a new problem folder (directory)**
+1. **Vytvoriť nový priečinok problémov (adresár)**
 
-Each DEFORM problem should reside in its own folder. However, a given problem may contain many operations, all in the same database file.
+Každý problém s deformáciou by mal byť umiestnený vo vlastnom priečinku. Daný problém však môže obsahovať veľa operácií, všetky v tom istom databázovom súbore.
 
-  1. **Start the DEFORM preprocessor**
+1. **Spustite predprocesor DEFORMÁCIE **
 
-  2. **Set Basic Simulation Controls**
+2. **Nastavte základné ovládacie prvky simulácie **
 
-The simulation controls will be set for the first operation – simulating chilling during the transfer from the furnace to the press.
+Pre prvú operáciu sa nastavia simulačné ovládacie prvky – simulácia chladenia počas prechodu z pece do lisu.
 
-  1. Problem Title (optional)
+1. Názov problému (nepovinné)
 
-Descriptive title for the problem – will be displayed on the screen during pre- and post-processing.
+Popisný názov problému – zobrazí sa na obrazovke počas predbežného a následného spracovania.
 
-  1. Operation Name
+1. Názov operácie
 
-Operation name
+Názov činnosti
 
-  1. Unit System
+1. Jednotkový systém
 
-Select English or SI units. This will change many default values and affect how material data is imported.
+Vyberte jednotky v angličtine alebo SI. Tým sa zmení mnoho predvolených hodnôt a ovplyvní sa spôsob importu údajov o materiáli.
 
-  1. Select Simulation Mode
+1. Vyberte režim simulácie
 
-For simulating transfer of the workpiece from the furnace to the press, only heat transfer will be modeled, so turn on heat transfer, and turn off deformation.
+Pre simuláciu prenosu obrobku z pece do lisu bude modelovaný iba prenos tepla, preto zapnite prenos tepla a vypnite deformáciu.
 
-  1. **Define the Material**
+1. **Definujte materiál**
 
-Define thermal properties for the material. For most steels, the files STEEL_E.KEY or STEEL_S.KEY contain reasonable thermal properties. These files can be loaded from the Material Properties menu on the main preprocessor window.
+Definujte tepelné vlastnosti materiálu. Pre väčšinu ocelí majú súbory STEEL_E.KEY alebo STEEL_S.KEY primerané tepelné vlastnosti. Tieto súbory je možné načítať z ponuky Vlastnosti materiálu v hlavnom okne preprocesora.
 
-  1. **Define the Workpiece**
+1. **Definujte obrobok**
 
-  1. Define Object Type
+1. Definujte typ objektu
 
-For most simulations, plastic object type is suitable.
+Pre väčšinu simulácií je vhodný typ plastového objektu.
 
-  1. Define the Geometry
+1. Definujte geometriu
 
-Geometry can be defined from an STL file.
+Geometriu je možné definovať zo súboru STL.
 
-Workpiece geometry requirements:
+Požiadavky na geometriu obrobku:
 
-  * Geometry must be defined with normals facing outward
+* Geometria musí byť definovaná s normálmi smerujúcimi von
 
-  * Always check the geometry.
+* Vždy skontrolujte geometriu.
 
-  1. Mesh the Object
+1. Povrchová sieť objektu
 
-Typical progressions should use element sizes that represent the features of the part. When in doubt, more elements will tend to give more accurate results. Typical weights:
+Typické postupnosti by mali používať veľkosti prvkov, ktoré predstavujú vlastnosti dielu. V prípade pochybností bude mať viac prvkov tendenciu poskytovať presnejšie výsledky. Typické váhy:
 
-  * Curvature=0.9
+* Zakrivenie=0,9
 
-  * Strain Rate=0.7
+* Miera deformácie =0,7
 
-  * Strain =0.5
+* Kmeň =0,5
 
-  * Temp=0
+Teplota
 
-  1. Define Thermal Boundary Conditions
+1. Definujte tepelné hraničné podmienky
 
-For solid parts, define heat exchange with the environment on all faces except the symmetry surfaces.
+V prípade pevných častí definujte výmenu tepla s prostredím na všetkých plochách okrem symetrických povrchov.
 
-  1. Initialize Object Temperature
+1. Inicializujte teplotu objektu
 
-Set the initial object temperature to the furnace soak or preheat temperature.
+Nastavte počiatočnú teplotu objektu na teplotu namočenia alebo predhriatia pece.
 
-  1. **Complete Simulation Controls**
+1. **Kompletné ovládacie prvky simulácie **
 
-  1. Define Number of Steps
+1. Definujte počet krokov
 
-A typical transfer operation can be simulated in 10 to 20 steps.
+Typickú operáciu prenosu je možné simulovať v 10 až 20 krokoch.
 
-  1. Select the Primary Die
+1. Vyberte primárnu matricu
 
-Enter object 1 (only object defined) as the primary die.
+Zadajte objekt 1 (definovaný iba objekt) ako primárnu matricu.
 
-  1. Calculate the Time per Step
+1. Vypočítajte čas na krok
 
-Divide the total transfer time by the number of steps.
+Vydeľte celkový čas prenosu počtom krokov.
 
-  1. **Save the Data**
+1. **Uložiť údaje**
 
-Save a Keyword file.
+Uložte súbor kľúčového slova.
 
-Go to Database Generation. Check the data. If there are any yellow or red flags, resolve them, then generate the database. Exit the preprocessor and start the simulation.
+Prejdite na Generovanie databázy. Skontrolujte údaje. Ak sú nejaké žlté alebo červené príznaky, vyriešte ich a potom vygenerujte databázu. Opustite preprocesor a spustite simuláciu.
 
-  1. **Loading Simulation Results Into the Preprocessor to Define Second Operation**
+1. **Načítanie výsledkov simulácie do predprocesora na definovanie druhej operácie**
 
-Return to the preprocessor, and load the last step from the database.
+Vráťte sa do preprocesora a načítajte posledný krok z databázy.
 
-  1. **Define Material Data for the tools**
+1. **Definujte údaje o materiáli pre nástroje**
 
-Specify thermal data for the tool material
+Zadajte tepelné údaje pre materiál nástroja
 
-  1. **Define the Tools**
+1. **Definujte nástroje**
 
-  1. Assign Tool Names (optional)
+1. Priradenie názvov nástrojov (voliteľné)
 
-For reference during pre- and post-processing.
+Pre referenciu počas predbežného a následného spracovania.
 
-  1. Define Tool Geometry
+1. Definujte geometriu nástroja
 
-Import or define geometry for the upper die (punch) and lower die. The geometry rules detailed above for the workpiece all apply. Furthermore:
+Importujte alebo definujte geometriu hornej matrice (razníka) a spodnej matrice. Platia všetky pravidlá geometrie uvedené vyššie pre obrobok. Okrem toho:
 
-  * For multi-piece tools, draw a single tool boundary defining all inserts, knockouts, etc. The geometry can be separated later for die stress analysis. Refer to the manual or contact tech support if there is more than one moving tool for a given station.
+* V prípade viacdielnych nástrojov nakreslite jedinú hranicu nástroja, ktorá definuje všetky vložky, vyradenia atď. Geometriu je možné neskôr oddeliť pre analýzu napätia formy. Pozrite si príručku alebo kontaktujte technickú podporu, ak je pre danú stanicu viac ako jeden pohyblivý nástroj.
 
-  * Extend the tool geometry slightly across the centerline.
+* Geometriu nástroja mierne predĺžte pozdĺž stredovej čiary.
 
-  * For tools with a sliding clearance between the punch and die, increase the OD of the punch to slightly intersect the die. Refer to the manual or training material for more details
+* V prípade nástrojov s klznou vôľou medzi razidlom a matricou zvýšte OD razidla, aby sa matrica mierne pretínala. Ďalšie podrobnosti nájdete v príručke alebo školiacom materiáli
 
-  * Put a slight flat on the tip of any pointed punches.
+* Na špičku akýchkoľvek špicatých dierovačov položte mierne rovnú plochu.
 
-  * While it is not strictly necessary, it is convenient to make object 2 the punch or moving object.
+* Aj keď to nie je nevyhnutne potrebné, je vhodné, aby sa objekt 2 stal dierovačom alebo pohyblivým objektom.
 
-  1. Mesh the Tools
+1. Sieťovanie nástrojov
 
-Use around 400 elements. Use user defined density with 3 at the contact surface and 1 on the back side of the die.
+Použite približne 400 prvkov. Použite hustotu definovanú používateľom s 3 na kontaktnej ploche a 1 na zadnej strane matrice.
 
-  1. Assign Tool Material
+1. Priradenie materiálu nástroja
 
-Be sure the proper material is assigned to both the tools and the workpiece
+Uistite sa, že k nástrojom aj obrobku je priradený správny materiál
 
-  1. Assign Tool Temperature
+1. Priradenie teploty nástroja
 
-Set the uniform tool temperature before forming begins.
+Pred začatím tvarovania nastavte jednotnú teplotu nástroja.
 
-  1. **Define Interobject Data**
+1. **Definujte údaje o interobjekte**
 
-  1. Inter-Object Relationships
+1. Medziobjektové vzťahy
 
-The workpiece should be slave to both tools. The interface heat transfer coefficient should be about 0.004 for English units, or 10 for SI units.
+Obrobok by mal byť podriadený obom nástrojom. Koeficient prenosu tepla rozhrania by mal byť približne 0,004 pre anglické jednotky alebo 10 pre jednotky SI.
 
-  1. Object Positioning
+1. Umiestnenie objektu
 
-Using interference positioning, position the workpiece on the bottom die. Leave the top die away from the workpiece during this operation.
+Pomocou polohovania interferencie umiestnite obrobok na spodnú matricu. Počas tejto operácie nechajte hornú matricu mimo obrobku.
 
-  1. Generate Contact Boundary Conditions
+1. Vytvorte hraničné podmienky kontaktu
 
-The default value of tolerance is adequate.
+Predvolená hodnota tolerancie je primeraná.
 
-  1. **Complete Simulation Controls**
+1. **Kompletné ovládacie prvky simulácie **
 
-  1. Define Number of Steps
+1. Definujte počet krokov
 
-A typical die resting operation can be simulated in 10 to 20 steps.
+Typickú operáciu odpočinku matrice je možné simulovať v 10 až 20 krokoch.
 
-  1. Select the Primary Die
+1. Vyberte primárnu matricu
 
-Enter object 1 as the primary die.
+Zadajte objekt 1 ako primárnu matricu.
 
-  1. Calculate the Time per Step
+1. Vypočítajte čas na krok
 
-Divide the total transfer time by the number of steps.
+Vydeľte celkový čas prenosu počtom krokov.
 
-  1. Define Operation Name (optional)
+1. Definujte názov operácie (voliteľné)
 
-  1. **Save the Data**
+1. **Uložiť údaje**
 
-Save a Keyword file.
+Uložte súbor kľúčového slova.
 
-Go to Database Generation. Check the data. If there are any yellow or red flags, resolve them, then generate the database. Exit the preprocessor and start the simulation.
+Prejdite na Generovanie databázy. Skontrolujte údaje. Ak sú nejaké žlté alebo červené príznaky, vyriešte ich a potom vygenerujte databázu. Opustite preprocesor a spustite simuláciu.
 
-  1. **Loading Simulation Results Into the Preprocessor to Define Forming Operation**
+1. **Načítanie výsledkov simulácie do predprocesora na definovanie operácie tvárnenia **
 
-Return to the preprocessor, and load the last step from the database.
+Vráťte sa do preprocesora a načítajte posledný krok z databázy.
 
-  1. **Set Simulation Controls**
+1. **Nastaviť ovládacie prvky simulácie **
 
-  1. Operation Name (optional)
+1. Názov operácie (voliteľné)
 
-  2. Select Simulation Mode
+2. Vyberte režim simulácie
 
-We will now simulate the forging operation, so turn deformation on (yes)
+Teraz budeme simulovať kovanie, takže zapnite deformáciu (áno)
 
-  1. **Define Material Data for Workpiece**
+1. **Definujte údaje o materiáli pre obrobok**
 
-Assign plastic (flow) data for the workpiece material. Be sure the material selected covers the proper temperature range, including any deformation heating and die chilling.
+Priraďte plastové (prietokové) údaje pre materiál obrobku. Uistite sa, že zvolený materiál pokrýva správny teplotný rozsah vrátane akéhokoľvek deformačného ohrevu a chladenia formy.
 
-  1. **Assign Top Die (punch) Movement**
+1. **Priraďte pohyb hornej matrice (razníka) **
 
-Press behavior may play a role in results. Consult the manual or SFTC tech support for more information on press behavior.
+Správanie tlače môže zohrávať úlohu vo výsledkoch. Viac informácií o správaní tlače nájdete v príručke alebo technickej podpore SFTC.
 
-Set the direction (typically downward). The stroke value should not be changed unless a mechanical press model is used.
+Nastavte smer (zvyčajne smerom nadol). Hodnota zdvihu by sa nemala meniť, pokiaľ sa nepoužije model mechanického lisu.
 
-  1. **Define Interobject Data**
+1. **Definujte údaje o interobjekte**
 
-  1. Inter-Object Relationships
+1. Medziobjektové vzťahy
 
-Assign a friction factors. For lubricated hot forging, values of 0.2 to 0.3 are typical. For non-lubricated hot forging, values of 0.8 to 1.0 are typical..
+Priraďte faktory trenia. Pre mazané kovanie za tepla sú typické hodnoty 0,2 až 0,3. Pre nemazané kovanie za tepla sú typické hodnoty od 0,8 do 1,0.
 
-  1. Object Positioning
+1. Umiestnenie objektu
 
-Using interference, with the workpiece as the reference object, position both tools in contact with the workpiece.
+Pomocou interferencie s obrobkom ako referenčným objektom umiestnite oba nástroje do kontaktu s obrobkom.
 
-  1. Generate Contact Boundary Conditions
+1. Vytvorte hraničné podmienky kontaktu
 
-The default value of tolerance is adequate.
+Predvolená hodnota tolerancie je primeraná.
 
-  1. **Complete Simulation Controls**
+1. **Kompletné ovládacie prvky simulácie **
 
-  1. Define Number of Steps
+1. Definujte počet krokov
 
-  * For very limited deformation such as a square-up, use 50 steps
+* Pri veľmi obmedzenej deformácii, ako je štvorcová, použite 50 krokov
 
-  * For average deformation, such as heading, use 100 steps
+* Pre priemernú deformáciu, ako je smer, použite 100 krokov
 
-  * For problems with a large amount of deformation, such as extrusion, use 200 steps
+* Pri problémoch s veľkým množstvom deformácie, ako je vytláčanie, použite 200 krokov
 
-  * Save every 5 to 10 steps.
+* Ušetrite každých 5 až 10 krokov.
 
-  1. Select the Primary Die
+1. Vyberte primárnu matricu
 
-Enter the object number for the punch(generally object #2)
+Zadajte číslo objektu pre razník(všeobecne objekt č.2)
 
-  1. Calculate the Stroke per Step
+1. Vypočítajte zdvih na krok
 
-Estimate the distance the punch will move (total stroke). Divide this value by the number of steps, and enter this value in Stroke per Step. If you are unsure of total punch stroke, add 10 or 15 extra steps. This will overshoot the goal, and you can back up a few steps to get the final result.
+Odhadnite vzdialenosť, ktorú sa bude dierovač pohybovať (celkový zdvih). Vydeľte túto hodnotu počtom krokov a zadajte túto hodnotu do poľa Ťah na krok. Ak si nie ste istí celkovým úderom, pridajte 10 alebo 15 ďalších krokov. Tým sa prekročí cieľ a môžete zálohovať niekoľko krokov, aby ste dosiahli konečný výsledok.
 
-  1. Set stopping controls (optional)
+1. Nastavte ovládacie prvky zastavenia (voliteľné)
 
-If you know the exact distance the punch will move, enter this value under stopping controls. If no value was entered, the simulation will stop when all steps have been completed.
+Ak poznáte presnú vzdialenosť, do ktorej sa bude dierovač pohybovať, zadajte túto hodnotu pod ovládacími prvkami zastavenia. Ak nebola zadaná žiadna hodnota, simulácia sa zastaví po dokončení všetkých krokov.
 
-  1. Set substepping control
+1. Nastavte ovládanie čiastkových krokov
 
-Under Advanced Step Controls, set **Strain per Step** to 0.025.
+V časti Advanced Step Controls nastavte **Strain per Step** na 0,025.
 
-  1. **Save the Data**
+1. **Uložiť údaje**
 
-Save a keyword file.
+Uložte súbor kľúčových slov.
 
-Go to Database generation, Check the data. If there are any yellow or red flags, resolve them, then generate the database. Exit the preprocessor and start the simulation.
+Prejdite na Generovanie databázy, Skontrolujte údaje. Ak sa vyskytnú nejaké žlté alebo červené príznaky, vyriešte ich a potom vygenerujte databázu. Opustite preprocesor a spustite simuláciu.
 
-  1. **Running a Second Operation**
+1. **Spustenie druhej operácie**
 
-  1. Identifying the endpoint of the first operation
+1. Identifikácia koncového bodu prvej operácie
 
-After the simulation is completed, go to the Post-Processor, and check the results. Identify the step at which the first operation will be completed, and make a note of this step number.
+Po dokončení simulácie prejdite do postprocesora a skontrolujte výsledky. Identifikujte krok, v ktorom bude dokončená prvá operácia, a poznačte si toto číslo kroku.
 
-  1. Loading Simulation Results Into the Preprocessor.
+1. Načítanie výsledkov simulácie do predprocesora.
 
-Return to the preprocessor, and load the appropriate step from the database.
+Vráťte sa do preprocesora a načítajte príslušný krok z databázy.
 
-  1. Simulate Chilling During Transfer to Next Station
+1. Simulujte chladenie počas prepravy na ďalšiu stanicu
 
-Consider the transfer time between stations. Refer to the beginning of this section for guidelines on running heat transfer simulations.
+Zvážte čas prenosu medzi stanicami. Pokyny na simuláciu prenosu tepla nájdete na začiatku tejto časti.
 
-  1. Changing Tool Geometry
+1. Zmena geometrie nástroja
 
-Go to the Geometry editor, delete the tool geometry (not the whole object), and import or create new tool geometry for each tool.
+Prejdite do editora geometrie, odstráňte geometriu nástroja (nie celý objekt) a importujte alebo vytvorte novú geometriu nástroja pre každý nástroj.
 
-  1. Positioning Objects
+Umiestňovanie objektov
 
-From Interobject reposition the tools against the workpiece using interference.
+Z Interobject premiestnite nástroje proti obrobku pomocou interferencie.
 
-  1. Generate Contact
+1. Vytvoriť kontakt
 
-Initialize and generate contact boundary conditions.
+Inicializujte a vygenerujte hraničné podmienky kontaktu.
 
-  1. Reset Simulation Controls
+1. Resetovať ovládacie prvky simulácie
 
-Determine total steps and stroke per step as described above.
+Určte celkový počet krokov a zdvih na krok, ako je popísané vyššie.
 
-  1. Reset Stopping Stroke
+1. Reset Zastavovací zdvih
 
-If the stroke stopping control was used, reset the stroke to zero on object movement controls, and reset the stopping control under simulation controls.
+Ak sa použil ovládací prvok zastavenia zdvihu, resetujte zdvih na nulu na ovládacích prvkoch pohybu objektu a resetujte ovládací prvok zastavenia pod ovládacími prvkami simulácie.
 
-  1. Write The Database
+1. Napíšte databázu
 
-Writing an old database will append data to the end of the existing database. It will overwrite any steps after the step that was loaded.
+Pri písaní starej databázy sa údaje pridajú na koniec existujúcej databázy. Prepíše všetky kroky po kroku, ktorý bol načítaný.
 
-  1. If the appropriate ending step is not saved…..
+1. Ak nie je uložený príslušný koncový krok…..
 
-If you encounter a situation where, say, step 90 is not formed enough, step 100 is formed too much, and there are no steps saved in between, you can load step 90, change the save interval to 1 (save every step), then rerun the last 10 steps of the simulation to get the proper stopping step.
+Ak sa stretnete so situáciou, keď napríklad krok 90 nie je dostatočne formovaný, krok 100 je príliš formovaný a medzi tým nie sú uložené žiadne kroky, môžete načítať krok 90, zmeniť interval ukladania na 1 (uložiť každý krok) a potom zopakovať posledných 10 krokov simulácie, aby ste dosiahli správny krok zastavenia.
 
   
 

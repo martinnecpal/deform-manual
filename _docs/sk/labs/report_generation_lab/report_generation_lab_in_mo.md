@@ -1,553 +1,553 @@
 ---
 lang: sk
-title: "Report Generation Lab in MO"
+title: "Laboratórium generovania správ v MO"
 ---
 
-# Report Generation Lab in MO
+# Laboratórium generovania správ v MO
 
-In this lab Report generation feature is explained in both interactive and batch post mode for Spike_Forging lab Project.
+V tejto funkcii generovania laboratórnych správ je vysvetlená v interaktívnom aj dávkovom post režime pre Spike_Forging Lab Project.
 
-1.1.1. Copy the Existing Project
+1.1.1. Skopírujte existujúci projekt
 
-1.1.2. Add Report Generation operation
+1.1.2. Pridajte operáciu generovania hlásení
 
-1.1.3. Add Chapters
+1.1.3. Pridať kapitoly
 
-1.1.4. Define First Chapters
+1.1.4. Definujte prvé kapitoly
 
-1.1.5. Define second chapter
+1.1.5. Definujte druhú kapitolu
 
-1.1.6. Define Third Chapter
+1.1.6. Definujte tretiu kapitolu
 
-1.1.7. Define Fourth Chapter
+1.1.7. Definujte štvrtú kapitolu
 
-1.1.8. Define Fifth Chapter
+1.1.8. Definujte piatu kapitolu
 
-1.1.9. Define Sixth chapter
+1.1.9. Definujte šiestu kapitolu
 
-1.1.10. Simulate Project
+1.1.10. Simulovať projekt
 
-1.1.11. Review the Report
+1.1.11. Preskúmanie správy
 
-## Report generation in Batch post mode
+## Generovanie hlásení v režime dávkového postu
 
-If 3D MO basic labs: lab [03 Spike Forging]({{ '/docs/sk/labs/basic_labs/3d_labs/lab03_spike_forging/' | relative_url }}) is already practiced, then open the Spike Forging project in MO by selecting the project file from DEFORM GUI Main and clicking on ![]({{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}). Otherwise copy the project file available in installation path as explained below.
+Ak sa už praktizuje 3D MO Basic Labs: Lab [03 Spike Forging]({{ '/docs/sk/labs/basic_labs/3d_labs/lab03_spike_forging/' | relative_url }}), potom otvorte projekt Spike Forging v MO výberom súboru projektu z Deform GUI Main a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}). V opačnom prípade skopírujte súbor projektu, ktorý je k dispozícii v inštalačnej ceste, ako je vysvetlené nižšie.
 
-### Copy the Existing Project
+### Skopírujte existujúci projekt
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**Integrated Manufacturing Process** " radio button and "**English** " radio button in unit field as shown in Fig. RGL1.1.
+Vytvorte nový problém buď výberom * * Súbor * *![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Nový problém** alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Problem Setup (Nastavenie problému). Vyberte prepínač „**Integrovaný výrobný proces** “ a prepínač „**Angličtina** “ v poli jednotky, ako je znázornené na obr. RGL1.1.
 
-Define Problem Name as "**Spike_Forging** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Integrated Manufacturing Process.
+Definujte názov problému ako "**Spike_Forging** " a uistite sa, že je zapnuté začiarkavacie políčko "Zobraziť dialógové okno možností" (ak nezapneme začiarkavacie políčko "Zobraziť dialógové okno možností", potom nedostaneme dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) a otvorte nový problém pomocou integrovaného výrobného procesu.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0001.jpg' | relative_url }})
 
-Open New Problem from DEFORM GUI Main
+Otvoriť nový problém z hlavného DEFORMAČNÉHO grafického rozhrania
 
-Multiple operation wizard will open, select Copy Existing Project radio button. Browse the project file for previously saved project and open the Spike_Forging.moproj file or browse from installation path **/3d/LABS/Spike_Forging/Spike_Forging.moproj** (See Fig. RGL1.2.). Click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to copy and open the project.
+Otvorí sa sprievodca viacerými operáciami a vyberte prepínač Kopírovať existujúci projekt. Prehľadajte súbor projektu pre predtým uložený projekt a otvorte súbor Spike_Forging.moproj alebo prejdite z inštalačnej cesty **/3d/LABS/Spike_Forging/Spike_Forging.moproj* * (pozri obr. RGL1.2.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) skopírujte a otvorte projekt.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0002.jpg' | relative_url }})
 
-Copy existing Spike_Forging project
+Skopírujte existujúci projekt Spike_Forging
 
-Select the **Heat Transfer operation** in operation editor and select Generate DB in operation tree to Generate DB as shown in Fig. RGL1.3. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
+Vyberte operáciu **Heat Transfer ** v editore operácií a vyberte Generate DB in operation tree to Generate DB, ako je znázornené na obr. RGL1.3. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0003.jpg' | relative_url }})
 
-Generate Database for 1st operation
+Vytvoriť databázu pre 1. operáciu
 
-### Add Report Generation operation
+### Pridať operáciu generovania hlásení
 
-Add the Report Generation operation from the MO operation explorer as shown in Fig. RGL1.4.
+Pridajte operáciu generovania správy z prieskumníka operácie MO, ako je znázornené na obr. RGL1.4.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0004.jpg' | relative_url }})
 
-Add Report Generation operation
+Pridať operáciu generovania správy
 
-Click on report operation in operation editor to open the report generation operation as shown in Fig. RGL1.5.
+Kliknutím na operáciu správy v editore operácií otvoríte operáciu generovania správy, ako je znázornené na obr. RGL1.5.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0005.jpg' | relative_url }})
 
-Opening Report generation operation
+Operácia generovania otváracej správy
 
-### Add Chapters
+### Pridať kapitoly
 
-In Report property window user can add more than one chapter and chapter name can be changed by double clicking in title field.
+V okne vlastností správy môže používateľ pridať viac ako jednu kapitolu a názov kapitoly je možné zmeniť dvojitým kliknutím na pole názvu.
 
-These chapters are helpful to generate the different operations or different operations range results report separately as new chapters. In this lab we add 6 chapters so click ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add chapter) button five times in addition to the default one chapter. . First 4 chapters will be used to cover each of the 4 operations, fifth chapter to plot the temperature summary from first to last operation and sixth chapter to plot the load stroke curve for 2 forming operations. The chapter names are auto updated depending on the operation range selected in the respective chapter or user can define custom name. For first 4 chapters in this lab, the chapter name will be updated as we select operation range in the respective chapter. We will define custom name for 5th chapter as **"Temperature Summary from all operations"** and 6th chapter as "**Continuous Load stroke curve forming operations** " instead of operations range. Then Report window looks as shown in Fig. RGL1.6.
+Tieto kapitoly pomáhajú generovať správy o výsledkoch rôznych operácií alebo rôznych rozsahov operácií samostatne ako nové kapitoly. V tomto laboratóriu pridávame 6 kapitol, takže okrem predvolenej kapitoly kliknite päťkrát na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať kapitolu). Prvé 4 kapitoly budú použité na pokrytie každej zo 4 operácií, piata kapitola na vykreslenie súhrnu teploty od prvej do poslednej operácie a šiesta kapitola na vykreslenie krivky záťažového zdvihu pre 2 tvarovacie operácie. Názvy kapitol sa automaticky aktualizujú v závislosti od rozsahu operácií zvoleného v príslušnej kapitole alebo používateľ môže definovať vlastný názov. Pre prvé 4 kapitoly v tomto laboratóriu sa názov kapitoly aktualizuje, keď v príslušnej kapitole vyberieme rozsah operácií. Vlastný názov pre 5. kapitolu definujeme ako **„Zhrnutie teploty zo všetkých operácií“** a 6. kapitolu ako „** Operácie tvárnenia krivky nepretržitého zaťaženia ** “ namiesto rozsahu operácií. Potom okno správy vyzerá tak, ako je znázornené na obr. RGL1.6.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0006.jpg' | relative_url }})
 
-Report window with 6 chapters
+Okno správy so 6 kapitolami
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define added chapters.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujete pridané kapitoly.
 
-### Define First Chapters
+### Definujte prvé kapitoly
 
-For first chapter, select **Air Convection** **operation** as starting and ending operation and check only the State variable check box for sections as shown in Fig. RGL1.7.
+Pre prvú kapitolu vyberte ** Konvekcia vzduchu ** **prevádzka** ako spustenie a ukončenie prevádzky a začiarknite iba políčko Stavová premenná pre sekcie, ako je znázornené na obr. RGL1.7.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0007.jpg' | relative_url }})
 
-Chapter-1 settings
+Nastavenia kapitoly 1
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define state variable section. Accept the state variable section title steps selected and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to add the state variable outputs. (See Fig. RGL1.8.).
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujete stavovú variabilnú časť. Prijmite zvolené kroky názvu stavovej premennej sekcie a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre pridanie stavových premenných výstupov. (Pozri obr. RGL1.8.).
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0008.jpg' | relative_url }})
 
-State variable section basic settings
+Základné nastavenia stavovej variabilnej sekcie
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) button once to add temperature state variable and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). (See Fig. RGL1.9.)
+Jedným kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) pridáte premennú stavu teploty a kliknete na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). (Pozri obr. RGL1.9.)
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0009.jpg' | relative_url }})
 
-State variable output selection window
+Okno výberu stavového variabilného výstupu
 
-Select the objects as Workpiece and viewport as User Defined and adjust the viewport as required using display modification options pan, zoom, rotate and magnify. (See Fig. RGL1.10.) User also have a Viewport options like different axis views like +X,-X,+Y etc, Isometric, contour type selection, contour range, color bar type and Auto view. Select PDF layout as 9 as shown in Fig. RGL1.10.
+Vyberte objekty ako obrobok a záber ako definované používateľom a upravte záber podľa potreby pomocou možností úpravy zobrazenia posúvaním, priblížením, otočením a zväčšením. (Pozri obr. RGL1.10.) Používateľ má tiež možnosti záberu, ako sú rôzne zobrazenia osí, ako napríklad +X,-X,+Y atď., Izometrické, výber typu obrysu, rozsah obrysu, typ farebného pruhu a automatické zobrazenie. Vyberte rozloženie PDF ako 9, ako je znázornené na obr. RGL1.10.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0010.jpg' | relative_url }})
 
-State variable Temperature settings window
+Okno stavových premenných nastavení teploty
 
-Check the **Include 3D Model** **(3D PDF)** checkbox at the bottom of the window to include the 3D model in PDF file. (See Fig. RGL1.10.)
+Začiarknite políčko **Zahrnúť 3D model* ** *(3D PDF)** v dolnej časti okna, ak chcete zahrnúť 3D model do súboru PDF. (Pozri obr. RGL1.10.)
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the second chapter.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujete druhú kapitolu.
 
-### Define second chapter
+### Definujte druhú kapitolu
 
-Similar to the first chapter, select only "**H****eat Resting** " operation (2nd operation) for second chapter and add temperature state variable with only 3 steps as shown in Fig. RGL1.11 and Fig. RGL1.12.
+Podobne ako v prvej kapitole vyberte pre druhú kapitolu iba operáciu „** H ** ** eat Resting * * * “ (2. operácia) a pridajte premennú teplotného stavu iba v 3 krokoch, ako je znázornené na obr. RGL1.11 a obr. RGL1.12.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0011.jpg' | relative_url }})
 
-State variable settings
+Nastavenia premennej stavu
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and click on ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) button once to add temperature state variable.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a raz kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}), aby ste pridali premennú stavu teploty.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0012.jpg' | relative_url }})
 
-State variable output selection window
+Okno výberu stavového variabilného výstupu
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select the Workpiece object, User Defined viewport type and PDF layout as 9. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the third chapter.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a vyberte objekt obrobku, typ zobrazenia definovaný používateľom a rozloženie PDF ako 9. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujete tretiu kapitolu.
 
-### Define Third Chapter
+### Definujte tretiu kapitolu
 
-In this chapter, select the "**Forming** " operation (3rd operation ) as starting and ending operation and check the Metal flow, Graph and State variable sections (See Fig. RGL1.13) as this is a forming operation to review the material flow, load stroke graph for primary die and deformation state variables as different steps.
+V tejto kapitole vyberte operáciu „**Formovanie** “ (3. operácia ) ako spustenie a ukončenie operácie a skontrolujte sekcie Metal flow, Graph a State variable (pozri obr. RGL1.13), pretože ide o tvarovaciu operáciu na kontrolu toku materiálu, grafu zaťaženia zdvihu pre primárnu matricu a premenných stavu deformácie ako rôznych krokov.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0013.jpg' | relative_url }})
 
-Chapter-3 settings
+Nastavenia kapitoly 3
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and to define metal flow steps. Accept the Metal flow steps selected as 7 and in controls define the PDF layout as 9. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define Load stroke graph. (See Fig. RGL1.14)
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a definujte kroky kovového toku. Prijmite kroky Metal flow vybrané ako 7 a v ovládacích prvkoch definujte rozloženie PDF ako 9. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujete graf záťažového zdvihu. (Pozri obr. RGL1.14)
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0014.jpg' | relative_url }})
 
-Metal Flow settings
+Nastavenia prietoku kovu
 
-Change the Graph section title from **Graph (Load-Stroke)** to **Load Stroke****Graph** as shown in Fig. RGL1.15 and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue graph definition.
+Zmeňte názov sekcie grafu z **grafu (zdvih zaťaženia)** na ** zdvih zaťaženia * ***grafu**, ako je znázornené na obr. RGL1.15 a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte v definícii grafu.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0015.jpg' | relative_url }})
 
-Graph section title window
+Okno s názvom sekcie grafu
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) button once to add Load-Stroke as graph variables, select X-Axis variable as Stroke and Y-Axis variable as Z Load as shown in Fig. RGL1.16.
+Jedným kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) pridáte záťažový zdvih ako premenné grafu, vyberte premennú osi X ako zdvih a premennú osi Y ako záťaž Z, ako je znázornené na obrázku RGL1.16.
 
 .![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0016.jpg' | relative_url }})
 
-Graph variables definition window
+Okno definície premenných grafov
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select the object as Primary die as shown in Fig. RGL1.17.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a vyberte objekt ako primárnu matricu, ako je znázornené na obr. RGL1.17.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0017.jpg' | relative_url }})
 
-Graph objects selection window
+Okno výberu objektov grafu
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and to define the state variable. Accept the 7 steps selected for state variables and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to add state variables.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a definujte stavovú premennú. Prijmite 7 krokov vybraných pre stavové premenné a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre pridanie stavových premenných.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) button twice to select Effective strain and Effective stress variables contour as shown in Fig. RGL1.18 . and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define each sate variable contour display settings.
+Dvakrát kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) a vyberte Efektívne napätie a Efektívne premenné napätia, ako je znázornené na obr. RGL1.18 . a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre definovanie každého nastavenia zobrazenia variabilného obrysu SATE.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0018.jpg' | relative_url }})
 
-State variables adding window
+Okno pridávania premenných stavu
 
-Select the Objects as only workpiece, viewport as User Defined and PDF layout as 9. Also check the Include 3D model (3D PDF) for getting the 3D model in PDF and adjust the viewport display as required.
+Vyberte Objekty ako jediný obrobok, záber ako definovaný používateľom a rozloženie PDF ako 9. Tiež skontrolujte Zahrnúť 3D model (3D PDF) pre získanie 3D modelu v PDF a podľa potreby upravte zobrazenie záberu.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the fourth chapter.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujete štvrtú kapitolu.
 
-### Define Fourth Chapter
+### Definujte štvrtú kapitolu
 
-Similar to the third chapter, select only last forming operation "****Forging** Blow 2**" for fourth chapter and add sections Metal Flow, Stroke-Z Load Graph and Effective Stress and effective strain state variable contour sections.
+Podobne ako v tretej kapitole vyberte pre štvrtú kapitolu len poslednú tvarovaciu operáciu „** ** Kovanie * * Fúkanie 2 * *“ a pridajte sekcie Metal Flow, Stroke-Z Load Graph a Effective Stress a efektívne deformačné stavy variabilných obrysových rezov.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the fifth chapter.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujete piatu kapitolu.
 
-### Define Fifth Chapter
+### Definujte piatu kapitolu
 
-For this chapter, select starting operation as **Air convection** and ending operation as **Forging Blow 2** and check Summary, State variable and Point tracking sections. (See Fig. RGL1.19.)
+Pre túto kapitolu vyberte spustenie operácie ako ** Konvekcia vzduchu ** a ukončenie operácie ako **Kovací úder 2** a skontrolujte časti Súhrn, Stavová premenná a Sledovanie bodu. (Pozri obr. RGL1.19.)
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0019.jpg' | relative_url }})
 
-Chapter-5 settings
+Nastavenia kapitoly 5
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the sections. Accept the summary section title as Summary and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). (See Fig. RGL1.20)
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujete sekcie. Prijmite názov súhrnnej časti ako Súhrn a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). (Pozri obr. RGL1.20)
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0020.jpg' | relative_url }})
 
-Summary section title window
+Okno s názvom súhrnnej sekcie
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) button once to add Temperature Vs Time curve from first to last operation. So select X-Axis variable as Time and Y-Axis variable as Temperature as shown in Fig. RGL1.21.
+Jedným kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) pridáte časovú krivku teploty Vs od prvej po poslednú operáciu. Takže vyberte premennú osi X ako premennú času a osi Y ako teplotu, ako je znázornené na obr. RGL1.21.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0021.jpg' | relative_url }})
 
-Summary graph adding window
+Okno pridania súhrnného grafu
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select Workpiece as object as shown in Fig. RGL1.22. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define State variable.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a vyberte obrobok ako objekt, ako je znázornené na obr. RGL1.22. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujete stavovú premennú.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0022.jpg' | relative_url }})
 
-Summary graph object selection window
+Okno výberu objektu súhrnného grafu
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) for State variable number of step selection page keeping 7 steps. Click on ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) button once and add the Temperature state variable. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select the object as All, viewport as User Defined and PDF layout as 9. For this chapter we will generate the state variable contour without 3D model, so do not check the Include 3D model (3D PDF) checkbox as shown in Fig. RGL1.23.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre stav premenného počtu krokov na stránke výberu krokov so zachovaním 7 krokov. Raz kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) a pridajte premennú stavu teploty. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a vyberte objekt ako Všetky, záber ako User Defined a rozloženie PDF ako 9. Pre túto kapitolu vygenerujeme stavový variabilný obrys bez 3D modelu, preto nezačiarknite políčko Zahrnúť 3D model (3D PDF), ako je znázornené na obr. RGL1.23.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0023.jpg' | relative_url }})
 
-Temperature state variable settings window
+Okno s nastaveniami premennej stavu teploty
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define point tracking section.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujete sekciu sledovania bodov.
 
-Accept the point tracking section title as "**Point track** " as shown in Fig. RGL1.24. and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Prijmite názov sekcie sledovania bodov ako „**Bodová stopa** “, ako je znázornené na obr. RGL1.24. a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0024.jpg' | relative_url }})
 
-Point tracking section title window
+Okno názvu sekcie sledovania bodov
 
-Confirm that Moving points option is selected and click on ![]({{ '/assets/icons/pre_icons/mo_define_button2.jpg' | relative_url }}) button to select the points to track on workpiece.
+Potvrďte, že je vybratá možnosť Pohyblivé body, a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_button2.jpg' | relative_url }}) vyberte body, ktoré sa majú sledovať na obrobku.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0025.jpg' | relative_url }})
 
-Point tracking point selection window
+Okno výberu bodu sledovania bodu
 
-Defien three points for point tracking over Workpiece as shown in Fig. RGL1.26. and these points will gets added into the define point table. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the define points window and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Defien tri body pre sledovanie bodu nad obrobkom, ako je znázornené na obr. RGL1.26. a tieto body sa pridajú do tabuľky definovaných bodov. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte okno definície bodov a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0026.jpg' | relative_url }})
 
-Define points window
+Okno Definovať body
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) button once to select temperature state variable and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to point track graph settings.
+Jedným kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) vyberte premennú stavu teploty a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) ukážte nastavenia grafu stopy.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0027.jpg' | relative_url }})
 
-Point tracking state variable selection window
+Okno výberu premennej stavu sledovania bodu
 
-Select the Workpiece object and display option as only Graph Plot as shown in Fig. RGL1.28.
+Vyberte objekt obrobku a možnosť zobrazenia iba ako graf, ako je znázornené na obr. RGL1.28.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0028.jpg' | relative_url }})
 
-Point tracking plot settings
+Nastavenia grafu sledovania bodov
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the sixth chapter.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujete šiestu kapitolu.
 
-### Define Sixth chapter
+### Definujte šiestu kapitolu
 
-Select**Starting operation** as **Forming** and **Ending****operation** as ****Forging** Blow 2** and check Graph section as shown in Fig. RGL1.29.
+Vyberte**Spustenie operácie** ako **Tvarovanie** a **Koniec****operácie** ako ***Kovanie * * Fúkanie 2** a skontrolujte sekciu Graf, ako je znázornené na obr. RGL1.29.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0029.jpg' | relative_url }})
 
-Chapter-6 settings window
+Okno nastavení kapitoly 6
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define Stroke- Z Load graph for primary die in Forming and Forging blow 2 operation.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujete graf zaťaženia zdvihu Z pre primárnu matricu v operácii tvárnenia a kovania vyfukovania 2.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) button once to select X-Axis as Stroke and Y-Axis as Z-Load and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to select object as Primary die.
+Jedným kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) vyberte os X ako zdvih a os Y ako Z-zaťaženie a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vyberte objekt ako primárnu matricu.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Generate report page, check both PDF and PPT Documentation type check boxes.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujete stránku správy, začiarknite políčka typu dokumentácie PDF aj ppt.
 
-### Simulate Project
+### Simulovať projekt
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}) project icon and select ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) mode button to run the simulation.
+Kliknite na ikonu projektu ![]({{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}) a vyberte tlačidlo režimu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) na spustenie simulácie.
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog. Use the default **Continue Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknutím na štítok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvorte dialógové okno Možnosti točenia. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať z posledného kroku** “ (z kroku -1) a potom vyberte režim simulácie ako prepínač * * Interaktívne * *. Kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) pre spustenie simulácie.
 
-### Review the Report
+### Skontrolujte správu
 
-After completion of simulation of all operations prior to report generation, report generation will start to generate report for the selected state variables and graphs. Also generated PPT file will open automatically. Browse the problem directory from explorer and look for DEF_REPORT directory to find the generated PDF and PPT report files.
+Po ukončení simulácie všetkých operácií pred generovaním správy začne generovanie správy generovať správu pre vybrané stavové premenné a grafy. Automaticky sa otvorí aj vygenerovaný súbor ppt. Prehľadávajte adresár problémov z prieskumníka a vyhľadajte adresár DEF_REPORT, aby ste našli vygenerované súbory správ PDF a ppt.
 
-Open the PPT and PDF files and go through the chapter wise reports.
+Otvorte súbory ppt a PDF a prejdite si správy kapitoly Wise.
 
-**Chapter 1:**
+Kapitola 1
 
-For chapter 1 Temperature state variable contour PPT will play all 9 images in single slide, when we click on Slide show (F5). (See in Fig. RGL1.30.)
+Pre kapitolu 1 Teplota stav variabilný obrys ppt prehrá všetkých 9 snímok na jednej snímke, keď klikneme na Prezentácia (F5). (Pozri obr. RGL1.30.)
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0030.jpg' | relative_url }})
 
-Chapter 1 Temperature state variable PPT slide
+Kapitola 1 Variabilná snímka stavu teploty ppt
 
-PDF will show the 9 images temperature state variable workpiece contour images in a single page as shown in Fig. RGL1.31.
+PDF zobrazí 9 obrázkov teplotných stavov variabilných obrysov obrobku na jednej stránke, ako je znázornené na obr. RGL1.31.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0031.jpg' | relative_url }})
 
-Chapter 1 Temperature state variable PDF page
+Kapitola 1 Premenná stavu teploty na stránke PDF
 
-3D model for temperature state variable will display for air convection operation at last step in PDF as shown in Fig. RGL1.32.
+3D model pre premennú stavu teploty sa zobrazí pre prevádzku konvekcie vzduchu v poslednom kroku v PDF, ako je znázornené na obr. RGL1.32.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0032.jpg' | relative_url }})
 
-Chapter 1 Temperature state variable 3D model PDF page
+Kapitola 1 Variabilný stav teploty 3D model PDF stránka
 
-User can use the 3d model options mentioned below to rotate, pan, zoom, change image capture area, measure dimensions, put comments, select different views, toggle model tree, different rendering modes, extra light options, change background color and section the object.
+Používateľ môže použiť nižšie uvedené možnosti 3D modelu na otáčanie, posúvanie, priblíženie, zmenu oblasti snímania obrázkov, meranie rozmerov, vkladanie komentárov, výber rôznych zobrazení, prepínanie stromu modelu, rôzne režimy vykresľovania, možnosti extra svetla, zmenu farby pozadia a sekciu objektu.
 
-3D model PDF options are listed below,
+Možnosti PDF 3D modelu sú uvedené nižšie,
 
-**Rotate![]({{ '/assets/icons/pre_icons/mo_report_pdf_rotate.jpg' | relative_url }}) **: Using this option user can rotate the object about screen center.
+**Rotate![]({{ '/assets/icons/pre_icons/mo_report_pdf_rotate.jpg' | relative_url }}) **: Pomocou tejto možnosti môže používateľ otočiť objekt okolo stredu obrazovky.
 
-**Spin![]({{ '/assets/icons/pre_icons/mo_report_pdf_spin.jpg' | relative_url }}) **: Using this option user can rotate the object about object center.
+**Spin![]({{ '/assets/icons/pre_icons/mo_report_pdf_spin.jpg' | relative_url }}) **: Pomocou tejto možnosti môže používateľ otáčať objekt okolo stredu objektu.
 
-**Pan**![]({{ '/assets/icons/pre_icons/mo_report_pdf_pan.jpg' | relative_url }}) : Using this option user can move object and adjust display area without changing the size of the object.
+**Pan** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_pan.jpg' | relative_url }}): Pomocou tejto možnosti môže používateľ presunúť objekt a upraviť oblasť zobrazenia bez zmeny veľkosti objektu.
 
-**Zoom![]({{ '/assets/icons/pre_icons/mo_report_pdf_zoom.jpg' | relative_url }}) **: Using this user can change the size of the region of object.
+** Zoom![]({{ '/assets/icons/pre_icons/mo_report_pdf_zoom.jpg' | relative_url }})* *: Pomocou tohto používateľa môžete zmeniť veľkosť oblasti objektu.
 
-**Fly![]({{ '/assets/icons/pre_icons/mo_report_pdf_fly.jpg' | relative_url }}) **: By selecting this option if user holds the left mouse click and roll the mouse then object will move up or fly.
+**Fly![]({{ '/assets/icons/pre_icons/mo_report_pdf_fly.jpg' | relative_url }}) **: Výberom tejto možnosti, ak používateľ podrží ľavé tlačidlo myši a presunie myš, objekt sa presunie nahor alebo bude lietať.
 
-**Camera properties**![]({{ '/assets/icons/pre_icons/mo_report_pdf_cam.jpg' | relative_url }}) :
+** Vlastnosti fotoaparátu **![]({{ '/assets/icons/pre_icons/mo_report_pdf_cam.jpg' | relative_url }}) :
 
-**3D Measurement Tool**![]({{ '/assets/icons/pre_icons/mo_report_pdf_meassure.jpg' | relative_url }}) : Using this user can measure the dimensions of the object.
+**3D merací nástroj** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_meassure.jpg' | relative_url }}): Pomocou tohto používateľa môžete zmerať rozmery objektu.
 
-**Add 3D Comment** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_3d_comment.jpg' | relative_url }}) : User can add the comments by picking the point on the object.
+**Pridať 3D komentár** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_3d_comment.jpg' | relative_url }}): Používateľ môže pridať komentáre výberom bodu na objekte.
 
-**Default View**![]({{ '/assets/icons/pre_icons/mo_report_pdf_home.jpg' | relative_url }}) : Using this will display the default object view, in the default view measuring or adding the comment will save as new viewports. User can latter select the Measurement View or 3DCommentView later to observe the measured dimension or added comments. (See Fig. RGL1.33.)
+**Predvolené zobrazenie** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_home.jpg' | relative_url }}): Pomocou tohto sa zobrazí predvolené zobrazenie objektu, v predvolenom zobrazení sa meranie alebo pridanie komentára uloží ako nové zábery. Používateľ môže neskôr vybrať zobrazenie merania alebo 3DCommentView, aby pozoroval nameraný rozmer alebo pridal komentáre. (Pozri obr. RGL1.33.)
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0033.jpg' | relative_url }})
 
-View selection field
+Zobraziť výberové pole
 
-Added comments or measured dimensions can be deleted or edited by right mouse click options.
+Pridané komentáre alebo merané rozmery je možné odstrániť alebo upraviť pomocou možností kliknutia pravým tlačidlom myši.
 
-User can also select standard view modes like Iso Plus, Iso Minus, X Plus, Y Plus etc.
+Používateľ môže tiež zvoliť štandardné režimy zobrazenia, ako sú Iso Plus, Iso Minus, X Plus, Y Plus atď.
 
-**Toggle model Tee**![]({{ '/assets/icons/pre_icons/mo_report_pdf_tog.jpg' | relative_url }}) : Using this user will get the model tree towards left side of the PDF page, in that tree it list the 3d model different views and comments. It also give other display options like Previous view or Next view.
+**Prepnúť model Tee** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_tog.jpg' | relative_url }}): Pomocou tohto používateľa sa strom modelu dostane na ľavú stranu stránky PDF, v tomto strome sa zobrazia rôzne zobrazenia a komentáre 3D modelu. Poskytuje aj ďalšie možnosti zobrazenia, ako je predchádzajúce zobrazenie alebo ďalšie zobrazenie.
 
-**Use Perspective projection** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_proj.jpg' | relative_url }}) : This will project the visible front area of the object.
+**Použite perspektívnu projekciu** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_proj.jpg' | relative_url }}): Toto premietne viditeľnú prednú plochu objektu.
 
-**Model Render mode** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_render.jpg' | relative_url }}) : This provides different rendering types like Transparent, Illustration, Wire frame, Solid, Shaded.. etc.
+** Režim vykresľovania modelu ** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_render.jpg' | relative_url }}) : Toto poskytuje rôzne typy vykresľovania ako Transparent, Illustration, Wire frame, Solid, Shaded.. atď.
 
-**Enable extra lighting** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_light.jpg' | relative_url }}) : Using this user can use can enable different extra lighting settings.
+**Povoliť dodatočné osvetlenie** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_light.jpg' | relative_url }}): Použitie tohto používateľa môže povoliť rôzne nastavenia dodatočného osvetlenia.
 
-**Background color** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_background.jpg' | relative_url }}) : Using this user can change the background color.
+**Farba pozadia ** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_background.jpg' | relative_url }}) : Pomocou tohto používateľa môžete zmeniť farbu pozadia.
 
-**Toggle cross section** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_section.jpg' | relative_url }}) : Activating this user can section the object section plane properties can be changed by using the pull down button Cross section properties.
+**Prepínanie prierezu** ![]({{ '/assets/icons/pre_icons/mo_report_pdf_section.jpg' | relative_url }}): Aktiváciou tohto používateľa môžete zmeniť vlastnosti roviny prierezu objektu pomocou rozbaľovacieho tlačidla Vlastnosti prierezu.
 
-**Chapter 2:**
+Kapitola 2
 
-For Chapter 2 Temperature state variable contour, PPT will play all 3 images in single slide, when we click on Slide show (F5). (See in Fig. RGL1.34.)
+Pre kapitolu 2 Variabilný obrys teplotného stavu ppt prehrá všetky 3 obrázky na jednej snímke, keď klikneme na Prezentácia (F5). (Pozri obr. RGL1.34.)
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0034.jpg' | relative_url }})
 
-Chapter 2 Temperature state variable PPT slide
+Kapitola 2 Variabilná snímka stavu teploty ppt
 
-PDF will show the 3 images temperature state variable workpiece contour images in a single page as shown in Fig. RGL1.35.
+PDF zobrazí 3 obrázky teplotných stavov variabilných obrysov obrobku na jednej stránke, ako je znázornené na obr. RGL1.35.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0035.jpg' | relative_url }})
 
-Chapter 2 Temperature state variable PDF page
+Kapitola 2 Premenná stavu teploty na stránke PDF
 
-3D model for temperature state variable will display for Heat resting operation at last step in PDF as shown in Fig. RGL1.36.
+3D model pre premennú stavu teploty sa zobrazí pre prevádzku tepelného pokoja v poslednom kroku v PDF, ako je znázornené na obr. RGL1.36.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0036.jpg' | relative_url }})
 
-Chapter 2 Temperature state variable 3D model PDF page
+Kapitola 2 Variabilný stav teploty 3D model PDF stránka
 
-For 3D model options refer the Chapter 1 results review section 3D Model PDF options.
+Možnosti 3D modelu nájdete v časti Výsledky v kapitole 1 Možnosti 3D modelu vo formáte PDF.
 
-**Chapter 3 :**
+Kapitola 3
 
-For Chapter 3 Metal flow, PPT will play all 7 saved steps images in single slide as we selected total 9 steps (including 1st and last step) when we click on Slide show (F5). (See in Fig. RGL1.37.)
+Pre kapitolu 3 Metal Flow, ppt prehrá všetkých 7 uložených krokov obrázkov na jednej snímke, pretože sme vybrali celkom 9 krokov (vrátane prvého a posledného kroku), keď klikneme na prezentáciu (F5). (Pozri obr. RGL1.37.)
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0037.jpg' | relative_url }})
 
-Chapter 3 Metal flow PPT slide
+Kapitola 3 Posúvač ppt s kovovým prietokom
 
-PDF will show all the 7 images of deformed workpiece in a single page as shown in Fig. RGL1.38.
+PDF zobrazí všetkých 7 obrazov deformovaného obrobku na jednej strane, ako je znázornené na obr. RGL1.38.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0038.jpg' | relative_url }})
 
-Chapter 3 Metal flow PDF page
+Kapitola 3 Stránka PDF s kovovým prietokom
 
-For Chapter 3 primary die Z-Load Vs Stroke graph in PPT is as shown in Fig. RGL1.39.
+Pre kapitolu 3 je graf primárnej matrice Z-Load Vs Stroke v ppt, ako je znázornené na obr. RGL1.39.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0039.jpg' | relative_url }})
 
-Chapter 3 Z-load vs Stroke graph PPT slide
+Kapitola 3 Z-zaťaženie vs graf zdvihu snímka ppt
 
-PDF display the same Z-Load Vs Stroke graph as shown in Fig. RGL1.40.
+PDF zobrazuje rovnaký graf zdvihu Z-Load Vs, ako je znázornené na obr. RGL1.40.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0040.jpg' | relative_url }})
 
-Chapter 3 Z-load vs Stroke graph PDF page
+Kapitola 3 Z-load vs Stroke graph PDF page
 
-For Chapter 3 Effective Stress state variable contour, PPT will play all 7 images in single slide, when we click on Slide show (F5). (See in Fig. RGL1.41.)
+Pre kapitolu 3 Efektívny stav napätia variabilný obrys, ppt prehrá všetkých 7 obrázkov na jednej snímke, keď klikneme na prezentáciu (F5). (Pozri obr. RGL1.41.)
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0041.jpg' | relative_url }})
 
-Chapter 3 Effective Stress state variable PPT slide
+Kapitola 3 Efektívny stav napätia variabilná snímka ppt
 
-PDF will show the 7 images Effective Stress state variable workpiece contour images in a single page as shown in Fig. RGL1.42.
+PDF zobrazí 7 obrázkov stavov efektívneho napätia variabilných obrysov obrobku na jednej stránke, ako je znázornené na obr. RGL1.42.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0042.jpg' | relative_url }})
 
-Chapter 3 Effective Stress state variable PDF page
+Kapitola 3 Premenná stavu efektívneho napätia na stránke PDF
 
-3D model for Effective Stress state variable will display for Forming operation at last step in PDF as shown in Fig. RGL1.43.
+3D model pre premennú Efektívny stav napätia sa zobrazí pre operáciu tvárnenia v poslednom kroku v PDF, ako je znázornené na obr. RGL1.43.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0043.jpg' | relative_url }})
 
-Chapter 3 Effective Stress state variable 3D model PDF page
+Kapitola 3 Efektívny stav napätia premenná 3D model PDF stránka
 
-For Chapter 3 Effective Strain state variable contour, PPT will play all 7 images in single slide, when we click on Slide show (F5). (See in Fig. RGL1.44.)
+Pre kapitolu 3 Efektívny stav deformácie variabilný obrys, ppt prehrá všetkých 7 obrázkov na jednej snímke, keď klikneme na prezentáciu (F5). (Pozri obr. RGL1.44.)
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0044.jpg' | relative_url }})
 
-Chapter 3 Effective Strain state variable PPT slide
+Kapitola 3 Efektívny stav napnutia variabilná snímka ppt
 
-PDF will show the 7 images Effective Strain state variable workpiece contour images in a single page as shown in Fig. RGL1.45.
+PDF zobrazí 7 obrázkov Efektívny stav deformácie variabilných obrysov obrobku na jednej stránke, ako je znázornené na obr. RGL1.45.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0045.jpg' | relative_url }})
 
-Chapter 3 Effective Strain state variable PDF page
+Kapitola 3 Efektívny stav napnutia premenná strana PDF
 
-3D model for Effective Strain state variable will display for Forming operation at last step in PDF as shown in Fig. RGL1.46.
+3D model pre premennú Efektívny stav deformácie sa zobrazí pre operáciu tvárnenia v poslednom kroku v PDF, ako je znázornené na obr. RGL1.46.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0046.jpg' | relative_url }})
 
-Chapter 3 Effective Strain state variable 3D model PDF page
+Kapitola 3 Efektívny stav deformácie premenná 3D model PDF stránka
 
-**Chapter 4 :**
+Kapitola 4
 
-For Chapter 4 Metal flow, PPT will play all 3 saved steps images in single slide as we selected total 9 steps (including 1st and last step) when we click on Slide show (F5). (See in Fig. RGL1.47.)
+Pre kapitolu 4 Metal Flow ppt prehrá všetky 3 uložené obrázky krokov na jednej snímke, pretože sme vybrali celkovo 9 krokov (vrátane prvého a posledného kroku), keď klikneme na prezentáciu (F5). (Pozri obr. RGL1.47.)
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0047.jpg' | relative_url }})
 
-Chapter 4 Metal flow PPT slide
+Kapitola 4 Posúvač ppt s kovovým prietokom
 
-PDF will show all the 3 images of deformed workpiece in a single page as shown in Fig. RGL1.48.
+PDF zobrazí všetky 3 obrazy deformovaného obrobku na jednej strane, ako je znázornené na obr. RGL1.48.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0048.jpg' | relative_url }})
 
-Chapter 4 Metal flow PDF page
+Kapitola 4 Stránka PDF s kovovým prietokom
 
-For Chapter 4 primary die Z-Load Vs Stroke graph in PPT is as shown in Fig. RGL1.49.
+Pre kapitolu 4 je graf primárnej matrice Z-Load Vs Stroke v ppt, ako je znázornené na obr. RGL1.49.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0049.jpg' | relative_url }})
 
-Chapter 4 Z-load vs Stroke graph PPT slide
+Kapitola 4 Z-zaťaženie vs graf zdvihu ppt snímka
 
-PDF display the same Z-Load Vs Stroke graph as shown in Fig. RGL1.50.
+PDF zobrazuje rovnaký graf zdvihu Z-Load Vs, ako je znázornené na obr. RGL1.50.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0050.jpg' | relative_url }})
 
-Chapter 4 Z-load vs Stroke graph PDF page
+Kapitola 4 Z-load vs Stroke graph PDF page
 
-For Chapter 4 Effective Stress state variable contour, PPT will play all 3 images in single slide, when we click on Slide show (F5). (See in Fig. RGL1.51.)
+Pre kapitolu 4 Efektívny stav napätia variabilný obrys, ppt prehrá všetky 3 obrázky na jednej snímke, keď klikneme na prezentáciu (F5). (Pozri obr. RGL1.51.)
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0051.jpg' | relative_url }})
 
-Chapter 4 Effective Stress state variable PPT slide
+Kapitola 4 Efektívny stav napätia variabilná snímka ppt
 
-PDF will show the 3 images Effective Stress state variable workpiece contour images in a single page as shown in Fig. RGL1.52.
+PDF zobrazí 3 obrázky Efektívne napätie stav variabilné obrysy obrobku na jednej stránke, ako je znázornené na obr. RGL1.52.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0052.jpg' | relative_url }})
 
-Chapter 4 Effective Stress state variable PDF page
+Kapitola 4 Premenná stavu efektívneho napätia strana PDF
 
-As we are not selected the Include 3D model checkbox 3D PDF model not available for the Chapter 4.
+Keďže nie sme vybraní, začiarkavacie políčko Zahrnúť 3D model 3D PDF model nie je k dispozícii pre kapitolu 4.
 
-For Chapter 4 Effective Strain state variable contour, PPT will play all 3 images in single slide, when we click on Slide show (F5). (See in Fig. RGL1.53.)
+Pre kapitolu 4 Efektívny stav deformácie variabilný obrys, ppt prehrá všetky 3 obrázky na jednej snímke, keď klikneme na prezentáciu (F5). (Pozri obr. RGL1.53.)
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0053.jpg' | relative_url }})
 
-Chapter 4 Effective Strain state variable PPT slide
+Kapitola 4 Efektívny stav napnutia variabilná snímka ppt
 
-PDF will show the 3 images **Effective Strain** state variable workpiece contour images in a single page as shown in Fig. RGL1.54.
+PDF zobrazí 3 obrázky **Efektívne namáhanie** stavové variabilné obrysové obrázky obrobku na jednej stránke, ako je znázornené na obr. RGL1.54.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0054.jpg' | relative_url }})
 
-Chapter 4 Effective Strain state variable PDF page
+Kapitola 4 Efektívny stav napnutia premenná strana PDF
 
-**Chapter 5 :**
+Kapitola 5
 
-For Chapter 5 Temperature summary graph for workpiece, from 1st to last operation in PPT file is as shown in Fig. RGL1.55.
+Pre kapitolu 5 súhrnný graf teploty pre obrobok je od 1. do poslednej operácie v súbore ppt, ako je znázornené na obr. RGL1.55.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0055.jpg' | relative_url }})
 
-Chapter 5 temperature Summary graph for Workpiece PPT slide
+Kapitola 5 graf súhrnu teploty pre snímku obrobku ppt
 
-PDF display the summary graph for Temperature for workpiece in all operation as shown in Fig. RGL1.56.
+PDF zobrazí súhrnný graf pre teplotu obrobku vo všetkých prevádzkach, ako je znázornené na obr. RGL1.56.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0056.jpg' | relative_url }})
 
-Chapter 5 temperature Summary graph for Workpiece PDF page
+Kapitola 5 graf súhrnu teploty pre stránku PDF obrobku
 
-For Chapter 5 Temperature state variable contour for all objects will play operation wise in different PPT slides. Air convection temperature contour refer the Fig. RGL1.30. Similarly for the PDF images of temperature contour refer Fig. RGL1.31.
+Pre kapitolu 5 Teplota stav variabilný obrys pre všetky objekty bude hrať prevádzku múdro v rôznych snímkach ppt. Obrys teploty konvekcie vzduchu je uvedený na obr. RGL1.30. Podobne pre obrázky PDF teplotného obrysu pozri obr. RGL1.31.
 
-Heat resting temperature contour steps play in PPT refer the Fig. RGL1.57.
+Kroky obrysu pokojovej teploty tepla v ppt sú uvedené na obr. RGL1.57.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0057.jpg' | relative_url }})
 
-Chapter 5 Temperature state variable PPT slide for Heat resting operation
+Kapitola 5 Variabilný stav teploty posúvača ppt pre prevádzku tepelného pokoja
 
-PDF images of temperature contour for heat resting refer Fig. RGL1.58.
+PDF obrázky teplotného obrysu pre tepelný odpočinok pozri obr. RGL1.58.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0058.jpg' | relative_url }})
 
-Chapter 5 Temperature state variable PDF page for Heat resting operation
+Kapitola 5 Variabilná stránka PDF s teplotným stavom pre prevádzku tepelného oddychu
 
-Similarly during Forming operation temperature contour steps play in PPT refer the Fig. RGL1.59.
+Podobne počas operácie tvarovania hrajú kroky obrysu teploty v ppt pozri obr. RGL1.59.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0059.jpg' | relative_url }})
 
-Chapter 5 Temperature state variable PPT slide for Forming operation
+Kapitola 5 Variabilný stav teploty posúvača ppt pre tvarovaciu operáciu
 
-PDF images of temperature contour for Forming refer Fig. RGL1.60.
+PDF obrázky teplotného obrysu pre tvárnenie pozri obr. RGL1.60.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0060.jpg' | relative_url }})
 
-Chapter 5 Temperature state variable PDF page for Forming operation
+Kapitola 5 Variabilná stránka PDF s teplotným stavom pre operáciu tvárnenia
 
-During Forging Blow 2 operation temperature contour steps play in PPT refer the Fig. RGL1.61.
+Počas kovania Blow 2 prevádzkové teplotné obrysy krokov prehrávania v ppt pozri obr. RGL1.61.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0061.jpg' | relative_url }})
 
-Chapter 5 Temperature state variable PPT slide for **Forging** Blow 2 operation
+Kapitola 5 Teplotný stav variabilného sklíčka ppt pre **Kovanie** Fúkanie 2
 
-PDF images of temperature contour for Forging Blow 2 refer Fig. RGL1.62.
+PDF obrázky teplotného obrysu pre kovanie Blow 2 pozri obr. RGL1.62.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0062.jpg' | relative_url }})
 
-Chapter 5 Temperature state variable PDF page for **Forging** Blow 2 operation
+Kapitola 5 Variabilná stránka PDF s teplotným stavom pre **kovanie** operáciu vyfukovania 2
 
-PPT slide for Chapter 5 point tracking graph for workpiece temperature state variable at centre and 2 points on outer Die is as shown in Fig. RGL1.63.
+Posúvač ppt pre graf bodového sledovania kapitoly 5 pre premennú stavu teploty obrobku v strede a 2 body na vonkajšej matrici, ako je znázornené na obr. RGL1.63.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0063.jpg' | relative_url }})
 
-Point tracking graph for workpiece temperature PPT slide
+Graf bodového sledovania pre snímku teploty obrobku PPT
 
-PDF point racking page is shown in Fig. RGL1.64.
+Stránka regálov s bodmi PDF je znázornená na obr. RGL1.64.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0064.jpg' | relative_url }})
 
-Point tracking graph for workpiece temperature PDF page
+Graf bodového sledovania pre stránku PDF s teplotou obrobku
 
-**Chapter 6 :**
+Kapitola 6
 
-PPT slide for Z-Load Vs Stroke graph for primary die in forming and forging Blow 2 operation is as shown in Fig. RGL1.65.
+Posuvník ppt pre Z-Load Vs Graf zdvihu pre primárnu matricu pri tvárnení a kovaní Operácia vyfukovania 2 je znázornená na obr. RGL1.65.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0065.jpg' | relative_url }})
 
-Primary die Z-Load Vs Stroke graph PPT slide
+Primárna matrica Z-Load Vs Graf zdvihu ppt snímka
 
-PDF Z-Load Vs Stroke graph is as shown in Fig. RGL1.66.
+PDF Z-zaťaženie Vs Graf zdvihu je znázornený na obr. RGL1.66.
 
 ![]({{ '/assets/images/labs/report_generation_lab/report_generation_lab_in_mo/image0066.jpg' | relative_url }})
 
-Primary die Z-Load Vs Stroke graph PDF page
+Primárna matrica Z-Load Vs Graf zdvihu PDF strana
 
-For details on using other sections of the [Report generation]({{ '/docs/sk/operation_templates/41_report_generation/41_1_report_generation/' | relative_url }}) refer the related topics.
+Podrobnosti o používaní iných častí [Report generation]({{ '/docs/sk/operation_templates/41_report_generation/41_1_report_generation/' | relative_url }}) nájdete v súvisiacich témach.
 
-**Related Topics:**
+Súvisiace témy
 
 [28\. Report Generation]({{ '/docs/sk/post_processor/28_report_generation/28_report_generation/' | relative_url }})
 

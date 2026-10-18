@@ -1,575 +1,575 @@
 ---
 lang: sk
-title: "Lab03 Spike Forging"
+title: "Lab03 Kovanie hrotov"
 ---
 
-# Lab 3. Spike Forging
+# Laboratórna práca č. 3. Falšovanie signálov
 
   
-3.1. Spike Forging - Transfer from Furnace to Dies
+3.1. Kovanie hrotov – presun z pece do foriem
 
-3.2. Spike Forging - Dwell On Bottom Die
+3.2. Kovanie hrotov – zdržanie na spodnej matrici
 
-3.3. Spike Forging - Forging Blow1
+3.3. Kovanie hrotu – 1. úder
 
-3.4. Spike Forging - Die Change and Blow2
+3.4. Kovanie hrotov – výmena formy a úder 2
 
-In four operations, a hot spike forging will be modeled. Since the process is hot, the most accurate simulation will model not only the forging operation but also any heat transfer operations that occur. The entire process will be divided as follows:
+V štyroch operáciách sa bude modelovať kovanie za tepla. Keďže ide o proces za tepla, najpresnejšia simulácia bude modelovať nielen samotnú operáciu kovania, ale aj všetky prebiehajúce procesy prenosu tepla. Celý proces sa rozdelí nasledovne:
 
-  * Heat transfer operation will model a 10 second transfer of the billet from the furnace to the dies. This is solely a heat transfer simulation.
+  * Simulácia prenosu tepla bude znázorňovať 10-sekundový presun sochory z pece do foriem. Ide výlučne o simuláciu prenosu tepla.
 
-  * Dwelling Operation will model the 2 second dwell period of the billet resting on the bottom die prior to forging. This is also a heat transfer simulation.
+  * Operácia „Dwelling“ bude simulovať 2-sekundovú dobu odpočinku polotovaru na spodnej matrici pred kováním. Ide zároveň o simuláciu prenosu tepla.
 
-  * Forming operation will model the first blow and do a Die change for Second Blow of a two blow forging process.
+  * Operácia tvárnenia bude simulovať prvý úder a vykoná výmenu formy pre druhý úder v rámci dvojúderového procesu kovania.
 
-To perform Die Stress for this setup, please refer to Die Stress Wizard lab 2.
+Ak chcete pre túto konfiguráciu vykonať analýzu napätia v matrici, pozrite si laboratórnu úlohu č. 2 v sprievodcovi analýzou napätia v matrici.
 
-Since the billet and dies are axisymmetric, the process could be modeled in 2D. However, in order to further explore symmetry and other important 3D concepts, the process will be modeled in 3D using 1/4 symmetry for the billet and the dies.
+Keďže sochor a matrice sú osovo symetrické, proces by bolo možné modelovať v 2D. S cieľom hlbšie preskúmať symetriu a ďalšie dôležité 3D pojmy však bude proces modelovaný v 3D s využitím 1/4 symetrie pre sochor a matrice.
 
-## Spike Forging - Transfer from Furnace to Dies
+## Kovanie hrotov – presun z pece do foriem
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. 3DL3.1. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** " radio button in unit field. Define Problem Name as "**Spike_Forging** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému, ako je znázornené na obr. 3DL3.1. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte prepínač „**Angličtina**“. Názov úlohy zadajte ako „**Spike_Forging**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak políčko „Zobraziť dialógové okno s možnosťami“ nezaškrtnete, nezobrazí sa dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), čím otvoríte nový problém s využitím integrovaného výrobného procesu Deform.
 
-MO wizard will open at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we use ‘**Spike_Forging** ’ as the project name. User can also change the Unit system (File menu selected unit system will be selected by default) and add operation by selecting from First operation pull down list and checkbox. Using copy Existing project option we can import previous saved projects as new project. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+V tomto momente sa otvorí sprievodca MO a používateľ bude vyzvaný, aby zadal názov projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názov tejto relácie. V tejto relácii použijeme ako názov projektu „**Spike_Forging**“. Používateľ môže tiež zmeniť systém jednotiek (v ponuke Súbor sa automaticky vyberie systém jednotiek, ktorý bol zvolený v ponuke Súbor) a pridať operáciu výberom z roletového zoznamu Prvá operácia a zaškrtnutím príslušného políčka. Pomocou možnosti Kopírovať existujúci projekt môžeme importovať predtým uložené projekty ako nové projekty. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg' | relative_url }})
 
-Assigning problem name
+Priradenie názvu problému
 
-Multiple Operation wizard will open. Add 3D Heat Transfer operation from the Explorer Operations list. Add the operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to **3D Heat Transfer** or user can also add by drag and drop into the Operation Editor. (See Fig. 3DL3.2.)
+Otvorí sa sprievodca viacerými operáciami. Zoznamu operácií v prehliadači pridajte operáciu 3D Heat Transfer. Operáciu pridáte kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa položky **3D Heat Transfer** alebo ju môžete pridať aj pretiahnutím do editora operácií. (Pozri obr. 3DL3.2.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0002.jpg' | relative_url }})
 
-MO Wizard Window
+Okno sprievodcu MO
 
-### Assign Heat transfer Type
+### Nastavenie typu prenosu tepla
 
-Since we are doing Air transfer operation, select the Heat transfer type as **Transfer through Air**. click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Keďže vykonávame prevod vzduchom, ako typ prenosu tepla vyberte **Prenos vzduchom**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Assign Process Condition
+### Priradiť podmienku procesu
 
-Define **heat****transfer****time** as **10** sec and keep rest other fields as it is. (See Fig. 3DL3.3.) . Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object page.
+Nastavte **čas prenosu tepla** na **10** sekúnd a ostatné polia ponechajte bez zmeny. (Pozri obr. 3DL3.3.) Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Object“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0003.jpg' | relative_url }})
 
-Assigning Transfer operation Process condition
+Priradenie operácie prenosu – podmienka procesu
 
-### Objects
+### Objekty
 
-In this initial heat transfer simulation, the billet will be getting transferred from the furnace to the dies. For this operation by default only one object will be added in list, use the default selection and (see Fig. 3DL3.4.) click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V tejto úvodnej simulácii prenosu tepla sa sochársky polotovar bude premiestňovať z pece do foriem. Pre túto operáciu sa do zoznamu štandardne pridá len jeden objekt; použite predvolený výber a (pozri obr. 3DL3.4.) kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0004.jpg' | relative_url }})
 
-Objects window
+Okno „Objekty“
 
-### Defining Object Temperature
+### Určenie teploty objektu
 
-In Workpiece page Define **Object temperature** as **2000** °F as shown in Fig. 3DL3.5. Click on![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Workpiece“ nastavte **teplotu objektu** na hodnotu **2000** °F, ako je znázornené na obr. 3DL3.5. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0005.jpg' | relative_url }})
 
-Defining Workpiece temperature
+Určenie teploty obrobku
 
-### Import Geometry
+### Import geometrie
 
-In Geometry page, click on import geometry from library option (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) and import the **Spike_Billet.STL** file from DEFORM installed folder \3d\LABS directory as shown in Fig. 3DL3.6. Use ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) action label to check the Geometry. A perfect geometry should display message as shown in Fig. 3DL3.7.
+Na stránke „Geometria“ kliknite na možnosť „Importovať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a importujte súbor **Spike_Billet.STL** z adresára \3d\LABS v inštalačnej zložke programu DEFORM, ako je znázornené na obr. 3DL3.6. Na kontrolu geometrie použite akciu ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Ak je geometria v poriadku, mala by sa zobraziť správa znázornená na obr. 3DL3.7.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0006.jpg' | relative_url }})
 
-Importing Geometry
+Import geometrie
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0007.jpg' | relative_url }})
 
-Geometry Checking popup
+Vyskakovacie okno na kontrolu geometrie
 
-### Assigning Symmetry Conditions
+### Určenie podmienok symetrie
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}) option, select one of the symmetry planes of the Workpiece and click the to define planar symmetry as shown in Fig. 3DL3.8. Repeat this for the other symmetry plane then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknite na možnosť ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}), vyberte jednu z rovín symetrie obrobku a kliknutím definujte rovinnú symetriu, ako je znázornené na obr. 3DL3.8. Tento postup zopakujte pre druhú rovinu symetrie a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0008.jpg' | relative_url }})
 
-Assigning Planar symmetry to the workpiece
+Priradenie rovinná symetria k obrobku
 
-### Meshing the Workpiece
+### Vytvorenie siete na obrobku
 
-Switch to Expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) (Switch to expert mode) icon from the tool bar. Expert mode will provide more options for detailed settings.
+Prepnite do režimu Expert kliknutím na ikonu ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) (Prepnúť do režimu Expert) na paneli nástrojov. Režim Expert ponúka viac možností pre podrobné nastavenia.
 
-In Mesh page, Select Absolute type, set the **Min Element Size** to **0.04** and also set the **Size****Ratio** to **3**. After changing these settings, click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) . Click ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) for Default Boundary condition popup. (See Fig. 3DL3.9.) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Mesh“ vyberte typ „Absolute“, nastavte **Min Element Size** na hodnotu **0,04** a tiež nastavte **Size****Ratio** na hodnotu **3**. Po zmene týchto nastavení kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) otvoríte okno s predvolenými okrajovými podmienkami. (Pozri obr. 3DL3.9.) Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0009.jpg' | relative_url }})
 
-Defining Mesh Data
+Definovanie údajov o sieti
 
-### Assigning Material to the Workpiece
+### Priradenie materiálu k obrobku
 
-In Material Window, click on to Load material data from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) and load '**AISI-1025[1800-2200F(1000-1200C)]** ' material from **Steel** category by clicking ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button as shown in Fig. 3DL3.10. Select the added material from window to assign it to the workpiece as shown in Fig. 3DL3.11. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V okne „Materiál“ kliknite na tlačidlo „Načítať údaje o materiáli z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a načítajte materiál „**AISI-1025[1800-2200F(1000-1200C)]** “ z kategórie **Oceľ** kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}), ako je znázornené na obr. 3DL3.10. Z okna vyberte pridaný materiál a priraďte ho k obrobku, ako je znázornené na obr. 3DL3.11. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0010.jpg' | relative_url }})
 
-Material Window
+Okno „Materiál“
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0011.jpg' | relative_url }})
 
-Assigning Material to workpiece
+Priradenie materiálu k obrobku
 
-### Boundary Conditions
+### Okrajové podmienky
 
-For this lab, Assigned Default Boundary conditions are OK for Workpiece in this setup (see Fig. 3DL3.12.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Step page.
+Pre toto laboratórne cvičenie sú v danom nastavení pre obrobok postačujúce prednastavené okrajové podmienky (pozri obr. 3DL3.12.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Step“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0012.jpg' | relative_url }})
 
-Boundary Conditions Window
+Okno „Okrajové podmienky“
 
-### Setting Step Controls
+### Nastavenie ovládacích prvkov krokov
 
-In Step Definition define Set the **Number of Simulation Steps** to **50** , the **Step****Increment** **to** **Save** at **5** and Solution step definition **Time** as **0.2** sec (see Fig. 3DL3.13.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V definícii kroku nastavte **Počet simulačných krokov** na **50**, **Krok****Prírastok** **na** **Uložiť** na hodnotu **5** a **Čas** definície kroku riešenia nastavte na **0,2** s (pozri obr. 3DL3.13.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0013.jpg' | relative_url }})
 
-Simulation Step Controls Window
+Okno Ovládacie prvky simulačných krokov
 
-### Generate Database
+### Vytvoriť databázu
 
-By selecting the **File** menu ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Export** option, save a keyword file for the problem as "**Spike_Air_transfer** ".
+Po výbere možnosti **Export** v ponuke **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) uložte súbor s kľúčovými slovami pre danú úlohu pod názvom „**Spike_Air_transfer**“.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) action label to check the problem. Generate database by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) action label.
+Kliknite na popisok akcie ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali problém. Vytvorte databázu kliknutím na popisok akcie ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
-### Running Simulation
+### Spustenie simulácie
 
-Once the database has been generated, switch to the Simulation mode by selecting the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the object tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label under the simulation tab, Run Options dialog will open as shown in Fig. 3DL3.14.. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do režimu simulácie výberom tlačidla ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom objektov. Kliknite na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) na karte Simulácia; otvorí sa dialógové okno Možnosti spustenia, ako je znázornené na obr. 3DL3.14. Použite predvolenú možnosť **Pokračovať v spúšťaní**, vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0014.jpg' | relative_url }})
 
-Run Simulation Window
+Spustiť okno simulácie
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. (See Fig. 3DL3.15.)
+Sledujte priebeh simulácie na kartách „Simulation Message“ a „Simulation Log“ a uistite sa, že je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). (Pozri obr. 3DL3.15.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0015.jpg' | relative_url }})
 
-Simulation Message File
+Súbor so simulačnými správami
 
-### Post processing
+### Následné spracovanie
 
-When the simulation is complete, review the results by switching to Post mode using the ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) button above the Simulation tool bar.
+Po dokončení simulácie si výsledky prezrite tak, že prejdete do režimu Post pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) nad panelom nástrojov Simulácia.
 
-Plot Temperature State variable ![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }}). Also, right-click on the Color Bar in the DISPLAY window and select **Temperature** as the Color Bar Type. This provides a more intuitive color scheme when viewing temperatures.
+Zobrazte premennú stavu teploty ![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }}). Okrem toho kliknite pravým tlačidlom myši na farebnú lištu v okne DISPLAY a ako typ farebnej lišty vyberte možnosť **Teplota**. Týmto spôsobom získate pri zobrazení teplôt intuitívnejšie farebné schéma.
 
-Play through the steps of the simulation and look at how the Billet cools down as it is transferred from the furnace to the dies. (See Fig. 3DL3.16.)
+Prejdite jednotlivými krokmi simulácie a sledujte, ako sa sochor ochladzuje pri preprave z pece do foriem. (Pozri obr. 3DL3.16.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0016.jpg' | relative_url }})
 
-Post processor window with Temperature plot
+Okno postprocesora s grafom teploty
 
-Now, select last step in Step browser and click on ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) button to continue the setup.
+Teraz vyberte posledný krok v prehliadači krokov a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}), aby ste pokračovali v inštalácii.
 
-## Spike Forging - Dwell On Bottom Die
+## Kovanie hrotov – zdržanie na spodnej matrici
 
-In earlier operation, workpiece was transferred from the furnace to the dies. Once the workpiece gets to the dies, it will rest on the bottom die for 2 seconds prior to forging operation. This dwell will be modeled in this operation. By selecting Batch mode setup type the dwell operation will be set up.
+V predchádzajúcej operácii sa obrobok prenášal z pece do foriem. Akonáhle sa obrobok dostane do foriem, pred začatím kovania zostane 2 sekundy ležať na spodnej forme. Toto zdržanie sa v tejto operácii zohľadní. Zdržanie sa nastaví výberom typu nastavenia „Batch mode“ (Dávkový režim).
 
-Add 3D Heat Transfer operation from the Explorer Operations list. Add the operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to 3D Heat Transfer or can also be added by drag and drop into the Operation editor as shown in Fig. 3DL3.17.
+Pridajte operáciu „3D Heat Transfer“ zo zoznamu operácií v okne Explorer. Operáciu pridáte kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa položky „3D Heat Transfer“ alebo ju môžete pridať aj pomocou funkcie „drag and drop“ do editora operácií, ako je znázornené na obr. 3DL3.17.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0017.jpg' | relative_url }})
 
-MO wizard with two operations
+Sprievodca MO s dvoma operáciami
 
-Select 2nd operation from Operation editor, Setup type popup will appear and click on ![]({{ '/assets/icons/pre_icons/mo_no_batch_setup_button.jpg' | relative_url }}) mode button (since we are setting up Dwell operation in Batch mode). See Fig. 3DL3.18.
+V editore operácií vyberte 2. operáciu, zobrazí sa rozbaľovacie okno „Setup type“ (Typ nastavenia) a kliknite na tlačidlo režimu ![]({{ '/assets/icons/pre_icons/mo_no_batch_setup_button.jpg' | relative_url }}) (keďže nastavujeme operáciu Dwell v dávkovom režime). Pozrite obr. 3DL3.18.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0018.jpg' | relative_url }})
 
-Setup type selection popup
+Rozbaľovacie okno na výber typu nastavenia
 
-In Heat transfer page, by default **Rest on******Die** **Heating type will be selected if not select Rest on Die Heat transfer type. Previous operation settings will be carried over the operation see Fig. 3DL3.19. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Na stránke „Prenos tepla“ bude štandardne vybraný typ ohrevu **Rest on******Die**, ak nezvolíte typ prenosu tepla „Rest on Die“. Predchádzajúce nastavenia operácie sa prenesú do tejto operácie – pozri obr. 3DL3.19. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0019.jpg' | relative_url }})
 
-Heat Transfer type selection page
+Stránka na výber typu prenosu tepla
 
-### Process condition
+### Prevádzkové podmienky
 
-Define **Resting****Time** as **2** Sec, as the workpiece will rest on the bottom die for 2 seconds (See Fig. 3DL3.20.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Objects page.
+Nastavte **Čas odpočinku** na **2** sekundy, keďže obrobok bude ležať na spodnej matrici 2 sekundy (pozri obr. 3DL3.20.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Objekty“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0020.jpg' | relative_url }})
 
-Resting operation Process Condition page
+Stránka „Režim odpočinku – Stav procesu“
 
-###  Adding Objects
+###  Pridávanie objektov
 
-In Object page, by default 3 objects will be added. Depending upon the number of objects required for the simulation, user can add as many dies as needed by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) button. For this lab, we will use 3 objects (workpiece and 2 dies) (see Fig. 3DL3.21.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Objekt“ sa štandardne pridajú 3 objekty. V závislosti od počtu objektov potrebných na simuláciu môže používateľ pridať toľko foriem, koľko je potrebné, kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}). V tomto laboratórnom cvičení použijeme 3 objekty (obrobok a 2 formy) (pozri obr. 3DL3.21.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0021.jpg' | relative_url }})
 
-Objects window
+Okno „Objekty“
 
-Since we are continuing into heat dwelling operation from Heat transfer operation, Workpiece is automatically considered as read from DB object. As the object is read from DB type, all the data like temperature, mesh and BCC of the Object will be carried over from previous operation (see Fig. 3DL3.22.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top die page
+Keďže prechádzame z operácie prenosu tepla do operácie zadržiavania tepla, obrobok sa automaticky považuje za načítaný z databázového objektu. Keďže ide o objekt načítaný z databázy, všetky údaje, ako sú teplota, sieť a BCC objektu, sa prenesú z predchádzajúcej operácie (pozri obr. 3DL3.22.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Top die“ (Horná matrica).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0022.jpg' | relative_url }})
 
-Workpiece as Read From DB object
+Objekt „Obrobok načítaný z databázy“
 
-### Top Die
+### Horná matrica
 
-In, Top Die page, user can define required object temperature for Top die. For this lab default temperature **300°F** is OK (see Fig. 3DL3.23.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Top Die“ môže používateľ nastaviť požadovanú teplotu hornej formy. Pre toto laboratórne cvičenie je v poriadku predvolená teplota **300°F** (pozri obr. 3DL3.23.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0023.jpg' | relative_url }})
 
-Top die object window
+Okno s objektom „Top die“
 
-#### Import Geometry
+#### Import geometrie
 
-In Geometry page, click on import geometry from library option (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) and import the **Spike_Topdie1.STL** file from DEFORM installed folder \3D\LABS directory. Use ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button to check the Geometry. Click on ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}) option, define planar symmetry and click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) (see Fig. 3DL3.24.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke Geometria kliknite na možnosť „Importovať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a importujte súbor **Spike_Topdie1.STL** z priečinka \3D\LABS v inštalačnom adresári programu DEFORM. Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) skontrolujte geometriu. Kliknite na možnosť ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}), definujte rovinnú symetriu a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) (pozri obr. 3DL3.24.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0024.jpg' | relative_url }})
 
-Assigned Top Die plane Symmetry
+Priradená symetria v rovine hornej formy
 
-#### Generate Mesh
+#### Vytvoriť sieť
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button and select yes in Default Boundary condition popup, a mesh with 28000 elements is generated.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) a v rozbaľovacom okne „Východisková okrajová podmienka“ vyberte možnosť „Áno“; vytvorí sa sieť s 28 000 prvkami.
 
-#### Assigning material Data
+#### Priradenie údajov o materiáli
 
-In Material Window, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) to Load material data from Library and load '**AISI-H-13** ' material from **Die_material** category by clicking ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button as shown in Fig. 3DL3.25. Select the added material from window to assign it to Top Die as shown in Fig. 3DL3.26. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V okne „Material“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), aby ste načítali údaje o materiáli z knižnice, a načítate materiál „**AISI-H-13**“ z kategórie **Die_material** kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}), ako je znázornené na obr. 3DL3.25. Z okna vyberte pridaný materiál a priraďte ho k hornej matrici, ako je znázornené na obr. 3DL3.26. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0025.jpg' | relative_url }})
 
-Material window
+Okno s materiálmi
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0026.jpg' | relative_url }})
 
-Assigning Material to Top Die
+Priradenie materiálu k hornej matrici
 
-#### Assigning BCC
+#### Nastavenie skrytých kópií (BCC)
 
-Assigned Default Heat Exchange with Environment Boundary conditions for Top die are OK ( see Fig. 3DL3.27.), click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Bottom Die page.
+Predvolená výmena tepla s okrajovými podmienkami prostredia pre hornú formu je v poriadku (pozri obr. 3DL3.27.), klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Spodná forma“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0027.jpg' | relative_url }})
 
-Assigned Heat exchange Boundary conditions for Top Die
+Priradené okrajové podmienky výmeny tepla pre hornú formu
 
-### Bottom Die
+### Spodná matrica
 
-For this lab, default temperature 300°F is OK for Bottom die (see Fig. 3DL3.28.), click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Pre toto laboratórne cvičenie je pre spodnú matricu v poriadku predvolená teplota 300 °F (pozri obr. 3DL3.28.), kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0028.jpg' | relative_url }})
 
-Bottom Die window
+Okienko spodnej matrice
 
-#### Import Geometry
+#### Import geometrie
 
-In Geometry page, click on import geometry from library option (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) and import the **Spike_BottomDie.STL** file from DEFORM installed folder \3d\LABS directory. Use ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button to check the Geometry. Click on ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}) option, define planar symmetry and click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) (see Fig. 3DL3.29.) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Geometria“ kliknite na možnosť „Importovať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a importujte súbor **Spike_BottomDie.STL** z adresára \3d\LABS v inštalačnej zložke programu DEFORM. Geometriu skontrolujte pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Kliknite na možnosť ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}), definujte rovinnú symetriu a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) (pozri obr. 3DL3.29). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0029.jpg' | relative_url }})
 
-Bottom Die Plane symmetry page
+Stránka o symetrii spodnej matrice
 
-#### Generate Mesh
+#### Vytvoriť sieť
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button, select ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) in Default Boundary condition popup, a mesh with 30500 elements is generated. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}), v rozbaľovacom okne „Predvolená okrajová podmienka“ vyberte ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}); vytvorí sa sieť s 30 500 prvkami. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-#### Assigning material Data
+#### Priradenie údajov o materiáli
 
-Select the **AISI-H-13** material from Material list to assign it to Bottom Die as shown in Fig. 3DL3.26. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Zoznamu materiálov vyberte materiál **AISI-H-13** a priraďte ho k spodnej matrici, ako je znázornené na obr. 3DL3.26. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-#### Assigning BCC
+#### Nastavenie skrytých kópií (BCC)
 
-Assigned Default Heat Exchange with Environment Boundary conditions for Bottom die are OK, see Fig. 3DL3.30. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until scheduled positioning page.
+Prednastavená výmena tepla s okrajovými podmienkami prostredia pre spodnú formu je v poriadku, pozri obr. 3DL3.30. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s naplánovaným umiestnením.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0030.jpg' | relative_url }})
 
-Assigned Heat exchange Boundary conditions for Bottom Die
+Zadané okrajové podmienky výmeny tepla pre spodnú formu
 
-### Scheduled Positioning
+### Plánované polohovanie
 
-Workpiece needs to be positioned so that it is resting on top of the Bottom Die. Since workpiece is read from DB type, it needs to be positioned by scheduled positioning. To schedule position click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button and select ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}). Change the Positioning Object to the **Workpiece** and the Reference to the **Bottom****Die**. Select the Approach Direction to**-Z** as shown in Fig. 3DL3.31. and then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Defined scheduled positioning will appears as shown in Fig. 3DL3.32. and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Obrobok je potrebné umiestniť tak, aby spočíval na spodnej matrici. Keďže obrobok sa načítava z databázy typu DB, je potrebné ho umiestniť pomocou naplánovaného polohovania. Na naplánovanie polohy kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) a vyberte ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}). Zmeňte objekt polohovania na **obrobok** a referenčný bod na **spodnú****matricu**. Vyberte smer priblíženia **-Z**, ako je znázornené na obr. 3DL3.31, a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Definované naplánované polohovanie sa zobrazí tak, ako je znázornené na obr. 3DL3.32, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0031.jpg' | relative_url }})
 
-Object positioning Window
+Okno na umiestňovanie objektov
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0032.jpg' | relative_url }})
 
-Scheduled Positioning window
+Plánované časové okno na určovanie polohy
 
-### Inter-Object relations
+### Vzťahy medzi objektmi
 
-Select **user** type contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. It will add the relationship between the Workpiece, Top Die and Bottom Die as shown in Fig. 3DL3.33.
+Vyberte kontakt typu **užívateľ** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Tým sa pridá vzťah medzi obrobkom, hornou maticou a spodnou maticou, ako je znázornené na obr. 3DL3.33.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0033.jpg' | relative_url }})
 
-Inter-object relations window
+Okno vzťahov medzi objektmi
 
-Highlight the Bottom Die – Workpiece relationship and click the ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) button to modify the relationship. In the friction section of the screen (see Fig. 3DL3.34.), there is a pull-down menu that allows the user to choose the appropriate friction conditions of Heat transfer processes. Under Thermal tab select **Free Resting type** Heat transfer coefficient in List. **0.0002** value will be added to Heat transfer coefficient field.
+Zvýraznite vzťah medzi spodnou matricou a obrobkom a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) tento vzťah upravte. V časti obrazovky venovanej treniu (pozri obr. 3DL3.34.) sa nachádza roletové menu, ktoré používateľovi umožňuje vybrať vhodné podmienky trenia pre procesy prenosu tepla. Na karte „Thermal“ (Tepelné vlastnosti) vyberte v zozname koeficient prenosu tepla typu **Free Resting**. Do poľa „Heat transfer coefficient“ (Koeficient prenosu tepla) sa vloží hodnota **0,0002**.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0034.jpg' | relative_url }})
 
-Inter Object Relation Thermal page
+Stránka „Inter Object Relation Thermal“
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to go back to Inter-Object window, since the Problem setup type is Batch mode Contact will generate while generating Database. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Step page.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) sa vrátite do okna „Inter-Object“, keďže typ nastavenia problému je „Batch mode“ (Dávkový režim) a pri generovaní databázy sa vytvoria kontakty. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Step“ (Krok).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0035.jpg' | relative_url }})
 
-Inter object relation window
+Okno vzťahov medzi objektmi
 
-### Setting Simulation Controls
+### Nastavenie ovládacích prvkov simulácie
 
-In Step Definition, Set the **Number of steps** to **10** , the **Step Increment** to **5** and **Solution step definition** **Time** to**0.2 sec** (see Fig. 3DL3.36.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V časti „Definícia kroku“ nastavte **počet krokov** na **10**, **krok prírastku** na **5** a **čas** **definície kroku riešenia** na **0,2 s** (pozri obr. 3DL3.36.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0036.jpg' | relative_url }})
 
-Step controls window
+Okno ovládacích prvkov krokov
 
-### Generate Database
+### Vytvoriť databázu
 
-When we visit Generate Database page, objects will be positioned as per defined Scheduled positioning data (see Fig. 3DL3.37.).
+Keď navštívime stránku „Generovať databázu“, objekty sa umiestnia podľa definovaných údajov o plánovanom umiestnení (pozri obr. 3DL3.37.).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0037.jpg' | relative_url }})
 
-Generate Database
+Vytvoriť databázu
 
-By selecting the **File** menu ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Export****** option, Save the Keyword File as "**Spike_Dwelling** ".
+Po výbere možnosti **Export** v ponuke **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) uložte súbor kľúčových slov pod názvom „**Spike_Dwelling**“.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) action label to check the problem. Generate database by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) action label.
+Kliknite na popisok akcie ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali problém. Vytvorte databázu kliknutím na popisok akcie ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
-Once the database has been generated, switch to the Simulation mode by selecting the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the object tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label under the simulation tab, Run Options dialog will open as shown in Fig. 3DL3.38.. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do režimu simulácie výberom tlačidla ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom objektov. Kliknite na označenie akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) na karte simulácie; otvorí sa dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. 3DL3.38. Pomocou predvolenej možnosti **Pokračovať v spúšťaní** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0038.jpg' | relative_url }})
 
-Run Simulation Popup
+Vyskočiace okno „Spustiť simuláciu“
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked.
+Sledujte priebeh simulácie na kartách „Simulation Message“ a „Simulation Log“ a uistite sa, že je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}).
 
-### Post processing
+### Následné spracovanie
 
-When the simulation has finished, click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}). In Step Browser click ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}) on button to view all steps. 
+Po ukončení simulácie kliknite na ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}). V prehliadači krokov kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}), aby ste si zobraili všetky kroky. 
 
-To better view the chilling of the workpiece on the die, select the workpiece in the Object Tree and click the Single object mode ![]({{ '/assets/icons/pre_icons/mo_show_single_obj_icon.jpg' | relative_url }}) icon. Only the workpiece will be shown in the DISPLAY window. Select Temperature (![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }})) state variable and right-click on the Color Bar and select **Temperature** as the **Color Bar** Type. (See Fig. 3DL3.39.)
+Ak chcete lepšie vidieť ochladzovanie obrobku na forme, vyberte obrobok v strome objektov a kliknite na ikonu režimu jedného objektu ![]({{ '/assets/icons/pre_icons/mo_show_single_obj_icon.jpg' | relative_url }}). V okne DISPLAY sa zobrazí iba obrobok. Vyberte stavovú premennú Teplota (![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }})), kliknite pravým tlačidlom myši na farebný pruh a ako typ farebného pruhu vyberte **Teplota**. (Pozri obr. 3DL3.39.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0039.jpg' | relative_url }})
 
-Temperature state variable plot for workpiece
+Graf premennej teploty pre obrobok
 
-Play through the steps of the simulation to look at the workpiece temperature. At Step -51, the position of the workpiece will shift downward where it was rested on the bottom die. Note how the base of the workpiece chills from Step -51 to Step 60 where it is in contact with the die. Turn on the Bottom Die and look at it's temperature distribution. Observe how the die heats up during the 2 second dwell. (See Fig. 3DL3.40.)
+Prejdite jednotlivými krokmi simulácie a sledujte teplotu obrobku. V kroku -51 sa poloha obrobku posunie nadol, kde sa oprel o spodnú formu. Všímajte si, ako sa spodná časť obrobku ochladzuje od kroku -51 po krok 60, kde je v kontakte s formou. Zapnite spodnú formu a sledujte rozloženie jej teploty. Pozorujte, ako sa forma zahrieva počas 2-sekundového zdržania. (Pozri obr. 3DL3.40.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0040.jpg' | relative_url }})
 
-Temperature State variable plot for bottom Die
+Graf premennej teploty pre spodnú formu
 
-Now, select last step in Step browser and click on ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) button to continue the setup.
+Teraz vyberte posledný krok v prehliadači krokov a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}), aby ste pokračovali v inštalácii.
 
-## Spike Forging - Forging Blow1
+## Kovanie hrotov – úder kováča 1
 
-In the previous operations, the workpiece underwent furnace transfer and dwell on the bottom die. The last step of the Dwell will be loaded into the Pre-processor mode and the first forging blow will be set up.
+V predchádzajúcich operáciách prešiel obrobok presunom do pece a zdržaním na spodnej matrici. Posledný krok zdržania sa nahraje do režimu predspracovania a nastaví sa prvý kováčsky úder.
 
-Add 3D Forming operation from the Explorer Operations list. Add the operation by clicking on 3D Forming ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button or can also be added by drag and drop into the Operation editor as shown in Fig. 3DL3.41. Select Forming operation from Operation editor, Setup type popup will appear and click on ![]({{ '/assets/icons/pre_icons/mo_no_batch_setup_button.jpg' | relative_url }}) button in Popup. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until objects page.
+Pridajte operáciu 3D tvárnenia zo zoznamu operácií v Průzkumníku. Operáciu pridáte kliknutím na tlačidlo 3D tvárnenie ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) alebo ju môžete pridať aj pretiahnutím do editora operácií, ako je znázornené na obr. 3DL3.41. Vyberte operáciu Formovanie v editore operácií, zobrazí sa kontextové menu Typ nastavenia a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_no_batch_setup_button.jpg' | relative_url }}) v tomto menu. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka objektov.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0041.jpg' | relative_url }})
 
-Adding Forming operation to the Operation Editor
+Pridanie operácie tvarovania do editora operácií
 
-### Add objects
+### Pridať objekty
 
-By default the three objects from the previous operation will be displayed. If not, by selecting ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) button, add three objects as shown in Fig. 3DL3.42. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Štandardne sa zobrazia tri objekty z predchádzajúcej operácie. Ak tomu tak nie je, kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) pridajte tri objekty, ako je znázornené na obr. 3DL3.42. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0042.jpg' | relative_url }})
 
-Adding Objects
+Pridávanie objektov
 
-### Workpiece
+### Obrobok
 
-In workpiece page, select "**Read from DB** " radio button as shown in Fig. 3DL3.43. Since it is a read from DB object, all the data of this object will be carried over to this operation from previous operations. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top Die page.
+Na stránke „Obrobok“ vyberte prepínač „**Načítať z databázy**“, ako je znázornené na obr. 3DL3.43. Keďže ide o objekt typu „Načítať z databázy“, všetky údaje tohto objektu sa prenesú do tejto operácie z predchádzajúcich operácií. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Horná matrica“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0022.jpg' | relative_url }})
 
-Selecting Workpiece as read from DB
+Výber obrobku na základe údajov z databázy
 
-### Top Die
+### Horná matrica
 
-In Top Die page, select "**Read from DB** " radio button. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Movement page.
+Na stránke „Top Die“ vyberte prepínač „**Čítať z databázy**“. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Movement“.
 
-#### **Assigning Die Movement**
+#### **Priradenie pohybu kocky**
 
-****In Movement Page, Set a**Speed** of **2** in/sec in the **-Z** Direction as shown in Fig. 3DL3.44. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Bottom Die page.
+****Na stránke „Pohyb“ nastavte **rýchlosť** **2** palce za sekundu v smere **-Z**, ako je znázornené na obr. 3DL3.44. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Spodná forma“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0044.jpg' | relative_url }})
 
-Movement control window
+Okno na ovládanie pohybu
 
-### Bottom Die
+### Spodná matrica
 
-In Bottom Die page, select "**Read from DB** " radio button. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Scheduled positioning page.
+Na stránke „Spodná matrica“ vyberte prepínač „**Načítať z databázy**“. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Naplánované polohovanie“.
 
-### Scheduled Positioning the Top Die
+### Plánované nastavenie polohy hornej matrice
 
-In Scheduled positioning page, Click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button and select ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}) radio button. Change the Positioning Object to the **Top Die** and the Reference to the **workpiece**. Change the Approach Direction to **-Z** and then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) (see Fig. 3DL3.45.) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Plánované polohovanie“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) a vyberte prepínač ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}). Zmeňte „Polohovací objekt“ na **Horná matrica** a „Referenčný bod“ na **obrobok**. Zmeňte smer priblíženia na **-Z** a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) (pozri obr. 3DL3.45). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0045.jpg' | relative_url }})
 
-Scheduled positioning window
+Plánované časové okno na určovanie polohy
 
-### Inter-Object relations
+### Vzťahy medzi objektmi
 
-In Inter-Object window, click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. Default relations get added as shown in Fig. 3DL3.46.
+V okne „Inter-Object“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Pridajú sa predvolené vzťahy, ako je znázornené na obr. 3DL3.46.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0046.jpg' | relative_url }})
 
-Inter-Object window
+Okno „Medzi objektmi“
 
-The Thermal data needs to be modified so that a Forming heat transfer coefficient is used instead of the Free resting coefficient used in the previous operation. The default heat transfer coefficient for hot forming is added automatically which is used in this lab.
+Tepelné údaje je potrebné upraviť tak, aby sa namiesto koeficientu voľného odpočinku, ktorý sa používal v predchádzajúcej operácii, použil koeficient prenosu tepla pri tvárnení. V tejto laboratórnej úlohe sa automaticky pridá predvolený koeficient prenosu tepla pre tvárnenie za tepla, ktorý sa v nej používa.
 
-Friction needs to be defined between the workpiece and the dies since deformation will now be occurring. Highlight the first relationship in the table and click ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). On the **Deformation****tab** , use the friction pull-down menu to select **Hot forging (lubricated)** from the list as shown in Fig. 3DL3.47., then click on **Thermal****tab** and Select **Forming** in pull down menu (see Fig. 3DL3.48.), then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Back in the INTER-OBJECT window, click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to change the other relationship to these settings.
+Je potrebné definovať trenie medzi obrobkom a formami, keďže teraz bude dochádzať k deformácii. Zvýraznite prvý vzťah v tabuľke a kliknite na ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Na **kartu Deformácia****** použite roletové menu „Trenie“ a zo zoznamu vyberte položku **Tepelné kovanie (s mazaním)**, ako je znázornené na obr. 3DL3.47., potom kliknite na **kartu „Thermal“****** a z roletového menu vyberte položku **Forming** (pozri obr. 3DL3.48.), následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Späť v okne INTER-OBJECT kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}), aby ste zmenili nastavenia aj pre druhý vzťah.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0047.jpg' | relative_url }})
 
-Inter-Object Data Deformation definition Window
+Okno definície deformácie údajov medzi objektmi
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0048.jpg' | relative_url }})
 
-Inter-Object Data Thermal definition Window
+Okno s definíciou tepelnej charakteristiky medzi objektmi
 
-Contact will be generated while generating Database, Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Step page.
+Kontakt sa vytvorí počas generovania databázy. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až kým sa nezobrazí stránka „Step“.
 
-### Assigning Step Controls
+### Priradenie ovládacích prvkov krokov
 
-Set the **Number of Simulation Steps** to **30** and the **Step Increment to Save** to **5**. Change the **Primary Die** to the **Top****Die** since it is the Top Die that is moving, and under Solution Steps Definition, set With **Constant Die Displacement** to **0.025** " as shown in Fig. 3DL3.49. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Nastavte **Počet simulačných krokov** na **30** a **Krok pre uloženie** na **5**. Zmeňte **Primárnu maticu** na **Hornú****maticu**, keďže sa pohybuje práve horná matica, a v časti Definícia krokov riešenia nastavte položku S **konštantným posunom matice** na hodnotu **0,025** ", ako je znázornené na obr. 3DL3.49. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0049.jpg' | relative_url }})
 
-Simulation Step controls window
+Okno „Ovládacie prvky simulačného kroku“
 
-### Database Generation
+### Vytvorenie databázy
 
-By selecting the **File** menu ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Export** option, Save a keyword file for the problem as "**Spike_Forging_Blow1** ".
+V ponuke **Súbor** vyberte položku **Exportovať** a uložte súbor s kľúčovými slovami pre túto úlohu pod názvom „**Spike_Forging_Blow1**“.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) action label to check the problem. Generate a database by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) action label.
+Kliknite na názov akcie ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali problém. Vytvorte databázu kliknutím na názov akcie ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
-### Running Simulations
+### Spúšťanie simulácií
 
-Once the database has been generated, switch to the Simulation mode by selecting the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the object tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label under the simulation tab, Run Options dialog will open as shown in Fig. 3DL3.38.. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom objektov. Kliknite na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) na karte „Simulácia“; otvorí sa dialógové okno „Možnosti spustenia“, ako je znázornené na obr. 3DL3.38. Pomocou predvolenej možnosti **Pokračovať v spúšťaní** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked.
+Sledujte priebeh simulácie na kartách „Simulation Message“ a „Simulation Log“ a uistite sa, že je zaškrtnutá možnosť ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}).
 
-While the simulation is running, the recent saved step can be viewed. Many different variables can be viewed such as plastic strain, plastic strain rate, temperature, etc... from state variables tool bar as shown in Fig. 3DL3.50.
+Počas behu simulácie je možné zobraziť naposledy uložený krok. Na paneli nástrojov so stavovými premennými, ako je znázornené na obr. 3DL3.50, je možné zobraziť mnoho rôznych premenných, ako napríklad plastické deformácie, rýchlosť plastického deformovania, teplotu atď.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0050.jpg' | relative_url }})
 
-Simulation Graphics window
+Okno „Simulačná grafika“
 
-### Post processing
+### Následné spracovanie
 
-When the simulation has finished, click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}). In Step Browser click on ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}) button to view all steps.
+Po dokončení simulácie kliknite na ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}). V prehliadači krokov kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}), aby ste si zobraili všetky kroky.
 
-Look at both **Temperature** and **Effective****Strain** as shown in Fig. 3DL3.51. and Fig. 3DL3.52. Depending on the variable being viewed, user may want to toggle between the geometry and the mesh on the dies. When viewing Temperature, the mesh/temperature gradient in the dies can be shown by clicking the Show Mesh ![]({{ '/assets/icons/pre_icons/mo_show_mesh_icon.jpg' | relative_url }}) button (and also clicking the Show Geo ![]({{ '/assets/icons/pre_icons/mo_show_geo_icon.jpg' | relative_url }}) button to toggle off the geometry). Likewise, when viewing a variable like Effective Strain that only deforming objects would have, the geometries of the dies should probably be viewed instead of the mesh.
+Pozrite sa na **Teplotu** aj na **Efektívne****deformácie**, ako je znázornené na obr. 3DL3.51 a obr. 3DL3.52. V závislosti od prezeranej premennej môže používateľ prepínať medzi geometriou a sieťou na lisovacích formách. Pri zobrazení teploty je možné zobraziť sieť/teplotný gradient v maticiach kliknutím na tlačidlo Zobraziť sieť ![]({{ '/assets/icons/pre_icons/mo_show_mesh_icon.jpg' | relative_url }}) (a tiež kliknutím na tlačidlo Zobraziť geometriu ![]({{ '/assets/icons/pre_icons/mo_show_geo_icon.jpg' | relative_url }}), čím sa geometria skryje). Podobne pri zobrazení premennej, ako je efektívna deformácia, ktorú by mali len deformujúce sa objekty, by sa namiesto siete mali pravdepodobne zobraziť geometrie foriem.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0051.jpg' | relative_url }})
 
-Temperature State variables plot
+Graf premenných teplotného stavu
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0052.jpg' | relative_url }})
 
-Effective stress State variables plot
+Graf premenných stavu pri efektívnom napätí
 
-The amount of load required to deform an object is an important result that can be obtained from a simulation. Click on the ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) icon. When the GRAPH window appears, select only Top Die and the X-Axis is set to **Stroke** and the Y-Axis is set to **Z-Load**. Click ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) and a transparent Load-Stroke curve will display over the objects in the DISPLAY window as shown in Fig. 3DL3.53.
+Veľkosť zaťaženia potrebného na deformáciu objektu je dôležitý výsledok, ktorý možno získať zo simulácie. Kliknite na ikonu ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}). Keď sa zobrazí okno GRAPH, vyberte iba položku Top Die, pričom os X je nastavená na **Stroke** a os Y na **Z-Load**. Kliknite na ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) a nad objektmi v okne DISPLAY sa zobrazí priehľadná krivka zaťaženia v závislosti od zdvihu, ako je znázornené na obr. 3DL3.53.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0053.jpg' | relative_url }})
 
-Load Stroke plot
+Graf zaťaženia a zdvihu
 
-In Load Stroke Graph window, Switch to options tab and check Step tracer check box as shown in Fig. 3DL3.54.
+V okne „Load Stroke Graph“ prejdite na kartu „Options“ a zaškrtnite políčko „Step tracer“, ako je znázornené na obr. 3DL3.54.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0054.jpg' | relative_url }})
 
-Load Stroke Graph Options window
+Okno „Možnosti grafu zdvihu zaťaženia“
 
-So that, when a different step is selected, the bar in the Load-Stroke curve will highlight that step and the load for that step will be shown in the graph. Also, a point on the graph can be picked with the mouse and the displayed step will automatically change to the one corresponding to that point on the graph.
+Tak, že keď sa vyberie iný krok, pruh v krivke zaťaženia a zdvihu tento krok zvýrazní a zaťaženie pre tento krok sa zobrazí v grafe. Okrem toho je možné myšou vybrať bod v grafe a zobrazený krok sa automaticky zmení na ten, ktorý zodpovedá danému bodu v grafe.
 
-Now select last step in Step browser and click on ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) button to continue the setup.
+Teraz v prehliadači krokov vyberte posledný krok a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}), aby ste pokračovali v inštalácii.
 
-## Spike Forging - Die Change and Blow2
+## Kovanie hrotov – výmena formy a úder č. 2
 
-The first forging blow has been simulated and it is now time to model the second blow which uses a different top die. The new top die geometry will be imported and the second forging operation will be set up.
+Bol simulovaný prvý úder pri kovanie a teraz je čas modelovať druhý úder, pri ktorom sa používa iná horná matrica. Importuje sa geometria novej hornej matrice a nastaví sa druhý kováčsky úkon.
 
-Add 3D Forming operation from the Explorer Operations list. Add the operation by clicking on 3D Forming ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button or can also be added by drag and drop into the Operation editor. Select Forming operation from Operation editor, Setup type popup will appear and click on NO- Batch mode button in Popup. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until objects page.
+Pridajte operáciu 3D tvárnenia zo zoznamu operácií v Průzkumníku. Operáciu pridáte kliknutím na tlačidlo „3D Forming“ (![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }})) alebo ju môžete pridať aj pretiahnutím do editora operácií. V editore operácií vyberte operáciu „Forming“ (Tvarovanie), zobrazí sa rozbaľovacie okno „Setup type“ (Typ nastavenia) a v ňom kliknite na tlačidlo „NO – Batch mode“ (Nie – dávkový režim). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s objektmi.
 
-### Add objects
+### Pridať objekty
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Objects page. By default the three objects from the previous operation will be displayed. If not, by selecting ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) button, add three objects as shown in Fig. 3DL3.42. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka „Objekty“. Štandardne sa zobrazia tri objekty z predchádzajúcej operácie. Ak tomu tak nie je, kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) pridajte tri objekty, ako je znázornené na obr. 3DL3.42. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Workpiece
+### Obrobok
 
-In workpiece page, select "**Read from DB** " radio button. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top Die page.
+Na stránke „Obrobok“ vyberte prepínač „**Načítať z databázy**“. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Horná matrica“.
 
-### Changing Top die for Blow2
+### Výmena hornej matrice pre Blow2
 
-Both the geometry and mesh of the top die have to be changed. In Top Die page, change Object type to **rigid** and assign temperature as **300** °F then Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Je potrebné zmeniť geometriu aj sieť vrchného lisovacieho nástroja. Na stránke „Top Die“ zmeňte typ objektu na **rigid** a nastavte teplotu na **300** °F, potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-#### Import Geometry
+#### Importovať geometriu
 
-In Geometry page, click on import geometry from library option (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) and import the **Spike_Topdie2.STL** file file from DEFORM installed folder \3d\LABS directory. Use ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button to check the Geometry. Click on ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}) option, define planar symmetry and Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) (see Fig. 3DL3.55.) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Geometria“ kliknite na možnosť „Importovať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a importujte súbor **Spike_Topdie2.STL** z adresára \3d\LABS v inštalačnej zložke programu DEFORM. Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) skontrolujte geometriu. Kliknite na možnosť ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}), definujte rovinnú symetriu a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) (pozri obr. 3DL3.55). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0055.jpg' | relative_url }})
 
-Assigned Plane Symmetry for Top Die
+Priradená rovinná symetria pre hornú formu
 
-#### Generate Mesh
+#### Vytvoriť sieť
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button, select ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) in Default Boundary condition popup. A mesh with default number of elements will be generated.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) a v rozbaľovacom okne „Predvolená okrajová podmienka“ vyberte ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}). Vytvorí sa sieť s predvoleným počtom prvkov.
 
-#### Assign Material
+#### Priradiť materiál
 
-Select the material '**AISI-H-13** ' material from material window and assign it to the Top Die. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Z okna materiálov vyberte materiál „**AISI-H-13**“ a priraďte ho k hornej matrici. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-#### Assigning BCC
+#### Nastavenie BCC
 
-In BCC page, Check the default assigned Heat exchange with Environment BCC for Top Die and make sure that default assigned Heat Exchange with Environment BCC is assigned to the entire outer surface of the top die except the symmetry planes (see Fig. 3DL3.56.).
+Na stránke BCC skontrolujte predvolene priradenú výmenu tepla s prostredím BCC pre hornú matricu a uistite sa, že táto predvolene priradená výmena tepla s prostredím BCC je priradená k celému vonkajšiemu povrchu hornej matrice s výnimkou symetrických rovín (pozri obr. 3DL3.56.).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0056.jpg' | relative_url }})
 
-Assigning Heat Exchange with Environment BCC for Top Die
+Priradenie výmeny tepla s prostredím BCC pre hornú matricu
 
-#### Assigning Die Movement
+#### Určenie pohybu kocky
 
-In Movement Page, Set a **Speed** of **2** in/sec in the -Z Direction. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Pohyb“ nastavte **rýchlosť** **2** palcov za sekundu v smere -Z. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Bottom Die
+### Spodná matrica
 
-In Bottom Die page select "**Read from DB** " radio button. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Bottom Die“ vyberte prepínač „**Čítať z databázy**“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Scheduled Positioning the Top Die
+### Plánované nastavenie polohy hornej matrice
 
-In Scheduled positioning page, Click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button and select ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}) radio button. Change the Positioning Object to the **Top****Die** and the Reference to the **workpiece**. Change the Approach Direction to**-Z** and then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). 
+Na stránke „Plánované polohovanie“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) a vyberte voľbové tlačidlo ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}). Zmeňte objekt polohovania na **Top****Die** a referenčný bod na **obrobok**. Zmeňte smer priblíženia na **-Z** a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). 
 
-### Inter-Object relations
+### Vzťahy medzi objektmi
 
-In Inter-Object window, click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. Default relations get added as shown in Fig. 3DL3.47.
+V okne „Inter-Object“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Pridajú sa predvolené vzťahy, ako je znázornené na obr. 3DL3.47.
 
-Friction needs to be defined between the workpiece and the dies since deformation will now be occurring. Also, the Thermal data needs to be modified so that a Forming heat transfer coefficient is used instead of the Free resting coefficient used in the previous operation.
+Je potrebné definovať trenie medzi obrobkom a lisovacími formami, keďže teraz bude dochádzať k deformácii. Okrem toho je potrebné upraviť tepelné údaje tak, aby sa namiesto koeficientu voľného odpočinku, ktorý sa používal v predchádzajúcej operácii, použil koeficient prenosu tepla pri tvárnení.
 
-Highlight the first relationship in the table and click ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). On the Deformation tab, use the friction pull-down menu to select **Hot forging (lubricated)** from the list as shown in Fig. 3DL3.48. then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Back in the INTER-OBJECT window, click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to change the other relationship to these settings.
+Zvýraznite prvý vzťah v tabuľke a kliknite na ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Na karte „Deformácia“ použite roletové menu „Trenie“ a zo zoznamu vyberte položku **Kovanie za tepla (s mazaním)**, ako je znázornené na obr. 3DL3.48. Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Späť v okne INTER-OBJECT kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}), aby ste zmenili nastavenia aj pre druhý vzťah.
 
-Contact will be generated between the Billet and both the Top and Bottom Dies while generating Database.
+Pri vytváraní databázy dôjde k kontaktu medzi polotovarom a hornou aj spodnou matricou.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) up to Step controls page.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Ovládacie prvky krokov“.
 
-### Assigning Step Controls
+### Priradenie ovládacích prvkov krokov
 
-Set the**Number of Simulation Steps** to **10** and the **Step Increment to Save** to **5**. Change the Primary Die to the Top Die since it is the Top Die that is moving, and under Solution Steps Definition, set **With Constant Die Displacement** to **0.025** ". Click![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Nastavte **Počet simulačných krokov** na **10** a **Krok na uloženie** na **5**. Zmeňte primárnu maticu na hornú maticu, keďže sa pohybuje práve horná matica, a v časti Definícia krokov riešenia nastavte **S konštantným posunom matice** na **0,025**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Database Generation
+### Vytvorenie databázy
 
-By selecting the **File****menu** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Export****** option, Save a keyword file for the problem as "**Spike_Forging_Blow2** ".
+Po výbere možnosti **Export**** v ponuke **Súbor**** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Uložte súbor s kľúčovými slovami pre daný problém pod názvom „**Spike_Forging_Blow2**“.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) action label to check the problem. Generate a database by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) action label.
+Kliknite na názov akcie ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali problém. Vytvorte databázu kliknutím na názov akcie ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
-Once the database has been generated, switch to the Simulation mode by selecting the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the object tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label under the simulation tab, Run Options dialog will open. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do režimu simulácie výberom tlačidla ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom objektov. Kliknite na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) na karte Simulácia; otvorí sa dialógové okno Možnosti spustenia. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked.
+Sledujte priebeh simulácie na kartách „Simulation Message“ a „Simulation Log“ a uistite sa, že je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}).
 
-### Post processing
+### Následné spracovanie
 
-When the simulation has finished, click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}). In Step Browser click on ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}) button to view all steps.
+Po dokončení simulácie kliknite na ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}). V prehliadači krokov kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}), aby ste zobraili všetky kroky.
 
-Play through the steps, focusing especially on the steps for the second forging blow, Steps-90 to 101. Use the ![]({{ '/assets/icons/pre_icons/mo_show_cotact_icon.jpg' | relative_url }}) button to view how the contact evolves through the simulation. Also, investigate temperature, effective strain and load vs. stroke behavior.
+Prejdite si jednotlivé kroky a venujte osobitnú pozornosť krokom týkajúcim sa druhého kováčskeho úderu (kroky 90 až 101). Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_show_cotact_icon.jpg' | relative_url }}) si pozrite, ako sa v priebehu simulácie mení kontakt. Preskúmajte tiež správanie teploty, efektívneho deformácie a zaťaženia v závislosti od zdvihu.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab03_spike_forging/image0057.jpg' | relative_url }})
 
-Load-stroke Window with effective strain state variable plot
+Okno zaťaženia a zdvihu s grafom efektívnej premennej deformačného stavu

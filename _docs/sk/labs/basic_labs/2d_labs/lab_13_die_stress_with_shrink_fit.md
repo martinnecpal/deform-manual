@@ -1,135 +1,135 @@
 ---
 lang: sk
-title: "Lab 13 Die Stress with Shrink Fit"
+title: "Laboratórna úloha č. 13: Napätie v matrici pri montáži s tepelne zmrštiteľným spojom"
 ---
 
-# Lab 13 Die Stress with Shrink Fit
+# Laboratórna úloha č. 13: Napätie v matrici pri montáži s tepelne zmrštiteľným spojom
 
-In this lab we are doing Die stress study for [Spike_Nonisothermal]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_05_spike_non-isothermal/' | relative_url }}) project and we are adding two extra object called Holder to support Bottom die and Shrink fit Rig on Top Die.
+V tomto laboratórnom cvičení vykonávame analýzu napätia v lisovacích formách pre projekt [Spike_Nonisothermal]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_05_spike_non-isothermal/' | relative_url }}) a pridávame dva ďalšie objekty s názvom „Holder“, ktoré slúžia na podoprenie spodnej lisovacej formy a upevnenie zúženého upínacieho zariadenia na hornej lisovacej forme.
 
-13.1. Opening Project File
+13.1. Otvorenie súboru projektu
 
-13.2. Add Die stress study
+13.2. Pridať analýzu namáhania lisovacej formy
 
-13.3. Step selection
+13.3. Výber kroku
 
-13.4. Add Objects
+13.4. Pridávanie objektov
 
-13.5. Top Die Setup
+13.5. Nastavenie hornej matrice
 
-13.6. Bottom Die Setup
+13.6. Nastavenie spodnej matrice
 
-13.7. Holder Setup
+13.7. Nastavenie držiaka
 
-13.8. Ring Setup
+13.8. Nastavenie prsteňa
 
-13.9. Generating Contact
+13.9. Vytvorenie kontaktu
 
-13.10. Simulation Controls
+13.10. Ovládacie prvky simulácie
 
-13.11. Generating Database
+13.11. Vytvorenie databázy
 
-13.12. Starting the Simulation
+13.12. Spustenie simulácie
 
-13.13. Post-Processing the Results
+13.13. Následné spracovanie výsledkov
 
-## Opening Project File
+## Otvorenie súboru projektu
 
-Open Previously simulated **Spike_NoniSothermal.moproj** file in DEFORM MO as shown in Fig. L13.1. MO pre- processor will open.
+Otvorte predtým simulovaný súbor **Spike_NoniSothermal.moproj** v programe DEFORM MO, ako je znázornené na obr. L13.1. Otvorí sa predspracovateľ programu MO.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_06_die_stress/2d_mobl6_image0001.jpg' | relative_url }})
 
-DEFORM GUI window
+Okno grafického rozhrania programu DEFORM
 
-## Add Die stress study
+## Pridať analýzu napätia v matrici
 
-If Die Stress Labs 6 and 12 are already done then Die stress Study 1 and Die Stress Study 2 tabs can be noticed as we open the Spike_Nonisothermal project Die stress Study 1 and Die Stress Study 2 tabs can be noticed as shown in Fig. L13.2. At top Left corner of the Display window, Left mouse click on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button and select Add Die stress Study operation as shown in Fig. L13.2.
+Ak sú už laboratórne testy napätia v matrici č. 6 a 12 vykonané, po otvorení projektu Spike_Nonisothermal si môžete všimnúť karty „Die Stress Study 1“ a „Die Stress Study 2“, ako je znázornené na obr. L13.2. V ľavom hornom rohu okna Display kliknite ľavým tlačidlom myši na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) a vyberte operáciu Add Die stress Study, ako je znázornené na obr. L13.2.
 
-A Die stress Study tab is added with Die stress operation in operation editor as shown in Fig. L13.3.
+V editore operácií bola k operácii „Napätie v lisovacej forme“ pridaná záložka „Štúdia napätia v lisovacej forme“, ako je znázornené na obr. L13.3.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0001.jpg' | relative_url }})
 
-Adding Die stress operation
+Pridanie operácie s napätím v matrici
 
-## Step selection
+## Výber kroku
 
-To perform Die stress operation, select **step** **50** in Step selection page as shown in Fig. L13.3. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Ak chcete vykonať operáciu „Die stress“, vyberte **krok** **50** na stránke výberu krokov, ako je znázornené na obr. L13.3. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0002.jpg' | relative_url }})
 
-Step selection list
+Zoznam výberu krokov
 
-## Add Objects
+## Pridať objekty
 
-Add two object by clicking ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) button in Objects page (see Fig. L13.4.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Top die page.
+Pridajte dva objekty kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) na stránke „Objekty“ (pozri obr. L13.4.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Horná forma“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0003.jpg' | relative_url }})
 
-Objects list
+Zoznam objektov
 
-## Top Die Setup
+## Nastavenie hornej matrice
 
-### Top die object definition
+### Definícia objektu „Top die“
 
-By default, the object type of rigid objects from the loaded step will be changed to elastic. Keep the object type as elastic for the Top Die object. From v13.1.1, two new options have been introduced in the object page to position the dies in future steps for Multiple steps die stress analysis, we need not use these options for single step die stress analysis, hence, keep the Need positioning check box turned off. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until BCC page to assign Boundary conditions.
+V predvolenom nastavení sa typ tuhých objektov z načítaného kroku zmení na pružný. Pre objekt „Top Die“ ponechajte typ objektu ako pružný. Od verzie v13.1.1 boli na stránke objektov zavedené dve nové možnosti na umiestnenie matíc v budúcich krokoch pri analýze napätia matíc vo viacerých krokoch; pri analýze napätia matíc v jednom kroku tieto možnosti nie je potrebné používať, preto nechajte políčko „Need positioning“ (Potrebné umiestnenie) nezaškrtnuté. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka BCC, kde môžete priradiť okrajové podmienky.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0023.jpg' | relative_url }})
 
-Top die object page
+Na začiatok stránky objektu
 
-### Assigning Boundary condition
+### Nastavenie okrajovej podmienky
 
-Apply Vy = 0 Velocity boundary condition on the top surface of the Top Die. This boundary condition prevents the die from flying off when the forces are applied, see Fig. L13.6. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top Die Force interpolation page.
+Na hornú plochu hornej matrice nastavte okrajovú podmienku rýchlosti Vy = 0. Táto okrajová podmienka zabraňuje odletu matrice pri pôsobení síl, pozri obr. L13.6. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Interpolácia sily hornej matrice“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0004.jpg' | relative_url }})
 
-Top Die BCC page
+Na začiatok stránky BCC
 
-### Force interpolation
+### Vynútená interpolácia
 
-In Force interpolation page, click on ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}) action label and after force interpolation we can see the Force interpolation report in message list as shown in Fig. L13.7. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Bottom die page.
+Na stránke „Interpolácia sily“ kliknite na názov akcie ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}) a po vykonaní interpolácie sily sa v zozname správ zobrazí správa o interpolácii sily, ako je znázornené na obr. L13.7. Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Spodná matrica“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0005.jpg' | relative_url }})
 
-Top die Force interpolation window
+Okno interpolácie sily hornej matrice
 
-## Bottom Die Setup
+## Nastavenie spodnej matrice
 
-### Bottom die object definition
+### Definícia objektu spodnej matrice
 
-We will keep the object type as Elastic for the Bottom Die and turn off Need positioning check box. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until BCC page to assign Boundary conditions.
+Pre spodnú formu ponecháme typ objektu „Elastic“ a zrušíme zaškrtnutie políčka „Potrebné polohovanie“. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až kým sa nezobrazí stránka BCC, kde priradíte okrajové podmienky.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0024.jpg' | relative_url }})
 
-Bottom Die object page
+Stránka objektu „Spodná matrica“
 
-### Bottom Die BCC
+### Spodná matrica BCC
 
-In BCC page, check the default assigned Deformation BCC for Left side of the workpiece in X-Direction, default BCC are assigned automatically due to selection of problem type as axisymmetric (see Fig. L13.9.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Force Interpolation page.
+Na stránke BCC skontrolujte predvolene priradenú deformáciu BCC pre ľavú stranu obrobku v smere osi X; predvolené hodnoty BCC sa priradia automaticky na základe výberu typu úlohy ako osovo symetrickej (pozri obr. L13.9.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Force Interpolation.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0006.jpg' | relative_url }})
 
-Bottom Die BCC page
+Stránka „Spodná matrica BCC“
 
-### Force interpolation
+### Vynútená interpolácia
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}) action label and after force interpolation we can see the Force interpolation report in message list as shown Fig. L13.10. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object 4 page.
+Kliknite na popisok akcie ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}) a po vykonaní interpolácie sily sa v zozname správ zobrazí správa o interpolácii sily, ako je znázornené na obr. L13.10. Potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku Objekt 4.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0007.jpg' | relative_url }})
 
-Force interpolation window
+Vynútiť okno interpolácie
 
-## Holder Setup
+## Nastavenie držiaka
 
-We will select the object type as **Elastic** for the **HOLDER** and turn off Need positioning check box as shown in Fig. L13.11.. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Geometry page to create Geometry.
+Pre objekt **HOLDER** zvolíme typ objektu **Elastic** a zrušíme zaškrtnutie políčka „Potrebné polohovanie“, ako je znázornené na obr. L13.11. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Geometria“, kde vytvoríte geometriu.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0008.jpg' | relative_url }})
 
-Holder Object page
+Stránka objektu „Holder“
 
-### Creating Geometry for Holder
+### Vytvorenie geometrie pre držiak
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) and create a geometry by enter the following XYR coordinates value in the table 1 (see Fig. L13.12.) and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) a vytvorte geometriu tak, že do tabuľky 1 zadáte nasledujúce hodnoty súradníc XYR (pozri obr. L13.12.) a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 **X** |  **Y** |  **R**  
 ---|---|---  
@@ -138,136 +138,136 @@ Click on ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) a
 1 |  -1 |  0  
 1 |  -3 |  0  
   
-Geometry XYR coordinates value
+Hodnota súradníc XYR v geometrii
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0009.jpg' | relative_url }})
 
-Geometry editing dialog
+Dialógové okno na úpravu geometrie
 
-### Generating Mesh for Holder
+### Vytvorenie siete pre držiak
 
-Define **Number of Elements** as **150** and generate mesh using ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) (see Fig. L13.13.), then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Material page.
+Nastavte **počet prvkov** na hodnotu **150** a vygenerujte sieť pomocou ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) (pozri obr. L13.13.), potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Material“ (Materiál).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0010.jpg' | relative_url }})
 
-Holder Mesh page
+Stránka „Holder Mesh“
 
-### Assigning material for Holder
+### Priradenie materiálu pre držiteľa
 
-Assign**AISI-H-13** material for Holder by selecting from Material list (see Fig. L13.14.), then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Pre držiak zadajte materiál **AISI-H-13** výberom zo zoznamu materiálov (pozri obr. L13.14.) a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0011.jpg' | relative_url }})
 
-Assigning Holder material
+Priradenie materiálu držiaka
 
-### Assigning Boundary condition for Holder
+### Nastavenie okrajových podmienok pre Holdera
 
-Apply Vy = 0 Velocity boundary condition on the Bottom surface of the Holder as shown in Fig. L13.15., then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Nastavte okrajovú podmienku rýchlosti Vy = 0 na spodnej ploche držiaka, ako je znázornené na obr. L13.15, a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0012.jpg' | relative_url }})
 
-Holder BCC page
+Stránka držiteľa BCC
 
-## Ring Setup
+## Nastavenie prsteňa
 
-Change the**object name** to **Ring** , set initial **temperature** as **250°** F, select the object type as **Elastic** and turn off Need positioning check box****(see Fig. L13.16.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Zmeňte **názov objektu** na **Ring**, nastavte počiatočnú **teplotu** na **250°** F, vyberte typ objektu **Elastic** a zrušte zaškrtnutie políčka „Need positioning“****(pozri obr. L13.16.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0013.jpg' | relative_url }})
 
-Ring object page
+Stránka objektu „Ring“
 
-### Creating Geometry for Ring
+### Vytvorenie geometrie prsteňa
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) and create a geometry by enter the following XYR coordinates value in the table 2 (see Fig. L13.17.) and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) a vytvorte geometriu tak, že do tabuľky 2 zadáte nasledujúce hodnoty súradníc XYR (pozri obr. L13.17) a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 **X** |  **Y** |  **R**  
 ---|---|---  
-2.2 |  3.2 |  0  
-2.2 |  1.2 |  0  
-4 |  1.2 |  0  
-4 |  3.2 |  0  
+2,2 |  3,2 |  0  
+2,2 |  1,2 |  0  
+4 |  1,2 |  0  
+4 |  3,2 |  0  
   
-Geometry XYR coordinates value
+Hodnota súradníc XYR v geometrii
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0014.jpg' | relative_url }})
 
-Edit geometry dialog
+Dialógové okno „Upraviť geometriu“
 
-### Generating Mesh for Ring
+### Vytvorenie siete pre prsteň
 
-Define **Number of Elements** as **150** and generate mesh using ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) (see Fig. L13.18.), then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Material page.
+Nastavte **Počet prvkov** na hodnotu **150** a vygenerujte sieť pomocou ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) (pozri obr. L13.18.), potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Materiál.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0015.jpg' | relative_url }})
 
-Ring Mesh page
+Stránka „Ring Mesh“
 
-### Assigning material for Ring
+### Priradenie materiálu pre prsteň
 
-Assign **AISI-H-13** material for Ring by selecting from Material list, then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Pre krúžok nastavte materiál **AISI-H-13** výberom zo zoznamu materiálov a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Assigning Boundary condition for Ring
+### Nastavenie okrajovej podmienky pre prstenec
 
-Apply Vy = 0 Velocity boundary condition on the Top surface of the Ring as shown in Fig. L13.19.
+Na hornú plochu prstena uplatnite okrajovú podmienku pre rýchlosť Vy = 0, ako je znázornené na obr. L13.19.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0016.jpg' | relative_url }})
 
-Velocity BCC for Ring
+Rýchlosť BCC pre prsteň
 
-Apply shrink fit in X direction = 0.008 along inside face, click NO in "Move Object Nodal Coordinates " popup (see Fig. L13.20.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Contact page.
+Nastavte zmršťovacie upevnenie v smere X = 0,008 pozdĺž vnútornej plochy a v rozbaľovacom okne „Presunúť uzlové súradnice objektu“ kliknite na „NIE“ (pozri obr. L13.20.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Kontakt“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0017.jpg' | relative_url }})
 
-Shrink Fit BCC for Ring inner surface
+BCC s termoprídržným upevnením pre vnútorný povrch prstena
 
-## Generating Contact
+## Vytvorenie kontaktu
 
-In Contact page, add two relations by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button. For first relation , select **Master object** as **Ring** and **Slave object** as **Top Die** and for second relation select **Master object** as **HOLDER** and **Slave object** as **Bottom Die,** define Friction value as **0.12** for both relations. Use ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) icon to determine a suitable contact tolerance (a value of about 0.00136" will be calculated), then click ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button to generate contact as shown in Fig. L13.21. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation controls page.
+Na stránke Kontakt pridajte dva vzťahy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Pre prvý vzťah vyberte ako **Hlavný objekt** položku **Prsteň** a ako **Podriadený objekt** položku **Horná matrica** a pre druhý vzťah vyberte ako **Hlavný objekt** **Držiak** a ako **Podriadený objekt** **Spodná matrica**; pre oba vzťahy nastavte hodnotu trenia na **0,12**. Pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) určte vhodnú toleranciu kontaktu (vypočíta sa hodnota približne 0,00136"), potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) na vytvorenie kontaktu, ako je znázornené na obr. L13.21. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Ovládacie prvky simulácie.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0018.jpg' | relative_url }})
 
-Contact generation page
+Stránka na získavanie kontaktov
 
-## Simulation controls
+## Ovládacie prvky simulácie
 
-In Simulation controls, define **Number of Simulation steps** as **5** , **step increment to save** as **1** , **Max elapsed process time per step** as **0.1** sec and use default solver and Iteration method as shown in Fig. L13.22. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to generate Database.
+V nastaveniach simulácie nastavte **Počet krokov simulácie** na hodnotu **5**, **krok pri ukladaní** na hodnotu **1**, **Maximálny uplynutý čas procesu na jeden krok** na **0,1** s a použite predvolený riešiteľ a metódu iterácie, ako je znázornené na obr. L13.22. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na vytvorenie databázy.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0019.jpg' | relative_url }}).
 
-Simulation controls page
+Stránka s ovládacími prvkami simulácie
 
-## Generating Database
+## Vytvorenie databázy
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) action label to check the problem. Generate a database by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) action label.
+Kliknite na názov akcie ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali problém. Vytvorte databázu kliknutím na názov akcie ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
-## Starting the simulation
+## Spustenie simulácie
 
-Once the database has been generated switch to the Simulation mode by selecting the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the object tree. Start the simulation by clicking the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label and use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom objektov. Spustite simuláciu kliknutím na akčný štítok ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) a pomocou predvolenej možnosti **Pokračovať v behu** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-When the simulation is finished without any issues, the following message will be added to the end of the Message file:"NORMAL STOP: Simulation is completed and stopped at the user specified time step".
+Ak simulácia prebehne bez problémov, na koniec súboru so správami sa pridá nasledujúca správa: „NORMAL STOP: Simulácia bola dokončená a zastavená v časovom kroku určenom používateľom“.
 
-## Post processing the results
+## Následné spracovanie výsledkov
 
-After simulation complete switch to post mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) button as shown in Fig. L13.23.
+Po dokončení simulácie prejdite do režimu zobrazenia výsledkov kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), ako je znázornené na obr. L13.23.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0020.jpg' | relative_url }})
 
-MO Post
+Príspevok z Missouri
 
-**Examine resulting stress for all objects**
+**Skontrolujte výsledné napätie u všetkých objektov**
 
-Click on ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) button, plot **Effective stress** and **Max Principal stress** and observe the plot as shown in Fig. L13.24. and Fig. L13.25. This two are the most important variables in die stress simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}), vytvorte graf **efektívneho napätia** a **maximálneho hlavného napätia** a sledujte graf tak, ako je znázornené na obr. L13.24 a obr. L13.25. Tieto dve veličiny sú najdôležitejšími premennými pri simulácii napätia v lisovacej forme.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0021.jpg' | relative_url }})
 
-Stress Effective plot in Solid shading display
+Graf pôsobenia napätia v zobrazení s plným tieňovaním
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/2d_mobl13_image0022.jpg' | relative_url }})
 
-Max Principal stress plot in Line display
+Graf maximálneho hlavného napätia v líniovom zobrazení
 
 ****
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [11\. General Object Data Definition]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }})
 

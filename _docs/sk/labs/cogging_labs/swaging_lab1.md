@@ -1,284 +1,284 @@
 ---
 lang: sk
-title: "Swaging Lab1"
+title: "Laboratórium lisovania 1"
 ---
 
-# Swaging Lab1
+# Laboratórium lisovania 1
 
-In this lab for quarter symmetry 3d model **Infeed swaging** operation setup is demonstrated using ICFG example.
+V tomto laboratórnom cvičení zameranom na symetriu 3D modelu v štvrtine je na príklade ICFG predvedené nastavenie operácie **vstrekovej lisovacej operácie**.
 
-1.1. Creating New Problem
+1.1. Vytvorenie nového problému
 
-1.2. How to add 3D Swaging operation
+1.2. Ako pridať operáciu 3D lisovania
 
-1.3. Define Swaging Process Settings
+1.3. Definovanie nastavení procesu lisovania
 
-1.4. Define pass table data
+1.4. Definovanie údajov v tabuľke priechodov
 
-1.5. Load material
+1.5. Naloženie materiálu
 
-1.6. Define Workpiece Object
+1.6. Definovanie objektu obrobku
 
-1.7. Define Top die Object
+1.7. Definovanie objektu hornej matrice
 
-1.8. Defining Inter-object relations
+1.8. Definovanie vzťahov medzi objektmi
 
-1.9 Preview the Swaging pass
+1.9 Náhľad kroku lisovania
 
-1.10. Define Simulation controls
+1.10. Definovanie ovládacích prvkov simulácie
 
-1.11. Check and Generate Database
+1.11. Kontrola a vytvorenie databázy
 
-1.12. Submit to Simulate
+1.12. Odoslať na simuláciu
 
-1.13. Post process the Results
+1.13. Následné spracovanie výsledkov
 
-1.14. Setting up the Swaging Explicit setup
+1.14. Nastavenie explicitného nastavenia lisovania
 
-## Creating New Problem
+## Vytvorenie nového problému
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. 3DSWL1.1. Select "**Integrated Manufacturing Process** " radio button and unit system as "**SI** " radio button in unit field. Define Problem Name as "******Swaging_ICFG_Ex** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému, ako je znázornené na obr. 3DSWL1.1. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte systém jednotiek pomocou prepínača „**SI**“. Názov problému zadajte ako „******Swaging_ICFG_Ex**“ a uistite sa, že je zaškrtnuté políčko „Zobraziť dialógové okno s možnosťami“ (ak nezaškrtnete políčko „**Zobraziť dialógové okno s možnosťami**“, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s využitím integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/applications/55_2_arc_welding/image0002.jpg' | relative_url }})
 
-Opening New Problem
+Vytvorenie novej úlohy
 
-Multiple operation wizard will open with the New Project dialog as shown in Fig. 3DSWL1.2., at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In Problem Name popup define Problem Name as "**Swaging_ICFG_Ex** " as the project name as shown in Fig. 3DSWL1.2.
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom „Nový projekt“, ako je znázornené na obr. 3DSWL1.2. V tomto bode bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V rozbaľovacom zozname „Názov problému“ zadajte názov problému ako „**Swaging_ICFG_Ex**“, ktorý bude zároveň názvom projektu, ako je znázornené na obr. 3DSWL1.2.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0002.jpg' | relative_url }})
 
-Add new Project Name and Unit System
+Pridať nový názov projektu a systém jednotiek
 
-## How to add 3D Swaging operation
+## Ako pridať operáciu 3D lisovania
 
-Add swaging operation from MO explorer by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to **Cogging** operation or user can also add by drag and drop into the Operation Editor as shown in Fig. 3DSWL1.3.
+Operáciu lisovania môžete pridať z prehliadača MO kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa operácie **Cogging**, prípadne ju môžete pridať aj pretiahnutím do Editoru operácií, ako je znázornené na obr. 3DSWL1.3.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0003.jpg' | relative_url }})
 
-Add Swaging operation from operation explorer
+Pridať operáciu lisovania z prehliadača operácií
 
-## Define Swaging Process Settings
+## Nastavenie procesu lisovania
 
-Select the Swaging process type radio button and enter the stroke value as**1.9** mm as shown in Fig. 3DSWL1.4. User must enter the swaging stroke value so it stops the simulation after each bite if it crosses the stroke of primary die in movement direction.
+Zvoľte prepínač typu procesu „Swaging“ a zadajte hodnotu zdvihu **1,9** mm, ako je znázornené na obr. 3DSWL1.4. Používateľ musí zadať hodnotu zdvihu lisovania tak, aby sa simulácia po každom zovretí zastavila, ak prekročí zdvih primárnej matrice v smere pohybu.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0004.jpg' | relative_url }})
 
-Swaging Process window
+Okno „Proces lisovania“
 
-As this is cold forging operation select temperature calculation as **Cold-Isothermal**. Select **4 dies** and **uncheck****Use****Manipulators** checkbox they are normally used in cogging operation to hold the workpiece.
+Keďže ide o operáciu studenej kováčskej výroby, vyberte pre výpočet teploty možnosť **Studená – izotermická**. Zvoľte **4 matrice** a **zrušte zaškrtnutie** políčka **Použiť manipulátory** – tie sa zvyčajne používajú pri operáciách zubovania na pridržanie obrobku.
 
-For symmetric setup select **Use Rotational Symmetry** checkbox this gives the respective geometry primitives and generates the necessary boundary conditions by default. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the swaging pass data.
+Pre symetrické nastavenie zaškrtnite políčko **Použiť rotačnú symetriu** – tým sa automaticky nastavia príslušné geometrické primitívy a vygenerujú potrebné okrajové podmienky. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujte údaje o kroku lisovania.
 
-## Define pass table data
+## Definovať údaje tabuľky priechodov
 
-Swaging entire pass information like Number of bites, Axial die feed per bite, Radial die feed per bite, Die Movement direction, Workpiece rotation per bite, workpiece rotation per pass and die positioning can be entered in pass table. New pass can be added by using the icon similarly added pass can be deleted using icon. Pass information is copied from previous pass whenever a new pass is added and necessary information can be edited based on the process requirement.
+Do tabuľky priechodov je možné zadať všetky informácie o priechode, ako napríklad počet záberov, axiálny posun matrice na jeden záber, radiálny posun matrice na jeden záber, smer pohybu matrice, otáčanie obrobku na jeden záber, otáčanie obrobku na jeden priechod a polohovanie matrice. Nový priechod je možné pridať pomocou ikony, podobne je možné pridaný priechod odstrániť pomocou ikony. Pri pridávaní nového priechodu sa informácie o priechode skopírujú z predchádzajúceho priechodu a potrebné informácie je možné upraviť podľa požiadaviek procesu.
 
-Enter **number of bites** as **2500** , Die **Axial feed per bite** **0.027** mm, workpiece **rotation per bite** to **22.56** , leave the Die movement direction as –X and select**Die start positioning****method** as "**3-ofst** " as shown in Fig. 3DSWL1.5.
+Zadajte **počet záberov** ako **2500**, **axiálny posuv na záber** **0,027** mm, **otáčky obrobku na záber** **22,56**, smer pohybu matrice ponechajte ako –X a vyberte****metódu** **polohovania matice na začiatku****** „**3-ofst**“, ako je znázornené na obr. 3DSWL1.5.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to load the material for workpiece.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste načítali materiál pre obrobok.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0005.jpg' | relative_url }})
 
-Pass table information
+Informácie o tabuľke priechodov
 
-## Load material
+## Načítanie materiálu
 
-Load the material “**Steel****16MnCr5** ” from DEFORM installation path \3d\LABS\ folder "**Steel 16MnCr5.key** " file using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (load material from file) option, system popups a dialog with material list and list is the materials available in the keyword file as there is only one material in key file click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) as shown in Fig. 3DSWL1.6.
+Načítajte materiál „**Steel****16MnCr5**“ z inštalačnej zložky programu DEFORM v priečinku \3d\LABS\ súbor „**Steel 16MnCr5.key** “ pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (načítať materiál zo súboru). Systém zobrazí dialógové okno so zoznamom materiálov, pričom tento zoznam obsahuje materiály dostupné v súbore kľúčových slov. Keďže v súbore kľúčov je len jeden materiál, kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), ako je znázornené na obr. 3DSWL1.6.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0006.jpg' | relative_url }})
 
-Load material from file
+Načítať materiál zo súboru
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object window leaving the defaults as axial subdivision is intended for cogging where huge deformation takes place and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to go for Workpiece object window.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa otvorí okno „Objekt“, pričom ponechajte predvolené nastavenia, keďže axiálne rozdelenie je určené pre cogging, kde dochádza k veľkej deformácii, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli do okna „Objekt obrobku“.
 
-## Define Workpiece object
+## Definovanie objektu „obrobok“
 
-Leave the object name as **Billet** and default object type **Plastic** as it is. Assign the temperature to **20** °C as shown in Fig. 3DSWL1.7. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the Geometry for billet.
+Názov objektu **Billet** a predvolený typ objektu **Plastic** ponechajte bez zmien. Nastavte teplotu na **20** °C, ako je znázornené na obr. 3DSWL1.7. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujte geometriu polotovaru.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0007.jpg' | relative_url }})
 
-Billet object window
+Okno s objektom z polotovaru
 
-### Define Billet Geometry
+### Definovanie geometrie polotovaru
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) geometry option to define the geometry using primitives as shown in Fig. 3DSWL1.8.
+Kliknite na geometrickú voľbu ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), aby ste definovali geometriu pomocou základných tvarov, ako je znázornené na obr. 3DSWL1.8.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0008.jpg' | relative_url }})
 
-Geometry window
+Okno Geometria
 
-Enter the **Length****130** mm, **Inner****diameter****24** mm and **Outer****diameter****30** mm to create the symmetric geometry as shown in Fig. 3DSWL1.9. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Geometry Primitive.
+Zadajte **dĺžku****130** mm, **vnútorný****priemer****24** mm a **vonkajší****priemer****30** mm, aby ste vytvorili symetrickú geometriu, ako je znázornené na obr. 3DSWL1.9. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte okno Geometrická primitívna.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0009.jpg' | relative_url }})
 
-Billet 3D Geometry
+3D geometria polotovaru
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) for 2D Cross-section window and observe the 2D geometry extracted from the 3D geometry used for brick mesh generation as shown in Fig. 3DSWL1.10.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), čím otvoríte okno „2D Cross-section“, a prezrite si 2D geometriu extrahovanú z 3D geometrie použitej na vytvorenie mriežky tehál, ako je znázornené na obr. 3DSWL1.10.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0010.jpg' | relative_url }})
 
-Billet 2D extracted geometry
+2D geometria získaná z polotovaru
 
-### Define Billet Mesh
+### Definícia siete z polotovarov
 
-Select brick mesh radio button and enter number of **elements** to **390** , **Size ratio** **1** and # of **layers** to **47** and generate the mesh clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button and click ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) in "Default Boundary conditions" popup.
+Zaškrtnite voľbové tlačidlo „Brick Mesh“ a zadajte počet **prvkov** na hodnotu **390**, **Pomer veľkostí** **1** a počet **vrstiev** na **47** a vygenerujte sieť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) a kliknite na ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) v rozbaľovacom okne „Predvolené okrajové podmienky“.
 
-For 2D cross section geometry as observed in Fig. 3DSWL1.10. system generates **390** mesh elements and revolve about 90 deg in 47 layers as shown in Fig. 3DSWL1.11. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material page.
+Pre geometriu 2D priečneho rezu, ako je znázornené na obr. 3DSWL1.10, systém vygeneruje **390** sieťových prvkov a otočí ich o 90 stupňov v 47 vrstvách, ako je znázornené na obr. 3DSWL1.11. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdete na stránku Materiál.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0011.jpg' | relative_url }})
 
-Billet mesh window
+Okienko zo sieťoviny z hliníkového bloku
 
-### Assign Material for Billet
+### Priradiť materiál k sochárskej surovine
 
-Select the loaded material “**Steel****16MnCr5** ” from material list to assign it to workpiece as shown in Fig. 3DSWL1.12.
+Zoznamu materiálov vyberte nahratý materiál „**Oceľ****16MnCr5**“, aby ste ho priradili k obrobku, ako je znázornené na obr. 3DSWL1.12.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0012.jpg' | relative_url }})
 
-Assign billet material
+Priradiť materiál na výkovky
 
-### Define Boundary Conditions
+### Definovanie okrajových podmienok
 
-Observe the system assigned default rotational symmetry BCC and Fixed velocity at the free end of the billet BCC as shown in Fig. 3DSWL1.13. and Fig. 3DSWL1.14. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top die page to define Top die.
+Všimnite si, že systému bola priradená predvolená rotačná symetria BCC a pevná rýchlosť na voľnom konci polotovaru BCC, ako je znázornené na obr. 3DSWL1.13 a obr. 3DSWL1.14. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Top die“ (Horná matrica), kde môžete definovať hornú matricu.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0013.jpg' | relative_url }})
 
-Rotational Symmetry BCC
+Rotačná symetria BCC
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0014.jpg' | relative_url }})
 
 Velocity BCC
 
-## Define Top die Object
+## Definovanie objektu „Top die“
 
-Leave the object name as **Top die** and default object type **Rigid** as it is and assign the temperature to **20** °C as shown in Fig. 3DSWL1.15. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Názov objektu ponechajte ako **Top die** a predvolený typ objektu **Rigid** bez zmien a nastavte teplotu na **20** °C, ako je znázornené na obr. 3DSWL1.15. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0015.jpg' | relative_url }})
 
-Top die object page
+Na začiatok stránky objektu
 
-### Define Die geometry
+### Definícia geometrie matrice
 
-Import the Die geometry **Swaging_ICFG_Die_SI.stl** from installation path \3d\LABS\ folder as shown in Fig. 3DSWL1.16.
+Načítajte geometriu formy **Swaging_ICFG_Die_SI.stl** z inštalačnej zložky \3d\LABS\, ako je znázornené na obr. 3DSWL1.16.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0016.jpg' | relative_url }})
 
-Importing Die geometry
+Import geometrie lisovacej formy
 
-For User library popup asking to use the current geometry file browsed location as default library location. By default 3d LABS path will geometry library path, so click ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}).(See Fig. 3DSWL1.17.)
+V kontextovom menu „Knižnica používateľa“ sa zobrazí výzva na použitie aktuálnej polohy súboru geometrie ako predvoleného umiestnenia knižnice. Predvolene bude cesta k knižnici geometrie zodpovedať ceste 3D LABS, preto kliknite na ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}). (Pozri obr. 3DSWL1.17.)
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0017.jpg' | relative_url }})
 
-User Library path update
+Aktualizácia cesty k užívateľskej knižnici
 
-Observe the imported geometry internal profile showing the Inlet feed angle, Calibration Length and Outlet Run out angle as shown in Fig. 3DSWL1.18.
+Pozrite si vnútorný profil importovanej geometrie, na ktorom sú znázornené uhol prívodu na vstupe, kalibračná dĺžka a uhol výstupu, ako je znázornené na obr. 3DSWL1.18.
 
-**Note:** If the Die needs positioning, then user should select the Die positioning method as "3-offset" in Pass Table page. This allows user to position the Die.
+**Poznámka:** Ak je potrebné umiestniť formu, mal by používateľ na stránke „Tabuľka priechodov“ zvoliť metódu umiestnenia formy „3-offset“. To mu umožní formu umiestniť.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0018.jpg' | relative_url }})
 
-Imported Die geometry
+Geometria importovanej formy
 
-### Define Die movement
+### Definícia pohybu matrice
 
-Select Advanced radio button type and click on ![]({{ '/assets/icons/pre_icons/mo_define_movement_button.jpg' | relative_url }}) button, define the die movement as constant **Speed** as **200** mm/sec and set the**Current Stroke** as **-1.9** , since the die geometry is imported in its closed position as shown in Fig. 3DSWL1.19. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close Advanced movement page. 
+Vyberte typ rádio tlačidla „Pokročilé“ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_movement_button.jpg' | relative_url }}), nastavte pohyb matrice na konštantnú **rýchlosť** **200** mm/s a nastavte ****Aktuálny zdvih** na hodnotu **-1,9**, keďže geometria formy je importovaná v uzavretej polohe, ako je znázornené na obr. 3DSWL1.19. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste zatvorili stránku „Pokročilý pohyb“. 
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0019.jpg' | relative_url }})
 
-Die movement window
+Okienko na posun matice
 
-## Defining Inter-object relations
+## Definovanie vzťahov medzi objektmi
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Contact page as the swaging operation automatically position dies around the workpiece at equal angles manual position is not needed. Select **System** contact definition type and check scheduled contact Initialize and Generate check boxes and enter small contact **tolerance** value **0.0001** as shown in Fig. 3DSWL1.20. System will generate the contact automatically during database generation. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Simulation preview page. 
+Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Kontakt“, keďže pri operácii lisovania sa lisovacie formy automaticky umiestňujú okolo obrobku v rovnakých uhloch, takže ručné polohovanie nie je potrebné. Vyberte typ definície kontaktu **Systém**, zaškrtnite políčka Inicializovať a Generovať plánovaný kontakt a zadajte malú hodnotu **tolerancie** kontaktu **0,0001**, ako je znázornené na obr. 3DSWL1.20. Systém automaticky vygeneruje kontakt počas generovania databázy. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka Náhľad simulácie. 
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0020.jpg' | relative_url }})
 
-System type Inter-object settings
+Typ systému: Nastavenia medzi objektmi
 
-## Preview the Swaging pass
+## Náhľad kroku lisovania
 
-Observe the Die and workpiece movement and positioning preview by playing with step manipulation options. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation controls controls.
+Pozorujte pohyb a polohovanie formy a obrobku v náhľade a vyskúšajte si rôzne možnosti ovládania krokov. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na ovládacie prvky simulácie.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0021.jpg' | relative_url }})
 
-Swaging preview window
+Okno náhľadu lisovania
 
-## Define Simulation controls
+## Definovanie ovládacích prvkov simulácie
 
-Enter the **number of steps** to **10000,** **step increment to save** to **1000** and **0.0015** mm stroke/step as shown in Fig. 3DSWL1.22. In addition to this friction coefficient value **0.4** is defined will be used in contact friction calculation. Implicit solver is used to solve this setup. Leave the implicit solver default settings. To know more about RSE and Implicit contact refer and respectively. 
+Zadajte **počet krokov** na hodnotu **10 000**, **krok pre ukladanie** na hodnotu **1 000** a **0,0015** mm zdvihu na krok, ako je znázornené na obr. 3DSWL1.22. Okrem toho je definovaná hodnota koeficientu trenia **0,4**, ktorá sa použije pri výpočte kontaktného trenia. Na riešenie tohto nastavenia sa používa implicitný riešiteľ. Nechajte predvolené nastavenia implicitného riešiteľa. Ak chcete získať viac informácií o RSE a implicitnom kontakte, pozrite si príslušné časti. 
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0022.jpg' | relative_url }})
 
-Simulation control window
+Okno riadenia simulácie
 
-## Check and Generate Database
+## Kontrola a vytvorenie databázy
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) and observe the message tab for DB checking messages, if there is any input errors will be indicated by red color and also display the warning messages. Error message block the user to generate DB. Confirm the DB checking is OK and click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}). (See Fig. 3DSWL1.23.) After generating Database switch to Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) a sledujte kartu správ, kde sa zobrazujú správy o kontrole databázy; ak sa vyskytnú nejaké chyby vo vstupe, budú označené červenou farbou a zároveň sa zobrazia varovné správy. Chybová správa zabráni používateľovi vygenerovať databázu. Potvrďte, že kontrola databázy prebehla v poriadku, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}). (Pozri obr. 3DSWL1.23.) Po vytvorení databázy prejdite do simulačného režimu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0023.jpg' | relative_url }})
 
-Generate Database window
+Okno „Vytvoriť databázu“
 
-## Submit to Simulate
+## Odoslať na simuláciu
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. 3DSWL1.24. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. 3DSWL1.24. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0024.jpg' | relative_url }})
 
-Submit to simulate
+Odoslať na simuláciu
 
-User can use more processors and run in 64 bit by using the ![]({{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}). As the simulation starts simulated saved steps will update in simulation graphics window and also Message and LOG files display the status of the current simulation as shown in Fig. 3DSWL1.25.
+Pomocou ![]({{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}) môže používateľ využiť viac procesorov a spustiť simuláciu v 64-bitovom režime. Po spustení simulácie sa v grafickom okne simulácie aktualizujú simulované uložené kroky a stav aktuálnej simulácie sa zobrazuje aj v súboroch správ a protokolov, ako je znázornené na obr. 3DSWL1.25.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0025.jpg' | relative_url }})
 
-Monitor using simulation graphics
+Monitorovanie pomocou simulačnej grafiky
 
-Simulation completion or stop will be indicated in the message file. After completion of the simulation click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab to post process the DB.
+Dokončenie alebo prerušenie simulácie bude zaznamenané v súbore správ. Po dokončení simulácie kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), aby ste vykonali následné spracovanie databázy.
 
-## Post process the Results
+## Následná spracovanie výsledkov
 
-Play through the Steps and see the Strain distribution by plotting the effective strain State variable. (See Fig. 3DSWL1.26.)
+Prejdite jednotlivými krokmi a pozrite si rozloženie deformácie pomocou grafického znázornenia premennej efektívneho stavu deformácie. (Pozri obr. 3DSWL1.26.)
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0026.jpg' | relative_url }})
 
-Strain Distribution
+Rozloženie napätia
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0027.jpg' | relative_url }})
 
-Workpiece cross section thickness
+Hrúbka prierezu obrobku
 
-## Setting up the Swaging Explicit setup
+## Nastavenie explicitného nastavenia lisovania
 
-In Explicit solver make workpiece as**Elasto plastic** object by visiting back to Billet object window as shown in Fig. 3DSWL1.28.
+V riešiteľovi Explicit nastavte obrobok ako **elastoplastický** objekt tak, že sa vrátite do okna objektu „Billet“, ako je znázornené na obr. 3DSWL1.28.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0028.jpg' | relative_url }})
 
-Billet Object selected as Elasto plastic object
+Objekt z polotovaru vybraný ako elastoplastický objekt
 
-After making the billet as Elasto plastic go to workpiece material page, click on ![]({{ '/assets/icons/pre_icons/mo_edit_material_button.jpg' | relative_url }}) define the **Mass****density** as **7.85e-09** under **Thermal** tab as shown in Fig. 3DSWL1.29. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the material edit page.
+Po vytvorení polotovaru ako elastoplastu prejdite na stránku materiálu obrobku, kliknite na ![]({{ '/assets/icons/pre_icons/mo_edit_material_button.jpg' | relative_url }}) a na karte **Thermal** nastavte **hmotnosť****hustotu** na hodnotu **7,85e-09**, ako je znázornené na obr. 3DSWL1.29. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte stránku na úpravu materiálu.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0029.jpg' | relative_url }})
 
-Defining Mass density data
+Definovanie údajov o hmotnostnej hustote
 
-Go to **S******im** ulation controls** window and select **Explicit****solver** method radio button as shown in Fig. 3DSWL1.30. Enter the **Damping****coefficient** as **0.5** , **Mass scaling** as **30** and **Contact Frequency** as **1**.
+Prejdite do okna **Ovládacie prvky simulácie** a vyberte prepínač metódy **Explicitný riešiteľ**, ako je znázornené na obr. 3DSWL1.30. Zadajte **koeficient tlmenia** ako **0,5**, **škálovanie hmotnosti** ako **30** a **kontaktnú frekvenciu** ako **1**.
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0030.jpg' | relative_url }})
 
-Simulation controls for Explicit solver method
+Ovládacie prvky simulácie pre metódu explicitného riešiteľa
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to go the Database generation window and check and generate the Database to submit to simulate in Next steps. Similar to the section 1.12. and 1.13. submit the generated DB to simulate and post process using MO post respectively.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite do okna na vytvorenie databázy, kde skontrolujte a vygenerujte databázu, ktorú v nasledujúcich krokoch odošlete na simuláciu. Podobne ako v častiach 1.12 a 1.13 odošlite vygenerovanú databázu na simuláciu a následné spracovanie pomocou príkazu MO post.
 
-Plot Strain Effective at last step for the Simulated Database (See Fig. 3DSWL1.30. and Fig. 3DSWL1.31.)
+Zobrazenie efektívneho napätia v poslednom kroku pre simulovanú databázu (pozri obr. 3DSWL1.30 a obr. 3DSWL1.31)
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0031.jpg' | relative_url }})
 
-Strain effective plot
+Graf efektívneho napätia
 
 ![]({{ '/assets/images/labs/cogging_labs/swaging_lab1/image0032.jpg' | relative_url }})
 
-Workpiece cross section
+Prerez obrobku
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [Swaging Setup]({{ '/docs/sk/operation_templates/29_cogging/29_2_swaging_setup/' | relative_url }})

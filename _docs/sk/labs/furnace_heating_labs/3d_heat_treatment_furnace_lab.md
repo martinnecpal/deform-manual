@@ -1,351 +1,351 @@
 ---
 lang: sk
-title: "3D Heat Treatment Furnace Lab"
+title: "Laboratórium s 3D pecou na tepelné spracovanie"
 ---
 
-# 3D HEAT TREATMENT BATCH FURNACE TEMPLATE LAB
+# Šablóna laboratória pre 3D pec na dávkové tepelné spracovanie
 
-## Problem Summary
+## Zhrnutie problému
 
-The Heat Treatment Batch Furnace template in new MO (Multiple Operations) is a convenient tool to set up a multiple-operation process for modeling loads of multiple workpieces and fixtures heating in the batch furnace, following a prescribed time and temperature setting points (thermal schedule).
+Šablóna „Pec na tepelné spracovanie v dávkach“ v novej funkcii MO (Multiple Operations) je praktický nástroj na nastavenie procesu s viacerými operáciami, ktorý slúži na modelovanie ohrevu viacerých obrobkov a upínacích prípravkov v dávkovej peci podľa predpísaných časových a teplotných bodov (tepelného plánu).
 
-This lab will demonstrate how to use this template to prepare a furnace heating simulation of a round load of 6 steel parts. This lab can also help users understand the capabilities of new MO.
+V rámci tohto cvičenia si ukážeme, ako pomocou tejto šablóny pripraviť simuláciu ohrevu v peci s kruhovým nákladom pozostávajúcim zo 6 oceľových dielov. Toto cvičenie môže používateľom pomôcť pochopiť možnosti nového MO.
 
-## Starting a Multiple Operations problem
+## Začiatok úlohy s viacerými operáciami
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** " radio button in unit field as shown in Fig. 3FHL1.1. Define Problem Name as "****DrillBit**** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Zvoľte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek zvoľte prepínač „**Anglický**“, ako je znázornené na obr. 3FHL1.1. Názov úlohy zadajte ako „****DrillBit****“ a uistite sa, že je zaškrtnuté políčko „Zobraziť dialógové okno s možnosťami“ (ak nezaškrtnete políčko „**Zobraziť dialógové okno s možnosťami**“, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s využitím integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg' | relative_url }})
 
-Problem type selection window
+Okno na výber typu problému
 
-Multiple operation wizard will open with the New Project dialog (see Fig. 3FHL1.2.), at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we use ‘**DrillBit** ’ as the project name, **English** unit system and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to create the project.
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom Nový projekt (pozri obr. 3FHL1.2.), v tomto bode bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „**DrillBit**“, systém jednotiek **anglický** a klikneme na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) na vytvorenie projektu.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0002.jpg' | relative_url }})
 
-DEFORM New Multiple operation Main window
+DEFORM – Nová operácia „Multiple“ – Hlavné okno
 
-At 'Location' the new project ant its folder will be created as shown in see [Fig. 3FHL1.3.]({{ '/docs/sk/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/' | relative_url }}#Fig_3DMBL1_3_Added_multiple_blow_forging_operation_into_operation_editor)
+V položke „Umiestnenie“ sa vytvorí nový projekt a jeho priečinok, ako je znázornené na obrázku [Fig. 3FHL1.3.]({{ '/docs/sk/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/' | relative_url }}#Fig_3DMBL1_3_Added_multiple_blow_forging_operation_into_operation_editor)
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0003.jpg' | relative_url }})
 
-New Project 'DrillBit' folder
+Nová zložka projektu „DrillBit“
 
-## Add a Heat Treatment Batch Furnace Module to Project
+## Pridať do projektu modul dávkovej pece na tepelné spracovanie
 
-To add a 'Furnace Heating' process to MO. Move the mouse to the MO main window on the left, hang on the 'Explorer' tag. There will be a 'Explorer' window expanded from left to right, see [Fig. 3FHL1.4.]()
+Ak chcete do MO pridať proces „Kúrenie pecou“, presuňte kurzor myši do ľavej časti hlavného okna MO a umiestnite ho na záložku „Explorer“. Zobrazí sa okno „Explorer“, ktoré sa rozbalí zľava doprava, pozri [Fig. 3FHL1.4.]()
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0004.jpg' | relative_url }})
 
-Adding Furnace Heating process to the MO project
+Pridanie procesu vykurovania pecou do projektu MO
 
-On 'Explorer' window, click on '**Heat Treatment (3)** ', then '**Single** ' and under '**Single** ' category, Click on the ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) (Add) icon right to '**[3D] Furnace Heating** ' as shown in Fig. 3FHL1.4. as this lab will demonstrate how to use the new MO to prepare a furnace heating simulation of multiple steel parts with specific load pattern. This will add a 3 dimensional heat treatment furnace heating process to the project, as evidence, an graph item was inserted in the 'Operation Editor', which can be seen at Fig. 3FHL1.5. Click on the item ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/oprn_editor_oprn.jpg' | relative_url }}), the tree structure, which is the 'Navigator' window on the right side of the MO main window will be rebuilt based on the predefined template type, see Fig. 3FHL1.5.
+V okne „Explorer“ kliknite na „**Tepelné spracovanie (3)**“, potom na „**Jednotlivé**“ a v kategórii „**Jednotlivé**“ kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) (Pridať) vpravo od položky „**[3D] Ohrievanie v peci**“, ako je znázornené na obr. 3FHL1.4. V tomto laboratórnom cvičení si totiž ukážeme, ako pomocou nového MO pripraviť simuláciu ohrievania viacerých oceľových dielov v peci so špecifickým rozložením zaťaženia. Týmto sa do projektu pridá trojrozmerný proces ohrevu v peci na tepelné spracovanie; ako dôkaz bola do „Editoru operácií“ vložená grafická položka, ktorú je možné vidieť na obr. 3FHL1.5. Kliknutím na položku ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/oprn_editor_oprn.jpg' | relative_url }}) sa stromová štruktúra, ktorú predstavuje okno „Navigátor“ na pravej strane hlavného okna modulu MO, prebuduje na základe preddefinovaného typu šablóny, pozri obr. 3FHL1.5.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0005.jpg' | relative_url }})
 
-MO Windows; (a) Explorer window (b) Operation Editor Window (c) Operation tree window
+Okná MO; (a) Okno prehliadača (b) Okno editora operácií (c) Okno stromu operácií
 
-The tree structure in the 'Operation tree' window shows the items which will need to be configured for the 'Furnace Heating' simulation. Click on any item go to the corresponding configuration window, or click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_back_button.jpg' | relative_url }}) button on the bottom right going back and forth between different configuration windows.
+Stromová štruktúra v okne „Operačný strom“ zobrazuje položky, ktoré bude potrebné nakonfigurovať pre simuláciu „Kúrenie v peci“. Kliknutím na ľubovoľnú položku prejdete do príslušného konfiguračného okna, alebo kliknutím na tlačidlá ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_back_button.jpg' | relative_url }}) v pravom dolnom rohu môžete prechádzať medzi rôznymi konfiguračnými oknami.
 
-In the following chapters, we will go through each configuration window.
+V nasledujúcich kapitolách si prejdeme jednotlivé konfiguračné okná.
 
-## Configure Process
+## Nastavenie procesu
 
-'Process' window is mainly list a few parameters (Properties), it's a summary of the project information as shown in Fig. 3FHL1.6. Also some controls can be modified quickly without going through the individual configuration windows.
+Okno „Proces“ obsahuje predovšetkým zoznam niekoľkých parametrov (Vlastnosti) a predstavuje prehľad informácií o projekte, ako je znázornené na obr. 3FHL1.6. Niektoré ovládacie prvky je možné rýchlo upraviť bez nutnosti prechádzať jednotlivými konfiguračnými oknami.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0006.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to select the objects.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste vybrali objekty.
 
-## Define Workpiece
+## Definícia obrobku
 
-In this lab only Workpiece is used, so keep **1 workpiece** radio button selected (see Fig. 3FHL1.7.) and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define workpiece.
+V tomto laboratórnom cvičení sa používa iba obrobok, preto nechajte zaškrtnuté rádio tlačidlo **1 obrobok** (pozri obr. 3FHL1.7.) a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali obrobok.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0007.jpg' | relative_url }})
 
-Objects selection window
+Okno na výber objektov
 
-### Name the Object
+### Pomenujte objekt
 
-Type in '**Drill Bit** ' as object name, leave all others as default as shown in Fig. 3FHL1.8. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to the 'Geometry' definition page as shown in Fig. 3FHL1.9.
+Ako názov objektu zadajte „**Vrták**“, ostatné nastavenia ponechajte v predvolenom stave, ako je znázornené na obr. 3FHL1.8. Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku definície „Geometria“, ako je znázornené na obr. 3FHL1.9.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0008.jpg' | relative_url }})
 
-Workpiece object definition window
+Okno definície objektu obrobku
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0009.jpg' | relative_url }})
 
-Workpiece geometry definition window
+Okno na definovanie geometrie obrobku
 
-### Create Geometry
+### Vytvorenie geometrie
 
-On 'Geometry' page, click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), on the following window choose '**Cylinder** ' and give **9.8** inch as **diameter** and **24** inch as **height** as shown in Fig. 3FHL1.10., the object geometry is also previewed at the central graphic window area. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button to accept all the changes, and it will come back to the 'Geometry' definition, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to the 'Mesh' page, see Fig. 3FHL1.11.
+Na stránke „Geometria“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), v nasledujúcom okne vyberte „**Cylinder**“ a zadajte **9,8** palca ako **priemer** a **24** palcov ako **výšku**, ako je znázornené na obr. 3FHL1.10. Geometria objektu sa zároveň zobrazí v náhľade v strednej časti grafického okna. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) potvrďte všetky zmeny a systém sa vráti do definície „Geometria“. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Mriežka“, pozri obr. 3FHL1.11.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0010.jpg' | relative_url }})
 
-Geometry primitive settings to create the 'Drill bit' part
+Nastavenia geometrických primitív na vytvorenie dielu „Vrták“
 
-### Mesh the Object
+### Vytvoriť sieť objektu
 
-Only 'Tetrahedral Mesh' can be generated in this template, put **5000** in 'Target number of Elements' and then click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). The mouse icon on the screen turns to busy and then back to normal, which indicating the mesh has been generated, the results are also plotted on the central graphic area, see Fig. 3FHL1.11. User can preview the mesh by clicking on ![]({{ '/assets/icons/pre_icons/mo_preview_mesh_button2.jpg' | relative_url }}), as this only generate the surface mesh it will be quick. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), go to the 'Material' page, see Fig. 3FHL1.12.
+V tejto šablóne je možné vygenerovať iba „Tetrahedrálnu sieť“; do poľa „Cieľový počet prvkov“ zadajte hodnotu **5000** a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Ikona myši na obrazovke sa zmení na ikonu „zaneprázdnená“ a potom sa vráti do normálneho stavu, čo znamená, že sieť bola vygenerovaná; výsledky sa tiež zobrazia v centrálnej grafickej oblasti, pozri obr. 3FHL1.11. Používateľ si môže sieť predbežne prezrieť kliknutím na ![]({{ '/assets/icons/pre_icons/mo_preview_mesh_button2.jpg' | relative_url }}); keďže sa tým vygeneruje len povrchová sieť, bude to rýchle. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), prejdite na stránku „Material“ (Materiál), pozri obr. 3FHL1.12.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0011.jpg' | relative_url }})
 
-Mesh generation
+Vytváranie sietí
 
-### Load and Assign Material
+### Načítanie a priradenie materiálu
 
-On the object 'Material' selection window, click on ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load material from a file) "**4340.key** " from **\3d\LABS\Furnace_Material** folder in installation path as shown in Fig. 3FHL1.12. System automatically assign the loaded material for workpiece. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the Load pattern window.
+V okne výberu objektu „Materiál“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať materiál zo súboru) „**4340.key**“ zo zložky **\3d\LABS\Furnace_Material** v inštalačnej ceste, ako je znázornené na obr. 3FHL1.12. Systém automaticky priradí načítaný materiál k obrobku. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste otvorili okno „Načítanie vzoru“.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0012.jpg' | relative_url }})
 
-Load and assign material from library
+Načítať a priradiť materiál z knižnice
 
-## Define Load pattern
+## Definovanie vzoru zaťaženia
 
-Modeling a load of multiple parts heated up in the batch furnace, to define load pattern. A round pattern with 6 parts will be created, so choose 'Round' Pattern type, type in 6 in the 'Row' column, the distance between workpieces is 17 inch and leave the 'Central symmetry' checked, see Fig. 3FHL1.13. Finish the load pattern definition, the pattern can be previewed by clicking on the button, the result is plotted in the central graphic window area, see Fig. 3FHL1.13.
+Modelovanie dávky viacerých dielov zahrievaných v dávkovej peci s cieľom definovať rozloženie dávky. Vytvorí sa kruhový vzor s 6 dielmi, preto zvoľte typ vzoru „Kruhový“, do stĺpca „Rad“ zadajte hodnotu 6, vzdialenosť medzi obrobkami je 17 palcov a ponechajte zaškrtnutú možnosť „Stredová symetria“, pozri obr. 3FHL1.13. Dokončite definíciu rozloženia nákladu; rozloženie si môžete predbežne prezrieť kliknutím na tlačidlo, výsledok sa zobrazí v strednej časti grafického okna, pozri obr. 3FHL1.13.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0013.jpg' | relative_url }})
 
-Load Pattern design of parts; Load pattern definition window and Preview of load pattern
+Návrh rozloženia zaťaženia dielov; okno na definovanie rozloženia zaťaženia a náhľad rozloženia zaťaženia
 
-## Batch Furnace Definition
+## Definícia dávkovej pece
 
-Furnace definition will be introduced in this section, click on the tree, the triangle button beside ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/fold_list.jpg' | relative_url }}) to unfold **'Batch Furnace** ' definition item, under it, there will be several sub-items need to be configured.
+V tejto časti bude predstavená definícia pece. Kliknutím na stromovú štruktúru a trojuholníkové tlačidlo vedľa položky ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/fold_list.jpg' | relative_url }}) rozbalíte položku definície **„Batch Furnace“**, pod ktorou sa nachádza niekoľko podpolí, ktoré je potrebné nakonfigurovať.
 
-  * ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/general_settings.jpg' | relative_url }})Basic furnace information, like shape, size and heat source etc.
+  * ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/general_settings.jpg' | relative_url }})Základné informácie o peci, ako napríklad tvar, rozmery, zdroj tepla atď.
 
-  * ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/wall.jpg' | relative_url }})Furnace wall information, include material, number of layers and thickness.
+  * ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/wall.jpg' | relative_url }}) Informácie o stenách pece, vrátane materiálu, počtu vrstiev a hrúbky.
 
-  * ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/cooling_system.jpg' | relative_url }})Cooling related parameters, for example, water rate of the cooling, inlet and outlet water temperature.
+  * ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/cooling_system.jpg' | relative_url }})Parametre súvisiace s chladením, napríklad prietok chladiacej vody, vstupná a výstupná teplota vody.
 
-  * ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/fan_system.jpg' | relative_url }})Recirculation fan settings, fan's size, material and speed etc.
+  * ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/fan_system.jpg' | relative_url }})Nastavenia recirkulačného ventilátora, veľkosť ventilátora, materiál, rýchlosť atď.
 
-  * ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/accesory.jpg' | relative_url }})Accessory information, this is designed for the estimation of the heat absorbed by any small furnace parts, which no need to be meshed, assuming its temperature is uniform and same as that of the furnace.
+  * ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/accesory.jpg' | relative_url }})Informácie o príslušenstve: tento nástroj je určený na odhad tepla absorbovaného akýmikoľvek malými časťami pece, ktoré nie je potrebné zahrnúť do siete, za predpokladu, že ich teplota je rovnomerná a zhodná s teplotou pece.
 
-Click on the tree the furnace definition item ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/batch_furnace_lable.jpg' | relative_url }}) will led to main 'Batch Furnace' window as shown in Fig. 3FHL1.14.
+Kliknutím na položku v stromovej štruktúre s názvom „Definícia pece“ (![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/batch_furnace_lable.jpg' | relative_url }})) sa otvorí hlavné okno „Dávková pec“, ako je znázornené na obr. 3FHL1.14.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0014.jpg' | relative_url }})
 
-Batch Furnace main definition window
+Hlavné okno s definíciami dávkovej pece
 
-Set 'Furnace Name' as '**Linderburg426** ', the initial 'Furnace Temperature' as **1260** F. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to accept it and go to 'General Settings' window (![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/general_settings.jpg' | relative_url }})).
+Nastavte „Názov pece“ na „**Linderburg426**“ a počiatočnú „Teplotu pece“ na **1260** F. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste nastavenie potvrdili, a prejdite do okna „Všeobecné nastavenia“ (![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/general_settings.jpg' | relative_url }})).
 
-*Note that 'Scaling' is the scaling factor of the model, it's not recommended since it require the special boundary condition set up, leave it as 1.
+*Upozorňujeme, že „Scaling“ je mierka modelu; jeho použitie sa neodporúča, pretože si vyžaduje nastavenie špeciálnych okrajových podmienok, preto ho nechajte na hodnote 1.
 
-### General settings
+### Všeobecné nastavenia
 
-The Linderburg426 batch furnace's Body shape is '**Vertical Cylinder** ', the overall size are **99.6** inch as diameter and **72** inch high. It's electric furnace, the Connected Heat Input is **113.727** Btu/sec.
+Tvar telesa dávkovej pece Linderburg426 je „**vertikálny valec**“, jej celkové rozmery sú **99,6** palca v priemere a **72** palcov na výšku. Ide o elektrickú pec s pripojeným tepelným príkonom **113,727** Btu/s.
 
-Finish all the settings, see Fig. 3FHL1.15., then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to accept it and go to 'Wall' definition window (![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/wall.jpg' | relative_url }})).
+Dokončite všetky nastavenia (pozri obr. 3FHL1.15.), potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste ich potvrdili, a prejdite do okna definície „Wall“ (![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/wall.jpg' | relative_url }})).
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0015.jpg' | relative_url }})
 
-General Settings
+Všeobecné nastavenia
 
-### Wall
+### Stena
 
-On the 'Wall' definition page, there will be three group of information need to be input, 'Roof', 'Side wall' and 'Bottom'. 
+Na stránke s definíciami „Steny“ bude potrebné zadať tri skupiny informácií: „Strecha“, „Bočná stena“ a „Dno“. 
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0016.jpg' | relative_url }})
 
-Load and assigning material for wall
+Nakladanie a rozmiestňovanie materiálu na stenu
 
-The default is the 'Roof' information, set number of **layers** as **1** , **thickness** as **10** inch, see Fig. 3FHL1.16.
+Predvolenou hodnotou sú údaje pre „Strechu“; nastavte počet **vrstiev** na **1** a **hrúbku** na **10** palcov, pozri obr. 3FHL1.16.
 
-To assign layer's material, click on the '**Material** ' pull down list by '**Layer 1** ', as seen in Fig. 3FHL1.17. move the mouse to '**Browse...** ' and select the **"CF_Veneen_2800F.key** " material keyword file from \3d\LAB\Furnace_Material folder in installation path. As results,'CF_Veneen_2800F' is added to this pull down list and chosen as the current material for layer 1. Furthermore it's also available for 'Side wall' and 'Bottom'. Meanwhile, 'Drag and Drop' material method is also supported, by doing so, drag the material name from 'Material' explorer ( Fig. 3FHL1.17.) and drop it on the material pull down list.
+Ak chcete priradiť materiál vrstve, kliknite na roletové menu „**Materiál**“ pri položke „**Vrstva 1**“, ako je znázornené na obr. 3FHL1.17. Presuňte kurzor myši na položku „**Prehľadávať...**“ “ a vyberte súbor s kľúčovými slovami materiálu **„CF_Veneen_2800F.key** “ zo zložky \3d\LAB\Furnace_Material v inštalačnej ceste. V dôsledku toho sa „CF_Veneen_2800F“ pridá do tohto roletového zoznamu a zvolí sa ako aktuálny materiál pre vrstvu 1. Okrem toho je k dispozícii aj pre „Bočnú stenu“ a „Dno“. Medzitým je podporovaná aj metóda „Drag and Drop“ (ťahaj a pusť); týmto spôsobom pretiahnite názov materiálu z prehliadača „Material“ (obr. 3FHL1.17.) a umiestnite ho do roletového zoznamu materiálov.
 
-Notice the![]({{ '/assets/icons/pre_icons/mo_material_icon.jpg' | relative_url }}) beside the material name ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/cf_veneen_2800f_mat_list.jpg' | relative_url }}), click on this button will let to the 'Material Editor' page (Fig. 3FHL1. Fig. 3FHL1.17.). Changes can be made on the current assigned material.
+Všimnite si tlačidlo ![]({{ '/assets/icons/pre_icons/mo_material_icon.jpg' | relative_url }}) vedľa názvu materiálu ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/cf_veneen_2800f_mat_list.jpg' | relative_url }}); kliknutím na toto tlačidlo sa dostanete na stránku „Editor materiálov“ (obr. 3FHL1. obr. 3FHL1.17.). Je možné vykonávať zmeny na aktuálne priradenom materiáli.
 
-Then click on ![]({{ '/assets/icons/pre_icons/mo_side_wall_button.jpg' | relative_url }}) button, set number of **layers** as **1** , **thickness** as **9** inch, see Fig. 3FHL1.17.. From the material pull down list, choose,'**CF_Veneen_2800F** ' and assign it to layer 1 of side wall.
+Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_side_wall_button.jpg' | relative_url }}), nastavte počet **vrstiev** na **1** a **hrúbku** na **9** palcov, pozri obr. 3FHL1.17.. Z roletového zoznamu materiálov vyberte „**CF_Veneen_2800F**“ a priraďte ho k vrstve 1 bočnej steny.
 
-Then click on ![]({{ '/assets/icons/pre_icons/mo_bottom_button.jpg' | relative_url }}), set number of layers as 1, **thickness** as **9** inch, see Fig. 3FHL1.17. From the material pull down list, choose '**CF_Veneen_2800F** 'and assign it to layer 1 of bottom wall.
+Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_bottom_button.jpg' | relative_url }}), nastavte počet vrstiev na 1 a **hrúbku** na **9** palcov, pozri obr. 3FHL1.17. Z roletového zoznamu materiálov vyberte „**CF_Veneen_2800F**“ a priraďte ho k vrstve 1 spodnej steny.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0017.jpg' | relative_url }})
 
-Wall Definition
+Definícia steny
 
-Finish all the settings, then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to accept it and go to 'Cooling System' definition window (![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/cooling_system.jpg' | relative_url }})).
+Dokončite všetky nastavenia, potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste ich potvrdili, a prejdite do okna definície „Chladiaci systém“ (![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/cooling_system.jpg' | relative_url }})).
 
-### Cooling System
+### Chladiaci systém
 
-Leave all fields as zero for this lab, see Fig. 3FHL1.18. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), go to 'Fan System' definition window (![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/fan_system.jpg' | relative_url }})).
+V tomto cvičení nechajte všetky polia nastavené na nulu, pozri obr. 3FHL1.18. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite do okna definície „Fan System“ (![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/fan_system.jpg' | relative_url }})).
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0018.jpg' | relative_url }})
 
-Cooling System Definition
+Definícia chladiaceho systému
 
-### Fan System
+### Systém ventilátorov
 
-This is a vacuum furnace, so check 'Non – atmosphere' ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/non_atmosphere.jpg' | relative_url }}) as shown in Fig. 3FHL1.19.
+Ide o vákuovú pec, preto zaškrtnite políčko „Bez atmosféry“ ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/non_atmosphere.jpg' | relative_url }}), ako je znázornené na obr. 3FHL1.19.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0019.jpg' | relative_url }})
 
-Fan system definition
+Definícia ventilátorového systému
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) then go to 'Accessory' definition (![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/accesory.jpg' | relative_url }})).
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a potom prejdite na definíciu „Príslušenstvo“ (![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/accesory.jpg' | relative_url }})).
 
-### Accessory
+### Príslušenstvo
 
-The total weight of heating elements of the Linderburg426 is **50** lbs, the material is graphite. Other than this, a total **1200** lbs of supports of alloy will also need to be considered in the heat estimation.
+Celková hmotnosť vykurovacích prvkov modelu Linderburg426 je **50** libier, sú vyrobené z grafitu. Okrem toho je potrebné pri odhade tepelného zaťaženia zohľadniť aj celkovú hmotnosť **1200** libier nosných konštrukcií zo zliatiny.
 
-On 'Accessory' page, set number of accessories as 2, see Fig. 3FHL1.20., then assign material to the corresponding furnace parts.
+Na stránke „Príslušenstvo“ nastavte počet príslušenstiev na 2 (pozri obr. 3FHL1.20.) a následne priraďte materiál k príslušným častiam pece.
 
-Set accessory 1 as heating elements, in this lab, since the material keyword file for graphite is already prepared, just browse ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/graphite_list.jpg' | relative_url }}) from **\3d\LABS\Furnace_Material\Wall\GRAPHITE.KEY** in installation path to the 'Accessory' window on ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/material_list_1.jpg' | relative_url }}).
+V tomto laboratórnom cvičení nastavte príslušenstvo 1 ako vykurovacie prvky; keďže súbor s kľúčovými slovami pre grafit je už pripravený, stačí vybrať ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/graphite_list.jpg' | relative_url }}) z adresára **\3d\LABS\Furnace_Material\Wall\GRAPHITE.Zadajte **KĽÚČ** v inštalačnej ceste do okna „Accessory“ v súbore ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/material_list_1.jpg' | relative_url }}).
 
-Then set accessory 2 as supports, similarly browse from **\3d\LABS\Furnace_Material\Accessory\Alloy.KEY** in installation path to the 'Accessory' window on ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/material_list_2.jpg' | relative_url }}) .
+Potom nastavte príslušenstvo 2 ako podpery; podobne prejdite z adresára **\3d\LABS\Furnace_Material\Accessory\Alloy.KEY** v inštalačnej ceste do okna „Accessory“ v programe ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/material_list_2.jpg' | relative_url }}).
 
-Set accessory 1 as heating elements, in this lab, since the material keyword file for graphite is already prepared, just browse ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/alloy_list.jpg' | relative_url }}) from **\3d\LABS\Furnace_Material\Wall\GRAPHITE.KEY** in installation path to the 'Accessory' window on .
+V tomto laboratórnom cvičení nastavte príslušenstvo 1 ako vykurovacie prvky; keďže súbor s kľúčovými slovami pre grafit je už pripravený, stačí v inštalačnej zložke vyhľadať súbor ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/alloy_list.jpg' | relative_url }}) z adresára **\3d\LABS\Furnace_Material\Wall\GRAPHITE.KEY** a vložiť ho do okna „Príslušenstvo“.
 
-Then set accessory 2 as supports, similarly browse from **\3d\LABS\Furnace_Material\Accessory\alloy.KEY** in installation path to the 'Accessory' window on.
+Potom nastavte príslušenstvo 2 ako podpery; podobne prejdite z adresára **\3d\LABS\Furnace_Material\Accessory\alloy.KEY** v inštalačnej zložke do okna „Príslušenstvo“.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0020.jpg' | relative_url }})
 
-Assign material to Accessory
+Priradiť materiál k príslušenstvu
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to accept changes. Up to here, the furnace definition has been done, furnace Linderburg426 has been successfully created and configured.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste potvrdili zmeny. Týmto je definícia pece dokončená, pec Linderburg426 bola úspešne vytvorená a nakonfigurovaná.
 
-*Note that on 'Batch Furnace' main definition page ( Fig. 3FHL1.15 ), there are four furnace material related settings,
+*Všimnite si, že na hlavnej stránke s definíciami „Batch Furnace“ (obr. 3FHL1.15) sa nachádzajú štyri nastavenia týkajúce sa materiálu pece,
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/fuel_list.jpg' | relative_url }})
 
-\- gas/fuel material sub folder
+\- podadresár „plyn/palivo“
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/wall_list.jpg' | relative_url }})
 
-\- layer material of the furnace wall
+\- materiál vrstvy steny pece
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/atm_list.jpg' | relative_url }})
 
-\- furnace atmosphere
+\- atmosféra v peci
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/accs_list.jpg' | relative_url }})
 
-\- accessory material
+\- doplnkový materiál
 
-These settings are the default material sub folder where to locate corresponding material keyword files, so any material keyword file presented in these folders will be list out in the corresponding material comb box, as seen in Fig. 3FHL1.15.
+Tieto nastavenia určujú predvolenú podzložku materiálu, v ktorej sa nachádzajú príslušné súbory s kľúčovými slovami pre materiály, takže každý súbor s kľúčovými slovami pre materiály nachádzajúci sa v týchto zložkách sa zobrazí v príslušnom roletovom menu materiálov, ako je vidieť na obr. 3FHL1.15.
 
-## Thermal Schedule and PID Control
+## Tepelný harmonogram a PID regulácia
 
-### Thermal Schedule
+### Termínový harmonogram
 
-Thermal schedule are the time and temperature setting points, to define it, click on the tree the 'Thermal Schedule' item ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/thermal_schedule_list.jpg' | relative_url }}).
+Tepelný plán predstavuje nastavené hodnoty času a teploty. Ak ho chcete definovať, kliknite v stromovej štruktúre na položku „Tepelný plán“ ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/thermal_schedule_list.jpg' | relative_url }}).
 
-On the following 'Thermal Schedule' definition window, as seen on Fig. 3FHL1.21., select ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/function_of_time_radio_button.jpg' | relative_url }}) and then click on ![]({{ '/assets/icons/pre_icons/mo_define..._button2.jpg' | relative_url }}) button.
+V nasledujúcom okne na definovanie „tepelného plánu“, ako je znázornené na obr. 3FHL1.21, vyberte ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/function_of_time_radio_button.jpg' | relative_url }}) a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define..._button2.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0021.jpg' | relative_url }})
 
-Thermal Schedule definition
+Definícia tepelného harmonogramu
 
-Then on the central window area, the 'Environment Temperature' function definition window will show up, on the table, input the following 'time (s)/temperature (F)' data pairs '0/1260', '13500/1260', '13620/1220', '22860/1220', 24000/1600', and '54000/1600'. Click ![]({{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}) to review the function as curve plotting as shown in Fig. 3FHL1.22.
+Následne sa v strednej časti okna zobrazí okno s definíciou funkcie „Teplota okolia“; do tabuľky zadajte nasledujúce páry údajov „čas (s)/teplota (F)“: „0/1260“, „13500/1260“, „13620/1220“, „22860/1220“, „24000/1600“ a „54000/1600“. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}) si môžete prezrieť funkciu vo forme krivky, ako je znázornené na obr. 3FHL1.22.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0022.jpg' | relative_url }})
 
-Environmental function definition
+Definícia environmentálnej funkcie
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to accept the values.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste potvrdili hodnoty.
 
-### PID Control
+### PID regulácia
 
-Back to the 'Thermal Schedule' definition page as seen in Fig. 3FHL1.23.
+Späť na stránku s definíciou „Tepelného harmonogramu“, ako je znázornené na obr. 3FHL1.23.
 
-Turn on PID control by click on ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/on_radio_bitton.jpg' | relative_url }}). Then set 'Spain' to **2400** F, 'Proportional Gain' to **10** , 'Integral Gain' to **0.000833333** 1/sec and leave 'Damping' as zero.
+Zapnite PID reguláciu kliknutím na ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/on_radio_bitton.jpg' | relative_url }}). Potom nastavte „Spain“ na **2400** F, „Proportional Gain“ na **10**, „Integral Gain“ na **0,000833333** 1/s a „Damping“ nechajte na nule.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0023.jpg' | relative_url }})
 
-PID Control definition
+Definícia PID regulácie
 
-Next click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to accept PID settings and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) for positioning and stopping controls window as there is no positioning is required and process duration stopping controls will be defined in the simulation controls heating time as shown in Fig. 3FHL1.24 .
+Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste potvrdili nastavenia PID, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre otvorenie okna ovládacích prvkov polohovania a zastavenia, keďže polohovanie nie je potrebné a ovládacie prvky zastavenia na základe trvania procesu budú definované v simulácii času ohrevu, ako je znázornené na obr. 3FHL1.24.
 
-## Simulation Control
+## Riadenie simulácie
 
-Check **View****factor** calculation check box to turn on Radiation, enter the **Heating****time** as **54000** seconds and select **Auto** step definition radio button to define temperature based step definition. Leave the default Step definition values that is, Temperature change per step 5F, Min/Max time per step 0.001 and 10 seconds respectively.
+Zaškrtnite políčko **Zobraziť****faktor**, aby ste aktivovali žiarenie, zadajte **Čas****kúrenia** ako **54000** sekúnd a vyberte prepínač **Auto** pre definíciu krokov, čím nastavíte definíciu krokov na základe teploty. Nechajte predvolené hodnoty definície krokov, t. j. zmena teploty na krok 5 °F, minimálny a maximálny čas na krok 0,001, resp. 10 sekúnd.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0024.jpg' | relative_url }})
 
-Simulation Control
+Riadenie simulácie
 
-## Generate Database
+## Vytvoriť databázu
 
-On 'Generate DB' page, click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), as seen in Fig. 3FHL1.25., the 'Message' window area, Database has been successfully generated.
+Na stránke „Generate DB“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), ako je znázornené na obr. 3FHL1.25. V oblasti okna „Message“ sa zobrazí správa, že databáza bola úspešne vygenerovaná.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0025.jpg' | relative_url }})
 
-Generate Database window
+Okno „Vytvoriť databázu“
 
-## Run Simulation
+## Spustiť simuláciu
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. 3FHL1.26. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), čím otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. 3FHL1.26. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0026.jpg' | relative_url }})
 
-Run Simulation
+Spustiť simuláciu
 
-*Note: Please make sure only use one processor, the furnace model does not support multiple cores yet.
+*Poznámka: Uistite sa, prosím, že používate len jeden procesor; tento model pece zatiaľ nepodporuje viacjadrové procesory.
 
-Click on the menu 'Simulation' 'Process Monitor', 'Process Monitor' window will be popped up as seen in Fig. 3FHL1.27., the running database 'DrillBit' information is list under 'Running Jobs'.
+Kliknite na ponuku „Simulácia“ > „Monitor procesov“; otvorí sa okno „Monitor procesov“, ako je znázornené na obr. 3FHL1.27. Informácie o spustenej databáze „DrillBit“ sú uvedené v zozname pod položkou „Spustené úlohy“.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0027.jpg' | relative_url }})
 
-Process Monitor
+Monitor procesov
 
-In the 'Message' window, it can be seen that the running job information are also updated frequently.
+V okne „Správa“ je vidieť, že informácie o prebiehajúcej úlohe sa tiež často aktualizujú.
 
-## Post-Processing
+## Následné spracovanie
 
-Once the simulation is completed click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab to post-processor the DB. The furnace energy consumption related information will be available other than the deform state variables like workpieces temperature.
+Po dokončení simulácie kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), aby ste spustili postprocesor pre databázu. Okrem premenných popisujúcich stav deformácie, ako je napríklad teplota obrobkov, budú k dispozícii aj informácie týkajúce sa spotreby energie pece.
 
-#### Energy Consumption
+#### Spotreba energie
 
-As seen in Fig. 3FHL1.28., in the post-processor, click on ![]({{ '/assets/icons/post_icons/mo_summary_icon.jpg' | relative_url }}) (Summary) button to view the simulation summary. On the 'Summary' window, click on **Heat Treat** then ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/furnace_lable.jpg' | relative_url }}).
+Ako je vidieť na obr. 3FHL1.28., v postprocesore kliknite na tlačidlo ![]({{ '/assets/icons/post_icons/mo_summary_icon.jpg' | relative_url }}) (Súhrn), aby ste si zobrazili súhrn simulácie. V okne „Súhrn“ kliknite na **Tepelné spracovanie** a potom na ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/furnace_lable.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0028.jpg' | relative_url }})
 
-Furnace energy consumption curve
+Krivka spotreby energie pece
 
-As showing in Fig. 3FHL1.28, on 'Furnace' summary page, there are several furnace related energy consumption variables,
+Ako je znázornené na obr. 3FHL1.28, na prehľadovej stránke „Pec“ sa nachádza niekoľko premenných týkajúcich sa spotreby energie v peci,
 
-  * Gross Energy Input - run time input energy value vs time.
+  * Hrubý energetický príkon – hodnota energie dodanej počas prevádzky v závislosti od času.
 
-  * Heat to load - run time heat absorbed by all the workpieces.
+  * Teplo na náplň – teplo absorbované všetkými obrobkami počas prevádzky.
 
-  * Heat stored in furnace - run time heat absorbed by all the furnace walls.
+  * Teplo akumulované v peci – teplo absorbované všetkými stenami pece počas prevádzky.
 
-  * Water cooling - run time heat contents taken away by cooling water.
+  * Vodné chladenie – teplo vznikajúce počas prevádzky je odvádzané chladiacou vodou.
 
-  * Loss through wall - run time radiation loss through the hot walls.
+  * Straty cez steny – straty žiarenia počas prevádzky cez horúce steny.
 
-  * Loss through openings - run time radiation loss through any open areas like holes on the furnace wall.
+  * Straty cez otvory – straty žiarenia počas prevádzky cez akékoľvek otvorené miesta, ako sú otvory v stene pece.
 
-  * Cool by fan - run time heat to the recirculation fan's cooling water system.
+  * Chladenie ventilátorom – počas prevádzky sa teplo odvádza do systému chladiacej vody recirkulačného ventilátora.
 
-  * Fan generated heat - run time heat generated by the recirculation fan as it's ruining.
+  * Teplo generované ventilátorom – teplo vznikajúce počas prevádzky recirkulačného ventilátora pri jeho chode.
 
-  * Furnace temperature – simulated furnace temperature.
+  * Teplota pece – simulovaná teplota pece.
 
-  * Set point – thermal schedule.
+  * Nastavená hodnota – teplotný program.
 
-Click on the ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) button after selecting any variable, the corresponding energy consumption curve which is run time heat value vs time will be plotted on the graphic window area, as seen in Fig. 3FHL1.28.
+Po výbere akejkoľvek premennej kliknite na tlačidlo ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}); v grafickom okne sa zobrazí príslušná krivka spotreby energie, ktorá znázorňuje vzťah medzi hodnotou tepla v priebehu času a časom, ako je vidieť na obr. 3FHL1.28.
 
-#### Point tracking of temperature at different location
+#### Sledovanie teploty v rôznych miestach
 
-The point tracking is a very useful tool to check the temperature distribution among the load pattern.
+Sledovanie bodov je veľmi užitočný nástroj na kontrolu rozloženia teploty v rámci rozloženia nákladu.
 
-As seen in Fig. 3FHL1.29, pick two points as corner and center respectively, select all steps, then point track the temperature, results are plotted in Fig. 3FHL1.29.
+Ako je vidieť na obr. 3FHL1.29, vyberte dva body – jeden ako rohový a druhý ako stredový –, označte všetky kroky a potom sledujte priebeh teploty; výsledky sú znázornené na obr. 3FHL1.29.
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0029.jpg' | relative_url }})
 
-Point tracking points
+Body sledovania
 
-From Fig. 3FHL1.30, it shows that the corner and center of the workpiece are heated up almost at the same rate, so the temperature difference is relative smaller and this is very helpful to control the heat treatment quality. (Data are exported from the point tracking graph, and the summary graph of set point, furnace temperature)
+Z obr. 3FHL1.30 vyplýva, že roh a stred obrobku sa zahrievajú takmer rovnakou rýchlosťou, takže teplotný rozdiel je relatívne menší, čo výrazne pomáha pri kontrole kvality tepelného spracovania. (Údaje sú exportované z grafu sledovania bodov a súhrnného grafu nastavenej hodnoty a teploty pece.)
 
 ![]({{ '/assets/images/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/image0030.jpg' | relative_url }})
 
-Temperature profile
+Teplotný profil
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [6.2. Integrated Manufacturing Process Simulation layout]({{ '/docs/sk/integrated_manufacturing_process_setup/6_integrated_manufacturing_process_layout/6_2_integrated_manufacturing_process_simulation_layout/' | relative_url }})
 

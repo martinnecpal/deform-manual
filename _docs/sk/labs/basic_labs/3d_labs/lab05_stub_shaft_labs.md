@@ -1,905 +1,905 @@
 ---
 lang: sk
-title: "Lab05 Stub Shaft Labs"
+title: "Lab05 – Laboratórne cvičenia s krátkymi hriadeľmi"
 ---
 
-# Lab 5. Stub Shaft Labs
+# Laboratórna práca č. 5. Laboratórne cvičenia s krátkou hriadeľou
 
-5.1. Operation1: Cone Operation
+5.1. Operácia 1: Operácia s kužeľom
 
-5.2. Operation2: Head Operation
+5.2. Operácia 2: Operácia na hlave
 
-5.3. Symmetry/Thermal Operations
+5.3. Symetria/tepelné operácie
 
-5.4. Tool Stress Analysis
+5.4. Analýza namáhania nástroja
 
-5.5. Adding a Shrink ring to the die
+5.5. Pridanie zúžovacieho krúžku na lisovaciu formu
 
-5.6. Mechanical Press
+5.6. Mechanický lis
 
-## Operation1: Cone Operation
+## Operácia 1: Operácia s kužeľom
 
-### Creating New Problem
+### Vytvorenie nového problému
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the **New****Problem**![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**Integrated Manufacturing Process** " radio button and units system as "**English** " radio button in units field. Define Problem Name as "**Stub_Shaft** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Nový problém**, alebo kliknutím na ikonu **Nový****problém**![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Zvoľte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek zvoľte systém jednotiek pomocou prepínača „**Anglický**“. Názov úlohy zadajte ako „**Stub_Shaft**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak políčko „Zobraziť dialógové okno s možnosťami“ nezaškrtnete, nezobrazí sa dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s použitím integrovaného výrobného procesu Deform.
 
-MO wizard will open, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we use ‘**Stub_Shaft** ’ as the project name.
+Otvorí sa sprievodca MO, v tomto bode bude používateľ vyzvaný, aby zadal názov projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názov tejto relácie. V tejto relácii použijeme ako názov projektu „**Stub_Shaft**“.
 
-User can also change the Unit system and add operation by selecting from First operation pull down list and checkbox. Using copy Existing project option we can import previous saved projects as new project. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Používateľ môže tiež zmeniť systém jednotiek a pridať operáciu výberom z roletového zoznamu „Prvá operácia“ a zaškrtnutím príslušného políčka. Pomocou možnosti „Kopírovať existujúci projekt“ môžeme importovať predtým uložené projekty ako nové projekty. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.
 
-### Adding operations
+### Pridávanie operácií
 
-Add **two****3D****Forming****operations** from the Explorer Operations list. Add the operations by clicking on 3D Forming ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button or user can also add by drag and drop into the Operation Editor.
+Pridajte **dve****3D****tvarovacie****operácie** zo zoznamu operácií v Průzkumníku. Operácie pridáte kliknutím na tlačidlo 3D Forming ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) alebo ich môžete pridať aj pretiahnutím do Editoru operácií.
 
-### Simulation Controls
+### Ovládacie prvky simulácie
 
-In this lab we will be showing how to setup simple Isothermal problem. So in Simulation controls **uncheck** the **Heat****transfer** mode check box (see Fig. 3DL5.1.). Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V tomto cvičení ukážeme, ako nastaviť jednoduchú izotermickú úlohu. V okne „Simulation controls“ teda **odznačte** políčko režimu **Heat****transfer** (pozri obr. 3DL5.1.). Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0001.jpg' | relative_url }})
 
-Simulation control window
+Okno riadenia simulácie
 
-### Material List
+### Zoznam materiálov
 
-In Material list window, click on load material data from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option and Load the '**AISI-4120** ' Material from **Steel** category as shown in Fig. 3DL5.2. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object page.
+V okne Zoznam materiálov kliknite na možnosť Načítať údaje o materiáli z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a načítajte materiál „**AISI-4120**“ z kategórie **Oceľ**, ako je znázornené na obr. 3DL5.2. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Objekt.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0002.jpg' | relative_url }})
 
-Material List window
+Okno „Zoznam materiálov“
 
-### Adding objects
+### Pridávanie objektov
 
-If there aren't already four objects, add the four objects by clicking the object button ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) button (see Fig. 3DL5.3.), then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Ak tam ešte nie sú štyri objekty, pridajte ich kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) (pozri obr. 3DL5.3.), potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0003.jpg' | relative_url }})
 
-Adding Object Window
+Okno na pridávanie objektov
 
-### Workpiece
+### Obrobok
 
-In Workpiece window, change the Object name to **Billet** and select Object type as **Plastic** as shown in Fig. 3DL5.4. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to geometry page.
+V okne „Workpiece“ (Obrobok) zmenite názov objektu na **Billet** a ako typ objektu vyberte **Plastic**, ako je znázornené na obr. 3DL5.4. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku s geometriou.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0004.jpg' | relative_url }})
 
-Billet object Window
+Objekt „Billet“ – Okno
 
-#### Billet Geometry
+#### Geometria polotovaru
 
-In the Geometry page, select ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) and define a **cylinder** that has a **Diameter** of**0.8** ” and a **height** of **2.7** ” (see Fig. 3DL5.5.). Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button. Check geometry and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) till mesh page.
+Na stránke Geometria vyberte ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) a definujte **valec** s **priemerom** **0,8** ” a **výškou** **2,7** ” (pozri obr. 3DL5.5.). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Skontrolujte geometriu a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka siete.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0005.jpg' | relative_url }})
 
-Defining the Workpiece Geometry
+Definovanie geometrie obrobku
 
-#### Mesh generation
+#### Vytváranie sietí
 
-The default settings are adequate for generating a mesh. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) to generate the mesh. (see Fig. 3DL5.6.) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Predvolené nastavenia sú na vytvorenie siete postačujúce. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}), aby ste vytvorili sieť. (pozri obr. 3DL5.6.) Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0006.jpg' | relative_url }})
 
-Workpiece Mesh generation
+Vytvorenie siete obrobku
 
-#### Assigning Billet Material
+#### Priradenie materiálu na výkovky
 
-To assign material for workpiece select the material **AISI-4120** from material window. This can be done as shown in below Fig. 3DL5.7. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top die page.
+Ak chcete obrobku priradiť materiál, vyberte v okne materiálov materiál **AISI-4120**. Postupujte podľa obrázku 3DL5.7 nižšie. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Top die“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0007.jpg' | relative_url }})
 
-Material selection window
+Okno na výber materiálu
 
-### Top Die Definition
+### Definícia pojmu „Top Die“
 
-In Top Die page, change the name of the top die to **Punch** , Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to geometry page.
+Na stránke „Top Die“ zmenite názov hornej matrice na **Punch** a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku s geometriou.
 
-#### Import Punch geometry
+#### Importovať geometriu dierovania
 
-Import **StubShaft_ConePunch.STL** file using Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button as shown in Fig. 3DL5.8. Check geometry and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until movement page.
+Naimportujte súbor **StubShaft_ConePunch.STL** pomocou tlačidla „Načítať geometriu z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), ako je znázornené na obr. 3DL5.8. Skontrolujte geometriu a klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s pohybmi.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0008.jpg' | relative_url }})
 
-Importing Punch Geometry 
+Import geometrie výseku 
 
-#### Assign Movement to Top Die
+#### Priradiť pohyb k hornej kocku
 
-Define a speed of **10** in/sec in **-Z** direction for this lab. Then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Bottom Die page.
+Pre toto laboratórne cvičenie nastavte rýchlosť **10** palcov za sekundu v smere **-Z**. Potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Bottom Die“.
 
-### Bottom Die Definition
+### Definícia spodnej matrice
 
-In Bottom die page, accept the Object type as **Rigid** and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) (see Fig. 3DL5.9.).
+Na stránke „Bottom die“ nastavte typ objektu na **Rigid** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) (pozri obr. 3DL5.9.).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0009.jpg' | relative_url }})
 
-Bottom Die page
+Stránka spodnej matrice
 
-#### Import Bottom Die Geometry
+#### Import geometrie spodnej matrice
 
-Import **StubShaft_ConeDie.STL** file using Load geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button as shown in Fig. 3DL5.10. Check geometry and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object 4 page.
+Načítajte súbor **StubShaft_ConeDie.STL** pomocou tlačidla „Načítať geometriu z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), ako je znázornené na obr. 3DL5.10. Skontrolujte geometriu a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Objekt 4“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0010.jpg' | relative_url }})
 
-Importing Bottom Die geometry
+Import geometrie spodnej matrice
 
-### Ejector Definition
+### Definícia ejektora
 
-In object 4 window, change the Object 4 Name to **Ejector** and accept the Object type as **Rigid** as shown in Fig. 3DL5.11., Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V okne „Objekt 4“ zmeňte názov objektu 4 na **Ejector** a potvrďte typ objektu ako **Rigid**, ako je znázornené na obr. 3DL5.11. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0011.jpg' | relative_url }})
 
-Ejector object window
+Okno objektu „Ejector“
 
-#### Ejector Geometry
+#### Geometria vyhadzovača
 
-In Ejector geometry window, select and define a **cylinder** that has a **Diameter** of **0.817** ” and a height of **1** ” (see Fig. 3DL5.12.), click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button. Check geometry and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Positioning page.
+V okne „Geometria vyhadzovača“ vyberte a definujte **valec** s **priemerom** **0,817** ” a výškou **1** ” (pozri obr. 3DL5.12.), kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Skontrolujte geometriu a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Positioning“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0012.jpg' | relative_url }})
 
-Ejector Geometry Definition
+Definícia geometrie vyhadzovača
 
-### Positioning
+### Polohovanie
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_auto_position_button.jpg' | relative_url }}) and select ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}) radio button. Change the Positioning Object to the **Ejector** and the Reference to the **Billet**. Change the Approach Direction to **Z** , Press ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) (see Fig. 3DL5.13.) and then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Contact page.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_auto_position_button.jpg' | relative_url }}) a vyberte prepínač ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}). Zmeňte objekt polohovania na **vysúvač** a referenčný objekt na **surovinový blok**. Zmeňte smer priblíženia na **Z**, stlačte ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) (pozri obr. 3DL5.13.) a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Kontakt.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0013.jpg' | relative_url }})
 
-Object Positioning window
+Okno „Polohovanie objektu“
 
-### Contact Generation
+### Získavanie kontaktov
 
-Select **user** type contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. It will add the relationship between the Billet, Punch, Bottom Die and Ejector as shown in Fig. 3DL5.14. As the Dies are Rigid and Billet is plastic, Punch, Bottom Die and Ejector are considered as Master and Billet as Slave.
+Vyberte typ kontaktu **užívateľ** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Tým sa pridá vzťah medzi polotovarom, razníkom, spodnou matricou a vyhadzovačom, ako je znázornené na obr. 3DL5.14. Keďže matrice sú tuhé a polotovar je plastický, razník, spodná matrica a vyhadzovač sa považujú za hlavné prvky a polotovar za podriadený prvok.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0014.jpg' | relative_url }})
 
-Contact Generation page
+Stránka na získavanie kontaktov
 
-Highlight the**Punch – Billet** relationship and click the ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button to modify the contact conditions. In the friction section of the screen (see Fig. 3DL5.15.), there is a pull-down menu that allows the user to choose the appropriate friction conditions of common forming processes.
+Zvýraznite vzťah **Punch – Billet** a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) upravte podmienky kontaktu. V časti obrazovky venovanej treniu (pozri obr. 3DL5.15.) sa nachádza roletové menu, ktoré používateľovi umožňuje vybrať vhodné podmienky trenia pre bežné procesy tvárnenia.
 
-Since this simulation takes place at room temperature and the dies are steel, use the pull down menu and select **Cold forming (steel dies)** from the list. A friction value of **0.12** will automatically be selected.
+Keďže táto simulácia prebieha pri izbovej teplote a formy sú oceľové, použite rozbaľovacie menu a zo zoznamu vyberte možnosť **Tvarovanie za studena (oceľové formy)**. Hodnota trenia **0,12** sa nastaví automaticky.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0015.jpg' | relative_url }})
 
-Inter-Object data definition window
+Okno definície údajov medzi objektmi
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to go back to contact window, Since the friction conditions are the same for all the object pairs, the ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button can be used to copy the interface properties from the first relationship to all of the others. After this is done, all relationships will have a friction of 0.12 defined. Use ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) icon to determine a suitable contact tolerance (a value of about 0.001" will be calculated), then click ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button to generate contact. Switch to Message tab or Observe status bar to know about the contacts generated. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) sa vrátite do okna kontaktu. Keďže podmienky trenia sú rovnaké pre všetky páry objektov, pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môžete skopírovať vlastnosti rozhrania z prvého vzťahu do všetkých ostatných. Po vykonaní tejto operácie budú mať všetky vzťahy definované trenie 0,12. Pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) určte vhodnú toleranciu kontaktu (vypočíta sa hodnota približne 0,001"), potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) na vytvorenie kontaktu. Prejdite na kartu Správy alebo sledujte stavový riadok, aby ste zistili informácie o vytvorených kontaktoch. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Stopping Controls
+### Ovládacie prvky na zastavenie
 
-We want to stop the simulation when the punch and die are within 0.025” of one another. In the Stopping Controls screen, check the**Distance between objects** option and then click points on the bottom of the Punch and on the top of the Bottom Die. Set the value for this distance to **0.025** ” in the**Z** direction.(see Fig. 3DL5.16.)
+Chceme simuláciu zastaviť, keď sa razník a matrica nachádzajú vo vzdialenosti do 0,025” od seba. Na obrazovke „Stopping Controls“ zaškrtnite možnosť **Vzdialenosť medzi objektmi** a potom kliknite na body na spodnej strane razníka a na hornej strane spodnej matrice. Nastavte hodnotu tejto vzdialenosti na **0,025** ” v smere **Z**. (pozri obr. 3DL5.16.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0016.jpg' | relative_url }})
 
-Stopping Controls window
+Okno „Ovládacie prvky zastavenia“
 
-### Step Controls
+### Ovládacie prvky krokov
 
-We want the punch to travel 0.5” in 50 steps, so each step will be 0.5/50 or 0.01”. In the Step Controls, under the **Solution Steps Definition** define the **Die Displacement** as **0.01** ”. Set the **Number of Simulation Steps** to **50** and **Step Increment to Save** to **5**. Set the **Punch** as **Primary Die** if not selected automatically (see Fig. 3DL5.17.) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Chceme, aby sa razník posunul o 0,5” v 50 krokoch, takže každý krok bude mať dĺžku 0,5/50, teda 0,01”. V okne „Step Controls“ (Ovládacie prvky krokov) v časti **Solution Steps Definition** (Definícia krokov riešenia) nastavte **Die Displacement** (Posun razníka) na hodnotu **0,01** ”. Nastavte **Počet simulačných krokov** na **50** a **Krok na uloženie** na **5**. Nastavte **razník** ako **primárny razník**, ak sa nezvolil automaticky (pozri obr. 3DL5.17). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0017.jpg' | relative_url }})
 
-Step Controls window
+Okno „Ovládacie prvky krokov“
 
-### Generate Database
+### Vytvoriť databázu
 
-In Generate DB page. Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process:
+Na stránke „Generate DB“. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) spustíte kontrolu programu, či v nastavení úlohy niečo nechýba. Počas kontroly:
 
-Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).
+Správy v červenej farbe označujú údaje, ktoré je potrebné opraviť, aby bolo možné spustiť simuláciu (napríklad ak ste zabudli definovať údaje o materiáloch).
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, click on ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) tab to go to Next operation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Keď program dokončí zapisovanie databázy, kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}), aby ste prešli k ďalšej operácii.
 
-## Operation2: Head operation
+## Operácia 2: Operácia na hlave
 
-### Simulation Controls
+### Ovládacie prvky simulácie
 
-In Simulation controls, uncheck the **Heat****transfer** mode check box. Then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Objects page.
+V časti „Ovládacie prvky simulácie“ zrušte zaškrtnutie políčka **Prenos tepla**. Potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Objekty“.
 
-###  Adding objects
+###  Pridávanie objektov
 
-If there aren't already four objects, add the four objects by clicking the insert object ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) button (see Fig. 3DL5.18.), then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Ak tam ešte nie sú štyri objekty, pridajte štyri objekty kliknutím na tlačidlo „Vložiť objekt“ ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) (pozri obr. 3DL5.18.), potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0018.jpg' | relative_url }})
 
-Adding Object Window
+Okno na pridávanie objektov
 
-### Workpiece Definition
+### Definícia obrobku
 
-We want to use the workpiece of previous operation last step so, we will make the Workpiece object as Read from DB. Select the **Read from DB** radio button in Workpiece page. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top Die (Punch) page. (see Fig. 3DL5.19.)
+Chceme použiť obrobok z posledného kroku predchádzajúcej operácie, preto nastavíme objekt „Obrobok“ na „Načítať z databázy“. Na stránke „Obrobok“ vyberte prepínač **Načítať z databázy**. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Horná matrica (razník)“. (pozri obr. 3DL5.19.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0019.jpg' | relative_url }})
 
-Workpiece object page
+Stránka objektu obrobku
 
-### Top Die Definition
+### Definícia pojmu „Top Die“
 
-In Top Die (Punch) page, change the Object type to **Rigid**. If the object name isn't Punch change it to Punch, Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Top Die (Punch)“ zmeňte typ objektu na **Rigid**. Ak sa objekt nenazýva „Punch“, premenujte ho na „Punch“ a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-#### Import Punch geometry:
+#### Import geometrie dierovacieho nástroja:
 
-Import **StubShaft_HeadPunch.STL** file using Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button as shown in Fig. 3DL5.20. Check geometry and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until movement page.
+Naimportujte súbor **StubShaft_HeadPunch.STL** pomocou tlačidla „Načítať geometriu z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), ako je znázornené na obr. 3DL5.20. Skontrolujte geometriu a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s pohybmi.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0020.jpg' | relative_url }})
 
-Loading Punch geometry
+Načítavanie geometrie razníka
 
-#### Assign Movement to Punch
+#### Priradiť pohyb k úderu
 
-Define a speed of **10** in/sec in **-Z** direction for this lab. Then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Bottom Die page.
+Pre toto laboratórne cvičenie nastavte rýchlosť **10** palcov za sekundu v smere **-Z**. Potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Bottom Die“.
 
-### Bottom Die Definition
+### Definícia spodnej formy
 
-In the Bottom die page change the Object type to **Rigid** and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Bottom die“ zmeňte typ objektu na **Rigid** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-#### Import Bottom Die Geometry
+#### Import geometrie spodnej formy
 
-Import **StubShaft_HeadDie.STL** file using Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button. Check geometry and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until object4 (Ejector) page.
+Načítajte súbor **StubShaft_HeadDie.STL** pomocou tlačidla „Načítať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})). Skontrolujte geometriu a klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až kým sa nezobrazí stránka s objektom 4 (vysúvač).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0021.jpg' | relative_url }})
 
-Loading Bottom Die Geometry
+Načítanie geometrie spodnej matrice
 
-### Ejector Definition
+### Definícia vyhadzovača
 
-We will make the Ejector object as Read form DB. Select the Read from DB radio button in Ejector page. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Positioning page.
+Objekt „Ejector“ nastavíme tak, aby čítal údaje z databázy. Na stránke „Ejector“ vyberte tlačidlo „Read from DB“. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku „Positioning“.
 
-### Positioning
+### Polohovanie
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) and change the Positioning Object to the **Punch**. Select ![]({{ '/assets/icons/pre_icons/mo_offset_radio_button.jpg' | relative_url }})radio button and position (x=0, y=0 and **Z** =**2**) towards **Z** direction and click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) (see Fig. 3DL5.22.) and click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) a zmeňte objekt polohovania na **Punch**. Vyberte prepínač ![]({{ '/assets/icons/pre_icons/mo_offset_radio_button.jpg' | relative_url }}) a umiestnite ho (x=0, y=0 a **Z** =**2**) v smere **Z**, kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) (pozri obr. 3DL5.22.) a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0022.jpg' | relative_url }})
 
-Object Positioning window
+Okno „Poloha objektu“
 
-### Scheduled Positioning
+### Plánované polohovanie
 
-Using Interference positioning we are positioning the Punch to the Workpiece. In Scheduled positioning page, Click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button and select ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}) radio button. Change the Positioning Object to the **Punch** and the Reference to the **Billet**. Change the Approach Direction to **-Z** and then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). (see Fig. 3DL5.23.) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Pomocou polohovania na základe interferencie polohujeme razník voči obrobku. Na stránke „Naplánované polohovanie“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) a vyberte prepínač ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}). Zmeňte objekt polohovania na **razník** a referenčný bod na **surovinový blok**. Zmeňte smer priblíženia na **-Z** a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). (pozri obr. 3DL5.23.) Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0023.jpg' | relative_url }})
 
-Scheduled Positioning window
+Plánované časové okno na určovanie polohy
 
-### Contact Generation
+### Získavanie kontaktov
 
-Define the contact relations using the same settings which we defined for the first operation in the section 5.1.11. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Definujte vzťahy medzi kontaktmi pomocou rovnakých nastavení, aké sme definovali pre prvú operáciu v časti 5.1.11. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Stop Controls
+### Ovládacie prvky zastavenia
 
-Turn on the Distance between objects option and define the reference points as shown in the Fig. 3DL5.24. Set the stopping distance as **0.375** ” in **Z** direction.
+Zapnite možnosť „Vzdialenosť medzi objektmi“ a definujte referenčné body tak, ako je znázornené na obr. 3DL5.24. Nastavte brzdnú vzdialenosť na **0,375** ” v smere **Z**.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0024.jpg' | relative_url }})
 
-Distance Between Objects stopping control
+Ovládanie zastavenia na základe vzdialenosti medzi objektmi
 
-We will also specify a **maximum****load** for this part. Under the **Deformation** tab, set the Max load to X = 0, Y =0 and Z= **600**. Now if the press load exceeds **600 Klb**(300Tons), the simulation will stop, even if the distance between tools has not been reached (see Fig. 3DL5.25.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Pre tento diel tiež určíme **maximálne****zaťaženie**. Na karte **Deformácia** nastavte maximálne zaťaženie na X = 0, Y = 0 a Z = **600**. Ak teraz zaťaženie lisu prekročí hodnotu **600 Klb** (300 ton), simulácia sa zastaví, aj keď ešte nebola dosiahnutá vzdialenosť medzi nástrojmi (pozri obr. 3DL5.25.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0025.jpg' | relative_url }})
 
-Stop controls page
+Stránka ovládacích prvkov zastavenia
 
-### Step Controls
+### Ovládacie prvky krokov
 
-Estimate the total punch travel, which will be roughly 1.5”. At the end of the simulation we want a gap of 0.375. It’s ok if we overshoot the die travel by a little bit here because we will set a stopping condition to make sure that the tools stop when they are 0.375’’ apart. So we will only subtract 0.3 from 1.5. This will give us a total punch travel of 1.2. For 100 steps, that means that the punch needs to travel 0.012’’ every step.
+Odhadnite celkový zdvih razníka, ktorý bude približne 1,5”. Na konci simulácie chceme dosiahnuť medzeru 0,375. Nevadí, ak tu mierne prekročíme zdvih razníka, pretože nastavíme podmienku zastavenia, aby sa nástroje zastavili, keď budú od seba vzdialené 0,375”. Od hodnoty 1,5 teda odpočítame len 0,3. Tým získame celkový zdvih razníka 1,2. Pri 100 krokoch to znamená, že razník sa musí pri každom kroku posunúť o 0,012”.
 
-Set the **Number of Simulation Steps** to **100** , **step increment to save** to **5** and **constant die displacement** as **0.012** ''. (see Fig. 3DL5.26.) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Nastavte **počet simulačných krokov** na **100**, **krok pri ukladaní** na **5** a **konštantný posun matrice** na **0,012** ''. (pozri obr. 3DL5.26.) Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0026.jpg' | relative_url }})
 
-Step Controls window
+Okno „Ovládacie prvky krokov“
 
-### Generate Database
+### Vytvoriť databázu
 
-See the Status in Generate DB page, if we see Input error, check the data missing and complete it, for this lab sequence expect "DB generation is not required for this operation. It will occur at run time." message
+Pozrite si stav na stránke „Generate DB“; ak sa zobrazí chyba zadávania údajov, skontrolujte, či nechýbajú nejaké údaje, a doplňte ich. V rámci tejto laboratórnej úlohy by sa mala zobraziť správa: „Pre túto operáciu nie je potrebné generovať databázu. K tomu dôjde počas behu programu.“
 
-Save the project and click on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) mode to run the simulation.
+Uložte projekt a kliknite na režim ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}), aby ste spustili simuláciu.
 
-### Running simulation
+### Spustenie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label under the simulation tab (See Fig. 3DL5.27.), Run Options dialog will open as shown in Fig. 3DL5.28. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) na karte „Simulácia“ (pozri obr. 3DL5.27). Otvorí sa dialógové okno „Možnosti spustenia“, ako je znázornené na obr. 3DL5.28. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_03_spike_isothermal/2d_mobl3_image0032.jpg' | relative_url }})
 
-Simulation Options
+Možnosti simulácie
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0028.jpg' | relative_url }})
 
-Run Simulation window
+Okno „Spustiť simuláciu“
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. As long as the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.
+Priebeh simulácie je možné počas jej vykonávania sledovať na karte „Simulation Message“ a v časti „Simulation Graphics“ v oblasti zobrazenia „Graphics“ v režime simulácie. Pokiaľ je na karte „Simulation Message“ zaškrtnutá voľba „![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }})“ (čo je predvolené nastavenie), súbor správ sa bude automaticky aktualizovať.
 
-The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.
+Súbor „Message“ obsahuje informácie o tom, v ktorom simulačnom kroku sa simulácia momentálne nachádza, a zároveň poskytuje údaje o tom, ako dobre simulácia prebieha.
 
-When the simulation is finished without any issues, check the messages in LOG file, when all operation completes we will see messages in LOG file:"MULTIPLE OPERATION COMPLETED".
+Keď sa simulácia bez problémov dokončí, skontrolujte správy v súbore LOG; po dokončení všetkých operácií sa v súbore LOG zobrazia správy: „MULTIPLE OPERATION COMPLETED“.
 
-### Post process the results
+### Následné spracovanie výsledkov
 
-After the simulation is completed, Switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab.
+Po dokončení simulácie prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}).
 
-#### Play through results
+#### Výsledky hry
 
-Use the ![]({{ '/assets/icons/pre_icons/mo_preview_play_button.jpg' | relative_url }}) function to play through both the cone blow and the heading blow.
+Pomocou funkcie ![]({{ '/assets/icons/pre_icons/mo_preview_play_button.jpg' | relative_url }}) prehrávajte tak úder na kužeľ, ako aj úder na hlavu.
 
-Experiment with different part shading options. 
+Vyskúšajte si rôzne možnosti tieňovania častí. 
 
-#### Finding folds
+#### Hľadanie záhybov
 
-Click on the ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) button to open the State Variables window.
+Kliknutím na tlačidlo ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) otvoríte okno „Stavové premenné“.
 
-Click on **folding****angle** and change scaling mode to “**User**.” Insert values of 270 and 271 for Min and Max respectively. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). (See Fig. 3DL5.29.)
+Kliknite na **uhol ohybu****** a zmeňte režim mierky na „**Používateľ**“. Do polí Min a Max zadajte hodnoty 270, resp. 271. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). (Pozri obr. 3DL5.29.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0029.jpg' | relative_url }})
 
-State Variable Window with fold on workpiece
+Okno s premennou polohou a ohybom na obrobku
 
-The fold can now be seen in red. User can play through the time steps and see the fold form. User can also right click on the color bar to experiment with different color bar types. (See Fig. 3DL5.30.)
+Zlomenie je teraz zobrazené červenou farbou. Používateľ môže prechádzať jednotlivými časovými krokmi a sledovať, ako sa zlomenie formuje. Používateľ môže tiež kliknúť pravým tlačidlom myši na farebný pruh a vyskúšať si rôzne typy farebných pruhov. (Pozri obr. 3DL5.30.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0030.jpg' | relative_url }})
 
-Image showing fold in the workpiece
+Obrázok znázorňujúci ohyb v obrobku
 
-Use the slicing tool ![]({{ '/assets/icons/pre_icons/mo_slicing_option.jpg' | relative_url }}) to cut the piece vertically. Click on the radio button next to “**Curve + Plane** ” as shown in Fig. 3DL5.31.
+Na zvislé rozrezanie dielu použite rezací nástroj ![]({{ '/assets/icons/pre_icons/mo_slicing_option.jpg' | relative_url }}). Kliknite na prepínač vedľa položky „**Krivka + rovina**“, ako je znázornené na obr. 3DL5.31.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0031.jpg' | relative_url }})
 
-Slicing Window
+Okno rezania
 
-With this view you can easily see the folds. (See Fig. 3DL5.32.)
+Na tomto pohľade môžete ľahko vidieť záhyby. (Pozri obr. 3DL5.32.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0032.jpg' | relative_url }})
 
-Sliced Object
+Rozrezaný objekt
 
-#### Determining Fill
+#### Určenie výplne
 
-Press clear ![]({{ '/assets/icons/post_icons/mo_clear_sv_icon.jpg' | relative_url }}) to turn off all the variables. Then turn on show contact nodes ![]({{ '/assets/icons/pre_icons/mo_show_cotact_icon.jpg' | relative_url }}) .
+Stlačte tlačidlo „Vymazať“ (![]({{ '/assets/icons/post_icons/mo_clear_sv_icon.jpg' | relative_url }})), aby ste deaktivovali všetky premenné. Následne aktivujte zobrazenie kontaktných uzlov (![]({{ '/assets/icons/pre_icons/mo_show_cotact_icon.jpg' | relative_url }})).
 
-DEFORM places dots where contact has been made with the tool. Places without dots can represent an under fill situation (see Fig. 3DL5.33.). The fill can also be seen by cutting a section through the part.
+Funkcia DEFORM umiestňuje bodky na miesta, kde došlo ku kontaktu s nástrojom. Miesta bez bodiek môžu znamenať nedostatočné vyplnenie (pozri obr. 3DL5.33.). Vyplnenie je možné skontrolovať aj rezom cez diel.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0033.jpg' | relative_url }})
 
-Determining filling in the object
+Určenie vyplnenia objektu
 
-Turn off contact ![]({{ '/assets/icons/pre_icons/mo_show_cotact_icon.jpg' | relative_url }}). Display all the tools and the workpiece ![]({{ '/assets/icons/pre_icons/mo_show_multi_obj_icon.jpg' | relative_url }}).
+Vypnite kontakt ![]({{ '/assets/icons/pre_icons/mo_show_cotact_icon.jpg' | relative_url }}). Zobrazte všetky nástroje a obrobok ![]({{ '/assets/icons/pre_icons/mo_show_multi_obj_icon.jpg' | relative_url }}).
 
-Use the slicing tool to slice the objects about the x-y plane (Make the N direction (0,0,1). Pick “**Curve** ” under the ‘Sliced plane display’ option. (See Fig. 3DL5.34.)
+Pomocou nástroja na rezanie rozrežte objekty v rovine x-y (nastavte smer N na (0,0,1). V možnosti „Zobrazenie roviny rezu“ vyberte položku „**Krivka**“. (Pozri obr. 3DL5.34.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0034.jpg' | relative_url }})
 
-Slicing window 
+Okno na krájanie 
 
-Click on the Z coordinate next to the P (point) input. Then use the slider bar to move the slicing plane up and down the Z axis.
+Kliknite na súradnicu Z vedľa poľa na zadanie P (bod). Potom pomocou posuvníka posuňte rezovú rovinu nahor alebo nadol po osi Z.
 
-Select "+ Z direction" button to view the objects from the +Z direction as shown in Fig. 3DL5.35.
+Kliknite na tlačidlo „+ smer Z“, aby ste si objekty prezreli zo smeru +Z, ako je znázornené na obr. 3DL5.35.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0035.jpg' | relative_url }})
 
-Object in +Z view
+Objekt v pohľade +Z
 
-User can directly see the gap between the tool and the workpiece. Delete ![]({{ '/assets/icons/pre_icons/mo_delete_symmetry_icon.jpg' | relative_url }}) the slicing plane from the slicing menu.
+Používateľ môže priamo vidieť medzeru medzi nástrojom a obrobkom. Odstráňte ![]({{ '/assets/icons/pre_icons/mo_delete_symmetry_icon.jpg' | relative_url }}) rovinu rezania z ponuky rezania.
 
-So far we have used qualitative methods to see under fill. User can also plot the distance between the workpiece and the tooling.
+Doposiaľ sme na zistenie nedopĺňania použili kvalitatívne metódy. Používateľ môže tiež znázorniť vzdialenosť medzi obrobkom a nástrojom.
 
-Click on State Variables ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) Icon. Select “**Minimum****distance** ” and press ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}).
+Kliknite na ikonu „Štátne premenné“ ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}). Vyberte položku „**Minimálna****vzdialenosť**“ a stlačte ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}).
 
-Turn off all the tools and display just the workpiece ![]({{ '/assets/icons/pre_icons/mo_show_single_obj_icon.jpg' | relative_url }}). The normal distance between the workpiece and the closest tool will be displayed. User can left mouse click anywhere on the part. This will plot the minimum distance value on the color bar. (See Fig. 3DL5.36.)
+Vypnite všetky nástroje a zobrazte iba obrobok ![]({{ '/assets/icons/pre_icons/mo_show_single_obj_icon.jpg' | relative_url }}). Zobrazí sa bežná vzdialenosť medzi obrobkom a najbližším nástrojom. Používateľ môže kliknúť ľavým tlačidlom myši kdekoľvek na obrobku. Tým sa na farebnej lište zaznačí hodnota minimálnej vzdialenosti. (Pozri obr. 3DL5.36.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0036.jpg' | relative_url }})
 
-Image Showing Minimum distance region
+Obrázok znázorňujúci oblasť minimálnej vzdialenosti
 
-## Symmetry/Thermal Operations
+## Symetria/Tepelné operácie
 
-### Create a new simulation
+### Vytvoriť novú simuláciu
 
-Now we are going to perform the Cone_Blow operation, from above, with a heated billet. This involves heating the billet, letting it sit in air for 6 seconds (transfer), letting it sit in the die for 2 seconds (dwell) and then forming it (cone). We will do all of this by simulating 1/12th of the part using symmetry as shown in [Fig. 3DL5.37.]({{ '/docs/sk/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/' | relative_url }}#FIg_3DL5_37_Workpiece_showing_1/12th_of_the_symmetry)
+Teraz vykonáme operáciu Cone_Blow zhora s vyhreteným polotovarom. To zahŕňa zahriatie polotovaru, jeho ponechanie na vzduchu po dobu 6 sekúnd (prevod), ponechanie v matrici po dobu 2 sekúnd (zdržanie) a následné tvarovanie (kužeľ). Všetko toto vykonáme simuláciou 1/12 dielu s využitím symetrie, ako je znázornené v [Fig. 3DL5.37.]({{ '/docs/sk/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/' | relative_url }}#FIg_3DL5_37_Workpiece_showing_1/12th_of_the_symmetry)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0037.jpg' | relative_url }})
 
-Workpiece showing 1/12th of the symmetry
+Obrobok znázorňujúci 1/12 symetrie
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the **New****Problem**![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**Integrated Manufacturing Process** " radio button and units system as "**English** " radio button in units field. Define Problem Name as "****Stub_shaft_symmetry**** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Nový problém**, alebo kliknutím na ikonu **Nový****problém**![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Zvoľte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek zvoľte systém jednotiek pomocou prepínača „**Anglický**“. Názov úlohy zadajte ako „****Stub_shaft_symmetry****“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak políčko „Zobraziť dialógové okno s možnosťami“ nezaškrtnete, nezobrazí sa dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém pomocou integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0038.jpg' | relative_url }})
 
-Problem defining window
+Problém s definovaním okna
 
-MO wizard will open along with project naming window as shown in Fig. 3DL5.38. In the field of project name. In the field of project name, set the project name as '**Stub_shaft_symmetry** ' and click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
+Spustí sa sprievodca MO spolu s oknom na zadanie názvu projektu, ako je znázornené na obr. 3DL5.38. V poli pre názov projektu nastavte názov projektu na „**Stub_shaft_symmetry**“ a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
 
-### Add operations
+### Pridať operácie
 
-Add **two 3D Heat Transfer operations** and **one 3D Forming operations** from Operation list in Explorer. Operation can be add by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to respective operation or user can also add the operation by dragging and dropping the operation into Operation Editor region.
+Zoznamu operácií v Průzkumníku pridajte **dve operácie 3D prenosu tepla** a **jednu operáciu 3D tvarovania**. Operáciu je možné pridať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa príslušnej operácie alebo ju môžete pridať aj pretiahnutím do oblasti Editoru operácií.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0039.jpg' | relative_url }})
 
-Adding operations
+Pridávanie operácií
 
-### Importing the DB
+### Import databázy
 
-After adding all three operations, import previously simulated **Stub_Shaft.DB** , select the **first****step** and click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
+Po pridaní všetkých troch operácií načítajte predtým simulovaný súbor **Stub_Shaft.DB**, vyberte **prvý****krok** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0040.jpg' | relative_url }})
 
-Importing DB
+Import databázy
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0041.jpg' | relative_url }})
 
-Step selection window
+Okno výberu kroku
 
-### Selecting Heat Transfer Type
+### Výber typu prenosu tepla
 
-Select Transfer through air heat transfer type for first operation as shown in Fig. 3DL5.42. This will set the default heat transfer settings for heating operation. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Pre prvý prevádzkový režim vyberte typ prenosu tepla „Prenos vzduchom“, ako je znázornené na obr. 3DL5.42. Tým sa nastavia predvolené parametre prenosu tepla pre režim kúrenia. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0042.jpg' | relative_url }})
 
-Heat transfer type selection for Furnace Heating operation
+Výber typu prenosu tepla pre prevádzku ohrevu v peci
 
-### Set Process Conditions
+### Nastavenie podmienok procesu
 
-Define **Heating****time** as **6** sec at **68°F** furnace temperature or environment temperature as shown in Fig. 3DL5.43. and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Nastavte **dĺžku ohrevu****** na **6** sekúnd pri teplote pece alebo okolitej teplote **68°F**, ako je znázornené na obr. 3DL5.43, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0043.jpg' | relative_url }})
 
-Process condition window
+Okno s podmienkami procesu
 
-### Select Simulation Controls
+### Vyberte ovládacie prvky simulácie
 
-Keep only**Heat Transfer mode** checked as only heat transfer is modelling as shown in Fig. 3DL5.44. and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Nechajte zaškrtnutý len **režim prenosu tepla**, pretože sa modeluje iba prenos tepla, ako je znázornené na obr. 3DL5.44, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0044.jpg' | relative_url }})
 
-Simulation Controls settings for Furnace Heating
+Nastavenia ovládacích prvkov simulácie pre vykurovanie pece
 
-### Material page
+### Stránka s materiálmi
 
-**Delete** the imported**AISI-4120[70-2200F(20-1200C)]** material from the list.
+**Odstráňte** zo zoznamu importovaný materiál **AISI-4120[70-2200F(20-1200C)]**.
 
-### Objects page
+### Stránka „Objekty“
 
-In objects page we are seeing all the objects imported from the stubshaft DB.
+Na stránke „Objekty“ vidíme všetky objekty importované z databázy stubshaft.
 
-### Defining Billet
+### Definícia pojmu „billet“
 
-In Billet object window accept the **object****type** as ‘**Plastic** ’ and change the **object****temperature** to **2100** °**F**. (See Fig. 3DL5.45.) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V okne objektu „Billet“ nastavte **typ objektu** na „**Plast**“ a zmeňte **teplotu objektu** na **2100** °**F**. (Pozri obr. 3DL5.45.) Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0045.jpg' | relative_url }})
 
-Billet Definition Page
+Stránka s definíciami pojmov v oblasti výkovkov
 
-#### Billet Geometry
+#### Geometria polotovaru
 
-In the Geometry page, select and define a **cylinder** that has a **Diameter** of **0.8** ”, **height** of **2.7** ” and **Revolve****angle** as **30** deg (see Fig. 3DL5.46.). Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button. Check geometry and define the planar symmetry for the two symmetry surfaces (see Fig. 3DL5.47. and Fig. 3DL5.48.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until mesh page.
+Na stránke „Geometria“ vyberte a definujte **valec** s **priemerom** **0,8** ”, **výšku** **2,7** ” a **uhol otáčania****** **30** stupňov (pozri obr. 3DL5.46.). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Skontrolujte geometriu a definujte rovinnú symetriu pre obe symetrické plochy (pozri obr. 3DL5.47. a obr. 3DL5.48.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka siete.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0046.jpg' | relative_url }})
 
-Defining the Workpiece Geometry
+Definovanie geometrie obrobku
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0047.jpg' | relative_url }})
 
-Geometry page
+Stránka o geometrii
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0048.jpg' | relative_url }})
 
-Planar symmetry definition
+Definícia rovinná symetria
 
-#### Generate Mesh
+#### Vytvoriť sieť
 
-Generate the mesh using **32000** elements (see Fig. 3DL5.49.). Complete range of meshing options are also available in expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})), if user needs to have more control on the mesh generated. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Vytvorte sieť s použitím **32 000** prvkov (pozri obr. 3DL5.49.). V expertnom režime (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) je k dispozícii aj kompletná škála možností vytvárania sietí, ak potrebujete mať väčšiu kontrolu nad vytvorenou sieťou. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0049.jpg' | relative_url }})
 
-Mesh generation window
+Okno na generovanie siete
 
-#### Assign Workpiece Material
+#### Priradiť materiál obrobku
 
-Using Load from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option, load **AISI****-8620** material from **Steel** category, to assign material for workpiece select the material ‘**AISI****-8620** ’ from material window. This can be done as shown in Fig. 3DL5.50. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Pomocou možnosti „Načítať z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})“ načítajte materiál **AISI****-8620** z kategórie **Oceľ**; na priradenie materiálu k obrobku vyberte materiál „**AISI****-8620**“ z okna materiálov. Postupujte podľa obrázku 3DL5.50. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0050.jpg' | relative_url }})
 
-Object material selection window
+Okno na výber materiálu objektu
 
-#### Defining Boundary Conditions
+#### Definovanie okrajových podmienok
 
-In BCC page, check the default assigned Heat exchange with Environment BCC to the entire outer surface of the Billet except symmetry surfaces. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Punch Movement page.
+Na stránke BCC skontrolujte, či je na celý vonkajší povrch polotovaru (s výnimkou symetrických plôch) predvolene priradená výmena tepla s prostredím BCC. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Punch Movement“ (Pohyb razníka).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0051.jpg' | relative_url }})
 
-BCC Definition window
+Okno s definíciami BCC
 
-### Punch Movement Definition
+### Definícia pohybu úderu
 
-In Punch movement page, Change the “constant value” velocity to **0**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Positioning page.
+Na stránke „Punch movement“ (Pohyb razníka) nastavte „konštantnú hodnotu“ rýchlosti na **0**. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Positioning“ (Polohovanie).
 
-### Positioning
+### Polohovanie
 
-We will move the tools away from the object so they will not interfere with the cooling process. Click on the ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button to open the positioning page. Use ![]({{ '/assets/icons/pre_icons/mo_offset.jpg' | relative_url }}) to move the **Punch****2** inches in the “**Z** ” direction. Also move the **Bottom****die** and Ejector **-2** inches in the “**Z** ” direction. Press ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to exit the positioning menu. (See Fig. 3DL5.52.) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Step controls window
+Nástroje posunieme ďalej od objektu, aby nebránili procesu chladenia. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) otvoríte stránku s nastavením polohy. Pomocou ![]({{ '/assets/icons/pre_icons/mo_offset.jpg' | relative_url }}) posuňte **razník****2** palce v smere „**Z**“. Posuňte tiež **spodnú****matricu** a vyhadzovač o **-2** palce v smere „**Z**“. Stlačte tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste opustili menu polohovania. (Pozri obr. 3DL5.52.) Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno Ovládacie prvky krokov
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0052.jpg' | relative_url }})
 
-Objects positioning window
+Okno na umiestňovanie objektov
 
-### Define Step Controls
+### Definovanie ovládacích prvkov krokov
 
-Set the **Number of simulation steps** as **50** at **0.12** sec each and saving every**5** steps (see Fig. 3DL5.53.). Advanced Simulation controls settings are available in expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed to the database generation stage.
+Nastavte **počet simulačných krokov** na **50** s dĺžkou každého kroku **0,12** s a ukladajte každých **5** krokov (pozri obr. 3DL5.53.). Nastavenia pokročilých ovládacích prvkov simulácie sú k dispozícii v expertnom režime (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite do fázy generovania databázy.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0053.jpg' | relative_url }})
 
-Simulation controls settings for furnace heating operation
+Nastavenia riadenia simulácie prevádzky ohrevu pece
 
-### Generate Database
+### Vytvoriť databázu
 
-In Generate DB page. Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process:
+Na stránke „Generate DB“. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) necháte program skontrolovať, či v nastavení úlohy niečo nechýba. Počas kontroly:
 
-Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).
+Správy v červenej farbe označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli definovať údaje o materiáloch).
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, click on ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) tab to go to Next operation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Keď program dokončí zapisovanie databázy, kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) a prejdite k ďalšej operácii.
 
-### Selecting Heat Transfer Type (2nd Operation)
+### Výber typu prenosu tepla (2. operácia)
 
-Select **Rest on die** heat transfer type for second operation as shown in Fig. 3DL5.54. This will set the default heat transfer settings for heating operation. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Pre druhú operáciu vyberte typ prenosu tepla **Rest on die**, ako je znázornené na obr. 3DL5.54. Tým sa nastavia predvolené nastavenia prenosu tepla pre operáciu ohrevu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0054.jpg' | relative_url }})
 
-Heat transfer type selection for Furnace Heating operation
+Výber typu prenosu tepla pre prevádzku ohrevu v peci
 
-### Set Process Conditions
+### Nastavenie podmienok procesu
 
-Define **Resting time** as **2** sec at **68** °F furnace temperature or environment temperature as shown in Fig. 3DL5.55. and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Nastavte **doba odpočinku** na **2** sekundy pri teplote pece alebo okolitej teplote **68** °F, ako je znázornené na obr. 3DL5.55, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0055.jpg' | relative_url }})
 
-Process condition window
+Okno s podmienkami procesu
 
-### Select Simulation Controls
+### Vyberte ovládacie prvky simulácie
 
-Keep only **Heat Transfer mode** checked as only heat transfer is modelling as shown in Fig. 3DL5.56. and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until objects page.
+Nechajte zaškrtnutý len **režim prenosu tepla**, pretože sa modeluje iba prenos tepla, ako je znázornené na obr. 3DL5.56, a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s objektmi.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0056.jpg' | relative_url }})
 
-Simulation Controls settings for Furnace Heating
+Nastavenia ovládacích prvkov simulácie pre vykurovanie pece
 
-### Defining the objects
+### Definovanie objektov
 
-When we enter the second operation we are seeing all the objects as Read from DB, accept all the objects as Read from DB objects (see Fig. 3DL5.57.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Scheduled Positioning page.
+Keď prejdeme do druhej operácie, všetky objekty sa nám zobrazujú ako „Prečítané z databázy“; potvrďte všetky objekty ako „Prečítané z databázy“ (pozri obr. 3DL5.57.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Plánované polohovanie“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0057.jpg' | relative_url }})
 
-Objects page
+Stránka „Objekty“
 
-### Scheduled Positioning
+### Plánované polohovanie
 
-Use ![]({{ '/assets/icons/pre_icons/mo_offset_radio_button.jpg' | relative_url }}) Positioning option to move the Bottom die and Ejector **2** inches in the “**Z** ” direction (see Fig. 3DL5.58.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Pomocou možnosti polohovania ![]({{ '/assets/icons/pre_icons/mo_offset_radio_button.jpg' | relative_url }}) posuňte spodnú matricu a vyhadzovač o **2** palce v smere „**Z**“ (pozri obr. 3DL5.58.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0058.jpg' | relative_url }})
 
-Scheduled Positioning
+Plánované polohovanie
 
-### Contact Generation
+### Získavanie kontaktov
 
-Select **user** type contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add relationship) button twice and select **Bottom****die** as Master and **Billet** as Slave for first relation and for second relation select **Ejector** as Master and **Billet** as Slave as shown in Fig. 3DL5.59.
+Vyberte typ kontaktu **user**, dvakrát kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať vzťah) a pre prvý vzťah vyberte **Bottom******matrica** ako hlavný prvok a **sústružný polotovar** ako podriadený prvok pre prvý vzťah a pre druhý vzťah vyberte **vysúvač** ako hlavný prvok a **sústružný polotovar** ako podriadený prvok, ako je znázornené na obr. 3DL5.59.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0059.jpg' | relative_url }})
 
-Inter-object relationship between workpiece and bottom die
+Vzťah medzi obrobkom a spodnou matricou
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) (Edit) relationship button and select the pull down option "**Free Resting** " in the **thermal** section to define the inter-object heat transfer coefficient as shown in Fig. 3DL5.60. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Editing window. It will generate the inter-object contact at the beginning of the resting operation while simulating. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until step controls window.
+Kliknite na tlačidlo vzťahu ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) (Upraviť) a v sekcii **tepelná** vyberte z roletového menu možnosť „**Voľný pokojový stav**“, čím definujete koeficient prenosu tepla medzi objektmi, ako je znázornené na obr. 3DL5.60. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte okno úpravy. Tým sa počas simulácie vytvorí kontakt medzi objektmi na začiatku operácie voľného odpočinku. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno ovládania krokov.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0060.jpg' | relative_url }})
 
-Inter-object Heat transfer coefficient selection for resting
+Výber koeficientu prenosu tepla medzi objektmi v stave pokoja
 
-### Define Step Controls
+### Definovanie ovládacích prvkov krokov
 
-Set the **number of simulation steps** as **20** at **0.1** sec each and saving **every****5** steps (see Fig. 3DL5.61.). Advanced Simulation controls settings are available in expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed to the database generation stage.
+Nastavte **počet simulačných krokov** na **20** s dĺžkou **0,1** sekundy na každý krok a ukladajte **každých** **5** krokov (pozri obr. 3DL5.61.). Nastavenia pokročilých ovládacích prvkov simulácie sú k dispozícii v expertnom režime (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite do fázy generovania databázy.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0061.jpg' | relative_url }})
 
-Simulation controls settings for furnace heating operation
+Nastavenia riadenia simulácie prevádzky ohrevu pece
 
-### Generate Database
+### Vytvoriť databázu
 
-See the Status in Generate DB page, if we see Input error, check the data missing and complete it, for this lab sequence expect "DB generation is not required for this operation. It will occur at run time." message. Save the project and click on ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}).
+Pozrite si stav na stránke „Generate DB“; ak sa zobrazí chyba zadávania údajov, skontrolujte, či nechýbajú nejaké údaje, a doplňte ich. V rámci tejto laboratórnej úlohy by sa mala zobraziť správa: „Vytvorenie databázy nie je pre túto operáciu potrebné. Uskutoční sa počas behu programu.“ Uložte projekt a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}).
 
-### Select Simulation Controls( 3rd Operation)
+### Výber ovládacích prvkov simulácie (3. operácia)
 
-For the forming operation **turn****on** the **Deformation** check box along with **heat****transfer**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until objects page.
+Pre operáciu tvarovania **zaškrtnite** políčko **Deformácia** spolu s **prenosom tepla**. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s objektmi.
 
-### Defining the objects
+### Definovanie objektov
 
-If there aren't already four objects, add the four objects by clicking the insert object ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) button (see Fig. 3DL5.62.). All four objects should be defined as Read from DB objects. If they aren't set them that way by visiting every object page.
+Ak tam ešte nie sú štyri objekty, pridajte ich kliknutím na tlačidlo „Vložiť objekt“ ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) (pozri obr. 3DL5.62.). Všetky štyri objekty by mali byť definované ako objekty typu „Čítať z databázy“. Ak tomu tak nie je, nastavte ich takto na stránke každého objektu.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0062.jpg' | relative_url }})
 
-Objects page
+Stránka s objektmi
 
-### Defining Workpiece
+### Definovanie obrobku
 
-**Workpiece Properties :**
+**Vlastnosti obrobku:**
 
-In Billet Properties page, check "**Redefine : Target volume** " check box and select **Active in Meshing** radio button then click on the ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) icon. Click ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) for popup window. (See Fig. 3DL5.63.)
+Na stránke „Billet Properties“ zaškrtnite políčko „**Redefine : Target volume**“ a vyberte tlačidlo „**Active in Meshing**“, potom kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) otvoríte vyskakovacie okno. (Pozri obr. 3DL5.63.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0063.jpg' | relative_url }})
 
-Properties page
+Stránka „Vlastnosti“
 
-### Defining the Punch
+### Definícia úderu
 
-**Defining the Punch movement :**
+**Definícia pohybu úderu:**
 
-Define a speed of **4** in/sec in **-Z** direction for the Punch object. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Scheduled positioning page.
+Nastavte pre objekt „Punch“ rýchlosť **4** palcov za sekundu v smere **-Z**. Potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Scheduled positioning“.
 
-### Scheduled Positioning
+### Plánované polohovanie
 
-In scheduled Positioning page, click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button and select the ‘Positioning object’ as **Punch** , method as ‘**Interference** ’ with respect to ‘**Billet** ’ in the **-Z** direction (see Fig. 3DL5.64.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Na stránke „Plánované polohovanie“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) a vyberte „Polohovací objekt“ ako **Punch** a metódu ako „**Interference**“ vo vzťahu k „**Billet**“ v smere **-Z** (pozri obr. 3DL5.64.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0064.jpg' | relative_url }})
 
-Scheduled Positioning window
+Plánované časové okno na určovanie polohy
 
-### Contact Generation
+### Získavanie kontaktov
 
-Select **user** type contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. It will add the relationship between the Billet, Punch, Bottom Die and Ejector (see Fig. 3DL5.66.). As the Dies are Rigid and Billet is plastic, Top and Bottom Dies are considered as Master and Billet as Slave.
+Vyberte kontakt typu **užívateľ** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Tým sa pridá vzťah medzi polotovarom, razníkom, spodnou maticou a vyhadzovačom (pozri obr. 3DL5.66.). Keďže matrice sú tuhé a polotovar je plastický, horná a spodná matrica sa považujú za hlavné a polotovar za podriadený.
 
-Highlight the **Punch – Billet** relationship and click the ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button to modify the contact conditions. In the friction section of the screen (see Fig. 3DL5.65.), there is a pull-down menu that allows the user to choose the appropriate friction conditions of common forming processes.
+Zvýraznite vzťah **Punch – Billet** a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) upravte podmienky kontaktu. V časti obrazovky venovanej treniu (pozri obr. 3DL5.65.) sa nachádza roletové menu, ktoré používateľovi umožňuje vybrať vhodné podmienky trenia pre bežné procesy tvárnenia.
 
-Since this is hot forming simulation and the dies are steel, use the pull down menu and select **Hot forming (lubricated)** from the list. A friction value of **0.3** will automatically be selected. Under **Thermal** tab select "**Forming** " from the list, a Heat transfer coeffecient of " **0.002** " .
+Keďže ide o simuláciu tvárnenia za tepla a formy sú oceľové, použite roletové menu a zo zoznamu vyberte možnosť **Tvárnenie za tepla (s mazaním)**. Hodnota trenia **0,3** sa vyberie automaticky. Na karte **Tepelné** vyberte zo zoznamu položku „**Tvarovanie**“ a koeficient prenosu tepla „**0,002**“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0065.jpg' | relative_url }})
 
-Inter-object friction coefficient definition window
+Okno na definovanie koeficientu trenia medzi objektmi
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to go back to Contact window, Since the friction conditions are the same for all the object pairs, the ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button can be used to copy the interface properties from the first relationship to all of the others. After this is done, all relationships will have a friction of 0.3 defined as shown in Fig. 3DL5.66. Since the contact will initialize and generate while generating database. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) sa vrátite do okna Kontakt. Keďže podmienky trenia sú rovnaké pre všetky páry objektov, pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môžete skopírovať vlastnosti rozhrania z prvého vzťahu do všetkých ostatných. Po vykonaní tejto operácie budú mať všetky vzťahy trenie 0,3, ako je znázornené na obr. 3DL5.66. Keďže sa kontakt inicializuje a vygeneruje počas vytvárania databázy, kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0066.jpg' | relative_url }})
 
-Inter-Object relationship definition for forming operation
+Definícia vzťahu medzi objektmi pre formovaciu operáciu
 
-### Stopping Controls
+### Ovládacie prvky na zastavenie
 
-We want to stop the simulation when the punch and die are within 0.025” of one another. In the Stopping Controls screen, check the **Distance between objects** option and then click points on the bottom of the punch and on the top of the Bottom Die. Set the value for this distance to **0.02****5** ” in the **Z** direction (see Fig. 3DL5.67.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Step controls page.
+Chceme simuláciu zastaviť, keď sa razník a matrica nachádzajú vo vzdialenosti do 0,025” od seba. Na obrazovke „Stopping Controls“ zaškrtnite možnosť **Vzdialenosť medzi objektmi** a potom kliknite na body na spodnej strane razníka a na hornej strane spodnej matrice. Nastavte hodnotu tejto vzdialenosti na **0,02****5** ” v smere **Z** (pozri obr. 3DL5.67.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Ovládacie prvky krokovania.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0067.jpg' | relative_url }})
 
-Stopping Controls window
+Okno „Ovládacie prvky zastavenia“
 
-### Step Controls
+### Ovládacie prvky krokov
 
-We want the punch to travel 0.5” in 50 steps, so each step will be 0.5/50 or 0.01”. In the Step Controls enter the Solution Steps Definition to be With Equal Die Displacement of 0.01”. Set the **Number of Simulation Steps** to **50** and **Step Increment to Save** to **5**. Set the **Punch** as **Primary****Die** if not selected automatically (see Fig. 3DL5.68.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to DB generation page.
+Chceme, aby sa razník posunul o 0,5” v 50 krokoch, takže každý krok bude 0,5/50, teda 0,01”. V okne „Step Controls“ zadajte definíciu krokov riešenia ako „With Equal Die Displacement of 0,01”“. Nastavte **Počet simulačných krokov** na **50** a **Krok prírastku na uloženie** na **5**. Nastavte **razník** ako **Primárny****matricu**, ak sa nevyberie automaticky (pozri obr. 3DL5.68.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre prechod na stránku generovania databázy.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0068.jpg' | relative_url }})
 
-Step Controls window
+Okno „Ovládacie prvky krokov“
 
-### Generate Database
+### Vytvoriť databázu
 
-See the Status in Generate DB page, if we see Input error, check the data missing and complete it, for this lab sequence expect "DB generation is not required for this operation. It will occur at run time." message.
+Pozrite si stav na stránke „Generate DB“; ak sa zobrazí chyba zadávania údajov, skontrolujte, či nechýbajú nejaké údaje, a doplňte ich. V rámci tejto laboratórnej úlohy by sa mala zobraziť správa: „Vytvorenie databázy nie je pre túto operáciu potrebné. Uskutoční sa počas behu programu.“
 
-Save the project and click on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) mode to run the simulation.
+Uložte projekt a kliknite na režim ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}), aby ste spustili simuláciu.
 
-### Running simulation
+### Spustenie simulácie
 
-Click on ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) label under the simulation tab (see Fig. 3DL5.70.), as we click on the Run option, use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na označenie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) na karte „Simulácia“ (pozri obr. 3DL5.70.), keď kliknete na možnosť Spustiť, použite predvolenú možnosť **Pokračovať v spúšťaní** na výber možnosti „**Pokračovať od posledného kroku**“ a potom vyberte režim simulácie **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_03_spike_isothermal/2d_mobl3_image0032.jpg' | relative_url }})
 
-Simulation Options
+Možnosti simulácie
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0070.jpg' | relative_url }})
 
-Run Simulation window
+Okno „Spustiť simuláciu“
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. As long as the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.
+Priebeh simulácie je možné počas jej vykonávania sledovať na karte „Simulation Message“ a v časti „Simulation Graphics“ v oblasti zobrazenia „Graphics“ v režime simulácie. Pokiaľ je na karte „Simulation Message“ zaškrtnutá možnosť „![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }})“ (čo je predvolené nastavenie), súbor správ sa bude automaticky aktualizovať.
 
-The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.
+Súbor „Message“ obsahuje informácie o tom, v ktorom simulačnom kroku sa simulácia práve nachádza, a tiež informácie o tom, ako dobre simulácia prebieha.
 
-When the simulation is finished without any issues, check the messages in LOG file, when all operation completes we will see messages in LOG file:"MULTIPLE OPERATION COMPLETED".
+Keď simulácia prebehne bez problémov, skontrolujte správy v súbore LOG; po dokončení všetkých operácií sa v súbore LOG objaví správa: „MULTIPLE OPERATION COMPLETED“.
 
-### Post process the results
+### Následné spracovanie výsledkov
 
-After the simulation is completed, Switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab.
+Po dokončení simulácie prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}).
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_show_single_obj_icon.jpg' | relative_url }}) icon, so that only the workpiece is visible. Click **Temperature** state variable to plot the temperature of the workpiece. Right click on the Temperature scale and Select “**Color****bar type** ” then “**Temperature** ”. (See Fig. 3DL5.71.)
+Kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_show_single_obj_icon.jpg' | relative_url }}), aby bol viditeľný len obrobok. Kliknite na stavovú premennú **Teplota**, aby sa vykreslila teplota obrobku. Kliknite pravým tlačidlom myši na stupnicu teploty a vyberte „**Farebný****typu pruh**“ a potom „**Teplota**“. (Pozri obr. 3DL5.71.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0071.jpg' | relative_url }})
 
-Object showing temperature values with Temperature Color Bar type
+Objekt zobrazujúci hodnoty teploty s typom farebnej stupnice teploty
 
-Click on **Mirror symmetry** ![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | relative_url }}) icon. Click on the symmetry faces until you can see the whole part. This will take 11 clicks. (See Fig. 3DL5.72.)
+Kliknite na ikonu **Zrkadlová symetria** ![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | relative_url }}). Klikajte na symetrické plochy, kým neuvidíte celý diel. Bude to vyžadovať 11 kliknutí. (Pozri obr. 3DL5.72.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0072.jpg' | relative_url }})
 
-Mirroring of symmetric faces
+Zrkadlenie symetrických plôch
 
-## Tool Stress Analysis
+## Analýza napätí v nástroji
 
-### Opening project file
+### Otvorenie súboru projektu
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the **New****Problem**![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**Integrated Manufacturing Process** " radio button and units system as "**English** " radio button in units field. Define Problem Name as "**StubShaft_ToolStress** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Nový problém**, alebo kliknutím na ikonu **Nový****problém**![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte systém jednotiek pomocou prepínača „**Anglický**“. Názov úlohy zadajte ako „**StubShaft_ToolStress**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak políčko „Zobraziť dialógové okno s možnosťami“ nezaškrtnete, nezobrazí sa dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s použitím integrovaného výrobného procesu Deform.
 
-MO wizard will open along with project naming window. In the field of project name, select the **copy existing project** radio button. Select the source location browse button and **import** the **Stub_Shaft.moproj** From the previously simulated Stub_shaft Project, **turn on** the **copy Database check box** , click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) for project naming window. Stub_shaft simulation will get imported to 'StubShaft_ToolStress' project.
+Otvorí sa sprievodca MO spolu s oknom na zadanie názvu projektu. V poli pre názov projektu vyberte prepínač **kopírovať existujúci projekt**. Kliknite na tlačidlo prehľadávania zdrojového umiestnenia a **importujte** súbor **Stub_Shaft.moproj** z predtým simulovaného projektu Stub_shaft, **zaškrtnite** **políčko Kopírovať databázu** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) v okne na zadanie názvu projektu. Simulácia Stub_shaft sa naimportuje do projektu „StubShaft_ToolStress“.
 
-### Add Diestress Operation
+### Pridať operáciu „Diestress“
 
-Select Diestress 3D operation from the Explorer Operations list and Add the operation by selecting ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button or user can also add by drag and drop into the Operation Editor.
+Zoznamu operácií v prehliadači vyberte operáciu „Diestress 3D“ a pridajte ju kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}). Operáciu môžete pridať aj pretiahnutím a upustením do editora operácií.
 
-Now, in Operation Editor select the Diestress 3D operation
+Teraz v Editoru operácií vyberte operáciu Diestress 3D
 
-### Add Objects
+### Pridať objekty
 
-For this operation we required three objects, hence Keep workpiece, Top Die and Bottom Die objects and delete the Ejector object. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Object 1 page.
+Na túto operáciu sme potrebovali tri objekty, preto ponechajte objekty „Obrobok“, „Horná forma“ a „Spodná forma“ a odstráňte objekt „Vytláčadlo“. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Objekt 1“.
 
-### Object1
+### Objekt1
 
-By default for object 1, Workpiece (Read object from DB) radio button is selected. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V predvolenom nastavení je pre objekt 1 zaškrtnuté políčko „Obrobok (načítať objekt z databázy)“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Top Die
+### Horná matrica
 
-For Top Die, by default Dies (**Elastic**) radio button is selected. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until mesh generation page.
+V prípade Top Die je štandardne zaškrtnuté políčko Dies (**Elastic**). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku generovania siete.
 
-#### Mesh Generation
+#### Generovanie sietí
 
-Generate the mesh with **40000** elements. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Vytvorte sieť s **40 000** prvkami. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-#### Force Interpolation
+#### Interpolácia s vynútením
 
-Once the mesh is generated, the forming loads from the workpiece need to be interpolated onto the Top die. Interpolate the force by clicking ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}) option. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})
+Po vytvorení siete je potrebné interpolovať formovacie zaťaženia z obrobku na hornú matricu. Silu interpolujte kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})
 
-#### Assign material for Top die
+#### Priradiť materiál pre hornú matricu
 
-Import a die material AISI-D3 from the material library. Choose **AISI-D3** from the list to assign the material for Top die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})
+Naimportujte materiál formy AISI-D3 z knižnice materiálov. Zo zoznamu vyberte **AISI-D3**, aby ste tento materiál priradili hornej forme. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})
 
-#### Assign Boundary condition for Top die
+#### Nastavenie okrajovej podmienky pre hornú formu
 
-Next we need to apply boundary conditions to the Top die, so that it does not fly off into space when the forming loads are applied to it.
+Ďalej musíme na hornú matricu aplikovať okrajové podmienky, aby neodletela do vesmíru, keď na ňu pôsobia zaťaženia vznikajúce pri tvárnení.
 
-Assign Vx=Vy=Vz = 0 boundary condition on the top surface of the Top die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Bottom die page.
+Na hornej ploche hornej matrice nastavte okrajovú podmienku Vx = Vy = Vz = 0. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Spodná matrica“.
 
-### Bottom die
+### Spodná forma
 
-For Bottom Die, by default Dies (Elastic) radio button is selected. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until mesh generation page.
+V prípade spodnej matrice je štandardne zaškrtnuté políčko „Matrice (pružné)“. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka na generovanie siete.
 
-#### Mesh Generation
+#### Generovanie siete
 
-Generate the mesh with 40000 elements. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})
+Vytvorte sieť s 40 000 prvkami. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})
 
-#### Force Interpolation
+#### Interpolácia s vynútením
 
-Once the mesh is generated, the forming loads from the workpiece need to be interpolated onto the Bottom die. Interpolate the force by clicking ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}) option. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})
+Po vytvorení siete je potrebné interpolovať formovacie zaťaženia z obrobku na spodnú formu. Interpolujte silu kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})
 
-#### Assign material for Bottom die
+#### Priradiť materiál pre spodnú matricu
 
-Choose **AISI-D3** from the list to assign the material for Bottom Die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})
+Zo zoznamu vyberte **AISI-D3**, aby ste priradili materiál pre spodnú matricu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})
 
-#### Assign Boundary condition for Bottom die
+#### Nastavenie okrajovej podmienky pre spodnú formu
 
-Next we need to apply boundary conditions to the Bottom die, so that it does not fly off into space when the forming loads are applied to it.
+Ďalej musíme na spodnú matricu aplikovať okrajové podmienky, aby neodletela do vesmíru, keď na ňu pôsobia deformujúce zaťaženia.
 
-Assign Vx=Vy=Vz = 0 boundary condition on the bottom surface of the Bottom Die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Simulation controls page
+Na spodnej ploche spodnej formy nastavte okrajovú podmienku Vx=Vy=Vz = 0. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Simulation controls“ (Ovládacie prvky simulácie).
 
-### Simulation Controls
+### Ovládacie prvky simulácie
 
-Define the **Number of steps** as **1** , **step increment to save** as **1** and **time per step** as **1**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Nastavte **počet krokov** na hodnotu **1**, **krok prírastku na uloženie** na hodnotu **1** a **čas na jeden krok** na hodnotu **1**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Generate Database
+### Vytvoriť databázu
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) action label to check the problem. Generate a database by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) action label.
+Kliknite na názov akcie ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali problém. Vytvorte databázu kliknutím na názov akcie ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
-Once the database has been generated switch to the Simulation mode by selecting the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the object tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom objektov. Kliknite na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), aby sa otvorilo dialógové okno Možnosti spustenia. Použite predvolenú možnosť **Pokračovať v spúšťaní**, vyberte možnosť „**Pokračovať od posledného kroku**“ a potom nastavte režim simulácie na **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie.
 
-### Post Processing
+### Následné spracovanie
 
-Using the State Variable pull-down menu, plot**Effective stress** and **Max Principal stress.**
+Pomocou roletového menu „Stavová premenná“ vyneste do grafu **efektívne napätie** a **maximálne hlavné napätie.**
 
-If the effective stress exceeds the yield stress of the material, plastic deformation of the tools will occur.
+Ak efektívne napätie prekročí medzu tečnosti materiálu, dôjde k plastickému deformovaniu nástrojov.
 
-If the maximum principal stress is large, it may be a site for fatigue failure initiation.
+Ak je maximálne hlavné napätie veľké, môže to byť miesto, kde dôjde k vzniku únavového porušenia.
 
-In carbide tools, positive principal stresses, even if they are of relatively small magnitude, may be indicative of fatigue failure initiation.
+U karbidových nástrojov môžu kladné hlavné napätia, aj keď sú relatívne malé, naznačovať začiatok únavového poškodenia.
 
-Note that in this simulation, effective stress is extremely high.
+Všimnite si, že v tejto simulácii je efektívne napätie mimoriadne vysoké.
 
-## Adding a Shrink ring to the die
+## Pridanie zúženého krúžku na maticu
 
-After post processing switch back to Pre Mode by clicking ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) tab.
+Po dokončení následného spracovania sa vráťte do režimu „Pre“ kliknutím na kartu ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}).
 
-### Add Die stress study Operation
+### Pridať operáciu „Analýza napätia v matrici“
 
-At top Left corner of the Display window, Left mouse click on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button and select Add Die stress Study operation. A Die stress Study operation get added into operation editor. 
+V ľavom hornom rohu okna zobrazenia kliknite ľavým tlačidlom myši na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) a vyberte operáciu „Add Die stress Study“. Operácia „Die stress Study“ sa pridá do editora operácií. 
 
-### Step Selection
+### Výber kroku
 
-To perform Die stress operation, select the second operation last step in step selection list. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Ak chcete vykonať operáciu „Die stress“, vyberte v zozname výberu krokov druhý krok od konca. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Add Objects
+### Pridať objekty
 
-In this die stress study, we will analyze only Top die and Bottom die with shink ring, hence delete the Ejector object using ![]({{ '/assets/icons/pre_icons/mo_delete_object_button.jpg' | relative_url }}) and add new object to create Ring object by clicking ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) button. 
+V tejto štúdii namáhania formy budeme analyzovať iba hornú formu a spodnú formu so zmenšovacím krúžkom, preto odstránime objekt „Ejector“ pomocou ![]({{ '/assets/icons/pre_icons/mo_delete_object_button.jpg' | relative_url }}) a pridáme nový objekt na vytvorenie krúžku kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}). 
 
-Follow the instructions from 5.4.5 Top die section to 5.4.6.4 section to generate mesh, assign material,add BCC and interpolate forces over Top die and Bottom die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object 4 page.
+Postupujte podľa pokynov od časti 5.4.5 „Horná forma“ až po časť 5.4.6.4, aby ste vytvorili sieť, priradili materiál, pridali BCC a interpolovali sily na hornej a spodnej forme. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Objekt 4“.
 
-### Object4
+### Objekt 4
 
-Change object name to **Ring** and accept the Dies (**Elastic**). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Zmeňte názov objektu na **Ring** a potvrďte výber matíc (**Elastic**). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-#### Ring Geometry definition
+#### Definícia geometrie prsteňa
 
-Select the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) and define a **hollow****cylinder** with **3** ” as**Internal Dia** , **8** ” as **Outer Dia** and **3.25** ” **height**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Vyberte ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) a definujte **dutý****valec** s **3** ” ako **vnútorný priemer**, **8** ” ako **vonkajší priemer** a **3,25** ” **výškou**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-#### Mesh generation
+#### Vytváranie sietí
 
-Generate the mesh with **20000** elements. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Vygenerujte sieť s **20 000** prvkami. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-#### Assign material for Ring
+#### Priradiť materiál pre Ring
 
-Choose **AISI-H-13** from the list to assign the material for Ring. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Zo zoznamu vyberte **AISI-H-13**, aby ste priradili materiál pre krúžok. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-#### Boundary conditions
+#### Okrajové podmienky
 
-Assign Vx=Vy=Vz = 0 velocity boundary condition on the bottom surface of the Ring.
+Na spodnej ploche prstena stanovte okrajovú podmienku rýchlosti Vx = Vy = Vz = 0.
 
-Assign a **shrink****fit** of 0.01” along the **ID** of the **Ring**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) til positioning page.
+Nastavte **shrink****fit** na hodnotu 0,01” pozdĺž **vnútorného priemeru** **krúžku**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s polohovaním.
 
-### Positioning objects
+### Umiestňovanie objektov
 
-Right-click in the graphics window and select measurement style > CAD style in Z direction. Select a point on the top surface of the Ring and a point on the top surface of the bottom die and measure the distance; it will be approximately 0.7499. Click the ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. Select the ![]({{ '/assets/icons/pre_icons/mo_offset_radio_button.jpg' | relative_url }}) radio button, choose **Ring** as the positioning object and offset it by**0.7499** in the "**-Z** " direction (0,0,-0.7499). Click the ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) button to move the Ring. Then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to exit object positioning. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknite pravým tlačidlom myši v grafickom okne a vyberte možnosť „štýl merania“ > „štýl CAD v smere Z“. Vyberte bod na hornej ploche prstena a bod na hornej ploche spodnej matrice a zmerajte vzdialenosť; bude to približne 0,7499. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}). Zvoľte prepínač ![]({{ '/assets/icons/pre_icons/mo_offset_radio_button.jpg' | relative_url }}), ako polohovací objekt zvoľte **prsteň** a posuňte ho o **0,7499** v smere „**-Z**“ (0,0,-0,7499). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}), aby ste posunuli prsteň. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste ukončili polohovanie objektu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Contact generation
+### Získavanie kontaktov
 
-click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add relationship) button and select **Ring** as Master and ****Bottom****die**** as Slave for relation and click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať vzťah), vyberte **Prsteň** ako hlavný prvok a ****Spodná****matrica**** ako podriadený prvok pre tento vzťah a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Simulation Controls
+### Ovládacie prvky simulácie
 
-Define the**Number of steps** as **1** , **step increment** **to** **save** as **1** and **time****per****step** as **1**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Nastavte **počet krokov** na **1**, **krok prírastku** **na** **uloženie** na **1** a **čas****na****krok** na **1**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Generate Database
+### Vytvoriť databázu
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) action label to check the problem. Generate a database by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) action label.
+Kliknite na názov akcie ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali problém. Vytvorte databázu kliknutím na názov akcie ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
-Once the database has been generated switch to the Simulation mode by selecting the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the object tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom objektov. Kliknite na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), aby sa otvorilo dialógové okno Možnosti spustenia. Použite predvolenú možnosť **Pokračovať v spustení**, vyberte možnosť „**Pokračovať od posledného kroku**“ a potom nastavte režim simulácie na **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie.
 
-### Post Processing
+### Následné spracovanie
 
-Compare the stresses in first die stress operation (no shrink ring) with second die stress operation (with shrink ring). Stresses in second die stress operation should be lower, but still quite high. Use the state variable properties, and use global rather than local scaling.
+Porovnajte napätia pri prvom napäťovom cykle (bez zúžovacieho krúžku) s druhým napäťovým cyklom (so zúžovacím krúžkom). Napätia pri druhom napäťovom cykle by mali byť nižšie, ale stále pomerne vysoké. Využite vlastnosti stavových premenných a uprednostnite globálne škálovanie pred lokálnym.
 
-Note the stresses in the Ring are in the order of 200KSI or higher. Adding a heavier interference fit will likely cause the ring to yield.
+Všimnite si, že napätia v krúžku sa pohybujú v rozmedzí 200 KSI alebo vyššie. Použitie ťažšieho lisovaného spojenia pravdepodobne spôsobí plastickú deformáciu krúžku.
 
-## Mechanical Press
+## Mechanický lis
 
-### Opening project file
+### Otvorenie súboru projektu
 
-Open the DEFORM GUI Main window as done in the previous labs. Click the ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon to create a new problem. The New Problem window will appear. Select the **Integrated Manufacturing process** radio button and **English** Units radio button . and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Otvorte hlavné okno grafického rozhrania DEFORM tak, ako ste to robili v predchádzajúcich cvičeniach. Kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}), aby ste vytvorili nový problém. Zobrazí sa okno Nový problém. Vyberte prepínač **Integrovaný výrobný proces** a prepínač **Anglické** jednotky. Uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak nezaškrtnete políčko „Zobraziť dialógové okno s možnosťami“, nezobrazí sa dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), čím otvoríte nový problém s využitím integrovaného výrobného procesu Deform.
 
-MO wizard will open along with project naming window. In the field of project name, set the project name as '**StubShaft_Mechanical** ' and click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
+Spustí sa sprievodca MO spolu s oknom na zadanie názvu projektu. Do poľa pre názov projektu zadajte názov „**StubShaft_Mechanical**“ a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
 
-### Add Forming Operation
+### Pridať operáciu tvarovania
 
-Add **3D Forming operation** from the Explorer Operations list. Add the operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button or user can also add by drag and drop into the Operation Editor.
+Pridajte **3D tvarovaciu operáciu** zo zoznamu operácií v prehliadači. Operáciu pridáte kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) alebo ju môžete pridať aj pretiahnutím do editora operácií.
 
-### Importing the DB
+### Import databázy
 
-After adding 3D Forming operation, import previously simulated **Stub_shaft_symmetry.DB** , select the first step of the third operation and click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}). 
+Po pridaní operácie 3D tvarovania načítajte predtým simulovaný súbor **Stub_shaft_symmetry.DB**, vyberte prvý krok tretej operácie a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}). 
 
-#### Punch Movement Definition
+#### Definícia pohybu úderu
 
-Select Punch Movement page from Operation tree, select movement library in the Explorer, select the “mechanical_press_700_Ton_National”. Add the mechanical Press movement by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button which is placed in front of the “**mechanical_press_700_Ton_National** ” movement. (see Fig. 3DL5.73.)
+V stromovej štruktúre Operácie vyberte stránku Pohyb lisovacieho stroja, v Průzkumníku vyberte knižnicu pohybov a vyberte položku „mechanical_press_700_Ton_National“. Pridajte pohyb mechanického lisu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}), ktoré sa nachádza pred pohybom „**mechanical_press_700_Ton_National**“ (pozri obr. 3DL5.73).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0073.jpg' | relative_url }})
 
-Mechanical Press Library
+Knižnica mechanických lisov
 
-### Generate DB
+### Vytvoriť databázu
 
-Check the data and generate the DB. After generating DB switch to ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) mode to run the simulation.
+Skontrolujte údaje a vytvorte databázu. Po vytvorení databázy prejdite do režimu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) a spustite simuláciu.
 
-### Running simulation
+### Spustenie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), aby sa otvorilo dialógové okno Možnosti spustenia. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-After simulation complete, switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab.
+Po dokončení simulácie prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}).
 
-### Post processor
+### Postprocesor
 
-In Step Browser click on ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}) button to view all steps. Play through the steps to see the deformation.
+V prehliadači krokov kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}), aby ste si zobraili všetky kroky. Prejdite si kroky, aby ste videli deformáciu.
 
-**Point Tracking:**  
-Click on the ![]({{ '/assets/icons/post_icons/mo_point_tracking_icon.jpg' | relative_url }}) and select several points on the workpiece as shown in Fig. 3DL5.74. Click on ![]({{ '/assets/icons/post_icons/mo_track_button.jpg' | relative_url }}) and click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) for point tracking window.
+**Sledovanie bodov:**  
+Kliknite na ![]({{ '/assets/icons/post_icons/mo_point_tracking_icon.jpg' | relative_url }}) a vyberte niekoľko bodov na obrobku, ako je znázornené na obr. 3DL5.74. Kliknite na ![]({{ '/assets/icons/post_icons/mo_track_button.jpg' | relative_url }}) a potom na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), čím sa otvorí okno na sledovanie bodov.
 
-Then click Temperature state variable. This will plot the Temperature vs. Time for all the points that you selected.
+Potom kliknite na premennú „Teplota“. Tým sa vykreslí graf „Teplota v závislosti od času“ pre všetky body, ktoré ste vybrali.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab05_stub_shaft_labs/image0074.jpg' | relative_url }})
 
-Point Tracking Graph
+Graf sledovania bodov

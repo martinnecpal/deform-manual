@@ -1,150 +1,150 @@
 ---
 lang: sk
-title: "Lab 06 Die Stress"
+title: "Laboratórna práca č. 06: Napätie v matrici"
 ---
 
-# Lab 06 Die Stress
+# Laboratórna úloha č. 06: Napätie v matrici
 
   
-6.1. Introduction
+6.1. Úvod
 
-6.2. Opening project file
+6.2. Otvorenie súboru projektu
 
-6.3. Add Die stress study
+6.3. Pridať analýzu napätia v lisovacej forme
 
-6.4. Step selection
+6.4. Výber kroku
 
-6.5. Top Die Setup
+6.5. Nastavenie hornej matrice
 
-6.6. Bottom Die Setup
+6.6. Nastavenie spodnej matrice
 
-6.7. Simulation controls Setup
+6.7. Nastavenie ovládacích prvkov simulácie
 
-6.8. Generate Database
+6.8. Vytvorenie databázy
 
-6.9. Starting the simulation
+6.9. Spustenie simulácie
 
-6.10. Post processing the results
+6.10. Následné spracovanie výsledkov
 
-## Introduction
+## Úvod
 
-The objective of this lab is to run a die stress analysis. When the stress analysis is being done on only one tool, a one step simulation is sufficient to get accurate stresses. When the stress analysis is being done on die assemblies where there is interaction between the tools, more than one step is typically needed for the die stack to come to a state of equilibrium under the applied load.
+Cieľom tohto laboratórneho cvičenia je vykonať analýzu napätí v lisovacej forme. Ak sa analýza napätí vykonáva len na jednom nástroji, na získanie presných hodnôt napätí stačí jednokroková simulácia. Ak sa analýza napätí vykonáva na zostavách lisovacích nástrojov, kde dochádza k interakcii medzi nástrojmi, zvyčajne je potrebných viac ako jeden krok, aby sa sústava lisovacích nástrojov dostala do rovnovážneho stavu pri pôsobiacom zaťažení.
 
-In a typical die stress simulation, the workpiece is removed and the forces exerted onto the dies by the workpiece are interpolated onto the tools. In this lab, we are running die stress analysis for Spike_Nonisothermal project at 50th step.
+Pri typickej simulácii napätia v lisovacích formách sa obrobok odstráni a sily, ktoré obrobok pôsobí na lisovacie formy, sa interpolujú na nástroje. V tomto laboratóriu vykonávame analýzu napätia v lisovacích formách pre projekt Spike_Nonisothermal v 50. kroku.
 
-## Opening project file
+## Otvorenie súboru projektu
 
-Open Previously simulated**Spike_Nonisothermal.moproj** file in DEFORM MO as shown in Fig. L6.1. MO pre- processor will open.
+Otvorte predtým simulovaný súbor **Spike_Nonisothermal.moproj** v programe DEFORM MO, ako je znázornené na obr. L6.1. Otvorí sa predspracovateľ programu MO.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_06_die_stress/2d_mobl6_image0001.jpg' | relative_url }})
 
-DEFORM GUI main window
+Hlavné okno grafického rozhrania programu DEFORM
 
-## Add Die stress study
+## Pridať analýzu napätia v matrici
 
-At top Left corner of the Display window, Left mouse click on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button and select Add Die stress Study operation as shown in Fig. L6.2. A Die stress Study tab is added with Die stress operation in operation editor as shown in Fig. L6.3.
+V ľavom hornom rohu okna zobrazenia kliknite ľavým tlačidlom myši na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) a vyberte operáciu „Add Die stress Study“, ako je znázornené na obr. L6.2. V editore operácií sa pridá karta „Die stress Study“ s operáciou „Die stress“, ako je znázornené na obr. L6.3.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_06_die_stress/2d_mobl6_image0002.jpg' | relative_url }})
 
-Adding Die stress operation
+Pridanie operácie s napätím v matrici
 
-## Step selection
+## Výber kroku
 
-To perform Die stress operation in one step, select "**One step** " as Die stress calculation type and select **step****50** in Step selection page as shown in Fig. L6.3. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Top die page.
+Ak chcete vykonať výpočet napätia v matrici v jednom kroku, ako typ výpočtu napätia v matrici vyberte „**Jeden krok**“ a na stránke Výber kroku vyberte **krok****50**, ako je znázornené na obr. L6.3. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Horná matrica.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_06_die_stress/2d_mobl6_image0003.jpg' | relative_url }})
 
-Step selection list
+Zoznam výberu krokov
 
-## Top Die Setup
+## Nastavenie hornej matrice
 
-### Top die object definition
+### Definícia objektu „Top die“
 
-By default, the object type of rigid objects from the loaded step will be changed to elastic. Keep the object type as elastic for the Top Die object. From v13.1.1, two new options have been introduced in the object page to position the dies in future steps for Multiple steps die stress analysis, we need not use these options for single step die stress analysis, hence, keep the Need positioning check box turned off. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until BCC page to assign Boundary conditions.
+V predvolenom nastavení sa typ tuhých objektov z načítaného kroku zmení na pružný. Pre objekt „Top Die“ ponechajte typ objektu ako pružný. Od verzie v13.1.1 boli na stránke objektov zavedené dve nové možnosti na umiestnenie matíc v budúcich krokoch pri analýze napätia matíc vo viacerých krokoch; pri analýze napätia matíc v jednom kroku tieto možnosti nepotrebujeme, preto nechajte políčko „Potrebné umiestnenie“ nezaškrtnuté. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka BCC, kde môžete priradiť okrajové podmienky.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_06_die_stress/2d_mobl6_image0011.jpg' | relative_url }})
 
-Top die object general page
+Hlavná stránka objektu „Top die“
 
-### Assigning Boundary condition
+### Nastavenie okrajových podmienok
 
-Apply **Vy****= 0** Velocity boundary condition on the top surface of the Top Die. This boundary condition prevents the die from flying off when the forces are applied, see Fig. L6.5. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top Die Force interpolation page.
+Na hornú plochu hornej matrice použite okrajovú podmienku rýchlosti **Vy****= 0**. Táto okrajová podmienka zabraňuje odletu matrice pri pôsobení síl, pozri obr. L6.5. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s interpoláciou síl hornej matrice.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_06_die_stress/2d_mobl6_image0004.jpg' | relative_url }})
 
-Top Die BCC page
+Na začiatok stránky BCC
 
-### Force interpolation
+### Vynútená interpolácia
 
-In Force interpolation page, click on ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}) action label and after force interpolation we can see the Force interpolation report in message list, see Fig. L6.6. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Bottom die.
+Na stránke „Interpolácia sily“ kliknite na označenie akcie ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}) a po vykonaní interpolácie sily sa v zozname správ zobrazí správa o interpolácii sily, pozri obr. L6.6. Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre spodnú matricu.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_06_die_stress/2d_mobl6_image0005.jpg' | relative_url }})
 
-Top die Force interpolation window
+Okno interpolácie sily hornej matrice
 
-##  Bottom Die Setup
+##  Nastavenie spodnej matrice
 
-### Bottom Die object definition
+### Definícia objektu „Spodná matrica“
 
-We will keep the object type as Elastic for the Bottom Die and turn off Need positioning check box. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until BCC page to assign Boundary conditions.
+Pre spodnú formu ponecháme typ objektu „Elastic“ a zrušíme zaškrtnutie políčka „Potrebné polohovanie“. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka BCC, kde priradíte okrajové podmienky.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_06_die_stress/2d_mobl6_image0012.jpg' | relative_url }})
 
-Bottom die object page
+Stránka objektu spodnej matrice
 
-### Assigning Boundary condition for Bottom Die
+### Nastavenie okrajovej podmienky pre spodnú formu
 
-Apply **Vy** = 0 Velocity boundary condition on the Bottom surface of the Bottom Die. This boundary condition prevents the die from flying off when the forces are applied, see Fig. L6.8. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Bottom die Force interpolation page.
+Na spodnú plochu spodnej matrice nastavte okrajovú podmienku rýchlosti **Vy** = 0. Táto okrajová podmienka zabraňuje odletu matrice pri pôsobení síl, pozri obr. L6.8. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Interpolácia síl spodnej matrice“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_06_die_stress/2d_mobl6_image0006.jpg' | relative_url }})
 
-Bottom die BCC page
+Spodná časť stránky BCC
 
-### Force interpolation
+### Vynútená interpolácia
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}) action label and after force interpolation we can see the Force interpolation report in message list, see Fig. L6.9. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Simulation controls.
+Kliknite na označenie akcie ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}) a po vykonaní interpolácie síl sa v zozname správ zobrazí správa o interpolácii síl, pozri obr. L6.9. Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete k ovládacím prvkom simulácie.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_06_die_stress/2d_mobl6_image0007.jpg' | relative_url }})
 
-Force interpolation window
+Vynútiť okno interpolácie
 
-## Simulation controls Setup
+## Nastavenie ovládacích prvkov simulácie
 
-In this operation we will use default Simulation controls data. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Generate DB page.
+V tejto operácii použijeme predvolené údaje ovládacích prvkov simulácie. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujete stránku databázy.
 
-## Generate Database
+## Vytvoriť databázu
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) action label to check the problem. Generate a database by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) action label.
+Kliknite na názov akcie ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali problém. Vytvorte databázu kliknutím na názov akcie ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
-## Starting the simulation
+## Spustenie simulácie
 
-Once the database has been generated, switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom operácií. Kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno Možnosti spustenia. Pomocou predvolenej možnosti **Pokračovať v spúšťaní** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-When the simulation is finished without any issues, the following message will be added to the end of the Message file:" Simulation is completed and stopped at the user specified time step".
+Ak simulácia prebehne bez problémov, na koniec súboru so správami sa pridá nasledujúca správa: „Simulácia bola dokončená a zastavená v časovom kroku určenom používateľom“.
 
-## Post processing the results
+## Následné spracovanie výsledkov
 
-After simulation complete switch to post mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) button. (See Fig. L6.10.)
+Po dokončení simulácie prejdite do režimu zobrazenia výsledkov kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}). (Pozri obr. L6.10.)
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_06_die_stress/2d_mobl6_image0008.jpg' | relative_url }})
 
-MO Post window
+Okno príspevku MO
 
-#### State Variable
+#### Stavová premenná
 
-Click on ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) button, plot **Effective stress** and **Max Principal stress** and observe the plot as shown in Fig. L6.11. and Fig. L6.12. These two are the most important variables in die stress simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}), vykreslite **efektívne napätie** a **maximálne hlavné napätie** a sledujte graf tak, ako je znázornené na obr. L6.11 a obr. L6.12. Tieto dve veličiny sú najdôležitejšími premennými pri simulácii napätia v lisovacej forme.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_06_die_stress/2d_mobl6_image0009.jpg' | relative_url }})
 
-Stress Effective plot in Solid shading display
+Graf pôsobenia napätia v zobrazení s plným tieňovaním
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_06_die_stress/2d_mobl6_image0010.jpg' | relative_url }})
 
-Max Principal stress plot in Line display
+Graf maximálneho hlavného napätia v líniovom zobrazení
 
-In order to continue with the Die Stress Labs with Holder and with Holder and Shrink Fit do not close the MO project Refer the [Lab 12 Die Stress with Holder]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_12_die_stress_with_holder/' | relative_url }}) and [13 Die Stress with Shrink Fit]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/' | relative_url }}) respectively.
+Ak chcete pokračovať v testoch Die Stress Labs s držiakom a v testoch s držiakom a zúženým uložením, nezatvárajte projekt MO. Pozrite si príslušné dokumenty [Lab 12 Die Stress with Holder]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_12_die_stress_with_holder/' | relative_url }}) a [13 Die Stress with Shrink Fit]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_13_die_stress_with_shrink_fit/' | relative_url }}).
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [11\. General Object Data Definition]({{ '/docs/sk/pre_processor/11_general_object_data_definition/11_general_object_data_definition/' | relative_url }})
 

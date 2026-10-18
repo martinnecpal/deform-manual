@@ -1,215 +1,215 @@
 ---
 lang: sk
-title: "MEDC Model Lab"
+title: "Modelové laboratórium MEDC"
 ---
 
-# Lab for MEDC model (microstructure evolution during cooling) for titanium alloys
+# Laboratórium pre model MEDC (vývoj mikroštruktúry počas chladenia) pre zliatiny titánu
 
-1.1. Overview
+1.1 Celkový prehľad
 
-1.2. Launch MEDC model in material suite
+1.2. Spustenie modelu MEDC v Material Suite
 
-1.3 Object selection and point selection
+1.3 Výber objektu a výber bodu
 
-1.4 Setup for MEDC model
+1.4 Nastavenie modelu MEDC
 
-1.5 Run material point simulator
+1.5 Simulátor bodu točenia materiálu
 
-1.6 Output
+1.6 Výstup
 
-## Overview 
+Prehľad
 
-The MEDC (**Microstructure Evolution During Cooling**) model in material suite is applicable to titanium alloys. The objective is to model the microstructure evolution during cooling for a dual-phase alpha and beta Ti 6-4 alloy to predict transformation texture. MEDC model predicts primary alpha grain size, volume fractions of primary alpha, beta, and secondary alpha, and texture of secondary alpha transformed from beta according to the variant selection rule. Two variant selection rules are implemented in DEFORM, namely, random variant selection and preferred variant selection rule to best match the pole figures of primary alpha. The texture can be represented either in Rodrigues space or Euler space. The input data to MEDC model include MEDC simulation control data, material definition, phase transformation data from beta to primary alpha and from beta to secondary alpha, initial texture, initial volume fractions of alpha and beta phase, and initial primary alpha grain size. For each saved step in the DEFORM database, the output data include the aforementioned microstructure features. Texture analysis tools are provided, such as pole figures, inverse pole figures, and Kearns number of HCP crystal, particularly for total alpha. 
+Model MEDC (** Vývoj mikroštruktúry počas chladenia**) v súbore materiálov je použiteľný pre zliatiny titánu. Cieľom je modelovať vývoj mikroštruktúry počas chladenia pre dvojfázovú zliatinu alfa a beta Ti 6-4 na predpovedanie štruktúry transformácie. Model MEDC predpovedá veľkosť primárneho alfa zrna, objemové frakcie primárneho alfa, beta a sekundárneho alfa a štruktúru sekundárneho alfa transformovaného z beta podľa pravidla výberu variantov. V DEFORMÁCII sú implementované dve pravidlá výberu variantov, a to náhodný výber variantov a preferované pravidlo výberu variantov, ktoré najlepšie zodpovedajú pólovým číslam primárnej alfa. Textúra môže byť reprezentovaná buď v Rodriguesovom priestore alebo v Eulerovom priestore. Vstupné údaje do modelu MEDC zahŕňajú kontrolné údaje simulácie MEDC, definíciu materiálu, údaje o fázovej transformácii z beta na primárnu alfa a z beta na sekundárnu alfa, počiatočnú textúru, počiatočné objemové frakcie alfa a beta fázy a počiatočnú veľkosť primárneho zrna alfa. Pre každý uložený krok v databáze deformácií obsahujú výstupné údaje vyššie uvedené vlastnosti mikroštruktúry. K dispozícii sú nástroje na analýzu textúr, ako sú pólové čísla, inverzné pólové čísla a Kearnsovo číslo kryštálu HCP, najmä pre celkový alfa kód.
 
-The MEDC model can be run either after completing deformation texture model or as a standalone transformation texture model using known or assumed deformation texture. MEDC model can be run after finishing the deformation texture model in Material Suite so that the predicted deformation texture can be used as input into MEDC model as the initial texture. If MEDC is used as a standalone model to predict transformation texture without having any prior deformation texture model results, then user can use a typical heat treatment DEFORM database along with either measured deformation texture (EBSD) or assumed deformation texture data as the starting initial texture for the MEDC model. 
+Model MEDC je možné spustiť buď po dokončení modelu deformačnej textúry, alebo ako samostatný model transformačnej textúry s použitím známej alebo predpokladanej deformačnej textúry. Model MEDC je možné spustiť po dokončení modelu deformačnej textúry v Material Suite tak, aby sa predpovedaná deformačná textúra mohla použiť ako vstup do modelu MEDC ako počiatočná textúra. Ak sa MEDC používa ako samostatný model na predpovedanie transformačnej textúry bez predchádzajúcich výsledkov modelu deformačnej textúry, používateľ môže použiť typickú databázu deformácií tepelného spracovania spolu s nameranou deformačnou textúrou (EBSD) alebo predpokladanými údajmi deformačnej textúry ako počiatočnú počiatočnú textúru pre model MEDC.
 
-In this lab, the microstructure and texture evolution during heat treatment of Ti 6-4 double cone sample setup as a standalone MEDC model is presented. This lab uses a DEFORM key file to run a heat treatment simulation and demonstrates how to use MEDC model to run a point mode simulation for transformation texture using the DEFORM database for the double cone Ti 6-4 heat treatment case using assumed deformation texture as initial starting texture. 
+V tomto laboratóriu je prezentovaný vývoj mikroštruktúry a textúry počas tepelného spracovania dvojitej kužeľovitej vzorky Ti 6-4 ako samostatného modelu MEDC. Toto laboratórium používa súbor kľúča DEFORMÁCIE na spustenie simulácie tepelného spracovania a demonštruje, ako používať model MEDC na spustenie simulácie bodového režimu pre transformačnú textúru pomocou databázy deformácií pre prípad dvojitého kužeľa Ti 6-4 tepelného spracovania s použitím predpokladanej deformačnej textúry ako počiatočnej počiatočnej textúry.
 
-## Launch MEDC model in material suite
+## Spustenie modelu MEDC v balíku materiálov
 
-On a Windows machine, go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button, select DEFORM-v12.xxx (.xxx indicates version number E.g. v14.0.2 and select DEFORM GUI Main v1x.xx from the menu. The DEFORM GUI Main window will appear.
+Na počítači so systémom Windows prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v12.xxx (.xxx označuje číslo verzie Napr. V14.0.2 a z ponuky vyberte Deform GUI Main v1x.xx. Zobrazí SA hlavné okno Deform GUI.
 
-We require a nominal DB to perform texture analysis in material suite, for this lab we will use ******Double_Cone_Cooling_Nominal.key** from ****\MANUALS\PDF\DEFORM3D_MEDC_Lab**** folder to generate nominal DB. Open **NG Pre** using the link DEFORM GUI Main and define Problem ID as " ****Double_cone_Cooling** ** ", select "**3D** " Dimension radio button and "**System International (SI)** " unit System radio button in New Problem window, then import ****Double_Cone_Cooling_Nominal.key**** from ****\MANUALS\PDF\DEFORM\ 3D_MEDC_Lab**** folder. Navigate to Generate DB page and click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) to generate database. Close the NG Pre and run the simulation from GUI Main, make sure simulation stops normally without any issue. Now from GUI Main, without selecting ********Double_cone_Cooling** ** ** **.DB file click on **Material****Suite** under “Post Processor” to open Material Suite module.
+Požadujeme nominálnu DB na vykonanie analýzy textúry v materiáli, pre toto laboratórium použijeme * * * *** Double_Cone_Cooling_Nominal.key ** z * ***\PRÍRUČIEK\PDF\ DEFORM3D_MEDC_Lab**** na vygenerovanie nominálnej DB. Otvorte **NG Pre** pomocou prepojenia DEFORMÁCIE GUI Main a definujte ID problému ako " * ***Double_cone_Cooling* ** * ", vyberte prepínač "**3D** " Dimension a "**System International (SI)** " unit System prepínač v okne New Problem, potom importujte * * * ** Double_Cone_Cooling_Nominal.key * * *** z priečinka ****\MANUÁLY\PDF\DEFORM\ 3D_MEDC_Lab**** *. Prejdite na stránku Generate DB a kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) pre vygenerovanie databázy. Zatvorte NG Pre a spustite simuláciu z GUI Main, uistite sa, že simulácia sa zastaví normálne bez akéhokoľvek problému. Teraz z hlavného GUI, bez výberu ********Double_CONE_Cooling** ** ** * *.DB súbor kliknite na **Material* ***Suite** v časti „Post Processor“ a otvorte modul Material Suite.
 
-After the main window for material suite pops up, click "Open..." icon (![]({{ '/assets/icons/pre_icons/mo_open_icon.jpg' | relative_url }})) in the top tool bar to import the example database (**Double_cone_Cooling.DB**). The default task item "DEFORM" is added to the task tree. Expand "**Microstructure** " item and click "**MEDC Model** " icon, the new task item "**Microstructure evolution during cooling model of Ti alloy** " is added to the task tree as shown in Fig. MEDCL.1, . 
+Po zobrazení hlavného okna pre sadu materiálov kliknite na ikonu "Otvoriť..." (![]({{ '/assets/icons/pre_icons/mo_open_icon.jpg' | relative_url }})) v hornom paneli nástrojov a importujte vzorovú databázu (**Double_cone_Cooling.DB**). Do stromu úloh sa pridá predvolená položka úlohy „DEFORMOVAŤ“. Rozbaľte položku „* * Mikroštruktúra * * “ a kliknite na ikonu „* * Model MEDC * * “, do stromu úloh sa pridá nová položka úlohy „* * Vývoj mikroštruktúry počas chladenia modelu zliatiny Ti * * “, ako je znázornené na obr. MEDCL.1, .
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0001.jpg' | relative_url }})
 
-Launch MEDC model in material suite.
+Spustite model MEDC v Material Suite.
 
-## Object selection and point selection
+## Výber objektu a výber bodu
 
-As shown in Fig. MEDCL.2, in the "DEFORM" task tree, click "**Object selection** " item and select "**Workpiece** ". Click "**Point selection** ", define step number as "-1" and define two points on the workpiece (Fig. MEDCL.3). The coordinate of point 1 (P1) is (1.176, 0, 0.381, 1), and the coordinate of Point 2 (P2) is (8.950, 0, 8.701, 1). 
+Ako je znázornené na obr. MEDCL.2, v strome úloh „DEFORMOVAŤ“ kliknite na položku „** Výber objektu ** “ a vyberte položku „**Obrobok** “. Kliknite na „** Výber bodu ** “, definujte číslo kroku ako „-1“ a definujte dva body na obrobku (obr. MEDCL.3). Súradnica bodu 1 (P1) je (1,176, 0, 0,381, 1) a súradnica bodu 2 (P2) je (8,950, 0, 8,701, 1).
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0002.jpg' | relative_url }})
 
-Object selection and point selection
+Výber objektu a výber bodu
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0003.jpg' | relative_url }})
 
-Points definition on workpiece
+Definícia bodov na obrobku
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0004.jpg' | relative_url }})
 
-Configuration
+Konfigurácia
 
-## Setup for MEDC model
+## Nastavenie modelu MEDC
 
-All data for MEDC model are prepared by the items in the "**Microstructure evolution during cooling model of Ti alloy** " task tree. Refer to Fig. MEDCL.4, click "**Config** " item, its data window appears. Specify the executable for MEDC simulation and the working directory by clicking the definition buttons (![]({{ '/assets/icons/pre_icons/mo_open_icon.jpg' | relative_url }})). The default executable for MEDC simulation is DEF_MEDC.EXE", which is located at the installation directory of DEFORM software. Users can also develop their own executable for MEDC simulation and specify the file name here. The working directory must be the one where the nominal database is located.
+Všetky údaje pre model MEDC sú pripravené položkami v "** Vývoj mikroštruktúry počas chladenia modelu zliatiny Ti ** ". Pozrite si obr. MEDCL.4, kliknite na položku „**Config** “, zobrazí sa jej okno s údajmi. Zadajte spustiteľný súbor pre simuláciu MEDC a pracovný adresár kliknutím na tlačidlá definície (![]({{ '/assets/icons/pre_icons/mo_open_icon.jpg' | relative_url }})). Predvolený spustiteľný súbor pre simuláciu MEDC jeDEF_MEDC.EXE ", ktorý sa nachádza v inštalačnom adresári softvéru Deform. Používatelia môžu tiež vytvoriť vlastný spustiteľný súbor pre simuláciu MEDC a tu zadať názov súboru. Pracovný adresár musí byť ten, v ktorom sa nachádza nominálna databáza.
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0005.jpg' | relative_url }})
 
-MEDC simulation control
+Simulačné riadenie MEDC
 
-Click "**MEDC simulation control** " item, its data window is shown as Fig. MEDCL.5\. The following data need to be specified: texture representation method (Euler angles or Rodrigues space), the step range to apply MEDC simulation, the source of texture data, the source of executable, scaling factor for primary alpha size. The default values are provided, but users can change these values. If the texture data (ODF) exist in the database, it will be detected automatically and the user can select the radio button "**Extract transformation texture from existing ODF database** ". In this case, we just extract the data and display in the subsequent pages. However, if users want to recalculate the transformation texture, select the radio button "**Compute transformation texture** " and select the radio button "**Existing deformation texture in database** ".
+Kliknite na položku „** MEDC simulation control** “, jej okno s údajmi sa zobrazí ako obr. MEDCL.5\. Je potrebné špecifikovať nasledujúce údaje: metóda reprezentácie textúry (Eulerove uhly alebo Rodriguesov priestor), rozsah krokov na aplikáciu simulácie MEDC, zdroj údajov o textúre, zdroj spustiteľného súboru, faktor mierky pre primárnu veľkosť alfa. Predvolené hodnoty sú uvedené, ale používatelia môžu tieto hodnoty zmeniť. Ak v databáze existujú údaje o textúre (ODF), zistia sa automaticky a používateľ môže vybrať prepínač „**Extrahovať transformačnú textúru z existujúcej databázy ODF ** “. V tomto prípade len extrahujeme dáta a zobrazíme ich na nasledujúcich stránkach. Ak však chcú používatelia prepočítať textúru transformácie, vyberte prepínač „**Vypočítať textúru transformácie ** “ a vyberte prepínač „**Existujúca textúra deformácie v databáze** “.
 
-When the radio button "**Compute transformation texture** " is checked, there are three choices for defining the source of deformation texture as initial texture data for MEDC model: (1) Existing deformation texture in the DEFORM database; (2) Deformation texture as a result of running DEFORM Material Suite point simulator; (3) New definition of initial texture for MEDC model. For using deformation texture from DEFORM Material suite point simulator, we need to specify the folder path of deformation texture simulation result. If this folder named "TEXTURE" exists in the current working directory, it is automatically detected and displayed in the line editor. The scaling factor of primary alpha converts the display result of primary alpha size. In this Lab, we select initial texture source 3 (**New definition of deformation texture**). Import material data from ******Double_Cone_Cooling_Nominal.key** file using ![]({{ '/assets/icons/pre_icons/mo_import_button.jpg' | relative_url }}) option. Check **Mixture material** check box and click trice ![]({{ '/assets/icons/pre_icons/mo_add_phase_button.jpg' | relative_url }}) button to three Phases in the list, then rename the phases as "**PriAlpha** ", "**Beta** " and "**SecAlpha** " respectively as show in Fig. MEDCL.6.
+Keď je zaškrtnuté prepínacie tlačidlo „* * Vypočítať transformačnú textúru * * “, existujú tri možnosti definovania zdroja deformačnej textúry ako počiatočných textúrnych údajov pre model MEDC: (1) Existujúca deformačná textúra v databáze deformácií; (2) Deformačná textúra v dôsledku spustenia simulátora DEFORMAČNÝCH bodov Material Suite; (3) Nová definícia počiatočnej textúry pre model MEDC. Pre použitie deformačnej textúry zo simulátora bodu DEFORMÁCIE Material suite musíme špecifikovať cestu priečinka výsledku simulácie deformačnej textúry. Ak tento priečinok s názvom „TEXTÚRA“ existuje v aktuálnom pracovnom adresári, automaticky sa zistí a zobrazí v editore riadkov. Koeficient mierky primárnej alfa konvertuje výsledok zobrazenia primárnej veľkosti alfa. V tomto laboratóriu vyberáme počiatočný zdroj textúry 3 (**Nová definícia deformačnej textúry**). Importujte údaje o materiáli zo súboru *** ***Double_Cone_Cooling_Nominal.key* * pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_import_button.jpg' | relative_url }}). Začiarknite políčko ** Materiál zmesi ** a kliknite na tlačidlo trice ![]({{ '/assets/icons/pre_icons/mo_add_phase_button.jpg' | relative_url }}) na tri fázy v zozname, potom premenujte fázy na „** PriAlpha ** “, „**Beta** “ a „** SecAlpha ** “, ako je znázornené na obr. MEDCL.6.
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0006.jpg' | relative_url }})
 
-Material definition
+Definícia materiálu
 
-Click "**Material definition** " item and the data window is shown in Fig. MEDCL.6\. If the radio button "Extract transformation texture from existing ODF database" in MEDC simulation control page is selected, which means the texture data of secondary alpha exist in database, the material data are extracted automatically from database and displayed. The material properties can be viewed by clicking ![]({{ '/assets/icons/pre_icons/mo_edit_button_2.jpg' | relative_url }}) button (see Fig. MEDCL.6). In this case, the material properties should not be changed. The only concerned properties are the basic texture information (crystal type, texture type, and Rodrigues mesh type) for phase material and phase transformation data defined in parent material. 
+Kliknite na položku „* * Definícia materiálu * * “ a okno s údajmi sa zobrazí na obr. MEDCL.6\. Ak je na riadiacej stránke simulácie MEDC zvolené prepínač „Extrahovať transformačnú textúru z existujúcej databázy ODF“, čo znamená, že v databáze existujú údaje o textúre sekundárnej alfa, údaje o materiáli sa automaticky extrahujú z databázy a zobrazia sa. Vlastnosti materiálu si môžete prezrieť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button_2.jpg' | relative_url }}) (pozri obr. MEDCL.6). V tomto prípade by sa nemali meniť vlastnosti materiálu. Jedinými dotknutými vlastnosťami sú základné informácie o textúre (typ kryštálu, typ textúry a typ Rodriguesovej siete) pre údaje o fázovom materiáli a fázovej transformácii definované v materskom materiáli.
 
-If the radio button "Compute transformation texture" in MEDC simulation control page is selected, the material definition is illustrated in Fig. MEDCL.7~10, depending on the option of initial texture source data. If the radio button "existing deformation texture in database" is selected, the texture data of primary alpha and beta are extracted from database. If texture data of secondary alpha and phase transformation data have been defined in database, these data are extracted automatically; otherwise, these data need to be defined. 
+Ak je na ovládacej stránke simulácie MEDC zvolené prepínacie tlačidlo „Vypočítať textúru transformácie“, definícia materiálu je znázornená na obr. MEDCL.7 ~ 10, v závislosti od možnosti počiatočných zdrojových údajov textúry. Ak je zvolené prepínacie tlačidlo "existujúca deformačná textúra v databáze", z databázy sa extrahujú textúrne údaje primárnej alfa a beta. Ak boli v databáze definované textúrne dáta sekundárnych alfa a fázových transformácií, tieto dáta sa extrahujú automaticky; inak je potrebné tieto dáta definovať.
 
-If the radio button "Deformation texture from material point simulator" is selected, the texture data of primary alpha and beta are extracted automatically from the last step of material point simulator results for the deformation texture run; the texture data of secondary alpha and phase transformation data need to be defined. 
+Ak je zvolené prepínacie tlačidlo „Deformation texture from material point simulator“ (Textúra deformácie zo simulátora materiálového bodu), údaje o textúre primárnych alfa a beta sú extrahované automaticky z posledného kroku výsledkov simulátora materiálového bodu pre priebeh deformačnej textúry; je potrebné definovať údaje o textúre sekundárnych údajov o alfa a fázovej transformácii.
 
-If the radio button "**New definition of initial texture** " is selected, the basic texture information of all phases and phase transformation data need to be defined. Fig. MEDCL.7 shows the definition of basic texture information of primary alpha and beta. The basic texture information of secondary alpha (SecAlpha) is defined in the same way as primary alpha (PriAlpha). For primary alpha and secondary alpha, the crystal type is HCP; for beta, the crystal type is BCC. For each phase, the texture representation type is Rodrigues space, and texture mesh type is type 3.
+Ak je zvolené prepínacie tlačidlo „**Nová definícia počiatočnej textúry** “, je potrebné definovať základné informácie o textúre všetkých fáz a údajov o transformácii fázy. Na obr. MEDCL.7 je znázornená definícia základných informácií o textúre primárneho alfa a beta. Základné informácie o textúre sekundárnej alfa (SecAlpha) sú definované rovnako ako primárna alfa (PriAlpha). Pre primárnu alfa a sekundárnu alfa je kryštálovým typom HCP; pre beta je kryštálovým typom BCC. Pre každú fázu je typ reprezentácie textúry Rodriguesov priestor a typ povrchovej siete textúry je typ 3.
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0007.jpg' | relative_url }})
 
-Basic texture information of each phase
+Základné informácie o textúre každej fázy
 
-In order to define the phase transformation data, select the parent material "**Ti64-test** " and click ![]({{ '/assets/icons/pre_icons/mo_edit_button_2.jpg' | relative_url }}) button (see Fig. MEDCL.6). In the properties window, click the transformation item icon (![]({{ '/assets/icons/pre_icons/mo_transformation_icon.jpg' | relative_url }})), as shown in Fig. MEDCL.8\. Add two phase transformation models: beta to primary alpha and beta to secondary alpha. For the transformation from beta to primary alpha, select "MEDC" as the kinetics model. MEDC model predicts the evolution of primary alpha size and volume fraction during cooling. The kinetics is controlled by the diffusion of vanadium or aluminum. 
+Ak chcete definovať údaje fázovej transformácie, vyberte nadradený materiál „* *Ti64-test** “ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button_2.jpg' | relative_url }}) (pozri obr. MEDCL.6). V okne vlastností kliknite na ikonu položky transformácie (![]({{ '/assets/icons/pre_icons/mo_transformation_icon.jpg' | relative_url }})), ako je znázornené na obr. MEDCL.8\. Pridajte dva modely fázovej transformácie: beta k primárnej alfa a beta k sekundárnej alfa. Pre transformáciu z beta na primárnu alfa, vyberte "MEDC" ako kinetický model. Model MEDC predpovedá vývoj primárnej veľkosti alfa a objemovej frakcie počas chladenia. Kinetika je riadená difúziou vanádu alebo hliníka.
 
-The diffusion coefficient used here are adopted from (S.L. Semiatin, S.L. Knisley, P.N. Fagin, F. Zhang, and D.R. Barker, “Microstructure evolution during alpha-beta heat treatment of Ti-6Al-4V”, Metall. Mater. Trans. A34 (2003), 2377-2386).
+Tu použitý difúzny koeficient je prevzatý z (S.L. Semiatin, S.L. Knisley, P.N. Fagin, F. Zhang a D.R. Barker, „Microstructure evolution during alpha-beta heat treatment of Ti-6Al-4V“, Metall. Mater. Trans. A34 (2003), 2377-2386).
 
   
-Assuming the diffusion is controlled by vanadium, A =100000 ![]({{ '/assets/equations/keyword_documentation/p/meu.jpg' | relative_url }})m2/s, and B=17460 for SI unit. Click the button (![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }})) to define the phase compositions of the diffusion-controlling element at the equilibrium state, as shown in Fig. MEDCL.8\. The input quantities include; (1) the average concentration of diffusion-controlling element (V) C0: 0.042; (2) the temperatures values; (3) chemical compositions in the equilibrium state at different temperatures, which are defined by clicking "Cp" and "Ci" buttons. "Cp" represents the concentration of diffusion-controlling element in the primary alpha, and "Ci" denotes the corresponding concentration in beta phase. 
+Za predpokladu, že difúzia je riadená vanádom, A = 100000 ![]({{ '/assets/equations/keyword_documentation/p/meu.jpg' | relative_url }})m2/s a B=17460 pre jednotku SI. Kliknutím na tlačidlo (![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }})) definujete fázové zloženie prvku riadiaceho difúziu v rovnovážnom stave, ako je znázornené na obr. MEDCL.8\. Vstupné veličiny zahŕňajú: (1) priemernú koncentráciu prvku riadiaceho difúziu (V) C0: 0,042; (2) hodnoty teplôt; (3) chemické zloženie v rovnovážnom stave pri rôznych teplotách, ktoré sú definované kliknutím na tlačidlá „Cp“ a „Ci“. "Cp" predstavuje koncentráciu prvku riadiaceho difúziu v primárnej alfa a "Ci" označuje zodpovedajúcu koncentráciu v beta fáze.
 
-The detailed values for Cp and Ci as functions of temperature are provided in S.L. Semiatin, S.L. Knisley, P.N. Fagin, F. Zhang, and D.R. Barker, “Microstructure evolution during alpha-beta heat treatment of Ti-6Al-4V”, Metall. Mater. Trans. A34 (2003), 2377-2386.
+Podrobné hodnoty pre Cp a Ci ako funkcie teploty sú uvedené v S.L. Semiatin, S.L. Knisley, P.N. Fagin, F. Zhang a D.R. Barker, „Microstructure evolution during alpha-beta heat treatment of Ti-6Al-4V“, Metall. Mater. Trans. A34 (2003), 2377-2386.
 
-In this Lab, we can also click ![]({{ '/assets/icons/pre_icons/mo_load_button_2.jpg' | relative_url }}) button to load data file “**Ti64_ChemicalComp****.****dat** ” to fill in this function data. (See Fig. MEDCL.9)
+V tomto laboratóriu môžeme tiež kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button_2.jpg' | relative_url }}) a načítať dátový súbor „**Ti64_ChemicalComp****.**** dát ** “ na vyplnenie týchto funkčných údajov. (Pozri obr. MEDCL.9)
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0008.jpg' | relative_url }})
 
-Phase transformation data from beta to primary alpha - MEDC model selection
+Údaje o fázovej transformácii z beta na primárnu alfa - výber modelu MEDC
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0009.jpg' | relative_url }})
 
-loaded MEDC function data from **Ti64_ChemicalComp****.****dat file**
+načítané funkčné údaje MEDC z **Ti64_ChemicalComp****.**** dátového súboru**
 
   
-For the phase transformation from beta to secondary alpha, select "Secondary alpha lath-based on the critical cooling rate" as the kinetics model (Fig. MEDCL.10). This model calculates the critical cooling rate for the formation of secondary alpha, and the evolution of volume fractions of beta and secondary alpha. The line to define the stating temperature (![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/t_s.jpg' | relative_url }})) and time (t) for the secondary alpha growth from the solution temperature is defined as, 
+Pre fázovú transformáciu z beta na sekundárnu alfa zvoľte ako kinetický model "Secondary alpha lath based on the critical cooling rate" (obr. MEDCL.10). Tento model vypočítava kritickú rýchlosť ochladzovania pre tvorbu sekundárnej alfa a vývoj objemových frakcií beta a sekundárnej alfa. Čiara na definovanie udávanej teploty (![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/t_s.jpg' | relative_url }})) a času (t) pre sekundárny rast alfa z teploty roztoku je definovaná ako,
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/eqn_1.jpg' | relative_url }})  
-Where ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/t_beta.jpg' | relative_url }}) is beta transus. The volume fraction of secondary alpha is calculated as
+Kde ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/t_beta.jpg' | relative_url }}) je beta transus. Objemový podiel sekundárnej alfa sa vypočíta ako
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/eqn_2.jpg' | relative_url }})  
-Where ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/t_e.jpg' | relative_url }}) is the ending temperature for the transformation from beta to secondary alpha, and ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/v_r.jpg' | relative_url }}) is the balanced volume fraction of primary alpha. 
+Kde ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/t_e.jpg' | relative_url }}) je koncová teplota pre transformáciu z beta na sekundárnu alfa a ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/v_r.jpg' | relative_url }}) je vyvážený objemový podiel primárnej alfa.
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0010.jpg' | relative_url }})
 
-Phase transformation data from beta to secondary alpha.
+Údaje o transformácii fázy z beta na sekundárnu alfa.
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0011.jpg' | relative_url }})
 
-Variant selection model for phase transformation texture.
+Model výberu variantu pre textúru fázovej transformácie.
 
   
-In order to define the phase transformation texture model from beta to secondary alpha, click the "other" tab shown in Fig. MEDCL.11, and select "Random selection" as the variation selection model. According to this rule, all variants are assumed to be equally likely.
+Ak chcete definovať model textúry fázovej transformácie z beta na sekundárnu alfa, kliknite na kartu „ostatné“ zobrazenú na obr. MEDCL.11 a vyberte "Náhodný výber" ako model výberu variácie. Podľa tohto pravidla sa predpokladá, že všetky varianty sú rovnako pravdepodobné.
 
   
-We assume the following values for the demonstration purpose for this lab.
+Pre účely demonštrácie pre toto laboratórium predpokladáme nasledujúce hodnoty.
 
-![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/t_beta.jpg' | relative_url }})=1000°C, Solution temperature = 955 °C  
-![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/a1.jpg' | relative_url }})=0.2, ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/a0.jpg' | relative_url }}) =150 °C  
-Temperature range above and below to calculate cooling rate: ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/delta_t.jpg' | relative_url }})= 50 °C  
-A=-4, D=3, ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/t_e.jpg' | relative_url }})= 500 °C  
+![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/t_beta.jpg' | relative_url }})=1000 °C, teplota roztoku = 955 °C
+![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/a1.jpg' | relative_url }})=0,2, ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/a0.jpg' | relative_url }}) =150 °C
+Teplotný rozsah nad a pod na výpočet rýchlosti chladenia: ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/delta_t.jpg' | relative_url }})= 50 °C
+A=-4, D=3, ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/t_e.jpg' | relative_url }})= 500 °C
   
-It should be mentioned that the above values of ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/a1.jpg' | relative_url }}), ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/a0.jpg' | relative_url }}) , ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/delta_t.jpg' | relative_url }}), A, D, and ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/t_e.jpg' | relative_url }}) are made up values for the sake of demonstration. Users need to tune their experimental data to find the appropriate values for these parameters.
+Treba spomenúť, že vyššie uvedené hodnoty ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/a1.jpg' | relative_url }}), ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/a0.jpg' | relative_url }}), ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/delta_t.jpg' | relative_url }}), A, D a ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/t_e.jpg' | relative_url }}) sú tvorené hodnotami kvôli demonštrácii. Používatelia musia naladiť svoje experimentálne údaje, aby našli vhodné hodnoty pre tieto parametre.
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0012.jpg' | relative_url }})
 
-Initial texture and microstructure (overall view)
+Počiatočná textúra a mikroštruktúra (celkový pohľad)
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0013.jpg' | relative_url }})
 
-Initial texture and microstructure: texture axes
+Počiatočná štruktúra a mikroštruktúra: osi textúry
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0014.jpg' | relative_url }})
 
-Initial texture and microstructure: ODF of primary alpha
+Počiatočná štruktúra a mikroštruktúra: ODF primárnej alfa
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0015.jpg' | relative_url }})
 
-Initial texture and microstructure: ODF of beta
+Počiatočná štruktúra a mikroštruktúra: ODF beta
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0016.jpg' | relative_url }})
 
-Initial texture and microstructure: volume fractions and grain size
+Počiatočná štruktúra a mikroštruktúra: objemové frakcie a veľkosť zrna
 
-Click "**Initial texture and microstructure** " item to open its data window (Fig. MEDCL.12). If the radio button "Extract transformation texture from existing ODF database" in MEDC simulation control page is selected, all data are automatically extracted and filled in this page. The data can be reviewed but cannot be modified. When the radio button "Compute transformation texture" is selected, if the initial texture is from existing ODF in database or from the deformation texture of the material point simulator, the texture data of primary alpha and beta are extracted automatically and displayed. When the radio button "new definition of initial texture" is selected, we need to define texture axes, initial texture, initial volume fraction and grain size (refer to Fig. MEDCL.12~16). 
+Kliknutím na položku „**Počiatočná textúra a mikroštruktúra** “ otvoríte okno s údajmi (obr. MEDCL.12). Ak je na stránke kontroly simulácie MEDC vybraté prepínač „Extrahovať transformačnú textúru z existujúcej databázy ODF“, všetky údaje sa automaticky extrahujú a vyplnia na tejto stránke. Údaje je možné skontrolovať, ale nie je možné ich upraviť. Ak je vybraté prepínacie tlačidlo „Vypočítať textúru transformácie“, ak je počiatočná textúra z existujúceho ODF v databáze alebo z deformačnej textúry simulátora materiálového bodu, textúrne údaje primárneho alfa a beta sa automaticky extrahujú a zobrazia. Pri výbere prepínača „nová definícia počiatočnej textúry“ potrebujeme definovať osi textúry, počiatočnú textúru, počiatočný objemový zlomok a veľkosť zrna (pozri obr. MEDCL.12~16).
 
-For this lab, we are going to assume and define deformation texture as starting texture for MEDC model. Refer to Fig. MEDCL.13, for Point 1, click “**Texture****axes** ” tab to specify the texture axes as the global coordinate axes, i.e., RD=(1,0,0), TD=(0,1,0), and ND=(0,0,1). Click “**Orientation****data** ” tab to initialize ODF values for each phase (Fig. MEDCL.14~15). Set data format type to 5 (WTD: TSL Bunge, Radians, Weights), and set the smoothing angle of ODF to 5 degrees. For Point 1, the initial texture data for primary alpha and beta are located in the MEDC lab folder: **DEFORM_Sample_MEDC_PrimaryAlpha_P1.Dat** ,   
-**DEFORM_Sample_MEDC_Beta_P1.Dat**. Click ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) button to import data file and click on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button to calculate ODF values. For secondary alpha, use data format type 1 (random texture) to initialize ODF values so that ODF=1 for each component. 
+Pre toto laboratórium budeme predpokladať a definovať deformačnú textúru ako počiatočnú textúru pre model MEDC. Pozri obr. MEDCL.13, pre bod 1 kliknite na kartu „**Textúra****osi** “ a zadajte osi textúry ako osi globálnych súradníc, t. j. RD=(1,0,0), TD=(0,1,0) a ND=(0,0,1). Kliknutím na kartu „* * Orientácia ** *údaje * * “ inicializujete hodnoty ODF pre každú fázu (obr. MEDCL.14 ~ 15). Nastavte typ formátu údajov na 5 (WTD: TSL Bunge, Radians, Weights) a uhol vyhladenia ODF nastavte na 5 stupňov. Pre bod 1 sú počiatočné textúrne údaje pre primárne alfa a beta umiestnené v priečinku laboratória MEDC: **DEFORM_Sample_MEDC_PrimaryAlpha_P1.Dat** ,
+**DEFORM_Sample_MEDC_Beta_P1.Dat**. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) importujete dátový súbor a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) vypočítate hodnoty ODF. Pre sekundárnu alfa použite formát údajov typu 1 (náhodná textúra) na inicializáciu hodnôt ODF tak, aby ODF=1 pre každú zložku.
 
-Fig. MEDCL.16 shows the definition of initial volume fraction of each phase and the initial primary alpha size (radius). In this lab, the initial volume fractions of primary alpha, beta and secondary alpha at solution temperature are 0.274, 0.726, and 0, respectively; the primary alpha size (radius) is 4 microns.
+Na obr. MEDCL.16 je znázornená definícia počiatočného objemového zlomku každej fázy a počiatočná primárna veľkosť alfa (polomer). V tomto laboratóriu sú počiatočné objemové frakcie primárneho alfa, beta a sekundárneho alfa pri teplote roztoku 0,274, 0,726 a 0; primárna veľkosť alfa (polomer) je 4 mikróny.
 
-For Point 2, follow the same procedure to specify the initial texture and microstructure. Except the initial texture, the other items are the same as that of Point 1. The initial texture data for primary alpha and beta for Point 2 are located in the MEDC lab folder: **DEFORM_Sample_MEDC_PrimaryAlpha_P2.Dat** , **DEFORM_Sample_MEDC_Beta_P2.Dat**. 
+Pre bod 2 použite rovnaký postup na špecifikovanie počiatočnej textúry a mikroštruktúry. Okrem počiatočnej štruktúry sú ostatné položky rovnaké ako v bode 1. Počiatočné údaje o textúre pre primárnu alfa a beta verziu pre bod 2 sa nachádzajú v priečinku laboratória MEDC: **DEFORM_Sample_MEDC_PrimaryAlpha_P2.Dat** , **DEFORM_Sample_MEDC_Beta_P2.Dat**.
 
-## Run material point simulator
+## Spustiť simulátor materiálových bodov
 
-Click "**Run** " item in the task tree and click "**Compute** " button in the data window (Fig. MEDCL. 17). In the working directory, a folder named "MEDC_Model" will be created, and under it, the folder for each selected point named "Point*" (* denotes for point number) will be created to save the simulation results.
+Kliknite na položku „* * Spustiť * * “ v strome úloh a v okne údajov kliknite na tlačidlo „** Vypočítať * *“ (obr. MEDCL. 17). V pracovnom adresári sa vytvorí priečinok s názvom „MEDC_Model“ a pod ním sa vytvorí priečinok pre každý vybraný bod s názvom „Bod*“ (* označuje číslo bodu) na uloženie výsledkov simulácie.
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0017.jpg' | relative_url }})
 
-Run simulation
+Spustiť simuláciu
 
-Generally, the following data files are created for each selected point  
-(1) Input files for MEDC simulation executable:
+Vo všeobecnosti sa pre každý vybraný bod vytvoria nasledujúce dátové súbory
+(1) Vstupné súbory pre spustiteľný súbor simulácie MEDC:
 
-**STEP.txt** : the saved step numbers in nominal database.  
-**temp_mean.****tx****t****:** The unit system and the history of temperature.  
-**StressStrain.txt** : The history of stress and strain components.
+**STEP.txt** : uložené čísla krokov v nominálnej databáze.
+**temp_mean.*** *tx*** * * t ** **: * * Jednotkový systém a história teploty.
+**StressStrain.txt** : História zložiek stresu a napätia.
 
-**SIMCTRL_MEDC.DAT** : MEDC simulation control data  
-**MAT_MEDC.DAT** : material parameters for MEDC model  
-**TxrInfo.txt** : The basic texture information and initial volume fractions for all phases
+**SIMCTRL_MEDC.DAT** : Kontrolné údaje simulácie MEDC
+**MAT_MEDC.DAT** : materiálové parametre pre model MEDC
+**TxrInfo.txt** : Základné informácie o textúre a počiatočné objemové zlomky pre všetky fázy
 
-**RDTDND.txt** : The initial texture axes.  
-**ODF_S-1.txt** : The initial ODF values  
-**EulerAng_S-1.txt** : The initial Euler angles and weights
+**RDTDND.txt** : Počiatočné osi textúry.
+**ODF_S-1.txt** : Počiatočné hodnoty ODF
+**EulerAng_S-1.txt** : Počiatočné Eulerove uhly a závažia
 
-**InitGSize.txt** : The initial grain size of primary alpha
+**InitGSize.txt* * : Počiatočná veľkosť zrna primárnej alfa
 
-(2) Output files from MEDC simulation executable:
+(2) Výstupné súbory zo spustiteľného súboru simulácie MEDC:
 
-**ODF_FS.txt** : The final ODF values for primary alpha, beta, and secondary alpha  
-**EulerAng_FS.txt** : The final Euler angles and weights for primary alpha, beta, and secondary alpha
+**ODF_FS.txt** : Konečné hodnoty ODF pre primárnu alfa, beta a sekundárnu alfa
+**EulerAng_FS.txt** : Konečné Eulerove uhly a závažia pre primárnu alfa, beta a sekundárnu alfa
 
-**HTRES.txt** : the microstructure data for all saved steps in nominal database (Step number, primary alpha particle size, volume fractions of primary alpha, beta, secondary alpha, and total alpha, the starting temperature for the formation of secondary alpha, and the critical cooling rate for the formation of secondary alpha). 
+**HTRES.txt** : údaje o mikroštruktúre pre všetky uložené kroky v nominálnej databáze (číslo kroku, veľkosť primárnych alfa častíc, objemové frakcie primárnej alfa, beta, sekundárnej alfa a celkovej alfa, počiatočná teplota pre tvorbu sekundárnej alfa a kritická rýchlosť ochladzovania pre tvorbu sekundárnej alfa).
 
-(3) For multi-phase titanium alloys, the following data are outputted:
+(3) Pre viacfázové zliatiny titánu sa poskytujú tieto údaje:
 
-**PrimAlphaSize.Dat** : the initial and final primary alpha size 
+**PrimAlphaSize.Dat** : počiatočná a konečná primárna veľkosť alfa
 
-**FinalTexture.Dat** : The final texture data for primary alpha, beta, and total alpha in Bunge's notation in radians.
+**FinalTexture.Dat** : Konečné údaje o textúre pre primárnu alfa, beta a celkovú alfa v Bungeovej notácii v radiánoch.
 
-## Output 
+vzoru.
 
-After simulation is finished, all of the selected points are listed under the "**Output** " item in the task tree. Specify a step number in the step browser (should be within the range defined in the MEDC simulation control page) and select a point, the simulation results can be reviewed. Fig. MEDCL.18 shows the values of state variables at the last step and we can plot the curve of each state variable versus time or temperature. These state variables include (1) temperature, (2) primary alpha size, (3) primary alpha volume fraction, (4) beta volume fraction, (5) secondary alpha volume fraction, (6) total alpha volume fraction, (7) Secondary alpha starting temperature, (8) the critical cooling rate for the formation of secondary alpha.
+Po dokončení simulácie sú všetky vybrané body uvedené v položke „**Výstup** “ v strome úloh. Zadajte číslo kroku v prehliadači krokov (malo by byť v rozsahu definovanom na stránke kontroly simulácie MEDC) a vyberte bod, výsledky simulácie je možné skontrolovať. Obr. MEDCL.18 zobrazuje hodnoty stavových premenných v poslednom kroku a môžeme vykresliť krivku každej stavovej premennej voči času alebo teplote. Tieto stavové premenné zahŕňajú (1) teplotu, (2) primárnu veľkosť alfa, (3) primárnu objemovú frakciu alfa, (4) objemovú frakciu beta, (5) sekundárnu objemovú frakciu alfa, (6) celkovú objemovú frakciu alfa, (7) sekundárnu počiatočnú teplotu alfa, (8) kritickú rýchlosť chladenia pre tvorbu sekundárnej alfa.
 
-Fig. MEDCL.19 shows the GUI to display texture data and texture analysis tools. In order to carry out texture analysis, the texture axes need to be specified in the global coordinate system. Their values might be different from the initial texture axes defined in the "Initial texture and microstructure" page. Here the RD is aligned in global X direction, TD global Z direction, and ND global negative Y direction. Fig. MEDCL.19 is also an example for setup to analyze the texture of total alpha. Fig. MEDCL.20 plots the pole figures of primary alpha, beta, secondary alpha, and total alpha at Point 1; Fig. MEDCL.21 plots pole figures at Point 2. By comparing the pole figures of secondary alpha and beta, strong Burgers relation between beta and secondary alpha is observed, i.e., (0001)![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/alpha.jpg' | relative_url }}) // (110)![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/beta.jpg' | relative_url }}), and <11-20>![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/alpha.jpg' | relative_url }}) // <111>![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/beta.jpg' | relative_url }}). 
+Obr. MEDCL.19 zobrazuje grafické používateľské rozhranie na zobrazenie údajov o textúre a nástrojov na analýzu textúry. Na vykonanie analýzy textúry je potrebné špecifikovať osi textúry v globálnom súradnicovom systéme. Ich hodnoty sa môžu líšiť od počiatočných osí textúry definovaných na stránke „Počiatočná textúra a mikroštruktúra“. Tu je RD zarovnaný v globálnom smere X, TD v globálnom smere Z a ND v globálnom zápornom smere Y. Obr. MEDCL.19 je tiež príkladom nastavenia na analýzu štruktúry celkovej alfa. Obr. MEDCL.20 vykresľuje pólové hodnoty primárnej alfa, beta, sekundárnej alfa a celkovej alfa v bode 1; Obr. MEDCL.21 vykresľuje pólové čísla v bode 2. Porovnaním pólových hodnôt sekundárnej alfa a beta sa pozoruje silný Burgersov vzťah medzi beta a sekundárnou alfa, t. j. (0001) ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/alpha.jpg' | relative_url }})// (110)![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/beta.jpg' | relative_url }}) a <11-20> ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/alpha.jpg' | relative_url }})// <111>![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/beta.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0018.jpg' | relative_url }})
 
-Output: State variable and its evolution 
+Výstup: Stavová premenná a jej vývoj
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0019.jpg' | relative_url }})
 
-Output: orientation data and texture analysis tools to plot ODF contour, pole figures, inverse pole figures, and calculation of Kearns number for HCP phase. This GUI is also an example to plot the pole figures of total alpha.
+Výstup: orientačné údaje a nástroje na analýzu textúry na vykreslenie obrysu ODF, čísla pólov, čísla inverzných pólov a výpočet čísla Kearns pre fázu HCP. Toto grafické používateľské rozhranie je tiež príkladom na vykreslenie pólových čísel celkovej alfa.
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0020.jpg' | relative_url }})
 
@@ -227,7 +227,7 @@ Output: orientation data and texture analysis tools to plot ODF contour, pole fi
 
 (d)
 
-Output: pole figures for Point 1: (a) primary alpha; (b) beta; (c) secondary alpha; (d) total alpha
+Výstup: pólové hodnoty pre bod 1: (a) primárna alfa; (b) beta; (c) sekundárna alfa; (d) celková alfa
 
 ![]({{ '/assets/images/labs/material_suite_labs/medc_model_lab/image0024.jpg' | relative_url }})
 
@@ -245,4 +245,4 @@ Output: pole figures for Point 1: (a) primary alpha; (b) beta; (c) secondary alp
 
 (d)
 
-Output: pole figures for Point 2: (a) primary alpha; (b) beta; (c) secondary alpha; (d) total alpha
+Výstup: pólové hodnoty pre bod 2: (a) primárna alfa; (b) beta; (c) sekundárna alfa; (d) celková alfa

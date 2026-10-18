@@ -1,6 +1,6 @@
 ---
 lang: sk
-title: "Extrusion Labs Main Pg"
+title: "Hlavná stránka Extrusion Labs"
 ---
 
 # Extrusion Labs 

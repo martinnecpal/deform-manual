@@ -1,60 +1,60 @@
 ---
 lang: sk
-title: "Forming Express Lab9"
+title: "Založenie spoločnosti Express Lab9"
 ---
 
-# Lab 9. Screw Press
+# Laboratórna práca č. 9. Šnekový lis
 
-### Create a new Problem
+### Vytvoriť nový problém
 
-Create a new project called **FE_Gear_Screw** and copy the existing project **FE_Gear_LargerBillet** along with the database. Click on the Upset operation and go to Top Die Movement page.
+Vytvorte nový projekt s názvom **FE_Gear_Screw** a skopírujte existujúci projekt **FE_Gear_LargerBillet** spolu s databázou. Kliknite na operáciu „Upset“ a prejdite na stránku „Top Die Movement“.
 
-We will use a **screw****press** with maximum energy 3450 Klb-in., a flywheel moment-of-inertia (MOI) of 250 Klbin-s^2 and a lead screw pitch of 4 in/rev.
+Použijeme **skrutkový lis** s maximálnou energiou 3450 Klb-in., momentom zotrvačnosti (MOI) zotrvačníka 250 Klbin-s² a stúpaním vodiacich skrutiek 4 in/rev.
 
-We will use reduced energy for the first hit (Upset), and full energy for the 2nd hit (Forming).
+Pri prvom údere (Upset) použijeme zníženú energiu a pri druhom údere (Forming) plnú energiu.
 
-### Define Top die movement for Upset
+### Definovanie pohybu hornej matrice pri zúžení
 
-Click on the **Upset** operation tile. Select **Screw****press** type movement for **Top****die** movement, Set the **Energy** to **1000** , the **Moment of inertia** to **250** , the **Lead****screw****pitch** to **4** and the **efficiency** to **0.6**. (See Fig. L9.1.)
+Kliknite na dlaždicu operácie **Upset**. Pre pohyb **hornej matrice** vyberte typ pohybu **Šnekový lis**, nastavte **energiu** na hodnotu **1000**, **Moment zotrvačnosti** na hodnotu **250**, **Rozstup závitov vodiacich skrutiek** na hodnotu **4** a **účinnosť** na hodnotu **0,6**. (Pozri obr. L9.1.)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab9_image0001.jpg' | relative_url }})
 
-Screw press controls for Upset
+Ovládacie prvky šnekového lisu pre proces lisovania
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Generate DB page.
+Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Generate DB“.
 
-### Generate DB
+### Vytvoriť databázu
 
-Generate the Database and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until next operation Top die movement page.
+Vytvorte databázu a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka s pohybom hornej formy.
 
-### Define Top die movement for Forming
+### Definovanie pohybu hornej matrice pri tvárnení
 
-Use the same movement defined in first operation (see section 9.2.), except the full **Energy** of **3450**. We will use energy of 3450 klb-in for this operation. (See Fig. L9.2.)
+Použite ten istý pohyb, ktorý bol definovaný v prvej operácii (pozri časť 9.2.), avšak s plnou **energiou** **3450**. Pre túto operáciu použijeme energiu 3450 klb-in. (Pozri obr. L9.2.)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab9_image0002.jpg' | relative_url }})
 
-Screw press control for Forming
+Riadenie šnekového lisu pre tvárnenie
 
-### Define the Primary die stroke and Step controls
+### Nastavenie primárneho zdvihu matice a krokových ovládačov
 
-As we defined less energy in 1st operation we will not achieve expected 6.5 in upset, so we will define larger primary die stroke to get the required displacement in 2nd operation. Change the **primary****die****stroke** to **5** in.
+Keďže sme v 1. operácii nastavili nižšiu energiu, nedosiahneme očakávanú hodnotu 6,5 v režime „upset“, preto nastavíme väčší zdvih primárneho lisovacieho nástroja, aby sme v 2. operácii dosiahli požadovaný zdvih. Zmeňte **zdvih primárneho lisovacieho nástroja** na **5** palcov.
 
-Save the project and click on the MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode button (above the operation tree) to start the simulation.
+Uložte projekt a kliknite na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode“ (nad stromom operácií), aby ste spustili simuláciu.
 
-### Run and monitor a simulation
+### Spustenie a monitorovanie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog. Use the default **Continue****Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), čím otvoríte dialógové okno Možnosti spustenia. Pomocou predvolenej možnosti **Pokračovať****Spustiť** vyberte možnosť „**Pokračovať od posledného kroku**“ a následne vyberte režim simulácie pomocou prepínača **Interaktívny**. Kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie.
 
-Note that Operation 1 ends when the flywheel energy is expended. Operation 2 stops on the predefined stopping control.
+Všimnite si, že prevádzka 1 sa ukončí, keď sa energia zotrvačníka vyčerpá. Prevádzka 2 sa zastaví na základe vopred definovaného riadiaceho signálu na zastavenie.
 
-### Review the results
+### Prezrite si výsledky
 
-When the simulation is completed, click the MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode button to review results.
+Po dokončení simulácie kliknite na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode“, aby ste si prezreli výsledky.
 
-**Graph**
+**Graf**
 
-In the Post-processor, use the Graph ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) tool to plot **Y** -**Speed** vs. Time to review ram speed decay as the part is formed. (See Fig. L9.3.)
+V postprocesore použite nástroj Graph ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) na vytvorenie grafu **Y** – **rýchlosť** v závislosti od času, aby ste mohli sledovať pokles rýchlosti ram počas tvarovania dielu. (Pozri obr. L9.3.)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab9_image0003.jpg' | relative_url }})
 
-Y-Speed vs Time graph plot
+Graf závislosti rýchlosti Y od času

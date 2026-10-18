@@ -1,11 +1,11 @@
 ---
 lang: sk
-title: "Basic_labs_Main_Pg"
+title: "Základné laboratóriá – Hlavná stránka"
 ---
 
-# Basic Labs 
+# Základné laboratóriá 
 
-**2D Labs :**
+**2D Labs:**
 
 [Lab 01 Geometry Manipulation and Uniform mesh]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_01_geometry_manipulation_and_uniform_mesh/' | relative_url }})
 

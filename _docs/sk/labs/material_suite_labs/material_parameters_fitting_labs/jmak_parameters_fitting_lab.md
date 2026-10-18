@@ -1,302 +1,302 @@
 ---
 lang: sk
-title: "JMAK Parameters Fitting Lab"
+title: "Laboratórium JMAK Parameters Fitting"
 ---
 
-# Material Suite Lab for fitting material parameters in JMAK model
+# Material Suite Lab pre montáž parametrov materiálu v modeli JMAK
 
-1.1. Abstract
+1.1. Abstrakt
 
-1.2. Launch JMAK Model in material suite
+1.2. Spustenie modelu JMAK v Material Suite
 
-1.3. Define testing controls and temperature groups
+1.3. Definujte kontroly testovania a teplotné skupiny
 
-1.4. Fit material parameters in DRX kinetics
+1.4. Prispôsobte parametre materiálu kinetike DRX
 
 [1.5. Fit material parameters in MRX/SRX kinetics]({{ '/docs/sk/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/' | relative_url }}#1_5_Fit_material_parameters_in_MRX/SRX_kinetics_The_procedure_to_imp)
 
-1.6. Fit material parameters in grain growth kinetics
+1.6. Parametre vhodného materiálu v kinetike rastu zrna
 
-1.7. Output the fitting results to keyword file
+1.7. Výstup výsledkov montáže do súboru kľúčových slov
 
-##  Abstract
+Abstrakt
 
-JMAK (Johnson-Mehl-Avrami-Kolmogorov) model describes the recrystallization kinetics (evolution of grain size and volume fraction of recrystallized grains) of metals during thermo-mechanical processing. Depending on the specific thermal-mechanical processing conditions, different recrystallization mechanisms may take place, including dynamic recrystallization (DRX) occurring during deformation, meta-dynamic recrystallization (MRX) or static recrystallization (SRX) occurring after deformation, and static grain growth after the recrystallization is completed. JMAK model generally consists of a set of phenomenological or empirical equations, which are functions of strain, strain rate, temperature, time, and the initial grain size. A lot of material parameters are introduced in JMAK model, and it is a tedious and time-consuming task to determine these material parameters from the experimentally measured data. JMAK model in DEFORM Material Suite provides a convenient tool to fit material parameters in JMAK model.
+Model JMAK (Johnson-Mehl-Avrami-Kolmogorov) opisuje rekryštalizačnú kinetiku (vývoj veľkosti zrna a objemového podielu rekryštalizovaných zŕn) kovov počas termomechanického spracovania. V závislosti od špecifických tepelno-mechanických podmienok spracovania môžu prebiehať rôzne rekryštalizačné mechanizmy, vrátane dynamickej rekryštalizácie (DRX) vyskytujúcej sa počas deformácie, meta-dynamickej rekryštalizácie (MRX) alebo statickej rekryštalizácie (SRX) vyskytujúcej sa po deformácii a statického rastu zŕn po dokončení rekryštalizácie. JMAK model vo všeobecnosti pozostáva zo súboru fenomenologických alebo empirických rovníc, ktoré sú funkciami deformácie, rýchlosti deformácie, teploty, času a počiatočnej veľkosti zrna. V JMAK modeli je zavedených veľa materiálových parametrov a je únavnou a časovo náročnou úlohou určiť tieto materiálové parametre z experimentálne nameraných dát. Model JMAK v DEFORM Material Suite poskytuje pohodlný nástroj na prispôsobenie parametrov materiálu v modeli JMAK.
 
-In this lab, the procedures to import experimentally measured data into JMAK module in DEFORM Material Suite and to fit material parameters in JMAK model automatically are demonstrated. 
+V tomto laboratóriu sú automaticky demonštrované postupy na import experimentálne nameraných údajov do modulu JMAK v DEFORM Material Suite a prispôsobenie parametrov materiálu v modeli JMAK.
 
-## Launch JMAK Model in material suite
+## Spustenie modelu JMAK v balíku materiálov
 
-On a Windows machine, go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button, select DEFORM-v12.xxx (.xxx indicates version number E.g. v14.0.2 and select DEFORM GUI Main v1x.xx from the menu. The DEFORM GUI Main window will appear.
+Na počítači so systémom Windows prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v12.xxx (.xxx označuje číslo verzie Napr. V14.0.2 a z ponuky vyberte Deform GUI Main v1x.xx. Zobrazí SA hlavné okno Deform GUI.
 
-From GUI Main click on Material Suite under “Post Processor” to open Material Suite module. User can also double click "DEF_GUI_MAT.exe" in the installation directory of DEFORM software to launch material suite. After the main window for material suite pops up, expand "properties" item and click "**JMAK Model** " icon, the new task item "JMAK" is added to the task tree (See Fig. JMAKL1.1.). Follow each tree item to prepare JMAK model data in the property data window (right-bottom window).
+Z hlavného GUI kliknite na Material Suite v časti „Post Processor“ a otvorte modul Material Suite. Používateľ môže tiež dvakrát kliknúť na "DEF_GUI_MAT.exe" v inštalačnom adresári DEFORMAČNÉHO softvéru a spustiť sadu materiálov. Po zobrazení hlavného okna pre balík materiálov rozbaľte položku „vlastnosti“ a kliknite na ikonu „** JMAK Model * * “, do stromu úloh sa pridá nová položka úlohy „JMAK“ (pozri obr. JMAKL1.1.). Postupujte podľa každej položky stromu a pripravte údaje modelu JMAK v okne s údajmi o vlastnostiach (pravé dolné okno).
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0001.jpg' | relative_url }})
 
-Launch JMAK model in material suite.
+Spustenie modelu JMAK v Material Suite.
 
-Click "**Config** " to open the window to specify Working directories as shown in below Fig. JMAKL1.2. Specify the working directory where the computed JMAK data will be stored.
+Kliknutím na „**Config** “ otvoríte okno a zadáte pracovné adresáre, ako je znázornené na obrázku nižšie. JMAKL1.2. Zadajte pracovný adresár, do ktorého sa budú ukladať vypočítané údaje JMAK.
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0017.jpg' | relative_url }})
 
-Config window to define Working directory
+Konfiguračné okno na definovanie pracovného adresára
 
-## Define testing controls and temperature groups
+## Definujte kontroly testovania a teplotné skupiny
 
-In the "**JMAK Model** " task tree, click "Testing controls" item as shown in Fig. JMAKL1.3. In the property window, we have two different ways to start the JMAK project. If there is an existing project saved previously, we can click the “Import Project” button to import the project data, and the defined data for each tree item will be automatically filled. user can also prepare the project data from scratch. After defining data in any tree item page, we can return to this “Testing controls” page and click the “Save Project” button to save all defined data.
+V strome úloh „** JMAK Model** “ kliknite na položku „Testovanie ovládacích prvkov“, ako je znázornené na obr. JMAKL1.3. V okne nehnuteľnosti máme dva rôzne spôsoby, ako začať projekt JMAK. Ak bol predtým uložený existujúci projekt, môžeme kliknutím na tlačidlo „Importovať projekt“ importovať údaje o projekte a definované údaje pre každú položku stromu sa automaticky vyplnia. Používateľ môže tiež pripraviť údaje o projekte od začiatku. Po definovaní údajov na ľubovoľnej stránke položky stromu sa môžeme vrátiť na túto stránku „Testovanie ovládacích prvkov“ a kliknutím na tlačidlo „Uložiť projekt“ uložiť všetky definované údaje.
 
-In this Lab, define the system of units to represent the experimental results (such as “SI” in this lab). Click “ ![]({{ '/assets/icons/pre_icons/material_suite_add_button.jpg' | relative_url }}) ” or “![]({{ '/assets/icons/pre_icons/material_suite_delete_button.jpg' | relative_url }})” button to add or delete each testing condition. Input the following data, for the initial grain size (in microns): 40 and 100. Input three testing temperatures (in °C) : 900, 1200 and 1400, and two testing strain rates (in mm/mm/s) : 0.2 and 0.5. Each mechanical test is conducted at a constant strain rate and a constant temperature (such as uniaxial uniform compression test).
+V tomto laboratóriu definujte systém jednotiek, ktoré predstavujú experimentálne výsledky (napríklad „SI“ v tomto laboratóriu). Kliknutím na tlačidlo „![]({{ '/assets/icons/pre_icons/material_suite_add_button.jpg' | relative_url }})“ alebo „![]({{ '/assets/icons/pre_icons/material_suite_delete_button.jpg' | relative_url }})“ pridáte alebo odstránite každú testovaciu podmienku. Zadajte nasledujúce údaje pre počiatočnú veľkosť zrna (v mikrónoch): 40 a 100. Zadajte tri skúšobné teploty (v °C) : 900, 1200 a 1400 a dve skúšobné rýchlosti deformácie (v mm/mm/s) : 0,2 a 0,5. Každá mechanická skúška sa vykonáva pri konštantnej rýchlosti deformácie a konštantnej teplote (ako je jednoosová jednotná kompresná skúška).
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0002.jpg' | relative_url }})
 
-Definition of mechanical testing controls
+Definícia kontrol mechanického testovania
 
-In the "JMAK Model" task tree, click "**Temperature groups** " item. In the property data window, click “![]({{ '/assets/icons/pre_icons/material_suite_add_button.jpg' | relative_url }})” or “![]({{ '/assets/icons/pre_icons/material_suite_delete_button.jpg' | relative_url }})” button to define the temperature group name (see Fig. JMAKL1.4.). For each temperature group, select the temperatures included. In each temperature group, the material parameters for recrystallization kinetics are assumed to be constant. The material parameters may change in different temperature groups. As a result, material parameters are defined as function of temperature. In this Lab, define Temperature group as "AA" and assign two temperatures 900°C and 1200°C into the group by selecting them as shown in Fig. JMAKL1.4.
+V strome úloh „JMAK Model“ kliknite na položku „**Teplotné skupiny** “. V okne s údajmi o vlastnostiach kliknite na tlačidlo „![]({{ '/assets/icons/pre_icons/material_suite_add_button.jpg' | relative_url }})“ alebo „![]({{ '/assets/icons/pre_icons/material_suite_delete_button.jpg' | relative_url }})“ a definujte názov skupiny teplôt (pozri obr. JMAKL1.4.). Pre každú skupinu teplôt vyberte zahrnuté teploty. V každej teplotnej skupine sa predpokladajú konštantné materiálové parametre pre rekryštalizačnú kinetiku. Parametre materiálu sa môžu meniť v rôznych teplotných skupinách. V dôsledku toho sú parametre materiálu definované ako funkcia teploty. V tomto laboratóriu definujte teplotnú skupinu ako „AA“ a priraďte do skupiny dve teploty 900 °C a 1200 °C ich výberom, ako je znázornené na obr. JMAKL1.4.
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0003.jpg' | relative_url }})
 
-Definition of Temperature groups
+Definícia teplotných skupín
 
-## Fit material parameters in DRX kinetics
+## Prispôsobte parametre materiálu v kinetike DRX
 
-Expand "Dynamic recrystallization (DRX)" item in task tree and click the first subitem “**DRX peak strain** ”. In the data window, specify a temperature group. For each initial grain size, define the flow stress curves for all temperatures in the group and all strain rates. Each cell in the testing table highlighted by a red rectangular in Fig. JMAKL1.5. defines a flow stress curve at a constant temperature under a constant strain rate.
+Rozbaľte položku „Dynamická rekryštalizácia (DRX)“ v strome úloh a kliknite na prvú podpoložku „**DRX peak strain** “. V dátovom okne zadajte teplotnú skupinu. Pre každú počiatočnú veľkosť zrna definujte krivky napätia prietoku pre všetky teploty v skupine a všetky rýchlosti deformácie. Každá bunka v testovacej tabuľke zvýraznená červeným obdĺžnikom na obr. JMAKL1.5. definuje krivku napätia prietoku pri konštantnej teplote pri konštantnej rýchlosti deformácie.
 
-An empty file icon (“![]({{ '/assets/icons/pre_icons/material_suite_empty_file_icon.jpg' | relative_url }})”) denotes that the cell data has not been defined yet. After clicking an undefined cell, the cell image changes to a loading file icon (“![]({{ '/assets/icons/pre_icons/mo_import_file_icon2.jpg' | relative_url }})”), and the window for function definition pops up in the display window. The stress-strain data can be manually input, copied and pasted, or loaded from an existing function data file. After data input is completed, click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to close the function definition window. The cell image changes to a defined file icon (“![]({{ '/assets/icons/pre_icons/material_suite_defined_file_icon.jpg' | relative_url }})”) and the peak strain is automatically extracted and displayed in the line editor. The value of peak strain in the line editor can be manually edited. We can double click the view icon on the header (“![]({{ '/assets/icons/pre_icons/mo_visible.jpg' | relative_url }}) ”) to plot the flow stress curves at a fixed strain rate or a fixed temperature. It should be noted that, it is not necessary to define data for all cells, but the minimum requirement for fitting the interested parameters must be satisfied. The same method is used to define the cell data in the testing table for each item or subitem in the task tree. In this lab, we will import the data for each cell of AA group from "3D\LABS\MAK_Parameter_fitting_lab_data\DRX_Peak_strain_data folder".
+Ikona prázdneho súboru („![]({{ '/assets/icons/pre_icons/material_suite_empty_file_icon.jpg' | relative_url }})“) označuje, že údaje bunky ešte neboli definované. Po kliknutí na nedefinovanú bunku sa obrázok bunky zmení na ikonu načítavacieho súboru („![]({{ '/assets/icons/pre_icons/mo_import_file_icon2.jpg' | relative_url }})“) a v okne zobrazenia sa zobrazí okno na definovanie funkcie. Údaje o napätí a deformácii je možné manuálne zadať, skopírovať a prilepiť alebo načítať z existujúceho súboru údajov o funkcii. Po dokončení zadávania údajov kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) zatvorte okno definície funkcie. Obrázok bunky sa zmení na definovanú ikonu súboru („![]({{ '/assets/icons/pre_icons/material_suite_defined_file_icon.jpg' | relative_url }})“) a vrcholové napätie sa automaticky extrahuje a zobrazí v editore riadkov. Hodnotu špičkového napätia v editore riadkov je možné manuálne upraviť. Môžeme dvakrát kliknúť na ikonu zobrazenia v hlavičke („![]({{ '/assets/icons/pre_icons/mo_visible.jpg' | relative_url }})“), aby sme vykreslili krivky napätia prietoku pri pevnej rýchlosti deformácie alebo pevnej teplote. Treba poznamenať, že nie je potrebné definovať údaje pre všetky bunky, ale musí byť splnená minimálna požiadavka na osadenie zainteresovaných parametrov. Rovnaká metóda sa používa na definovanie údajov bunky v testovacej tabuľke pre každú položku alebo podpoložku v strome úloh. V tomto laboratóriu importujeme údaje pre každú bunku skupiny AA z priečinka „3D\LABS\MAK_Parameter_fitting_Lab_DATA\DRX_Peak_strain_DATA“.
 
-For Grain size 40 - Stain rate 0.2 - Temperature 900 cell, load " 40_0.2_900.dat " file.
+Pre veľkosť zrna 40 - miera škvŕn 0,2 - teplota 900 buniek načítajte súbor „ 40_0.2_900.dat“.
 
-For Grain size 40 - Stain rate 0.2 - Temperature 1200 cell, load " 40_0.2_1200.dat " file.
+Pre veľkosť zrna 40 - miera škvŕn 0,2 - teplota 1200 buniek načítajte súbor „ 40_0.2_1200.dat“.
 
-For Grain size 40 - Stain rate 0.5 - Temperature 900 cell, load " 40_0.5_900.dat " file.
+Pre veľkosť zrna 40 - rýchlosť škvŕn 0,5 - teplota 900 buniek, načítajte súbor " 40_0.5_900.dat".
 
-For Grain size 40 - Stain rate 0.5 - Temperature 1200 cell, load " 40_0.5_1200.dat " file.
+Pre veľkosť zrna 40 - miera škvŕn 0,5 - teplota 1200 buniek, načítajte súbor " 40_0.5_1200.dat".
 
-For Grain size 100 - Stain rate 0.2 - Temperature 900 cell, load " 100_0.2_900.dat " file.
+Pre veľkosť zrna 100 - miera škvŕn 0,2 - teplota 900 buniek načítajte súbor „ 100_0.2_900.dat“.
 
-For Grain size 100 - Stain rate 0.2 - Temperature 1200 cell, load " 100_0.2_1200.dat " file.
+Pre veľkosť zrna 100 - miera škvŕn 0,2 - teplota 1200 buniek načítajte súbor „ 100_0.2_1200.dat“.
 
-For Grain size 100 - Stain rate 0.5 - Temperature 900 cell, load " 100_0.5_900.dat " file.
+Pre veľkosť zrna 100 - miera škvŕn 0,5 - teplota 900 buniek načítajte súbor „ 100_0.5_900.dat“.
 
-For Grain size 100 - Stain rate 0.5 - Temperature 1200 cell, load " 100_0.5_1200.dat " file.
+Pre veľkosť zrna 100 - miera škvŕn 0,5 - teplota 1200 buniek, načítajte súbor " 100_0.5_1200.dat".
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0004.jpg' | relative_url }})
 
-Import flow stress data and extract the peak strain
+Importujte údaje o napätí prietoku a extrahujte špičkové napätie
 
-For a temperature group, after the flow stress data for all initial grain sizes are defined, click the “**Fit** ’ button to fit material parameters in the peak strain equation (see Fig. JMAKL1.6.). The fitted parameters are displayed in the fitting table, and the graphic comparison between the measured data and the predicted data by the fitted material parameters is shown in the display window. For any known parameter, the value can be input directly and check its “Fixed” flag. After fitting, parametric study can be performed by dragging the horizontal slider of a parameter and graphically examine the measured and predicted data.
+Pre teplotnú skupinu po definovaní údajov o napätí prietoku pre všetky počiatočné veľkosti zrna kliknite na tlačidlo „**Fit**“, aby sa parametre materiálu prispôsobili rovnici maximálneho napätia (pozri obr. JMAKL1.6.). Namontované parametre sú zobrazené v tabuľke armatúr a grafické porovnanie medzi nameranými údajmi a predpokladanými údajmi podľa parametrov montovaného materiálu je zobrazené v okne displeja. Pre akýkoľvek známy parameter je možné priamo zadať hodnotu a skontrolovať jej príznak „Fixed“ (Pevná). Po nasadení je možné parametrickú štúdiu vykonať potiahnutím horizontálneho posúvača parametra a graficky preskúmať namerané a predpovedané údaje.
 
-For each additional temperature group if there is any, repeat this procedure to import its experimental data and fit material parameters.
+Pre každú ďalšiu teplotnú skupinu, ak existuje, zopakujte tento postup, aby ste importovali jej experimentálne údaje a prispôsobili parametre materiálu.
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0005.jpg' | relative_url }})
 
-Fit material parameters in the peak strain equation
+Prispôsobiť parametre materiálu v rovnici špičkového napätia
 
-Click the “**DRX volume fraction** ” subitem. In the data window, define the available cell data (experimentally measured) of the testing table. In this lab, import each cell data from "3D\LABS\JMAK_Parameter_fitting_lab_data\DRX_volume_fraction" folder.
+Kliknite na podpoložku „**DRX volume fraction** “. V dátovom okne definujte dostupné bunkové údaje (experimentálne namerané) testovacej tabuľky. V tomto laboratóriu importujte údaje každej bunky z priečinka „3D\LABS\JMAK_Parameter_fitting_Lab_Data\DRX_Volume_fraction“.
 
-For Grain size 40 - Stain rate 0.2 - Temperature 900 cell, load " 40_0.2_900.dat " file.
+Pre veľkosť zrna 40 - miera škvŕn 0,2 - teplota 900 buniek načítajte súbor „ 40_0.2_900.dat“.
 
-For Grain size 40 - Stain rate 0.2 - Temperature 1200 cell, load " 40_0.2_1200.dat " file.
+Pre veľkosť zrna 40 - miera škvŕn 0,2 - teplota 1200 buniek načítajte súbor „ 40_0.2_1200.dat“.
 
-For Grain size 40 - Stain rate 0.5 - Temperature 900 cell, load " 40_0.5_900.dat " file.
+Pre veľkosť zrna 40 - rýchlosť škvŕn 0,5 - teplota 900 buniek, načítajte súbor " 40_0.5_900.dat".
 
-For Grain size 40 - Stain rate 0.5 - Temperature 1200 cell, load " 40_0.5_1200.dat " file.
+Pre veľkosť zrna 40 - miera škvŕn 0,5 - teplota 1200 buniek, načítajte súbor " 40_0.5_1200.dat".
 
-For Grain size 100 - Stain rate 0.2 - Temperature 900 cell, load " 100_0.2_900.dat " file.
+Pre veľkosť zrna 100 - miera škvŕn 0,2 - teplota 900 buniek načítajte súbor „ 100_0.2_900.dat“.
 
-For Grain size 100 - Stain rate 0.2 - Temperature 1200 cell, load " 100_0.2_1200.dat " file.
+Pre veľkosť zrna 100 - miera škvŕn 0,2 - teplota 1200 buniek načítajte súbor „ 100_0.2_1200.dat“.
 
-For Grain size 100 - Stain rate 0.5 - Temperature 900 cell, load " 100_0.5_900.dat " file.
+Pre veľkosť zrna 100 - miera škvŕn 0,5 - teplota 900 buniek načítajte súbor „ 100_0.5_900.dat“.
 
-For Grain size 100 - Stain rate 0.5 - Temperature 1200 cell, load " 100_0.5_1200.dat " file.
+Pre veľkosť zrna 100 - miera škvŕn 0,5 - teplota 1200 buniek, načítajte súbor " 100_0.5_1200.dat".
 
-Each cell data defines the curve of DRX Vf~strain for a constant temperature and a constant strain rate. For each DRX Vf~strain curve, it is recommended that microstructures for at least 3 strain values should be measured, corresponding to low, medium, and high DRX volume fractions, so that the basic shape of DRX Vf~strain curve can be well described. For each defined curve, the strain for 50% DRX will be automatically extracted and displayed in the line editor of its cell. If the extracted strain for 50% DRX is not reasonable or desirable, it can be manually modified. In the display window after fitting, for each mechanical testing condition, the experimental data is displayed by solid dots, and the predicted data by the fitted parameters is displayed as a solid line with the same color (as shown in Fig. JMAKL1.7.).
+Každá bunka definuje krivku napätia DRX Vf~ pre konštantnú teplotu a konštantnú rýchlosť napätia. Pre každú krivku deformácie DRX Vf~ sa odporúča zmerať mikroštruktúry pre najmenej 3 hodnoty deformácie, ktoré zodpovedajú nízkym, stredným a vysokým objemovým frakciám DRX, aby bolo možné dobre opísať základný tvar krivky deformácie DRX Vf~. Pre každú definovanú krivku sa deformácia pre 50% DRX automaticky extrahuje a zobrazí v editore riadkov jej bunky. Ak extrahovaný kmeň pre 50% DRX nie je primeraný alebo žiaduci, môže byť manuálne upravený. V okne displeja po montáži sa pre každú mechanickú skúšobnú podmienku experimentálne údaje zobrazujú pevnými bodkami a predpovedané údaje podľa namontovaných parametrov sa zobrazujú ako plná čiara s rovnakou farbou (ako je znázornené na obr. JMAKL1.7.).
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0006.jpg' | relative_url }})
 
-Fit material parameters in the DRX volume fraction
+Prispôsobte parametre materiálu objemovej frakcii DRX
 
-Click “**DRX grain size** ” subitem in the task tree. For each available cell data of the testing table, define the curve of DRX grain size versus strain. Import each cell data from "3D\LABS\JMAK_Parameter_fitting_lab_data\DRX_grain_size" folder.
+Kliknite na podpoložku „**DRX grain size * * “ v strome úloh. Pre každú dostupnú bunku testovacej tabuľky definujte krivku veľkosti zrna DRX v porovnaní s deformáciou. Importujte údaje každej bunky z priečinka „3D\LABS\ JMAK_Parameter_fitting_Lab_Data\DRX_Grain_size“.
 
-For Grain size 40 - Stain rate 0.2 - Temperature 900 cell, load " 40_0.2_900.dat " file.
+Pre veľkosť zrna 40 - miera škvŕn 0,2 - teplota 900 buniek načítajte súbor „ 40_0.2_900.dat“.
 
-For Grain size 40 - Stain rate 0.2 - Temperature 1200 cell, load " 40_0.2_1200.dat " file.
+Pre veľkosť zrna 40 - miera škvŕn 0,2 - teplota 1200 buniek načítajte súbor „ 40_0.2_1200.dat“.
 
-For Grain size 40 - Stain rate 0.5 - Temperature 900 cell, load " 40_0.5_900.dat " file.
+Pre veľkosť zrna 40 - rýchlosť škvŕn 0,5 - teplota 900 buniek, načítajte súbor " 40_0.5_900.dat".
 
-For Grain size 40 - Stain rate 0.5 - Temperature 1200 cell, load " 40_0.5_1200.dat " file.
+Pre veľkosť zrna 40 - miera škvŕn 0,5 - teplota 1200 buniek, načítajte súbor " 40_0.5_1200.dat".
 
-For Grain size 100 - Stain rate 0.2 - Temperature 900 cell, load " 100_0.2_900.dat " file.
+Pre veľkosť zrna 100 - miera škvŕn 0,2 - teplota 900 buniek načítajte súbor „ 100_0.2_900.dat“.
 
-For Grain size 100 - Stain rate 0.2 - Temperature 1200 cell, load " 100_0.2_1200.dat " file.
+Pre veľkosť zrna 100 - miera škvŕn 0,2 - teplota 1200 buniek načítajte súbor „ 100_0.2_1200.dat“.
 
-For Grain size 100 - Stain rate 0.5 - Temperature 900 cell, load " 100_0.5_900.dat " file.
+Pre veľkosť zrna 100 - miera škvŕn 0,5 - teplota 900 buniek načítajte súbor „ 100_0.5_900.dat“.
 
-For Grain size 100 - Stain rate 0.5 - Temperature 1200 cell, load " 100_0.5_1200.dat " file.
+Pre veľkosť zrna 100 - miera škvŕn 0,5 - teplota 1200 buniek, načítajte súbor " 100_0.5_1200.dat".
 
-After data definition is finished for the selected temperature group, click “**Fit** ” button to fit material parameters in the DRX grain size equation as shown in Fig. JMAKL1.8.
+Po dokončení definície údajov pre vybranú skupinu teplôt kliknite na tlačidlo „**Fit** “, aby sa parametre materiálu prispôsobili rovnici veľkosti zrna DRX, ako je znázornené na obr. JMAKL1.8.
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0007.jpg' | relative_url }})
 
-Fit material parameters in the DRX grain size
+Prispôsobte parametre materiálu veľkosti zrna DRX
 
-Fig. JMAKL1.9. illustrates the definition of strain rate boundary. Its definition is based
+Na obr. JMAKL1.9. je znázornená definícia hranice rýchlosti deformácie. Jeho definícia je založená
 
-on user’s empirical rule on the working material. We don’t fit the parameters in the equation for strain rate boundary. We include this page in order that we can output the keyword file for a complete JMAK model after we finish fitting material parameters. Import Strain_rate_boundary.dat file from "3D\LABS\JMAK_Parameter_fitting_lab_data" folder.
+o empirickom pravidle používateľa na pracovnom materiáli. Nezodpovedáme parametrom v rovnici pre hranicu rýchlosti deformácie. Túto stránku uvádzame preto, aby sme po dokončení montáže parametrov materiálu mohli vygenerovať súbor kľúčových slov pre kompletný model JMAK. Importujte súbor Strain_rate_boundary.dat z priečinka „3D\LABS\ JMAK_Parameter_fitting_Lab_Data“.
 
-Strain rate boundary, together with the average deforming strain rate and the critical strain, is used to determine whether static or meta-dynamic recrystallization should be activated when deformation stops.
+Hranica rýchlosti deformácie spolu s priemernou rýchlosťou deformácie a kritickou deformáciou sa používa na určenie, či by sa pri zastavení deformácie mala aktivovať statická alebo meta-dynamická rekryštalizácia.
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0008.jpg' | relative_url }})
 
-Definition of material parameters in strain rate boundary equation
+Definícia materiálových parametrov v hraničnej rovnici rýchlosti deformácie
 
-## Fit material parameters in MRX/SRX kinetics
+## Prispôsobte parametre materiálu v kinetike MRX/SRX
 
-The procedure to import MRX experimental data and fit its material parameters is the same as the procedure for SRX. Only the procedure to fit material parameters in MRX kinetics is introduced here.
+Postup importu experimentálnych údajov MRX a prispôsobenia ich materiálových parametrov je rovnaký ako postup pre SRX. Zavádza sa tu len postup prispôsobenia parametrov materiálu v kinetike MRX.
 
-The pre-deformed strain is an important controlling factor in MRX/SRX experimental test. The mechanical tests are terminated at the pre-deformed strains, then the specimens are hold at the same temperature for different times, followed by quenching for microstructure measurement. At least two pre-deformed strains should be employed. For MRX tests, the pre-deformed strains are large than the critical strain but less than the 100% DRX strain. For SRX tests, the pre-deformed strains should be less than the critical strain (thus DRX has not occurred yet). The definition of pre-deformed strains is shown in Fig. JMAKL1.10.
+Preddeformovaný kmeň je dôležitým kontrolným faktorom v experimentálnom teste MRX/SRX. Mechanické skúšky sa ukončia na preddeformovaných napätiach, potom sa skúšobné telesá udržiavajú pri rovnakej teplote počas rôznych časov, po ktorých nasleduje kalenie na meranie mikroštruktúry. Mali by sa použiť aspoň dva preddeformované kmene. Pri testoch MRX sú preddeformované kmene veľké ako kritický kmeň, ale menšie ako 100% kmeň DRX. Pri testoch SRX by preddeformované kmene mali byť menšie ako kritické kmene (preto sa DRX ešte nevyskytlo). Definícia preddeformovaných kmeňov je znázornená na obr. JMAKL1.10.
 
-In the task tree, click “**Meta-dynamic recrystallization (MRX)** ” item. In the data window, input two pre-deformed strains, 0.1 and 0.2.
+V strome úloh kliknite na položku „** Meta-dynamická rekryštalizácia (MRX)** “. V okne s údajmi zadajte dve preddeformované deformácie, 0,1 a 0,2.
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0009.jpg' | relative_url }})
 
-Definition of pre-deformed strain for MRX kinetics
+Definícia preddeformovaného kmeňa pre kinetiku MRX
 
-Click the “**MRX volume fraction** ” subitem in the task tree. In the data window, specify a temperature group. For each initial grain size and pre-deformed strain, for each available cell in the testing table, define the curve of MRX volume fraction versus time. Import each cell data from " 3D\LABS\JMAK_Parameter_fitting_lab_data\MRX_volume_fraction" folder.
+Kliknite na podpoložku „**MRX volume fraction** “ v strome úloh. V dátovom okne zadajte teplotnú skupinu. Pre každú počiatočnú veľkosť zrna a vopred deformovanú deformáciu pre každú dostupnú bunku v testovacej tabuľke definujte krivku objemového podielu MRX v závislosti od času. Importujte údaje každej bunky z priečinka „ 3D\LABS\ JMAK_Parameter_fitting_Lab_Data\MRX_Volume_fraction“.
 
-For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 900 cell, load " 40_0.1_0.2_900.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 900 cell, load " 40_0.1_0.2_900.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 900 cell, load " 40_0.1_0.5_900.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 900 cell, load " 40_0.1_0.5_900.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 1200 cell, load " 40_0.1_0.2_1200.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 1200 cell, load " 40_0.1_0.2_1200.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 1200 cell, load " 40_0.1_0.5_1200.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 1200 cell, load " 40_0.1_0.5_1200.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 900 cell, load " 40_0.2_0.2_900.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 900 cell, load " 40_0.2_0.2_900.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 900 cell, load " 40_0.2_0.5_900.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 900 cell, load " 40_0.2_0.5_900.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 1200 cell, load " 40_0.2_0.2_1200.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 1200 cell, load " 40_0.2_0.2_1200.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 1200 cell, load " 40_0.2_0.5_1200.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 1200 cell, load " 40_0.2_0.5_1200.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 900 cell, load " 100_0.1_0.2_900.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 900 cell, load " 100_0.1_0.2_900.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 900 cell, load " 100_0.1_0.5_900.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0,1 - Stain rate 0,5 - Temperature 900 cell, load " 100_0.1_0.5_900.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 1200 cell, load " 100_0.1_0.2_1200.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 1200 cell, load " 100_0.1_0.2_1200.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 1200 cell, load " 100_0.1_0.5_1200.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0,1 - Stain rate 0,5 - Temperature 1200 cell, load " 100_0.1_0.5_1200.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 900 cell, load " 100_0.2_0.2_900.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 900 cell, load " 100_0.2_0.2_900.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 900 cell, load " 100_0.2_0.5_900.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 900 cell, load " 100_0.2_0.5_900.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 1200 cell, load " 100_0.2_0.2_1200.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 1200 cell, load " 100_0.2_0.2_1200.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 1200 cell, load " 100_0.2_0.5_1200.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 1200 cell, load " 100_0.2_0.5_1200.dat " file.
 
-After the curve of a cell is defined, the time for 50% MRX will be extracted automatically and filled in the line editor. This time for 50% MRX can be manually edited. After data definition is completed, click “**Fit** ” button to fit material parameters in the MRX volume fraction equation (see Fig. JMAKL1.11.).
+Po definovaní krivky bunky sa automaticky extrahuje čas pre 50% MRX a vyplní sa v editore riadkov. Tentoraz pre 50% MRX je možné manuálne upraviť. Po dokončení definície údajov kliknite na tlačidlo „**Fit** “, aby ste prispôsobili parametre materiálu do rovnice objemového zlomku MRX (pozri obr. JMAKL1.11.).
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0010.jpg' | relative_url }})
 
-Fit material parameters for MRX volume fraction equation
+Prispôsobiť parametre materiálu pre rovnicu objemového zlomku MRX
 
-Click the “**MRX grain size** ” subitem in the task tree. Fitting the material parameters for MRX grain size equation is shown in Fig. JMAKL1.12. For each available cell in the testing table, the measured MRX grain size is input. It is assumed that MRX grain size depends on the initial grain size and pre-deformation conditions, but does not vary with the time of MRX process. In this lab, define the values using below Table1 and Table 2 data. After data definition is completed, click “**Fit** ” button to fit the material parameters in the MRX grain size equation.
+Kliknite na podpoložku „** Veľkosť zrna MRX ** “ v strome úloh. Montáž parametrov materiálu pre rovnicu veľkosti zrna MRX je znázornená na obr. JMAKL1.12. Pre každú dostupnú bunku v testovacej tabuľke sa zadá nameraná veľkosť zrna MRX. Predpokladá sa, že veľkosť zrna MRX závisí od počiatočnej veľkosti zrna a podmienok preddeformácie, ale nemení sa s časom procesu MRX. V tomto laboratóriu definujte hodnoty pomocou nižšie uvedených údajov tabuľky 1 a tabuľky 2. Po dokončení definície údajov kliknite na tlačidlo „**Fit** “, aby ste prispôsobili parametre materiálu v rovnici veľkosti zrna MRX.
 
-**Temperature** |  **Initial grain size 40** |  **Initial grain size 100**  
----|---|---  
-Strain rate 0.2 |  Strain rate 0.5 |  Strain rate 0.2 |  Strain rate 0.5  
-900 |  68.0606 |  65.1158 |  100.715 |  96.3075  
-1200 |  93.952 |  89.8477 |  139.463 |  133.32  
+**Teplota** |  **Počiatočná veľkosť zrna 40** |  **Počiatočná veľkosť zrna 100**
+---|---|---
+Rýchlosť deformácie 0,2 | Rýchlosť deformácie 0,5 | Rýchlosť deformácie 0,2 | Rýchlosť deformácie 0,5
+900 |  68,0606 |  65,1158 |  100,715 |  96,3075
+1200 |  93.952 |  89.8477 |  139.463 |  133.32
   
-For Predeformed Strain 0.1 value
+Pre hodnotu predformovaného napätia 0,1
 
-**Temperature** |  **Initial grain size 40** |  **Initial grain size 100**  
----|---|---  
-Strain rate 0.2 |  Strain rate 0.5 |  Strain rate 0.2 |  Strain rate 0.5  
-900 |  44.208 |  42.3313 |  65.0177 |  62.2092  
-1200 |  60.708 |  58.0924 |  89.711 |  85.7966  
+**Teplota** |  **Počiatočná veľkosť zrna 40** |  **Počiatočná veľkosť zrna 100**
+---|---|---
+Rýchlosť deformácie 0,2 | Rýchlosť deformácie 0,5 | Rýchlosť deformácie 0,2 | Rýchlosť deformácie 0,5
+900 |  44,208 |  42,313 |  65,0177 |  62,2092
+1200 |  60,708 |  58,0924 |  89,711 |  85,7966
   
-For Predeformed Strain 0.2 value
+Pre hodnotu predformovaného napätia 0,2
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0011.jpg' | relative_url }})
 
-Fit material parameters for MRX grain size equation
+Parametre vhodného materiálu pre rovnicu veľkosti zrna MRX
 
-In the task tree, click “**Static- recrystallization (SRX)** ” item. In the data window, input two pre-deformed strains, 0.1 and 0.2 as shown in Fig. JMAKL1.13.
+V strome úloh kliknite na položku „**Statická kryštalizácia (SRX)** “. V okne s údajmi zadajte dve preddeformované deformácie, 0,1 a 0,2, ako je znázornené na obr. JMAKL1.13.
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0012.jpg' | relative_url }})
 
-Definition of pre-deformed strain for SRX kinetics
+Definícia preddeformovanej deformácie pre kinetiku SRX
 
-Click the “**SRX volume fraction** ” subitem in the task tree. In the data window, specify a temperature group. For each initial grain size and pre-deformed strain, for each available cell in the testing table, define the curve of SRX volume fraction versus time. Import each cell data from " 3D\LABS\\\JMAK_Parameter_fitting_lab_data\SRX_volume_fraction" folder.
+Kliknite na podpoložku „**SRX volume fraction** “ v strome úloh. V dátovom okne zadajte teplotnú skupinu. Pre každú počiatočnú veľkosť zrna a vopred deformovanú deformáciu pre každú dostupnú bunku v testovacej tabuľke definujte krivku objemového podielu SRX v závislosti od času. Importujte údaje každej bunky z priečinka „ 3D\LABS\\\ JMAK_Parameter_fitting_Lab_Data\SRX_Volume_fraction“.
 
-For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 900 cell, load " 40_0.1_0.2_900.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 900 cell, load " 40_0.1_0.2_900.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 900 cell, load " 40_0.1_0.5_900.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 900 cell, load " 40_0.1_0.5_900.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 1200 cell, load " 40_0.1_0.2_1200.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 1200 cell, load " 40_0.1_0.2_1200.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 1200 cell, load " 40_0.1_0.5_1200.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 1200 cell, load " 40_0.1_0.5_1200.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 900 cell, load " 40_0.2_0.2_900.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 900 cell, load " 40_0.2_0.2_900.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 900 cell, load " 40_0.2_0.5_900.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 900 cell, load " 40_0.2_0.5_900.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 1200 cell, load " 40_0.2_0.2_1200.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 1200 cell, load " 40_0.2_0.2_1200.dat " file.
 
-For Grain size 40 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 1200 cell, load " 40_0.2_0.5_1200.dat " file.
+Pre veľkosť zrna 40 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 1200 cell, load " 40_0.2_0.5_1200.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 900 cell, load " 100_0.1_0.2_900.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 900 cell, load " 100_0.1_0.2_900.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 900 cell, load " 100_0.1_0.5_900.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0,1 - Stain rate 0,5 - Temperature 900 cell, load " 100_0.1_0.5_900.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 1200 cell, load " 100_0.1_0.2_1200.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0.1 - Stain rate 0.2 - Temperature 1200 cell, load " 100_0.1_0.2_1200.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.1 - Stain rate 0.5 - Temperature 1200 cell, load " 100_0.1_0.5_1200.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0,1 - Stain rate 0,5 - Temperature 1200 cell, load " 100_0.1_0.5_1200.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 900 cell, load " 100_0.2_0.2_900.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 900 cell, load " 100_0.2_0.2_900.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 900 cell, load " 100_0.2_0.5_900.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 900 cell, load " 100_0.2_0.5_900.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 1200 cell, load " 100_0.2_0.2_1200.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0.2 - Stain rate 0.2 - Temperature 1200 cell, load " 100_0.2_0.2_1200.dat " file.
 
-For Grain size 100 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 1200 cell, load " 100_0.2_0.5_1200.dat " file.
+Pre veľkosť zrna 100 - Predeformed Strain 0.2 - Stain rate 0.5 - Temperature 1200 cell, load " 100_0.2_0.5_1200.dat " file.
 
-After the curve of a cell is defined, the time for 50% SRX will be extracted automatically and filled in the line editor. This time for 50% SRX can be manually edited. After data definition is completed, click “**Fit** ” button to fit material parameters in the SRX volume fraction equation (see Fig. JMAKL1.14.).
+Po definovaní krivky bunky sa automaticky extrahuje čas pre 50% SRX a vyplní sa v editore riadkov. Tento čas pre 50% SRX je možné manuálne upraviť. Po dokončení definície údajov kliknite na tlačidlo „**Fit** “, aby sa parametre materiálu prispôsobili rovnici objemového zlomku SRX (pozri obr. JMAKL1.14.).
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0013.jpg' | relative_url }})
 
-Fit material parameters for SRX volume fraction equation
+Prispôsobiť materiálové parametre pre rovnicu objemového zlomku SRX
 
-Click the “**SRX grain size** ” subitem in the task tree. Fitting the material parameters for SRX grain size equation is shown in Fig. JMAKL1.15. For each available cell in the testing table, the measured SRX grain size is input. It is assumed that SRX grain size depends on the initial grain size and pre-deformation conditions but does not vary with the time of SRX process. In this lab define the values using same Table1 and Table 2 data. After data definition is completed, click “**Fit** ” button to fit the material parameters in the SRX grain size equation.
+Kliknite na podpoložku „** Veľkosť zrna SRX ** “ v strome úloh. Montáž parametrov materiálu pre rovnicu veľkosti zrna SRX je znázornená na obr. JMAKL1.15. Pre každú dostupnú bunku v testovacej tabuľke sa zadá nameraná veľkosť zrna SRX. Predpokladá sa, že veľkosť zrna SRX závisí od počiatočnej veľkosti zrna a podmienok preddeformácie, ale nemení sa s časom procesu SRX. V tomto laboratóriu definujte hodnoty pomocou rovnakých údajov tabuľky 1 a tabuľky 2. Po dokončení definície údajov kliknite na tlačidlo „**Fit** “, aby ste prispôsobili parametre materiálu rovnici veľkosti zrna SRX.
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0014.jpg' | relative_url }})
 
-Fit material parameters for SRX grain size equation
+Parametre vhodného materiálu pre rovnicu veľkosti zrna SRX
 
-## Fit material parameters in grain growth kinetics
+## Prispôsobte parametre materiálu kinetike rastu zrna
 
-In the task tree, click “**Grain growth** ” item. For each temperature group, define the available cell data in the testing table. Each cell defines the curve of grain size versus time measured from grain growth tests. Import each cell data from " 3D\LABS\JMAK_Parameter_fitting_lab_data\Grain growth" folder.
+V strome úloh kliknite na položku „** Rast zrna ** “. Pre každú skupinu teplôt definujte dostupné údaje o bunkách v testovacej tabuľke. Každá bunka definuje krivku veľkosti zrna v porovnaní s časom meraným z testov rastu zrna. Importujte údaje každej bunky z priečinka „ 3D\LABS\ JMAK_Parameter_fitting_Lab_Data\Grain Growth“.
 
-For Grain size 40 - Temperature 900 cell, load " 40_900.dat " file.
+Pre veľkosť zrna 40 - teplota 900 vložte súbor " 40_900.dat".
 
-For Grain size 40 - Temperature 1200 cell, load " 40_1200.dat " file.
+Pre veľkosť zrna 40 - teplota 1200 buniek načítajte súbor " 40_1200.dat".
 
-For Grain size 100 - Temperature 900 cell, load "100_900.dat " file.
+Pre veľkosť zrna 100 - teplota 900 načítajte súbor " 100_900.dat".
 
-For Grain size 100 - Temperature 1200 cell, load " 100_1200.dat " file.
+Pre veľkosť zrna 100 - teplota 1200 buniek načítajte súbor " 100_1200.dat".
 
-After the data input is completed, click “**Fit** ” button to fit the material parameters in the grain growth equation.
+Po dokončení zadávania údajov kliknite na tlačidlo „**Fit** “, aby sa parametre materiálu prispôsobili rovnici rastu zrna.
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0015.jpg' | relative_url }})
 
-Fit material parameters for grain growth kinetics
+Vhodné parametre materiálu pre kinetiku rastu zrna
 
-## Output the fitting results to keyword file
+## Výstup výsledkov montáže do súboru kľúčových slov
 
-After fitting material parameters for JMAK model is completed, click “**Save keyword file** ” in the task tree, and input necessary data as shown in Fig. JMAKL1.17. to complete the JMAK model definition. Click “**Save keyword** ” button to save the keyword file in the directory specified by file path. The keyword file name in this lab is “JMAK.key”, the data can be viewed under DEFORM keyword “GRNDAT” in the saved keyword file. In FEM model definition, we can import this keyword file for JMAK model definition.
+Po dokončení parametrov materiálu pre model JMAK kliknite na „**Uložiť súbor kľúčových slov ** “ v strome úloh a zadajte potrebné údaje, ako je znázornené na obr. JMAKL1.17. dokončiť definíciu modelu JMAK. Kliknutím na tlačidlo „* * Uložiť kľúčové slovo * * “ uložíte súbor kľúčových slov do adresára určeného cestou k súboru. Názov súboru kľúčového slova v tomto laboratóriu je „JMAK.key“, údaje je možné zobraziť pod deformačným kľúčovým slovom „GRNDAT“ v uloženom súbore kľúčových slov. V definícii modelu FEM môžeme importovať tento súbor kľúčových slov pre definíciu modelu JMAK.
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/jmak_parameters_fitting_lab/image0016.jpg' | relative_url }})
 
-Save a keyword file for JMAK model
+Uložiť súbor kľúčových slov pre model JMAK

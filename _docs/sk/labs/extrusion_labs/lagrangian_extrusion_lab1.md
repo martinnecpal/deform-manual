@@ -1,345 +1,345 @@
 ---
 lang: sk
-title: "Lagrangian Extrusion Lab1"
+title: "Laboratórium Lagrangovej extruzie 1"
 ---
 
-# Lagrangian Extrusion Lab1
+# Lagrangeovská extrúzia – laboratórna práca č. 1
 
-In this Lab we are setting up a operation of Lagrangian extrusion.
+V tomto laboratórnom cvičení nastavujeme prevádzku Lagrangeovho vytláčania.
 
-The application of this lab will extrude 5 small cylinder parts from a large cylinder billet. The model of the workpiece is shown as Fig. LAGEXL1.1. The diameter of D0 is 140 mm. The diameter of D1 is 26 mm. The diameters of D2 and D4 are 27 mm. The diameters of D3 and D5 are 28 mm. Due to the model with symmetry, we will use a quarter model for simulation in this lab.
+V rámci tohto laboratórneho cvičenia sa z veľkého valcového polotovaru vytlačia 5 malých valcových dielov. Model obrobku je znázornený na obr. LAGEXL1.1. Priemer D0 je 140 mm. Priemer D1 je 26 mm. Priemery D2 a D4 sú 27 mm. Priemery D3 a D5 sú 28 mm. Vzhľadom na to, že model je symetrický, v tomto cvičení použijeme na simuláciu štvrtinový model.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0001.jpg' | relative_url }})
 
-Model of the Workpiece
+Model obrobku
 
-1.1. Creating a New Problem
+1.1. Vytvorenie nového problému
 
-1.2. Add Operation
+1.2. Pridať operáciu
 
-1.3. Simulation Setup
+1.3. Nastavenie simulácie
 
-1.4. Material list
+1.4. Zoznam materiálov
 
-1.5. Dies
+1.5. Matrice
 
 1.6. Ram
 
-1.7. Container
+1.7. Kontajner
 
-1.8. Die
+1.8. Zomrieť
 
-1.9. Workpiece
+1.9. Obrobok
 
-1.10. Controls
+1.10. Ovládacie prvky
 
-1.11. Contact
+1.11. Kontakt
 
-1.12. Step Controls
+1.12. Ovládacie prvky krokov
 
-1.13. Generate DB
+1.13. Vytvorenie databázy
 
-1.14. Running Simulation
+1.14. Spustenie simulácie
 
-1.15. Post Processing
+1.15. Následné spracovanie
 
-## Creating a New Problem 
+## Vytvorenie nového problému 
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear as shown below Fig. LAGEXL1.2.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte **DEFORM GUI Main** vxx.xx. Zobrazí sa hlavné okno DEFORM GUI Main, ako je znázornené na obrázku LAGEXL1.2.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0002.jpg' | relative_url }})
 
-DEFORM GUI Main window
+Hlavné okno programu DEFORM GUI
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. LAGEXL1.3. Select "**Integrated Manufacturing Process** " radio button and unit system as "**SI** " radio button in unit field. Define Problem Name as "********3D_Lagrangian_EX_Lab1**** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie úlohy, ako je znázornené na obr. LAGEXL1.3. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte systém jednotiek „**SI**“. Zadajte názov úlohy ako „********3D_Lagrangian_EX_Lab1****“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak nezaškrtnete políčko „**Zobraziť dialógové okno s možnosťami**“, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s využitím integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0003.jpg' | relative_url }})
 
-New Problem page
+Stránka „Nový problém“
 
-Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use "**3D_Lagrangian_EX_Lab1** " as the project name. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom „Nový projekt“, kde bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „**3D_Lagrangian_EX_Lab1**“. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.
 
-## Adding Operation
+## Pridanie operácie
 
-Add **3D Extrusion operation** from the Explorer Operations list. Add the operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button available next to 3D Extrusion or user can also add by drag and drop into the Operation Editor (see Fig. LAGEXL1.4.). When we add the 3D Extrusion operation, process settings Window will open by default.
+Pridajte **operáciu 3D extruzného tvarovania** zo zoznamu operácií v Průzkumníku. Operáciu pridáte kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa položky 3D Extrusion alebo ju môžete pridať aj pretiahnutím do editora operácií (pozri obr. LAGEXL1.4.). Po pridaní operácie 3D Extrusion sa štandardne otvorí okno nastavení procesu.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0004.jpg' | relative_url }})
 
-Adding Extrusion operation
+Pridanie operácie extrudovania
 
-## Simulation setup
+## Nastavenie simulácie
 
-In the Simulation Setup dialog, choose**Lagrangian Extrusion (Incremental)** radio button in Simulation Method. Set Thermal Calculation as **Workpiece Only (Non – Isothermal)** and Die Model Type as **With symmetry condition**. Simulation setup settings is shown in Fig. LAGEXL1.5. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material list page.
+V dialógovom okne Nastavenie simulácie vyberte v položke Metóda simulácie voľbu **Lagrangeovská extruzia (inkrementálna)**. Nastavte položku Tepelný výpočet na **Iba obrobok (neizotermický)** a typ modelu formy na **S podmienkou symetrie**. Nastavenia simulácie sú zobrazené na obr. LAGEXL1.5. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Zoznam materiálov.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0005.jpg' | relative_url }})
 
-Simulation setup settings
+Nastavenia simulačného prostredia
 
-## Material List
+## Zoznam materiálov
 
-In the Material dialog, click Load material data from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). Load the material '**ALUMINUM-6061[70-1000F(20-550C)]** ' from **Aluminum** category, as shown in Fig. LAGEXL1.6., and then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Dies page.
+V dialógovom okne „Materiál“ kliknite na možnosť „Načítať údaje o materiáli z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})“. Načítajte materiál „**ALUMINUM-6061[70-1000F(20-550C)]**“ z kategórie **Hliník**, ako je znázornené na obr. LAGEXL1.6., a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), čím prejdete na stránku „Matrice“.
 
 .![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0006.jpg' | relative_url }})
 
-Material list
+Zoznam materiálov
 
-## Dies
+## Matrice
 
-By Default, 2 dies will be added in operation, in this lab we need 3 dies. So, click on ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}) button to make Number of Dies as 3 (see Fig. LAGEXL1.7.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Top Die page.
+V predvolenom nastavení sa do prevádzky pridajú 2 matrice, v tomto laboratórnom cvičení však potrebujeme 3 matrice. Kliknite teda na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}), aby ste nastavili počet matríc na 3 (pozri obr. LAGEXL1.7.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Top Die“ (Horná matrica).
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0007.jpg' | relative_url }})
 
-Added Dies
+Pridané matrice
 
 ## Ram
 
-Change the name of the Top Die object to **Ram**. Set the die **temperature** to **400** °C and keep the object type to **Rigid**. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry page.
+Zmeňte názov objektu „Top Die“ na **Ram**. Nastavte **teplotu** matrice na **400** °C a typ objektu ponechajte ako **Rigid**. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Geometry“.
 
-### Ram Geometry
+### Geometria berana
 
-Click on Import geometry from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) and load **Ram_Geo.stl** from 3D/LABS folder, then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). In Symmetry dialog, define **Planar Symmetry** for the Ram on Symmetry planes as shown in (see Fig. LAGEXL1.8.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Movement page.
+Kliknite na položku „Importovať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a načítajte súbor **Ram_Geo.stl** zo zložky 3D/LABS, potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). V dialógovom okne „Symetria“ nastavte pre Ram **rovinnú symetriu** na symetrických rovinách, ako je znázornené na obrázku (pozri obr. LAGEXL1.8.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Pohyb“.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0008.jpg' | relative_url }})
 
-Ram Geometry
+Geometria berana
 
-### Ram Movement
+### Pohyb barana
 
-In the Movement dialog, define the **Speed** as **4** mm/sec as shown in Fig. LAGEXL1.9. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Bottom Die page.
+V dialógovom okne „Pohyb“ nastavte **rýchlosť** na hodnotu **4** mm/s, ako je znázornené na obr. LAGEXL1.9. Kliknite na stránku „![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) do spodnej formy“.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0009.jpg' | relative_url }})
 
-Ram Movement page
+Stránka hnutia Ram
 
-## Container
+## Kontajner
 
-Change the name of the Bottom die to **Container**. Set the die **temperature** to **350** °C and keep the object type to **Rigid**. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry page.
+Zmeňte názov spodnej formy na **Container**. Nastavte **teplotu** formy na **350** °C a typ objektu ponechajte na **Rigid**. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku Geometria.
 
-### Container Geometry
+### Geometria kontajnera
 
-Click Import geometry from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) and load **Container_Geo.stl** file from 3D/LABS folder, then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). In Symmetry dialog, define **Planar Symmetry** for the Container on Symmetry planes as shown in Fig. LAGEXL1.10. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Movement page.
+Kliknite na „Importovať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a načítajte súbor **Container_Geo.stl** zo zložky 3D/LABS, potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). V dialógovom okne Symetria nastavte pre kontajner **rovinnú symetriu** na symetrických rovinách, ako je znázornené na obr. LAGEXL1.10. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku Pohyb.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0010.jpg' | relative_url }})
 
-Container Geometry
+Geometria kontajnera
 
-### Container Movement
+### Preprava kontajnerov
 
-In the Movement dialog, leave the **Speed** as **0** mm/sec. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Object 4 page.
+V dialógovom okne „Pohyb“ ponechajte hodnotu **Rýchlosť** na **0** mm/s. Kliknite na stránku „![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) do objektu 4“.
 
-## Die
+## Zomrieť
 
-Change the name of the Object 4 to **Die**. Set the die **temperature** to **350** °C and keep the object type to **Rigid**. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry page.
+Zmeňte názov objektu 4 na **Die**. Nastavte **teplotu** formy na **350** °C a typ objektu ponechajte ako **Rigid**. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku Geometria.
 
-### Die Geometry
+### Geometria lisovacej formy
 
-Click on Import geometry from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) and load **Die_Geo.stl** file from 3D/LABS folder, then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). In Symmetry dialog, define **Planar Symmetry** for the Die on Symmetry planes as shown in Fig. LAGEXL1.11. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Movement page.
+Kliknite na položku „Importovať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a načítajte súbor **Die_Geo.stl** zo zložky 3D/LABS, potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). V dialógovom okne „Symetria“ nastavte pre maticu **rovinnú symetriu** na symetrických rovinách, ako je znázornené na obr. LAGEXL1.11. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Pohyb“.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0011.jpg' | relative_url }})
 
-Die Geometry
+Geometria
 
-### Die Movement
+### Pohyb matrice
 
-In the Movement dialog, leave the **Speed** as **0** mm/sec. Go to Workpiece page by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V dialógovom okne „Pohyb“ ponechajte hodnotu **Rýchlosť** na **0** mm/s. Prejdite na stránku „Obrobok“ kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-## Workpiece
+## Obrobok
 
-Keep the default name of the workpiece object as **Workpiece**. Set the workpiece temperature to **400** °C and keep the object type to **Plastic**. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry page.
+Názov objektu obrobku ponechajte ako predvolený, t. j. **Workpiece**. Nastavte teplotu obrobku na **400** °C a typ objektu ponechajte ako **Plastic**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku Geometria.
 
-### Workpiece geometry
+### Geometria obrobku
 
-The workpiece is a symmetrical cylinder, which can be easily created in DEFORM. Click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), select **Cylinder** and define a **Height**(H) as **178** mm and a **Diameter****(2R)** as **138** mm. Define **Start****angle** as **0** , **Revolve****Angle** as **90** , **Sections** as **90**. Click and ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}). In Symmetry dialog, define **Planar Symmetry** for the workpiece on Symmetry planes as shown in (see Fig. LAGEXL1.12.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh generation type page.
+Obrobok je symetrický valec, ktorý možno v programe DEFORM ľahko vytvoriť. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), vyberte **Valec** a nastavte **Výšku** (H) na **178** mm a **Priemer****(2R)** na **138** mm. Nastavte **Počiatočný uhol** na **0**, **Uhol otáčania** na **90** a **Počet rezov** na **90**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}). V dialógovom okne Symetria nastavte pre obrobok **Rovinnú symetriu** na symetrických rovinách, ako je znázornené na obr. LAGEXL1.12. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), čím prejdete na stránku s typom generovania siete.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0012.jpg' | relative_url }})
 
-Workpiece Geometry
+Geometria obrobku
 
-### Workpiece Mesh
+### Sieť obrobku
 
-Generally, there are 2 rules for the mesh density setting for extrusion simulation. Firstly, there should be at least three elements throughout the thickness of the thinnest profile. At the same time, the mesh closed to the bearing zones should be finer than other places.
+Vo všeobecnosti platia dve pravidlá pre nastavenie hustoty siete pri simulácii extruzie. Po prvé, v celej hrúbke najtenšieho profilu by mali byť aspoň tri prvky. Zároveň by sieť v blízkosti nosných zón mala byť jemnejšia ako na ostatných miestach.
 
-In the Mesh Generation Type page, two options are provided for meshing. One is Mesh Extruding Utility and the other is Regular Meshing. Choose **Regular Meshing** for Lagrangian extrusion. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Regular meshing page.
+Na stránke „Mesh Generation Type“ sú k dispozícii dve možnosti vytvárania siete. Jednou z nich je „Mesh Extruding Utility“ a druhou „Regular Meshing“. Pre Lagrangeovú extruziu vyberte možnosť **Regular Meshing**. Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), čím prejdete na stránku „Regular meshing“.
 
-In **General** dialog, select '**Absolute** ' Type, set **Size****ratio** as '**3** ' and **Minimum** **element****size** as '**2** mm' as shown in Fig. LAGEXL1.13.
+V dialógovom okne **Všeobecné** vyberte typ „**Absolútny** “, nastavte **Pomer veľkostí** na hodnotu „**3**“ a **Minimálnu veľkosť prvku** na hodnotu „**2** mm“, ako je znázornené na obr. LAGEXL1.13.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0013.jpg' | relative_url }})
 
-General Mesh page
+Hlavná stránka sekcie „Mesh“
 
-In **Weighting****Factors** dialog, set the factor of **Mesh** **windows** as '**1.0** ' and **other****factors** as '**0.0** ' as shown in Fig. LAGEXL1.14.
+V dialógovom okne **Váha******faktory** nastavte faktor **okien siete** na hodnotu „**1,0**“ a **ostatné****faktory** na hodnotu „**0,0**“, ako je znázornené na obr. LAGEXL1.14.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0014.jpg' | relative_url }})
 
-Workpiece Mesh -Weighting Factor page
+Stránka „Mriežka obrobku – váhový koeficient“
 
-In Mesh Windows dialog, click Import Mesh Windows from a file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) and open **UL_Workpiece_Mesh_Window.key** from **3D/LABS** folder.
+V dialógovom okne „Mesh Windows“ kliknite na položku „Import Mesh Windows from a file ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})“ a otvorte súbor **UL_Workpiece_Mesh_Window.key** zo zložky **3D/LABS**.
 
-Instead of importing the mesh windows, you can also create the mesh windows step by step.
+Namiesto importovania sieťových okien ich môžete vytvoriť aj postupne.
 
-  1. On the Mesh Window tab, if there is any mesh window, click ![]({{ '/assets/icons/pre_icons/mo_delete_symmetry_icon.jpg' | relative_url }}) to delete all the existed mesh windows firstly.
+  1. Na karte „Mesh Window“ (Okno siete), ak sa tam nachádza nejaké okno siete, kliknite na ![]({{ '/assets/icons/pre_icons/mo_delete_symmetry_icon.jpg' | relative_url }}), aby ste najskôr odstránili všetky existujúce okná siete.
 
-  2. On the Mesh Window tab, continuously click ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) to create 4 mesh windows.
+  2. Na karte „Mesh Window“ postupne klikajte na ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}), aby ste vytvorili 4 okná siete.
 
-  3. For each of these windows, click its name to highlight this window, then click cylinder window shape in the upper left **Window Definition dialog** , click on the screen in the workpiece to drop a cylinder mesh window into the **Display window.**
+  3. V každom z týchto okien kliknite na jeho názov, aby ste ho označili, potom v ľavom hornom rohu **dialógového okna Definícia okna** kliknite na tvar valcového okna a kliknutím na obrazovku v oblasti obrobku vložte okno s valcovou sieťou do **zobrazovacieho okna.**
 
-  4. Click on ![]({{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}) to edit the dimension of each window. Edit the dimension of mesh Window 1, define Top Center as (0,0,10) and Bottom Center as (0,0,-20), define Radius as 80. Edit the dimension of mesh Window 2, define Top Center as (0,0,-19) and Bottom Center as (0,0,-250), define Radius as 150. Edit the dimension of mesh Window 3, define Top Center as (0,0,35) and Bottom Center as (0,0,9), define Radius as 90. Edit the dimension of mesh Window 4, define Top Center as (0,0,200) and Bottom Center as (0,0,34), define Radius as 100. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) after each edit.
+  4. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}), aby ste upravili rozmery jednotlivých okien. Upravte rozmery mriežky „Okno 1“, nastavte horný stred na (0,0,10) a dolný stred na (0,0,-20), polomer nastavte na 80. Upravte rozmery mriežky Okno 2, nastavte horný stred na (0,0,-19) a dolný stred na (0,0,-250), polomer nastavte na 150. Upravte rozmery mriežky „Okno 3“, nastavte horný stred na (0,0,35) a dolný stred na (0,0,9), polomer nastavte na 90. Upravte rozmery siete v okne 4, nastavte horný stred na (0,0,200) a dolný stred na (0,0,34), polomer nastavte na 100. Po každej úprave kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
 
-  5. Set the element size of mesh Window 1 with '2 mm', the element size of mesh Window 2 with '3 mm', the element size of mesh Window 3 with '4 mm', and the element size of mesh Window 4 with '6 mm'.
+  5. Nastavte veľkosť prvkov siete v okne 1 na „2 mm“, veľkosť prvkov siete v okne 2 na „3 mm“, veľkosť prvkov siete v okne 3 na „4 mm“ a veľkosť prvkov siete v okne 4 na „6 mm“.
 
-In Lagrangian extrusion, the mesh windows will be used for the initial mesh generation and the remeshing during simulation. So, we must consider the material flow range during simulation and define correct mesh windows.
+Pri Lagrangeovej extrúzii sa okná siete použijú na počiatočné vytvorenie siete a na opätovné vytvorenie siete počas simulácie. Musíme teda zohľadniť rozsah toku materiálu počas simulácie a definovať správne okná siete.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0015.jpg' | relative_url }})
 
-After defining the mesh windows, click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Click ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) in **Default Boundary Conditions** message dialog.
+Po definovaní okien siete kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). V dialógovom okne **Predvolené okrajové podmienky** kliknite na ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}).
 
-The mesh generation of the workpiece is shown in Fig. LAGEXL1.15. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material page.
+Vytvorenie siete obrobku je znázornené na obr. LAGEXL1.15. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdete na stránku „Materiál“.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0015_1.jpg' | relative_url }})
 
-Workpiece Mesh Windows page
+Stránka „Okná so sieťou obrobkov“
 
-### Workpiece Material
+### Materiál obrobku
 
-Assign **ALUMINUM-6061[70-1000F(20-550C)]** as the material for Workpiece, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Boundary condition page.
+Ako materiál pre obrobok zadajte **ALUMINUM-6061[70-1000F(20-550C)]** a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku s okrajovými podmienkami.
 
-### Workpiece Boundary condition
+### Okrajová podmienka obrobku
 
-The system automatically assigned the symmetry plane BCC to the workpiece after mesh generation (see Fig. LAGEXL1.16.).
+Systém po vytvorení siete automaticky priradil obrobku rovinu symetrie BCC (pozri obr. LAGEXL1.16.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0016.jpg' | relative_url }})
 
-Symmetry BCC of Workpiece
+Symetria BCC obrobku
 
-The system automatically assigned Heat Exchange with Environment BCC to the workpiece after mesh generation. The result is shown in Fig. LAGEXL1.17. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until to Property page.
+Systém po vytvorení siete automaticky priradil k obrobku výmenu tepla s prostredím BCC. Výsledok je zobrazený na obr. LAGEXL1.17. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nedostanete na stránku Vlastnosti.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0017.jpg' | relative_url }})
 
-Thermal BCC of the workpiece
+Tepelná BCC obrobku
 
-### Workpiece Target volume
+### Cieľový objem obrobku
 
-In the **Property** page, check Active in **FEM + meshing** , click ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) to set Volume as the initial volume of the workpiece (see Fig. LAGEXL1.18.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until to Control page.
+Na stránke **Vlastnosti** zaškrtnite políčko Aktívne v časti **FEM + vytváranie siete**, kliknite na ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) a nastavte Objem ako počiatočný objem obrobku (pozri obr. LAGEXL1.18.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nedostanete na stránku Ovládanie.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0018.jpg' | relative_url }})
 
-Target volume setting of the workpiece
+Nastavenie cieľového objemu obrobku
 
-## Controls
+## Ovládacie prvky
 
-In the Control page. we can use ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) to adjust the positions of objects.
+Na stránke „Ovládanie“ môžeme pomocou ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) nastaviť polohy objektov.
 
-All the die components were imported from the .stl files. The container and the die were in the correct locations. The ram is away from the workpiece. Since the workpiece was generated as a primitive within DEFORM, we need to move the ram down to touch the workpiece.
+Všetky súčasti formy boli naimportované zo súborov .stl. Kontajner aj forma sa nachádzali na správnych miestach. Závit je vzdialený od obrobku. Keďže bol obrobok vytvorený ako primitív v programe DEFORM, musíme posunúť závit nadol, aby sa dotýkal obrobku.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) and specify Interference positioning. Select the Ram as the Positioning object and the Workpiece as the Reference. Verify that the Approach direction is **–Z**. Click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) and then ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Contact page.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) a zadajte polohovanie s ohľadom na kolízie. Ako polohovací objekt vyberte beran a ako referenčný bod obrobok. Overte, či je smer priblíženia **–Z**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) a potom na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre prechod na stránku „Kontakt“.
 
-## Contact
+## Kontakt
 
-In the Contact page, click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) to create all the relationships of the workpiece with other objects. Then, let's edit the parameters setting for contact relationships of the workpiece.
+Na stránke „Kontakt“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), aby ste vytvorili všetky vzťahy obrobku s ostatnými objektmi. Následne upravme nastavenie parametrov pre kontaktné vzťahy obrobku.
 
-  * Select the **Ram – Workpiece** relationship and click ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Define contact separation as '**Separable** ', **Shear** friction as '**1.0** ' and heat transfer coefficient as '**11.0** '.
+  * Vyberte vzťah **Ram – Obrobok** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Nastavte oddelenie kontaktov na hodnotu „**Oddeliteľné**“, trenie **šmykové** na hodnotu „**1,0**“ a koeficient prenosu tepla na hodnotu „**11,0**“.
 
-  * Select the **Container – Workpiece** relationship and click ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Define contact separation as '**Separable** ', **Shear** friction as '**1.0** ' and heat transfer coefficient as '**11.0** '.
+  * Vyberte vzťah **Kontajner – Obrobok** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Nastavte oddeľovateľnosť kontaktu na hodnotu „**Oddeliteľný**“, trenie **šmykové** na hodnotu „**1,0**“ a koeficient prenosu tepla na hodnotu „**11,0**“.
 
-  * Select the **Die – Workpiece** relationship and click ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Define contact separation as '**Separable** ', **Shear** friction as' **0.4** ' and heat transfer coefficient as '**11.0** '.
+  * Vyberte vzťah **Forma – Obrobok** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Nastavte oddelenie kontaktných plôch na hodnotu „**Oddeliteľné**“, trenie **šmykové** na hodnotu „**0,4**“ a koeficient prenosu tepla na hodnotu „**11,0**“.
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) to determine an intelligent contact tolerance. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact for all the relationships.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) nastavíte inteligentnú toleranciu kontaktov. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) vygenerujete kontakty pre všetky vzťahy.
 
-The contacts of the workpiece with other objects is shown in Fig. LAGEXL1.19. We can see contacts of the workpiece with the ram and the die. Currently there is no contact of the workpiece with the container because there is a gap between the two objects. The workpiece will expand to contact the container during the simulation. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until to Step Control page.
+Kontakty obrobku s inými objektmi sú znázornené na obr. LAGEXL1.19. Vidíme kontakty obrobku s piestom a maticou. V súčasnosti nedochádza ku kontaktu obrobku s nádobou, pretože medzi týmito dvoma objektmi je medzera. Počas simulácie sa obrobok roztiahne a dostane sa do kontaktu s nádobou. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Step Control.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0019.jpg' | relative_url }})
 
-Contacts of the Workpiece
+Dotykové body obrobku
 
-## Step Controls
+## Ovládacie prvky krokov
 
-Click ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) to switch to expert mode in the top menu bar for step control.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) v hornom paneli ponúk prepnite do expertného režimu pre krokové riadenie.
 
-### Simulation steps
+### Kroky simulácie
 
-In**Simulation step** dialog, set **Number of simulation steps** as **400** and **Step increment to save** as **20**. Set **Primary Die** as ' **2 -Ram** ' (see Fig. LAGEXL1.20.).
+V dialógovom okne **Simulačný krok** nastavte **Počet simulačných krokov** na hodnotu **400** a **Krok ukladania** na hodnotu **20**. Nastavte **Primárny čip** na ' **2 -Ram** ' (pozri obr. LAGEXL1.20.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0020.jpg' | relative_url }})
 
-Simulation step setup
+Nastavenie simulačného kroku
 
-### Step increment
+### Krok prírastku
 
-In Lagrangian extrusion simulation, if there is a gap between the billet and the container, the first deformation stage is compressing the billet to fill the gap, the second deformation stage is extruding process.
+Pri simulácii extruzie podľa Lagrangeovej metódy, ak medzi polotovarom a nádobou existuje medzera, prvou fázou deformácie je stlačenie polotovaru s cieľom vyplniť túto medzeru, druhou fázou deformácie je samotný proces extruzie.
 
-For extrusion simulation, the general rule to set up step increment is that we do not want the material to flow more than 1/3 of their element size in any step.
+Pri simulácii extrudovania platí všeobecné pravidlo pre nastavenie veľkosti kroku, že v žiadnom kroku nechceme, aby sa materiál posunul o viac ako 1/3 veľkosti prvku.
 
-In order to set up step increment correctly, we should learn about some basic extrusion parameters of the application.
+Aby sme správne nastavili veľkosť kroku, mali by sme sa oboznámiť s niektorými základnými parametrami extrudovania v danej aplikácii.
 
-In this example, for the quarter model, the entry area is 3846.50 mm2, the exit area is 726.52 mm2. So, the extrusion ratio is 5.29.
+V tomto príklade má štvrťový model vstupnú plochu 3846,50 mm² a výstupnú plochu 726,52 mm². Pomerný výtlak je teda 5,29.
 
-If we use a billet with diameter of 138 mm and height with 178 mm in Lagrangian simulation, for the quarter model, the billet area is 3737.39 mm2. The volume gap between the billet and the container is 19421.58 mm3 ((3846.50-3737.39)*178). The height for the billet to fill the volume gap is 5.20 mm (19421.58/3737.39). If the movement velocity of the ram is 4 mm/s, then the time to fill the volume gap is 1.30 s.
+Ak v Lagrangeovej simulácii použijeme sochoru s priemerom 138 mm a výškou 178 mm, plocha sochory pre štvrtinový model je 3737,39 mm². Objemová medzera medzi sochárskou tyčou a nádobou je 19 421,58 mm³ ((3 846,50 – 3 737,39) × 178). Výška, o ktorú musí polotovar vyjsť, aby vyplnil objemovú medzeru, je 5,20 mm (19 421,58 / 3 737,39). Ak je rýchlosť pohybu piestu 4 mm/s, čas potrebný na vyplnenie objemovej medzery je 1,30 s.
 
-Based on above understanding, we can set different step increments in different deformation stages. In the gap filling stage, the minimum element size is 2 mm, the movement velocity of the ram is 4 mm/s, so the appropriate time/step of the ram would be 0.17 sec/step. In the extruding stage, the minimum element size is 2 mm, the movement velocity of the extrudate is 21.16 mm/s, so the appropriate time/step of the ram would be 0.03 sec/step.
+Na základe uvedeného môžeme v jednotlivých fázach deformácie nastaviť rôzne krokové prírastky. Vo fáze vyplňovania medzery je minimálna veľkosť prvku 2 mm, rýchlosť pohybu piestu je 4 mm/s, takže vhodný čas na jeden krok piestu by bol 0,17 s/krok. Vo fáze extrudovania je minimálna veľkosť prvku 2 mm, rýchlosť pohybu extrudátu je 21,16 mm/s, takže vhodný čas kroku piestu by bol 0,03 s/krok.
 
-In the **Step increment** dialog, set **Solution step definition** as **Time**. Set **Step increment control** to **f(stroke)** and click ![]({{ '/assets/icons/pre_icons/mo_define..._button2.jpg' | relative_url }}). Set the function as shown in Fig. LAGEXL1.21. and then click ![]({{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
+V dialógovom okne **Krok prírastku** nastavte **Definíciu kroku riešenia** na **Čas**. Nastavte **Ovládanie kroku** na **f(zdvih)** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_define..._button2.jpg' | relative_url }}). Nastavte funkciu podľa obr. LAGEXL1.21. a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
 
-**Stroke** |  **Step definition**  
+**Mŕtvica** |  **Definícia kroku**  
 ---|---  
-0 |  0.17  
-5.2 |  0.17  
-5.21 |  0.03  
-200 |  0.03  
+0 |  0,17  
+5,2 |  0,17  
+5,21 |  0,03  
+200 |  0,03  
   
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0021.jpg' | relative_url }})
 
-Step definition
+Definícia kroku
 
-By the way, if the gap is very small, we can also use a constant step increment with the appropriate time/step of the extruding stage for the whole deformation process.
+Mimochodom, ak je medzera veľmi malá, môžeme pre celý proces deformácie použiť aj konštantný krok s primeraným časom na krok v fáze extrudovania.
 
-### Stop criteria
+### Kritériá na ukončenie
 
-In the **Stopping criteria** dialog, define **Primary****die****displacement** Z as **28** mm as show in Fig. LAGEXL1.22.
+V dialógovom okne **Kritériá zastavenia** nastavte hodnotu **Primárny****posun****matrice** Z na **28** mm, ako je znázornené na obr. LAGEXL1.22.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0022.jpg' | relative_url }})
 
-Stopping control
+Ovládanie zastavenia
 
-### Double constraints settings
+### Nastavenia dvojitých obmedzení
 
-In order to ensure that no velocity leaks occur in the die and allow the correct outlet velocity to be calculated, it's better to set double constraints on edges for extrusion.
+Aby sa zabránilo úniku rýchlosti v tvárnici a aby bolo možné vypočítať správnu výstupnú rýchlosť, je pri extrudovaní lepšie nastaviť na hranách dvojité obmedzenia.
 
-In the Control files dialog, check **Double constraints on edges** , set **Angle****range****from****75** deg to **105** deg, also check **Include convex** edges (see Fig. LAGEXL1.23.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Generate DB.
+V dialógovom okne „Kontrolné súbory“ zaškrtnite políčko **Dvojité obmedzenia na hranách**, nastavte **rozsah uhlov** od **75** stupňov do **105** stupňov a zaškrtnite tiež políčko **Zahrnúť konvexné** hrany (pozri obr. LAGEXL1.23.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na vygenerovanie databázy.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0023.jpg' | relative_url }})
 
-Double constraints setting
+Nastavenie dvojitých obmedzení
 
-## Generate DB
+## Vytvoriť databázu
 
-Click ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) to see if anything was missed in the setup and then click on the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. Observe the message in Message tab informing database generation status.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali, či sa pri nastavení na niečo nezabudlo, a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) na vytvorenie databázy. Pozrite si správu na karte Správa, ktorá informuje o stave vytvárania databázy.
 
-## Running Simulation
+## Spustenie simulácie
 
-Once the database has been generated switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. LAGEXL1.24. Use the default **Continue****Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom operácií. Kliknutím na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. LAGEXL1.24. Použite predvolenú možnosť **Pokračovať****Spustiť** na výber možnosti „**Pokračovať od posledného kroku**“ (od kroku -1) a potom vyberte režim simulácie pomocou prepínača **Interaktívny**. Kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-To define MPI settings, click on ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}) button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend on your 3D MPI license).
+Ak chcete nastaviť parametre MPI, kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}). Rozbalí sa okno „Run Options“, v ktorom sa zobrazia možnosti na nastavenie parametrov MPI pre simuláciu (maximálny počet procesorov, ktorý je možné nastaviť, závisí od vašej licencie 3D MPI).
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0024.jpg' | relative_url }})
 
-Run Simulation Window
+Spustiť okno simulácie
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, make sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. User can view the Extrusion process from simulation graphics as the simulation proceeds to the specified Step definition.
+Priebeh simulácie môžete sledovať na kartách „Simulation Message“ a „Simulation Log“; uistite sa, že je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). Používateľ môže sledovať proces extrudovania na simulačných grafoch v priebehu simulácie až do dosiahnutia zadaného kroku.
 
-## Post Processing
+## Následné spracovanie
 
-From the message file, we can see that 'PROGRAM STOPPED!' and 'THE Z STROKE 28.0000000 HAS REACHED THE SPECIFIED LIMIT 28.0000000' after step 215.
+Zo súboru so správami je zrejmé, že po kroku 215 sa zobrazili hlásenia „PROGRAM STOPPED!“ a „THE Z STROKE 28.0000000 HAS REACHED THE SPECIFIED LIMIT 28.0000000“.
 
-When the simulation is completed, review the results by switching to Post mode using the ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) button above the Simulation tool bar.
+Po dokončení simulácie si výsledky prezrite tak, že prejdete do režimu Post pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) nad panelom nástrojov Simulácia.
 
-Play through the steps of the simulation and look how the workpiece flows in extrudate region in Lagrangian extrusion operation. From the simulation results, we can see that surround profiles (D2 & D3) are bending toward the central profile (D1) during the extrusion process.
+Prejdite jednotlivými krokmi simulácie a sledujte, ako sa obrobok pohybuje v oblasti extrudátu pri Lagrangeovom procese extrudovania. Z výsledkov simulácie je zrejmé, že okrajové profily (D2 a D3) sa počas procesu extrudovania ohýbajú smerom k centrálnemu profilu (D1).
 
-Plots of the Effective strain and Temperature of the workpiece at last step are given in Fig. LAGEXL1.25. and Fig. LAGEXL1.26.
+Grafy efektívneho deformácie a teploty obrobku v poslednom kroku sú uvedené na obr. LAGEXL1.25 a obr. LAGEXL1.26.
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0025.jpg' | relative_url }})
 
-Effective strain distribution of the workpiece at last step
+Efektívne rozloženie deformácie obrobku v poslednom kroku
 
 ![]({{ '/assets/images/labs/extrusion_labs/lagrangian_extrusion_lab1/image0026.jpg' | relative_url }})
 
-Temperature distribution of the workpiece at last step
+Rozloženie teploty obrobku v poslednom kroku

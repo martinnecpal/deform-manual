@@ -1,9 +1,9 @@
 ---
 lang: sk
-title: "Material Parameters Fitting labs Main PG"
+title: "Parametre materiálu Montážne laboratóriá Hlavné PG"
 ---
 
-# Material Parameters Fitting labs
+# Parametre materiálu Montáž laboratórií
 
 [Flow Stress Fitting Lab]({{ '/docs/sk/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/' | relative_url }})
 

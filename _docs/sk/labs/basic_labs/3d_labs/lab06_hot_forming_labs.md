@@ -1,379 +1,379 @@
 ---
 lang: sk
-title: "Lab06 Hot Forming Labs"
+title: "Lab06 – Laboratóriá pre tvárnenie za tepla"
 ---
 
-# Lab06 Hot Forming Labs
+# Lab06 – Laboratórne cvičenia z tvárnenia za tepla
 
-In this lab we will setup Tee forging operation using MO Forming operation.
+V tomto laboratórnom cvičení nastavíme operáciu kovania typu „Tee“ pomocou operácie MO Forming.
 
   
-Lab 1. Operation 1: Upsetting operation
+Laboratórium 1. Operácia 1: Operácia lisovania
 
-1.1. Creating a New Problem
+1.1. Vytvorenie nového problému
 
-1.2. Adding 3D Forming operation
+1.2. Pridanie operácie 3D tvarovania
 
-1.3. Simulation Controls
+1.3. Ovládacie prvky simulácie
 
-1.4. Adding Objects
+1.4. Pridávanie objektov
 
-1.5. Workpiece
+1.5. Obrobok
 
-1.6. Import Workpiece Geometry
+1.6. Import geometrie obrobku
 
-1.7. Workpiece mesh Generation
+1.7. Vytvorenie siete obrobku
 
-1.8. Assign Material for Workpiece
+1.8. Priradiť materiál k obrobku
 
-1.9. Top Die Definition
+1.9. Definícia hornej matrice
 
-1.10. Import Top Die geometry
+1.10. Import geometrie hornej matrice
 
-1.11. Assign Top Die movement
+1.11. Priradiť pohyb hornej matrice
 
-1.12. Bottom Die Definition
+1.12. Definícia spodnej matrice
 
-1.13. Import Bottom Die Geometry
+1.13. Import geometrie spodnej formy
 
-1.14. Object Positioning
+1.14. Polohovanie objektov
 
-1.15. Contact (Inter object Relation) Definition
+1.15. Definícia kontaktu (vzťah medzi objektmi)
 
-1.16. Stopping Controls Definition
+1.16. Definícia ovládacích prvkov na zastavenie
 
-1.17. Step Controls
+1.17. Ovládacie prvky krokov
 
-1.18. Generate Database
+1.18. Vytvorenie databázy
 
-1.19. Running simulation
+1.19. Spustenie simulácie
 
-1.20. Post process the upsetting operation
+1.20. Následná úprava po operácii zhutňovania
 
-Lab 2. Operation2 - Finish Forge operation
+Laboratórium 2. Operácia 2 – Dokončenie operácie v kováčskej dielni
 
-2.1. Add and Define 2nd operation
+2.1. Pridanie a definovanie druhej operácie
 
-2.2. Scheduled positioning
+2.2. Plánované umiestnenie
 
-2.3. Contact (Inter object Relation) Definition
+2.3. Definícia vzťahu (vzťah medzi objektmi)
 
-2.4. Stopping controls
+2.4. Ovládacie prvky na zastavenie
 
-2.5. Step Controls
+2.5. Ovládacie prvky krokov
 
-2.6. Generating DB
+2.6. Vytvorenie databázy
 
-2.7. Running simulation
+2.7. Spustenie simulácie
 
-2.8. Post processing finishing operation
+2.8. Dokončovacie operácie v rámci následného spracovania
 
-## Operation 1: Upsetting operation
+## Operácia 1: Operácia lisovania
 
-### Creating a New Problem
+### Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear as shown below Fig. L1.1.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte **DEFORM GUI Main** vxx.xx. Zobrazí sa hlavné okno DEFORM GUI Main, ako je znázornené na obr. L1.1.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg' | relative_url }})
 
-Creating New project from GUI Main
+Vytvorenie nového projektu z hlavného okna grafického rozhrania
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in 1. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** " radio button in Unit field. Define Problem Name as "**Tee** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie úlohy, ako je znázornené na obrázku 1. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli Jednotky vyberte prepínač „**Angličtina**“. Názov úlohy zadajte ako „**Tee**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak políčko „Zobraziť dialógové okno s možnosťami“ nezaškrtnete, nezobrazí sa dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili novú úlohu s použitím integrovaného výrobného procesu Deform.
 
-MO wizard will open along with New Project window (See Fig. L1.2.), defined problem name ‘**Tee** ’ is updated as the project name along with unit system. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.  
-If required, user can change the Unit system and add operation by selecting respective operation from First operation pull down list and turning on checkbox and using Copy Existing project option, user can import previous saved projects as new project. 
+Spolu s oknom Nový projekt sa otvorí sprievodca MO (pozri obr. L1.2.), pričom definovaný názov úlohy „**Tee**“ sa aktualizuje ako názov projektu spolu so systémom jednotiek. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.  
+V prípade potreby môže používateľ zmeniť systém jednotiek a pridať operáciu tak, že z roletového zoznamu „Prvá operácia“ vyberie príslušnú operáciu a zaškrtne príslušné políčko. Pomocou možnosti „Kopírovať existujúci projekt“ môže používateľ importovať predtým uložené projekty ako nové projekty. 
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0002.jpg' | relative_url }})
 
-New Project definition window in MO
+Okno „Definícia nového projektu“ v MO
 
-### Adding 3D Forming operation 
+### Pridanie operácie 3D tvarovania 
 
-Once you click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button, a Multiple Operation wizard will open to setup the problem. Add 3D Forming operation from Operations list in Explorer, operation can be added by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to **3D Forming operation**(See Fig. L1.3.) or user can also add by drag and drop into the Operation Editor.
+Po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) sa otvorí sprievodca viacerými operáciami, v ktorom je možné nastaviť úlohu. Pridajte operáciu 3D tvarovania zo zoznamu operácií v Průzkumníku. Operáciu môžete pridať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa položky **Operácia 3D tvarovania** (pozri obr. L1.3.) alebo ju môžete pridať aj pretiahnutím do Editoru operácií.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0003.jpg' | relative_url }})
 
-Adding 3D Forming operation
+Pridanie operácie 3D tvárnenia
 
-### Simulation Controls
+### Ovládacie prvky simulácie
 
-This lab is an isothermal setup so, in **Simulation****controls** page **uncheck** the **Heat****transfer** mode check box (See Fig. L1.4.). Then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Toto laboratórium je izotermické zariadenie, preto na stránke **Simulácia****ovládacie prvky** **zrušte zaškrtnutie** políčka režimu **Prenos tepla** (pozri obr. L1.4.). Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0004.jpg' | relative_url }})
 
-Selecting Simulation mode
+Výber režimu simulácie
 
-### Adding Objects
+### Pridávanie objektov
 
-For this operation we required three objects, if there aren't already three objects, add three objects by clicking the ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) button. The three objects will be named as Workpiece, Top Die and Bottom Die, see Fig. L1.5., then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). 
+Na túto operáciu sme potrebovali tri objekty. Ak ešte nemáte tri objekty, pridajte ich kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}). Tieto tri objekty budú pomenované ako „Obrobok“, „Horná matrica“ a „Spodná matrica“ (pozri obr. L1.5.), potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). 
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0005.jpg' | relative_url }})
 
-Adding objects in object page
+Pridávanie objektov na stránke objektov
 
-### Workpiece
+### Obrobok
 
-Change the Workpiece Temperature to **2150** °**F** as shown in Fig. L1.6. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Zmeňte teplotu obrobku na **2150** °**F**, ako je znázornené na obr. L1.6. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0006.jpg' | relative_url }})
 
-Workpiece Object page
+Stránka „Objekt obrobku“
 
-### Import Workpiece Geometry
+### Import geometrie obrobku
 
-In **Geometry** page, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) button, import **TeeBillet.stl** file from /3D/Labs/ folder as shown in Fig. L1.7.
+Na stránke **Geometria** kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice) a naimportujte súbor **TeeBillet.stl** zo zložky /3D/Labs/, ako je znázornené na obr. L1.7.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0007.jpg' | relative_url }})
 
-Importing Workpiece geometry
+Import geometrie obrobku
 
-Check the geometry by clicking on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) action label. The “Geometry Checking Result” window will pop-up with description of geometry checking result along with description of what constitutes a legal geometry as shown in Fig. L1.8. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). 
+Skontrolujte geometriu kliknutím na akčný štítok ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Zobrazí sa okno „Výsledok kontroly geometrie“ s popisom výsledku kontroly geometrie spolu s popisom toho, čo predstavuje platnú geometriu, ako je znázornené na obr. L1.8. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). 
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0008.jpg' | relative_url }})
 
-Check geometry output page
+Stránka s výstupnými údajmi o geometrii
 
-### Workpiece mesh Generation
+### Vytvorenie siete obrobku
 
-Define **target number of elements** as **32000** and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) option as shown in Fig. L1.9. Different type of settings for mesh are accessible from expert mode but in this lab, we will be using default settings for mesh. Generated mesh for Workpiece looks like as shown in Fig. L1.9. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Nastavte **cieľový počet prvkov** na hodnotu **32000** a kliknite na možnosť ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}), ako je znázornené na obr. L1.9. V expertnom režime sú k dispozícii rôzne typy nastavení siete, v tomto cvičení však budeme používať predvolené nastavenia siete. Vygenerovaná sieť pre obrobok vyzerá tak, ako je znázornené na obr. L1.9. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0009.jpg' | relative_url }})
 
-Generating mesh for Workpiece
+Vytvorenie siete pre obrobok
 
-### Assign Material for Workpiece
+### Priradiť materiál k obrobku
 
-In Material window, load the material **AISI-316[70-2020F(20-1100C)]** from DEFORM Material library, from **Stainless****steel** category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) button. This can be done as shown in below Fig. L1.10. by clicking ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button in Material Library window. Material can also be loaded from Materials list in Explorer. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top Die page.
+V okne „Material“ načítajte materiál **AISI-316[70-2020F(20-1100C)]** z knižnice materiálov DEFORM, z kategórie **Nerezová****** pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice). To je možné vykonať tak, ako je znázornené na obr. L1.10 nižšie, kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) v okne Knižnica materiálov. Materiál je možné načítať aj zo zoznamu materiálov v Průzkumníku. Klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Horná matrica“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0010.jpg' | relative_url }})
 
-Loading material for Workpiece
+Nakladanie materiálu pre obrobok
 
-### Top Die Definition
+### Definícia pojmu „Top Die“
 
-In Top Die page, define the Object Temperature as **300°F** as shown in Fig. L1.11., click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Top Die“ nastavte teplotu objektu na hodnotu **300 °F**, ako je znázornené na obr. L1.11, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0011.jpg' | relative_url }})
 
-Top Die object page
+Na začiatok stránky objektu „Die“
 
-### Import Top Die geometry
+### Import geometrie hornej matrice
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load Geometry from Library) button, import **TeeTop.stl** file from **/3D/Labs/** folder as shown in Fig. L1.12. Then check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) label in Geometry page. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) a načítajte súbor **TeeTop.stl** zo zložky **/3D/Labs/**, ako je znázornené na obr. L1.12. Následne skontrolujte geometriu pomocou položky ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) na stránke Geometria. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0012.jpg' | relative_url }})
 
-Importing geometry for Top Die
+Import geometrie pre hornú matricu
 
-### Assign Top Die movement
+### Priradiť pohyb hornej matrice
 
-Under the movement page, select **speed** movement type, be sure movement is in the **–Z** direction and then enter **10** in/sec as **Constant** value as shown in Fig. L1.13. Top Die will move with a speed of 10 in/sec. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Pohyb“ vyberte typ pohybu **rýchlosť**, uistite sa, že pohyb prebieha v smere **–Z**, a potom zadajte hodnotu **10** palcov/sekundu ako hodnotu **Konštanta**, ako je znázornené na obr. L1.13. Horná matrica sa bude pohybovať rýchlosťou 10 in/sec. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0013.jpg' | relative_url }})
 
-Defining movement for Top Die
+Definovanie pohybu hornej matrice
 
-### Bottom Die Definition
+### Definícia spodnej matrice
 
-In Bottom Die page, define the Object Temperature as **300°** F, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Spodná forma“ nastavte teplotu objektu na **300°** F a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Import Bottom Die Geometry
+### Import geometrie spodnej matrice
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load Geometry from Library) button, import **TeeBottom.stl** file. Then check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) label from Geometry page. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) a importujte súbor **TeeBottom.stl**. Následne skontrolujte geometriu pomocou položky ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) na stránke Geometria. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Object Positioning
+### Umiestňovanie objektov
 
-We will perform this operation with the Workpiece in vertical direction. We will first position the Workpiece on the Bottom Die. To make it easier to see, change to “User Defined Object Display” mode in the control bar at the bottom of the object tree. Select Top Die in Object mode window and uncheck the check box in Visible column as shown in Fig. L1.14., then click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
+Túto operáciu vykonáme so sústružným obrobkom v zvislom smere. Najskôr umiestnime sústružný obrobok na spodnú matricu. Aby to bolo lepšie vidieť, prepnite sa do režimu „Zobrazenie objektov definovaných používateľom“ na ovládacom paneli v spodnej časti stromu objektov. V okne „Object mode“ vyberte hornú matricu a zrušte zaškrtnutie políčka v stĺpci „Visible“, ako je znázornené na obr. L1.14, potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0014.jpg' | relative_url }})
 
-User define Object display selection and Object positioning page
+Stránka pre výber zobrazenia objektov definovaných používateľom a pre umiestňovanie objektov
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. Object positioning page will open as shown in Fig. L1.14. Select “**Rotational** ” positioning and then select **Workpiece** as positioning object. Use the **mouse** to pick a point around the center of the Workpiece, and then select the “**X** ” axis as the axis of rotation. Enter an angle of **90** degrees, and then click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). The Workpiece should now be positioned vertically, see Fig. L1.15.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}). Otvorí sa stránka na polohovanie objektu, ako je znázornené na obr. L1.14. Vyberte polohovanie „**Rotácia**“ a potom ako polohovací objekt vyberte **obrobok**. Pomocou **myši** vyberte bod v blízkosti stredu obrobku a potom ako os otáčania vyberte os „**X**“. Zadajte uhol **90** stupňov a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Obrobok by mal byť teraz umiestnený zvisle, pozri obr. L1.15.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0015.jpg' | relative_url }})
 
-Object positioning window page
+Stránka okna na umiestňovanie objektov
 
-Switch to “**Drag** ” positioning and use the mouse to drag the Workpiece to a flat spot on the die as shown in Fig. L1.16., not too close to either the forming cavity or the edge of the die. Now we will use “**Interference** ” positioning to place the Workpiece on the Bottom Die. 
+Prepnite na polohovanie „**Drag**“ a pomocou myši presuňte obrobok na rovnú plochu na matrici, ako je znázornené na obr. L1.16, nie príliš blízko k formovacej dutine ani k okraju matrice. Teraz použijeme polohovanie „**Interference**“ na umiestnenie obrobku na spodnú formu. 
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0016.jpg' | relative_url }})
 
-Positioning the workpiece on bottom die
+Umiestnenie obrobku na spodnú matricu
 
-Click on User defined mode ![]({{ '/assets/icons/pre_icons/mo_show_user_defined_obj_icon.jpg' | relative_url }}) and check the Top Die visible check box. Now, position Top Die using **Interference** Positioning on Workpiece so that it is in contact with the Workpiece. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknite na používateľsky definovaný režim ![]({{ '/assets/icons/pre_icons/mo_show_user_defined_obj_icon.jpg' | relative_url }}) a zaškrtnite políčko „Horná matrica je viditeľná“. Teraz umiestnite hornú matricu pomocou polohovania **interferenciou** na obrobku tak, aby bola v kontakte s obrobkom. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-###  Contact (Inter object Relation) Definition
+###  Definícia pojmu „kontakt“ (vzťah medzi objektmi)
 
-Select **User****type** contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. It will add the relationship between the Workpiece, Top Die and Bottom Die shown in Fig. L1.17.
+Vyberte kontakt typu **Používateľ****typ** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Tým sa pridá vzťah medzi obrobkom, hornou maticou a spodnou maticou, ako je znázornené na obr. L1.17.
 
   
-Highlight the Top Die – Workpiece relationship and then click on the ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button to modify the relationship. In the friction tab, see Fig. L1.18., there is a drop down box for **Constant** field that allows the user to choose the appropriate friction conditions of common forming processes, select**Hot forging (lubricated)** from drop down box, a friction value of **0.3** will be added to the Constant friction field.
+Zvýraznite vzťah „Horná matrica – obrobok“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}), aby ste tento vzťah upravili. Na karte „Trenie“ (pozri obr. L1.18) sa nachádza roletové menu pre pole **Konštanta**, ktoré umožňuje používateľovi vybrať vhodné podmienky trenia bežných procesov tvárnenia. Vyberte z roletového menu položku **Kovanie za tepla (s mazáním)**, čím sa do poľa Konštanta trenia vloží hodnota trenia **0,3**.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to go back to Inter-Object window. Since the friction conditions are the same for all the object pairs, ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button can be used to copy the interface properties from the first relationship to all others. After this is done, all relationships will have a friction of **0.3** defined. Use ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) icon to determine a suitable contact tolerance (a value of about 0.001169" will be calculated), then click ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button to generate contact. If you rotate the objects around in graphics window, you will see that contact was generated between the two objects. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Stopping controls window.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) sa vrátite do okna Inter-Object. Keďže podmienky trenia sú rovnaké pre všetky páry objektov, tlačidlom ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môžete skopírovať vlastnosti rozhrania z prvého vzťahu do všetkých ostatných. Po vykonaní tejto operácie budú mať všetky vzťahy definované trenie **0,3**. Pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) určite vhodnú toleranciu kontaktu (vypočíta sa hodnota približne 0,001169"), potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) na vytvorenie kontaktu. Ak otočíte objekty v grafickom okne, uvidíte, že medzi dvoma objektmi vznikol kontakt. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno Stopping controls.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0017.jpg' | relative_url }})
 
-Contact page showing contact pairs
+Stránka s kontaktmi zobrazujúca dvojice kontaktov
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0018.jpg' | relative_url }})
 
-Defining Friction value from drop down box 
+Nastavenie hodnoty trenia z roletového menu 
 
-### Stopping Controls Definition
+### Definícia ovládacích prvkov na zastavenie
 
-We will stop when the dies are 1.500” apart. So, set “Stop Controls” to “**Distance****between objects** " and enter a value of **1.5** ” in Z direction as shown in Fig. L1.19. To define stopping distance between dies, turn on shaded mode using ![]({{ '/assets/icons/pre_icons/mo_shading_mode_icon.jpg' | relative_url }}), select a point on the bottom surface of the top die, and then second point on the top surface of the bottom die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Step page.
+Zastavíme sa, keď bude vzdialenosť medzi formami 1,500”. Nastavte teda „Stop Controls“ na „**Vzdialenosť****medzi objektmi**“ a zadajte hodnotu **1,5**” v smere Z, ako je znázornené na obr. L1.19. Na definovanie zastavovacej vzdialenosti medzi maticami zapnite režim tieňovania pomocou ![]({{ '/assets/icons/pre_icons/mo_shading_mode_icon.jpg' | relative_url }}), vyberte bod na spodnej ploche hornej matice a potom druhý bod na hornej ploche spodnej matice. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Step“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0019.jpg' | relative_url }})
 
-Defining Distance between dies stopping controls
+Určenie vzdialenosti medzi ovládacími prvkami na zastavenie lisovacích foriem
 
-### Step Controls
+### Ovládacie prvky krokov
 
-In Step page, change the **Number****of Steps** to **50** , **set increment to save** as **5** and Solution step definition as **0.036** Die displacement (See Fig. L1.20.), then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Step“ (Krok) zmeňte **počet krokov** na **50**, **nastavte krok ukladania** na **5** a definíciu kroku riešenia na **0,036** Posun matrice (pozri obr. L1.20.), potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0020.jpg' | relative_url }})
 
-Step control page
+Stránka na ovládanie krokov
 
-### Generate Database
+### Vytvoriť databázu
 
-In Generate DB page. Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process:  
-Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).   
+Na stránke „Generate DB“. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby program skontroloval, či v nastavení úlohy niečo nechýba. Počas kontroly:  
+Správy v červenej farbe označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli definovať údaje o materiáli).   
   
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, click on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab to run simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Akonáhle program dokončí zapisovanie databázy, kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) a spustite simuláciu.
 
-### Running simulation
+### Spustenie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog Use the default **Continue Run** option to select “**Continue from the last step** ” option as shown in Fig. L1.21., then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia). Pomocou predvolenej možnosti **Continue Run** (Pokračovať v spúšťaní) vyberte možnosť „**Continue from the last step**“ (Pokračovať od posledného kroku), ako je znázornené na obr. L1.21, potom vyberte režim simulácie **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie.
 
 .
 
   
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0021.jpg' | relative_url }})
 
-Run simulation window page
+Stránka okna simulácie behu
 
   
-The progress of the simulation can be monitored while it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. As long as ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.  
+Priebeh simulácie je možné počas jej vykonávania sledovať na karte „Simulation Message“ a v časti „Simulation Graphics“ v oblasti zobrazenia „Graphics“ v režime simulácie. Pokiaľ je na karte „Simulation Message“ zaškrtnutá možnosť „![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }})“ (čo je predvolené nastavenie), súbor správ sa bude automaticky aktualizovať.  
   
-The Message file provides information about which simulation step the simulation is currently on and gives information dealing with how well the simulation is running.  
+Súbor „Message“ obsahuje informácie o tom, v ktorom simulačnom kroku sa simulácia momentálne nachádza, a poskytuje údaje o tom, ako dobre simulácia prebieha.  
   
-When the simulation is finished without any issues, check the messages in Message file, when operation completes we will see messages as "THE DISTANCE BETWEEN TWO OBJECTS ( 2 3): 1.5000000 HAS REACHED THE SPECIFIED LIMIT 1.5000000 "
+Keď simulácia prebehne bez problémov, skontrolujte správy v súbore správ; po dokončení operácie sa zobrazia správy typu „VZDIALENOSŤ MEDZI DVOMA OBJEKTAMI (2 3): 1,5000000 DOSIAHLA ŠPECIFIKOVANÝ LIMIT 1,5000000“
 
-### Post process the upsetting operation
+### Následná úprava po operácii lisovania
 
-After completion of simulation, switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) mode to view simulation output. Click on ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}) button in Step Browser to see all saved steps as shown in Fig. L1.22.
+Po dokončení simulácie prejdite do režimu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), aby ste si mohli prezrieť výstup simulácie. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}) v prehliadači krokov si môžete zobraziť všetky uložené kroky, ako je znázornené na obr. L1.22.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0022.jpg' | relative_url }})
 
-Step browser in MO Post showing all saved steps
+Prehliadač krokov v aplikácii MO Post, ktorý zobrazuje všetky uložené kroky
 
   
-**State Variable:**  
-From the state variable menu, click on ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) button, select “**Stress![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})** **Effective** ” variable, display type as **Solid** and then click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) as shown in Fig. L1.23., you can also view state variable output in elemental, line or shaded contours. Experiment with each of these settings.
+**Stavová premenná:**  
+V ponuke stavových premenných kliknite na tlačidlo ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}), vyberte premennú „**Stress![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})** **Efektívna**“, typ zobrazenia **Plná** a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}), ako je znázornené na obr. L1.23. Výstup stavovej premennej si môžete zobraziť aj vo forme prvkových, čiarových alebo tieňovaných kontúr. Vyskúšajte si každé z týchto nastavení.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0023.jpg' | relative_url }})
 
-Effective Stress distribution in the workpiece at the end of first operation
+Rozloženie efektívneho napätia v obrobku na konci prvej operácie
 
   
-**Point Tracking:**  
-Select ![]({{ '/assets/icons/post_icons/mo_point_tracking_icon.jpg' | relative_url }}) point tracking. Select few points on the object, and track the points using ![]({{ '/assets/icons/post_icons/mo_track_button.jpg' | relative_url }}) option (See Fig. L1.24.). If a state variable is displayed, then the values of the variables will be graphed at these points.
+**Sledovanie bodov:**  
+Vyberte sledovanie bodov ![]({{ '/assets/icons/post_icons/mo_point_tracking_icon.jpg' | relative_url }}). Vyberte niekoľko bodov na objekte a sledujte ich pomocou možnosti ![]({{ '/assets/icons/post_icons/mo_track_button.jpg' | relative_url }}) (pozri obr. L1.24.). Ak sa zobrazuje stavová premenná, hodnoty tejto premennej sa v týchto bodoch znázornia graficky.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab01_image0024.jpg' | relative_url }})
 
-Point tracking output of Effective strain  
+Výstup sledovania bodov pre efektívnu deformáciu  
 
-## Operation2 - Finish Forge operation
+## Operácia 2 – Dokončenie operácie v kováčni
 
-After completion of simulation and post-processing, switch to ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) mode.
+Po dokončení simulácie a následného spracovania prejdite do režimu ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}).
 
-### Add and Define 2nd operation
+### Pridať a definovať druhú operáciu
 
-Add another Forming operation to setup Finish Forge operation. In this operation we will be positioning the Workpiece over the cavity in Die and simulating the Finish Forge operation.
+Pridajte ďalšiu operáciu tvárnenia na nastavenie operácie dokončovacieho kovania. V tejto operácii umiestnime obrobok nad dutinu v matrici a simulujeme operáciu dokončovacieho kovania.
 
-**Select batch mode:**  
-Select 2nd operation from Operation editor, “Setup type” popup will appear, click on ![]({{ '/assets/icons/pre_icons/mo_no_batch_setup_button.jpg' | relative_url }}) button in popup as we would like to set up second operation in **Batch** mode.
+**Zvoľte režim hromadného spracovania:**  
+V editore operácií vyberte druhú operáciu; zobrazí sa vyskakovacie okno „Typ nastavenia“. V tomto okne kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_no_batch_setup_button.jpg' | relative_url }}), pretože chceme nastaviť druhú operáciu v režime **Batch**.
 
-**Change operation name:**  
-Change operation name to "**Finish Forge** " from Operation editor by double clicking on the operation name as shown in Fig. L2.1. and then click on **enter** button to finish editing.
+**Zmena názvu operácie:**  
+Zmeňte názov operácie na „**Finish Forge**“ v editore operácií tak, že dvakrát kliknete na názov operácie, ako je znázornené na obr. L2.1, a potom kliknite na tlačidlo **Enter**, čím úpravu dokončíte.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab02_image0001.jpg' | relative_url }})
 
-Changing operation name in operation editor page
+Zmena názvu operácie na stránke editora operácií
 
-### Scheduled positioning
+### Plánované polohovanie
 
-Since all objects are Read from DB and there is no change in mesh settings or BCC, we will navigate to **Postioning** Page. In Controls page, click on **Schedule positioning**. In Scheduled positioning page, add relation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button. Click on ![]({{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}) to define schedule positioning, select positioning object as Workpiece and positioning type as Offset, define “**Y** ” as **-3.4** to position the workpiece on Die cavity.  
-Similarly add relations to position Top die on Workpiece in **-Z** direction and Bottom Die below Workpiece in **+Z** Direction using Interference positioning options as shown in Fig. L2.2. The object positioning will be executed before generating DB. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Keďže sa všetky objekty načítajú z databázy a nedochádza k žiadnym zmenám v nastaveniach siete ani v BCC, prejdeme na stránku **Polohovanie**. Na stránke Ovládacie prvky kliknite na **Plánované polohovanie**. Na stránke Plánované polohovanie pridajte vzťah kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_edit_window_icon.jpg' | relative_url }}) na definovanie plánovaného polohovania, ako objekt polohovania vyberte Obrobok a ako typ polohovania Offset, nastavte „**Y**“ na hodnotu **-3,4**, aby sa obrobok umiestnil do dutiny formy.  
+Podobne pridajte vzťahy pre umiestnenie hornej matrice na obrobok v smere **-Z** a spodnej matrice pod obrobok v smere **+Z** pomocou možností polohovania podľa kolízie, ako je znázornené na obr. L2.2. Polohovanie objektov sa vykoná pred vytvorením databázy. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab02_image0002.jpg' | relative_url }})
 
-Defining schedule positioning
+Určenie umiestnenia v rozvrhu
 
-### Contact (Inter object Relation) Definition
+### Definícia pojmu „kontakt“ (vzťah medzi objektmi)
 
-In Contact page, click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. Select Workpiece-Top Die relation and click on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button. Select **“Hot forging (lubricated)** ” as friction condition from the drop-down list of Constant field in Deformation tab as shown in Fig. L1.18. Come out the Inter-object relations window and click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button to apply similar conditions to all relations. Make sure “**Schedule** ” and “**Initialize** ” check boxes are turned on in Contact page as shown in Fig. L2.3., so that the interface contact conditions are initialized and regenerated before DB is generated for second operation. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Kontakt“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Vyberte vzťah „Obrobok – horná matrica“ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}). Z roletového zoznamu poľa „Constant“ na karte „Deformation“ vyberte ako podmienku trenia **„Hot forging (lubricated)**“, ako je znázornené na obr. L1.18. Vráťte sa do okna „Inter-object relations“ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}), aby ste podobné podmienky aplikovali na všetky vzťahy. Uistite sa, že na stránke „Kontakt“ sú zaškrtnuté políčka „**Plán**“ a „**Inicializovať**“, ako je znázornené na obr. L2.3., aby sa podmienky kontaktu na rozhraní inicializovali a regenerovali pred vytvorením databázy pre druhú operáciu. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab02_image0003.jpg' | relative_url }})
 
-Contact page
+Stránka s kontaktnými údajmi
 
-### Stopping controls
+### Ovládacie prvky na zastavenie
 
-We are forging to a flash thickness of **0.250"**. So, check the **Distance between objects** check box, Select points on the bottom of the Top Die, and the top of the Bottom Die. Enter a stopping distance of **0.250** in **Z** direction as shown in Fig. L2.4. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kujeme na hrúbku **0,250"**. Zaškrtnite teda políčko **Vzdialenosť medzi objektmi**, vyberte body na spodnej strane hornej matrice a na hornej strane spodnej matrice. Zadajte zastavovaciu vzdialenosť **0,250** v smere **Z**, ako je znázornené na obr. L2.4. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab02_image0004.jpg' | relative_url }})
 
-Stopping control window page
+Stránka okna na zastavenie riadenia
 
-### Step Controls
+### Ovládacie prvky krokov
 
-In Steps page, change the Number of Steps to **50** , **set increment to save** as **5** and Solution step definition as **die displacement** of **0.036** in (See Fig. L2.5.), then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Kroky“ zmeňte „Počet krokov“ na **50**, **nastavte prírastok na uloženie** na **5** a definíciu kroku riešenia na **posun matrice** s hodnotou **0,036** in (pozri obr. L2.5.), potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab02_image0005.jpg' | relative_url }})
 
-Step control page
+Stránka na ovládanie krokov
 
-### Generating DB
+### Vytvorenie databázy
 
-When user visit DB generation page, you can see the objects are positioned with respect to Scheduled positioning data, check if the position of Workpiece is in die cavity is as shown in Fig. L2.6., then check and generate database (See Fig. L2.6.). After generating database, switch to ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) mode to run the simulation.
+Keď používateľ navštívi stránku na vytvorenie databázy, uvidí, že objekty sú umiestnené podľa údajov o naplánovanom umiestnení. Skontrolujte, či je poloha obrobku vo forme taká, ako je znázornené na obr. L2.6., a potom skontrolujte a vytvorte databázu (pozri obr. L2.6.). Po vygenerovaní databázy prejdite do režimu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) a spustite simuláciu.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab02_image0006.jpg' | relative_url }})
 
-Generate Database page
+Stránka „Vytvoriť databázu“
 
-### Running simulation
+### Spustenie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
-
-  
-When the simulation is finished without any issues, check the messages in Message file. When operation is completed, we will see a message as
+Kliknite na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), aby sa otvorilo dialógové okno Možnosti spustenia. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
   
-“PROGRAM STOPPED!  
-THE DISTANCE BETWEEN TWO OBJECTS ( 2 3): 0.2500000 HAS REACHED THE SPECIFIED LIMIT 0.2500000 “.
+Keď simulácia prebehne bez problémov, skontrolujte správy v súbore správ. Po dokončení operácie sa zobrazí správa v tvare
 
   
-After completion of simulation, switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) mode.
+„PROGRAM SA ZASTAVIL!  
+VZDIALENOSŤ MEDZI DVOMA OBJEKTMI (2 3): 0,2500000 DOSIAHLA ŠPECIFIKOVANÚ HORNÚ HRANICU 0,2500000 “.
 
-### Post processing finishing operation
+  
+Po dokončení simulácie prepnite do režimu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}).
 
-Right click on the workpiece icon in the process tree and turn on display contact. Watch how the contact evolves as the part fills out die, see Fig. L2.7.
+### Dokončovacie operácie v rámci následného spracovania
+
+Kliknite pravým tlačidlom myši na ikonu obrobku v strome procesov a zapnite zobrazenie kontaktu. Sledujte, ako sa kontakt mení v priebehu vyplňovania formy obrobkom – pozri obr. L2.7.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab02_image0007.jpg' | relative_url }})
 
-Contact display to check the underfill at last step in Finish Forge operation
+Dotknite sa displeja, aby ste skontrolovali výplň v poslednom kroku operácie „Finish Forge“
 
-Plot the load-stroke curve as shown in Fig. L2.8. Observe how the load increases as the part fills out the die and forms flash.
+Nakreslite krivku zaťaženia a zdvihu podľa obr. L2.8. Pozorujte, ako sa zaťaženie zvyšuje v miere, ako sa diel vyplňuje formu a vytvára prebytok materiálu.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab02_image0008.jpg' | relative_url }})
 
-Load-stroke graph plot
+Graf závislosti zaťaženia od zdvihu
 
-Plot the strain rate during forming as shown in Fig. L2.9., observe what happens in the flash area.
+Zaznačte rýchlosť deformácie počas tvárnenia tak, ako je znázornené na obr. L2.9., a sledujte, čo sa deje v oblasti prebytku materiálu.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab06_hot_forming_labs/lab02_image0009.jpg' | relative_url }})
 
-Effective Strain rate at the end of Finish Forge operation
+Efektívna rýchlosť deformácie na konci operácie dokončovacieho kovania

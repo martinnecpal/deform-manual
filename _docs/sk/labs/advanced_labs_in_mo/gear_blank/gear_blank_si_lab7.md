@@ -1,128 +1,128 @@
 ---
 lang: sk
-title: "Gear Blank SI Lab 7"
+title: "Polotovar na ozubené kolesá – laboratórna úloha č. 7"
 ---
 
-# Lab 7. Hammer
+# Laboratórna práca č. 7. Kladivo
 
-### Adding Project
+### Pridanie projektu
 
-Start DEFORM and create a new project named **Gear_h**.
+Spustite program DEFORM a vytvorte nový projekt s názvom **Gear_h**.
 
-Add **3D Forming Express** operation and click on ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}) (Import database) in the File menu. Open the “**Gear.DB** ” file. Select the first step of the third (Forge) operation and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
+Pridajte operáciu **3D Forming Express** a v ponuke Súbor kliknite na položku ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}) (Importovať databázu). Otvorte súbor „**Gear.DB**“. Vyberte prvý krok tretej operácie (Kovanie) a kliknite na položku ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
 
-### Define process setup
+### Definovanie nastavení procesu
 
-In this lab we show how to setup Hammer controls for a non-isothermal simulation with het transfer calculations for both workpiece and dies. So select **Hot forging** as process type (see [Fig. L7.1.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_1_Process_settings_selection_window)). This activates the Heat transfer mode.
+V tomto cvičení ukážeme, ako nastaviť ovládacie prvky programu Hammer pre neizotermickú simuláciu s výpočtami prenosu tepla pre obrobok aj lisovacie formy. Ako typ procesu vyberte **Kovanie za tepla** (pozri [Fig. L7.1.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_1_Process_settings_selection_window)). Tým sa aktivuje režim prenosu tepla.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0001.jpg' | relative_url }})
 
-Process settings selection window
+Okno výberu nastavení procesu
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select **Calculate temperature in workpiece and dies**(see [Fig. L7.2.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_2_Temperature_calculation_settings_window)). This adds mesh and Boundary condition windows for dies.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a vyberte možnosť **Vypočítať teplotu v obrobku a formách** (pozri [Fig. L7.2.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_2_Temperature_calculation_settings_window)). Tým sa pridajú okná so sieťou a okrajovými podmienkami pre formy.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0002.jpg' | relative_url }})
 
-Temperature calculation settings window
+Okno nastavení výpočtu teploty
 
-### Define Boundary condition for Workpiece
+### Definovanie okrajovej podmienky pre obrobok
 
-Click on the **Workpiece Boundary condition** branch and define Heat exchange with environment boundary condition for entire object using ![]({{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}) (Select All) icon, if system not assigned automatically.
+Kliknite na vetvu **Okrajová podmienka obrobku** a pre celý objekt definujte okrajovú podmienku „Výmena tepla s okolím“ pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}) (Vybrať všetko), ak systém túto podmienku nepriradil automaticky.
 
-### Define Heat transfer with Top die
+### Vysvetlenie prenosu tepla pomocou hornej matrice
 
-Click on **Top die** branch in operation tree and set temperature to **148.889 °****C**.
+Kliknite na vetvu **Top die** v prevádzkovom strome a nastavte teplotu na **148,889 °****C**.
 
-Mesh the Tools to simulate the dies temperature. Click on **Mesh** branch in operation tree and set **20000** elements using **User defined** option. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}).
+Vytvorte sieť pre nástroje na simuláciu teploty foriem. Kliknite na vetvu **Mesh** v strome operácií a nastavte **20000** prvkov pomocou možnosti **User defined**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}).
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button and select the **Die_material** category, then **AISI-H-13**. Assign the loaded material by selecting it in material list.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), potom na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať materiál z knižnice) a vyberte kategóriu **Die_material**, následne **AISI-H-13**. Načítaný materiál priraďte tak, že ho vyberiete zo zoznamu materiálov.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and define Heat exchange with environment boundary condition for entire object except top surface as shown in [Fig. L7.3.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_3_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces)
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a nastavte okrajovú podmienku „Výmena tepla s okolím“ pre celý objekt s výnimkou hornej plochy, ako je znázornené na obrázku [Fig. L7.3.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_3_Top_die_Heat_exchange_with_environment_boundary_condition_surfaces)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0003.jpg' | relative_url }})
 
-Top die Heat exchange with environment boundary condition surfaces
+Horná matrica – Výmena tepla s povrchmi okrajových podmienok prostredia
 
-### Define Hammer Controls
+### Nastavenie ovládania kladiva
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to change the movement controls for Top die. Select **Hammer** from the top row of radio buttons. (See [Fig. L7.4.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_4_Mechanical_press_movement_definition_for_top_die)) Enter:
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste zmenili ovládacie prvky pohybu hornej matrice. Z horného riadku prepínačov vyberte možnosť **Hammer**. (Pozri [Fig. L7.4.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_4_Mechanical_press_movement_definition_for_top_die)) Zadajte:
 
-\- **Energy** : 56492419.4 N-mm.
+\- **Energia** : 56 492 419,4 N-mm.
 
-\- **Mass** : 4.37817126 N-s^2/mm.
+\- **Hmotnosť**: 4,37817126 N·s²/mm.
 
-\- **Efficiency** : 0.85 (85%)
+\- **Účinnosť**: 0,85 (85 %)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0004.jpg' | relative_url }})
 
-Mechanical press movement definition for top die
+Definícia pohybu mechanického lisu pre hornú matricu
 
-Check **Use blow table** checkbox and click on ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) (Define) button next to use blow table checkbox. Define **dwell time** as **0.5** sec for Blow 1 and add 4 more hits using No. Hits increment button. This adds other 4 blows with same values as shown in [Fig. L7.5.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_5_Multiple_blow_definition_table) Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the multiple blows definition.
+Zaškrtnite políčko **Použiť tabuľku úderov** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) (Definovať) vedľa tohto políčka. Nastavte **doba zdržania** na **0,5** s pre úder 1 a pomocou tlačidla „No. Hits increment“ pridajte ďalšie 4 údery. Tým sa pridajú ďalšie 4 údery s rovnakými hodnotami, ako je zobrazené v [Fig. L7.5.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_5_Multiple_blow_definition_table). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) uzavrite definíciu viacerých úderov.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0005.jpg' | relative_url }})
 
-Multiple blow definition table
+Tabuľka definícií viacerých úderov
 
-### Define Heat transfer with Bottom die
+### Definícia prenosu tepla pomocou spodnej matrice
 
-Similar to Top die Heat transfer definition define Bottom die initial Temperature to **148.889** °**C** and set **50000** Elements using **User defined** option. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}).
+Podobne ako pri definícii tepelného prenosu hornej formy nastavte počiatočnú teplotu spodnej formy na **148,889** °**C** a nastavte **50 000** prvkov pomocou možnosti **Definované používateľom**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}).
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select **AISI-H-13** from material list to assign material. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the **Heat exchange with environment boundary condition** and select all surfaces except bottom surface as shown in [Fig. L7.6.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_6_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces)
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a zo zoznamu materiálov vyberte **AISI-H-13**, aby ste priradili materiál. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali **hraničné podmienky výmeny tepla s okolím**, a vyberte všetky povrchy okrem spodného povrchu, ako je znázornené v [Fig. L7.6.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_6_Bottom_die_Heat_exchange_with_environment_boundary_condition_surfaces)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0006.jpg' | relative_url }})
 
-Bottom die Heat exchange with environment boundary condition surfaces
+Spodná forma – Výmena tepla s povrchmi okrajových podmienok prostredia
 
-Click on **Contact** in operation tree to define inter-object relationship.
+Kliknite na položku **Kontakt** v strome operácií, aby ste definovali vzťah medzi objektmi.
 
-### Define Inter-object relation ship
+### Definícia vzťahov medzi objektmi
 
-Select **User defined radio** button and assign Shear friction of 0.3 and heat transfer conduction coefficient as **11**. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_contact_nodes_label.jpg' | relative_url }}) to generate contact with heat transfer coefficient with friction as shown in [Fig. L7.7.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_7_Forming_express_contact_generation_window)
+Vyberte tlačidlo **Užívateľsky definované kĺbové spojenie** a nastavte hodnotu šmykového trenia na 0,3 a koeficient tepelnej vodivosti na hodnotu **11**. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_contact_nodes_label.jpg' | relative_url }}) vytvoríte kontakt s koeficientom tepelnej vodivosti a trením, ako je znázornené na obrázku [Fig. L7.7.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_7_Forming_express_contact_generation_window).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0007.jpg' | relative_url }})
 
-Forming express contact generation window
+Zobrazenie okna na rýchle vytvorenie kontaktu
 
-You should see the contact nodes on the workpiece where contact has been generated. See [Fig. L7.8.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_8_Top_and_bottom_die_contact_with_workpiece) how the Inter object window looks and contact generation displays in graphics window. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Stopping controls page.
+Na obrobku by ste mali vidieť kontaktné body v miestach, kde došlo k vytvoreniu kontaktu. Na obrázku [Fig. L7.8.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab7/' | relative_url }}#Fig_L7_8_Top_and_bottom_die_contact_with_workpiece) si môžete pozrieť, ako vyzerá okno objektu „Inter“ a ako sa v grafickom okne zobrazuje vytvorenie kontaktu. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdete na stránku „Ovládacie prvky zastavenia“.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab7_image0008.jpg' | relative_url }})
 
-Top and bottom die contact with workpiece
+Horná a spodná matrica prichádzajú do styku s obrobkom
 
-### Primary Die travel
+### Primárny zdvih matrice
 
-Define Primary Die travel as 40 in Total primary die travel field and check Exact amount check box, then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define Stopping controls.
+V poli „Celkový posun primárneho lisovacieho nástroja“ nastavte hodnotu 40 a zaškrtnite políčko „Presná hodnota“, potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste nastavili zastavovacie ovládacie prvky.
 
-### Define Stopping controls
+### Definovanie ovládacích prvkov zastavenia
 
-Keep the Distance between die stopping controls imported from DB. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation controls page.
+Zachovajte vzdialenosť medzi ovládacími prvkami zastavenia, ktoré boli importované z databázy. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Simulačné ovládacie prvky“.
 
-### Define Simulation controls
+### Definovanie ovládacích prvkov simulácie
 
-Observe the step controls definition imported from DB. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to check and generate DB.
+Pozrite si definíciu ovládacích prvkov krokov importovanú z databázy. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste skontrolovali a vygenerovali databázu.
 
-### Generate Database and Run the simulation
+### Vytvorenie databázy a spustenie simulácie
 
-Check and Generate database and click on the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }})Mode button (above the operation tree) to start the simulation.
+Zaškrtnite políčko „Skontrolovať a vygenerovať databázu“ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }})Mode (nad stromom operácií), čím spustíte simuláciu.
 
-Run simulation, after completing running click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode button to review results.
+Spustite simuláciu a po jej dokončení kliknite na tlačidlo „![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode“, aby ste si prezreli výsledky.
 
-### Review Results
+### Výsledky hodnotenia
 
-In MO postprocessor, go to the load-stroke ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) plot and plot the punch Velocity (Y speed) vs. Stroke for the first, third and ninth operation (select 1, 3 & 9 from combo box in bottom). Plot Energy vs. Time for each of these forming operations as well.
+V postprocesore MO prejdite na graf „load-stroke“ ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) a vyneste graf rýchlosti razníka (rýchlosť na osi Y) v závislosti od zdvihu pre prvú, tretiu a deviatu operáciu (z roletového menu v dolnej časti vyberte 1, 3 a 9). Pre každú z týchto tvárniacich operácií vyneste tiež graf energie v závislosti od času.
 
-Plot the Y Load vs. Time for the entire process (all operations). Turn on die contact and note the slight underfill.
+Zaznačte priebeh zaťaženia osi Y v závislosti od času pre celý proces (všetky operácie). Zapnite kontakt s čipom a všimnite si mierne nedoplnenie.
 
 * * *
 
-Optional exercise – time permitting
+Voliteľné cvičenie – ak to čas dovolí
 
-\- Compare the maximum load with the simulation using a constant speed approximation.
+\- Porovnajte maximálne zaťaženie so simuláciou, pri ktorej sa používa aproximácia s konštantnou rýchlosťou.
 
-\- Compare the process time with the simulation using a constant speed approximation.
+\- Porovnajte dobu trvania procesu so simuláciou s použitím aproximácie s konštantnou rýchlosťou.
 
-\- Rerun the gear problem with meshed tooling and the Calculate temperature in workpiece and dies (non-isothermal) temperature calculation settings. Use the same inputs for the die mesh, material and temperature. Compare the temperature on the center surface of the bottom die between a constant speed approximation and this case using a hammer model.
+\- Znovu spustite úlohu týkajúcu sa ozubeného kolesa s použitím siete nástrojov a nastavení výpočtu teploty v obrobku a formách (neizotermický výpočet). Použite rovnaké vstupné údaje pre sieť formy, materiál a teplotu. Porovnajte teplotu na stredovej ploche spodnej formy medzi aproximáciou s konštantnou rýchlosťou a týmto prípadom s využitím modelu kladiva.
 
-\- Export graph data and import into Excel or another program. You can right click on any graph and select Export graph data to create a text file output.
+\- Exportujte údaje z grafu a importujte ich do programu Excel alebo iného programu. Môžete kliknúť pravým tlačidlom na ľubovoľný graf a vybrať možnosť „Exportovať údaje z grafu“, čím vytvoríte výstupný textový súbor.
 
 * * *

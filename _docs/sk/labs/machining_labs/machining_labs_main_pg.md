@@ -1,17 +1,17 @@
 ---
 lang: sk
-title: "Machining labs Main Pg"
+title: "Obrábacie laboratóriá Hlavné Pg"
 ---
 
-# Machining Labs
+# Obrábacie laboratóriá
 
-**2D:**
+2D
 
 [2D Cutting Lab]({{ '/docs/sk/labs/machining_labs/2d_cutting_lab/' | relative_url }})
 
 [2D Steady State Machining Lab]({{ '/docs/sk/labs/machining_labs/2d_steady_state_machining_lab/' | relative_url }})
 
-**3D:**
+3D
 
 [3D Cutting Lab1]({{ '/docs/sk/labs/machining_labs/3d_cutting_lab1/' | relative_url }})
 

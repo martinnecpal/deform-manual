@@ -1,90 +1,90 @@
 ---
 lang: sk
-title: "2D HT Lab 3 Diffusion"
+title: "2D HT Laboratórium 3: Difúzia"
 ---
 
-# 2D HT Lab 3 Modeling of Diffusion of a Gear Tooth
+# 2D HT Lab 3 Modelovanie difúzie zuba ozubeného kolesa
 
   
-3.1. Opening Project file
+3.1. Otvorenie súboru projektu
 
-3.2. Adding Operation
+3.2. Pridanie operácie
 
-3.3. Setting Simulation Controls
+3.3. Nastavenie ovládacích prvkov simulácie
 
-3.4. Generating a Database
+3.4. Vytvorenie databázy
 
-3.5. Running a Simulation
+3.5. Spustenie simulácie
 
-3.6. Post-Processing the Results
+3.6. Následné spracovanie výsledkov
 
-## Opening Project File
+## Otvorenie súboru projektu
 
-The DEFORM GUI MAIN window should already be open. With the **Gear_Blank**.**moproj** file highlighted in the file list, click on ![]({{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}) as shown in [Fig. 2DHTML2.1.]({{ '/docs/sk/labs/heat_treatment_labs/2d_ht_lab2_carburization/' | relative_url }}#Fig_2DHTML2_1_DEFORM_GUI_Main_Window) Integrated Manufacturing Proc. will open.
+Hlavné okno grafického rozhrania DEFORM by už malo byť otvorené. Keď je v zozname súborov zvýraznený súbor **Gear_Blank**.**moproj**, kliknite na ![]({{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}), ako je znázornené na obrázku. Otvorí sa okno „[Fig. 2DHTML2.1.]({{ '/docs/sk/labs/heat_treatment_labs/2d_ht_lab2_carburization/' | relative_url }}#Fig_2DHTML2_1_DEFORM_GUI_Main_Window) Integrated Manufacturing Proc.“.
 
-## Adding Operation
+## Pridanie operácie
 
-Add 2D Forming operation from Operations list in Explorer. Operation can be added by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to **2D****Forming** operation or user can also add the operation by dragging and dropping the operation into Operation Editor region.
+V Průzkumníku pridajte operáciu 2D tvarovanie zo zoznamu operácií. Operáciu je možné pridať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa operácie **2D****Tvarovanie** alebo ju môžete pridať aj pretiahnutím do oblasti Editor operácií.
 
-Select 3rd operation from Operation editor, Setup type popup will appear, click on ![]({{ '/assets/icons/pre_icons/mo_yes_interactive_setup_button.jpg' | relative_url }}) button. Select 3rd operation in Operation editor, double mouse click on it and change the name to "**Diffusion** " and press enter from keyboard. (See Fig. 2DHTML3.1.) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) .
+V editore operácií vyberte 3. operáciu; zobrazí sa rozbaľovacie okno „Typ nastavenia“; kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_yes_interactive_setup_button.jpg' | relative_url }}). V editore operácií vyberte 3. operáciu, dvakrát na ňu kliknite myšou, zmeňte jej názov na „**Diffusion**“ a stlačte klávesu Enter na klávesnici. (Pozri obr. 2DHTML3.1.) Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab3_diffusion/image0001.jpg' | relative_url }})
 
-Changing operation name from Operation Editor
+Zmena názvu operácie v editore operácií
 
-## Setting Simulation Controls
+## Nastavenie ovládacích prvkov simulácie
 
-Select **Step****Increment![]({{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }}) **tab, Set Constant **Time****Increment** to **60** sec as shown in Fig. 2DHTML3.2.
+Vyberte kartu **Step****Increment![]({{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }})** a nastavte konštantu **Time****Increment** na hodnotu **60** sekúnd, ako je znázornené na obr. 2DHTML3.2.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab3_diffusion/image0002.jpg' | relative_url }})
 
-Step Increment tab in expert mode
+Karta „Krok“ v expertnom režime
 
-Select **Stopping****Controls![]({{ '/assets/icons/pre_icons/mo_stopping_criteria.jpg' | relative_url }}) **tab, and set **Process****Duration** to **13200** seconds. as shown in Fig. 2DHTML3.3.
+Vyberte kartu **Zastavenie****Controls![]({{ '/assets/icons/pre_icons/mo_stopping_criteria.jpg' | relative_url }})** a nastavte **Trvanie procesu****** na **13200** sekúnd, ako je znázornené na obr. 2DHTML3.3.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab3_diffusion/image0003.jpg' | relative_url }})
 
-Stopping Controls tab in Expert Mode
+Karta „Ovládacie prvky zastavenia“ v režime Expert
 
-Click on the **Process****Conditions![]({{ '/assets/icons/pre_icons/mo_process_conditions.jpg' | relative_url }}) **tab in the Simulations Controls. Select **Diffusion** tab, Set the value of the reaction rate coefficient to **0** mm/s and the environmental atom content should be changed to **0** % atom as shown in Fig. 2DHTML3.4. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Generate DB page.
+Kliknite na kartu **Process****Conditions![]({{ '/assets/icons/pre_icons/mo_process_conditions.jpg' | relative_url }}) **v okne Simulations Controls. Vyberte kartu **Diffusion**, nastavte hodnotu koeficientu reakčnej rýchlosti na **0** mm/s a obsah atómov v prostredí by sa mal zmeniť na **0** % atómov, ako je znázornené na obr. 2DHTML3.4. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka Generate DB.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab3_diffusion/image0004.jpg' | relative_url }})
 
-Process Conditions tab in expert mode
+Karta „Podmienky procesu“ v expertnom režime
 
-## Generating a Database
+## Vytvorenie databázy
 
-In **Generate****DB** page. Click the![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process, messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).If there are no errors shown, then the database can be generated.
+Na stránke **Generate****DB** kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby program skontroloval, či v nastavení úlohy niečo nechýba. Počas kontroly červené správy označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli definovať údaje o materiáloch). Ak sa nezobrazujú žiadne chyby, databázu je možné vygenerovať.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database (see Fig. 2DHTML3.5.). When the program is done writing the database, switch to ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab to run simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu (pozri obr. 2DHTML3.5.). Keď program dokončí zapisovanie databázy, prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) a spustite simuláciu.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab3_diffusion/image0005.jpg' | relative_url }})
 
-Generate Database window
+Okno „Vytvoriť databázu“
 
-## Running a Simulation
+## Spustenie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog.[]({{ '/docs/sk/labs/tool_life_study_lab/tool_life_study_lab1/' | relative_url }}#Fig_TLSL1_17_Run_Options_Popup) Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation. As we click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) ****button simulation starts.
+Kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno Možnosti spustenia.[]({{ '/docs/sk/labs/tool_life_study_lab/tool_life_study_lab1/' | relative_url }}#Fig_TLSL1_17_Run_Options_Popup) Použite predvolenú možnosť **Pokračovať v spustení**, aby ste vybrali možnosť „**Pokračovať od posledného kroku** a potom vyberte režim simulácie **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie. Po kliknutí na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) ****sa simulácia spustí.
 
-When the simulation is finished without any issues, the following message will be added to the end of the Message file as shown in Fig. 2DHTML3.6.
+Ak simulácia prebehne bez problémov, na koniec súboru Message sa pridá nasledujúca správa, ako je znázornené na obr. 2DHTML3.6.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab3_diffusion/image0006.jpg' | relative_url }})
 
-Simulation Message tab
+Karta „Simulačné správy“
 
-## Post-Processing the Results
+## Následné spracovanie výsledkov
 
-After simulation has been completed, switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab to view results, MO post processor will open.
+Po dokončení simulácie prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), kde si môžete prezrieť výsledky; otvorí sa postprocesor MO.
 
-The key state variable in this simulation is the Dominant Atom. Go to the last step of the database. Click the State Variables ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) button to open the state variable dialog. Select the variable Dominant Atom under Diffusion and plot the variable as a shaded contour. Click on![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) (see Fig. 2DHTML3.7.). The user should see the variable in the similar state as in the end of the Carburization operation. In this simulation, the total amount of carbon holds constant but diffuses throughout the geartooth.
+Kľúčovou stavovou premennou v tejto simulácii je „Dominant Atom“. Prejdite na posledný krok v databáze. Kliknutím na tlačidlo „State Variables ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }})“ otvoríte dialógové okno stavových premenných. V časti „Diffusion“ vyberte premennú „Dominant Atom“ a znázornite ju ako tieňovanú kontúru. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) (pozri obr. 2DHTML3.7.). Používateľ by mal vidieť premennú v podobnom stave ako na konci operácie karburizácie. V tejto simulácii zostáva celkové množstvo uhlíka konštantné, ale difunduje po celom zube ozubeného kolesa.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab3_diffusion/image0007.jpg' | relative_url }})
 
-Diffusion Dominant atom plot
+Graf atómov s prevládajúcou difúziou
 
-After completion of Post processing, Save the Project and close the MO wizard by clicking Quit ![]({{ '/assets/icons/pre_icons/mo_quit_icon.jpg' | relative_url }}) button or selecting Quit option under File menu. If User wants to continue the setup, can switch to pre mode directly and continue the setup by adding operation.
+Po dokončení následného spracovania uložte projekt a zatvorte sprievodcu MO kliknutím na tlačidlo „Quit ![]({{ '/assets/icons/pre_icons/mo_quit_icon.jpg' | relative_url }})“ alebo výberom možnosti „Quit“ v ponuke „File“. Ak chce používateľ pokračovať v nastavení, môže priamo prejsť do režimu „pre“ a pokračovať v nastavení pridaním operácie.
 
-Related Topics:
+Súvisiace témy:
 
 [2D HT Lab1 Heating]({{ '/docs/sk/labs/heat_treatment_labs/2d_ht_lab1_heating/' | relative_url }})
 

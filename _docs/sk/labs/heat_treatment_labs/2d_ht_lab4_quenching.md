@@ -1,116 +1,116 @@
 ---
 lang: sk
-title: "2D HT Lab 4 Quenching"
+title: "2D HT Lab 4 – Kalenie"
 ---
 
-# 2D HT Lab4: Modeling of Quenching of a Gear Tooth
+# 2D HT Lab4: Modelovanie kalenia zubov ozubeného kolesa
 
   
-4.1. Opening Project file
+4.1. Otvorenie súboru projektu
 
-4.2. Adding operation
+4.2. Pridávanie operácie
 
-4.3. Setting Simulation Controls
+4.3. Nastavenie ovládacích prvkov simulácie
 
-4.4. Setting Object Properties
+4.4. Nastavenie vlastností objektu
 
-4.5. Generating a Database
+4.5. Vytvorenie databázy
 
-4.6. Running a Simulation
+4.6. Spustenie simulácie
 
-4.7. Post-Processing the Results
+4.7. Následné spracovanie výsledkov
 
-## Opening Project file
+## Otvorenie súboru projektu
 
-OThe DEFORM GUI MAIN window should already be open. With the **Gear_Blank**.**moproj** file highlighted in the file list, click on ![]({{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}) as shown in [Fig. 2DHTML2.1.]({{ '/docs/sk/labs/heat_treatment_labs/2d_ht_lab2_carburization/' | relative_url }}#Fig_2DHTML2_1_DEFORM_GUI_Main_Window) Integrated Manufacturing Proc. will open.
+Hlavné okno grafického rozhrania DEFORM by už malo byť otvorené. Keď je v zozname súborov zvýraznený súbor **Gear_Blank**.**moproj**, kliknite na ![]({{ '/assets/icons/pre_icons/mo_integrated_manufacturing_proc.jpg' | relative_url }}), ako je znázornené na obrázku [Fig. 2DHTML2.1.]({{ '/docs/sk/labs/heat_treatment_labs/2d_ht_lab2_carburization/' | relative_url }}#Fig_2DHTML2_1_DEFORM_GUI_Main_Window). Otvorí sa okno „Integrated Manufacturing Proc.“.
 
-## Adding operation
+## Pridávanie operácie
 
-Add 2D Forming operation from Operations list in Explorer. Operation can be added by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to **2D****Forming** operation or user can also add the operation by dragging and dropping the operation into Operation Editor region.
+V Průzkumníku pridajte operáciu 2D tvarovanie zo zoznamu operácií. Operáciu je možné pridať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa operácie **2D****Tvarovanie** alebo ju môžete pridať aj pretiahnutím do oblasti Editor operácií.
 
-Select 4th operation from Operation editor, Setup type popup will appear, click on ![]({{ '/assets/icons/pre_icons/mo_yes_interactive_setup_button.jpg' | relative_url }}) button. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V editore operácií vyberte 4. operáciu, zobrazí sa roletové menu „Typ nastavenia“; kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_yes_interactive_setup_button.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-## Setting Simulation Controls
+## Nastavenie ovládacích prvkov simulácie
 
-Select **Main![]({{ '/assets/icons/pre_icons/mo_main_setting.jpg' | relative_url }}) **tab, Change the Operation Name to **Quench**. Turn off **Diffusion** module and turn on the **Deformation** module as shown in Fig. 2DHTML4.1.
+Vyberte kartu **Main![]({{ '/assets/icons/pre_icons/mo_main_setting.jpg' | relative_url }})**, zmeňte názov operácie na **Quench**. Vypnite modul **Diffusion** a zapnite modul **Deformation**, ako je znázornené na obr. 2DHTML4.1.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab4_quenching/image0001.jpg' | relative_url }})
 
-Simulation controls Main tab in Expert mode
+Ovládacie prvky simulácie – karta „Hlavné“ v režime „Expert“
 
-Select **Step****Increment![]({{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }}) **tab, Set solution Step Definition to Constant **Temperature**. Specify Initial/Minimum time step as 0.01 seconds per step and Max Temperature Change per Step should be set to 5 C. Max Temperature time step to 20 seconds per step. (See Fig. 2DHTML4.2.)
+Vyberte kartu **Krok****Prírastok![]({{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }})** a v časti Definícia kroku nastavte hodnotu na Konštantná **teplota**. Zadajte počiatočný/minimálny časový krok na 0,01 sekundy na krok a maximálnu zmenu teploty na krok nastavte na 5 °C. Maximálny časový krok pre zmenu teploty nastavte na 20 sekúnd na krok. (Pozri obr. 2DHTML4.2.)
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab4_quenching/image0002.jpg' | relative_url }})
 
-Step Increment tab in Expert mode
+Karta „Krok“ v režime Expert
 
-Select **Stopping****Controls![]({{ '/assets/icons/pre_icons/mo_stopping_criteria.jpg' | relative_url }}) **tab, and set **Process****Duration** to **13500** seconds as shown in Fig. 2DHTML4.3.
+Vyberte kartu **Zastavenie****Controls![]({{ '/assets/icons/pre_icons/mo_stopping_criteria.jpg' | relative_url }})** a nastavte **Trvanie procesu****** na **13500** sekúnd, ako je znázornené na obr. 2DHTML4.3.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab4_quenching/image0003.jpg' | relative_url }})
 
-Stopping Controls tab in Expert mode
+Karta „Ovládacie prvky zastavenia“ v režime Expert
 
-Under Process Conditions,Set the **environment****temperature** to **20** C and change the **convection** **coefficient** to **4.093** as shown in Fig. 2DHTML4.4. This convection coefficient is similar to the convection coefficient of certain quench oil. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Workpiece Property page.
+V časti „Process Conditions“ (Podmienky spracovania) nastavte **teplotu prostredia** na **20** °C a zmeňte **koeficient konvekcie** na **4,093**, ako je znázornené na obr. 2DHTML4.4. Tento koeficient konvekcie je podobný koeficientu konvekcie určitých druhov chladiacich olejov. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Vlastnosti obrobku.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab4_quenching/image0004.jpg' | relative_url }})
 
-Process Conditions window
+Okno „Podmienky procesu“
 
-## Setting Object Properties
+## Nastavenie vlastností objektu
 
-At this point the user will set the hardness calculation type to volume fraction method. Click on the workpiece Property tab. Set the **Hardness** estimation type to **Using****Volume****Fractions**.as shown in Fig. 2DHTML4.5.
+V tejto fáze používateľ nastaví typ výpočtu tvrdosti na metódu objemových podielov. Kliknite na kartu Vlastnosti obrobku. Nastavte typ odhadu **Tvrdosti** na **Použitie****objemových****podielov**, ako je znázornené na obr. 2DHTML4.5.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab4_quenching/image0005.jpg' | relative_url }})
 
-Object property window
+Okno vlastností objektu
 
-## Generating a Database
+## Vytvorenie databázy
 
-In Generate DB page. Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process, messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).If there are no errors shown, then the database can be generated.
+Na stránke „Generate DB“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby program skontroloval, či v nastavení úlohy niečo nechýba. Počas kontroly červené správy označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli definovať údaje o materiáloch). Ak sa nezobrazujú žiadne chyby, databázu je možné vygenerovať.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database (see Fig. 2DHTML4.6.). When the program is done writing the database, switch to ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab to run simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu (pozri obr. 2DHTML4.6.). Keď program dokončí zapisovanie databázy, prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) a spustite simuláciu.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab4_quenching/image0006.jpg' | relative_url }})
 
-Generate Database
+Vytvoriť databázu
 
-## Running a Simulation
+## Spustenie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog.[]({{ '/docs/sk/labs/tool_life_study_lab/tool_life_study_lab1/' | relative_url }}#Fig_TLSL1_17_Run_Options_Popup) Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation. As we click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) ****button simulation starts.
+Kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno Možnosti spustenia.[]({{ '/docs/sk/labs/tool_life_study_lab/tool_life_study_lab1/' | relative_url }}#Fig_TLSL1_17_Run_Options_Popup) Použite predvolenú možnosť **Pokračovať v spúšťaní**, aby ste vybrali možnosť „**Pokračovať od posledného kroku** a potom vyberte režim simulácie **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie. Po kliknutí na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) ****sa simulácia spustí.
 
-When the simulation is finished without any issues, the following message will be added to the end of the Message file as shown in Fig. 2DHTML4.7.
+Ak simulácia prebehne bez problémov, na koniec súboru Message sa pridá nasledujúca správa, ako je znázornené na obr. 2DHTML4.7.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab4_quenching/image0007.jpg' | relative_url }})
 
-Simulation message tab
+Karta „Simulačné správy“
 
-## Post-Processing the Results
+## Následné spracovanie výsledkov
 
-After simulation has been completed, switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab to view results, MO post processor will open.
+Po dokončení simulácie prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), kde si môžete prezrieť výsledky; otvorí sa postprocesor MO.
 
-The user may be interested in the state variables Phase Volume Fractions. Go to the last step of the database. Click the State Variables ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) button to open the state variable dialog. Select the variable Volume Fractions(Pearlite) under Microstructure and plot the variables as shaded contours. This gives the prediction of the microstructure of the gear tooth as a function of position. At the end of quench, the material near the surface is mostly Martensite, while the center is mostly Pearlite. In addition, the user may be concerned about the quench distortion and residual stress that are caused by the heterogeneous transformation volume changes and thermal contraction. To examine the distortion, select the variable Total Displacement under Deformation and plot the variables as Deflection plot. You may like to drag the Deflection Scale bar to amplify the deflection. For residual stress, select the Effective Stress and plot the variable as shade contour. ( See Fig. 2DHTML4.8. to Fig. 2DHTML4.10.).
+Používateľa by mohli zaujímať stavové premenné „Fázové objemové podiely“. Prejdite na posledný krok v databáze. Kliknutím na tlačidlo „Stavové premenné ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }})“ otvoríte dialógové okno so stavovými premennými. V časti „Mikrostruktúra“ vyberte premennú „Objemové podiely (perlit)“ a znázornite premenné ako tieňované kontúry. Tým získate predpoveď mikrostruktúry zubov ozubeného kolesa ako funkciu polohy. Na konci kalenia je materiál v blízkosti povrchu prevažne martenzit, zatiaľ čo v strede prevláda perlit. Okrem toho môže používateľa zaujímať deformácia spôsobená kalením a zvyškové napätie, ktoré sú spôsobené heterogénnymi objemovými zmenami pri transformácii a tepelnou kontrakciou. Ak chcete preskúmať deformáciu, vyberte premennú „Total Displacement“ (Celkový posun) v časti „Deformation“ (Deformácia) a znázornite premenné ako graf „Deflection“ (Ohyb). Ak chcete zväčšiť deformáciu, môžete potiahnuť lištu „Deflection Scale“ (Mierka deformácie). V prípade zvyškového napätia vyberte „Effective Stress“ (Efektívne napätie) a vyneste premennú ako tieňovaný kontúrový graf. (Pozri obr. 2DHTML4.8. až obr. 2DHTML4.10.).
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab4_quenching/image0008.jpg' | relative_url }})
 
-Volume-Fraction Pearlite plot
+Graf objemového podielu perlitov
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab4_quenching/image0009.jpg' | relative_url }})
 
-Volume-Fraction Martensite plot
+Graf objemového podielu martenzitu
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab4_quenching/image0010.jpg' | relative_url }})
 
-Volume-Fraction Austenite
+Objemový podiel austenitu
 
-Another important state variable in this simulation is the Hardness variable. Select the variable Hardness under Microstructure and plot the variables as shaded contours. You can see that the hardness (in Rockwell C) is high where Martensite is high and low where Pearlite is high.( Fig. 2DHTML4.11.)
+Ďalšou dôležitou stavovou premennou v tejto simulácii je premenná „Tvrdosť“. Vyberte premennú „Tvrdosť“ v časti „Mikrostruktúra“ a znázornite premenné ako tieňované kontúry. Vidíte, že tvrdosť (v jednotkách Rockwell C) je vysoká tam, kde je vysoký obsah martenzitu, a nízka tam, kde je vysoký obsah perlitov. (Obr. 2DHTML4.11.)
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_ht_lab4_quenching/image0011.jpg' | relative_url }})
 
-Hardness plot
+Graf tvrdosti
 
-After completion of Post processing, Save the Project and close the MO wizard by clicking Quit ![]({{ '/assets/icons/pre_icons/mo_quit_icon.jpg' | relative_url }}) button or selecting Quit option under File menu. If User wants to continue the setup, can switch to pre mode directly and continue the setup by adding operation.
+Po dokončení následného spracovania uložte projekt a zatvorte sprievodcu MO kliknutím na tlačidlo „Quit ![]({{ '/assets/icons/pre_icons/mo_quit_icon.jpg' | relative_url }})“ alebo výberom možnosti „Quit“ v ponuke „File“. Ak chce používateľ pokračovať v nastavení, môže priamo prejsť do režimu „pre“ a pokračovať v nastavení pridaním operácie.
 
-Related Topics:
+Súvisiace témy:
 
 [2D HT Lab1 Heating]({{ '/docs/sk/labs/heat_treatment_labs/2d_ht_lab1_heating/' | relative_url }})
 

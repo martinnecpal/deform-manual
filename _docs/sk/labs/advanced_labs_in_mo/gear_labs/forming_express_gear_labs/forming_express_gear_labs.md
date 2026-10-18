@@ -1,9 +1,9 @@
 ---
 lang: sk
-title: "Forming Express Gear Labs"
+title: "Založenie spoločnosti Express Gear Labs"
 ---
 
-# Forming Express Gear Labs
+# Založenie spoločnosti Express Gear Labs
 
 [Lab 1. 2D Gear Lab]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/forming_express_lab1/' | relative_url }})
 

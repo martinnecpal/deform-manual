@@ -1,11 +1,11 @@
 ---
 lang: sk
-title: "Labs Main Pg"
+title: "Hlavná stránka laboratórií"
 ---
 
-# Labs 
+# Laboratóriá 
 
-#### Quick Reference:
+#### Stručný prehľad:
 
 [Quick Reference]({{ '/docs/sk/labs/quick_reference/quick_reference/' | relative_url }})
 
@@ -13,13 +13,13 @@ title: "Labs Main Pg"
 
 [Hot Forming]({{ '/docs/sk/labs/quick_reference/hot_forming/' | relative_url }})
 
-#### Add Cycles Labs:
+#### Pridať Cycles Labs:
 
 [Add Cycles for 2D Operation]({{ '/docs/sk/labs/add_cycles_labs/add_cycles_for_2d_operation/' | relative_url }})
 
 [Add Cycles for 3D Operations]({{ '/docs/sk/labs/add_cycles_labs/add_cycles_for_3d_operations/' | relative_url }})
 
-#### Advanced Labs in MO :
+#### Pokročilé laboratóriá v štáte Missouri:
 
 ##### Gear Blank Labs
 
@@ -33,7 +33,7 @@ title: "Labs Main Pg"
 
 [Forming Gear Labs]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_gear_labs/' | relative_url }})
 
-#### Basic Labs:
+#### Základné laboratórne vyšetrenia:
 
 **2D Labs:**
 
@@ -87,7 +87,7 @@ title: "Labs Main Pg"
 
 [Lab07 Gear Carrier Lab]({{ '/docs/sk/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/' | relative_url }})
 
-#### Boolean Operation Labs 
+#### Cvičenia z booleovských operácií 
 
 [2D Boolean Operation Lab]({{ '/docs/sk/labs/boolean_operation_labs/2d_boolean_operation_lab/' | relative_url }})
 
@@ -97,7 +97,7 @@ title: "Labs Main Pg"
 
 [Swaging Lab 1]({{ '/docs/sk/labs/cogging_labs/swaging_lab1/' | relative_url }})
 
-#### Die Stress study Labs 
+#### Laboratóriá pre výskum stresu 
 
 [2D Die Stress Study with Single step]({{ '/docs/sk/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/' | relative_url }})
 
@@ -109,7 +109,7 @@ title: "Labs Main Pg"
 
 [3D Die stress study with Shrink Fit Lab]({{ '/docs/sk/labs/die_stess_study_labs/3d_die_stress_study_lab2/' | relative_url }})
 
-#### DOE Labs
+#### Laboratóriá Ministerstva energetiky USA
 
 [2D DOE Lab1]({{ '/docs/sk/labs/doe_labs/2d_doe_lab/2d_doe_lab1/' | relative_url }})
 
@@ -121,7 +121,7 @@ title: "Labs Main Pg"
 
 [Steady State Extrusion Lab1]({{ '/docs/sk/labs/extrusion_labs/steady_state_extrusion_lab1/' | relative_url }})
 
-#### Forming Express Labs 
+#### Založenie spoločnosti Express Labs 
 
 **2D Labs:**
 
@@ -153,17 +153,17 @@ title: "Labs Main Pg"
 
 [3D Forming Operation setup in Expert mode]({{ '/docs/sk/labs/forming_labs/3d_forming_operation_in_expert_mode/' | relative_url }})
 
-#### Furnace Heating Labs 
+#### Laboratóriá pre vykurovanie pecí 
 
 [3D HEAT TREATMENT BATCH FURNACE TEMPLATE LAB]({{ '/docs/sk/labs/furnace_heating_labs/3d_heat_treatment_furnace_lab/' | relative_url }})
 
-#### Heat Transfer Operation Labs 
+#### Laboratórne cvičenia z prenosu tepla 
 
 [2D Heat Transfer Operations Lab]({{ '/docs/sk/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/' | relative_url }})
 
 [3D Heat Transfer operation Lab]({{ '/docs/sk/labs/heat_transfer_operation_labs/3d_heat_transfer_operation_lab/' | relative_url }})
 
-#### Heat Treatment Labs 
+#### Laboratóriá tepelného spracovania 
 
 [2D HT Lab 1 Heating]({{ '/docs/sk/labs/heat_treatment_labs/2d_ht_lab1_heating/' | relative_url }})
 
@@ -187,13 +187,13 @@ title: "Labs Main Pg"
 
 [3D Inverse Heat Lab1]({{ '/docs/sk/labs/inverse_heat_labs/3d_inverse_heat_lab1/' | relative_url }})
 
-#### Machining Distortion Labs 
+#### Laboratóriá pre skreslenie pri obrábaní 
 
 [2D Machining Distortion Lab1]({{ '/docs/sk/labs/machining_distortion_labs/2d_machining_distortion_lab1/' | relative_url }})
 
 [3D Machining Distortion Lab1]({{ '/docs/sk/labs/machining_distortion_labs/3d_machining_distortion_lab1/' | relative_url }})
 
-#### Machining Labs
+#### Obrábacie laboratóriá
 
 [2D Cutting Lab]({{ '/docs/sk/labs/machining_labs/2d_cutting_lab/' | relative_url }})
 
@@ -205,7 +205,7 @@ title: "Labs Main Pg"
 
 [3D Drilling Lab]({{ '/docs/sk/labs/machining_labs/3d_drilling_lab/' | relative_url }})
 
-#### Material Suite Labs
+#### Laboratóriá Material Suite
 
 [Deformation Texture Model Lab]({{ '/docs/sk/labs/material_suite_labs/deformation_texture_model_lab/' | relative_url }})
 
@@ -219,7 +219,7 @@ title: "Labs Main Pg"
 
 [SIESTA Lab]({{ '/docs/sk/labs/material_suite_labs/siesta_lab/' | relative_url }})
 
-**Material Parameter Fitting Labs**
+**Laboratóriá na určovanie parametrov materiálov**
 
 [Flow Stress Fitting Lab]({{ '/docs/sk/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/' | relative_url }})
 
@@ -229,13 +229,13 @@ title: "Labs Main Pg"
 
 [TTT Calculation Lab]({{ '/docs/sk/labs/material_suite_labs/material_parameters_fitting_labs/ttt_calculation_lab/' | relative_url }})
 
-#### Multiple Blow Forging Labs
+#### Laboratóriá na kovanie viacerými údermi
 
 [2D Multi Blow Forging Lab1]({{ '/docs/sk/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/' | relative_url }})
 
 [3D Multi Blow Forging Lab1]({{ '/docs/sk/labs/multiple_blow_forging_labs/3d_multi_blow_forging_lab1/' | relative_url }})
 
-#### Report Generation Labs
+#### Laboratóriá na tvorbu správ
 
 [Report Generation Lab in MO]({{ '/docs/sk/labs/report_generation_lab/report_generation_lab_in_mo/' | relative_url }})
 
@@ -265,7 +265,7 @@ title: "Labs Main Pg"
 
 [Shape Rolling Lab3]({{ '/docs/sk/labs/shape_rolling_labs/shape_rolling_lab3/' | relative_url }})
 
-#### Shot Peening Lab
+#### Laboratórium pre kuličkové kalenie
 
 [Shot Peening Lab1]({{ '/docs/sk/labs/shot_peening_labs/shot_peening_lab1/' | relative_url }})
 
@@ -277,6 +277,6 @@ title: "Labs Main Pg"
 
 [Tube Piercing Lab1]({{ '/docs/sk/labs/spinning_labs/tube_piercing_lab1/' | relative_url }})
 
-#### Tool Life Study Lab
+#### Laboratórium pre výskum životnosti nástrojov
 
 [Tool Life Study Lab1]({{ '/docs/sk/labs/tool_life_study_lab/tool_life_study_lab1/' | relative_url }})

@@ -1,372 +1,372 @@
 ---
 lang: sk
-title: "3D Forming Operation in Expert mode Lab"
+title: "Operácia 3D tvarovania v laboratóriu v režime Expert"
 ---
 
-# 3D Forming Operation in Expert mode
+# 3D tvarovanie v režime Expert
 
-This lab will demonstrate how to setup a typical Forming operation of workpiece after Furnace heating in multiple operation (MO) expert mode. Forming Operation is an open environment where user can setup any Deformation, Heat transfer, Diffusion and Heat treatment problem but for new user, guided mode will guide with simple and basic features for Simulation controls, Mesh Generation, Stopping and Step controls. For detailed study user can go for advanced features using expert mode once become familiar with the DEFORM.
+V tomto laboratórnom cvičení si ukážeme, ako nastaviť typickú operáciu tvárnenia obrobku po vyhrevaní v peci v expertnom režime viacerých operácií (MO). Operácia tvárnenia je otvorené prostredie, v ktorom môže používateľ nastaviť akýkoľvek problém týkajúci sa deformácie, prenosu tepla, difúzie a tepelného spracovania, avšak pre nových používateľov je k dispozícii režim s návodom, ktorý ich prevedie jednoduchými a základnými funkciami pre ovládanie simulácie, generovanie siete, zastavenie a ovládanie krokov. Po oboznámení sa s programom DEFORM môže používateľ pre podrobné štúdium využiť pokročilé funkcie v režime expert.
 
-During this lab we will attempt to highlight few expert mode features of the system to make user to go with expert mode for detailed studies.
+V rámci tohto cvičenia sa pokúsime predstaviť niekoľko funkcií systému v režime pre pokročilých, aby sme používateľa motivovali k využívaniu tohto režimu na podrobné štúdium.
 
-1.1. Creating New Problem and Adding Operations
+1.1. Vytvorenie novej úlohy a pridanie operácií
 
-1.2. Operation1: Heat Transfer Heating Setup
+1.2. Operácia 1: Nastavenie vykurovania s prenosom tepla
 
-1.3. Operation2: Forming
+1.3. Operácia 2: Tvarovanie
 
-1.4. Running Simulation
+1.4. Spustenie simulácie
 
-1.5. Post Processing
+1.5. Následné spracovanie
 
-## Creating New Problem and Adding Operations
+## Vytvorenie nového problému a pridanie operácií
 
-### Creating New Problem
+### Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte položku DEFORM-v1x.xxx (kde .xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte položku **DEFORM GUI Main** vxx.xx. Zobrazí sa okno DEFORM GUI Main.
 
 ![]({{ '/assets/images/applications/55_2_arc_welding/image0002.jpg' | relative_url }})
 
-New Problem popup
+Vyskakovacie okno „Nový problém“
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**Integrated Manufacturing Process** " radio button and unit system as "**SI** " radio button in unit field as shown in Fig. 3DFEL1.1. Define Problem Name as "****3D_Forming_Operation_in_Expert_Mode**** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte systém jednotiek pomocou prepínača „**SI**“, ako je znázornené na obr. 3DFEL1.1. Názov úlohy definujte ako „****3D_Forming_Operation_in_Expert_Mode**** “ a uistite sa, že je zaškrtnuté políčko „Zobraziť dialógové okno s možnosťami“ (ak nezaškrtnete políčko „**Zobraziť dialógové okno s možnosťami**“, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s využitím integrovaného výrobného procesu deformácie.
 
-Multiple operation wizard will open with the New Project dialog as shown in [Fig. 3DFEL1.2](), user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we use ‘****3D_Forming_Operation_in_Expert_Mode**** ’ as the project name. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation. MO wizard will open (see [Fig. 3DFEL1.2.]()), Select the **first operation** as **3D** **Heat** **transfer** operation and **check the checkbox** to add Heat transfer operation as first operation. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom „Nový projekt“, ako je znázornené na obrázku [Fig. 3DFEL1.2](). Používateľ bude vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „****3D_Forming_Operation_in_Expert_Mode****“. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie. Otvorí sa sprievodca MO (pozri obrázok [Fig. 3DFEL1.2.]()). Ako **prvú operáciu** vyberte operáciu **3D** **tepelný** **prenos** a **zaškrtnite políčko**, aby ste operáciu tepelného prenosu pridali ako prvú operáciu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste pokračovali v otváraní operácie.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0002.jpg' | relative_url }})
 
-MO Wizard New Project Opening Window
+Okno na otvorenie nového projektu v nástroji MO Wizard
 
-### Adding Forming operation
+### Pridanie operácie tvarovania
 
-Multiple Operation wizard will opens new project with one 3d Heat transfer operation. Add one Forming operation for "Steering Link" by clicking ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button as shown in Fig. 3DFEL1.3.
+Sprievodca viacerými operáciami otvorí nový projekt s jednou 3D operáciou prenosu tepla. Pridajte jednu operáciu tvárnenia pre „riadiaci čap“ kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}), ako je znázornené na obr. 3DFEL1.3.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0003.jpg' | relative_url }})
 
-Adding Forming Operation
+Pridanie formovacej operácie
 
-## Operation1: Heat Transfer Heating Setup
+## Operácia 1: Nastavenie vykurovacieho systému na prenos tepla
 
-For first heat transfer operation change the operation name as "**Air Transfer** " by double clicking on Operation name in Operation Editor window as shown in Fig. 3DFEL1.4. and press Enter in Keyboard.
+Pre prvú operáciu prenosu tepla zmeňte názov operácie na „**Prenos vzduchu**“ dvojitým kliknutím na názov operácie v okne Editor operácií, ako je znázornené na obr. 3DFEL1.4, a stlačte klávesu Enter na klávesnici.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0004.jpg' | relative_url }})
 
-Name the first operation as Air Transfer
+Prvú operáciu nazvite „Letecký transfer“
 
-### Selecting Heat Transfer Type
+### Výber typu prenosu tepla
 
-Select "**Transfer through air** " heat transfer type for Air Transfer operation as shown in Fig. 3DFEL1.3. This will set the default heat transfer settings for heating operation. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Pre prevádzku s prenosom vzduchom vyberte typ prenosu tepla „**Prenos vzduchom**“, ako je znázornené na obr. 3DFEL1.3. Tým sa nastavia predvolené nastavenia prenosu tepla pre režim kúrenia. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
-### Set Process Conditions
+### Nastavenie podmienok spracovania
 
-Define **Transfer time** as **4** sec at **20** °C environment temperature and default convection coefficient as shown in Fig. 3DFEL1.5. and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Nastavte **čas prenosu** na **4** s pri teplote okolia **20** °C a predvolený koeficient konvekcie tak, ako je znázornené na obr. 3DFEL1.5, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0005.jpg' | relative_url }})
 
-Process Condition settings for air transfer
+Nastavenia prevádzkových podmienok pre prenos vzduchu
 
-### Select Simulation Controls for air transfer
+### Vyberte ovládacie prvky simulácie pre prenos vzduchu
 
-In simulation controls window expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) gets activate (see Fig. 3DFEL1.6.), select the ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) icon in the tool tab to observe the expert mode simulation control features.
+V okne ovládacích prvkov simulácie sa aktivuje expertný režim (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) (pozri obr. 3DFEL1.6.); kliknutím na ikonu ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) na karte „Nástroje“ si môžete prezrieť funkcie ovládania simulácie v expertnom režime.
 
-Keep only Heat Transfer mode checked in the Main setting tab as only heat transfer is modeled. The operation name that was changed to "Air Transfer" is shown here as, seen in Fig. 3DFEL1.6. Other advanced features like step, stop, solver, process conditions,. etc. are available here, we will use some of these other features in mesh, stopping and step controls during the later stage of the setup. For more information about simulation controls options refer [Simulation Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Na karte „Hlavné nastavenia“ nechajte zaškrtnutý iba režim „Prenos tepla“, keďže sa modeluje iba prenos tepla. Názov operácie, ktorý bol zmenený na „Prenos vzduchu“, sa tu zobrazuje tak, ako je to vidieť na obr. 3DFEL1.6. K dispozícii sú tu aj ďalšie pokročilé funkcie, ako napríklad krok, zastavenie, riešiteľ, podmienky procesu atď. Niektoré z týchto funkcií použijeme v neskoršej fáze nastavenia pri ovládaní siete, zastavovania a krokov. Ďalšie informácie o možnostiach ovládania simulácie nájdete v [Simulation Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_simulation_controls/' | relative_url }}). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0006.jpg' | relative_url }})
 
-Simulation Controls settings for air transfer in expert mode
+Nastavenia ovládacích prvkov simulácie pre prenos vzduchu v expertnom režime
 
-### Import material for workpiece
+### Import materiálu pre obrobok
 
-In Material window, load the material '**DIN-41Cr4[1450-2200F(800-1200)]** ' from DEFORM Material library, from **Steel** category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option. This can be done as shown in Fig. 3DFEL1.7. by clicking on ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button. Material can also be loaded from Materials list in Explorer. Click the ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button until the Workpiece window.
+V okne „Material“ načítajte materiál „**DIN-41Cr4[1450-2200F(800-1200)]**“ z knižnice materiálov DEFORM, z kategórie **Steel**, pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice). To je možné vykonať tak, ako je znázornené na obr. 3DFEL1.7, kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}). Materiál je možné načítať aj zo zoznamu materiálov v Průzkumníku. Klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno Obrobok.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0007.jpg' | relative_url }})
 
-Importing Workpiece material from DEFORM library
+Import materiálu obrobku z knižnice DEFORM
 
-### Define Workpiece
+### Definícia obrobku
 
-In Workpiece object window keep the object type as ‘**Plastic** ’ and specify workpiece temperature as **1300** °C (see Fig. 3DFEL1.8.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue and import the workpiece geometry.
+V okne „Objekt obrobku“ ponechajte typ objektu ako „**Plast**“ a zadajte teplotu obrobku **1300** °C (pozri obr. 3DFEL1.8.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali a naimportovali geometriu obrobku.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0008.jpg' | relative_url }})
 
-Workpiece Object definition
+Definícia objektu obrobku
 
-### Create Workpiece Geometry
+### Vytvorenie geometrie obrobku
 
-In Geometry page, using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load Geometry from Library) button import ‘**ids_link_billet.stl** ' from installation path **/3D/LABS/** as shown in Fig. 3DFEL1.9. Primitive geometry creation option also available at this stage to create the geometry.
+Na stránke „Geometria“ pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) načítajte súbor „**ids_link_billet.stl**“ z inštalačnej zložky **/3D/LABS/**, ako je znázornené na obr. 3DFEL1.9. V tejto fáze je k dispozícii aj možnosť vytvorenia primitívnej geometrie.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0009.jpg' | relative_url }})
 
-Importing geometry for workpiece
+Import geometrie obrobku
 
-After importing any geometry click on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button to check the geometry, geometry checking window will appear which gives a summary of the object’s geometry (see Fig. 3DFEL1.10.). For an object that has a closed volume, there should be 1 surface, 0 free edges, and 0 invalid entities. Objects that are imported as surfaces and not solids will have a free edge but should still only have 1 surface.
+Po importe akejkoľvek geometrie kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste geometriu skontrolovali; zobrazí sa okno na kontrolu geometrie, ktoré obsahuje prehľad geometrie objektu (pozri obr. 3DFEL1.10.). Objekt s uzavretým objemom by mal mať 1 plochu, 0 voľných hrán a 0 neplatných entít. Objekty, ktoré sú importované ako plochy a nie ako telesa, budú mať voľnú hranu, ale aj tak by mali mať len 1 plochu.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0010.jpg' | relative_url }})
 
-Checking the imported 3d geometry
+Kontrola importovanej 3D geometrie
 
-### Generate Workpiece Mesh
+### Vytvorenie siete obrobku
 
-Complete range of meshing options are available in expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})), for air transfer operation generate the mesh using **Absolute** **mesh** generation type with Minimum element size of 1.3333 mm and **Size** **ratio** of **3** as shown in Fig. 3DFEL1.11. In the next operation we use other mesh density window and forced remeshing options. Click the ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button and select ![]({{ '/assets/icons/pre_icons/mo_no_button.jpg' | relative_url }}) for 'Default Boundary Conditions' popup asking whether to assign default boundary conditions, as we don't want to assing the Heat Exchange with environment bcc to all surfaces. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue. For more information about expert mode mesh options refer [3D Mesh]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}).
+V expertnom režime (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) je k dispozícii kompletná škála možností vytvárania sietí; pre prevádzku s prenosom vzduchu vytvorte sieť pomocou typu generovania **Absolute** **sieť** s minimálnou veľkosťou prvku 1,3333 mm a **pomerom veľkostí** **3**, ako je znázornené na obr. 3DFEL1.11. V ďalšom kroku použijeme iné okno hustoty siete a možnosti vynúteného prečlenenia. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) a v rozbaľovacom okne „Východiskové okrajové podmienky“, ktoré sa zobrazí s otázkou, či chcete priradiť východiskové okrajové podmienky, vyberte možnosť ![]({{ '/assets/icons/pre_icons/mo_no_button.jpg' | relative_url }}), pretože nechceme priradiť okrajovú podmienku „Výmena tepla s okolím“ (bcc) na všetky povrchy. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a pokračujte. Ďalšie informácie o možnostiach siete v expertnom režime nájdete v [3D Mesh]({{ '/docs/sk/pre_processor/13_mesh_generation/13_2_3d_tet_mesh_generation/' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0011.jpg' | relative_url }})
 
-Mesh generation for workpiece
+Vytvorenie siete pre obrobok
 
-### Assign Workpiece Material
+### Priradiť materiál obrobku
 
-To assign material for workpiece select the material **‘DIN-41Cr4[1450-2200F(800-1200)]** ’ from material window. This can be done as shown in Fig. 3DFEL1.12. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Na priradenie materiálu k obrobku vyberte v okne materiálov materiál **„DIN-41Cr4[1450-2200F(800-1200)]**“. Postupujte podľa obrázku 3DFEL1.12. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0012.jpg' | relative_url }})
 
-Assigning material for workpiece
+Priradenie materiálu k obrobku
 
-### Defining workpiece Boundary Conditions
+### Definovanie okrajových podmienok obrobku
 
-As we are modeled half of the steering link, to enforce symmetry, we need to define a symmetry plane boundary condition to the +X end of the part and heat exchange with the environment boundary condition to all surfaces except the +x end of the part.
+Keďže modelujeme polovicu riadiaceho ramena, musíme na zachovanie symetrie definovať okrajovú podmienku symetrickej roviny na konci dielu v smere +X a okrajovú podmienku výmeny tepla s okolím na všetkých povrchoch s výnimkou konca dielu v smere +X.
 
-Add the **Symmetry BCC** to the **+X** end plane of the part by selecting the plane using selection options on left side BCC tool bar and clicking on ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) (Add BCC) button, after adding select symmetry plane vectors appears under Symmetry Planar as shown in Fig. 3DFEL1.13. to ensure the correct definition of BCC.
+Pridajte **symetriu BCC** k koncovej rovine **+X** dielu tak, že vyberiete rovinu pomocou voľieb výberu na ľavej strane panela nástrojov BCC a kliknete na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) (Pridať BCC). Po pridaní sa pod položkou „Symmetry Planar“ zobrazia vektory symetrickej roviny, ako je znázornené na obr. 3DFEL1.13, čím sa zabezpečí správne definovanie BCC.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0013.jpg' | relative_url }})
 
-Symmetry boundary condition definition for workpiece
+Definícia okrajovej podmienky symetrie pre obrobok
 
-Then add the heat exchange with environment BCC by selecting the symmetry plane using selection options on left side BCC tool bar and clicking on ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) (Add BCC) button. Select the Defined branch to confirm the BCC definition as shown in Fig. 3DFEL1.14.
+Následne pridajte výmenu tepla s prostredím BCC tak, že vyberiete symetrickú rovinu pomocou možností výberu na ľavej strane panela nástrojov BCC a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) (Pridať BCC). Vyberte vetvu „Defined“, aby ste potvrdili definíciu BCC, ako je znázornené na obr. 3DFEL1.14.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0014.jpg' | relative_url }})
 
-Boundary condition definition for workpiece
+Definícia okrajových podmienok pre obrobok
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Stopping controls window as there is no object positioning and thermal stopping controls definition is required.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí okno „Ovládacie prvky zastavenia“, keďže nie je definované polohovanie objektu a je potrebné definovať ovládacie prvky tepelného zastavenia.
 
-### Check Stopping controls
+### Kontrola brzdových ovládačov
 
-In the stopping controls window in expert mode we can observe that the Transfer time 4 seconds that was defined in the Process condition window at the beginning of the setup is reflected here as Process duration stopping control as shown in Fig. 3DFEL1.15. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+V okne riadenia zastavenia v expertnom režime môžeme vidieť, že čas prenosu 4 sekundy, ktorý bol definovaný v okne Podmienky procesu na začiatku nastavenia, sa tu premieta ako riadenie zastavenia na základe trvania procesu, ako je znázornené na obr. 3DFEL1.15. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0015.jpg' | relative_url }})
 
-Air transfer operation stopping control
+Ovládanie zastavenia prevádzky leteckej prepravy
 
-### Define Step Controls
+### Definovanie ovládacích prvkov krokov
 
-Set the step definition type as **time increment** of **0.1** sec constant value in **step increment** tab as shown in Fig. 3DFEL1.16.
+Nastavte typ definície kroku na **časový prírastok** s konštantnou hodnotou **0,1** s na karte **prírastok kroku**, ako je znázornené na obr. 3DFEL1.16.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0016.jpg' | relative_url }})
 
-Step increment definition for air transfer
+Definícia krokového prírastku pre prenos vzduchu
 
-Select **simulation steps** tab to set the **number of simulation steps** as **50** at **0.1** sec each and saving **every** **5** steps as shown in Fig. 3DFEL1.17. As informed in simulation controls definition various advanced simulation controls settings are also available in step controls expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed to the database generation stage.
+Vyberte kartu **simulačné kroky** a nastavte **počet simulačných krokov** na **50** s dĺžkou **0,1** sekundy na každý krok a ukladajte **každých** **5** krokov, ako je znázornené na obr. 3DFEL1.17. Ako bolo uvedené v definícii ovládacích prvkov simulácie, rôzne pokročilé nastavenia ovládacích prvkov simulácie sú k dispozícii aj v expertnom režime ovládania krokov (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli do fázy generovania databázy.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0017.jpg' | relative_url }})
 
-Simulation steps definition for air transfer
+Definícia krokov simulácie pre prenos vzduchu
 
-### Generate Database
+### Vytvoriť databázu
 
-In the database generation stage user can check the data required for the analysis and proceed to generate the database (see Fig. 3DFEL1.18.). First operation of any multiple operations, user is required to generate the database. For all the subsequent operations we only need to setup the process data and simulation controls. Click on ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) to proceed to the next operation ‘**Steering****link** ".
+V etape vytvárania databázy môže používateľ skontrolovať údaje potrebné na analýzu a pokračovať vo vytváraní databázy (pozri obr. 3DFEL1.18.). Ako prvú z viacerých operácií musí používateľ vytvoriť databázu. Pre všetky nasledujúce operácie stačí len nastaviť procesné údaje a parametre simulácie. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) prejdite k ďalšej operácii „**Riadenie****prepojenie**“.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0018.jpg' | relative_url }})
 
-Database generation window for first operation
+Okno na vytvorenie databázy pre prvú operáciu
 
-## Operation 2: Steering Link Forming
+## Operácia 2: Tvarovanie riadiaceho ramena
 
-The Forming operation runs till distance between dies reaches 400.8 mm. As workpiece is coming from air transfer operation with its thermal history, make workpiece as read from DB object and add other two objects for Top and Bottom Die to setup the steering link forming operation.
+Operácia tvárnenia prebieha dovtedy, kým vzdialenosť medzi maticami nedosiahne hodnotu 400,8 mm. Keďže obrobok prichádza z operácie vzduchového prenosu so svojou teplotnou históriou, vytvorte obrobok podľa údajov z objektu v databáze a pridajte ďalšie dva objekty pre hornú a spodnú maticu, aby ste nastavili operáciu tvárnenia pomocou riadiaceho ramena.
 
-Name the operation as '**Steering Link'** by double clicking on Operation name in Operation Editor and press Enter from Keyboard to close.
+Pomenujte operáciu ako „**Riadiaca tyč**“ dvojitým kliknutím na položku „Názov operácie“ v editore operácií a stlačením klávesy Enter na klávesnici operáciu zatvorte.
 
-### Select Simulation Controls settings for forming
+### Vyberte nastavenia ovládacích prvkov simulácie pre tvarovanie
 
-In simulation controls check both **Deformation** and **Heat****transfer** simulation modes as shown in Fig. 3DFEL1.19. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+V nastaveniach simulácie zaškrtnite oba simulačné režimy **Deformácia** a **Prenos tepla**, ako je znázornené na obr. 3DFEL1.19. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0019.jpg' | relative_url }})
 
-Simulation control settings for forming
+Nastavenia riadenia simulácie pre tvárnenie
 
-### Add die objects
+### Pridať objekty s kockami
 
-In Object window add number of objects as 3 as shown in Fig. 3DFEL1.20., as we will be bringing in all two dies at 90°C for the forming operation. We can now see the object tree is expanded to include the dies, details for which will be now be defined. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+V okne „Object“ pridajte 3 objekty, ako je znázornené na obr. 3DFEL1.20., keďže na operáciu tvárnenia použijeme obe matrice pri teplote 90 °C. Teraz vidíme, že strom objektov je rozbalený a obsahuje matrice, ktorých podrobnosti budeme teraz definovať. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0020.jpg' | relative_url }})
 
-Adding objects for forming
+Pridávanie objektov na tvarovanie
 
-### Define Workpiece
+### Definícia obrobku
 
-In workpiece definition window select the object type as "**Read from DB** " as shown in Fig. 3DFEL1.21. After defining dies we will define the mesh density window for workpiece at big end of the symmetric steering link, so click on Top Die in operation tree to define the Dies.
+V okne definície obrobku vyberte typ objektu „**Načítať z databázy**“, ako je znázornené na obr. 3DFEL1.21. Po definovaní foriem nastavíme hustotu siete pre obrobok na širšom konci symetrického riadiaceho ramena, preto kliknite na položku „Top Die“ v strome operácií, aby ste definovali formy.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0021.jpg' | relative_url }})
 
-Workpiece definition window in forming
+Okno definície obrobku v procese tvárnenia
 
-### Define Top Die
+### Definícia hornej matrice
 
-In Top die definition window accept the object type as **rigid** and specify initial temperature as **90** °C as shown in Fig. 3DFEL1.22. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+V okne definície Top die nastavte typ objektu na **rigid** a zadajte počiatočnú teplotu **90** °C, ako je znázornené na obr. 3DFEL1.22. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0022.jpg' | relative_url }})
 
-Top die definition window in forming
+Okno s definíciou hornej matrice pri tvárnení
 
-### Import Top Die geometry
+### Import geometrie hornej matrice
 
-In Top die Geometry window, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load Geometry from Library) button and import ‘**Ids_link_top****.stl'** from DEFORM geometry library path **/3D/LABS/**(see Fig. 3DFEL1.23.). Check the imported geometry as explained for workpiece geometry earlier. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until top die movement window.
+V okne „Top die Geometry“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) a importujte súbor „**Ids_link_top****.stl'** z cesty ku knižnici geometrií DEFORM **/3D/LABS/** (pozri obr. 3DFEL1.23.). Skontrolujte importovanú geometriu tak, ako bolo vysvetlené skôr v prípade geometrie obrobku. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno pohybu hornej matrice.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0023.jpg' | relative_url }})
 
-Importing the multiple boundary geometry for top die
+Import geometrie s viacerými hranicami pre hornú matricu
 
-### Assigning movement controls for top die
+### Priradenie ovládacích prvkov pohybu pre hornú matricu
 
-In top die movement controls define the **hydraulic press** with hydraulic**speed** as **function of time**(local time) in **-Z** direction as shown in Fig. 3DFEL1.24.
+V ovládacích prvkoch pohybu hornej matrice definujte **hydraulický lis** s hydraulickou **rýchlosťou** ako **funkciu času** (miestneho času) v smere **-Z**, ako je znázornené na obr. 3DFEL1.24.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0024.jpg' | relative_url }})
 
-Hydraulic movement definition for top die
+Definícia hydraulického pohybu hornej matrice
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_define_function..._button2.jpg' | relative_url }}) button next to speed and define such that from 0 to 2.04 sec press runs with speed is 10 mm/sec and from 2.0401 to 4 sec press runs with 8 mm/sec, as this operation start after 4 second air transfer operation if user wants to maintain the global time for function definition then in simulation controls Global time must be selected for function definition. So in this lab we define the speed function of global time as shown in Fig. 3DFEL1.25. That is from 4 to 6.04 sec press runs with speed is 10 mm/sec and from 6.0401 to 8.0 sec press runs with 8 mm/sec. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the definition and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Bottom die definition window.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_function..._button2.jpg' | relative_url }}) vedľa položky „rýchlosť“ a nastavte tak, aby v rozmedzí od 0 do 2,04 s lis bežal rýchlosťou 10 mm/s a v rozmedzí od 2,0401 do 4 s rýchlosťou 8 mm/s, keďže táto operácia začína po 4 sekundách prevádzky vzduchového prenosu; ak chce používateľ zachovať globálny čas pre definíciu funkcie, v ovládacích prvkoch simulácie musí byť pre definíciu funkcie zvolený globálny čas. V tomto laboratórnom cvičení teda definujeme funkciu rýchlosti globálneho času tak, ako je znázornené na obr. 3DFEL1.25. To znamená, že v rozmedzí od 4 do 6,04 s lis beží rýchlosťou 10 mm/s a v rozmedzí od 6,0401 do 8,0 s lis beží rýchlosťou 8 mm/s. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste uzavreli definíciu, a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno definície spodnej matrice.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0025.jpg' | relative_url }})
 
-Hydraulic speed defined as function of local time
+Hydraulická rýchlosť definovaná ako funkcia miestneho času
 
-### Define Bottom Die
+### Definícia spodnej matrice
 
-In Bottom die definition window accept the object type as **rigid** and specify initial **temperature** as **90** °C as shown in Fig. 3DFEL1.26. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+V okne definície spodnej formy nastavte typ objektu na **tuhý** a zadajte počiatočnú **teplotu** **90** °C, ako je znázornené na obr. 3DFEL1.26. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0026.jpg' | relative_url }})
 
-Bottom die definition window
+Okno na definovanie spodnej matrice
 
-### Import Bottom die geometry
+### Import geometrie spodnej matrice
 
-In Bottom die Geometry window, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load Geometry from Library) button and import ‘**ids_link_bottom.stl** ' from DEFORM geometry library path /3D/LABS/ (see Fig. 3DFEL1.27.) . Check the imported geometry as explained for workpiece geometry earlier. Click on **workpiece** mesh branch in operation tree to define the mesh window for workpiece.
+V okne „Geometria spodnej formy“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) a importujte súbor „**ids_link_bottom.stl**“ z cesty knižnice geometrií DEFORM /3D/LABS/ (pozri obr. 3DFEL1.27). Skontrolujte importovanú geometriu podľa pokynov uvedených vyššie pre geometriu obrobku. Kliknite na vetvu **obrobok** v strome operácií, aby ste otvorili okno pre definovanie siete obrobku.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0027.jpg' | relative_url }})
 
-Importing the multiple boundary geometry for bottom die
+Import geometrie s viacerými hranicami pre spodnú matricu
 
-### Define Workpiece Mesh for Forming operation
+### Definovanie siete obrobku pre operáciu tvárnenia
 
-At big end of symmetric steering link, we will add the mesh density window to capture state variable and metal flow more accurately. We will also define the forced remesh for every 50 steps to refine the mesh periodically. To define mesh settings, turn On "**Define mesh settings** " check box in Workpiece Mesh page, also turn On "**Perform Remesh Before This Operation** " check box to have different mesh from the beginning of the Forming operation. Select the "**Weighting Factors** " tab, activate mesh density windows by setting the weighting factor as 0.2 for Mesh windows and set Boundary curvature weighting factor to 0.4, Strain Distribution weighting factor to 0.2 and Strain rate distribution weighting factor to 0.2 as shown in Fig. 3DFEL1.28.
+Na väčšom konci symetrického riadiaceho ramena pridáme okno hustoty siete, aby sme presnejšie zachytili stavovú premennú a tok kovu. Takisto nastavíme vynútené prečlenenie siete každých 50 krokov, aby sme sieť pravidelne spresňovali. Na definovanie nastavení siete zaškrtnite políčko „**Definovať nastavenia siete**“ na stránke Sieť obrobku a zaškrtnite tiež políčko „**Vykonávať prečlenenie pred touto operáciou**“, aby ste mali od začiatku operácie tvárnenia odlišnú sieť. Vyberte kartu „**Váhovacie faktory**“, aktivujte okná hustoty siete nastavením váhového faktora na 0,2 pre okná siete a nastavte váhový faktor zakrivenia hranice na 0,4, váhový faktor rozloženia deformácie na 0,2 a váhový faktor rozloženia rýchlosti deformácie na 0,2, ako je znázornené na obr. 3DFEL1.28.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0028.jpg' | relative_url }})
 
-Weighting factor settings for mesh windows
+Nastavenia váhových koeficientov pre okná siete
 
-After weighting factor for mesh windows is set, Mesh windows tab is activated as shown in Fig. 3DFEL1.28. Now, select Mesh windows tab to add mesh windows and define mesh windows settings. We need Bottom Die along with Workpiece to position mesh windows, hence select Bottom Die and Workpiece to display using ![]({{ '/assets/icons/pre_icons/mo_show_user_defined_obj_icon.jpg' | relative_url }}) (user defined mode) icon below the object tree. Click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button in Mesh windows tab to add new mesh window, select Hollow mesh density window type from mesh window types and position window over Bottom Die big end center as shown in Fig. 3DFEL1.29, specify the element size within window as 2.0 compared to elements outside window.
+Po nastavení váhového koeficientu pre okná siete sa aktivuje karta „Mesh windows“, ako je znázornené na obr. 3DFEL1.28. Teraz vyberte kartu „Mesh windows“, aby ste mohli pridať okná siete a definovať ich nastavenia. Na umiestnenie okien siete potrebujeme spodnú matricu spolu s obrobkom, preto vyberte spodnú matricu a obrobok, ktoré sa majú zobraziť, pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_show_user_defined_obj_icon.jpg' | relative_url }}) (režim definovaný používateľom) pod stromom objektov. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) na karte „Mesh windows“ (Okná siete), aby ste pridali nové okno siete, z typov okien siete vyberte typ „Hollow mesh density“ (Hustota dutej siete) a umiestnite okno nad stredom veľkého konca spodnej matrice, ako je znázornené na obr. 3DFEL1.29, a určte veľkosť prvkov v rámci okna na hodnotu 2,0 v porovnaní s prvkami mimo okna.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0029.jpg' | relative_url }})
 
-Adding mesh density window for workpiece in forming operation
+Pridanie okna pre nastavenie hustoty siete pre obrobok pri operácii tvárnenia
 
-Again click on ![]({{ '/assets/icons/pre_icons/mo_show_user_defined_obj_icon.jpg' | relative_url }}) (user defined mode) icon to turn on the display of Top die along with Workpiece and Bottom Die, then drag window upward so it covers complete workpiece height as shown in Fig. 3DFEL1.30.
+Znovu kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_show_user_defined_obj_icon.jpg' | relative_url }}) (režim definovaný používateľom), aby ste zapli zobrazenie hornej matrice spolu s obrobkom a spodnou matricou, a potom pretiahnite okno nahor tak, aby pokrývalo celú výšku obrobku, ako je znázornené na obr. 3DFEL1.30.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0030.jpg' | relative_url }})
 
-Positioning the mesh density window
+Umiestnenie okna s hustotou siete
 
-Select **remeshing****criteria** tab and define the **Maximum** **step** **increment** as **50** , so simulation hits after every 50 steps in cone forming operation as shown in Fig. 3DFEL1.31. Click on Scheduled positioning in operation tree to continue.
+Vyberte kartu **kritériá premenovania siete**** a nastavte **maximálny** **prírastok kroku** na hodnotu **50**, aby simulácia prebiehala po každých 50 krokoch pri operácii tvarovania kužeľa, ako je znázornené na obr. 3DFEL1.31. Kliknite na položku „Plánované polohovanie“ v strome operácií, aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0031.jpg' | relative_url }})
 
-Forced remeshing criteria used in forming
+Kritériá núteného prepočítania siete používané pri tvarovaní
 
-### Define Scheduled positioning
+### Definícia plánovaného polohovania
 
-The dies by default are in correct position, to make sure they positioned properly define the scheduled position to top and bottom die with respect to workpiece by interference method in -Z and + Z direction respectively as shown in Fig. 3DFEL1.32. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Matrice sú štandardne v správnej polohe. Ak sa chcete uistiť, že sú správne umiestnené, definujte plánovanú polohu hornej a dolnej matrice vo vzťahu k obrobku metódou kolízie v smere -Z, resp. +Z, ako je znázornené na obr. 3DFEL1.32. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0032.jpg' | relative_url }})
 
-Scheduled positioning for top and bottom dies
+Plánované polohovanie hornej a spodnej matrice
 
-### Defining Inter-Object relations
+### Definovanie vzťahov medzi objektmi
 
-Select user type contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button (see Fig. 3DFEL1.35.). It will add the relationship between the Billet, Top Die and Bottom Die. As the Dies are Rigid and Billet is plastic, Top and Bottom Dies are considered as Master and Billet as Slave.
+Vyberte typ kontaktu „užívateľ“ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) (pozri obr. 3DFEL1.35.). Tým sa pridá vzťah medzi sochárom, hornou matricou a spodnou matricou. Keďže matrice sú tuhé a sochár je plastický, horná a spodná matrica sa považujú za hlavné a sochár za podriadený.
 
-Highlight the Top Die – Workpiece relationship and click the ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) button to modify the contact conditions. In the friction tab (see Fig. 3DFEL1.33.) there is a pull-down menu that allows the user to choose the appropriate friction conditions of common forming processes.
+Zvýraznite vzťah medzi hornou matricou a obrobkom a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) upravte podmienky kontaktu. Na karte „Trenie“ (pozri obr. 3DFEL1.33.) sa nachádza roletové menu, ktoré používateľovi umožňuje vybrať vhodné podmienky trenia pre bežné tvárniace procesy.
 
-Since this is hot forming simulation and the dies are steel, use the pull down menu and select **Hot forging (Lubricated)** from the list. A friction value of**0.3** will automatically be selected.
+Keďže ide o simuláciu tvárnenia za tepla a formy sú z ocele, použite roletové menu a zo zoznamu vyberte možnosť **Tvárnenie za tepla (s mazáním)**. Hodnota trenia **0,3** sa nastaví automaticky.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0033.jpg' | relative_url }})
 
-Inter-object friction coefficient definition for hot forging
+Definícia koeficientu trenia medzi objektmi pri horúcom kovaniu
 
-In **thermal** tab select the Forming type pull down option, it will add the default heat transfer coefficient value**5** for forming as shown in Fig. 3DFEL1.34.
+Na karte **tepelná** vyberte z roletového menu možnosť „Typ tvárnenia“; tým sa pridá predvolená hodnota koeficientu prenosu tepla **5** pre tvárnenie, ako je znázornené na obr. 3DFEL1.34.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0034.jpg' | relative_url }})
 
-Inter-object heat transfer coefficient definition for forming
+Definícia koeficientu prenosu tepla medzi objektmi pri tvárnení
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to go back to Inter-Object window, since the friction conditions and inter-object heat transfer are the same for all the object pairs, the ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button can be used to copy the interface properties from the first relationship to all of the others. After this is done, all relationships will have a friction factor of**0.3** and heat transfer coefficient of **5** defined as shown in Fig. 3DFEL1.35. Since the contact will initialize and generate while generating database, turn on "Initialize" and "Generate" check boxes. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) sa vrátite do okna „Inter-Object“; keďže podmienky trenia a prenos tepla medzi objektmi sú rovnaké pre všetky páry objektov, pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môžete skopírovať vlastnosti rozhrania z prvého vzťahu do všetkých ostatných. Po vykonaní tejto operácie budú mať všetky vzťahy koeficient trenia **0,3** a koeficient prenosu tepla **5**, ako je znázornené na obr. 3DFEL1.35. Keďže sa kontakt inicializuje a vygeneruje počas vytvárania databázy, zaškrtnite políčka „Initialize“ a „Generate“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0035.jpg' | relative_url }})
 
-Inter-Object relationship definition for forming
+Definícia vzťahu medzi objektmi pre tvorbu
 
-### Define Stopping controls
+### Definovanie ovládacích prvkov zastavenia
 
-In stopping control window select the **Die Distance** tab to define when distance between dies reaches 11.0 mm. So enter the distance **11.0** , select the direction as **Z** and then from display window pick the point on big end, top and bottom die cavity center as shown in Fig. 3DFEL1.36. After picking points on dies distance between dies can be observed, in this case its around 51.8. Process parameters like primary die Max. load, Min. velocity and Max. stroke, Max. Strain in element and Process duration can also be used as stopping controls and also stopping plane stopping control available, this is normally used in rolling operation. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+V okne riadenia zastavenia vyberte kartu **Vzdialenosť medzi formami**, aby ste nastavili, kedy má vzdialenosť medzi formami dosiahnuť hodnotu 11,0 mm. Zadajte teda vzdialenosť **11,0**, vyberte smer **Z** a potom v zobrazenom okne vyberte bod na veľkom konci, v strede hornej a dolnej dutiny matrice, ako je znázornené na obr. 3DFEL1.36. Po výbere bodov na maticiach je možné sledovať vzdialenosť medzi maticami, v tomto prípade je to približne 51,8. Ako riadiace prvky zastavenia možno použiť aj parametre procesu, ako sú maximálne zaťaženie primárnej matice, minimálna rýchlosť a maximálny zdvih, maximálne napätie v prvku a trvanie procesu; k dispozícii je aj riadiaci prvok zastavenia na rovine, ktorý sa bežne používa pri valcovacích operáciách. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0036.jpg' | relative_url }})
 
-Distance between dies stopping control for forming
+Riadenie zastavenia matíc na základe vzdialenosti pri tvárnení
 
-### Define Step controls
+### Nastavenie ovládacích prvkov krokov
 
-In **step** **increment** tab select step definition as **Die** **displacement** of **0.2** mm as shown in Fig. 3DFEL1.37.
+Na karte **Krok** **Prírastok** vyberte definíciu kroku ako **Posun matrice** **0,2** mm, ako je znázornené na obr. 3DFEL1.37.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0037.jpg' | relative_url }})
 
-Step controls settings for forming operation
+Krok určuje nastavenia pre operáciu tvárnenia
 
-Select **simulation** **steps** tab and set **number** **of****steps** as **500** and **step** **increment** **to** **save** as **10** for the primary die displacement (which is Top die, object number 2 in this simulation) as shown in Fig. 3DFEL1.38.
+Vyberte kartu **simulačné** **kroky** a nastavte **počet** **krokov** na **500** a **krok** **inkrementu** **na** **10** pre posun primárnej matrice (t. j. hornej matrice, objekt č. 2 v tejto simulácii), ako je znázornené na obr. 3DFEL1.38.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0038.jpg' | relative_url }})
 
-Simulation steps definition for forming
+Definícia krokov simulácie tvárnenia
 
-Select **Advanced** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Variables** tab to select the **global** time to use for function data (see Fig. 3DFEL1.39.) as we used the global time for hydraulic press speed function definition.
+Vyberte kartu **Pokročilé** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Premenné**, aby ste mohli zvoliť **globálny** čas, ktorý sa má použiť pre údaje funkcie (pozri obr. 3DFEL1.39.), keďže sme globálny čas použili pri definícii funkcie rýchlosti hydraulického lisu.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0039.jpg' | relative_url }})
 
-Selecting global time for function data in cone forming
+Výber globálneho času pre údaje o funkcii pri tvárnení kužeľov
 
-Select the **Remeshing** **criteria** tab to observe the workpiece remeshing criteria defined in workpiece mesh window as shown in Fig. 3DFEL1.40.
+Kliknite na kartu **Kritériá** **pregenerovania siete**, aby ste si prezreli kritériá pregenerovania siete obrobku definované v okne siete obrobku, ako je znázornené na obr. 3DFEL1.40.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0040.jpg' | relative_url }})
 
-Forming operation remeshing criteria defined for workpiece
+Kritériá pre vytvorenie novej siete pri operácii tvarovania definované pre obrobok
 
-As database for cone forming operation will generate during simulation, so this completes the multiple forming operation setup in MO - Expert mode. To simulate the problem switch to Simulation tab above the object tree. (See Fig. 3DFEL1.42.)
+Keďže sa počas simulácie vytvorí databáza pre operáciu tvarovania kužeľa, týmto je nastavenie viacerých tvarovacích operácií v režime MO – Expert dokončené. Na simuláciu problému prejdite na kartu „Simulácia“ nad stromom objektov. (Pozri obr. 3DFEL1.42.)
 
-## Running Simulation
+## Spustenie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. 3DFEL1.41.Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. 3DFEL1.41.Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0041.jpg' | relative_url }})
 
-Run Simulation popup window
+Vyskočiace okno „Spustiť simuláciu“
 
-Monitor the progress of the simulation by looking at the Simulation Graphics, Simulation Message and Simulation Log tab, making sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. (See Fig. 3DFEL1.42.)
+Sledujte priebeh simulácie na kartách „Simulation Graphics“, „Simulation Message“ a „Simulation Log“ a uistite sa, že je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). (Pozri obr. 3DFEL1.42.)
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0042.jpg' | relative_url }})
 
-Simulation mode displaying the forming running status
+Simulačný režim zobrazujúci aktuálny stav formovania
 
-After completion of the all multiple operation in Simulation log file it gives the log message as "MULTIPLE OPERATION COMPLETED.", then switch to Post tab to view the simulation results.
+Po dokončení všetkých viacnásobných operácií sa v súbore protokolu simulácie zobrazí správa „MULTIPLE OPERATION COMPLETED.“; následne prejdite na kartu „Post“, kde si môžete prezrieť výsledky simulácie.
 
-## Post Processing
+## Následné spracovanie
 
-In post processor Step list below the graphic area indicates step numbers available from the different operations simulated. A set of state variables available from the ‘Post’ menu can be used to review the model response. Please note that for the first operation only the thermal data for the workpiece is available. And the deformation results can be seen for the Steering link forming operation (see Fig. 3DFEL1.43.). Use the ![]({{ '/assets/icons/pre_icons/mo_zoom_icon.jpg' | relative_url }}) (zoom by window) icon to zoom the cone portion of the workpiece as shown in Fig. 3DFEL1.43.
+V postprocesore sa v zozname krokov pod grafickou oblasťou zobrazujú čísla krokov dostupné z rôznych simulovaných operácií. Na kontrolu odozvy modelu je možné použiť súbor stavových premenných dostupných v ponuke „Post“. Upozorňujeme, že pre prvú operáciu sú k dispozícii iba tepelné údaje o obrobku. Výsledky deformácie sú viditeľné pri operácii tvárnenia riadiaceho ramena (pozri obr. 3DFEL1.43.). Pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_zoom_icon.jpg' | relative_url }}) (zväčšenie podľa okna) zväčšite kužeľovú časť obrobku, ako je znázornené na obr. 3DFEL1.43.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0043.jpg' | relative_url }})
 
-Strain-Effective variable contour at workpiece cone shape
+Deformačne efektívny variabilný obrys pri kužeľovom tvare obrobku
 
-Some important state variables can be selected directly from ‘Post Tools’ window and the rest can be accessed through State Variable dialog by clicking on ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) icon.
+Niektoré dôležité stavové premenné je možné vybrať priamo z okna „Post Tools“ a k ostatným sa dostanete cez dialógové okno „State Variable“ kliknutím na ikonu ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}).
 
-Click on ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) **Graph** (Load-Stroke) and plot Time (sec) vs Load (klb) and also plot Time (sec) Vs Speed (in/sec) for top die. Observe for speed change after 20.4 mm deformation from 10 in/sec to 8 in/sec as shown in Fig. 3DFEL1.44.
+Kliknite na ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) **Graf** (zaťaženie – zdvih) a vytvorte graf času (s) v závislosti od zaťaženia (klb) a tiež graf času (s) v závislosti od rýchlosti (in/s) pre hornú matricu. Všimnite si zmenu rýchlosti po deformácii o 20,4 mm z 10 in/sec na 8 in/sec, ako je znázornené na obr. 3DFEL1.44.
 
 ![]({{ '/assets/images/labs/forming_labs/3d_forming_operation_in_expert_mode/image0044.jpg' | relative_url }})
 
-Time vs Load and Time vs Speed plots for primary die (Top die)
+Grafy „Čas vs. zaťaženie“ a „Čas vs. rýchlosť“ pre primárnu matricu (horná matrica)

@@ -1,84 +1,84 @@
 ---
 lang: sk
-title: "TTT Calculation Lab"
+title: "Laboratórium výpočtu TTT"
 ---
 
-# Lab 1. Material Suite Lab for calculation of TTT Diagram
+# Lab 1. Laboratórium Material Suite pre výpočet TTT diagramu
 
-1.1. Introduction of TTT calculation theory in DEFORM
+1.1. Zavedenie teórie výpočtu TTT v DEFORMÁCII
 
-1.2. Launch TTT Calculation in material suite
+1.2. Spustiť výpočet TTT v Material Suite
 
-1.3. Define Working Directory
+1.3. Definujte pracovný adresár
 
-1.4. Define TTT Input
+1.4. Definujte vstup TTT
 
-## Introduction of TTT calculation theory in DEFORM
+## Zavedenie teórie výpočtu TTT v DEFORMÁCII
 
-The TTT calculation program is based on Kirkaldy’s diffusive and martensitic models [1]. The original model has been transformed into a state-variable model to allow volume fraction transformation kinetics calculations. The aim of the program is to model volume fraction transformation kinetics of ferrite, pearlite, bainite and martensite for quenching of austenite; ignoring detailed distinction by phase morphology. Major assumptions include simple phase scaling for multiple phase formation, additivity rule for CCT, ferrite and pearlite do not occur at the same time scale, pearlite does not occur below Bs temperature. etc. The program will generate TTT diagram based on user's input alloy composition, grain size as well as other parameters. The program demonstrated reasonable prediction of TTT diagram for low alloy steels (<0.6 wt% C, <2 wt% Mn, <5 wt% Ni, <2 wt% Cr, <1 wt% Si).
+Program výpočtu TTT je založený na Kirkaldyho difúznych a martenzitických modeloch [1]. Pôvodný model bol transformovaný na stavovo variabilný model, ktorý umožňuje výpočty kinetiky transformácie objemových frakcií. Cieľom programu je modelovať kinetiku transformácie objemovej frakcie feritu, perlitu, bainitu a martenzitu na kalenie austenitu, pričom sa ignoruje podrobné rozlíšenie podľa morfológie fázy. Hlavné predpoklady zahŕňajú jednoduché fázové škálovanie pre viacfázovú tvorbu, pravidlo aditivity pre CCT, ferit a perlit sa nevyskytujú v rovnakej časovej mierke, perlit sa nevyskytuje pod teplotou Bs atď. Program vygeneruje TTT diagram na základe zloženia vstupnej zliatiny používateľa, veľkosti zrna, ako aj ďalších parametrov. Program preukázal primeranú predpoveď TTT diagramu pre nízkolegované ocele (<0,6 hm. % C, <2 hm. % Mn, <5 hm. % Ni, <2 hm. % Cr, <1 hm. % Si).
 
-Below is a comparison of calculated TTT and CCT diagrams using DEFORM with experimental measured diagrams for three different steels: AISI 1035, AISI5140 and AISI1050. The top three figures are from experimental measurements and the bottom figures are calculated from this program. Overall, the computed diagram agrees very well with experiments.
+Nižšie je uvedené porovnanie vypočítaných TTT a CCT diagramov s použitím DEFORMÁCIE s experimentálnymi nameranými diagramami pre tri rôzne ocele: AISI 1035, AISI5140 a AISI1050. Horné tri hodnoty sú z experimentálnych meraní a spodné hodnoty sú vypočítané z tohto programu. Celkovo vypočítaný diagram veľmi dobre súhlasí s experimentmi.
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/ttt_calculation_lab/image0001.jpg' | relative_url }})
 
-Comparison of calculated TTT and CCT diagrams using DEFORM with experimental measured diagrams
+Porovnanie vypočítaných TTT a CCT diagramov s použitím DEFORMÁCIE s experimentálnymi nameranými diagramami
 
-## Launch TTT Calculation in material suite
+## Spustiť výpočet TTT v súbore materiálov
 
-On a Windows machine, go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button, select DEFORM-v12.xxx (.xxx indicates version number E.g. v14.0.2 and select DEFORM GUI Main v1x.xx from the menu. The DEFORM GUI Main window will appear. From GUI Main click on **Material Suite** under “Post Processor” to open Material Suite module. User can also double click "DEF_GUI_MAT.exe" in the installation directory of DEFORM software to launch material suite. After the main window for material suite pops up, expand "properties" item and click "**TTT Calculation** " icon, the new task item "**TTT Diagram** " is added to the task tree (See Fig. TTTL1.2.). Follow each tree item to prepare TTT diagram in the property data window (right-bottom window).
+Na počítači so systémom Windows prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v12.xxx (.xxx označuje číslo verzie Napr. V14.0.2 a z ponuky vyberte Deform GUI Main v1x.xx. Zobrazí SA hlavné okno Deform GUI. Z hlavného grafického rozhrania kliknite na **Material Suite** v časti „Post Processor“ a otvorte modul Material Suite. Používateľ môže tiež dvakrát kliknúť na "DEF_GUI_MAT.exe" v inštalačnom adresári DEFORMAČNÉHO softvéru a spustiť sadu materiálov. Po zobrazení hlavného okna pre balík materiálov rozbaľte položku „vlastnosti“ a kliknite na ikonu „** Výpočet TTT ** “, do stromu úloh sa pridá nová položka úlohy „** Diagram TTT * *“ (pozri obr. TTTL1.2.). Postupujte podľa každej položky stromu a pripravte TTT diagram v okne s údajmi o vlastnostiach (pravé dolné okno).
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/ttt_calculation_lab/image0002.jpg' | relative_url }})
 
-Launch TTT Calculation in material suite
+Spustiť výpočet TTT v balíku materiálov
 
-## Define Working Directory
+## Definovať pracovný adresár
 
-In the "TTT Diagram" task tree, click "**Config** " to open the window to specify Working directories as shown in below Fig. TTTL1.3. Specify the working directory where the computed TTT data will be stored.
+V stromu úloh „TTT Diagram“ kliknutím na „**Config** “ otvorte okno a zadajte pracovné adresáre, ako je znázornené na obrázku nižšie. TTTL1.3. Zadajte pracovný adresár, do ktorého sa budú ukladať vypočítané údaje TTT.
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/ttt_calculation_lab/image0003.jpg' | relative_url }})
 
-Config window to define Working directory
+Konfiguračné okno na definovanie pracovného adresára
 
-## Define TTT Input
+## Definovať vstup TTT
 
-In the "**TTT Diagram** " task tree, click "**TTT Input** " to specify TTT input.
+V stromu úloh „**TTT diagram** “ kliknite na „**TTT vstup** “ a zadajte TTT vstup.
 
-At TTT input page, we allow user to input the following information:
+Na vstupnej stránke TTT umožňujeme používateľovi zadať nasledujúce informácie:
 
-  1. Materials Chemistry or the compositions of carbon and major alloy elements including Mn, Si, Ni, Cr, Mo, Cu, V and Nb.
+1. Chémia materiálov alebo zloženie uhlíkových a hlavných zliatinových prvkov vrátane Mn, Si, Ni, Cr, Mo, Cu, V a Nb.
 
-  2. Grain size (in ASTM number)
+2. Veľkosť zrna (v čísle ASTM)
 
-  3. Starting and Ending of volume fraction (e.x.,1% starting and 99% ending)
+3. Začiatok a koniec objemového zlomku (napr. 1%začiatok a 99% koniec)
 
-  4. Martensite and Austenite transformation temperature: user can input these temperatures as input if information is available, otherwise clicking "Auto" will make program automatically compute these values.
+4. Teplota transformácie martenzitu a austenitu: používateľ môže zadať tieto teploty ako vstup, ak sú k dispozícii informácie, inak kliknutím na tlačidlo "Auto" program automaticky vypočíta tieto hodnoty.
 
-In this lab, we chose **AISI 3120** as example and the following parameters are inputted: **C(0.17%), Mn (0.88%), Si(0.22%), Ni(0.86%), Cr(0.59%), Mo(0.05%), Cu (0), V(0), Nb(0), grain size 7, starting volume fraction 1%, ending 99%** , Martensite and Austensite transformation temperature is computed by program. After all the parameters are inputted, click "**Calculate** " to compute the TTT diagram. After the calculation is done, the following two files will be generated in the working directory:
+V tomto laboratóriu sme zvolili **AISI 3120** ako príklad a zadali sme nasledujúce parametre: **C(0,17%), Mn (0,88%), Si(0,22%), Ni(0,86%), Cr(0,59%), Mo(0,05%), Cu (0), V(0), Nb(0), veľkosť zrna 7, východiskový objemový zlomok 1%, končiac 99%** , Martenzitová a Austenzitická transformačná teplota je vypočítaná programom. Po zadaní všetkých parametrov kliknite na "**Vypočítať** " pre výpočet TTT diagramu. Po vykonaní výpočtu sa v pracovnom adresári vygenerujú tieto dva súbory:
 
 **TTT.KEY**
 
 **CCT.DAT**
 
-The calculated TTT data is included in the file "**TTT.KEY** ". The "**Plot** " button in the GUI is also activated to display the calculated results. To do this, user can choose the designed transformation kinetics in the menu near the "**Plot** " button, then click "**Plot** ".
+Vypočítané údaje TTT sú zahrnuté v súbore „**TTT.KEY** “. Tlačidlo „**Graf** “ v grafickom používateľskom rozhraní je tiež aktivované na zobrazenie vypočítaných výsledkov. Ak to chcete urobiť, používateľ si môže vybrať navrhnutú kinetiku transformácie v ponuke vedľa tlačidla „**Graf** “ a potom kliknúť na „**Graf** “.
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/ttt_calculation_lab/image0004.jpg' | relative_url }})
 
-TTT Input page
+Vstupná stránka TTT
 
-In this example, the TTT transformation data for austenite to pearlite, austenite to bainite and austenite to ferrite are displayed below (See Fig. TTTL1.5., Fig. TTTL1.6. and Fig. TTTL1.7.).
+V tomto príklade sú nižšie zobrazené údaje o transformácii TTT pre austenit na perlit, austenit na bainit a austenit na ferit (pozri obr. TTTL1.5., obr. TTTL1.6. a obr. TTTL1.7.).
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/ttt_calculation_lab/image0005.jpg' | relative_url }})
 
-Calculated TTT transformation data for austenite - pearlite transformation (Curve1)
+Vypočítané údaje o transformácii TTT pre austenit - perlitovú transformáciu (krivka 1)
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/ttt_calculation_lab/image0006.jpg' | relative_url }})
 
-Calculated TTT transformation data for austenite - bainite transformation (Curve1)
+Vypočítané údaje o transformácii TTT pre austenit - bainitovú transformáciu (krivka 1)
 
 ![]({{ '/assets/images/labs/material_suite_labs/material_parameters_fitting_labs/ttt_calculation_lab/image0007.jpg' | relative_url }})
 
-Calculated TTT transformation data for austenite - ferrite transformation (Curve1)
+Vypočítané údaje o transformácii TTT pre austenit - feritovú transformáciu (krivka 1)
 
-Reference:
+Značka:
 
-[1] "Prediction of microstructure and hardenability in low-alloy steels" J. S Kirkaldy, D. Venugopalan - Phase Transformations in ferrous alloys, 1983
+[1] „Predikcia mikroštruktúry a kaliteľnosti v nízkolegovaných oceliach“ J. S. Kirkaldy, D. Venugopalan - Fázové transformácie v zliatinách železa, 1983

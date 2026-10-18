@@ -1,278 +1,278 @@
 ---
 lang: sk
-title: "Tool Life Study Lab1"
+title: "Laboratórium štúdie životnosti nástroja1"
 ---
 
-# Tool Life Study Lab1
+# Laboratórium štúdie životnosti nástroja1
 
-1.1. Introduction
+1.1 Úvod
 
-1.2. Creating a New problem
+1.2. Vytvorenie nového problému
 
-1.2.1. Adding Tool life study
+1.2.1. Pridanie štúdie životnosti nástroja
 
-1.2.2. Objects definition
+1.2.2. Definícia objektov
 
-1.2.2.1. Top Die
+1.2.2.1. Horná matrica
 
-1.2.2.2. Bottom Die
+1.2.2.2. Spodná matrica
 
 [1.2.3. SS Temperature/Wear]({{ '/docs/sk/labs/tool_life_study_lab/tool_life_study_lab1/' | relative_url }}#1_2_3_SS_Temperature/Wear)
 
-1.2.3.1. Data Extraction
+1.2.3.1. Extrakcia údajov
 
-1.2.3.2. Curve fitting
+1.2.3.2. Armatúra krivky
 
-1.2.3.3. Simulation Controls
+1.2.3.3. Ovládacie prvky simulácie
 
-1.2.4. Fatigue
+1.2.4. Únava
 
-1.2.4.1. Cycle selection
+1.2.4.1. Výber cyklu
 
-1.2.4.2. Simulation controls
+1.2.4.2. Ovládacie prvky simulácie
 
-1.2.5. Generate Database
+1.2.5. Generovať databázu
 
-1.2.6. Running simulation
+1.2.6. Simulácia chodu
 
 1.2.7. Post Processing
 
-1.2.7.1 Tool Life Post
+1.2.7.1 Životnosť nástroja
 
-## Introduction
+Úvod
 
-Tool life impacts manufacturing cost. It is determined by many factors such as tool temperature, tool wear, tool fatigue and so on. In the Tool Life Module, we perform steady-state temperature, tool wear prediction and multi-step die stress calculation in the preprocessor which will be used for fatigue analysis in the postprocessor.
+Životnosť nástroja má vplyv na výrobné náklady. Je určená mnohými faktormi, ako je teplota nástroja, opotrebovanie nástroja, únava nástroja atď. V module životnosti nástroja vykonávame výpočet teploty v ustálenom stave, predikciu opotrebenia nástroja a viacstupňový výpočet napätia matrice v preprocesore, ktorý sa použije na analýzu únavy v postprocesore.
 
-In this lab, we will be copying already simulated 2D Spike project that has a forming operation simulated over 5 cycles with tool wear calculation for dies.
+V tomto laboratóriu budeme kopírovať už simulovaný 2D projekt Spike, ktorý má formovaciu operáciu simulovanú počas 5 cyklov s výpočtom opotrebenia nástroja pre matrice.
 
-## Creating a New problem
+## Vytvorenie nového problému
 
-On a Windows machine, go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button, select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** v1x.x from the menu. The DEFORM GUI Main window will appear.
+Na počítači so systémom Windows prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte * * DEFORM GUI Main * * v1x.x. Zobrazí SA hlavné okno Deform GUI.
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. TLSL1.1. Select "**Integrated Manufacturing Process** " radio button and **Unit** system as "**SI** " using radio button. Define Problem Name as "**2D_Tool_Life_Study** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})* ***Nový problém** alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Problem Setup (Nastavenie problému), ako je znázornené na obr. TLSL1.1. Pomocou prepínača vyberte prepínač „* * Integrovaný výrobný proces **“ a systém ** Unit ** ako „** SI * * “. Definujte názov problému ako "**2D_Tool_Life_Study** " a uistite sa, že je zapnuté začiarkavacie políčko "Zobraziť dialóg možností" (ak nezapneme začiarkavacie políčko "**Zobraziť dialóg možností ** ", potom nedostaneme dialógové okno Nový projekt v používateľskom rozhraní MO). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) a otvorte nový problém pomocou integrovaného výrobného procesu deformácie.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0001.jpg' | relative_url }})
 
-Problem type selection window
+Okno výberu typu problému
 
   
-Multiple operation wizard will open with the New Project dialog as shown in Fig. TLSL1.2., at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘**2D_Tool_Life_Study** ’ as the project name. We will import already simulated 2D project “2D_Tool_Life_Study” from 2D/LABS/ installation folder using “Copy existing Project” option. 
+Sprievodca viacnásobnou operáciou sa otvorí s dialógovým oknom Nový projekt, ako je znázornené na obr. TLSL1.2., v tomto bode bude používateľ vyzvaný, aby zadal názov projektu (systém vytvorí samostatný priečinok s týmto názvom projektu) a názov tejto relácie. V tejto relácii použijeme ako názov projektu „**2D_Tool_Life_Study** “. Importujeme už simulovaný 2D projekt „2D_Tool_Life_Study“ z 2D/LABS/ inštalačného priečinka pomocou možnosti „Kopírovať existujúci projekt“.
 
-Select “**Copy existing project** ” radio button in New Project dialog, then click on Source location and browse the “**2D_Tool_Life_Study.moproj** ” file from 2D\LABS\2D_Tool_Life_Study installation folder using ![]({{ '/assets/icons/pre_icons/mo_browse_button.jpg' | relative_url }}) button. Turn on “**Copy database file** ” check box as shown in Fig. TLSL1.2. so that database file is copied along with the project file. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation. The loaded MO project is as shown in Fig. TLSL1.3.
+Vyberte prepínač „**Kopírovať existujúci projekt** “ v dialógovom okne Nový projekt, potom kliknite na Zdrojové umiestnenie a vyhľadajte súbor „** 2D_Tool_Life_Study.moproj ** “ z inštalačného priečinka 2D\LABS\2D_Tool_Life_Study pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_browse_button.jpg' | relative_url }}). Zapnite začiarkavacie políčko „**Kopírovať databázový súbor** “, ako je znázornené na obr. TLSL1.2. aby sa databázový súbor skopíroval spolu so súborom projektu. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otvorení operácie. Načítaný projekt MO je znázornený na obr. TLSL1.3.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0002.jpg' | relative_url }})
 
-MO wizard New Project with Copy existing project option
+Sprievodca MO Nový projekt s možnosťou Kopírovať existujúci projekt
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0003.jpg' | relative_url }})
 
-Copied 2D_Tool_Life_Study project Loaded in MO wizard
+Skopírovaný 2D_Tool_Life_Study projekt Načítaný v sprievodcovi MO
 
-### Adding Tool life study
+### Pridanie štúdie životnosti nástroja
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) (Add new study) button and select “**Add Tool Life Study** ” option as shown in Fig. TLSL1.4. Added Tool life study is as shown in Fig. TLSL1.5.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) (Pridať novú štúdiu) a vyberte možnosť „**Pridať štúdiu životnosti nástroja ** “, ako je znázornené na obr. TLSL1.4. Pridaná štúdia životnosti nástroja je znázornená na obr. TLSL1.5.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0004.jpg' | relative_url }})
 
-Adding Tool life study
+Pridanie štúdie životnosti nástroja
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0005.jpg' | relative_url }})
 
-Added Tool life study operation in MO.
+Pridaná prevádzka štúdie životnosti nástroja v MO.
 
-The die objects are loaded from Forming operation. There are three options in Task Item,
+Predmety matrice sa načítajú z operácie tvárnenia. V položke úlohy sú tri možnosti,
 
-  * Steady state temperature, 
+* Teplota v ustálenom stave,
 
-  * Tool Wear and 
+* Opotrebovanie náradia a
 
-  * Fatigue
-
-  
-The first two options, Steady state temperature and Tool Wear, will predict the steady-state temperature and tool wear based on the history data from Forming operation. The Fatigue option will activate multiple step die stress study and use the stress data to perform Fatigue analysis in the post processor. In this example, we will select all the three options. Notice that as we update the task item options, the operation tree will be also updated, as shown in Fig. TLSL1.6.
+únava
 
   
-In Task Item, make sure Steady state temperature, Tool Wear and Fatigue check boxes are in checked status and then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Object page.
+Prvé dve možnosti, teplota v ustálenom stave a opotrebenie nástroja, predpovedajú teplotu v ustálenom stave a opotrebenie nástroja na základe údajov histórie z operácie tvárnenia. Možnosť Únava aktivuje viacstupňovú záťažovú štúdiu a použije údaje o záťaži na vykonanie analýzy únavy v postprocesore. V tomto príklade vyberieme všetky tri možnosti. Všimnite si, že pri aktualizácii možností položky úlohy sa aktualizuje aj operačný strom, ako je znázornené na obr. TLSL1.6.
 
   
-**Note** :   
-• The dies which are studied for Steady-State temperature and Tool wear must be meshed in nominal setup, for Fatigue-only task mesh in nominal setup is not required.
+V položke úlohy skontrolujte, či sú začiarknuté políčka Ustálená teplota, Opotrebenie nástroja a Únava a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Objekt.
 
-• “Define model to calculate tool wear” checkbox must be turned on in inter-object relations of nominal setup for dies whose tool wear will be studied.
+  
+POZNÁMKA:
+• Lisovnice, ktoré sa skúmajú z hľadiska teploty v ustálenom stave a opotrebovania nástroja, musia byť sieťované v nominálnom nastavení, pre pracovnú sieť len pre únavu sa v nominálnom nastavení nevyžaduje.
 
-• Tool life study can be executed only for one forming operation and that forming operation must be in cycle in nominal setup to execute Tool life study.
+• Začiarkavacie políčko „Definovať model na výpočet opotrebenia nástroja“ musí byť zapnuté v medziobjektových vzťahoch nominálneho nastavenia pre matrice, ktorých opotrebenie nástroja sa bude skúmať.
+
+• Štúdia životnosti nástroja sa môže vykonať len pre jednu operáciu tvárnenia a táto operácia tvárnenia musí byť v cykle v nominálnom nastavení na vykonanie štúdie životnosti nástroja.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0006.jpg' | relative_url }})
 
-Task Item Update
+Aktualizácia položky úlohy
 
-### Objects definition
+### Definícia objektov
 
-We will use all dies object from “Forming” operation for tool life study in this lab, so click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Top Die page.
+Na štúdiu životnosti nástroja v tomto laboratóriu použijeme všetky objekty matrice z operácie „tvárnenie“, takže kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Top Die (Horná matrica).
 
 #### Top Die
 
-Fig. TLSL1.7. shows the object page of top die. For each object, we also have three options – steady state temperature, tool wear and fatigue. This allows us to choose if a specific analysis is needed/excluded for the current object. In this lab, we will keep the default selection and perform all the three tasks for each die object. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until BCC page.
+Obr. TLSL1.7. zobrazuje stránku objektu hornej matrice. Pre každý objekt máme tiež tri možnosti – teplota v ustálenom stave, opotrebovanie nástroja a únava. To nám umožňuje vybrať, či je pre aktuálny objekt potrebná/vylúčená konkrétna analýza. V tomto laboratóriu ponecháme predvolený výber a vykonáme všetky tri úlohy pre každý objekt matrice. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku BCC.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0007.jpg' | relative_url }})
 
-Top Die object page
+Stránka objektu Top Die
 
-##### Top Die Boundary Conditions
+##### Horné hraničné podmienky
 
-Apply Velocity boundary condition (Vy=0) for Top die on Top surface as shown in Fig. TLSL1.8. Then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Bottom Die page.
+Použite hraničnú podmienku rýchlosti (Vy=0) pre hornú matricu na hornom povrchu, ako je znázornené na obr. TLSL1.8. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Spodná matrica.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0008.jpg' | relative_url }})
 
-Assigned Velocity (Vy=0) boundary condition for Top die
+Priradená hraničná podmienka rýchlosti (Vy=0) pre hornú matricu
 
-#### Bottom Die
+#### Spodná matrica
 
-In this lab, we will keep the default selection and perform all the three tasks for each die object. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until BCC page.
+V tomto laboratóriu ponecháme predvolený výber a vykonáme všetky tri úlohy pre každý objekt matrice. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku BCC.
 
-##### Bottom Die Boundary conditions
+##### Hraničné podmienky spodnej matrice
 
-Apply Vx=0 velocity boundary condition on the symmetry surface and Vy=0 velocity boundary condition for Bottom die on Bottom surface as shown in Fig. TLSL1.9. Then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until SS Temperature/Wear page.
+Použite Vx=0 hraničnú podmienku rýchlosti na povrchu symetrie a Vy=0 hraničnú podmienku rýchlosti pre spodnú matricu na spodnom povrchu, ako je znázornené na obr. TLSL1.9. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až do stránky SS Teplota/Opotrebenie.
 
   
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0009.jpg' | relative_url }})
 
-Assigned Velocity boundary condition for Bottom die
+Priradená hraničná podmienka rýchlosti pre spodnú matricu
 
-### SS Temperature/Wear
+### SS Teplota/opotrebenie
 
-Now we are going to setup the steady state temperature and tool wear simulation. The idea is to extract heat flux/wear from the contact area with workpiece and fit the data using exponential functions. And then, impose the fitted data on the die objects and run heat transfer simulation for a sufficiently longer period until the convergence of thermal state.
+Teraz nastavíme simuláciu teploty v ustálenom stave a opotrebenia nástroja. Zámerom je extrahovať tepelný tok/opotrebenie z kontaktnej oblasti s obrobkom a prispôsobiť údaje pomocou exponenciálnych funkcií. Potom uložte namontované údaje na objekty matrice a spustite simuláciu prenosu tepla na dostatočne dlhú dobu, kým nedôjde ku konvergencii tepelného stavu.
 
-#### Data Extraction
+Extrakcia údajov
 
-Click on **Data Extraction** from Operation tree, click on ![]({{ '/assets/icons/pre_icons/mo_extract_data_button.jpg' | relative_url }}) button to start extracting heat flux/wear from the contact area with workpiece. The progress bar in Data Extraction page shows the progress of extracting heat flux and wear from the contact area of the die objects. Once the extraction and fitting are complete, we can see the fitted coefficients in the curve fitting page. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Curve Fitting page.
+Kliknite na ** Extrakcia údajov ** zo stromu prevádzky, kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_extract_data_button.jpg' | relative_url }}) spustite extrakciu tepelného toku/opotrebenia z kontaktnej oblasti s obrobkom. Indikátor priebehu na stránke Extrakcia údajov zobrazuje priebeh extrakcie tepelného toku a opotrebenia z kontaktnej oblasti predmetov matrice. Po dokončení extrakcie a montáže môžeme vidieť namontované koeficienty na stránke krivky montáže. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Curve Fitting.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0010.jpg' | relative_url }})
 
-Data Extraction page
+Extrakcia údajov
 
-#### Curve fitting
+#### Prispôsobenie krivky
 
-We can check the contacted area and the fitted curve by clicking on the ![]({{ '/assets/icons/pre_icons/mo_visible.jpg' | relative_url }}) icon as shown in Fig. TLSL1.11. Meanwhile, Intermediate and final result files will be generated and saved in Operations/Task00004 directory, which includes two subfolders – HeatFlux and ToolWear storing the results for heat flux extraction and tool wear extraction respectively, and OutputForPredict.KEY which is the object keyword file containing the fitted coefficients. 
+Kontaktovanú oblasť a namontovanú krivku môžeme skontrolovať kliknutím na ikonu ![]({{ '/assets/icons/pre_icons/mo_visible.jpg' | relative_url }}), ako je znázornené na obr. TLSL1.11. Medzitým sa vygenerujú a uložia súbory stredných a konečných výsledkov do adresára Operations/Task00004, ktorý obsahuje dva podpriečinky – HeatFlux a ToolWear, ktoré ukladajú výsledky pre extrakciu tepelného toku a extrakciu opotrebenia nástroja, a OutputForPredict.KEY, čo je súbor kľúčových slov objektu obsahujúci namontované koeficienty.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0011.jpg' | relative_url }})
 
-Curve Fitting page
+Stránka Curve Fitting
 
-#### Simulation Controls
+#### Ovládacie prvky simulácie
 
-We set up the simulation control parameters for steady state temperature prediction, which involves heat transfer simulation on the die objects with heat flux BCC using the fitted coefficients. As shown in Fig. TLSL1.12. we only need to define three parameters - # of cycles to predict (total time will be calculated automatically based on process time of the forming operation which is in cycle), either time step or total steps and step increment. The default # of cycles to predict is set to be 10 times of the number of cycles in the forming operation, which is 50 in this case. In this lab, we will use **# of cycles** to predict as **50** with **time****step** as **0.0100093** sec/step and **step increment** as **1** as shown in Fig. TLSL1.12.
+Nastavili sme parametre riadenia simulácie pre predikciu teploty v ustálenom stave, ktorá zahŕňa simuláciu prenosu tepla na matricových objektoch s tepelným tokom BCC pomocou namontovaných koeficientov. Ako je znázornené na obr. TLSL1.12. potrebujeme len definovať tri parametre - počet cyklov na predpovedanie (celkový čas sa vypočíta automaticky na základe času procesu tvarovacej operácie, ktorá je v cykle), buď časový krok alebo celkový krok a krok prírastku. Predvolený počet cyklov na predpovedanie je nastavený na 10-násobok počtu cyklov v operácii tvárnenia, čo je v tomto prípade 50. V tomto laboratóriu použijeme * * počet cyklov * * na predpovedanie ako * * 50 ** s ** časom ** ** krokom ** ako * * 0,0100093 * * sek/krok a * * krokom * * ako * * 1 * *, ako je znázornené na obr. TLSL1.12.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0012.jpg' | relative_url }})
 
-Temp Simulation controls page
+Stránka ovládacích prvkov simulácie teploty
 
-### Fatigue
+Únava
 
-The final task in the preprocessor is Fatigue, which is essentially setting up die stress calculation at multiple steps from cycle operation. The first step is to select cycles from the forming operation to perform die stress calculation (see Fig. TLSL1.13.). We can either select the last cycle from the database, all cycles or select cycles incrementally. We will also need to set up simulation control parameters for die stress calculation (see Fig. TLSL1.14.). 
+Poslednou úlohou v preprocesore je Únava, čo je v podstate nastavenie výpočtu napätia formy vo viacerých krokoch od prevádzky cyklu. Prvým krokom je výber cyklov z tvárniacej operácie na vykonanie výpočtu napätia formy (pozri obr. TLSL1.13.). Môžeme buď vybrať posledný cyklus z databázy, všetky cykly alebo zvoliť cykly postupne. Budeme tiež musieť nastaviť simulačné kontrolné parametre pre výpočet napätia v zápustke (pozri obr. TLSL1.14.).
 
-#### Cycle selection
+VÝBER CYKLU
 
-Select “**Cycle********Selection** ” under Fatigue from Operation tree, make sure by default “**Last****cycle** ” is selected as shown in Fig. TLSL1.13. If not selected, then select “**Last****cycle** ” radio button. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Simulation controls page. 
+Vyberte „**Cyklus*** *****Výber** “ v časti Únava zo stromu operácií, uistite sa, že je predvolene vybraný „* * Posledný ** * * cyklus * * “, ako je znázornené na obr. TLSL1.13. Ak nie je vybraté, vyberte prepínač „* * Posledný ** * * cyklus * * “. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku ovládacích prvkov simulácie.
 
   
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0013.jpg' | relative_url }})
 
-Cycle selection page
+VÝBER CYKLU
 
-#### Simulation controls
+#### Ovládacie prvky simulácie
 
-In Simulation controls, we will use default **Number of simulation steps** as **1** , **Step increment to save** as **1** and **Time per step** as **1e-06** as shown in Fig. TLSL1.14. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Generate DB page.
+V ovládacích prvkoch simulácie použijeme predvolený **počet krokov simulácie * * ako ** 1 **, ** prírastok kroku na uloženie* * ako * * 1 * * a * *čas na krok* * ako * * 1e-06 * *, ako je znázornené na obr. TLSL1.14. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujete stránku DB.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0014.jpg' | relative_url }})
 
-Fatigue- Simulation controls page
+Únava - stránka s ovládacími prvkami simulácie
 
-### Generate Database
+Všeobecné
 
-As we click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Generate DB, we will get Data Extraction popup while loading generate DB page as shown in Fig. TLSL1.15. Select ![]({{ '/assets/icons/pre_icons/mo_no_button.jpg' | relative_url }}) in the popup since we had already done the data extraction.
+Keď klikneme na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na Generovanie DB, dostaneme vyskakovacie okno extrakcie údajov pri načítaní stránky generovania DB, ako je znázornené na obr. TLSL1.15. V kontextovom okne vyberte ![]({{ '/assets/icons/pre_icons/mo_no_button.jpg' | relative_url }}), pretože sme už vykonali extrakciu údajov.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0015.jpg' | relative_url }})
 
-Data Extraction popup
+Vyskakovacie okno Extrakcia údajov
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) action label to check if there are any errors or warnings that would stop DB generation. Generate the database if there are no errors or warnings by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) action label (see Fig. TLSL1.16.). 
+Kliknite na štítok akcie ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) a skontrolujte, či sa nevyskytli nejaké chyby alebo varovania, ktoré by zastavili generovanie DB. Ak nie sú žiadne chyby alebo upozornenia, vytvorte databázu kliknutím na štítok akcie ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) (pozri obr. TLSL1.16.).
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0016.jpg' | relative_url }})
 
-Generate Database window
+Okno Generovať databázu
 
-### Running simulation
+### Simulácia behu
 
-Once the database has been generated, switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. TLSL1.17. Use the default **Continue Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vygenerovaní databázy prepnite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad operačným stromom. Kliknutím na štítok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvorte dialógové okno Možnosti točenia, ako je znázornené na obr. TLSL1.17. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať z posledného kroku** “ (z kroku -1) a potom vyberte režim simulácie ako **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0017.jpg' | relative_url }})
 
-Run Options Popup
+Vyskakovacie okno s možnosťami spustenia
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. If ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.
+Priebeh simulácie je možné monitorovať počas jej priebehu tak, že sa pozriete na kartu Simulačná správa a Simulačná grafika z oblasti grafického zobrazenia v režime simulácie. Ak je začiarknutá možnosť ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) na karte Simulation Message (Simulačná správa), ktorá je predvoleným nastavením, súbor správy sa automaticky obnoví.
 
   
-The Message file provides information about which simulation step the simulation is currently on and information regarding how well the simulation is running as shown in Fig. TLSL1.18.
+Súbor správy poskytuje informácie o tom, v ktorom simulačnom kroku sa simulácia momentálne nachádza, a informácie o tom, ako dobre simulácia prebieha, ako je znázornené na obr. TLSL1.18.
 
   
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0018.jpg' | relative_url }})
 
-Simulation mode
+Simulačný režim
 
-### Post Processing
+Postprocessing
 
-After the simulation is completed, click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab to visit MO post processor. The simulated results can be seen in Post ( Fig. TLSL1.19.). It contains two parts, one is the temperature history from running heat transfer with imposed heat flux BCC and the other is the die stress. 
+Po dokončení simulácie kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) a navštívte postprocesor MO. Simulované výsledky možno vidieť v Post ( obr. TLSL1.19.). Obsahuje dve časti, jedna je teplotná história z chodu prenosu tepla s uloženým tepelným tokom BCC a druhá je namáhanie formy.
 
   
-The steady state heat transfer analysis and tool wear analysis steps are grouped under simulation name SS Temp. Here the simulation name **Fatigue-Step52** means the die stress result from step 52 in the forming operation. There is a highlighted toolbox used for fatigue analysis based on the calculated die stress data. Fig. TLSL1.19. summarizes the simulation results of temperature and die stresses from SS Temperature prediction and multi-step die stress study. We take the last step from heat transfer simulation as the steady-state temperature and impose it on the die objects while running die stress calculation. Note that if we select fatigue as the only task, we will impose the temperature profile from the corresponding steps from the forming operation as initial temperature.
+Kroky analýzy prenosu tepla v ustálenom stave a analýzy opotrebenia nástroja sú zoskupené pod názvom simulácie SS Temp. Tu názov simulácie **Fatigue-Step52** znamená napätie matrice vyplývajúce z kroku 52 v operácii tvárnenia. Na analýzu únavy sa používa zvýraznený panel nástrojov založený na vypočítaných údajoch o napätí matrice. Obr. TLSL1.19. zhŕňa výsledky simulácie teplotných a matricových napätí z predikcie teploty SS a viacstupňovej stresovej štúdie matrice. Posledný krok urobíme zo simulácie prenosu tepla ako teploty v ustálenom stave a uložíme ju na objekty matrice pri výpočte napätia matrice. Všimnite si, že ak zvolíme únavu ako jedinú úlohu, uložíme teplotný profil z príslušných krokov z tvarovacej operácie ako počiatočnú teplotu.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0019.jpg' | relative_url }})
 
-MO Post – Fatigue -Step52 
+MO Post – Únava – krok 52
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}) button in Step browser, then Play animation from first step with Temperature State Variable to observe the die temperature as they approach steady state. 
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}) v prehliadači krokov, potom prehrajte animáciu z prvého kroku pomocou premennej teplotného stavu a sledujte teplotu matrice, keď sa blíži k ustálenému stavu.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0020.jpg' | relative_url }})
 
-Simulation Results 
+VÝSLEDKY SIMULÁCIE
 
-#### Tool Life Post
+#### Životnosť nástroja
 
-Tool Life Post is used for analysis of steady-state temperature and tool wear results, as well as fatigue life prediction of dies. From MO post, we can access Tool life post by clicking on ![]({{ '/assets/icons/post_icons/mo_tool_life_post_icon.jpg' | relative_url }}) button as shown in Fig. TLSL1.19. Tool life post is opened as shown in Fig. TLSL1.21
-
-  
-**SS Temp & Wear**: By selecting this option, we can plot the results for SS Temp & Wear operation (See Fig. TLSL1.21.). Under this option, we can plot Tool temperature, Tool wear depth, tool wear rate and Worn geometry output for selected Cycle no. 
+Nástroj Life Post sa používa na analýzu výsledkov teploty v ustálenom stave a opotrebovania nástroja, ako aj na predpovedanie únavovej životnosti matríc. Z príspevku MO môžeme získať prístup k životnosti nástroja kliknutím na tlačidlo ![]({{ '/assets/icons/post_icons/mo_tool_life_post_icon.jpg' | relative_url }}), ako je znázornené na obr. TLSL1.19. Životnosť nástroja je otvorená, ako je znázornené na obr. TLSL1.21
 
   
-We can select the different cycle number under **Cycle section** by dragging sliding bar or by entering the respective cycle number in input field. Once you enter the cycle number, user can select one of tool wear results to view the results in display, Fig. TLSL1.22 shows Tool Wear depth at Cycle 40. 
+**SS Temp & Wear**: Výberom tejto možnosti môžeme vykresliť výsledky pre prevádzku SS Temp & Wear (pozri obr. TLSL1.21.). V rámci tejto možnosti môžeme pre vybraný cyklus zobraziť teplotu nástroja, hĺbku opotrebenia nástroja, rýchlosť opotrebenia nástroja a výstup opotrebovanej geometrie.
+
+  
+Rôzne číslo cyklu môžeme vybrať v časti **Cyklus ** potiahnutím posuvnej lišty alebo zadaním príslušného čísla cyklu do vstupného poľa. Po zadaní čísla cyklu môže používateľ vybrať jeden z výsledkov opotrebovania nástroja a zobraziť výsledky na displeji, obr. TLSL1.22 zobrazuje hĺbku opotrebenia nástroja v cykle 40.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0021.jpg' | relative_url }})
 
-Tool life results for SS Temp & Wear
+Výsledky životnosti nástroja pre SS Temp & Wear
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0022.jpg' | relative_url }})
 
-Tool wear rate result at Cycle 40
+Výsledok miery opotrebenia nástroja v cykle 40
 
   
-**Fatigue** : By selecting this option, we can plot the results for Fatigue operation (See Fig. TLSL1.23.). Initially there will not be any fatigue model in the list. We can add fatigue model by clicking the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button. The model named “**AISI****-1025:****SNSD_CONST** ” is added, where AISI-1025 stands for the material name and SNSD_CONST stands for the stress-based standard model. We can observe that a Stress-based standard model is selected as Model type. We can define the model parameters by clicking the ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) button and a function editor will pop up. The parameters we defined for this model can be found in Fig. TLSL1.24. The other way to add fatigue model is by loading model files from a user directory or Fatigue library. Note that we need to be in Fatigue page to enable the load buttons (see Fig. TLSL1.25.). The model file has the same format as keyword file, where the keyword is followed by its value. 
+**Únava** : Výberom tejto možnosti môžeme zakresliť výsledky pre únavovú prevádzku (pozri obr. TLSL1.23.). Spočiatku nebude v zozname žiadny model únavy. Model únavy môžeme pridať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Pridáva sa model s názvom „* * AISI ** **-1025: ** * * SNSD_CONST * * “, kde AISI-1025 znamená názov materiálu a SNSD_CONST znamená štandardný model založený na napätí. Môžeme pozorovať, že štandardný model založený na strese je vybraný ako typ modelu. Parametre modelu môžeme definovať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) a zobrazí sa editor funkcií. Parametre, ktoré sme pre tento model definovali, nájdete na obr. TLSL1.24. Ďalším spôsobom, ako pridať model únavy, je načítanie súborov modelu z adresára používateľa alebo knižnice únavy. Všimnite si, že musíme byť na stránke Únava, aby sme aktivovali tlačidlá zaťaženia (pozri obr. TLSL1.25.). Súbor modelu má rovnaký formát ako súbor kľúčového slova, kde za kľúčovým slovom nasleduje jeho hodnota.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0023.jpg' | relative_url }})
 
-Tool Life post – Fatigue output 
+Životnosť nástroja – únavový výstup
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0024.jpg' | relative_url }})
 
-Fatigue model definition
+Definícia modelu únavy
 
   
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0025.jpg' | relative_url }})
 
-Loading model file
+Načítava sa súbor modelu
 
-Once the model is defined, we can see the fatigue life prediction plot by selecting either Absolute Max principal or Signed Von Mises or Signed Shear as the combination method with model and clicking the ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) button. The result is shown in Fig. TLSL1. 26.
+Akonáhle je model definovaný, môžeme vidieť graf predikcie únavovej životnosti výberom buď Absolute Max principal alebo Signed Von Mises alebo Signed Shear ako kombinovanú metódu s modelom a kliknutím na tlačidlo ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}). Výsledok je znázornený na obr. TLSL1. 26.
 
 ![]({{ '/assets/images/labs/tool_life_study_lab/tool_life_study_lab1/image0026.jpg' | relative_url }})
 
-Fatigue Life Plot
+Únava Životný graf

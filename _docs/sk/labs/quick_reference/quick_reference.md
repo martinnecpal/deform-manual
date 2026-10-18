@@ -3,9 +3,9 @@ lang: sk
 title: "Quick_Reference"
 ---
 
-# Quick Reference
+# Stručná referencia
 
-##   
-General 
+##
+Všeobecné poznámky
 
-This is a quick reference guide for common DEFORM forming simulations. It gives a quick overview for the most common problem types. For problems that are not covered here, refer to the online help manual, or contact Scientific Forming technical support at (614) 451-8330.
+Toto je stručná referenčná príručka pre bežné simulácie tvárnenia deformácií. Poskytuje rýchly prehľad najbežnejších typov problémov. V prípade problémov, ktoré tu nie sú uvedené, si prečítajte online príručku pomoci alebo kontaktujte technickú podporu spoločnosti Scientific Forming na čísle (614) 451-8330.

@@ -3,7 +3,7 @@ lang: sk
 title: "Spinning Labs Main Pg"
 ---
 
-# Spinning Labs 
+# Spinning Labs
 
 [Spinning Lab]({{ '/docs/sk/labs/spinning_labs/spinning_lab/' | relative_url }})
 

@@ -1,49 +1,49 @@
 ---
 lang: sk
-title: "SIESTA Lab"
+title: "SIESTA LAB"
 ---
 
-# SIESTA FILE GENERATION
+# SIESTA GENEROVANIE SÚBOROV
 
-1.1. Introduction to SIESTA
+1.1. Úvod do SIESTY
 
-1.2. Launch SIESTA output in Material suite
+1.2. Spustite výstup SIESTY v Material suite
 
-1.3. Export to SIESTA
+1.3. Export do SIESTY
 
-## Introduction to SIESTA
+## Úvod do SIESTY
 
-DEFORM has developed the facility to export data from database into SIESTA file, a file format required by the DARWIN software developed by Southwest Research Institute. More details about DARWIN can be found here:
+DEFORM vyvinul zariadenie na export údajov z databázy do súboru SIESTA, čo je formát súboru požadovaný softvérom DARWIN vyvinutým Juhozápadným výskumným ústavom. Viac podrobností o DARWINOVI nájdete tu:
 
   
 <http://www.darwin.swri.org/html_files/background/summary.html>
 
-## Launch SIESTA output in Material suite
+## Spustite výstup SIESTY v Material suite
 
-On a Windows machine, go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button, select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2 and select DEFORM GUI Main v1x.xx from the menu. The DEFORM GUI Main window will appear.
+Na počítači so systémom Windows prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v1x.xxx (.xxx označuje číslo verzie Napr. V14.0.2 a z ponuky vyberte Deform GUI Main v1x.xx. Zobrazí SA hlavné okno Deform GUI.
 
-Create database by importing 2D_Example/SI/HeatTreat/ MRX_SRX_2D_SI.KEY with the problem ID as **MRX_SRX_2D_SI** in NG Pre, then simulate it from GUI main using Run. Keep it ready ,we will use this example to demonstrate how to export SIEST output file in Material suite.
+Vytvorte databázu importovaním 2D_Example/SI/HeatTreat/ MRX_SRX_2D_SI.KEY s ID problému ako **MRX_SRX_2D_SI** v NG Pre, potom ju simulujte z hlavného GUI pomocou Run. Pripravte si ho, na tomto príklade ukážeme, ako exportovať výstupný súbor SIEST v Material suite.
 
   
-Now from GUI Main, by selecting **MRX_SRX_2D_SI.DB** file click on Material Suite under “Post Processor” to open Material Suite module as shown in Fig. SIESTAL1.1.
+Teraz z hlavného grafického rozhrania výberom súboru **MRX_SRX_2D_SI.DB** kliknite na Material Suite v časti „Post Processor“ a otvorte modul Material Suite, ako je znázornené na obr. SIESTAL1.1.
 
 ![]({{ '/assets/images/labs/material_suite_labs/siesta_lab/image0001.jpg' | relative_url }})
 
-Opening Material Suite from GUI Main
+Otváracia sada materiálov z hlavného grafického rozhrania
 
   
-After the main window for material suite is opened, Expand "**Performance** " item and click on "**SIESTA** " icon from Performance list as shown in Fig. SIESTAL1.2., the new task item "SIESTA Output" is added to the task tree.
+Po otvorení hlavného okna pre balík materiálov rozbaľte položku „* * Výkon * * “ a kliknite na ikonu „**SIESTA** “ zo zoznamu Výkonov, ako je znázornené na obr. SIESTAL1.2., do stromu úloh sa pridá nová položka úlohy „SIESTA Output“.
 
   
   
 ![]({{ '/assets/images/labs/material_suite_labs/siesta_lab/image0002.jpg' | relative_url }})
 
-Launching SIESTA output in material suite 
+Spustenie výstupu SIESTY v materiáli
 
-## Export to SIESTA
+## Exportovať do SIESTY
 
-Click on “**Output** ” tab, select the object in object list and choose the state variables to export (Stress, Temperature, Effective Strain and Grain Size) from State variable Selection list, then choose the step in the database that needs to be exported (here we are selecting the last step). Click on "**Export to SIESTA** " and choose the location to save the file and name of the file. By default, the SIESTA file will be saved with the name "Database+step number.ISO". For example, the database name is MRX_SRX_2D_SI and the step we chose is **717** , the generated SIESTA file will be **MRX_SRX_2D_SI_Step717.sio** as shown in Fig. SIESTAL1.3.
+Kliknite na kartu „* * Výstup * * “, vyberte objekt v zozname objektov a vyberte stavové premenné, ktoré sa majú exportovať (Stres, Teplota, Efektívne napätie a Veľkosť zrna) zo zoznamu stavových premenných, potom vyberte krok v databáze, ktorý sa má exportovať (tu vyberáme posledný krok). Kliknite na „**Export to SIESTA** “ a vyberte umiestnenie na uloženie súboru a názov súboru. V predvolenom nastavení sa súbor SIESTA uloží s názvom „Database+step number.ISO“. Napríklad názov databázy je MRX_SRX_2D_SI a krok, ktorý sme vybrali, je **717** , generovaný súbor SIESTA bude * *MRX_SRX_2D_SI_Step717.sio * *, ako je znázornené na obr. SIESTAL1.3.
 
 ![]({{ '/assets/images/labs/material_suite_labs/siesta_lab/image0003.jpg' | relative_url }})
 
-Exporting SIESTA file in material suite
+Exportovanie súboru SIESTA v súbore materiálov

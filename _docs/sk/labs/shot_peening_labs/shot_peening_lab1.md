@@ -1,397 +1,397 @@
 ---
 lang: sk
-title: "Shot Peening Lab1"
+title: "Laboratórium kužeľovania injekcií1"
 ---
 
-# Lab1: Shot Peening Lab
+# Lab1: Laboratórium peeningu
 
-This lab will demonstrate the setting up of shot peening of helical gear using Shot peening template.
+Toto laboratórium demonštruje nastavenie kužeľového kužeľového ozubenia pomocou šablóny kužeľového kužeľa.
 
-1.1. Launching Shot Peen wizard
+1.1. Spustenie sprievodcu Shot Peen
 
-1.2. Creating New Project
+1.2. Vytvorenie nového projektu
 
-1.3. Defining Shot Peening Process parameters
+1.3. Definovanie parametrov procesu zpevňovania povrchu
 
-1.4. Loading material for helical gear
+1.4. Nakladací materiál pre šikmé ozubené koleso
 
-1.5. Defining Stress Input
+1.5. Definovanie vstupu napätia
 
-1.5.1. Setting up Micro model (2D)
+1.5.1. Nastavenie mikro modelu (2D)
 
-1.5.2. Run
+1.5.2. Spustiť
 
-1.5.3. 2D micro model impact stress and residual stress output
+1.5.3. 2D mikro model nárazového napätia a výstupu reziduálneho napätia
 
-1.5.4. Measured Residual stress
+1.5.4. Merané zostatkové napätie
 
-1.6. Defining 3D model for shot peening
+1.6. Definovanie 3D modelu pre kuličkovanie
 
-1.6.1. Defining Workpiece
+1.6.1. Definovanie obrobku
 
-1.6.1.1. Workpiece object page
+1.6.1.1. Stránka objektu obrobku
 
-1.6.1.2. Defining Workpiece geometry
+1.6.1.2. Definovanie geometrie obrobku
 
-1.6.1.3. Defining Material for Workpiece
+1.6.1.3. Definovanie materiálu pre obrobok
 
-1.6.1.4. Generating mesh for Workpiece
+1.6.1.4. Generovanie pletiva pre obrobok
 
-1.6.1.5. Assigning boundary conditions to Workpiece
+1.6.1.5. Priradenie hraničných podmienok k obrobku
 
-1.6.1.6. Defining Workpiece movement
+1.6.1.6. Definovanie pohybu obrobku
 
-1.6.2. Defining Nozzle #1 
+1.6.2. Definovanie trysky #1
 
-1.6.2.1. Nozzle#1 Object definition
+1.6.2.1. Definícia objektu tryskyč.1
 
-1.6.2.2. Defining Nozzle Location
+1.6.2.2. Definovanie umiestnenia dýzy
 
-1.6.2.3. Defining Nozzle movement
+1.6.2.3. Definovanie pohybu dýzy
 
-1.6.3. Positioning
+1.6.3. Umiestnenie
 
-1.7. Analysis of shot peening process
+1.7. Analýza procesu kužeľového zpevňovania
 
-1.7.1. Particle Simulation
+1.7.1. Simulácia častíc
 
-1.7.1.1. Particle Simulation settings
+1.7.1.1. Nastavenia simulácie častíc
 
-1.7.1.2. Particle Simulation Result
+1.7.1.2. Výsledok simulácie častíc
 
-1.7.2. Impact simulation
+1.7.2. Simulácia nárazu
 
-1.7.2.1. Impact Simulation settings
+1.7.2.1. Nastavenia simulácie nárazu
 
-1.7.2.2. Impact simulation result
+1.7.2.2. Výsledok simulácie nárazu
 
-1.7.3. Residual stress analysis
+1.7.3. Analýza zvyškového napätia
 
-1.7.3.1. Residual stress analysis settings
+1.7.3.1. Nastavenia analýzy zvyškového napätia
 
-1.7.3.2. Simulating Residual stress analysis
+1.7.3.2. Simulácia analýzy zostatkového napätia
 
-1.7.3.3. Residual Stress analysis results
+1.7.3.3. Výsledky analýzy zvyškového napätia
 
-## Launching Shot Peen wizard 
+## Spustenie sprievodcu Shot Peen
 
-To launch Shot peening wizard, double click on "DEF_GUI_SHOTPEEN_64.EXE" in the installation directory of DEFORM software. Shot peening wizard looks like as shown in Fig. STPL1.1.
+Ak chcete spustiť Sprievodcu zrýchlením záberu, dvakrát kliknite na „DEF_GUI_SHOTPEEN_64.EXE“ v inštalačnom adresári softvéru Deform. Sprievodca kužeľovým kužeľom vyzerá tak, ako je znázornené na obr. STPL1.1.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0001.jpg' | relative_url }})
 
-Shot peening wizard UI
+Používateľské rozhranie Sprievodcu kužeľovaním
 
-## Creating New Project
+Vytvára sa nový projekt
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New** or by clicking the New project ![]({{ '/assets/icons/pre_icons/mo_new_file_button.jpg' | relative_url }}) icon. The New project window will appear (See Fig. STPL1.2.), define Project name as “**Gear_Lab** ” and select Unit system as “**System****International (SI)** ” as shown in [Fig. STPL1.2]()., click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open Shot peen project.
+Vytvorte nový problém buď výberom **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})* ***New** alebo kliknutím na ikonu New project ![]({{ '/assets/icons/pre_icons/mo_new_file_button.jpg' | relative_url }}). Zobrazí sa okno Nový projekt (pozri obr. STPL1.2.), definujte názov projektu ako „**Gear_Lab** “ a vyberte systém jednotky ako „**System* ***International (SI)** “, ako je znázornené v [Fig. STPL1.2]()., kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) otvorte projekt Shot peen.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0002.jpg' | relative_url }})
 
-Creating New Project
+Vytvára sa nový projekt
 
-A new tab Gear_Lab is added in UI and we can observe that shot peening operation tree is available to setup the process. “Shot Peen Process” window is opened by default to define shot peening process parameters, see Fig. STPL1.3.
+V používateľskom rozhraní sa pridá nová karta Gear_Lab a môžeme pozorovať, že na nastavenie procesu je k dispozícii operačný strom na zpevňovanie povrchu. V predvolenom nastavení sa otvorí okno „Shot Peen Process“ na definovanie parametrov procesu peeningu, pozri obr. STPL1.3.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0003.jpg' | relative_url }})
 
-Shot Peening UI showing operation tree and Shot Peen Process window
+Používateľské rozhranie Shot Peening zobrazujúce operačný strom a okno procesu Shot Peen
 
-## Defining Shot Peening Process parameters
+## Definovanie parametrov procesu zpevňovania povrchu
 
-In Shot Peen Process page, we can import previously saved Data Analytics (DA) model file using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button and by using ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) option we can save the existing project DA model file to Library or inside the project folder.
+Na stránke Shot Peen Process môžeme importovať predtým uložený súbor modelu Data Analytics (DA) pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) môžeme uložiť existujúci súbor modelu DA projektu do knižnice alebo do priečinka projektu.
 
-In Process Tag field, we can enter Process information for Reference.
+Do poľa Process Tag (Značka procesu) môžeme zadať informácie o procese pre referenciu.
 
-Under Pellet, Diameter of the pellet and its Mass can be defined. Select “New…” option using Name drop down field and define pellet Diameter as 0.2794mm and Mass as 0.08976 mg and save the DA model file inside the project folder using ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}) option. Also, we can load the saved pallet parameters by selecting respective name from Name drop-down list. Since we are simulating Shot peening operation for 20 seconds, define the Peening time as **20** sec as shown in Fig. STPL1.4. Under Process, we can define process parameters like Peening time, Mass flow rate, Air pressure and Exit velocity. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material list page.
+V časti Pelety je možné definovať priemer pelety a jej hmotnosť. Vyberte možnosť „Nový…“ pomocou rozbaľovacieho poľa Názov a definujte priemer peliet ako 0,2794 mm a hmotnosť ako 0,08976 mg a uložte súbor modelu DA do priečinka projektu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_save_to_library_icon.jpg' | relative_url }}). Uložené parametre palety môžeme načítať aj výberom príslušného názvu z rozbaľovacieho zoznamu Name (Názov). Vzhľadom na to, že simulujeme operáciu kužeľového kužeľa na 20 sekúnd, definujte čas kužeľového kužeľa ako **20** s, ako je znázornené na obr. STPL1.4. V časti Proces môžeme definovať parametre procesu, ako je čas kužeľovania, hmotnostný prietok, tlak vzduchu a výstupná rýchlosť. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku zoznamu materiálov.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0004.jpg' | relative_url }})
 
-Defining shot peening process parameters
+Definovanie parametrov procesu zpevňovania povrchu
 
-## Loading material for helical gear
+## Nakladací materiál pre šikmé ozubené koleso
 
-In material list page, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) icon and load the material "**AISI-302,COLD[70F(20C)]** ” available under **Stainless_steel** group in material library as shown in Fig. STPL1.5.
+Na stránke zoznamu materiálov kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať materiál z knižnice) a načítajte materiál "** AISI-302,COLD[70F(20C)]** " dostupný v skupine **Stainless_steel** v knižnici materiálov, ako je znázornené na obr. STPL1.5.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0005.jpg' | relative_url }})
 
-Loading material from library for helical gar
+Načítava sa materiál z knižnice pre špirálový gar
 
-## Defining Stress Input
+## Definovanie vstupu stresu
 
-The stress input values for object undergoing shot peening can be given either from simulated Micro model (2D) or from experimentally measured residual stress values. In this lab, we will use both Micro model (2D) and experimentally measured residual stress values.
+Vstupné hodnoty napätia pre objekt prechádzajúci kužeľovým kužeľom môžu byť dané buď zo simulovaného mikro modelu (2D), alebo z experimentálne nameraných hodnôt zostatkového napätia. V tomto laboratóriu použijeme mikro model (2D) a experimentálne namerané hodnoty reziduálneho napätia.
 
-### Setting up Micro model (2D)
+### Nastavenie mikro modelu (2D)
 
-Click on “**Micro****model (2D**)” item in operation tree under stress input. under Process tab, by default material “AISI-302,COLD[70F(20C)]” is selected in list. Set Max number of hits as 10 and Number of impact angles as 3\. Default Impact angles are 80, 50 and 20 with 0.5, 0.5 and 0.85 efficiency respectively as shown in Fig. STPL1.6.
+Kliknite na položku „* * Mikro *** *model (2D**)“ v operačnom strome pod vstupom napätia. Na karte Proces je v zozname predvolene vybraný materiál „AISI-302,COLD[70F(20C)]“. Nastavte maximálny počet zásahov ako 10 a počet uhlov nárazu ako 3\. Predvolené uhly nárazu sú 80, 50 a 20 s účinnosťou 0,5, 0,5 a 0,85, ako je znázornené na obr. STPL1.6.
 
-Under Settings tab, we can define simulation control settings like time per step, number of steps and step increment to save for Loading simulation and Unloading simulation. In this lab, we will use default simulation control settings, so click on ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}) button to generate Databases for Micro model 2D simulation. An independent database each impact angle will be generated. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Run page to simulate micro model 2D databases.
+Na karte Nastavenia môžeme definovať nastavenia riadenia simulácie, ako je čas na krok, počet krokov a krokový prírastok na uloženie pre simuláciu nakladania a vykladania. V tomto laboratóriu použijeme predvolené nastavenia riadenia simulácie, takže kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}) a vygenerujte databázy pre simuláciu Micro model 2D. Vygeneruje sa nezávislá databáza s každým uhlom nárazu. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) spustite stránku na simuláciu 2D databáz mikro modelu.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0006.jpg' | relative_url }})
 
-Process settings for 2D micro model simulation
+Nastavenia procesu pre simuláciu 2D mikro modelu
 
-### Run
+CHOD
 
-In Run page, we can simulate 2D micro model Databases using Run action button at the bottom (See Fig. STPL1.7.). When we click on ![]({{ '/assets/icons/post_icons/run_label_button.jpg' | relative_url }}), Run options dialog will be opened. Select simulation server and click on ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}) button to start the simulation. 
+Na stránke Run môžeme simulovať databázy 2D mikro modelu pomocou tlačidla Run action v dolnej časti (pozri obr. STPL1.7.). Keď klikneme na ![]({{ '/assets/icons/post_icons/run_label_button.jpg' | relative_url }}), otvorí sa dialógové okno Spustiť možnosti. Vyberte simulačný server a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}) spustite simuláciu.
 
-After completion of simulation, we can observe the Progress status as 100 %. Once the simulation completes, automatically data extraction will start to extract output (impact stress and residual stress output) from the simulated database and then exported to Data Analytics (DA model) file for further processing. Once the data extraction and exporting is completed, we can observe the message as “Done” (See Fig. STPL1.8.). By using ![]({{ '/assets/icons/post_icons/mo_extract_label_button.jpg' | relative_url }}) option we can re-extract the data and save to DA model file. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Impact stress page.
+Po ukončení simulácie môžeme sledovať stav Progress ako 100 %. Po dokončení simulácie začne automatická extrakcia údajov extrahovať výstup (nárazové napätie a výstup zvyškového napätia) zo simulovanej databázy a potom exportovať do súboru Data Analytics (DA model) na ďalšie spracovanie. Po dokončení extrakcie a exportu údajov môžeme správu pozorovať ako „Hotovo“ (pozri obr. STPL1.8.). Pomocou možnosti ![]({{ '/assets/icons/post_icons/mo_extract_label_button.jpg' | relative_url }}) môžeme znova extrahovať údaje a uložiť ich do súboru modelu DA. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Impact stress.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0007.jpg' | relative_url }})
 
-Run Options page to simulate 2D micro model
+Spustiť stránku Možnosti na simuláciu 2D mikro modelu
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0008.jpg' | relative_url }})
 
-Run page showing status after completion of simulation
+Spustiť stránku zobrazujúcu stav po dokončení simulácie
 
-### 2D micro model impact stress and residual stress output
+### 2D mikro model má vplyv na napätie a výstup zvyškového napätia
 
-Once the simulation is completed, we can click on Impact stress or Residual Stress item in operation tree to view respective output from 2D Micro model. The Micro model simulation results can be displayed with contour plots and graphs.
+Po dokončení simulácie môžeme kliknúť na položku Impact stress alebo Residual Stress v operačnom strome a zobraziť príslušný výstup z 2D Micro modelu. Výsledky simulácie mikro modelu je možné zobraziť pomocou obrysových grafov a grafov.
 
-Using ![]({{ '/assets/icons/post_icons/mo_contour_plot_button.jpg' | relative_url }}), we can plot contours and using ![]({{ '/assets/icons/post_icons/mo_graph_plot_button.jpg' | relative_url }}), we can plot graphs for Radial stress, Effective stress and Effective strain as shown in Fig. STPL1.9. and Fig. STPL1.10.
+Pomocou ![]({{ '/assets/icons/post_icons/mo_contour_plot_button.jpg' | relative_url }}) môžeme vykresliť kontúry a pomocou ![]({{ '/assets/icons/post_icons/mo_graph_plot_button.jpg' | relative_url }}) môžeme vykresliť grafy pre radiálne napätie, efektívne napätie a efektívne napätie, ako je znázornené na obr. STPL1.9. a obr. STPL1.10.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0009.jpg' | relative_url }})
 
-Radial impact stress Contour plot
+Radiálne nárazové napätie Obrysový graf
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0010.jpg' | relative_url }})
 
-Impact radial stress along depth
+Radiálne napätie nárazu pozdĺž hĺbky
 
-Display of graphs and contour plots for multiple angles and multiple hits can be controlled using options available under Display control as shown in Fig. STPL1.11. User can select the range of data to be displayed using ![]({{ '/assets/icons/post_icons/mo_grid_selection_button.jpg' | relative_url }}), in Fig. STPL1.11. hit #10 is selected to be displayed. (See Fig. STPL1.11.). The graph plots can be superimposed together to compare the results using ![]({{ '/assets/icons/post_icons/mo_superimpose_icon.jpg' | relative_url }}) as shown in Fig. STPL1.12.
+Zobrazenie grafov a obrysových grafov pre viaceré uhly a viaceré zásahy je možné ovládať pomocou možností dostupných pod ovládaním displeja, ako je znázornené na obr. STPL1.11. Používateľ môže vybrať rozsah údajov, ktoré sa majú zobraziť pomocou ![]({{ '/assets/icons/post_icons/mo_grid_selection_button.jpg' | relative_url }}), na obr. STPL1.11. Zobrazí sa hit #10. (Pozri obr. STPL1.11.) Grafické znázornenia sa môžu prekrývať, aby sa porovnali výsledky pomocou ![]({{ '/assets/icons/post_icons/mo_superimpose_icon.jpg' | relative_url }}), ako je znázornené na obr. STPL1.12.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0011.jpg' | relative_url }})
 
-Selecting data range (Hit #10) of graphs display
+Zobrazenie výberu rozsahu údajov (hit #10) grafov
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0012.jpg' | relative_url }})
 
-Super imposing graphs over one another for selected data range (Hit #10)
+Super impozantné grafy nad sebou pre vybraný rozsah údajov (hit #10)
 
   
-Using ![]({{ '/assets/icons/post_icons/mo_sv_value_table_icon.jpg' | relative_url }}) options, we can view Max radial stress, Max effective stress, Max effective strain, Dimple diameter and Dimple height state variables values either as Table or as Chart display depending on the selection in Display control. (See Fig. STPL1.13. and Fig. STPL1.14.).
+Pomocou možností ![]({{ '/assets/icons/post_icons/mo_sv_value_table_icon.jpg' | relative_url }}) môžeme zobraziť hodnoty Max radiálneho napätia, Max efektívneho napätia, Max efektívneho napätia, Dimple diameter a Dimple height state variables buď ako tabuľku alebo ako zobrazenie grafu v závislosti od výberu v ovládacom prvku Display (Zobrazenie). (Pozri obr. STPL1.13. a obr. STPL1.14.).
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0013.jpg' | relative_url }})
 
-Max Impact radial stress values as table
+Maximálne hodnoty radiálneho napätia nárazu ako tabuľka
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0014.jpg' | relative_url }})
 
-Max Impact radial stress values as Chart
+Maximálne hodnoty radiálneho napätia nárazu podľa grafu
 
-### Measured Residual stress
+### Merané zostatkové napätie
 
-To provide measured residual stresses as input, click on “**Measured Residual stress** “ item in Object tree. We need to provide data for at least two impact angles. In this lab, we will define same measured residual stress values for both impact angles 90 and 20 as shown in Fig. STPL1.15.
+Ak chcete poskytnúť merané zvyškové napätie ako vstup, kliknite na položku „**Merané zvyškové napätie** “ v strome objektov. Musíme poskytnúť údaje aspoň pre dva uhly nárazu. V tomto laboratóriu definujeme rovnaké namerané hodnoty zostatkového napätia pre oba uhly nárazu 90 a 20, ako je znázornené na obr. STPL1.15.
 
-**Depth** |  **Stress**  
----|---  
-0.0001  |  -93  
-0.00025  |  -95  
-0.0005  |  -72  
-0.00075  |  -50  
-0.001  |  -27  
-0.002  |  -11  
-0.005  |  0  
-0.01  |  0.2  
+**Hĺbka** |  **Stres**
+---|---
+0,0001  |  -93
+0,00025  |  -95
+0,0005  |  -72
+0,00075  |  -50
+0,001  |  -27
+0,002  |  -11
+0,005  |  0
+0,01  |  0,2
   
   
   
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0015.jpg' | relative_url }})
 
-Input data of measured residual stress values
+Vstupné údaje nameraných hodnôt zostatkového napätia
 
-## Defining 3D model for shot peening
+## Definovanie 3D modelu na zpevňovanie povrchu
 
-Click on “**Model****3D** ” item in object tree, in Model 3D page we can select the objects required to setup 3D model. In this lab, we require a Workpiece and one Nozzle object. By default one Workpiece and one Nozzle object will be selected, see Fig. STPL1.16. So, with default settings click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Workpiece page.
+Kliknite na položku „* * Model ** * * 3D * * “ v strome objektov, na stránke Model 3D môžeme vybrať objekty potrebné na nastavenie 3D modelu. V tomto laboratóriu požadujeme obrobok a jeden predmet dýzy. V predvolenom nastavení sa vyberie jeden obrobok a jeden objekt dýzy, pozri obr. STPL1.16. Pri predvolených nastaveniach teda kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Obrobok.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0016.jpg' | relative_url }})
 
-Defining required objects for 3D shot peening model
+Definovanie požadovaných objektov pre 3D model zpevňovania povrchu
 
-### Defining Workpiece
+### Definovanie obrobku
 
-#### Workpiece object page
+#### Stránka objektu obrobku
 
-In Workpiece page, keep the default object name as “**Workpeice** ” and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Workpiece Geometry page.
+Na stránke obrobku ponechajte predvolený názov objektu ako „* * Workpeice** “ a kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Geometria obrobku.
 
-#### Defining Workpiece geometry 
+#### Definovanie geometrie obrobku
 
-Click on Import geometry from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) and load **Gear.stl** from **3D/LABS/Shotpeening** folder, imported Helical gear geometry looks like as shown in Fig. STPL1.17. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Workpiece Material page.
+Kliknite na Import geometrie z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a zaťažte** Gear.stl** z priečinka * *3D/LABS/Shotpeening **, importovaná geometria špirálového ozubeného kolesa vyzerá ako na obr. STPL1.17. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Materiál obrobku.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0017.jpg' | relative_url }})
 
-Imported Gear geometry
+Importovaná geometria ozubeného kolesa
 
-#### Defining Material for Workpiece 
+#### Definovanie materiálu pre obrobok
 
-Assign “**AISI****-302,COLD[70F(20C)]** ” material for workpiece, click ![]({{ '/assets/icons/pre_icons/mo_back_button.jpg' | relative_url }}) button to generate mesh for workpiece.
+Priraďte materiál „**AISI ****-302,STUDENÝ[70F(20C)]** “ pre obrobok, kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_back_button.jpg' | relative_url }}) vytvorte sieťovinu pre obrobok.
 
-#### Generating mesh for Workpiece
+#### Generovanie pletiva pre obrobok
 
-In Mesh page, define Target number of elements as **128000** and size ratio as **2**. Click on **Coating** Tab, click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button to add **8****layers** and for each layer define coating thickness (micron) as **10** , then click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button to generate mesh. Click “**Yes** ” in “Generate coating mesh?” popup and “**No** ” in “Default Boundary condition” popup. Generated mesh for Workpiece is as shown in Fig. STPL1.19. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) till Boundary condition page.
+Na stránke Mesh definujte cieľový počet prvkov ako * * 128000 * * a pomer veľkosti ako **2**. Kliknite na **Povlak** Tab, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) pre pridanie **8***vrstiev * * a pre každú vrstvu definujte hrúbku povlaku (mikrón) ako **10 * * , potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) pre vytvorenie povrchovej siete. Kliknite na „**Áno** “ v kontextovom okne „Generovať povrchovú sieť?“ a „**Nie** “ v kontextovom okne „Predvolená hraničná podmienka“. Vygenerovaná sieť pre obrobok je, ako je znázornené na obr. STPL1.19. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Podmienky ohraničenia.
 
-**Note** : It is a good idea to check mesh after mesh generation. If a problem is detected, the mesh density may need to be decreased (make larger elements) or decrease the total coating depth. There is currently a limitation that the total coating depth can not be more than ½ the size of the smallest element.
+**Poznámka** : Po vytvorení povrchovej siete je vhodné skontrolovať povrchovú sieť. Ak sa zistí problém, môže byť potrebné znížiť hustotu ôk (vytvoriť väčšie prvky) alebo znížiť celkovú hĺbku povlaku. V súčasnosti existuje obmedzenie, že celková hĺbka náteru nemôže byť väčšia ako ½ veľkosti najmenšieho prvku.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0018.jpg' | relative_url }})
 
-General mesh setting for workpiece
+Všeobecné nastavenie povrchovej siete pre obrobok
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0019.jpg' | relative_url }})
 
-Coating mesh settings for Workpiece
+Nastavenia povrchovej siete pre obrobok
 
-#### Assigning boundary conditions to Workpiece
+#### Priradenie hraničných podmienok k obrobku
 
-In this lab, we will fix the nodes on the bottom projection at the center of the gear as shown in Fig. STPL1.20. So, select Velocity option, pick the surface as shown in Fig. STPL1.20., then select “**All** ” direction radio button and click on ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) button, assigned Velocity BCC for Gear object is as shown in Fig. STPL1.20. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) till Movement page.
+V tomto laboratóriu opravíme uzly na spodnom výčnelku v strede ozubeného kolesa, ako je znázornené na obr. STPL1.20. Takže vyberte možnosť Velocity, vyberte povrch, ako je znázornené na obr. STPL1.20., potom zvoľte prepínač smeru "* * Všetky * * " a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}), priradené BCC rýchlosti pre prevodový objekt je, ako je znázornené na obr. STPL1.20. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Pohyb.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0020.jpg' | relative_url }})
 
-Assigned Velocity boundary condition for Workpiece
+Priradená hraničná podmienka rýchlosti pre obrobok
 
-#### Defining Workpiece movement
+#### Definovanie pohybu obrobku
 
-In Movement page, define Angular Speed as **10****rpm**. Define the center value as 0, 0, 0 and Axis value as 0, 0, 1 as shown in Fig. STPL1.21. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) till Nozzle #1 page.
+Na stránke Pohyb definujte uhlovú rýchlosť ako * * 10 * * **ot/min.**. Definujte hodnotu stredu ako 0, 0, 0 a hodnotu osi ako 0, 0, 1, ako je znázornené na obr. STPL1.21. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stranu trysky #1.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0021.jpg' | relative_url }})
 
-Workpiece movement page
+Stránka pohybu obrobku
 
-### Defining Nozzle #1 
+### Definovanie trysky #1
 
-#### Nozzle#1 Object definition
+#### Dýza#1 Definícia objektu
 
-For a nozzle, we can define name and its geometry in nozzle object page. In Nozzle #1 object page, we will keep the name as Nozzle # 1. We will define the **Diameter** as **5mm** and **Cone****angle** as **20** degrees, keep the **mass****flow** as **2.3 kg/min** and **Air****pressure** as **172 kpa** as shown in Fig. STPL1.22\. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Location page.
+Pre dýzu môžeme definovať názov a jeho geometriu na stránke objektu dýzy. Na stránke objektu Tryska #1 ponecháme názov Tryska # 1. * * Priemer ** definujeme ako ** 5 mm * * a * * Kužeľ * *** uhol * * ako **20** stupňov, * * hmotnosť ** ** prietok ** ako **2,3 kg/min* * a * * vzduch * * ** tlak * * ako * *172 kpa**, ako je znázornené na obr. STPL1.22\. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Umiestnenie.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0022.jpg' | relative_url }})
 
-Defined Nozzle #1 parameters in object page
+Definované parametre trysky č.1 na stránke objektu
 
-#### Defining Nozzle Location 
+#### Definovanie umiestnenia dýzy
 
-Define **Reference****co-ordinate** **X** as **9.793** , **Y** as **-12.395** and **Z** as **1.86717**. Define **Distance** as **37mm** , **Theta** as **61 degrees** and **Phi** as **308****degrees** with respect to reference point as shown in Fig. STPL1.23. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to movement page.
+Definujte **referenciu**** súradnicu ** **X** ako **9.793** , **Y** ako **-12.395** a **Z** ako **1.86717**. Definujte **vzdialenosť** ako **37 mm** , **Theta** ako **61 stupňov** a **Phi** ako **308****stupňov** vzhľadom na referenčný bod, ako je znázornené na obr. STPL1.23. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku pohybu.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0023.jpg' | relative_url }})
 
-Defining Nozzle location
+Určenie umiestnenia dýzy
 
-#### Defining Nozzle movement 
+#### Definovanie pohybu dýzy
 
-Define nozzle **Speed** as **1** **mm/sec** and direction of movement as **Z** as shown in Fig. STPL1.24. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Positioning page. 
+Definujte dýzu **Rýchlosť** ako **1** *mm/s** a smer pohybu ako * * Z * *, ako je znázornené na obr. STPL1.24. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Polohovanie.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0024.jpg' | relative_url }})
 
-Defining Nozzle movement
+Definovanie pohybu dýzy
 
-### Positioning
+VIZUÁL PRE
 
-In positioning page, using ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) we can position the object. In this lab, we need not use positioning as the Workpiece and Nozzle objects are in correct position. 
+Na stránke positioning môžeme pomocou ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) umiestniť objekt. V tomto laboratóriu nemusíme používať polohovanie, pretože objekty obrobku a dýzy sú v správnej polohe.
 
-## Analysis of shot peening process
+## Analýza procesu kužeľového zpevňovania
 
-Shot peening process in 3D can be analyzed based on the stress input, process parameters and geometry of the objects. 
+Proces zpevňovania povrchu v 3D je možné analyzovať na základe vstupného napätia, parametrov procesu a geometrie objektov.
 
-**Particle Simulation** : During particle simulation, randomly generated particles hit the workpiece and calculates averages of impact angles, hit counts, impact velocities, etc. on each surface element. Particle simulation is slower than the Impact simulation and it handles ricochets.
+** Simulácia častíc ** : Počas simulácie častíc náhodne generované častice zasiahnu obrobok a vypočítajú priemery uhlov nárazu, počty zásahov, rýchlosti nárazu atď. na každom povrchovom prvku. Simulácia častíc je pomalšia ako simulácia Impact a zvláda odrazy.
 
-**Impact Simulation** : During impact simulation, it performs simple cone intersections with workpiece and calculates impact angles, hit counts, impact velocities, etc. for each surface element. impact simulation is fast and does not consider impacts from ricochets. Also, it does not consider partial coverage of surface elements. 
+** Simulácia nárazu ** : Počas simulácie nárazu vykonáva jednoduché priesečníky kužeľov s obrobkom a vypočítava uhly nárazu, počty zásahov, rýchlosti nárazu atď. pre každý povrchový prvok. Simulácia nárazu je rýchla a nezohľadňuje vplyvy odrazov. Nezohľadňuje ani čiastočné pokrytie povrchových prvkov.
 
-**Residual stress Analysis** : Impact stresses either from particle simulation or impact simulation can be assigned to the object for running the residual stress analysis to predict the residual stresses. If the stress input is only from Measured residual stress the residual stress analysis is not required, the Measured residual stress will be interpolated over the 3D model based on the Particle simulation output or Impact simulation output, depending on user selection.
+** Analýza reziduálneho napätia ** : Nárazové napätia buď zo simulácie častíc alebo simulácie nárazu môžu byť priradené objektu na vykonanie analýzy reziduálneho napätia na predpovedanie reziduálneho napätia. Ak je vstup napätia iba z meraného reziduálneho napätia, analýza reziduálneho napätia sa nevyžaduje, merané reziduálne napätie bude interpolované nad 3D modelom na základe výstupu simulácie častíc alebo výstupu simulácie nárazu v závislosti od výberu používateľa.
 
-### Particle Simulation
+### Simulácia častíc
 
-#### Particle Simulation settings
+#### Nastavenia simulácie častíc
 
-Click on “**Particle****simulation** ” item in Object tree. In this lab, we will define % of energy loss during Shot-Workpiece collision as 0.3. We will not shot to shot collisions, hence turn of Shot-shot collision check box. We will define time step as 0.002, too large time step may lead to shots penetrating the workpiece.
+Kliknite na položku „**Časticová *** *simulácia * * “ v strome objektov. V tomto laboratóriu definujeme % straty energie počas kolízie Shot-Workpiece ako 0,3. Nebudeme strieľať na streľbu z kolízie, preto začiarknite políčko Shot-shot collision. Časový krok definujeme ako 0,002, príliš veľký časový krok môže viesť k záberom prenikajúcim do obrobku.
 
-We can run simulation either with preview or without preview, if we run simulation with preview, the simulation will take more time, but we can observe the pellets striking the workpiece and if needed we can adjust the parameters by stopping the simulation. For this lab, we will run the simulation by turning off the Run with preview checkbox. Click on ![]({{ '/assets/icons/post_icons/mo_run_simulation_label_button.jpg' | relative_url }}) button, simulation will start running and current process time will be updated in console as shown in Fig. STPL1.25. Once the particle simulation is completed, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to results page.
+Simuláciu môžeme spustiť buď s náhľadom alebo bez náhľadu, ak spustíme simuláciu s náhľadom, simulácia zaberie viac času, ale môžeme pozorovať pelety dopadajúce na obrobok a v prípade potreby môžeme upraviť parametre zastavením simulácie. Pre toto laboratórium spustíme simuláciu vypnutím začiarkavacieho políčka Spustiť s náhľadom. Kliknite na tlačidlo ![]({{ '/assets/icons/post_icons/mo_run_simulation_label_button.jpg' | relative_url }}), simulácia sa spustí a aktuálny čas procesu sa aktualizuje v konzole, ako je znázornené na obr. STPL1.25. Po dokončení simulácie častíc kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku s výsledkami.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0025.jpg' | relative_url }})
 
-Particle simulation settings
+Nastavenia simulácie častíc
 
-#### Particle Simulation Result
+#### Výsledok simulácie častíc
 
-From particle, the following output parameters will be obtained:
+Z častíc sa získajú tieto výstupné parametre:
 
-  * Vertical (normal to the surface element) velocity.
+* Vertikálna (normálna k povrchovému prvku) rýchlosť.
 
-  * Impact angle.
+Θ: uhol nárazu
 
-  * Hit count.
+* Počet zásahov.
 
-  * Hit density (hit count divided by surface element area).
+* Hustota zásahu (počet zásahov vydelený plochou povrchového prvku).
 
-  * Exposure time.
+Expozičná doba
 
-  * Coverage.
+Krytie.
 
-Click on “**Result** ” item under Particle simulation in Object tree. In Particle simulation results page, we can plot contour of different outputs along with histograms as shown in Fig. STPL1.26. Under **State variable** tab, we can plot contours of impact stress, residual stresses and measured stress state variables. 
+Kliknite na položku „**Výsledok** “ v časti Simulácia častíc v strome objektov. Na stránke Výsledky simulácie častíc môžeme vykresliť obrys rôznych výstupov spolu s histogramami, ako je znázornené na obr. STPL1.26. Pod záložkou * * Stavová premenná * * môžeme vykresliť kontúry nárazového napätia, reziduálne napätia a namerané premenné stavu napätia.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0026.jpg' | relative_url }})
 
-Vertical velocity histogram along with contour from particle simulation
+Histogram vertikálnej rýchlosti spolu s obrysom zo simulácie častíc
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0027.jpg' | relative_url }})
 
-Impact stress histogram along with contour from particle simulation
+Histogram nárazového napätia spolu s obrysom zo simulácie častíc
 
   
-We can view an animation of the particle simulation by clicking on ![]({{ '/assets/icons/post_icons/mo_show_animation_button.jpg' | relative_url }})action button.
+Animáciu simulácie častíc môžeme zobraziť kliknutím na tlačidlo ![]({{ '/assets/icons/post_icons/mo_show_animation_button.jpg' | relative_url }})action.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0028.jpg' | relative_url }})
 
-Particle simulation animation page 
+Stránka animácie simulácie častíc
 
-### Impact simulation
+Simulácia nárazu
 
-#### Impact Simulation settings
+#### Nastavenia simulácie vplyvu
 
-Click on “**Impact****simulation** ” item in Object tree. In this lab, we will use default time step of **0.0333** sec. We can control the display of nozzle, nozzle cone and nozzle path but turning on/ off respective check boxes. Click on ![]({{ '/assets/icons/post_icons/mo_run_simulation_label_button.jpg' | relative_url }}) and observe the Impact simulation. In this lab, we will turn off all checkboxes. During impact simulation, we can observe the impact cone and path in the display and status in status bar, Determining hits : time on left side and total completion in percentage on right side. (See Fig. STPL1.29.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to impact simulation results page
+Kliknite na položku „**Vplyv *** *simulácia * * “ v strome objektov. V tomto laboratóriu použijeme predvolený časový krok * * 0,0333 * * s. Môžeme ovládať zobrazenie dýzy, kužeľa dýzy a dráhy dýzy, ale zapnúť/ vypnúť príslušné začiarkavacie políčka. Kliknite na ![]({{ '/assets/icons/post_icons/mo_run_simulation_label_button.jpg' | relative_url }}) a sledujte simuláciu nárazu. V tomto laboratóriu vypneme všetky začiarkavacie políčka. Počas simulácie nárazu môžeme pozorovať nárazový kužeľ a cestu na displeji a stav v stavovom riadku, Určenie zásahov : čas na ľavej strane a celkové dokončenie v percentách na pravej strane. (Pozri obr. STPL1.29.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) zobrazíte stránku s výsledkami simulácie nárazu
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0029.jpg' | relative_url }})
 
-Impact simulation settings
+Nastavenia simulácie nárazu
 
-#### Impact simulation result 
+#### Výsledok simulácie nárazu
 
-Similar to Particle simulation results page, we can plot contour of different Hit results along with histogram as shown in Fig. STPL1.30. and Fig. STPL1.31. Under State variable tab, we can plot contour of Impact stress, Residual stresses and Measured stress State variable output. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Residual stress analysis page
+Podobne ako na stránke s výsledkami simulácie častíc môžeme vykresliť obrys rôznych výsledkov hit spolu s histogramom, ako je znázornené na obr. STPL1.30. a obr. STPL1.31. V záložke Stav premennej môžeme vykresliť obrys nárazového napätia, zostatkového napätia a premenného výstupu stavu meraného napätia. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na analýzu zvyškového napätia
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0030.jpg' | relative_url }})
 
-Vertical velocity histogram along with contour from impact simulation
+Histogram vertikálnej rýchlosti spolu s obrysom zo simulácie nárazu
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0031.jpg' | relative_url }})
 
-Impact stress histogram along with contour from Impact simulation
+Histogram nárazového napätia spolu s obrysom zo simulácie nárazu
 
-### Residual stress analysis
+### Analýza zvyškového stresu
 
-#### Residual stress analysis settings
+#### Nastavenia analýzy zvyškového stresu
 
-In residual stress analysis page, we can assign initial impact stress values either from Particle simulation or Impact simulation to the workpiece. In this lab, we will select **Impact simulation** radio button and click on **Assign Initial stress** button. With "**MUMPS** " as solver, click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) and then click on the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database (See Fig. STPL1.32.) Once the database is generated click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to the Run page.
+Na stránke analýzy reziduálneho napätia môžeme obrobku priradiť hodnoty počiatočného nárazového napätia buď zo simulácie častíc alebo simulácie nárazu. V tomto laboratóriu vyberieme prepínač ** Simulácia nárazu ** a klikneme na tlačidlo **Priradiť počiatočné napätie**. S "**MUMPS** " ako riešiteľom kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) pre vygenerovanie databázy (pozri obr. STPL1.32.) Po vygenerovaní databázy kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Spustiť.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0032.jpg' | relative_url }})
 
-Residual stress analysis settings
+Nastavenia analýzy zvyškového napätia
 
-#### Simulating Residual stress analysis
+#### Simulácia analýzy zvyškového stresu
 
-Click on ![]({{ '/assets/icons/post_icons/run_label_button.jpg' | relative_url }}) to run single step FEM stress re-equilibrium simulation (Residual stress analysis) simulation. Once the simulation is completed, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Results page. Fig. STPL1.33. Shows end of residual stress analysis.
+Kliknite na ![]({{ '/assets/icons/post_icons/run_label_button.jpg' | relative_url }}) pre spustenie jednorazovej simulácie napätia MKP (analýza zvyškového napätia). Po dokončení simulácie kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Výsledky. Obr. STPL1.33. Zobrazuje koniec analýzy zvyškového napätia.
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0033.jpg' | relative_url }})
 
-Residual stress analysis Run page
+Analýza zvyškového napätia Spustiť stránku
 
-#### Residual Stress analysis results
+#### Výsledky analýzy zvyškového stresu
 
-In results page, we can plot contours for selected output, Fig. STPL1.34. Shows Effective residual stress contour plot.
+Na stránke s výsledkami môžeme vykresliť obrysy pre vybraný výstup, obr. STPL1.34. Zobrazuje efektívny graf reziduálneho napätia.
 
-**Residual stress (FEM)** – Calculated from FEM simulation based on the Impact/ Particle simulation
+**Reziduálne napätie (MKP)** – Vypočítané zo simulácie MKP na základe simulácie Impact/ Particle
 
-**Residual stress (from micro model)** – Residual stresses from 2D micro model are interpolated onto 3D model based on the Impact/ Particle simulation
+**Reziduálne napätie (z mikro modelu)** – Reziduálne napätia z 2D mikro modelu sú interpolované do 3D modelu na základe simulácie Impact/ Particle
 
-**Impact stress (from micro model)** – Impact stresses from 2D micro model are interpolated onto 3D model based on the Impact/ Particle simulation
+**Rázové napätie (z mikro modelu)** – Rázové napätia z 2D mikro modelu sú interpolované do 3D modelu na základe simulácie Impact/ Particle
 
-**Measured stress** \- Residual stresses from the measured data provided by the user are interpolated onto 3D model based on the Impact/ Particle simulation
+**Namerané napätie** \- Zostatkové napätia z nameraných údajov poskytnutých používateľom sú interpolované do 3D modelu na základe simulácie nárazu/ častíc
 
 ![]({{ '/assets/images/labs/shot_peening_labs/shot_peening_lab1/image0034.jpg' | relative_url }})
 
-Effective stress output for different outputs Micromodel, Measured stress and FEM
+Efektívny výstup napätia pre rôzne výstupy Mikromodel, Merané napätie a MKP

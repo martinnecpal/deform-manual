@@ -3,114 +3,114 @@ lang: sk
 title: "Forming Lab 11"
 ---
 
-# Lab 11. Add a case with a press fit
+# Cvičenie 11. Pridajte puzdro s lisovaným uložením
 
-### Step selection
+### Výber kroku
 
-Select the **last****step** in step list, then Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Objects page.
+V zozname krokov vyberte **posledný****krok** a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), čím sa dostanete na stránku „Objekty“.
 
-### Add object
+### Pridať objekt
 
-In the Objects table, add a 3rd object. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Top die object page.
+V tabuľke „Objekty“ pridajte tretí objekt. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Horná matrica“.
 
-### Top die and Bottom die
+### Horná a spodná matrica
 
-Repeat the same mesh/interpolation/material/BCC procedure as explained in [Lab 10: Die stress for the top and bottom die.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab10/' | relative_url }}) After completion click 
+Zopakujte rovnaký postup týkajúci sa siete, interpolácie, materiálu a BCC, ako je vysvetlené v [Lab 10: Die stress for the top and bottom die.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab10/' | relative_url }}). Po dokončení kliknite na 
 
-### Object 4 General page
+### Objekt 4 – Všeobecná stránka
 
-Change the object name to **Case** and set the temperature to **300** °F. We will select the object type as Elastic for the Case and turn off Need positioning check box. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to geometry page.
+Zmeňte názov objektu na **Case** a nastavte teplotu na **300** °F. Pre objekt Case vyberieme typ Elastic a zrušíme začiarknutie políčka Need positioning. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku s geometriou.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab11_image0010.jpg' | relative_url }})
 
-Case object page
+Stránka objektu prípadu
 
-#### Create Case Geometry
+#### Vytvorenie geometrie prípadu
 
-Use Define primitive to create a **hollow****cylinder** for case with **inside****radius** **8.5** in., **Outer radius****14.4** in., and height of **5.4** in.( See Fig. L11.2.)
+Pomocou funkcie „Definovať primitívu“ vytvorte **dutý****valec** s **vnútorným****polomerom** **8,5** palca, **vonkajším polomerom****14,4** palca a výškou **5,4** palca.(Pozri obr. L11.2.)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab11_image0001.jpg' | relative_url }})
 
-Case geometry primitive window
+Okno s geometrickými základnými prvkami
 
-#### Generate Case Mesh
+#### Vytvoriť sieť prvkov
 
-Generate a mesh with **250** elements. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Material page.
+Vytvorte sieť s **250** prvkami. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Material“.
 
-#### Assign Material for Case
+#### Priradiť materiál k prípadu
 
-In Material window, select **AISI-H-13** material to assign and Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to BCC page.
+V okne „Materiál“ vyberte materiál **AISI-H-13**, ktorý chcete priradiť, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránke BCC.
 
-#### Assign BCC
+#### Nastaviť skrytú kópiu (BCC)
 
-We will assign a shrink fit boundary condition along the ID. Click **Shrink Fit** in the boundary condition list, and then use the By edge ![]({{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }}) tool to select the **ID** of the Case. Next, input a value of **0.002** in (See Fig. L11.3.). for both Interference input fields. Choose the **x** direction as the shrink fit direction. Click ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}).
+Nastavíme okrajovú podmienku sťahovania pozdĺž vnútorného priemeru (ID). V zozname okrajových podmienok kliknite na položku **Shrink Fit** a potom pomocou nástroja By edge ![]({{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }}) vyberte **ID** puzdra. Následne zadajte hodnotu **0,002** (pozri obr. L11.3.) do oboch vstupných polí pre interferenciu. Ako smer zúženia zvoľte smer **x**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab11_image0002.jpg' | relative_url }})
 
-Selecting the ID to define Shrink fit BCC
+Výber identifikátora na definovanie BCC s kontrakčným uložením
 
-**Note:** The purpose of the two input fields it to allow variable interference along the defined boundary. The arrow near the center line displays the start and end point of the selected boundary. Since we are doing a uniform interference, we choose the same value for both start and end points.
+**Poznámka:** Účelom týchto dvoch vstupných polí je umožniť variabilnú interferenciu pozdĺž definovanej hranice. Šípka v blízkosti stredovej čiary označuje počiatočný a koncový bod vybranej hranice. Keďže ide o rovnomernú interferenciu, pre počiatočný aj koncový bod zvolíme rovnakú hodnotu.
 
-A pop-up window will ask if you want to move nodes by the offset distance. 
+Vyskočí okienko s otázkou, či chcete posunúť uzly o zadanú vzdialenosť. 
 
-If tools are drawn true to size (i.e. overlapping), then we need to move the nodes. In this case, they are already drawn as matching surfaces, so DO NOT MOVE the nodes (i.e. answer **No**) (See Fig. L11.4). Assigned Shrink fit BCC for Case object as shown in Fig. L11.5. Since the workpiece does not contact this case, no force interpolation is required click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Positioning page.
+Ak sú nástroje nakreslené v skutočnej veľkosti (t. j. prekrývajú sa), je potrebné posunúť uzly. V tomto prípade sú už nakreslené ako zhodné plochy, preto uzly NEPOSÚVAJTE (t. j. odpovedzte **Nie**) (pozri obr. L11.4). Priraďte BCC s tlakovým uložením pre objekt „Case“, ako je znázornené na obr. L11.5. Keďže obrobok sa s týmto puzdrom nedotýka, nie je potrebná žiadna interpolácia síl – klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Positioning“.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab11_image0003.jpg' | relative_url }})
 
-Move object Nodal coordinate popup
+Presunúť objekt – kontextové menu s uzlovými súradnicami
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab11_image0004.jpg' | relative_url }})
 
-Assigned Shrink fit BCC for Case
+Priradený BCC s termoplastickým upevnením pre puzdro
 
-#### Positioning Case
+#### Prípad polohovania
 
-Go to **Positioning** and Drag the Case down until the bottom of the Case and Bottom Die are aligned. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Contact page
+Prejdite do časti **Polohovanie** a pretiahnite puzdro nadol, až kým sa spodná časť puzdra a spodná forma nezosúladia. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Kontakt
 
-### Contact
+### Kontakt
 
-Add one relation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button, select **Maser** as **Case** object and **Slave** as **Bottom****Die** object. Define friction value as **0.1**. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact.(See Fig. L11.6.) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation controls page.
+Pridajte jeden vzťah kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}), ako objekt **Case** vyberte **Maser** a ako objekt **Bottom****Die** vyberte **Slave**. Nastavte hodnotu trenia na **0,1**. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) vygenerujte kontakt (pozri obr. L11.6). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Ovládacie prvky simulácie.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab11_image0005.jpg' | relative_url }})
 
-Inter object relation windows
+Okná vzťahov medzi objektmi
 
-### Simulation Controls
+### Ovládacie prvky simulácie
 
-Default simulation controls are acceptable for this model. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to generate DB.
+Pre tento model sú prijateľné štandardné ovládacie prvky simulácie. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujte databázu.
 
-### Generate DB
+### Vytvoriť databázu
 
-Click on![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) action label to check the problem. Generate a database by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) action label.
+Kliknite na popisok akcie ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali problém. Vytvorte databázu kliknutím na popisok akcie ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
-Save the project and click on the MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode button (above the operation tree) to start the simulation.
+Uložte projekt a kliknite na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode“ (nad stromom operácií), aby ste spustili simuláciu.
 
-### Run and monitor a simulation
+### Spustenie a sledovanie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog. Use the default **Continue****Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), čím otvoríte dialógové okno Možnosti spustenia. Použite predvolenú možnosť **Pokračovať****Spustiť**, aby ste vybrali možnosť „**Pokračovať od posledného kroku**“, a potom vyberte režim simulácie pomocou prepínača **Interaktívny**. Kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie.
 
-### Review the results
+### Prezrite si výsledky
 
-When the simulation is completed, click the MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode button to review results.
+Po dokončení simulácie kliknite na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode“, aby ste si prezreli výsledky.
 
-In the Post-processor, click on the positive step in the step list, Plot Effective stress state variable (See Fig. L11.7.) . 
+V postprocesore kliknite na príslušný krok v zozname krokov a vyberte možnosť „Vykresliť premennú efektívneho napätia“ (pozri obr. L11.7.). 
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab11_image0006.jpg' | relative_url }})
 
-Effective stress State variable Plot
+Graf premennej stavu „efektívne napätie“
 
-Go to the Set up ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) dialog, and display Max principal stress (See Fig. L11.8.) and other stress components.
+Prejdite do dialógového okna „Nastavenie ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }})“ a zobrazte maximálne hlavné napätie (pozri obr. L11.8.) a ostatné zložky napätia.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab11_image0007.jpg' | relative_url }})
 
-Max Principal Stress state variable plot
+Graf premennej stavu „Maximálne hlavné napätie“
 
-Compare the stress plots between the first and second die stress load cases.
+Porovnajte grafy napätia medzi prvým a druhým prípadom zaťaženia matice.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab11_image0008.jpg' | relative_url }})
 
-Stress Effective state variable plot of both Die stress study 1(left side) and Die stress study 2 (right side)
+Graf stavovej premennej „Stress Effective“ pre obe štúdie napätia v matrici: Štúdia napätia v matrici 1 (vľavo) a Štúdia napätia v matrici 2 (vpravo)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab11_image0009.jpg' | relative_url }})
 
-Max Principal Stress state variable plot of both Die stress study 1(left side) and Die stress study 2(right side)
+Graf premennej „Maximálne hlavné napätie“ pre obe štúdie napätia v matrici: Štúdia napätia v matrici 1 (vľavo) a Štúdia napätia v matrici 2 (vpravo)

@@ -1,458 +1,458 @@
 ---
 lang: sk
-title: "2D Cold Forming Lab1"
+title: "Laboratórium 2D tvárnenia za studena 1"
 ---
 
-# 2D Cold Forming Lab
+# Laboratórium 2D tvárnenia za studena
 
-In this lab we will setup simple Bolt forming operation in MO 2D forming express operation. In this Forming operation we have 3 stages:
+V tomto laboratórnom cvičení nastavíme jednoduchú operáciu tvárnenia skrutiek v rámci operácie „MO 2D forming express“. Táto operácia tvárnenia pozostáva z 3 fáz:
 
-  1. Extrude operation
+  1. Operácia vytláčania
 
-  2. Cone blow operation
+  2. Prevádzka s kužeľovým dúchadlom
 
-  3. Hex Head operation
+  3. Práca s imbusovou hlavou
 
-After completion of Forming operation, we are doing Die stress to investigate stresses in the Top die.
+Po dokončení operácie tvárnenia vykonávame analýzu napätí v lisovacej forme, aby sme zistili napätia v hornej lisovacej forme.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0008.jpg' | relative_url }})
 
-Operation 1 : Extrude operation
+Operácia 1: Operácia vytláčania
 
-Operation 2: Cone blow operation
+Operácia 2: Operácia s kužeľovým výfukom
 
-Operation 3: Hex Head operation
+Operácia 3: Operácia s šesťhrannou hlavou
 
-Operation 4: Die stress Operation
+Operácia 4: Operácia na odstránenie napätia
 
-## Extrude operation
+## Operácia vytláčania
 
-### Creating a New problem
+### Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear, as shown in Fig. 2DCFL1.1.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte položku DEFORM-v1x.xxx (kde .xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte položku **DEFORM GUI Main** vxx.xx. Zobrazí sa hlavné okno DEFORM GUI Main, ako je znázornené na obr. 2DCFL1.1.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg' | relative_url }})
 
-QT4 GUI Main window
+Hlavné okno grafického rozhrania QT4
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. 2DCFL1.2. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** " radio button in unit field. Define Problem Name as " ******Bolt** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie úlohy, ako je znázornené na obr. 2DCFL1.2. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte prepínač „**Angličtina**“. Názov úlohy zadajte ako „******Bolt**“ a uistite sa, že je zaškrtnuté políčko „Zobraziť dialógové okno s možnosťami“ (ak nezaškrtnete políčko „**Zobraziť dialógové okno s možnosťami**“, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), čím otvoríte nový problém s využitím integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg' | relative_url }})
 
-New Problem page
+Stránka „Nový problém“
 
-Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use "**Bolt** " as the project name. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom Nový projekt, v ktorom bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „**Bolt**“. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.
 
-### Add operations
+### Pridať operácie
 
-In this lab, we are showing how to setup all 3 operations in batch mode. Add three 2D Forming express operations from Operation list in Explorer. Operation can be add by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to 2D Forming express operation or user can also add the operation by dragging and dropping the operation into Operation Editor region.
+V tomto cvičení ukážeme, ako nastaviť všetky tri operácie v dávkovom režime. Pridajte tri operácie „2D Forming express“ zo zoznamu operácií v Průzkumníku. Operáciu je možné pridať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa operácie „2D Forming express“ alebo ju môžete pridať aj pretiahnutím do oblasti Editoru operácií.
 
-### Change operation name:
+### Zmena názvu operácie:
 
-Change the Operation name to "**Extrude** " by double click on Forming field in Operation editor as shown in Fig. 2DCFL1.3.
+Zmeňte názov operácie na „**Extrude**“ dvojitým kliknutím na pole „Forming“ v editore operácií, ako je znázornené na obr. 2DCFL1.3.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0001.jpg' | relative_url }})
 
-Editing Operation name
+Úprava názvu operácie
 
-### Define Process settings
+### Nastavenia definovania procesu
 
-In Process page, select **Process type** as **Cold Forming** , select **Geometry****type** as **2D Axisymmetric**.
+Na stránke „Proces“ vyberte ako **Typ procesu** možnosť **Tvarovanie za studena** a ako **Typ geometrie** vyberte možnosť **2D osovo symetrické**.
 
-The shape complexity and simulation accuracy slider bars influence the mesh settings and number of time steps used in the simulation. This, in turn, influences the run time and level of detail available in the simulation.
+Posuvníky pre zložitosť tvaru a presnosť simulácie ovplyvňujú nastavenia siete a počet časových krokov použitých v simulácii. To zase ovplyvňuje dĺžku behu a úroveň detailov dostupnú v simulácii.
 
-For this simulation, we will use the default Moderate complexity and Moderate accuracy, set the slider bars as shown below Fig. 2DCFL1.4. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Pre túto simuláciu použijeme predvolené nastavenia „Stredná zložitosť“ a „Stredná presnosť“ a nastavíme posuvníky tak, ako je znázornené na obr. 2DCFL1.4. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0002.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-###  Adding Objects
+###  Pridávanie objektov
 
-In this operation we should have **1 workpiece + 3 dies** as shown in Fig. 2DCFL1.5., click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+V tejto operácii by sme mali mať **1 obrobok + 3 matrice**, ako je znázornené na obr. 2DCFL1.5. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0003.jpg' | relative_url }})
 
-Number of Objects selection page
+Stránka na výber počtu objektov
 
-### Workpiece Definition
+### Definícia obrobku
 
-Use default **Workpiece** object name and **Default** object temperature, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Použite predvolený názov objektu **Obrobok** a predvolenú teplotu objektu **Predvolená** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-Note: there is an “Import Object” button on the “Object” page. This is for importing complete object data from another DEFORM file, which is not what we want to do at this time.
+Poznámka: Na stránke „Objekt“ sa nachádza tlačidlo „Importovať objekt“. Slúži na import kompletných údajov o objekte z iného súboru DEFORM, čo však v tomto momente nie je to, čo chceme urobiť.
 
-### Create geometry
+### Vytvoriť geometriu
 
-On the Geometry page, click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). Define a **C****ylinder** that has a **radius** of **0.135”** and a **height** of**1.29”** as shown in Fig. 2DCFL1.6 . Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button. The geometry of a cutoff with radius 0.135” should be displayed on the screen.
+Na stránke „Geometria“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). Definujte **C****valec** s **polomerom** **0,135”** a **výškou** **1,29”**, ako je znázornené na obr. 2DCFL1.6. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Na obrazovke by sa mala zobraziť geometria výrezu s polomerom 0,135”.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})and then in the pop up window click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) to see if the geometry is OK. A message appears in the status window displaying that the geometry is legal. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to Check and Correct Geometry popup window and Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to go to the Mesh page.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) a potom v rozbalovacom okne kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}), aby ste skontrolovali, či je geometria v poriadku. V stavovom okne sa zobrazí správa, že geometria je správna. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby sa otvorilo okno „Skontrolujte a opravte geometriu“, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Sieť“.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0004.jpg' | relative_url }})
 
-Defining the Geometry
+Definovanie geometrie
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0005.jpg' | relative_url }})
 
-Geometry page
+Stránka o geometrii
 
-### Workpiece Mesh
+### Sieť obrobku
 
-The settings that we set in the [Objects Shape Complexity]({{ '/docs/sk/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}#Shape_Complexity_and_Accuracy) determined the number of elements and the number of time steps that were to be used in the simulation.
+Nastavenia, ktoré sme zadali v programe [Objects Shape Complexity]({{ '/docs/sk/operation_templates/34_forming_express/34_1_2d_forming_express_setup/' | relative_url }}#Shape_Complexity_and_Accuracy), určili počet prvkov a počet časových krokov, ktoré sa mali použiť v simulácii.
 
-For this lab to run quickly, go ahead and change the number of elements to 1000 by selecting user defined radio button and click ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). A mesh with approximately 1000 elements should be displayed on the Workpiece in the Display window.
+Aby sa toto laboratórne cvičenie spustilo rýchlo, zmeňte počet prvkov na 1000 tak, že vyberiete prepínač „user defined“ a kliknete na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). V okne „Display“ by sa mala na obrobku zobraziť sieť s približne 1000 prvkami.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0006.jpg' | relative_url }})
 
-Mesh page
+Stránka s mriežkou
 
-### Workpiece Material
+### Materiál obrobku
 
-In Material window, load the material **AISI-1010,COLD[70F(20C)** from DEFORM Material library, from **Steel** category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option. This can be done as shown in Fig. 2DCFL1.9. by clicking ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button. Material can also be load from Materials list in Explorer. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top Die page.
+V okne „Material“ načítajte materiál **AISI-1010,COLD[70F(20C)** z knižnice materiálov DEFORM v kategórii **Steel** pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice). To je možné vykonať tak, ako je znázornené na obr. 2DCFL1.9, kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}). Materiál je možné načítať aj zo zoznamu materiálov v prehliadači. Potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku „Top Die“.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0007.jpg' | relative_url }})
 
-Material Library window
+Okno „Knižnica materiálov“
 
-### Top Die Definition
+### Definícia pojmu „Top Die“
 
-In Top Die page, change the name of the top die to **Punch** , Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Na stránke „Top Die“ zmeňte názov hornej matrice na **Punch** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Import Punch geometry:
+### Import geometrie dierovacieho nástroja:
 
-Import **bolt-punch1.IGS** file using Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button as shown in Fig. 2DCFL1.10., then check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})option. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Naimportujte súbor **bolt-punch1.IGS** pomocou tlačidla „Načítať geometriu z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), ako je znázornené na obr. 2DCFL1.10, a následne skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0009.jpg' | relative_url }})
 
-Importing Punch geometry
+Import geometrie výseku
 
-### Assign Movement for Punch
+### Priradiť pohyb pre úder
 
-Under the movement options select **S******p** eed **option. Be sure movement is in the **–Y** direction, Enter a speed of **10** in/sec as shown in Fig. 2DCFL1.11. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button..
+V nastaveniach pohybu vyberte **S******p** **rýchlosť**. Uistite sa, že pohyb prebieha v smere **–Y**, zadajte rýchlosť **10** palcov za sekundu, ako je znázornené na obr. 2DCFL1.11. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0010.jpg' | relative_url }})
 
-Punch movement page
+Stránka o pohybe úderu
 
-### Bottom Die Definition
+### Definícia spodnej matrice
 
-In Bottom Die page, change the name of the Bottom die to **Die** , Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Na stránke „Spodná forma“ zmeňte názov spodnej formy na **Forma** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Import Die Geometry
+### Import geometrie lisovacej formy
 
-Click on Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button, import **bolt-die1.IGS** file. Then check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Kliknite na tlačidlo „Načítať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a importujte súbor **bolt-die1.IGS**. Následne skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Ejector
+### Vyhadzovač
 
-In object 4 page, change the name of the object 4 to **Ejector**. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Na stránke objektu 4 zmeňte názov objektu 4 na **Ejector**. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Import Ejector Geometry
+### Import geometrie vyhadzovača
 
-Click on Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button, import **bolt-ejector1.IGS** file. Then check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Kliknite na tlačidlo „Načítať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a importujte súbor **bolt-ejector1.IGS**. Následne skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Objects Positioning
+### Umiestňovanie objektov
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button object positioning page will open, Select **Interference positioning** and make the **Positioning object** the **Workpiece** and the **Reference** the **Die**. An approach **direction** of**–Y** should be used. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). The workpiece got positioned downward until it came into contact with the die. Zoom in on the lower right corner of the workpiece you will see that the Interference value of 0.0001 was a little too large for these geometries, and too much overlap resulted between the objects. Add five more zeros to the Interference to make it 0.000000001 and then click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). You should see that the workpiece is now positioned in the die with the correct amount of overlap. Position the **Punch** to contact the **Workpiece**. Again, use an approach direction of **–Y**. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close Positioning object and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button. 
+Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) sa otvorí stránka na polohovanie objektov. Vyberte možnosť **Polohovanie podľa kolízie** a ako **Polohovaný objekt** zvoľte **Obrobok** a ako **Referenciu** zvoľte **Formu**. Mali by ste použiť **smer** priblíženia **–Y**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Obrobok sa posunul smerom nadol, až kým nedošlo k kontaktu s maticou. Zväčšite pravý dolný roh obrobku a uvidíte, že hodnota kolízie 0,0001 bola pre tieto geometrie trochu príliš veľká a medzi objektmi došlo k príliš veľkému prekrývaniu. Pridajte k hodnote interferencie ďalších päť núl, aby bola 0,000000001, a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Mali by ste vidieť, že obrobok je teraz umiestnený v matrici so správnou mierou prekrývania. Umiestnite **razník** tak, aby sa dotýkal **obrobku**. Opäť použite smer priblíženia **–Y**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste zatvorili okno „Positioning object“, a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). 
 
-### Define contact conditions
+### Definovanie kontaktných podmienok
 
-In the Contact section of the tree, by default the System defined default friction coefficient of 0.08 will be assigned, which corresponds to cold forming using carbide dies. By selecting User defined radio button user can also define other friction values if needed by using pull-down menu (see Fig. 2DCFL1.12.). DEFORM automatically determine an appropriate contact tolerance for this model. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_contact_nodes_label.jpg' | relative_url }}). You should see contact displayed between the Workpiece and the other objects it is touching. In this lab we will use default "**System-Defined** " type, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+V časti „Kontakt“ stromovej štruktúry je štandardne priradený systémom definovaný predvolený koeficient trenia 0,08, čo zodpovedá tvárneniu za studena s použitím karbidových matíc. Výberom prepínača „Definované používateľom“ môže používateľ v prípade potreby definovať aj iné hodnoty trenia pomocou roletového menu (pozri obr. 2DCFL1.12.). Program DEFORM automaticky určí vhodnú toleranciu kontaktu pre tento model. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_contact_nodes_label.jpg' | relative_url }}). Mal by sa zobraziť kontakt medzi obrobkom a ostatnými objektmi, s ktorými prichádza do styku. V tomto cvičení použijeme predvolený typ „**Definované systémom**“, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0011.jpg' | relative_url }})
 
-Contact relation definition window
+Okno na definovanie vzťahov medzi kontaktmi
 
-### Assign primary die stroke
+### Nastaviť primárny zdvih matrice
 
-The primary die stroke is an estimate of the distance the punch will travel during forming.
+Hlavný zdvih matrice je odhad vzdialenosti, ktorú prejde razník počas tvárnenia.
 
-For this problem, we will extrude a distance of **0.80** ”, so enter this amount in the Total primary die travel field and check the Exact amount check box as shown in Fig. 2DCFL1.13.)
+V tejto úlohe budeme vyťahovať na vzdialenosť **0,80** ”, preto zadajte túto hodnotu do poľa „Total primary die travel“ (Celkový zdvih primárneho lisovacieho nástroja) a zaškrtnite políčko „Exact amount“ (Presná hodnota), ako je znázornené na obr. 2DCFL1.13.)
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0012.jpg' | relative_url }})
 
-Primary die travel definition window
+Okno s primárnym nastavením zdvihu matrice
 
-### Assign stop controls
+### Priradiť ovládacie prvky zastavenia
 
-We want to stop the simulation when the punch has moved 0.80”. Click Stopping Controls in the tree and check the **Max****die stroke** option. Enter the value **0.80** ” in the field as shown in Fig. 2DCFL1.14. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Chceme simuláciu zastaviť, keď sa razník posunie o 0,80”. Kliknite v stromovej štruktúre na položku „Stopping Controls“ a zaškrtnite možnosť **Max****die stroke**. Do poľa zadajte hodnotu **0,80** ” tak, ako je znázornené na obr. 2DCFL1.14. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0013.jpg' | relative_url }})
 
-Stopping controls window
+Okno s ovládacími prvkami na zastavenie
 
-### Review simulation controls
+### Prehľad ovládacích prvkov simulácie
 
-The number of simulation steps and the step increment are established by the Object Shape Complexity slider bar settings. If you want to change the default values, you can do by selecting user type radio button and define step definition. We will accept the default values for this lab. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Počet simulačných krokov a veľkosť kroku sa nastavujú pomocou posuvníka „Object Shape Complexity“ (Zložitosť tvaru objektu). Ak chcete zmeniť predvolené hodnoty, môžete tak urobiť výberom prepínača „user type“ (užívateľský typ) a definovaním kroku. V tomto cvičení ponecháme predvolené hodnoty. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Generate Database
+### Vytvoriť databázu
 
-In Generate DB page. Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process:
+Na stránke „Generate DB“. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) spustíte kontrolu programu, či v nastavení úlohy niečo nechýba. Počas kontroly:
 
-Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).
+Správy v červenej farbe označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli definovať údaje o materiáloch).
 
-Click on![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, click on ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) button to go to Next operation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Keď program dokončí zapisovanie databázy, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) a prejdite k ďalšej operácii.
 
-## Cone blow Operation
+## Prevádzka s kužeľovým výfukom
 
-In this operation, we are importing new tools by changing Dies geometry.
+V rámci tejto operácie zavádzame nové nástroje zmenou geometrie foriem.
 
-### Change operation name:
+### Zmena názvu operácie:
 
-Change the Operation name to "**Cone Blow** " of Operation 2 in Operation editor as shown in Fig. 2DCFL1.15.
+V editore operácií zmeňte názov operácie 2 na „**Cone Blow**“, ako je znázornené na obr. 2DCFL1.15.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0014.jpg' | relative_url }})
 
-Changing operation name in Operation Editor
+Zmena názvu operácie v editore operácií
 
-### Define Process settings for Cone blow operation
+### Nastavenie procesu pre operáciu vyfukovania kužeľa
 
-Leave the **Complexity** as **Simple** and change the **Accuracy** to **Fast** as shown in Fig. 2DCFL1.16. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Nechajte nastavenie **Zložitosť** na hodnote **Jednoduché** a zmeňte nastavenie **Presnosť** na **Rýchle**, ako je znázornené na obr. 2DCFL1.16. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0015.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-### Adding objects
+### Pridávanie objektov
 
-This operation doesn't need any new object, so we won't change the setting of 1 workpiece + 3 dies, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top die page.
+Táto operácia nevyžaduje žiadny nový objekt, takže nastavenie 1 obrobok + 3 matrice nezmeníme; kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka „Horná matrica“.
 
-### Punch Definition
+### Vysvetlenie pojmu „punch“
 
-In Object page, select **Define** object type radio button as shown in Fig. 2DCFL1.17., click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Na stránke „Objekt“ vyberte voľbu **Definovať** typ objektu, ako je znázornené na obr. 2DCFL1.17., a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0016.jpg' | relative_url }})
 
-Punch definition page
+Stránka s definíciou pojmu „punch“
 
-### Import Punch geometry
+### Import geometrie dierovacieho nástroja
 
-Click on Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button, import **bolt-punch2.IGS** file. Then check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Kliknite na tlačidlo „Načítať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a importujte súbor **bolt-punch2.IGS**. Následne skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Define Punch movement 
+### Definícia pohybu úderu 
 
-Use the previous operation top die movement data, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button. 
+Použite údaje o pohybe hornej matrice z predchádzajúcej operácie a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). 
 
-### Die Definition
+### Definícia
 
-In Object page, select **Define** object type radio button, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Na stránke Objekt vyberte voľbu **Definovať** typ objektu a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Import Die geometry
+### Import geometrie formy
 
-Click on Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button, Import**bolt-die2.IGS** file. Then check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})option. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button until Scheduled positioning page.
+Kliknite na tlačidlo „Načítať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a importujte súbor **bolt-die2.IGS**. Následne skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Plánované polohovanie“.
 
-### Scheduled positioning
+### Plánované umiestnenie
 
-Using Interference positioning method we are positioning the Workpiece to the Die (-Y approach direction) and then the Punch to the Workpiece. In Scheduled positioning page, Click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button and select ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}) radio button. Change the **Positioning****Object** to the **Workpiece** and the **Reference** to the **Die**. Change the Approach Direction to**-Y** and then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Similarly add interference scheduled positioning for **Punch** and **Workpiece**(-Y Approach direction) as shown in Fig. 2DCFL1.18. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Primary die stroke page.
+Pomocou metódy polohovania na základe interferencie najprv polohujeme obrobok k forme (smer priblíženia -Y) a potom razník k obrobku. Na stránke „Plánované polohovanie“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) a vyberte prepínač ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}). Zmeňte **Objekt polohovania** na **Obrobok** a **Referenciu** na **Formu**. Zmeňte smer priblíženia na **-Y** a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Podobne pridajte naplánované polohovanie s ohľadom na kolízie pre **razník** a **obrobok** (smer priblíženia -Y), ako je znázornené na obr. 2DCFL1.18. Potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku Primárny zdvih matrice.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0017.jpg' | relative_url }})
 
-Scheduled positioning window
+Plánované časové okno na určovanie polohy
 
-### Primary die stroke
+### Zdvih primárneho valca
 
-We need to set the approximate value the punch will move during this operation. The dies are around 0.2” apart at the end of this operation, so define the value as **0.2** ” as shown in Fig. 2DCFL1.19. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Musíme nastaviť približnú hodnotu, o ktorú sa razník počas tejto operácie posunie. Na konci tejto operácie sú matrice od seba vzdialené približne 0,2”, preto nastavte hodnotu na **0,2** ”, ako je znázornené na obr. 2DCFL1.19. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0018.jpg' | relative_url }})
 
-Primary die stroke
+Základný zdvih matrice
 
-### Set stopping criteria
+### Nastavenie kritérií zastavenia
 
-We want to form the part until the punch and die are within 0.008” of one another. In the [Stopping Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}#9.3.8._Stopping_distance_\(MDSOBJ\)) screen, place a check mark next to **Distance between objects** to activate this option. With the mouse, click a point on the bottom of the punch and then click a point on the top of the Die. An arrow between these two points should get displayed on the screen. Set the value for this distance to **0.008** ” in the **Y** direction as shown in Fig. 2DCFL1.20. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Chceme tvarovať diel tak, aby vzdialenosť medzi razníkom a matricou nepresiahla 0,008”. Na obrazovke [Stopping Controls]({{ '/docs/sk/pre_processor/9_simulation_controls/9_3_stopping_controls/' | relative_url }}#9.3.8._Stopping_distance_\(MDSOBJ\)) zaškrtnite políčko vedľa položky **Vzdialenosť medzi objektmi**, aby ste túto možnosť aktivovali. Myšou kliknite na bod na spodnej strane razníka a potom kliknite na bod na hornej strane matrice. Na obrazovke by sa mala zobraziť šípka medzi týmito dvoma bodmi. Nastavte hodnotu tejto vzdialenosti na **0,008** ” v smere **Y**, ako je znázornené na obr. 2DCFL1.20. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0019.jpg' | relative_url }})
 
-Stopping controls page
+Stránka ovládacích prvkov zastavenia
 
-### Review simulation controls
+### Prehľad ovládacích prvkov simulácie
 
-The number of simulation steps and the step increment are established by the Object Shape Complexity slider bar settings. If you want to change the default values, you can do by selecting user type radio button and define step definition. We will accept the default values for this lab, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Počet simulačných krokov a veľkosť kroku sa nastavujú pomocou posuvníka „Object Shape Complexity“. Ak chcete zmeniť predvolené hodnoty, môžete tak urobiť výberom rádio tlačidla „user type“ a definovaním kroku. V rámci tohto cvičenia ponecháme predvolené hodnoty; kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Generate Database
+### Vytvoriť databázu
 
-See the Status in Generate DB page, if we see Input error, check the data missing and complete it, for this lab sequence expect "DB generation is not required for this operation. It will occur at run time." message. Click on ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) button to go to Next operation.
+Pozrite si stav na stránke „Generate DB“; ak sa zobrazí chyba zadávania údajov, skontrolujte, či nechýbajú nejaké údaje, a doplňte ich. V rámci tejto laboratórnej úlohy by sa mala zobraziť správa: „Vytvorenie databázy nie je pre túto operáciu potrebné. Uskutoční sa počas behu programu.“ Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) prejdite k ďalšej operácii.
 
-## Hex head operation
+## Práca s imbusovým kľúčom
 
-### Change operation name
+### Zmena názvu operácie
 
-Change the Operation name to "**Hex Head** " of Operation 3 in Operation editor.
+V editore operácií zmeňte názov operácie 3 na „**Hex Head**“.
 
-### Process Settings Definition
+### Definícia nastavení procesu
 
-Change the **Complexity** to the tick mark between “**Simple** ” and “**Moderate** ” and increase the **Accuracy** to “**Moderate** ” as shown in Fig. 2DCFL1.21. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) next until Top die page.
+Zmeňte nastavenie **Zložitosť** na značku medzi „**Jednoduchá**“ a „**Stredná**“ a zvýšte hodnotu **Presnosť** na „**Stredná**“, ako je znázornené na obr. 2DCFL1.21. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku Top die.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0020.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-### Punch Definition
+### Vysvetlenie pojmu „punch“
 
-In Object page, Select **Define** object type radio button as shown in Fig. 2DCFL1.22., click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Na stránke „Objekt“ vyberte prepínač typu objektu **Definovať**, ako je znázornené na obr. 2DCFL1.22., a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0021.jpg' | relative_url }})
 
-Top Die general definition window
+Okno „Všeobecná definícia hornej matrice“
 
-### Import Punch geometry
+### Import geometrie výseku
 
-Click on Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button, import **bolt-punch3.IGS** file. Then check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})option. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Kliknite na tlačidlo „Načítať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a naimportujte súbor **bolt-punch3.IGS**. Následne skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Define Punch movement
+### Definovanie pohybu úderu
 
-Use the previous operation top die movement data, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Scheduled positioning page.
+Použite údaje o pohybe hornej matrice z predchádzajúcej operácie a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Plánované polohovanie“.
 
-### Scheduled positioning
+### Plánované umiestnenie
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button and select ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}) radio button. Change the Positioning Object to the **Punch** and the Reference to the **Workpiece** and **-Y** approach direction as shown in Fig. 2DCFL1.23., then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Primary die stroke page.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) a vyberte prepínač ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}). Zmeňte polohovací objekt na **Punch** a referenčný bod na **Workpiece** a smer priblíženia na **-Y**, ako je znázornené na obr. 2DCFL1.23., potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Primary die stroke.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0022.jpg' | relative_url }})
 
-Scheduled Positioning window
+Plánované časové okno na určovanie polohy
 
-### Primary die travel Definition
+### Definícia primárneho zdvihu matrice
 
-In Primary die travel page, define primary die travel value as **0.143"** as shown in Fig. 2DCFL1.24. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Na stránke „Primárny zdvih matrice“ nastavte hodnotu primárneho zdvihu matrice na **0,143"**, ako je znázornené na obr. 2DCFL1.24. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0023.jpg' | relative_url }})
 
-Primary die travel window
+Okno primárneho posunu matrice
 
-### Set stopping criteria
+### Nastavenie kritérií zastavenia
 
-We want to stop the simulation when the punch and die are within 0.010” of one another. In the Stopping Controls screen, check the **Distance between objects** check box option and then click points on the bottom of the punch and on the top of the die. Set the value for this distance to **0.010** ” in the Y direction as shown in Fig. 2DCFL1.25.
+Chceme zastaviť simuláciu, keď sa razník a matrica nachádzajú vo vzdialenosti do 0,010” od seba. Na obrazovke Ovládacie prvky zastavenia zaškrtnite políčko **Vzdialenosť medzi objektmi** a potom kliknite na body na spodnej strane razníka a na hornej strane matrice. Nastavte hodnotu tejto vzdialenosti na **0,010** ” v smere osi Y, ako je znázornené na obr. 2DCFL1.25.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0024.jpg' | relative_url }})
 
-Stopping Controls window
+Okno „Ovládacie prvky zastavenia“
 
-### Review simulation controls
+### Prehľad ovládacích prvkov simulácie
 
-The number of simulation steps and the step increment are established by the Object Shape Complexity slider bar settings. We will accept the default values for this lab. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Počet simulačných krokov a veľkosť kroku sa nastavujú pomocou posuvníka „Object Shape Complexity“. V tomto cvičení použijeme predvolené hodnoty. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Generate Database
+### Vytvoriť databázu
 
-See the Status in Generate DB page, if we see Input error, check the data missing and complete it, for this lab sequence expect "DB generation is not required for this operation. It will occur at run time." message. Save the project and click on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) mode to run the simulation.
+Pozrite si stav na stránke „Generate DB“; ak sa zobrazí chyba zadávania údajov, skontrolujte, či nechýbajú nejaké údaje, a doplňte ich. V rámci tejto laboratórnej úlohy by sa mala zobraziť správa: „Vytvorenie databázy nie je pre túto operáciu potrebné. Uskutoční sa počas behu programu.“ Uložte projekt a kliknite na režim ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}), aby ste spustili simuláciu.
 
-### Running simulation
+### Spustenie simulácie
 
-Click on ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) label under the simulation tab (see Fig. 2DCFL1.26.), as we click on the Run option, Run Simulation dialog will open as shown in see Fig. 2DCFL1.27., Use the default **Continue Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation. As we click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button simulation starts.
+Kliknite na označenie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) na karte „Simulácia“ (pozri obr. 2DCFL1.26.). Po kliknutí na možnosť „Spustiť“ sa otvorí dialógové okno „Spustiť simuláciu“, ako je znázornené na obr. 2DCFL1.27. Použite predvolenú možnosť **Pokračovať v spúšťaní**, vyberte možnosť „**Pokračovať od posledného kroku**“ (od kroku -1), potom nastavte režim simulácie na **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie. Po kliknutí na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) sa spustí simulácia.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_03_spike_isothermal/2d_mobl3_image0032.jpg' | relative_url }})
 
-Simulation Options
+Možnosti simulácie
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0034.jpg' | relative_url }})
 
-Run Simulation window
+Okno „Spustiť simuláciu“
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. As long as the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.
+Priebeh simulácie je možné počas jej vykonávania sledovať na karte „Simulation Message“ a v časti „Simulation Graphics“ v oblasti zobrazenia „Graphics“ v režime simulácie. Pokiaľ je na karte „Simulation Message“ zaškrtnutá voľba „![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }})“ (čo je predvolené nastavenie), súbor správ sa bude automaticky aktualizovať.
 
-The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.
+Súbor „Message“ obsahuje informácie o tom, v ktorom simulačnom kroku sa simulácia momentálne nachádza, a zároveň poskytuje údaje o tom, ako dobre simulácia prebieha.
 
-When the simulation is finished without any issues, check the messages in LOG file, when all operation completes we will see messages in LOG file:"MULTIPLE OPERATION COMPLETED ". (See Fig. 2DCFL1.28.)
+Keď simulácia prebehne bez problémov, skontrolujte správy v súbore LOG; po dokončení všetkých operácií sa v súbore LOG zobrazí správa: „MULTIPLE OPERATION COMPLETED“. (Pozri obr. 2DCFL1.28.)
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0025.jpg' | relative_url }})
 
-Log file messages
+Správy v protokoloch
 
-### Post process the results
+### Následné spracovanie výsledkov
 
-After the simulation is completed, Switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab.
+Po dokončení simulácie prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}).
 
-Did the head completely fill? Look at contact to better visualize any unfill.
+Naplnila sa hlava úplne? Pozrite sa na kontaktnú plochu, aby ste lepšie videli, či nie je nejaké miesto nenaplnené.
 
-Is the load in this operation greater than the load required in the previous operations?
+Je zaťaženie pri tejto operácii väčšie ako zaťaženie požadované pri predchádzajúcich operáciách?
 
-Plot the load - stroke graph for each operation to compare the load in each operation.
+Vykreslite graf závislosti zaťaženia od zdvihu pre každú operáciu, aby ste mohli porovnať zaťaženie v jednotlivých operáciách.
 
-### State variables
+### Stavové premenné
 
-From the [State variables]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/' | relative_url }}) list, click the Effective strain icon to plot the amount of strain that went into the workpiece. To change the plot settings, you can click on the ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) Set up icon. In this screen, you can display different kinds of contours (line, shaded or solid) as well as change the variable range that is shown on the contour bar (See Fig. 2DCFL1.29.). Using the Settings option, the range of the contour bar can be user-defined. Feel free to experiment with the display of the different state variables and plot options.
+V zozname [State variables]({{ '/docs/sk/post_processor/26_post_processing_tools_and_controls/26_6_post_processing_tools/26_6_3_state_variables/' | relative_url }}) kliknite na ikonu „Efektívne deformácie“, aby ste znázornili veľkosť deformácie, ktorá pôsobila na obrobok. Ak chcete zmeniť nastavenia grafu, môžete kliknúť na ikonu „Nastavenie“ ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}). Na tejto obrazovke môžete zobraziť rôzne druhy kontúr (čiarkované, tieňované alebo plné) a tiež zmeniť rozsah premenných, ktorý sa zobrazuje na kontúrovej lište (pozri obr. 2DCFL1.29.). Pomocou možnosti „Nastavenia“ si môžete rozsah kontúrovej lišty definovať sami. Neváhajte experimentovať so zobrazením rôznych stavových premenných a možností grafu.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0026.jpg' | relative_url }})
 
-Strain Effective state variable plot
+Graf stavovej premennej pri deformácii
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0027.jpg' | relative_url }})
 
-Stress Effective state variable plot
+Graf stavovej premennej pri napätí
 
-##  Die Stress Operation
+##  Operácia „Die Stress“
 
-###  Add Die stress operation
+###  Pridať operáciu s napätím v matrici
 
-After completion of Post processing, switch to ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) mode.
+Po dokončení následného spracovania prejdite do režimu ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}).
 
-Add Die stress 2D operation from Explorer operation list, open added Die stress operation by double click on operation in operation list.
+Pridajte operáciu „Die stress 2D“ zo zoznamu operácií v programe Explorer a pridanú operáciu „Die stress“ otvorte dvojitým kliknutím na túto operáciu v zozname operácií.
 
-### Select objects
+### Vybrať objekty
 
-We are currently interested only in the stress analysis of the punch in the hex head operation. So, delete Die (object3) and Ejector (object4) from the list by clicking delete button ![]({{ '/assets/icons/pre_icons/mo_delete_object_button.jpg' | relative_url }}) . Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button. (see Fig. 2DCFL1.31.)
+V súčasnosti sa zaujímame iba o analýzu napätia v razníku pri operácii s šesťhrannou hlavou. Zoznamu teda odstráňte matricu (objekt 3) a vyhadzovač (objekt 4) kliknutím na tlačidlo odstrániť ![]({{ '/assets/icons/pre_icons/mo_delete_object_button.jpg' | relative_url }}). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). (pozri obr. 2DCFL1.31.)
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0028.jpg' | relative_url }})
 
-Die stress objects window
+Okno „Stress Objects“
 
-By default workpiece object type will be Read from DB, this object will be there up to DB generation, while generating DB it will be removed. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Typ objektu obrobku bude štandardne nastavený na „Načítané z databázy“; tento objekt zostane zachovaný až do vytvorenia databázy, pričom pri jej generovaní bude odstránený. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Top Die Definition
+### Definícia pojmu „Top Die“
 
-By default Die (Elastic) radio button will be selected use the object type as Die, then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh page.
+V predvolenom nastavení bude zaškrtnuté políčko „Die (Elastic)“ – použite typ objektu „Die“ a potom prejdite na stránku „![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh“.
 
-### Top die mesh page
+### Hlavná stránka o sieťke na lisovacej forme
 
-Define number of elements as 2500 as shown in Fig. 2DCFL1.32. and Generate mesh, then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Material page.
+Nastavte počet prvkov na 2500, ako je znázornené na obr. 2DCFL1.32, a vygenerujte sieť. Potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka „Material“.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0029.jpg' | relative_url }})
 
-Mesh window
+Okno so sieťkou
 
-### Assign material for Top die
+### Priradiť materiál pre hornú matricu
 
-Import a die material from the material library. Click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button and select the **Die_material** category, then **AISI-H-13** and click on ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button. Choose **AISI-H-13** from the list. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Boundary condition page.
+Načítajte materiál formy z knižnice materiálov. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať materiál z knižnice), vyberte kategóriu **Die_material**, potom **AISI-H-13** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}). Zo zoznamu vyberte **AISI-H-13**. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Okrajové podmienky.
 
-### Assign Boundary condition for Top Die
+### Nastavenie okrajovej podmienky pre hornú formu
 
-Next we need to apply boundary conditions to the punch so that it does not fly off into space when the forming loads are applied to it.
+Ďalej musíme na razník aplikovať okrajové podmienky, aby neodletel do vesmíru, keď naň pôsobia zaťaženia vznikajúce pri tvárnení.
 
-By default for an axisymmetric product all nodes in x direction at centerline are fixed if not make sure that the direction of the boundary condition is set to X and then click the By edge ![]({{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }}) button in the pop up window. Using this setting, we can add BCC to all nodes/elements on an edge. Pick a point on the centerline of the punch, and you should see that all of the centerline nodes are fixed along X direction. 
+V predvolenom nastavení sú pri osovo symetrickom telese všetky uzly v smere x na stredovej osi fixované; ak tomu tak nie je, uistite sa, že smer okrajovej podmienky je nastavený na X, a potom v rozbaľovacom okne kliknite na tlačidlo „By edge ![]({{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }})“. Pomocou tohto nastavenia môžeme pridať BCC ku všetkým uzlom/prvkom na hrane. Vyberte bod na stredovej osi výseku a mali by ste vidieť, že všetky uzly na stredovej osi sú zafixované v smere X. 
 
-Now set the boundary condition direction to Y, select a point on the top surface of the punch to fix all those nodes along Y direction (see Fig. 2DCFL1.33.). Then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Force interpolation page.
+Teraz nastavte smer okrajovej podmienky na os Y, vyberte bod na hornej ploche razníka, aby ste zafixovali všetky tieto uzly v smere osi Y (pozri obr. 2DCFL1.33.). Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Vynútiť interpoláciu“.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0031.jpg' | relative_url }})
 
-Assigned Velocity Boundary condition
+Okrajová podmienka s predpísanou rýchlosťou
 
-### Force interpolation
+### Vynútená interpolácia
 
-Once the mesh is generated, the forming loads from the workpiece need to be interpolated onto the punch. Click on ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}). Once the forces are interpolated, in below window message will be display of comparing the forces from the workpiece to the new forces on the punch as shown in Fig. 2DCFL1.34. These forces should be relatively close to one another (typically within about 5%). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Generate DB.
+Po vytvorení siete je potrebné interpolovať formovacie zaťaženia z obrobku na razník. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}). Po interpolácii síl sa v nižšie uvedenom okne zobrazí správa porovnávajúca sily pôsobiace na obrobok s novými silami pôsobiacimi na razník, ako je znázornené na obr. 2DCFL1.34. Tieto sily by mali byť relatívne blízko seba (zvyčajne v rozmedzí približne 5 %). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až kým sa nezobrazí Generate DB.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0030.jpg' | relative_url }})
 
-Force interpolation window
+Vynútiť okno interpolácie
 
-### Generate DB
+### Vytvoriť databázu
 
-Check the data and generate the DB. After generating DB switch to ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) mode to run the simulation.
+Skontrolujte údaje a vytvorte databázu. Po vytvorení databázy prejdite do režimu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) a spustite simuláciu.
 
-### Running simulation
+### Spustenie simulácie
 
-Click on ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) label under the simulation tab, as we click on the Run option, Run Simulation dialog will open. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation. As we click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button simulation starts.
+Kliknite na označenie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) na karte „Simulácia“; po kliknutí na možnosť „Spustiť“ sa otvorí dialógové okno „Spustiť simuláciu“. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu. Po kliknutí na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) sa simulácia spustí.
 
-After simulation complete, switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab.
+Po dokončení simulácie prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}).
 
-### Post processor
+### Postprocesor
 
-The main variables to look at for a die stress simulation are the **Effective stress** and the **Maximum principal stress**.
+Hlavnými veličinami, na ktoré je potrebné sa zamerať pri simulácii napätia v tvare, sú **efektívne napätie** a **maximálne hlavné napätie**.
 
-The effective stress is used to see whether any location in the die underwent plastic deformation. If any area of the die has an effective stress close to or exceeding the yield stress of the die material, that region is at risk of plastically deforming. (See Fig. 2DCFL1.35)
+Efektívne napätie sa používa na zistenie, či v niektorej časti lisovacej formy došlo k plastickej deformácii. Ak má nejaká oblasť lisovacej formy efektívne napätie blízke alebo presahujúce medzu tečnosti materiálu lisovacej formy, v tejto oblasti hrozí riziko plastickej deformácie. (Pozri obr. 2DCFL1.35)
 
-The maximum principal stress is used to see which regions of the die are in a state of compression and which are in a state of tension. Maximum principal stress is extremely important in determining whether a die will experience any cracking due to fatigue. To display the maximum principal stress, click the state variable ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) button and then select **Stress – Max Principal** from the list. (See Fig. 2DCFL1.36.)
+Maximálne hlavné napätie sa používa na zistenie, ktoré oblasti matrice sú v stave stlačenia a ktoré v stave ťahu. Maximálne hlavné napätie je mimoriadne dôležité pri určovaní, či na matrici dôjde k prasknutiu v dôsledku únavy materiálu. Ak chcete zobraziť maximálne hlavné napätie, kliknite na tlačidlo stavovej premennej ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) a potom zo zoznamu vyberte položku **Napätie – Maximálne hlavné**. (Pozri obr. 2DCFL1.36.)
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0032.jpg' | relative_url }})
 
-Stress-Effective plot
+Dej s dôrazom na napätie
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_cold_forming_lab1/image0033.jpg' | relative_url }})
 
-Max. Principal stress plot
+Graf maximálneho hlavného napätia

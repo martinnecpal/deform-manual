@@ -1,230 +1,230 @@
 ---
 lang: sk
-title: "Deformation Texture Model Lab"
+title: "Laboratórium modelovania deformačných textúr"
 ---
 
-# Material Suite Lab for deformation texture model
+# Material Suite Lab pre model deformačnej textúry
 
-1.1. Abstract
+1.1. Abstrakt
 
-1.2. Launch deformation texture model in material suite
+1.2. Spustite model deformačnej textúry v súbore materiálov
 
-1.3. Object selection and point selection
+1.3. Výber objektu a výber bodu
 
-1.4. Setup for deformation texture model
+1.4. Nastavenie modelu deformačnej textúry
 
-1.5. Run material point simulator
+1.5. Simulátor bodu točenia materiálu
 
-1.6. Output
+1.6. Výstup
 
-## Abstract
+Abstrakt
 
-Deformation texture model in material suite simulates the evolution of deformation texture at user selected interesting points after running a 2D or 3D nominal database. It can be applied to any single phase or dual-phase polycrystalline material. The crystal structure of each phase can be FCC, BCC, or HCP. DEFORM provides crystal plasticity (CP) executable (DEF_CP.EXE) or users can develop their own executables. For crystal plasticity executable provided by DEFORM, either Taylor or VPSC homogenization scheme can be employed. The texture can be represented either in Rodrigues space or Euler angles space. The basic input data include CP simulation control data, material definition, initial texture and microstructure. For each saved step in nominal database, the output data include macroscopic stress tensor of the polycrystalline aggregate, local stress components in each grain, and texture data, i.e., orientation distribution functions (ODFs) in Rodrigues space or Euler angles with weights. Texture analysis tools are provided, such as pole figures, inverse pole figures, and Kearns number of HCP crystal. For the nominal database with existing texture data, this module can be used to extract texture information and carry out texture analysis at user selected interesting points.
+Model deformačnej textúry v súbore materiálov simuluje vývoj deformačnej textúry vo vybraných zaujímavých bodoch po spustení 2D alebo 3D nominálnej databázy. Môže sa aplikovať na akýkoľvek jednofázový alebo dvojfázový polykryštalický materiál. Kryštalická štruktúra každej fázy môže byť FCC, BCC alebo HCP. deformácia poskytuje spustiteľný súbor kryštálovej plasticity (CP) (DEF_CP.EXE) alebo používatelia môžu vytvoriť svoje vlastné spustiteľné súbory. Pre vykonateľnú krištáľovú plasticitu poskytnutú deformáciou je možné použiť homogenizačnú schému Taylor alebo VPSC. Textúra môže byť reprezentovaná buď v Rodriguesovom priestore alebo v priestore Eulerových uhlov. Základné vstupné údaje zahŕňajú kontrolné údaje simulácie CP, definíciu materiálu, počiatočnú textúru a mikroštruktúru. Pre každý uložený krok v nominálnej databáze výstupné údaje zahŕňajú makroskopický tenzor napätia polykryštalického agregátu, lokálne zložky napätia v každom zrne a údaje o textúre, t. j. funkcie distribúcie orientácie (ODF) v Rodriguesovom priestore alebo Eulerove uhly s váhami. K dispozícii sú nástroje na analýzu textúr, ako sú pólové čísla, inverzné pólové čísla a Kearnsovo číslo kryštálu HCP. Pre nominálnu databázu s existujúcimi údajmi o textúre je možné tento modul použiť na extrakciu informácií o textúre a vykonanie analýzy textúry na zaujímavých bodoch vybraných používateľom.
 
-In this lab, the texture evolution of Ti-6Al-4V during forging is simulated.
+V tomto laboratóriu sa simuluje vývoj textúry Ti-6Al-4V počas kovania.
 
-## Launch deformation texture model in material suite
+## Spustite model deformačnej textúry v súbore materiálov
 
-On a Windows machine, go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button, select DEFORM-v13.xxx (.xxx indicates version number E.g. v14.0.2 and select DEFORM GUI Main v1x.xx from the menu. The DEFORM GUI Main window will appear.
+Na počítači so systémom Windows prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v13.xxx (.xxx označuje číslo verzie Napr. V14.0.2 a z ponuky vyberte Deform GUI Main v1x.xx. Zobrazí SA hlavné okno Deform GUI.
 
-We require a nominal DB to perform texture analysis in material suite, for this lab we will use **Double_Cone_Forging_Nominal.key** from **\MANUALS\PDF \DEFORM3D_Texture_Evolution_Lab** folder to generate nominal DB. Open **NG Pre** using the link DEFORM GUI Main and define Problem ID as " **Double_cone_Forging** ", select "**3D** " Dimension radio button and "**System International (SI)** " unit System radio button in New Problem window, then import **Double_Cone_Forging_Nominal.key** from **\MANUALS\PDF \DEFORM3D_Texture_Evolution_Lab** folder. Navigate to Generate DB page and click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) to generate database. Close the NG Pre and run the simulation from GUI Main, make sure simulation stops normally without any issue. Now from GUI Main, without selecting ****Double_cone_Forging****.DB file click on **Material****Suite** under “Post Processor” to open Material Suite module.
+Požadujeme nominálnu DB na vykonanie analýzy textúry v súbore materiálov, pre toto laboratórium použijeme * * Double_Cone_Forging_Nominal.key * * z * *\MANUÁLY\ PDF \ DEFORM3D_Texture_Evolution_Lab** priečinok na vygenerovanie nominálnej DB. Otvorte **NG Pre** pomocou prepojenia DEFORMÁCIE GUI Main a definujte ID problému ako " **Double_cone_Forging** ", vyberte prepínač "* * 3D * * " Dimension a "**System International (SI)** " unit System prepínač v okne New Problem, potom importujte ** Double_Cone_Forging_Nominal.key ** z priečinka **\MANUAL\PDF \ DEFORM3D_Texture_Evolution_Lab**. Prejdite na stránku Generate DB a kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) pre vygenerovanie databázy. Zatvorte NG Pre a spustite simuláciu z GUI Main, uistite sa, že simulácia sa zastaví normálne bez akéhokoľvek problému. Teraz z hlavného GUI bez výberu * ***Double_CONE_Forging* ***.DB súbor kliknite na **Materiál * ***Suite * * v časti „Post Processor“ a otvorte modul Material Suite.
 
-After the main window for material suite pops up, click "Open..." icon (![]({{ '/assets/icons/pre_icons/mo_import_file_icon2.jpg' | relative_url }}) ) in the top tool bar to import the example database (**Double_cone_Forging.DB**). The default task item "DEFORM" is added to the task tree. Expand "Microstructure" item and click "Texture Model" icon, the new task item "Texture evolution model" is added to the task tree.
+Po zobrazení hlavného okna pre sadu materiálov kliknite na ikonu "Otvoriť..." (![]({{ '/assets/icons/pre_icons/mo_import_file_icon2.jpg' | relative_url }}) ) v hornom paneli nástrojov a importujte vzorovú databázu (**Double_cone_Forging.DB**). Do stromu úloh sa pridá predvolená položka úlohy „DEFORMOVAŤ“. Rozbaľte položku „Mikroštruktúra“ a kliknite na ikonu „Model textúry“, do stromu úloh sa pridá nová položka úlohy „Model vývoja textúry“.
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0001.jpg' | relative_url }})
 
-Launch deformation texture model in material suite.
+Spustite model deformačnej textúry v súbore materiálov.
 
-## Object selection and point selection
+## Výber objektu a výber bodu
 
-As shown in Fig. DTML1.2., in the "DEFORM" task tree, click "**Object selection** " item and select "**workpiece** ". Click "**Point selection** " item, define step number as **"-1** " and define two points on workpiece ( Fig. DTML1.3.). The coordinate of point 1 (P1) is (0.738, 0.147,0.967, 1) and the coordinate of Point 2 (P2) is (7.93, 0.071, 12.04, 1). Users can choose any step number convenient for them, such as the last step, to define the points.
+Ako je znázornené na obr. DTML1.2., v strome úloh „DEFORMOVAŤ“ kliknite na položku „** Výber objektu ** “ a vyberte položku „**obrobok** “. Kliknite na položku „* * Výber bodu * * “, definujte číslo kroku ako **„-1** “ a definujte dva body na obrobku ( obr. DTML1.3.) Súradnica bodu 1 (P1) je (0,738, 0,147,0,967, 1) a súradnica bodu 2 (P2) je (7,93, 0,071, 12,04, 1). Používatelia si môžu zvoliť ľubovoľné číslo kroku, ktoré im vyhovuje, napríklad posledný krok, na definovanie bodov.
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0002.jpg' | relative_url }})
 
-Object selection
+Object Selection
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0003.jpg' | relative_url }})
 
-Point Selection
+Výber bodu
 
-## Setup for deformation texture model
+## Nastavenie modelu deformačnej textúry
 
-All data for deformation texture model are prepared by the items listed in the "**Texture evolution model** " task tree. Click "**Config** " item, its data window appears as shown in Fig. DTML1.4. Specify the executable for CP simulation and the working directory by clicking the definition buttons (![]({{ '/assets/icons/pre_icons/mo_import_file_icon2.jpg' | relative_url }})). The default executable for CP simulation implemented in DEFORM is "DEF_CP.EXE", which is located at the installation directory of DEFORM software. Users can also develop their own executable for CP simulation and specify the file name here. The working directory must be the one where the nominal database is located.
+Všetky údaje pre model deformačnej textúry sú pripravené položkami uvedenými v strome úloh „** Model vývoja textúry ** “. Kliknite na položku „**Config** “, jej okno s údajmi sa zobrazí tak, ako je znázornené na obr. DTML1.4. Kliknutím na tlačidlá definície (![]({{ '/assets/icons/pre_icons/mo_import_file_icon2.jpg' | relative_url }})) zadajte spustiteľný súbor pre simuláciu CP a pracovný adresár. Predvolený spustiteľný súbor pre simuláciu CP implementovanú v DEFORMÁCII je „DEF_CP.EXE“, ktorý sa nachádza v inštalačnom adresári softvéru DEFORM. Používatelia môžu tiež vytvoriť svoj vlastný spustiteľný súbor pre simuláciu CP a zadať názov súboru tu. Pracovný adresár musí byť ten, v ktorom sa nachádza nominálna databáza.
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0004.jpg' | relative_url }})
 
-Configuration page
+Stránka konfigurácie
 
-Click "**Polycrystal plasticity simulation control** " item, its data window is shown in Fig. DTML1.5. The following data need to be specified: texture representation method (Euler angles or Rodrigues space), the step range to apply CP simulation, the source of texture data, the source of executable data, homogenization scheme (Taylor or VPSC), grain level linearization scheme (Secant, affine, intermediate, and tangent), convergence and iteration criteria. The default values are provided, but users can change these values. If the texture data (ODF) exist in the database, they can be detected automatically and GUI is setup accordingly, for example, **"Existing ODF in database** " radio button is selected when texture data (ODF) exist in database. In this lab we will be using Texture representation method as **Rodrigues space** and source of texture data as **New Definition** since the nominal database does not have the ODF data. Specify the step range between -1 to 500. We will keep the Homogenization scheme to VPSC and Grain level linearization scheme to Affine and other fields are used with default values as shown in Fig. DTML1.6.
+Kliknite na položku „** Kontrola simulácie polykryštalickej plasticity ** “, jej okno s údajmi je zobrazené na obr. DTML1.5. Je potrebné špecifikovať nasledujúce údaje: metódu reprezentácie textúry (Eulerove uhly alebo Rodriguesov priestor), rozsah krokov na uplatnenie simulácie CP, zdroj údajov o textúre, zdroj spustiteľných údajov, homogenizačnú schému (Taylor alebo VPSC), linearizačnú schému úrovne zrna (Secant, affine, intermediate a tangens), konvergenčné a iteračné kritériá. Predvolené hodnoty sú uvedené, ale používatelia môžu tieto hodnoty zmeniť. Ak v databáze existujú textúrne údaje (ODF), dajú sa automaticky zistiť a podľa toho sa nastaví grafické používateľské rozhranie, napríklad prepínač **"Existujúce ODF v databáze** " je vybratý, keď v databáze existujú textúrne údaje (ODF). V tomto laboratóriu budeme používať metódu reprezentácie textúr ako **Rodriguesov priestor** a zdroj údajov o textúrach ako **Nová definícia * *, pretože nominálna databáza nemá údaje ODF. Zadajte rozsah krokov od -1 do 500. Homogenizačnú schému ponecháme na VPSC a linearizačnú schému na úrovni zrna na Affine a ďalšie polia sa použijú s predvolenými hodnotami, ako je znázornené na obr. DTML1.6.
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0005.jpg' | relative_url }})
 
-Polycrystal plasticity simulation control - Existing ODF in Database
+Kontrola simulácie polykryštalickej plasticity - Existujúce ODF v databáze
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0006.jpg' | relative_url }})
 
-Polycrystal plasticity simulation control - New Definition
+Kontrola simulácie polykryštalickej plasticity - nová definícia
 
-If the texture data exist in database, the material data are extracted automatically from database and displayed. The material properties can be viewed by clicking "**Edit** " button. In this case, the material properties should not be changed. The only concerned property is the basic texture information (crystal type, texture type, and Rodrigues mesh type). If "**New definition** " for texture source data is used in CP simulation control then it is necessary to redefine the material for the selected object . The new material for workpiece can be a single phase material or a mixture material. If it is a single phase material, we need to define its basic texture information and CP flow stress data (in plastic "![]({{ '/assets/icons/pre_icons/mo_plastic_button.jpg' | relative_url }}) " page), as shown in Fig. DTML1.8. and Fig. DTML1.9. If the new material for workpiece is a mixture material, we need to define the basic texture information and CP flow stress model data for each phase. Currently, only BCC (body-centered cubic), FCC (face-centered cubic), HCP (hexagonal close packed) crystal structures can be considered. Fig. DTML1.8. shows an example to define the CP flow stress model for an HCP crystal (like "Alpha" phase in Fig. DTML1.10.). For HCP crystal, we need to specify c/a ratio (like 1.588 for titanium alloys). The deformation mode is defined according to the family of slip plane and slip direction.
+Ak údaje o textúre existujú v databáze, údaje o materiáli sa automaticky extrahujú z databázy a zobrazia sa. Vlastnosti materiálu si môžete prezrieť kliknutím na tlačidlo „**Upraviť** “. V tomto prípade by sa nemali meniť vlastnosti materiálu. Jedinou dotknutou vlastnosťou sú základné informácie o textúre (typ kryštálu, typ textúry a typ Rodriguesovej siete). Ak je v riadení simulácie CP použitá "** Nová definícia * * " pre zdrojové dáta textúry, potom je potrebné predefinovať materiál pre vybraný objekt . Novým materiálom pre obrobok môže byť jednofázový materiál alebo zmesový materiál. Ak ide o jednofázový materiál, musíme definovať jeho základné informácie o textúre a údaje o napätí toku CP (v plastovej stránke „![]({{ '/assets/icons/pre_icons/mo_plastic_button.jpg' | relative_url }}) “), ako je znázornené na obr. DTML1.8. a obr. DTML1.9. Ak je novým materiálom pre obrobok zmesový materiál, musíme definovať základné informácie o textúre a údaje modelu napätia prietoku CP pre každú fázu. V súčasnosti možno uvažovať iba s kryštálovými štruktúrami BCC (body-centered cubic), FCC (face-centered cubic), HCP (hexagonal close packed). Na obr. DTML1.8. je uvedený príklad na definovanie modelu CP prietokového napätia pre kryštál HCP (ako fáza „Alpha“ na obr. DTML1.10.). Pre kryštál HCP musíme špecifikovať pomer c/a (napríklad 1,588 pre zliatiny titánu). Režim deformácie je definovaný podľa rodiny roviny sklzu a smeru sklzu.
 
-Since we are using "New definition" for texture source data in CP simulation control for this lab, it is necessary to redefine the material for the selected object (workpiece). Click "Material definition" item, an example keyword file with CP material parameters for Ti64 is located at the texture evolution lab folder (Ti64_LabTxr_CP.key). Import this keyword file using the “Import” button shown in Fig. DTML1.7. Imported material data can be viewed using Edit button. In this lab, we have two phases Alpha and Beta and for each phase we will use Rodrigues mesh type 2.
+Keďže pri riadení simulácie CP pre toto laboratórium používame pre zdrojové dáta textúr „Nová definícia“, je potrebné predefinovať materiál pre vybraný objekt (obrobok). Kliknite na položku „Definícia materiálu“, príklad súboru kľúčového slova s parametrami materiálu CP pre Ti64 sa nachádza v priečinku Texture Evolution Lab (Ti64_LabTxr_CP.key). Importujte tento súbor kľúčových slov pomocou tlačidla „Import“ zobrazeného na obr. DTML1.7. Importované údaje o materiáli je možné zobraziť pomocou tlačidla Upraviť. V tomto laboratóriu máme dve fázy Alpha a Beta a pre každú fázu použijeme Rodriguesovu sieť typu 2.
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0007.jpg' | relative_url }})
 
-Material Definition
+Definícia materiálu
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0008.jpg' | relative_url }})
 
-Material edit dialogue for Plastic property
+Dialóg úpravy materiálu pre vlastnosť Plastic
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0009.jpg' | relative_url }})
 
-Material edit dialogue for basic texture information
+Dialóg úpravy materiálu pre základné informácie o textúre
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0010.jpg' | relative_url }})
 
-CP flow stress model for HCP crystal
+CP model prietokového napätia pre kryštál HCP
 
-In current DEFORM CP code, twinning deformation mode is not considered. HCP crystal has three deformation modes: basal slip (3 x {0001}<11-20>), prismatic slip (3 x {10-10}<11-20>), and pyramidal slip (6 x {10-11}<11-20> +12 x {10-11}<11-23> \+ 6 x {11-22}<11-23>). FCC crystal has one deformation mode: 12 x {111}<110>. BCC crystal has three deformation modes: 12 x {110}<111>, 12 x {112}<111>, 24x {123} <111>. All deformation modes are activated. The CP material parameters are defined for each deformation mode and latent hardening is defined among deformation modes. The CP material parameters can be constant or function of temperature. Two hardening rules are implemented in DEFORM. Hardening rule 1 is applied for Taylor scheme and hardening rule 2 is applied for VPSC scheme. The symbols in flow rule and hardening rule are briefly explained in GUI, and not repeated here. It is user's responsibility to specify the appropriate CP material parameters, for example, obtaining from literature, determining by user's own approach, or fitting by DEFORM flow stress module in material suite in terms of the experimentally measured flow stress data and initial microstructure (beyond the scope of this lab and not further discussed here).
+V aktuálnom kóde DEFORMÁCIE CP sa režim twinning deformácie neberie do úvahy. Kryštál HCP má tri režimy deformácie: bazálny sklz (3 x {0001}<11-20>), prizmatický sklz (3 x {10-10}<11-20>) a pyramídový sklz (6 x {10-11}<11-20> +12 x {10-11}<11-23> \+ 6 x {11-22}<11-23>). FCC kryštál má jeden deformačný režim: 12 x {111}<110>. Kryštál BCC má tri režimy deformácie: 12 x {110}<111>, 12 x {112}<111>, 24x {123} <111>. Všetky režimy deformácie sú aktivované. Parametre materiálu CP sú definované pre každý režim deformácie a latentné kalenie je definované medzi režimami deformácie. Parametre materiálu CP môžu byť konštantné alebo môžu byť funkciou teploty. Dve kaliace pravidlá sú implementované v DEFORMÁCII. Pravidlo vytvrdzovania 1 sa uplatňuje pre Taylorovu schému a pravidlo vytvrdzovania 2 sa uplatňuje pre schému VPSC. Symboly v pravidle prietoku a pravidle vytvrdzovania sú stručne vysvetlené v GUI a tu sa neopakujú. Je zodpovednosťou používateľa špecifikovať príslušné parametre materiálu CP, napríklad získavanie z literatúry, určovanie vlastným prístupom používateľa alebo montáž modulom deformačného prietokového napätia v materiáli z hľadiska experimentálne nameraných údajov o prietokovom napätí a počiatočnej mikroštruktúry (nad rámec tohto laboratória a tu ďalej nediskutované).
 
-Click "**Initial texture and microstructure** " item to open its data window (Fig. DTML1.11.). If "**Existing ODF in database** " is selected in the CP simulation control page, all data are automatically extracted and filled in this page. The data can be reviewed but not modified. Since "New definition" for texture source data is selected in the CP simulation control page, all data for each selected point should be defined here. The texture axes (RD-TD-ND) are defined in the global coordinate system for FEM simulation as shown in Fig. DTML1.11\. Click on "**Apply Axis** " button to apply the defined texture axis value for selected Point 1.
+Kliknutím na položku „**Počiatočná textúra a mikroštruktúra** “ otvoríte okno s údajmi (obr. DTML1.11.). Ak je na kontrolnej stránke simulácie CP vybratá možnosť „** Existujúce ODF v databáze * *“, všetky údaje sa automaticky extrahujú a vyplnia na tejto stránke. Údaje je možné skontrolovať, ale nie upraviť. Keďže na kontrolnej stránke simulácie CP sa vyberie „Nová definícia“ pre údaje zdroja textúry, mali by sa tu definovať všetky údaje pre každý vybraný bod. Osi textúry (RD-TD-ND) sú definované v globálnom súradnicovom systéme pre simuláciu MKP, ako je znázornené na obr. DTML1.11\. Kliknutím na tlačidlo "* * Použiť os * * " použijete definovanú hodnotu osi textúry pre vybraný bod 1.
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0011.jpg' | relative_url }})
 
-Initial texture and microstructure: texture axes
+Počiatočná štruktúra a mikroštruktúra: osi textúry
 
-Click on **Orientation Data** tab, Fig. DTML1.12\. shows the orientation data of alpha phase for a selected point (Point 1). If "**Existing ODF in database** " in CP simulation control is selected, ODF values are extracted from database and displayed in the texture
+Kliknite na kartu **Orientačné údaje * *, obr. DTML1.12\. zobrazuje orientačné údaje alfa fázy pre vybraný bod (bod 1). Ak je v ovládacom prvku simulácie CP zvolené „** Existujúce ODF v databáze * *“, hodnoty ODF sa extrahujú z databázy a zobrazia sa v textúre
 
-table, which means that ODF values are represented in the RD-TD-ND system. If "New definition" is selected, we need to specify orientation data format, orientation data file, and smoothing angle (degree) for ODF (if the texture representation space
+tabuľka, čo znamená, že hodnoty ODF sú reprezentované v systéme RD-TD-ND. Ak je vybratá možnosť „Nová definícia“, musíme špecifikovať formát orientačných údajov, súbor orientačných údajov a uhol vyhladenia (stupeň) pre ODF (ak je priestor reprezentácie textúry
 
-is Rodrigues space); then click the button ("![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }})") to initialize texture data and display the result in the texture table. When the texture representation space is Rodrigues space, ODF values are calculated in the global coordinate system; when the texture representation space is Euler space, the Euler angles and weights in the RD-TD-ND system (as the received data) are displayed in the texture table. We can plot ODF contour and pole figures to examine whether the texture data are defined correctly.
+je Rodriguesova medzera); potom kliknite na tlačidlo ("![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }})") na inicializáciu údajov o textúre a zobrazenie výsledku v tabuľke textúr. Keď je priestor reprezentácie textúry Rodriguesov priestor, hodnoty ODF sa vypočítajú v globálnom súradnicovom systéme; keď je priestor reprezentácie textúry Eulerov priestor, v tabuľke textúr sa zobrazia uhly a hmotnosti Eulera v systéme RD-TD-ND (ako prijaté údaje). Môžeme vykresliť obrysy ODF a čísla pólov, aby sme preskúmali, či sú údaje o textúre definované správne.
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0012.jpg' | relative_url }})
 
-Initial texture and microstructure: orientation data
+Počiatočná textúra a mikroštruktúra: orientačné údaje
 
-In order to import the original texture data conveniently, five types of orientations or data formats are designed in DEFORM:
+Aby bolo možné pohodlne importovať pôvodné údaje o textúre, je navrhnutých päť typov orientácií alebo formátov údajov v DEFORMÁCII:
 
-  * Random orientation distribution, for which ODFs values are 1.0 at every independent node in Rodrigues space. For material with isotropic mechanical properties, this type of texture can be applied. If the texture representation space is Euler space, the corresponding Euler angles and weights are generated according to the basic texture information specified in "**Material definition** " page.
+* Rozdelenie náhodnej orientácie, pre ktoré sú hodnoty ODFs 1,0 v každom nezávislom uzle v Rodriguesovom priestore. Pre materiál s izotropnými mechanickými vlastnosťami je možné aplikovať tento typ textúry. Ak je priestorom reprezentácie textúry Eulerov priestor, zodpovedajúce uhly a hmotnosti Eulera sa generujú podľa základných informácií o textúre uvedených na stránke „** Definícia materiálu ** “.
 
-  * EBSD TSL/General (Bunge, radians)
+* EBSD TSL/General (Bunge, radians)
 
-The Euler angles are expressed in radians in Bunge's notation. This is the default setting in DEFORM to calculate orientation matrix. The effective EBSD data (assuming the number of orientations is N) are rearranged in the following format:
+Eulerove uhly sú vyjadrené v radiánoch v Bungeovej notácii. Toto je predvolené nastavenie v DEFORMÁCII na výpočet orientačnej matice. Efektívne údaje EBSD (za predpokladu, že počet orientácií je N) sú preusporiadané v nasledujúcom formáte:
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/eq_1.jpg' | relative_url }})
 
-  * EBSD HKL (Bunge, degrees)
+* EBSD HKL (Bunge, stupne)
 
-The Euler angles are expressed in degrees in Bunge's notation. The effective EBSD data
+Eulerove uhly sú vyjadrené v stupňoch v Bungeovej notácii. Efektívne údaje EBSD
 
-(assuming the number of orientations is N) are rearranged in the following format:
+(za predpokladu, že počet orientácií je N) sú preusporiadané v nasledujúcom formáte:
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/eq_2.jpg' | relative_url }})
 
-Before calculating the orientation matrix, the third Euler angles are added by 90 degrees in order to convert from HKL format to TSL format.
+Pred výpočtom orientačnej matice sa pripočítajú tretie Eulerove uhly o 90 stupňov, aby sa konvertoval z formátu HKL do formátu TSL.
 
-  * WTD (Kocks, Degrees, Weights)
+* WTD (Kocks, Degrees, Weights)
 
-In "Weighted (WTD)" (Kocks, Degrees, Weights), the Euler angles are expressed in degrees in Kock's notation. The effective weighted orientation data (assuming the number of orientations is N) are rearranged in the following format (Euler angles and weights):
+V "Weighted (WTD)" (Kocks, Degrees, Weights) sú Eulerove uhly vyjadrené v stupňoch v Kockovej notácii. Efektívne vážené orientačné údaje (za predpokladu, že počet orientácií je N) sú usporiadané v nasledujúcom formáte (Eulerove uhly a závažia):
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/eq_3.jpg' | relative_url }})
 
-  * WTD (Bunge, Radians, Weights)
+* WTD (Bunge, Radiány, Závažia)
 
-In "Weighted (WTD)" (Bunge, Radians, Weights), the Euler angles are expressed in radians in Bunge's notation. The data format is the same as in Type 4.
+V "Weighted (WTD)" (Bunge, Radians, Weights) sú Eulerove uhly vyjadrené v radiánoch v Bungeovej notácii. Formát údajov je rovnaký ako v type 4.
 
-If the original experimentally measured texture data are not in these formats, user should convert the original data to one of the five designed formats, then import the converted data file. The ODF values in Rodrigues space depend on the smoothing angle, which is generally set as 5~10 degrees. Generally, the smoothing angle is set to 10 degrees for Rodrigues mesh type 2, 5 degrees for Rodrigues mesh type 3,and 2.5 degrees for Rodrigues mesh type 4.
+Ak pôvodné experimentálne namerané údaje o textúre nie sú v týchto formátoch, používateľ by mal previesť pôvodné údaje do jedného z piatich navrhnutých formátov a potom importovať prevedený dátový súbor. Hodnoty ODF v Rodriguesovom priestore závisia od uhla vyhladenia, ktorý je všeobecne nastavený na 5~10 stupňov. Všeobecne platí, že uhol vyhladzovania je nastavený na 10 stupňov pre Rodriguesovo pletivo typu 2, 5 stupňov pre Rodriguesovo pletivo typu 3 a 2,5 stupňa pre Rodriguesovo pletivo typu 4.
 
-In this lab, since we are using “New definition” we will define the smoothing angle of ODF to 10 degrees for both Alpha and Beta and click on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). The initial texture data for alpha and beta are located in the texture evolution lab folder: **DEFORM_Sample_alpha.wts** , **DEFORM_Sample_beta.wts**. Data format type 4 (WTD: Kocks, Degrees, Weights) is adopted. Using option import Data file **DEFORM_Sample_alpha.wt** for Alpha material and **DEFORM_Sample_beta.wts** for Beta model .
+V tomto laboratóriu, pretože používame „novú definíciu“, definujeme uhol vyhladenia ODF na 10 stupňov pre Alpha aj Beta a klikneme na ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}). Počiatočné údaje o textúre pre alfa a beta sú umiestnené v priečinku laboratória vývoja textúry: **DEFORM_Sample_alpha.wts** , **DEFORM_Sample_beta.wts**. Formát údajov typu 4 (WTD: Kocks, Degrees, Weight) je prijatý. Použitie možnosti importovať dátový súbor **DEFORM_Sample_alpha.wt** pre materiál Alpha a **DEFORM_Sample_beta.wts** pre model Beta.
 
-Since we are using mixture material in this lab, the volume fractions for all phases need to be specified as shown in Fig. DTML1.13. in volume fractions tab.
+Keďže v tomto laboratóriu používame zmesový materiál, objemové frakcie pre všetky fázy je potrebné špecifikovať tak, ako je znázornené na obr. DTML1.13. v záložke objemové zlomky.
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0013.jpg' | relative_url }})
 
-Initial texture and microstructure: volume fraction
+Počiatočná štruktúra a mikroštruktúra: objemový zlomok
 
-After completing the definition of initial texture and microstructure for one point, we can click "**Apply to** " button to copy the data to another point or all the remaining points if they have the same initial texture and microstructure. So, click on "**Apply to** " to copy the data for Point 2 as shown in Fig. DTML1.13. After the setup for deformation texture model is finished, we can go back to the "**Polycrystal plasticity simulation control** " page and click "**Save project** " to save the project data. If there is a saved project setup, we can click "**Import project** " button to load it.
+Po dokončení definície počiatočnej textúry a mikroštruktúry pre jeden bod môžeme kliknutím na tlačidlo „**Aplikovať na** “ skopírovať údaje do iného bodu alebo všetkých zostávajúcich bodov, ak majú rovnakú počiatočnú textúru a mikroštruktúru. Kliknutím na „**Aplikovať na** “ skopírujete údaje pre bod 2, ako je znázornené na obr. DTML1.13. Po dokončení nastavenia modelu deformačnej textúry sa môžeme vrátiť na stránku „** Kontrola simulácie polykryštalickej plasticity ** “ a kliknutím na „**Uložiť projekt** “ uložiť údaje o projekte. Ak existuje uložené nastavenie projektu, môžeme ho načítať kliknutím na tlačidlo „* * Importovať projekt * * “.
 
-## Run material point simulator
+## Spustiť simulátor materiálových bodov
 
-Click "**Run** " item in the task tree and click "Compute" button in the data window (see Fig. DTML1.14.). In the working directory, a folder named "TEXTURE" will be created, and under it, the folder for each selected point named "Point*" (* denotes for point number) will be created to save the simulation results.
+Kliknite na položku „* * Spustiť * * “ v strome úloh a v okne údajov kliknite na tlačidlo „Vypočítať“ (pozri obr. DTML1.14.). V pracovnom adresári sa vytvorí priečinok s názvom „TEXTÚRA“ a pod ním sa vytvorí priečinok pre každý vybraný bod s názvom „Bod*“ (* označuje číslo bodu) na uloženie výsledkov simulácie.
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0014.jpg' | relative_url }})
 
-Run simulation
+Spustiť simuláciu
 
-Generally, the following data files are created for each selected point. If user's CP simulation executable is employed, the same input and output data file formats should be followed so that the texture analysis tools can import data correctly.
+Vo všeobecnosti sa pre každý vybraný bod vytvoria nasledujúce dátové súbory. Ak sa použije spustiteľný súbor simulácie CP používateľa, mali by sa dodržiavať rovnaké formáty súborov vstupných a výstupných údajov, aby nástroje na analýzu textúr mohli správne importovať údaje.
 
-Input files for CP simulation executable:
+Vstupné súbory pre spustiteľný súbor simulácie CP:
 
-STEP.txt: the saved step numbers in nominal database.
+STEP.txt: uložené čísla krokov v nominálnej databáze.
 
-temp_mean.txt: The unit system and the history of temperature.
+temp_mean.txt: Jednotkový systém a história teploty.
 
-VELGRD.txt: The history of velocity gradient.
+VELGRD.txt: História rýchlostného gradientu.
 
-DEFGRD.txt: The history of deformation gradient.
+DEFGRD.txt: História deformačného gradientu.
 
-SIMCTRL_CP.DAT: CP simulation control data.
+SIMCTRL_CP.DAT: Dáta riadenia simulácie CP.
 
-MAT_CP.DAT: CP material parameters.
+MAT_CP.DAT: Parametre materiálu CP.
 
-TxrInfo.txt: The basic texture information and initial volume fractions for all phases.
+TxrInfo.txt: Základné informácie o textúre a počiatočné objemové zlomky pre všetky fázy.
 
-RDTDND.txt: The initial texture axes.
+RDTDND.txt: Počiatočné osi textúry.
 
-ODF_S-1.txt: The initial ODF values.
+ODF_S-1.txt: Počiatočné hodnoty ODF.
 
-EulerAng_S-1.txt: The initial Euler angles and weights.
+EulerAng_S-1.txt: Počiatočné Eulerove uhly a hmotnosti.
 
-Output files from CP simulation executable:
+Výstupné súbory zo spustiteľného súboru simulácie CP:
 
-ORM_S*.txt: The orientation matrix for individual grains at a saved step.
+Orm_S*.txt: Orientačná matica pre jednotlivé zrná v uloženom kroku.
 
-ODF_S*.txt: The ODF values at a saved step.
+ODF_S*.txt: Hodnoty ODF v uloženom kroku.
 
-STRESS_LOCAL_S*.txt: The local stress components for individual grains at a saved step.
+STRESS_LOCAL_S*.txt: Lokálne zložky napätia pre jednotlivé zrná v uloženom kroku.
 
-STRESS_MACRO.txt: The macroscopic stress components for polycrystalline aggregate at all saved steps.
+STRESS_MACRO.txt: Komponenty makroskopického napätia pre polykryštalický agregát vo všetkých uložených krokoch.
 
-For dual-phase titanium alloys, the following data files are generated:
+Pre dvojfázové zliatiny titánu sa generujú nasledujúce dátové súbory:
 
-DeformHis.Dat: deformation history data.
+DeformHis.Dat: údaje histórie deformácií.
 
-InitialTexture.Dat: The initial texture data for alpha phase and beta phase.
+InitialTexture.Dat: Počiatočné údaje o textúre pre fázu alfa a fázu beta.
 
-MATAX_S*.txt: Material axes at a saved step if they are defined in a database with existing ODF.
+MATAX_S*.txt: Osi materiálu v uloženom kroku, ak sú definované v databáze s existujúcim ODF.
 
-## Output
+vzoru.
 
-After simulation is finished, all the selected points are listed under the "Output" item in the task tree. Specify a step number in the step browser (should be within the range defined in the CP simulation control page) and select a point, the simulation results can be reviewed, as shown in Fig. DTML1.15. In order to carry out texture analysis, the texture axes need to be specified in the global coordinate system. Their values might be different from the initial texture axes defined in the "Initial texture and microstructure" page. In this example, the RD is aligned in global X direction, TD global Z direction, and ND global negative Y direction.
+Po dokončení simulácie sú všetky vybrané body uvedené v položke „Výstup“ v strome úloh. Zadajte číslo kroku v prehliadači krokov (malo by byť v rozsahu definovanom na kontrolnej stránke simulácie CP) a vyberte bod, výsledky simulácie je možné skontrolovať, ako je znázornené na obr. DTML1.15. Na vykonanie analýzy textúry je potrebné špecifikovať osi textúry v globálnom súradnicovom systéme. Ich hodnoty sa môžu líšiť od počiatočných osí textúry definovaných na stránke „Počiatočná textúra a mikroštruktúra“. V tomto príklade je RD zarovnaný v globálnom smere X, TD v globálnom smere Z a ND v globálnom zápornom smere Y.
 
-The orientation data for Point 1 at the last step is shown in Fig. DTML1.16. Using the provided texture analysis tools, we can plot ODF contour in Rodrigues space, pole figures, inverse pole figures, and calculate Kearns number of HCP phase. For BCC or FCC metals, 4 types of pole figures: (100), (110), (111), or all three pole figures can be plotted. For HCP metals, 4 types of pole figures: (0001), (11-20), (10-10), or all three pole figures can be plotted. The example results are shown in Fig. DTML1.16. \- Fig. DTML1.21.
+Orientačné údaje pre bod 1 v poslednom kroku sú znázornené na obr. DTML1.16. Pomocou poskytnutých nástrojov na analýzu textúr môžeme vykresliť obrys ODF v Rodriguesovom priestore, pólové čísla, inverzné pólové čísla a vypočítať Kearnsovo číslo fázy HCP. Pre kovy BCC alebo FCC je možné zakresliť 4 typy pólových čísel: (100), (110), (111) alebo všetky tri pólové čísla. Pre kovy HCP je možné zakresliť 4 typy pólových čísel: (0001), (11-20), (10-10) alebo všetky tri pólové čísla. Príklady výsledkov sú zobrazené na obr. DTML1.16. \- Obr. DTML1.21.
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0015.jpg' | relative_url }})
 
-Output: Definition of texture axes for texture analysis
+Výstup: Definícia osí textúry pre analýzu textúry
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0016.jpg' | relative_url }})
 
-Output: orientation data and texture analysis tools to plot ODF contour - pole figures
+Výstup: orientačné údaje a nástroje na analýzu textúry na vykreslenie obrysu ODF - pólové čísla
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0017.jpg' | relative_url }})
 
-Output: orientation data and texture analysis tools to plot ODF contour -inverse pole figures
+Výstup: orientačné údaje a nástroje na analýzu textúry na vykreslenie obrysu ODF - inverzné pólové čísla
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0018.jpg' | relative_url }})
 
-Output: orientation data and texture analysis tools to plot ODF contour - Kearns number
+Výstup: orientačné údaje a nástroje na analýzu textúr na vykreslenie obrysu ODF - Kearnsovo číslo
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0019.jpg' | relative_url }})
 
-ODF contours (using values in table) and pole figures for Point 1 at the last step- alpha phase
+Kontúry ODF (pomocou hodnôt v tabuľke) a čísla pólov pre bod 1 v poslednej fáze - alfa fáze
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0020.jpg' | relative_url }})
 
-ODF contours (using values in table) and pole figures for Point 1 at the last step: beta phase
+Kontúry ODF (pomocou hodnôt v tabuľke) a pólové čísla pre bod 1 v poslednom kroku: beta fáza
 
 ![]({{ '/assets/images/labs/material_suite_labs/deformation_texture_model_lab/image0021.jpg' | relative_url }})
 
-Inverse pole figures for RD for Point 1 at the last step for alpha phase
+Hodnoty inverzného pólu pre RD pre bod 1 v poslednom kroku pre alfa fázu

@@ -1,9 +1,9 @@
 ---
 lang: sk
-title: "Forming Express Labs Main PG"
+title: "Vytvorenie hlavnej stránky Express Labs PG"
 ---
 
-# Forming Express Labs 
+# Založenie spoločnosti Express Labs 
 
 [2D Cold Forming Lab]({{ '/docs/sk/labs/forming_express_labs/2d_cold_forming_lab1/' | relative_url }})
 

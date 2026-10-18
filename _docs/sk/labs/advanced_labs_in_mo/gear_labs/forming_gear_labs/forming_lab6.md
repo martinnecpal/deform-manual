@@ -1,104 +1,104 @@
 ---
 lang: sk
-title: "Forming Lab 6"
+title: "Laboratórium formovania 6"
 ---
 
-# Lab 6. Mechanical Press
+# Laboratórna práca č. 6. Mechanický lis
 
-### Background
+### Úvod
 
-In multiple operations, interactive mechanical press setup is significantly different than scheduled setup. We will work through both.
+Pri viacerých operáciách sa interaktívne nastavenie mechanického lisu výrazne líši od naplánovaného nastavenia. Prejdeme si obe možnosti.
 
-Because of the unique kinematics of a mechanical press, we need to know exactly whether the press is in the top-bottom (or front-back) stroke at any time. This means we need knowledge of the starting position.
+Vzhľadom na jedinečnú kinematiku mechanického lisu musíme v každom okamihu presne vedieť, či sa lis nachádza v hornej alebo dolnej (prípadne prednej alebo zadnej) fáze zdvihu. To znamená, že potrebujeme poznať počiatočnú polohu.
 
-When defining a mechanical press, there are special terms that should be understood:
+Pri definovaní mechanického lisu je potrebné porozumieť niektorým špecifickým pojmom:
 
-**Total stroke** is the total ram movement from Top Dead Center (TDC) to Bottom Dead Center (BDC).
+**Celkový zdvih** je celkový pohyb piesta od hornej úvrati (TDC) po dolnú úvratu (BDC).
 
-**Forging stroke** is the distance the ram travels from the time it first touches the workpiece until it reaches BDC.
+**Kovací zdvih** je vzdialenosť, ktorú prejde piest od okamihu, keď sa po prvýkrát dotkne obrobku, až po dosiahnutie dolnej mŕtvej polohy.
 
-**Strokes/second** is the flywheel speed in cycles/second (matches the press speed on a non- clutch driven press).
+**Zábery za sekundu** je rýchlosť zotrvačníka vyjadrená v cykloch za sekundu (zodpovedá rýchlosti lisu v prípade lisov bez spojkového pohonu).
 
-For this tutorial, we will use a Total Stroke of 16 in. and a Strokes/second of 1 (i.e. 60 RPM).
+V tomto návode použijeme celkový zdvih 16 palcov a počet zdvihov za sekundu 1 (t. j. 60 otáčok za minútu).
 
-### Operation1- Interactive setup
+### Operácia 1 – Interaktívne nastavenie
 
-#### Creating New problem
+#### Vytvorenie nového problému
 
-Create a new project called **Gear_Mechanical** and copy the existing project **Gear_LargerBillet**.
+Vytvorte nový projekt s názvom **Gear_Mechanical** a skopírujte existujúci projekt **Gear_LargerBillet**.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab6_image0001.jpg' | relative_url }})
 
-MO New Project window
+Okno „Nový projekt“ v programe MO
 
-In an interactive setup, we can start with the Top Die positioned correctly on the workpiece. So, click the first **Upset****operation** tile. Go to **Top** **Die****Movement** page from Operation tree.
+V interaktívnom prostredí môžeme začať s hornou matricou správne umiestnenou na obrobku. Kliknite teda na prvú dlaždicu **Operácia****vytláčania****. Z stromu operácií prejdite na stránku **Pohyb****hornej****matice****.**
 
-#### Top die Movement
+#### Pohyb hornej matrice
 
-Change the movement type to **Mechanical****press**. Set the **Total****stroke** to **16** in. and the **Forging****stroke** to **6.3** in (distance from the current position to BDC). Set the **Cycles/sec** to **1** (See Fig. L6.2.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Stopping controls page
+Zmeňte typ pohybu na **Mechanický****lis**. Nastavte **Celkový****zdvih** na **16** palcov a **Kováčsky****zdvih** na **6,3** palca (vzdialenosť od aktuálnej polohy po spodnú mŕtvu bodu). Nastavte **Cyklov/sek.** na hodnotu **1** (pozri obr. L6.2.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Ovládacie prvky zastavenia
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab6_image0002.jpg' | relative_url }})
 
-Top die movement page
+Na začiatok stránky o pohybe matrice
 
-#### Stopping controls
+#### Ovládacie prvky na zastavenie
 
-Set the stopping stroke (Primary die displacement) to **16** in. (**Y** direction), which is equal to the total press stroke. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Generate DB page.
+Nastavte dorazový zdvih (posun primárnej matrice) na **16** palcov (smer **Y**), čo zodpovedá celkovému zdvihu lisu. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Generate DB“.
 
-#### Generate DB
+#### Vytvoriť databázu
 
-Generate the Database and click ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) to 2nd operation.
+Vytvorte databázu a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) prejdite k druhej operácii.
 
-### Operation 2 - scheduled (batch) setup
+### Operácia 2 – nastavenie plánovaných (hromadných) úloh
 
-In a batch setup, we generally do not know where the ram will be relative to BDC when it touches the workpiece. Therefore, we need to start with the ram in a known position, and update the movement controls when the model is run.
+Pri dávkovom nastavení zvyčajne nevieme, kde sa bude nachádzať posúvač vo vzťahu k BDC v okamihu, keď sa dotkne obrobku. Preto musíme začať s posúvačom v známej polohe a pri spustení modelu aktualizovať príkazy na pohyb.
 
-We will use the TDC position as a standard reference position, then use scheduled positioning to update the tool position and forging stroke. 
+Ako štandardnú referenčnú polohu použijeme polohu TDC, následne pomocou plánovaného polohovania aktualizujeme polohu nástroja a zdvih kovania. 
 
-Go to **Positioning** **page** from Operation tree.
+Z stromu operácií prejdite na **stránku** **Polohovanie**.
 
-#### Object Positioning
+#### Umiestňovanie objektov
 
-  1. Interference position the Top Die down to the Bottom Die
+  1. V mieste kolízie sa horná matrica posunie nadol k spodnej matrici
 
-  2. Offset position the Top Die up by the flash gap of 0.2 in
+  2. Posuňte hornú matricu nahor o vzdialenosť 0,2 palca, čo zodpovedá medzere na odlievanie
 
-  3. Offset position the Top Die up by the total forging stroke of 16 in. Now the die is at TDC.
+  3. Posuňte hornú matricu nahor o celkový zdvih kovania, ktorý je 16 in. Teraz sa matrica nachádza v hornej úvrati.
 
-Now go back to **Top****die****movement** page.
+Teraz sa vráť na stránku **Top****die****movement**.
 
-#### Top die movement
+#### Pohyb hornej matrice
 
-Define Mechanical press with **Cycles/sec** = **1** and define both the **Total****stroke** and **Forging****stroke** to **16** in. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Scheduled positioning page.
+Nastavte mechanický lis s hodnotou **Cyklov/s** = **1** a nastavte hodnotu **Celkový****zdvih** aj **Kovacie****zdvih** na **16** palcov. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Plánované polohovanie“.
 
-#### Scheduled Positioning
+#### Plánované polohovanie
 
-Interference positioning the Workpiece down to the Bottom die.
+Kolízia pri umiestňovaní obrobku na spodnú matricu.
 
-Interference positioning the Top Die down to the Workpiece. Notice how the Update current stroke option is checked and grayed out. The die stroke will be automatically updated when this positioning occurs during the simulation. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Stopping controls page.
+Polohovanie hornej matice smerom nadol k obrobku. Všimnite si, že možnosť „Aktualizovať aktuálny zdvih“ je zaškrtnutá a sivá. Zdvih matice sa automaticky aktualizuje, keď k tomuto polohovaniu dôjde počas simulácie. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Ovládacie prvky zastavenia“.
 
-#### Stopping controls
+#### Ovládacie prvky na zastavenie
 
-Set the **Primary****die****displacement** to **16** in (Y direction) and under **Die****distance****tab** click the ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) to initialize the Die distance stopping controls data.
+Nastavte **Primárny****posun****matrice** na hodnotu **16** palcov (v smere Y) a na **kartu****Vzdialenosť****matrice** kliknite na ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}), čím inicializujete údaje o ovládacích prvkoch zastavenia vzdialenosti matice.
 
-When the project runs, the tool will be moved into position in contact with the workpiece (whatever the shape is) and the forging stroke will be updated to reflect the new distance above BDC.
+Po spustení projektu sa nástroj presunie do polohy, v ktorej bude v kontakte s obrobkom (bez ohľadu na jeho tvar), a zdvih kovania sa aktualizuje tak, aby odrážal novú vzdialenosť nad dolnou úvratou.
 
-Save the project and click on the MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode button (above the operation tree) to start the simulation.
+Uložte projekt a kliknite na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode“ (nad stromom operácií), aby ste spustili simuláciu.
 
-### Run and monitor a simulation
+### Spustenie a sledovanie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog. Use the default **Continue****Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), čím otvoríte dialógové okno Možnosti spustenia. Použite predvolenú možnosť **Pokračovať****Spustiť**, aby ste vybrali možnosť „**Pokračovať od posledného kroku**“, a potom vyberte režim simulácie pomocou prepínača **Interaktívny**. Kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie.
 
-### Review the results
+### Prezrite si výsledky
 
-When the simulation is completed, click the MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode button to review results.
+Po dokončení simulácie kliknite na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode“, aby ste si prezreli výsledky.
 
-Play through all steps. 
+Prejdite všetky kroky. 
 
-**Graph**
+**Graf**
 
-Click the ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) tool and plot Y Speed vs. Time graph. Note that the velocity goes to zero at the end of each operation.
+Kliknite na nástroj ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) a vytvorte graf rýchlosti Y v závislosti od času. Všimnite si, že rýchlosť klesá na nulu na konci každej operácie.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab6_image0003.jpg' | relative_url }})
 
-Y-Speed v/s Time graph
+Graf rýchlosti Y v závislosti od času

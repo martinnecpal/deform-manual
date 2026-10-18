@@ -1,78 +1,78 @@
 ---
 lang: sk
-title: "Forming Lab 2"
+title: "Laboratórium tvarovania 2"
 ---
 
-# Lab 2. Rerun Sequence with a Larger Billet
+# Laboratórna úloha č. 2. Opakované spustenie sekvencie s väčším polotovarom
 
-Click the New ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon in the top left corner of the interface. Click ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) to close the current project and save any changes.
+Kliknite na ikonu „New ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }})“ v ľavom hornom rohu rozhrania. Kliknutím na „![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }})“ zatvoríte aktuálny projekt a uložíte všetky zmeny.
 
-Set the Project Name to **Gear_LargerBillet**. Use the Copy existing project option and browse to find PROBLEM **2DGear\2DGear.moproj** (See Fig. L1.1.)
+Názov projektu nastavte na **Gear_LargerBillet**. Použite možnosť „Kopírovať existujúci projekt“ a vyhľadajte súbor PROBLEM **2DGear\2DGear.moproj** (pozri obr. L1.1.)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab2_image0001.jpg' | relative_url }})
 
-New MO project window
+Nové okno projektu MO
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). The system will copy all the information from the original project into the new **Gear_LargerBillet** folder.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Systém skopíruje všetky informácie z pôvodného projektu do novej zložky **Gear_LargerBillet**.
 
-Note: Copying a project using the user interface automatically renames several files and folders in the project. It is much cleaner than copying/pasting the problem folder.
+Poznámka: Pri kopírovaní projektu prostredníctvom používateľského rozhrania sa automaticky premenujú viaceré súbory a priečinky v projekte. Je to oveľa prehľadnejšie ako kopírovanie a vkladanie problematického priečinka.
 
-### Change the Billet size
+### Zmena veľkosti polotovaru
 
-Click on the Upset tile in the Operation Editor to select the 1st operation in the project. The Preprocessor will open for this operation (See Fig. L2.2.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Workpiece Geometry page.
+Kliknite na dlaždicu „Upset“ v editore operácií, aby ste vybrali prvú operáciu v projekte. Pre túto operáciu sa otvorí predspracovateľ (pozri obr. L2.2.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka „Geometria obrobku“.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab2_image0002.jpg' | relative_url }})
 
-Upset operation selection
+Výber prevádzky v režime „Upset“
 
-### Creating new geometry for Workpiece
+### Vytvorenie novej geometrie pre obrobok
 
-Change the workpiece dimensions to 2.5 in radius, 8.267 in height, with 0.1 in corners. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_no_button.jpg' | relative_url }}) in Delete mesh popup to delete mesh popup to delete mesh (See Fig. L2.3.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Workpiece mesh page.
+Zmeňte rozmery obrobku na polomer 2,5 in, výšku 8,267 in a rohy 0,1 in. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_no_button.jpg' | relative_url }}) v okne „Odstrániť sieť“, aby ste odstránili sieť (pozri obr. L2.3.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Sieť obrobku“.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab2_image0003.jpg' | relative_url }})
 
-Delete mesh popup
+Vyskakovacie okno „Odstrániť sieť“
 
-### Generate mesh for new geometry of workpiece
+### Vytvorenie siete pre novú geometriu obrobku
 
-Set the target number of elements as **2000** and click the ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button to generate the mesh for workpiece. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until positioning page.
+Nastavte cieľový počet prvkov na **2000** a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) vygenerujte sieť pre obrobok. Klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s nastavením polohy.
 
-###  Positioning
+###  Polohovanie
 
-Use ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}) to position the tools to the workpiece. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Contact page.
+Pomocou ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}) nastavte polohu nástrojov voči obrobku. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Kontakt“.
 
-### Generating contact
+### Vytvorenie kontaktu
 
-Generate contact using the ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Stopping controls page.
+Vytvorte kontakt pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Ovládacie prvky zastavenia.
 
-### Stopping controls
+### Ovládacie prvky na zastavenie
 
-In Stopping controls, change the Primary die displacement stopping control from 6 in. to **6.5** in. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Step controls page.
+V časti „Ovládacie prvky zastavenia“ zmeňte hodnotu primárneho ovládacieho prvku zastavenia posuvu matice z 6 palcov na **6,5** palca. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Ovládacie prvky krokovania“.
 
-### Step controls
+### Ovládacie prvky krokov
 
-Go to Step and change the **Number** of **simulation** steps to **1000**. Setting the steps high like this guarantees that the simulation will not run out of steps and will instead stop due to the defined stopping criteria. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Generate DB page
+Prejdite na položku „Krok“ a zmeňte **počet** krokov **simulácie** na **1000**. Takéto nastavenie vysokého počtu krokov zaručuje, že simulácii nedôjdu kroky a namiesto toho sa zastaví na základe definovaných kritérií ukončenia. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujte stránku databázy
 
-### Generate DB
+### Vytvoriť databázu
 
-Generate the database by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
+Databázu vytvoríte kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
-Click on the MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode button (above the operation tree) to start the simulation.
+Kliknutím na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode“ (nad stromom operácií) spustíte simuláciu.
 
-### Run and monitor a simulation
+### Spustenie a sledovanie simulácie
 
-Because there is no change required in settings for the 2nd operation, we can generate the database and run the simulation.
+Keďže pri druhej operácii nie je potrebné meniť žiadne nastavenia, môžeme vytvoriť databázu a spustiť simuláciu.
 
-Click the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) button and then uncheck submit job to the simulation queue. Unchecking this option will make the job run on the local computer. Use the default **Start from last negative step** option. Click the ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to start the simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) a potom zrušte zaškrtnutie políčka „Odoslať úlohu do fronty simulácií“. Zrušením zaškrtnutia tejto možnosti sa úloha spustí na lokálnom počítači. Použite predvolenú možnosť **Začať od posledného záporného kroku**. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) spustíte simuláciu.
 
-When the upset operation is completed, DEFORM will automatically import the new tools and start the 2nd operation.
+Po dokončení operácie prevrátenia program DEFORM automaticky načíta nové nástroje a spustí druhú operáciu.
 
-### Review the results
+### Prezrite si výsledky
 
-When the simulation is completed, click the MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode button to review results.
+Po dokončení simulácie kliknite na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode“, aby ste si prezreli výsledky.
 
-Play through all steps. Note that the part completely fill out the die cavity.
+Prejdite všetkými krokmi. Dajte pozor, aby diel úplne vyplnil dutinu formy.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab2_image0004.jpg' | relative_url }})
 
-Workpiece shape at last step of second operation
+Tvar obrobku v poslednom kroku druhej operácie

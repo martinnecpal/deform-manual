@@ -1,9 +1,9 @@
 ---
 lang: sk
-title: "Gear Blank (EN)"
+title: "Polotovar ozubeného kolesa (EN)"
 ---
 
-# Gear Blank (EN)
+# Polotovar na ozubené koleso (EN)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0000.jpg' | relative_url }})
 

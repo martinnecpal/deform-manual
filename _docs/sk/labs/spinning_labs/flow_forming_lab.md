@@ -5,23 +5,23 @@ title: "Flow Forming Lab"
 
 # Flow Forming Lab
 
-In this Lab we will be setting up simple Forward Flow forming process.
+V tomto laboratóriu nastavíme jednoduchý proces tvárnenia Forward Flow.
 
-1.1. Creating a New Problem
+1.1. Vytvorenie nového problému
 
-1.2. Process Page
+1.2. Stránka procesu
 
-1.3. Simulation Setup
+1.3. Nastavenie simulácie
 
-1.4. Objects selection
+1.4. Výber objektov
 
-1.5. Workpiece
+1.5. Obrobok
 
-1.6. Mandrel
+1.6. Vreteno
 
-1.7. Head Stock
+1.7. Hlavové zásoby
 
-1.8. Tail Stock
+1.8. Koncový materiál
 
 1.9. Roll 1
 
@@ -29,354 +29,354 @@ In this Lab we will be setting up simple Forward Flow forming process.
 
 1.11. Roll 3
 
-1.12. Pass Table
+1.12. Priechodný stôl
 
-1.13. Controls
+1.13. Ovládacie prvky
 
-1.14. Contact
+1.14. Kontakt
 
-1.15. Stopping controls
+1.15. Ovládacie prvky zastavenia
 
-1.16. Simulation controls 
+1.16. Ovládacie prvky simulácie
 
-1.17. Generate Database
+1.17. Generovať databázu
 
-1.18. Running Simulation
+1.18. Simulácia chodu
 
-1.19. Post processing
+1.19. Po spracovaní
 
-## Creating a New Problem
+## Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na ** zariadení so systémom Windows ** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), zvoľte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte * * DEFORM GUI Main * * vxx.xx. Zobrazí SA hlavné okno Deform GUI.
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. 3DFFL1.1. Select " **Integrated Manufacturing Process** " radio button and Unit system as "**English** " using radio button. Define Problem Name as "**Flowformlab** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})* ***Nový problém** alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému, ako je znázornené na obr. 3DFFL1.1. Pomocou prepínača vyberte prepínač „ * * Integrovaný výrobný proces * *“ a systém jednotiek ako „** Angličtina * * “. Definujte názov problému ako "** Flowformlab * * " a uistite sa, že je zapnuté začiarkavacie políčko "Zobraziť dialóg možností" (ak nezapneme začiarkavacie políčko "**Zobraziť dialóg možností ** ", potom nedostaneme dialógové okno Nový projekt v používateľskom rozhraní MO). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) a otvorte nový problém pomocou integrovaného výrobného procesu deformácie.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg' | relative_url }})
 
-New Problem page
+Nový problém
 
-Multiple operation wizard will open with the New Project dialog, At this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘**Flowformlab** ’ as the project name. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to continue to open new project.
+Sprievodca viacerými operáciami sa otvorí v dialógovom okne Nový projekt. V tomto bode sa používateľovi zobrazí výzva na zadanie názvu projektu (systém vytvorí samostatný priečinok s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „** Flowformlab * * “. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) pokračujte v otváraní nového projektu.
 
-Add 3D Spinning operation from the Explorer Operations list. Add the operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button available next to 3D Spinning or user can also add by drag and drop into the Operation Editor (see Fig. 3DFFL1.2.). When we add the Spinning operation, When we add the Spinning operation, If the current Screen upward direction is "**Z** " direction then we will get below popup. Click "**YES-Change** " in "Change screen upward axis" popup. Process settings Window will open by default. 3D Spinning operation can also be added in "New Project" dialog in MO.
+Pridajte operáciu 3D Spinning zo zoznamu Explorer Operations (Operácie prieskumníka). Pridajte operáciu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}), ktoré je k dispozícii vedľa 3D Spinning, alebo ho môžete pridať aj presunutím myšou do editora operácií (pozri obr. 3DFFL1.2.). Keď pridáme operáciu Spinning, Keď pridáme operáciu Spinning, Ak je aktuálny smer obrazovky smerom nahor "* * Z * * ", potom sa dostaneme pod vyskakovacie okno. V kontextovom okne „Change screen upward axis“ (Zmeniť obrazovku smerom nahor) kliknite na „** YES-Change * *“ (Zmeniť). V predvolenom nastavení sa otvorí okno nastavení procesu. Operáciu 3D Spinning je možné pridať aj v dialógovom okne "Nový projekt" v MO.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0002.jpg' | relative_url }})
 
-Adding 3D Spinning operation
+Pridanie operácie 3D Spinning
 
-## Process page
+## Stránka procesu
 
-In Process page select "**Flow forming** " and type of flow forming as "**Forward** ". Define Mandrel **Rotational****speed** as **300** rpm, see Fig. 3DFFL1.3. This rotational speed will be applied to Head stock and Tail stock. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation setup page.
+Na stránke Proces vyberte "** Formovanie toku ** " a typ formovania toku ako "**Vpred** ". Definujte vreteno **Rotačná****rýchlosť** ako **300** ot./min., pozri obr. 3DFFL1.3. Táto rýchlosť otáčania sa použije na hlavový a koncový materiál. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku nastavenia simulácie.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0003.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-## Simulation Setup
+## Nastavenie simulácie
 
-In Simulation Setup page select solution method as "**ALE** " and solver type as "**Explicit** ". We will not be doing any thermal calculations in this lab hence select Thermal Calculation as "**Constant temperature (isothermal)** " (see Fig. 3DFFL1.4.). Click ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) to set Explicit solver controls as follows.
+Na stránke Simulation Setup (Nastavenie simulácie) vyberte metódu riešenia ako „* * ale * * “ a typ riešiteľa ako „**Explicit** “. V tomto laboratóriu nebudeme vykonávať žiadne tepelné výpočty, preto vyberte Tepelný výpočet ako „**Konštantná teplota (izotermická)** “ (pozri obr. 3DFFL1.4). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) nastavíte explicitné ovládacie prvky riešiteľa nasledovne.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0004.jpg' | relative_url }})
 
-Simulation setup page
+Stránka nastavenia simulácie
 
-  * Set **Damping coefficient** to **1**. This dampens vibrations. A setting of 0-1 is conservative and 5-10 is more aggressive.
+* Nastavte ** Koeficient tlmenia ** na **1**. To tlmí vibrácie. Nastavenie 0-1 je konzervatívne a 5-10 je agresívnejšie.
 
-  * Set **Mass****scaling****factor** to **200**. This affects the time step, accuracy and runtime. A lower mass scaling factor results in a smaller time step and greater accuracy, but it requires a longer simulation time. This can be adjusted as needed, based on experience, application and goals.
+* Nastaviť **Hmotnosť****škálovanie****faktor** na **200**. To ovplyvňuje časový krok, presnosť a dobu chodu. Nižší faktor hmotnostnej mierky má za následok menší časový krok a väčšiu presnosť, ale vyžaduje dlhší čas simulácie. To je možné upraviť podľa potreby na základe skúseností, aplikácie a cieľov.
 
-  * Set **Cycle** to **100**. This controls the ratio of explicit solution cycles per step. The combination of this setting and the database step save increment can be used to adjust how often cycles are written to the database. A setting of 0 results in 1 cycle per step (1:1 ratio). A setting of 100 results in 100 cycles per step (100:1 ratio). Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close Explicit solvers settings page. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Objects page.
+* Nastavte **Cyklus** na **100**. Týmto sa riadi pomer explicitných cyklov riešenia na krok. Kombináciu tohto nastavenia a prírastku uloženia kroku databázy možno použiť na nastavenie toho, ako často sa cykly zapisujú do databázy. Nastavenie 0 má za následok 1 cyklus na krok (pomer 1:1). Nastavenie 100 má za následok 100 cyklov na krok (pomer 100:1). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvoríte stránku s nastaveniami explicitných riešiteľov. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na objekty.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0005.jpg' | relative_url }})
 
-Explicit solvers settings
+Explicitné nastavenia riešiteľov
 
-## Objects selection
+## Výber objektov
 
-In the “**Number of Objects** ” page define number of rollers as **3** , In the table below Number of rolls definition user can define angle between rolls, for this lab we will use with default value of **120** ° for ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/theta1.jpg' | relative_url }}) and ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/theta2.jpg' | relative_url }}). Check the Mandrel, Head stock and Tail stock check box (if not checked) (see Fig. 3DFFL1.6.) to use these objects in the setup. Tail stock is not used in reverse flow forming process and optional in forward flow forming. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Workpiece General page.
+Na stránke „**Počet objektov** “ definujte počet valcov ako **3** , v nižšie uvedenej tabuľke Počet kotúčov môže používateľ definovať uhol medzi kotúčmi, pre toto laboratórium použijeme predvolenú hodnotu * * 120 * * ° pre ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/theta1.jpg' | relative_url }}) a ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/theta2.jpg' | relative_url }}). Začiarknite políčko Tŕň, Hlava a Chvost (ak nie je začiarknuté) (pozri obr. 3DFFL1.6.), ak chcete tieto predmety použiť v nastavení. Koncový materiál sa nepoužíva v procese tvárnenia pri spätnom toku a voliteľne v tvarovaní pri doprednom toku. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na všeobecnú stránku obrobku.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0006.jpg' | relative_url }})
 
-Object selection page
+Object Selection
 
-## Workpiece 
+## Obrobok
 
-In the Workpiece object page keep the default values for name as workpiece and temperature 68°F. Change the Object type to "**Elasto-plastic** " as shown in Fig. 3DFFL1.7., for explicit solver type simulation setups the workpiece must be Elasto-plastic object type. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry 2D cross- section page.
+Na stránke objektu obrobku ponechajte predvolené hodnoty pre názov obrobku a teplotu 68° F. Zmeňte typ objektu na „**Elasto-plastic** “, ako je znázornené na obr. 3DFFL1.7., pre explicitné nastavenia simulácie typu riešiteľa musí byť obrobok typu Elasto-plastic object. Kliknite na stránku prierezu ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na geometriu 2D.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0007.jpg' | relative_url }})
 
-Workpiece page
+Stránka obrobku
 
-### Workpiece 2D cross section 
+### 2D prierez obrobku
 
-Import 2D geometry, “**workpiece_lab.GEO** ” from the 3D/LABS/Spinning folder. You can edit, check or save 2D geometry in this page as shown in Fig. 3DFFL1.8. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh page.
+Importujte 2D geometriu, „**workpiece_lab.GEO** “ zo zložky 3D/LABS/Spinning. Na tejto stránke môžete upraviť, skontrolovať alebo uložiť 2D geometriu, ako je znázornené na obr. 3DFFL1.8. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0008.jpg' | relative_url }})
 
-Workpiece Geometry 2D cross-section page
+Geometria obrobku 2D prierez strana
 
-### Workpiece Mesh 
+### Sieťovina obrobku
 
-Define Number of elements for 2D cross section as 100 and click on ![]({{ '/assets/icons/pre_icons/mo_generate_2d_mesh_button.jpg' | relative_url }}). Define **Number of revolved sections** as **100** , pick “**Uniform thickness of layers in hoop direction** " which is preferred for explicit solver and click on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}). Generated 2D and 3D mesh should look like as shown in Fig. 3DFFL1.9. and Fig. 3DFFL1.10. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material page.
+Definujte počet prvkov pre 2D prierez ako 100 a kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_2d_mesh_button.jpg' | relative_url }}). Definujte **Počet otočných profilov** ako **100** , vyberte „**Rovnomerná hrúbka vrstiev v smere obruče ** “, ktorá je preferovaná pre explicitný riešiteľ a kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}). Vygenerovaná 2D a 3D sieť by mala vyzerať tak, ako je znázornené na obr. 3DFFL1.9. a obr. 3DFFL1.10. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na materiál.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0009.jpg' | relative_url }})
 
-Generated 2D Mesh for Workpiece
+Vygenerované 2D pletivo pre obrobok
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0010.jpg' | relative_url }})
 
-Generated 3D Mesh for Workpiece
+Vygenerované 3D pletivo pre obrobok
 
-### Assign Material for Workpiece
+### Priradiť materiál pre obrobok
 
-In Material page, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) icon and load the material **Aluminum** group material "**AL-3003,COLD[70-250F(20-120C)]** " from material library window. Assign the "**AL-3003,COLD[70-250F(20-120C)]** " material for Workpiece as shown in Fig. 3DFFL1.11. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Mandrel page.
+Na stránke Materiál kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať materiál z knižnice) a načítajte materiál * * Hliník * * skupinový materiál "**AL-3003,COLD[70-250F (20-120C)]** " z okna knižnice materiálov. Priraďte materiál „**AL-3003,COLD[70-250F(20-120C)]** “ pre obrobok, ako je znázornené na obr. 3DFFL1.11. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) do stránky Mandrel.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0011.jpg' | relative_url }})
 
-Workpiece Material page
+Stránka Materiál obrobku
 
-## Mandrel
+Priebojník
 
-In the Mandrel general page keep the default values for name as Mandrel and temperature as 68°F. Click on![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry 2D cross- section page.
+Na všeobecnej stránke vretena ponechajte predvolené hodnoty pre názov vretena a teplotu 68 °F. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku 2D prierezu geometrie.
 
-### Mandrel Geometry - 2D Cross-section 
+### Geometria vretena - 2D prierez
 
-Import 2D geometry, “**mandrel_lab.GEO** ” from the 3D/LABS/Spinning folder. You can edit, check or save 2D geometry in this page as shown in Fig. 3DFFL1.12. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry - 3D page.
+Importujte 2D geometriu, „**tŕň_lab.GEO** “ z priečinka 3D/LABS/Spinning. Na tejto stránke môžete upraviť, skontrolovať alebo uložiť 2D geometriu, ako je znázornené na obr. 3DFFL1.12. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry - 3D page.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0012.jpg' | relative_url }})
 
-Mandrel Geometry - 2D Cross-section
+Geometria vretena - 2D prierez
 
-### Mandrel 3D Geometry
+### Geometria vretena 3D
 
-Using default "**Number of revolved sections** " as **100** , generate 3D geometry by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) option (see Fig. 3DFFL1.13.). Fine Geometry at Contact region is not required for Explicit solver hence can be left as unchecked. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Reference point setup page.
+Pomocou predvoleného nastavenia „**Počet otočených sekcií** “ ako * * 100 * * vygenerujte 3D geometriu kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) (pozri obr. 3DFFL1.13.). Fine Geometry at Contact region (Jemná geometria v oblasti kontaktu) sa pre explicitný riešiteľ nevyžaduje, preto ho môžete ponechať nezaškrtnuté. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku nastavenia referenčného bodu.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0013.jpg' | relative_url }})
 
-Mandrel Geometry-3D 
+Geometria vretena-3D
 
-### Mandrel Reference Point setup 
+### Nastavenie referenčného bodu vretena
 
-In this page we can define Reference point of Mandrel, we will use default value of D "**1.99** " as shown in Fig. 3DFFL1.14. “**D** ” is the distance between the Deform Origin and the origin of the Mandrel along X axis and will be used to position the mandrel. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Head Stock page.
+Na tejto stránke môžeme definovať referenčný bod tŕňa, použijeme predvolenú hodnotu D "* * 1.99 * * ", ako je znázornené na obr. 3DFFL1.14. „**D * * “ je vzdialenosť medzi začiatkom deformácie a začiatkom vretena pozdĺž osi X a použije sa na umiestnenie vretena. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Head Stock.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0014.jpg' | relative_url }})
 
-Mandrel Reference Point setup page
+Stránka nastavenia referenčného bodu vretena
 
-## Head Stock 
+## Head Stock
 
-In the Head Stock general page keep the default values for name as Head stock and temperature as 68°F. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry 2D cross- section page.
+Na všeobecnej stránke Head Stock ponechajte predvolené hodnoty pre názov ako Head stock a teplotu ako 68°F. Kliknite na stránku prierezu ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na geometriu 2D.
 
-### Head Stock Geometry - 2D Cross-section 
+### Geometria hlavových zásob - 2D prierez
 
-Import 2D geometry, “**Headstock_lab.GEO** ” from the **3D/LABS/Spinning** folder. You can edit, check or save 2D geometry in this page as shown in Fig. 3DFFL1..15. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry - 3D page.
+Importujte 2D geometriu, „**Headstock_lab.GEO** “ z priečinka **3D/LABS/Spinning**. Na tejto stránke môžete upraviť, skontrolovať alebo uložiť 2D geometriu, ako je znázornené na obr. 3DFFL1..15. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry - 3D page.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0015.jpg' | relative_url }})
 
-Head stock Geometry - 2D Cross-section
+Hlava pažby Geometria - 2D prierez
 
-### Head Stock 3D - Geometry
+### Head Stock 3D - Geometria
 
-Using default "**Number of revolved sections** " as **100** , generate 3D geometry by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) option (see Fig. 3DFFL1.16.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Tail stock page.
+Pomocou predvoleného nastavenia „**Počet otočených sekcií** “ ako * * 100 * * vygenerujte 3D geometriu kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) (pozri obr. 3DFFL1.16.). Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Tail stock.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0016.jpg' | relative_url }})
 
-Head stock Geometry-3D page
+Head stock Geometry-3D strana
 
-## Tail Stock 
+## Koncový materiál
 
-In the Tail Stock General page keep the default values for name as Tail stock and temperature as 68°F. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry 2D cross- section page.
+Na stránke Tail Stock General ponechajte predvolené hodnoty pre názov ako Tail stock a teplotu ako 68°F. Kliknite na stránku prierezu ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na geometriu 2D.
 
-### Tail Stock Geometry - 2D Cross-section 
+### Geometria chvosta - 2D prierez
 
-Import 2D geometry, “**tailstock_lab.GEO** ” from the 3D/LABS/Spinning folder. You can edit, check or save 2D geometry in this page as shown in Fig. 3DFFL1.17. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry - 3D page.
+Importujte 2D geometriu, „**tailstock_lab.GEO** “ z priečinka 3D/LABS/Spinning. Na tejto stránke môžete upraviť, skontrolovať alebo uložiť 2D geometriu, ako je znázornené na obr. 3DFFL1.17. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry - 3D page.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0017.jpg' | relative_url }})
 
-Tail stock Geometry - 2D Cross-section
+Geometria chvosta - 2D prierez
 
-### Tail Stock 3D - Geometry
+### Chvostová pažba 3D - geometria
 
-Using default "**Number of revolved sections** " as **100** , generate 3D geometry by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) option (see Fig. 3DFFL1.18.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Roll page.
+Pomocou predvoleného nastavenia „**Počet otočených sekcií** “ ako * * 100 * * vygenerujte 3D geometriu kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) (pozri obr. 3DFFL1.18.). Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Roll.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0018.jpg' | relative_url }})
 
-Tail Stock Geometry-3D page
+Chvostová geometria-3D strana
 
-## Roll 1 
+## Roll 1
 
-In the Roll 1 general page keep the default values for name as Roll 1 and temperature as 68°F. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry 2D cross- section page.
+Na všeobecnej stránke Roll 1 ponechajte predvolené hodnoty pre name ako Roll 1 a teplotu ako 68°F. Kliknite na stránku prierezu ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na geometriu 2D.
 
-### Roll 1 Geometry - 2D Cross-section 
+### Geometria role 1 - 2D prierez
 
-Import 2D geometry, “**roller_lab.GEO** ” from the **3D/LABS/Spinning** folder. You can edit, check or save 2D geometry in this page as shown in Fig. 3DFFL1.19. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry - 3D page.
+Importujte 2D geometriu, „**roller_lab.GEO** “ z priečinka **3D/LABS/Spinning**. Na tejto stránke môžete upraviť, skontrolovať alebo uložiť 2D geometriu, ako je znázornené na obr. 3DFFL1.19. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry - 3D page.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0019.jpg' | relative_url }})
 
-Roll 1 Geometry - 2D Cross-section
+Geometria rolky 1 - 2D prierez
 
-### Roll 1 3D Geometry
+### 3D geometria role 1
 
-Using default "**Number of revolved sections** " as **100** , generate 3D geometry by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) option (see Fig. 3DFFL1.20.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to orientation page.
+Pomocou predvoleného nastavenia „**Počet otočených sekcií** “ ako * * 100 * * vygenerujte 3D geometriu kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) (pozri obr. 3DFFL1.20.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na orientačnú stránku.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0020.jpg' | relative_url }})
 
 Roll 1 Geometry-3D page
 
-### Roll 1 Orientation 
+### Orientácia role 1
 
-In this page we can modify the orientation angle of Roll using Roll Orientation angle option and also the Roll datum point can be selected using roll datum setup options.
+Na tejto stránke môžeme upraviť orientačný uhol Roll pomocou možnosti Roll Orientation angle a tiež je možné zvoliť počiatočný bod Roll pomocou možností nastavenia počiatočného bodu Roll.
 
-In this lab we are not changing the orientation angle and Roll datum point of Rolls, so click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Roll 2 page without any changes.
+V tomto laboratóriu nemeníme orientačný uhol a počiatočný bod Roll Rolls, takže kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Roll 2 bez akýchkoľvek zmien.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0021.jpg' | relative_url }})
 
-Roll1 Orientation page
+Orientačná stránka Roll1
 
-## Roll 2 
+## Roll 2
 
-In the Roll 2 general page keep the default values for name as Roll 2 and temperature as 68°F. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry 2D cross- section page.
+Na všeobecnej stránke Roll 2 ponechajte predvolené hodnoty pre name ako Roll 2 a teplotu ako 68°F. Kliknite na stránku prierezu ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na geometriu 2D.
 
-### Roll 2 Geometry - 2D Cross-section 
+### Geometria role 2 - 2D prierez
 
-Import 2D geometry, “**roller_lab.GEO** ” from the 3D/LABS/Spinning folder. You can edit, check or save 2D geometry in this page as shown in Fig. 3DFFL1.19. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry - 3D page.
+Importujte 2D geometriu, „**roller_lab.GEO** “ z priečinka 3D/LABS/Spinning. Na tejto stránke môžete upraviť, skontrolovať alebo uložiť 2D geometriu, ako je znázornené na obr. 3DFFL1.19. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry - 3D page.
 
-### Roll 2 3D - Geometry
+### Roll 2 3D - Geometria
 
-Using default "Number of revolved sections" as 100, generate 3D geometry by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) option (see Fig. 3DFFL1.20.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to orientation page.
+Pomocou predvoleného "Počet otočených sekcií" ako 100 vygenerujte 3D geometriu kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) (pozri obr. 3DFFL1.20.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na orientačnú stránku.
 
-### Roll 2 Orientation 
+### Orientácia role 2
 
-In this labwe are not changing the orientation angle and Roll datum point of Rolls, so click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Roll 3 page without any changes.
+V tomto laboratóriu nemeníme orientačný uhol a počiatočný bod Roll Rolls, takže kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Roll 3 bez akýchkoľvek zmien.
 
-## Roll 3 
+## Roll 3
 
-In the Roll 3 general page keep the default values for name as Roll 3 and temperature as 68°F. Click on![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry 2D cross- section page.
+Na všeobecnej stránke Roll 3 ponechajte predvolené hodnoty pre name ako Roll 3 a teplotu ako 68°F. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku 2D prierezu geometrie.
 
-### Roll 3 Geometry - 2D Cross-section 
+### Geometria role 3 - 2D prierez
 
-Import 2D geometry, “**roller_lab.GEO** ” from the**3D/LABS/Spinning** folder. You can edit, check or save 2D geometry in this page as shown in Fig. 3DFFL1.19. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry - 3D page.
+Importujte 2D geometriu, „**roller_lab.GEO** “ z priečinka **3D/LABS/Spinning**. Na tejto stránke môžete upraviť, skontrolovať alebo uložiť 2D geometriu, ako je znázornené na obr. 3DFFL1.19. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry - 3D page.
 
 ### Roll 3 3D-Geometry
 
-Using default "**Number of revolved sections** " as **100** , generate 3D geometry by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) option (see Fig. 3DFFL1.20.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to orientation page.
+Pomocou predvoleného nastavenia „**Počet otočených sekcií** “ ako * * 100 * * vygenerujte 3D geometriu kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) (pozri obr. 3DFFL1.20.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na orientačnú stránku.
 
-### Roll 3 Orientation 
+### Orientácia rolky 3
 
-In this lab we are not changing the orientation angle and Roll datum point of Rolls, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to pass table page.
+V tomto laboratóriu nemeníme orientačný uhol a počiatočný bod Roll Rolls, kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdete na stránku tabuľky.
 
-## Pass Table 
+## Tabuľka preukazov
 
-Here we will be defining Rolls Speed along the mandrel axis as **0.25** in/sec. For this lab we will be considering rolls to rotate based on free torque hence we will select **Torque** in Rotation tab and define its value as**0 klb-in**. So, click on Roll 1 ![]({{ '/assets/icons/pre_icons/mo_edit..._2_button.jpg' | relative_url }}) button in Pass table and define **speed** as **0.25** in/sec and Torque as 0 klb-in as shown in Fig. 3DFFL1.23. and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the movement page. Define the same movement data in Roll 2 and Roll 3 movement page by clicking on respective button. We will not define any other data from pass table as of now. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Controls page.
+Tu budeme definovať rýchlosť valcov pozdĺž osi vretena ako **0,25** v/s. V tomto laboratóriu budeme uvažovať o rotácii valcov na základe voľného krútiaceho momentu, preto vyberieme **Krútiaci moment** na karte Rotácia a definujeme jeho hodnotu ako**0 klb-in**. Takže kliknite na tlačidlo Roll 1 ![]({{ '/assets/icons/pre_icons/mo_edit..._2_button.jpg' | relative_url }}) v tabuľke Pass a definujte **rýchlosť * * ako * *0,25 * * v/s a krútiaci moment ako 0 klb-in, ako je znázornené na obr. 3DFFL1.23. a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) pre zatvorenie stránky pohybu. Definujte rovnaké údaje o pohybe na stránke pohybu Roll 2 a Roll 3 kliknutím na príslušné tlačidlo. V súčasnosti nedefinujeme žiadne iné údaje z tabuľky Pass. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Ovládacie prvky.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0022.jpg' | relative_url }})
 
-Pass table page
+Stránka tabuľky Pass
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0023.jpg' | relative_url }})
 
 Roll 1 Movement page
 
-## Controls 
+Príkazy
 
-Click on "**Automatic Positioning** ", define the parameters
+Kliknite na "**Automatické polohovanie** ", definujte parametre
 
-**D=8.6** , Distance between head stock surface and the Roll Datum point
+**D=8,6** , Vzdialenosť medzi povrchom hlavy a dátumovým bodom valenia
 
-**K=10** , orientation angle of the rolls with workpiece
+**K=10** , orientačný uhol valcov s obrobkom
 
-**A1=0.15** , **A2=0.3** , Lateral distance between rolls along the mandrel axis
+**A1=0,15** , **A2=0,3** , bočná vzdialenosť medzi valcami pozdĺž osi tŕňa
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) to change the apply settings. It will position all 3 rollers and Workpiece and Tail stock in correct position as shown in Fig. 3DFFL1.24. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close Automatic position page. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Contact page.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) zmeníte nastavenia aplikácie. Umiestni všetky 3 valce a obrobok a chvost do správnej polohy, ako je znázornené na obr. 3DFFL1.24. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvoríte stránku Automatická pozícia. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Kontakt.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0024.jpg' | relative_url }})
 
-Automatic position window
+Okno automatickej polohy
 
-## Contact 
+Kontakt
 
-The Flowforming setup will assume a low shear friction for the mandrel and tailstock. This will be similar to cold forming where material is sliding along a die surface. A high shear friction, typical of rolling, will be assumed for the roller. Local contact searching is used to reduce contact search calculation time, which is useful with explicit simulations. For each object pair, friction windows must be defined over the area of the tool where contact may occur. Areas outside the window will not be considered for contact. The friction settings found on the friction window menu take precedence over the global settings. Friction windows must be set to follow moving tools, when applicable. 
+Nastavenie Flowforming predpokladá nízke šmykové trenie pre tŕň a koník. Bude to podobné tvárneniu za studena, keď materiál kĺže po povrchu matrice. Pre valček sa predpokladá vysoké šmykové trenie, typické pre valcovanie. Lokálne vyhľadávanie kontaktov sa používa na skrátenie času výpočtu vyhľadávania kontaktov, čo je užitočné pri explicitných simuláciách. Pre každý pár objektov musia byť definované trecie okná nad oblasťou nástroja, kde môže dôjsť k kontaktu. Oblasti mimo okna nebudú považované za kontaktné. Nastavenia trenia nachádzajúce sa v ponuke trecieho okna majú prednosť pred globálnymi nastaveniami. Trecie okná musia byť nastavené tak, aby sa v prípade potreby riadili pohyblivými nástrojmi.
 
-In Contact page, select "**User** " type and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. In table, we will be observing default relations being added and sticking contact will be checked for Tail stock - Workpiece and Head stock - Workpiece relations. For this lab, we will turn on Mandrel - Workpiece sticking check box and turn off Head stock - Workpiece sticking check box and as shown in Fig. 3DFFL1.30.
+Na stránke Kontakt vyberte typ „**User** “ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). V tabuľke budeme sledovať pridávané predvolené vzťahy a prilepený kontakt bude skontrolovaný na chvostový materiál - obrobok a hlavový materiál - vzťahy obrobku. Pre toto laboratórium zapneme začiarkavacie políčko Tŕň - Prilepenie obrobku a vypneme začiarkavacie políčko Hlava - Prilepenie obrobku a ako je znázornené na obr. 3DFFL1.30.
 
-  * Select the**Mandrel - Workpiece** relation and ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Define a **Shear** friction of **0.12**. Switch to the Friction Window tab. Click the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button to add a new window. Click on the Solid cylinder button on toolbar that is along the far-left side of the screen. Click anywhere on the model to place the window. Click the ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) icon to define the window size as shown in the Fig. 3DFFL1.25., click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Select Shear friction and set a constant value of **0.12** and select "**Mandrel** " as object to follow window, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+* Vyberte vzťah **Tŕň - obrobok** a ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Definujte **strih** trenie **0,12**. Prepnite na kartu Friction Window (Okno trenia). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) pridáte nové okno. Kliknite na tlačidlo Plný valec na paneli s nástrojmi, ktorý sa nachádza pozdĺž úplne ľavej strany obrazovky. Kliknutím na ľubovoľné miesto na modeli umiestnite okno. Kliknutím na ikonu ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) definujte veľkosť okna, ako je znázornené na obr. 3DFFL1.25., kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Vyberte šmykové trenie a nastavte konštantnú hodnotu * * 0,12 * * a vyberte "* * Tŕň * * " ako objekt na sledovanie okna, kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0025.jpg' | relative_url }})
 
-Mandrel - workpiece window definition
+Tŕň - definícia okna obrobku
 
-  * Select the **Head stock - Workpiece** relation and ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Define a Shear friction of 0.12 and click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}).
+* Vyberte **Head stock - Workpiece** vzťah a ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Definujte šmykové trenie 0,12 a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}).
 
-  * Select the **Tail stock - workpiece** relation and ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Define a **Shear** friction of **1**. Switch to the Friction Window tab. Click the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button to add a new window. Click on the Solid cylinder button on toolbar that is along the far-left side of the screen. Click anywhere on the model to place the window. Click the ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) icon to define the window size as shown in the Fig. 3DFFL1.26., click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Select Shear friction and set a constant value of 1 and select "Tail stock" as object to follow window, click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}).
+* Vyberte ** Vzťah chvost - obrobok** a ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Definujte **Strih** trenie **1**. Prepnite na kartu Friction Window (Okno trenia). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) pridáte nové okno. Kliknite na tlačidlo Plný valec na paneli s nástrojmi, ktorý sa nachádza pozdĺž úplne ľavej strany obrazovky. Kliknutím na ľubovoľné miesto na modeli umiestnite okno. Kliknutím na ikonu ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) definujte veľkosť okna, ako je znázornené na obr. 3DFFL1.26., kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Vyberte možnosť Šmykové trenie a nastavte konštantnú hodnotu 1 a ako objekt, ktorý chcete sledovať, vyberte možnosť „Koncový materiál“, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0026.jpg' | relative_url }})
 
-Tail stock - workpiece window definition
+Koncový materiál - definícia okna obrobku
 
-  * Select the **Roll 1 - Workpiece** relation and ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Define a **Shear** friction of**0.12**. Switch to the Friction Window tab. Click the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button to add a new window. Click on the Hollow cylinder button on toolbar that is along the far-left side of the screen. Click anywhere on the model to place the window. Click the ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) icon to define the window size as shown in the Fig. 3DFFL1.27., click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Select Shear friction and set a constant value of 0.12 and select "Roll 1" as object to follow window, click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}).
+* Vyberte vzťah **Roll 1 -Obrobok* * a ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Definujte **strih** trenie **0,12**. Prepnite na kartu Friction Window (Okno trenia). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) pridáte nové okno. Kliknite na tlačidlo Dutý valec na paneli s nástrojmi, ktorý sa nachádza pozdĺž úplne ľavej strany obrazovky. Kliknutím na ľubovoľné miesto na modeli umiestnite okno. Kliknutím na ikonu ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) definujte veľkosť okna, ako je znázornené na obr. 3DFFL1.27., kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Vyberte šmykové trenie a nastavte konštantnú hodnotu 0,12 a vyberte "Roll 1" ako objekt na sledovanie okna, kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0027.jpg' | relative_url }})
 
-Roll 1 - Workpiece window definition
+Roll 1 - Definícia okna obrobku
 
-  * Select the **Roll 2 - Workpiece** relation and ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Define a **Shear****friction** of **0.12**. Switch to the Friction Window tab. Click the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button to add a new window. Click on the Hollow cylinder button on toolbar that is along the far-left side of the screen. Click anywhere on the model to place the window. Click the ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) icon to define the window size as shown in the Fig. 3DFFL1.28., click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Select Shear friction and set a constant value of 0.12 and select "Roll 2" as object to follow window, click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}).
+* Vyberte vzťah **Roll 2 -Obrobok* * a ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Definujte **šmykové* ***trenie** z **0,12**. Prepnite na kartu Friction Window (Okno trenia). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) pridáte nové okno. Kliknite na tlačidlo Dutý valec na paneli s nástrojmi, ktorý sa nachádza pozdĺž úplne ľavej strany obrazovky. Kliknutím na ľubovoľné miesto na modeli umiestnite okno. Kliknutím na ikonu ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) definujte veľkosť okna, ako je znázornené na obr. 3DFFL1.28., kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Vyberte šmykové trenie a nastavte konštantnú hodnotu 0,12 a vyberte "Roll 2" ako objekt na sledovanie okna, kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0028.jpg' | relative_url }})
 
-Roll 2 - Workpiece window definition
+Roll 2 - Definícia okna obrobku
 
-  * Select the **Roll 3 - Workpiece** relation and ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Define a **Shear friction** of **0.12**. Switch to the Friction Window tab. Click the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button to add a new window. Click on the **Hollow cylinder** button on toolbar that is along the far-left side of the screen. Click anywhere on the model to place the window. Click the ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) icon to define the window size as shown in the Fig. 3DFFL1.29., click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Select Shear friction and set a constant value of 0.12 and select "**Roll 3** " as object to follow window, click![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) .
+* Vyberte vzťah **Roll 3 -Obrobok* * a ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Definujte **Šmykové trenie** s hodnotou **0,12**. Prepnite na kartu Friction Window (Okno trenia). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) pridáte nové okno. Kliknite na tlačidlo **Dutý valec** na paneli s nástrojmi, ktorý sa nachádza na ľavej strane obrazovky. Kliknutím na ľubovoľné miesto na modeli umiestnite okno. Kliknutím na ikonu ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) definujte veľkosť okna, ako je znázornené na obr. 3DFFL1.29., kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Vyberte šmykové trenie a nastavte konštantnú hodnotu 0,12 a vyberte "* * Roll 3 * * " ako objekt na sledovanie okna, kliknite na tlačidlo![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) .
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0029.jpg' | relative_url }})
 
-Roll 3 - Workpiece window definition
+Roll 3 - Definícia okna obrobku
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) button to calculate the default tolerance value and Generate contact by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button and also select Yes in "**STICKING CONDITION** " popup. Generated contact will look like as shown in Fig. 3DFFL1.30. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Stopping controls page.
+Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) vypočítajte predvolenú hodnotu tolerancie a vytvorte kontakt kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) a tiež vyberte možnosť Áno v kontextovom okne „** STAV PRILEPENIA ** “. Vygenerovaný kontakt bude vyzerať tak, ako je znázornené na obr. 3DFFL1.30. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Zastavenie ovládacích prvkov.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0030.jpg' | relative_url }})
 
-Contact Page
+Kontakty
 
-## Stopping controls 
+## Zastavenie ovládacích prvkov
 
-Define **Process Duration** as **10** sec in Stopping controls page (see Fig. 3DFFL1.31.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation controls page.
+Definujte ** Trvanie procesu ** ako **10** s na stránke Ovládacie prvky zastavenia (pozri obr. 3DFFL1.31). Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na ovládacie prvky simulácie.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0031.jpg' | relative_url }})
 
-Stopping Criteria page
+Stránka Kritériá zastavenia
 
-## Simulation controls 
+## Ovládacie prvky simulácie
 
-Enter **Number of steps** as **10000** , **Step increment to save** as **100** and **Time** per step as **0.001** in Simulation controls page (see Fig. 3DFFL1.32.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Generate DB page.
+Zadajte **Počet krokov** ako **10000** , ** Prírastok krokov na uloženie** ako **100** a **Čas** na krok ako **0,001** na stránke Ovládacie prvky simulácie (pozri obr. 3DFFL1.32.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujete stránku DB.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0032.jpg' | relative_url }})
 
-Simulation Controls page
+Stránka s ovládacími prvkami simulácie
 
-## Generate Database
+Všeobecné
 
-In Generate DB page, click on the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. Observe the message in Message tab informing database generation status.
+Na stránke Generate DB kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) a vygenerujte databázu. Sledujte správu na karte Správa, ktorá informuje o stave generovania databázy.
 
-## Running Simulation
+## Simulácia behu
 
-Once the database has been generated, switch to the Simulation mode by selecting the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the object tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. 3DFFL1.33.. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vygenerovaní databázy prepnite do režimu simulácie výberom tlačidla ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom objektov. Kliknutím na štítok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvorte dialógové okno Možnosti točenia, ako je znázornené na obr. 3DFFL1.33. Použite predvolenú možnosť **Pokračovať v točení * * a vyberte možnosť „* *Pokračovať z posledného kroku** “ a potom vyberte režim simulácie ako * * Interaktívny * * a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0033.jpg' | relative_url }})
 
-Run Simulation Window
+Okno Spustiť simuláciu
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. User can view the Flow Forming process as the simulation proceeds to the specified stopping criteria from Simulation graphics.
+Sledujte priebeh simulácie tak, že sa pozriete na kartu Simulation Message and Simulation Log a uistite sa, že je začiarknutá možnosť ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). Používateľ môže zobraziť proces Flow Forming, keď simulácia postupuje k zadaným kritériám zastavenia zo simulačnej grafiky.
 
-## Post processing
+Postprocessing
 
-When the simulation is completed, review the results by switching to Post mode using the ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) button above the Simulation tool bar.
+Po dokončení simulácie skontrolujte výsledky prepnutím do režimu Post pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) nad panelom nástrojov simulácie.
 
-Play through the steps of the simulation and look how the Workpiece part is formed in Flow forming process.
+Prehrajte si kroky simulácie a pozrite sa, ako sa časť obrobku tvorí v procese formovania prietoku.
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0034.jpg' | relative_url }})
 
-Flow forming operation last step
+Operácia tvarovania prietoku posledný krok
 
-Plot Effective Strain State variable and observe the Strain distribution (see Fig. 3DFFL1.35.).
+Vykreslite premennú Efektívny stav napätia a sledujte rozdelenie napätia (pozri obr. 3DFFL1.35.).
 
 ![]({{ '/assets/images/labs/spinning_labs/flow_forming_lab/image0035.jpg' | relative_url }})
 
-Effective Strain distribution at last step
+Efektívne rozloženie napätia v poslednom kroku

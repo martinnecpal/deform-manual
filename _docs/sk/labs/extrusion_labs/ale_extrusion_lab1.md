@@ -1,400 +1,400 @@
 ---
 lang: sk
-title: "ALE Extrusion Lab1"
+title: "Laboratórium extrudovania ALE 1"
 ---
 
-# ALE Extrusion Lab1
+# Laboratórium extrudovania ALE 1
 
-In this Lab we are setting up a operation of ALE extrusion. We will also introduce the acceleration updating of state variables, and compare its simulation result with that of without acceleration updating in this Lab.
+V tomto laboratórnom cvičení nastavíme prevádzku extrudéra ALE. V rámci tohto cvičenia tiež predstavíme aktualizáciu stavových premenných pomocou akcelerácie a porovnáme výsledky simulácie s výsledkami bez tejto aktualizácie.
 
-The application of this lab will extrude 5 small cylinder parts from a large cylinder billet. The model of the workpiece is shown as Fig. ALEEXL1.1. The diameter of D0 is 140 mm. The diameter of D1 is 26 mm. The diameters of D2 and D4 are 27 mm. The diameters of D3 and D5 are 28 mm. Due to the model with symmetry, we will use a quarter model for simulation in this lab.
+V rámci tohto laboratórneho cvičenia sa z veľkého valcového polotovaru vytlačia 5 malých valcových dielov. Model obrobku je znázornený na obr. ALEEXL1.1. Priemer D0 je 140 mm. Priemer D1 je 26 mm. Priemery D2 a D4 sú 27 mm. Priemery D3 a D5 sú 28 mm. Vzhľadom na to, že model je symetrický, v tomto cvičení použijeme na simuláciu štvrtinový model.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0001.jpg' | relative_url }})
 
-Model of the Workpiece
+Model obrobku
 
-1.1. Creating a New Problem 
+1.1. Vytvorenie nového problému 
 
-1.2. Add Operation
+1.2. Pridať operáciu
 
-1.3. Simulation Setup
+1.3. Nastavenie simulácie
 
-1.4. Material list
+1.4. Zoznam materiálov
 
-1.5. Dies
+1.5. Matrice
 
 1.6. Ram
 
-1.7. Container
+1.7. Kontajner
 
-1.8. Die
+1.8. Zomrieť
 
-1.9. Workpiece
+1.9. Obrobok
 
-1.10. Controls
+1.10. Ovládacie prvky
 
-1.11. Contact
+1.11. Kontakt
 
-1.12. Step Controls
+1.12. Ovládacie prvky krokov
 
-1.13. Generate DB
+1.13. Vytvorenie databázy
 
-1.14. Running Simulation
+1.14. Spustenie simulácie
 
-1.15. Acceleration Updating of State Variables
+1.15. Aktualizácia premenných stavu pri zrýchlení
 
-1.16. Post Processing
+1.16. Následné spracovanie
 
-## Creating a New Problem 
+## Vytvorenie nového problému 
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear as shown below Fig. ALEEXL1.2.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte **DEFORM GUI Main** vxx.xx. Zobrazí sa hlavné okno DEFORM GUI Main, ako je znázornené na obrázku ALEEXL1.2.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0002.jpg' | relative_url }})
 
-DEFORM GUI Main window
+Hlavné okno programu DEFORM GUI
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. ALEEXL1.3. Select "**Integrated Manufacturing Process** " radio button and unit system as "**SI** " radio button in unit field. Define Problem Name as "****3D_ALE_EX_Lab1**** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému, ako je znázornené na obr. ALEEXL1.3. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte systém jednotiek pomocou prepínača „**SI**“. Zadajte názov úlohy ako „****3D_ALE_EX_Lab1****“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak nezaškrtnete políčko „**Zobraziť dialógové okno s možnosťami**“, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili novú úlohu s použitím integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0003.jpg' | relative_url }})
 
-New Problem page
+Stránka „Nový problém“
 
-Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use "**3D_ALE_EX_Lab1** " as the project name. In this lab we will add Extrusion operation from Explorer operation list, so do not check "First operation" check box in "New Project" dialog. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom „Nový projekt“, kde bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „**3D_ALE_EX_Lab1**“. V tomto cvičení pridáme operáciu Extrúzia zo zoznamu operácií v Průzkumníku, preto v dialógovom okne „Nový projekt“ nezaškrtávajte políčko „Prvá operácia“. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.
 
-## Add Operation
+## Pridať operáciu
 
-Add 3D Extrusion operation from the Explorer Operations list. Add the operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button available next to 3D Extrusion or can also be added by drag and drop into the Operation editor (see Fig. ALEEXL1.4.). When we add the Extrusion operation, process settings Window will open by default.
+Pridajte operáciu 3D extrudovanie zo zoznamu operácií v Průzkumníku. Operáciu pridáte kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}), ktoré sa nachádza vedľa položky 3D Extrusion, alebo ju môžete pridať aj pretiahnutím do editora operácií (pozri obr. ALEEXL1.4.). Po pridaní operácie Extrusion sa štandardne otvorí okno nastavení procesu.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0004.jpg' | relative_url }})
 
-Adding 3D Extrusion operation
+Pridanie operácie 3D extrudovania
 
-## Simulation Setup
+## Nastavenie simulácie
 
-In the Simulation setup dialog, choose **ALE extrusion** radio button as Simulation method. Set Thermal calculation as**Workpiece only (non–isothermal)** and Die model type as **With symmetry condition**. select both **Strain update** and **Temperature update** and set the value with**1** per step in Acceleration, which means there is no acceleration updating in this simulation. Simulation setup looks like as shown as Fig. ALEEXL1.5. Then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material list page.
+V dialógovom okne Nastavenie simulácie vyberte ako Metódu simulácie prepínač **Extrúzia ALE**. Nastavte Tepelný výpočet na **Iba obrobok (neizotermický)** a Typ modelu formy na **S podmienkou symetrie**. Zaškrtnite políčka **Aktualizácia deformácie** aj **Aktualizácia teploty** a v poli **Zrýchlenie** nastavte hodnotu **1** na krok, čo znamená, že v tejto simulácii nedochádza k aktualizácii zrýchlenia. Nastavenie simulácie vyzerá tak, ako je znázornené na obr. ALEEXL1.5. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku Zoznam materiálov.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0005.jpg' | relative_url }})
 
-Simulation setup settings
+Nastavenia simulačného prostredia
 
-## Material list
+## Zoznam materiálov
 
-In the Material dialog, click Load material data from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}). Load the material '**ALUMINUM-6061[70-1000F(20-550C)]** ' from **Aluminum** category, as shown in Fig. ALEEXL1.6., and then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Dies page.
+V dialógovom okne „Materiál“ kliknite na možnosť „Načítať údaje o materiáli z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})“. Načítajte materiál „**ALUMINUM-6061[70-1000F(20-550C)]**“ z kategórie **Hliník**, ako je znázornené na obr. ALEEXL1.6., a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), čím prejdete na stránku „Matrice“.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0006.jpg' | relative_url }})
 
-Material list
+Zoznam materiálov
 
-## Dies
+## Matrice
 
-By Default, 2 dies will be added in operation, in this lab we need 3 dies. So, click on ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}) button to make Number of Dies as 3 (see Fig. ALEEXL1.7.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Top Die page.
+V predvolenom nastavení sa do prevádzky pridajú 2 matrice, v tomto cvičení však potrebujeme 3 matrice. Kliknite teda na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}), aby ste nastavili počet matríc na 3 (pozri obr. ALEEXL1.7.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Top Die“ (Horná matrica).
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0007.jpg' | relative_url }})
 
-Added Dies
+Pridané matrice
 
 ## Ram
 
-Change the name of the Top Die object to **Ram**. Set the die **temperature** to **400** °C and keep the object type to **Rigid** and uncheck the Assign Bearing surface check box. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry page.
+Zmeňte názov objektu „Top Die“ na **Ram**. Nastavte **teplotu** formy na **400** °C, typ objektu ponechajte ako **Rigid** a zrušte zaškrtnutie políčka „Assign Bearing surface“. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Geometry“.
 
-### Ram Geometry
+### Geometria berana
 
-Click on Import geometry from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) and **load Ram_Geo.stl** from 3D/LABS folder, then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Symmetry page. In Symmetry dialog, define P**lanar Symmetry** for the Ram on Symmetry planes as shown in (see Fig. ALEEXL1.8.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Movement page.
+Kliknite na „Importovať geometriu z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a **načítajte súbor Ram_Geo.stl** zo zložky 3D/LABS, potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Symetria“. V dialógovom okne „Symetria“ definujte pre Ram **plánovú symetriu** na symetrických rovinách, ako je znázornené na obr. ALEEXL1.8. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Pohyb“.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0008.jpg' | relative_url }})
 
-Ram Geometry
+Geometria berana
 
-### Ram Movement
+### Pohyb berana
 
-In the **Movement****dialog** , define the **Speed** as **4** mm/sec as shown in Fig. ALEEXL1.9. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Bottom Die page.
+V **dialógovom okne „Pohyb“** nastavte **rýchlosť** na hodnotu **4** mm/s, ako je znázornené na obr. ALEEXL1.9. Kliknite na stránku „![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Bottom Die“.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0009.jpg' | relative_url }})
 
-Ram Movement page
+Stránka hnutia Ram
 
-## Container
+## Kontajner
 
-Change the name of the Bottom die to **Container**. Set the die **temperature** to **350** °C and keep the object type to **Rigid** and uncheck the Assign Bearing surface check box. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry page.
+Zmeňte názov spodnej formy na **Container**. Nastavte **teplotu** formy na **350** °C, typ objektu ponechajte ako **Rigid** a zrušte zaškrtnutie políčka „Assign Bearing surface“. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Geometry“.
 
-### Container Geometry
+### Geometria kontajnera
 
-Click on Import geometry from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) and load **Container_Geo.stl** file from 3D/LABS folder, then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). In Symmetry dialog, define **Planar Symmetry** for the Container on Symmetry planes as shown in Fig. ALEEXL1.10. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Movement page.
+Kliknite na položku „Importovať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a načítajte súbor **Container_Geo.stl** zo zložky 3D/LABS, potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). V dialógovom okne „Symetria“ nastavte pre kontajner **rovinnú symetriu** na symetrických rovinách, ako je znázornené na obr. ALEEXL1.10. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Pohyb“.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0010.jpg' | relative_url }})
 
-Container geometry
+Geometria kontajnera
 
-### Container Movement
+### Preprava kontajnerov
 
-In the Movement dialog, leave the **Speed** as **0** mm/sec. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Object 4 page.
+V dialógovom okne „Pohyb“ ponechajte hodnotu **Rýchlosť** na **0** mm/s. Kliknite na stránku „![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) do objektu 4“.
 
-## Die
+## Zomrieť
 
-Change the name of the Object 4 to **Die**. Set the die temperature to **350** °C. Keep the object type to **Rigid** and **check****Assign Bearing Surface** for ALE extrusion (see Fig. ALEEXL1.11.). Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry page.
+Zmeňte názov objektu 4 na **Die**. Nastavte teplotu formy na **350** °C. Typ objektu ponechajte ako **Rigid** a zaškrtnite políčko **Assign Bearing Surface** pre extrudovanie ALE (pozri obr. ALEEXL1.11.). Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku Geometry.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0011.jpg' | relative_url }})
 
-Setting of the Die
+Nastavenie lisovacej formy
 
-### Die Geometry
+### Geometria lisovacej formy
 
-Click Import geometry from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) and load **Die_Geo.stl** file from 3D/LABS folder, then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). In Symmetry dialog, define **Planar Symmetry** for the Die on Symmetry planes as shown in Fig. ALEEXL1.12. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Bearing Surface page.
+Kliknite na „Importovať geometriu z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a načítajte súbor **Die_Geo.stl** zo zložky 3D/LABS, potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). V dialógovom okne Symetria nastavte pre maticu **Rovinnú symetriu** na symetrických rovinách, ako je znázornené na obr. ALEEXL1.12. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Bearing Surface“ (Oporná plocha).
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0012.jpg' | relative_url }})
 
-Die geometry
+Geometria matrice
 
-### Bearing Surface
+### Oporná plocha
 
-In Bearing Surface page, we will define bearing surfaces and add them to the bearing surface list. For this die object, there are 3 bearing surfaces. Keep the **Select** mode in the left column. To define the bearing surface, we select all the patches related to the bearing and click ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}) button. A highlighted bearing surface with**ID <1>** will be added to the list when we defined the first bearing surface. Then we define the second and the third bearing surfaces similarly. Complete list of bearing surfaces is shown in Fig. ALEEXL1.13. The first, second and third bearing surfaces are highlighted with yellow, red and orange color respectively in the die geometry display. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to go to Bearing Control Points page.
+Na stránke „Bearing Surface“ (Oporné plochy) definujeme oporné plochy a pridáme ich do zoznamu oporných plôch. Pre tento objekt formy existujú 3 oporné plochy. V ľavom stĺpci ponechajte režim **Select** (Výber). Na definovanie opornej plochy vyberieme všetky výplne súvisiace s ložiskom a klikneme na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}). Po definovaní prvej ložiskovej plochy sa do zoznamu pridá zvýraznená ložisková plocha s **ID <1>**. Potom podobným spôsobom definujeme druhú a tretiu ložiskovú plochu. Kompletný zoznam ložiskových plôch je zobrazený na obr. ALEEXL1.13. Prvá, druhá a tretia ložisková plocha sú v zobrazení geometrie matrice zvýraznené žltou, červenou, resp. oranžovou farbou. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Bearing Control Points (Kontrolné body ložísk).
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0013.jpg' | relative_url }})
 
-Bearing Surface
+Oporná plocha
 
-### Bearing Control points
+### Kontrolné body ložiska
 
-After define the bearing surface, a virtual bearing and it bearing length distribution will be generated for bearing control points definition (see Fig. ALEEXL1.14.). In "**3D_SS_EX_Lab1** ", we will introduce how to define bearing control points to adjust the bearing length. In this lab, we will not adjust the bearing length, so there is no need to define bearing control points. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to movement page.
+Po definovaní ložiskovej plochy sa vygeneruje virtuálne ložisko a rozloženie jeho dĺžky na účely definovania kontrolných bodov ložiska (pozri obr. ALEEXL1.14.). V „**3D_SS_EX_Lab1**“ predstavíme, ako definovať kontrolné body ložiska na úpravu dĺžky ložiska. V tomto cvičení nebudeme dĺžku ložiska upravovať, preto nie je potrebné definovať kontrolné body ložiska. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na ďalšiu stránku.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0014.jpg' | relative_url }})
 
-Bearing surface original settings
+Pôvodné nastavenia dosadacích plôch
 
-### Die Movement
+### Pohyb matrice
 
-In the Movement dialog, leave the **Speed** as **0** mm/sec. Go to next page by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button .
+V dialógovom okne „Pohyb“ ponechajte hodnotu **Rýchlosť** na **0** mm/s. Prejdite na ďalšiu stránku kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-## Workpiece
+## Obrobok
 
-Keep the default name of the Workpiece object as **Workpiece**. Set the Workpiece **temperature** to **400** °C and keep the object type as **Plastic**. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry page.
+Názov objektu „Workpiece“ ponechajte v predvolenom znení **Workpiece**. Nastavte **teplotu** objektu „Workpiece“ na **400** °C a typ objektu ponechajte ako **Plastic**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Geometry“.
 
-### Workpiece geometry
+### Geometria obrobku
 
-Click Import geometry from library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) and load **ALE_Workpiece_Geo.stl** from 3D/LABS folder, then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). In **Symmetry** dialog, define**Planar Symmetry** for the workpiece on **Symmetry****planes** as shown in (see Fig. ALEEXL1.15.). In this lab, the length of extrudate is 120 mm, the length in container is 150 mm. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh generation type page.
+Kliknite na „Importovať geometriu z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a načítajte súbor **ALE_Workpiece_Geo.stl** zo zložky 3D/LABS, potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). V dialógovom okne **Symetria** nastavte pre obrobok **Rovinnú symetriu** na **symetrických rovinách**, ako je znázornené na obrázku (pozri obr. ALEEXL1.15.). V tomto laboratórnom cvičení je dĺžka extrudátu 120 mm, dĺžka v kontajneri je 150 mm. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku typu generovania siete.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0015.jpg' | relative_url }})
 
-Workpiece geometry
+Geometria obrobku
 
-### Workpiece Mesh Generation type
+### Typ generovania siete obrobku
 
-In the **Mesh Generation Type** page, two options are provided for mesh generation of ALE workpiece. One is **Mesh Extruding Utility** and the other is **Regular Meshing**.
+Na stránke **Typ generovania siete** sú k dispozícii dve možnosti generovania siete pre obrobok ALE. Jednou z nich je **Nástroj na extrudovanie siete** a druhou je **Bežné vytváranie siete**.
 
-In the previous versions for ALE and Steady state extrusion simulations, mesh was generated using **Regular Meshing** (DEFORM-3D mesh generator). The mesh generator first creates a surface mesh and then generates an unstructured tetrahedral volumetric mesh.
+V predchádzajúcich verziách pre simulácie ALE a extrudovania v ustálenom stave sa sieť generovala pomocou **Regular Meshing** (generátor sietí DEFORM-3D). Generátor sietí najprv vytvorí povrchovú sieť a následne vygeneruje nestruktúrovanú tetraedrálnu objemovú sieť.
 
-In this lab, we will demonstrate how to generate extruded mesh using **Mesh Extruding Utility**.
+V tomto laboratórnom cvičení si ukážeme, ako vytvoriť extrudovanú sieť pomocou nástroja **Mesh Extruding Utility**.
 
-In simulations of ALE and Steady state extrusion, we can consider the workpiece consisting of three different regions: container region, extrudate region and deforming region. The container region and extrudate region are simple extruded shapes, while the deforming region is much more complex.
+Pri simuláciách extrudovania metódami ALE a v ustálenom stave môžeme obrobok považovať za súbor troch rôznych oblastí: oblasti kontajnera, oblasti extrudátu a oblasti deformácie. Oblasť kontajnera a oblasť extrudátu sú jednoduché extrudované tvary, zatiaľ čo oblasť deformácie je oveľa zložitejšia.
 
-The **Mesh Extruding Utility** allows users to mesh only the complex deforming region using DEFORM-3D mesh generator firstly. Then, extruded mesh of the container region and the extrudate region can be generated by adding layers of elements in those areas.
+Nástroj **Mesh Extruding Utility** umožňuje používateľom najprv vytvoriť sieť iba pre komplexnú deformovateľnú oblasť pomocou generátora sietí DEFORM-3D. Následne je možné vytvoriť vytlačenú sieť pre oblasť kontajnera a oblasť výlisku pridaním vrstiev prvkov v týchto oblastiach.
 
-Choose**Mesh Extruding Utility** and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). The system will give a template for mesh generation of three regions.
+Vyberte položku **Mesh Extruding Utility** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). Systém vám ponúkne šablónu na vytvorenie siete pre tri oblasti.
 
-Using right click menu options from the display area select "**Show rulers** " as shown in Fig. ALEEXL1.16. to display ruler which will help us in placing the different regions.
+V kontextovom menu v oblasti zobrazenia vyberte možnosť „**Zobraziť pravítka**“, ako je znázornené na obr. ALEEXL1.16, čím sa zobrazia pravítka, ktoré nám pomôžu pri umiestňovaní jednotlivých oblastí.
 
-The default setting of the three regions are based on the cross-section areas of the workpiece along the Z direction. The region division is shown as Fig. ALEEXL1.17.
+Predvolené nastavenie týchto troch oblastí vychádza z prierezových plôch obrobku v smere osi Z. Rozdelenie oblastí je znázornené na obr. ALEEXL1.17.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0016.jpg' | relative_url }})
 
-Mesh Extruding Utility
+Nástroj na extrudovanie sietí
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0017.jpg' | relative_url }})
 
-Region division
+Rozdelenie podľa regiónov
 
-In this lab, we will adjust the parameters in the **Mesh Extruding Utility**.
+V tomto cvičení nastavíme parametre v nástroji **Mesh Extruding Utility**.
 
-Firstly, we will adjust the deformation region. The deformation region (subdomain) between the top red line and the bottom red line will be used to generate regular mesh with DEFORM-3D mesh generator. So, we can use the regular method to define the mesh density which is similar to Mesh Window setting.
+Najskôr upravíme deformačnú oblasť. Deformačná oblasť (poddoména) medzi hornou a dolnou červenou čiarou sa použije na vytvorenie pravidelnej siete pomocou generátora sietí DEFORM-3D. Hustotu siete teda môžeme určiť bežným spôsobom, podobne ako pri nastavení v okne „Mesh Window“.
 
-Keep 3 zones and drag the zone lines to our expected positions. Approximately drag the top red line to Z = 25 mm, the second red line to Z = 5 mm, the third red line to Z = -15 mm, the bottom red line to Z = -25 mm.
+Nechajte 3 zóny a pretiahnite čiary zón do požadovaných polôh. Hornú červenú čiaru pretiahnite približne na Z = 25 mm, druhú červenú čiaru na Z = 5 mm, tretiu červenú čiaru na Z = -15 mm a spodnú červenú čiaru na Z = -25 mm.
 
-Zone 1 will define the mesh density near container region. Zone 2 will define the mesh density near bearing entry. Zone 3 will define mesh density near extrudate region. In **Mesh setting in deformation region** dialog, select '**Absolute** ' Type and set **Min elem size** with '**2** mm'. In the table of Deformation Region, set Element Size of Zone 1 with '6 mm', Zone 2 with '2 mm' and Zone 3 with '3 mm'. If the deformation region is much more complex, we should add zones by clicking ' ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }})' and define their suitable mesh densities.
+Zóna 1 určí hustotu siete v blízkosti oblasti kontajnera. Zóna 2 určí hustotu siete v blízkosti vstupu ložiska. Zóna 3 určí hustotu siete v blízkosti oblasti extrudátu. V dialógovom okne **Nastavenie siete v oblasti deformácie** vyberte typ „**Absolútny**“ a nastavte **Minimálnu veľkosť prvku** na „**2** mm“. V tabuľke Oblast' deformácie nastavte Veľkosť prvku pre Zónu 1 na „6 mm“, pre Zónu 2 na „2 mm“ a pre Zónu 3 na „3 mm“. Ak je oblasť deformácie oveľa zložitejšia, mali by sme pridať zóny kliknutím na „![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }})“ a definovať ich vhodné hustoty siete.
 
-Then in Container Region, delete 1 zone by clicking '![]({{ '/assets/icons/pre_icons/mo_delete_symmetry_icon.jpg' | relative_url }})'. Set Number of layers with '10' in Zone 1.
+Potom v časti „Container Region“ odstráňte 1 zónu kliknutím na „![]({{ '/assets/icons/pre_icons/mo_delete_symmetry_icon.jpg' | relative_url }})“. V zóne 1 nastavte počet vrstiev na „10“.
 
-In Extrudate Region, keep 2 zones and drag the zone line (blue line) to Z = -50 mm. Set Number of layers with '10' in Zone 1, and with '12' in Zone 2.
+V oblasti extrudátu ponechajte 2 zóny a presuňte čiaru zóny (modrá čiara) na hodnotu Z = -50 mm. Nastavte počet vrstiev na hodnotu „10“ v zóne 1 a na hodnotu „12“ v zóne 2.
 
-The adjusted parameters settings in **Mesh Extruding Utility** is shown as Fig. ALEEXL1.18.
+Nastavenia upravených parametrov v nástroji **Mesh Extruding Utility** sú znázornené na obr. ALEEXL1.18.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0018.jpg' | relative_url }})
 
-Parameters settings for Mesh Extruding Utility
+Nastavenie parametrov pre nástroj na extrudovanie siete
 
-In Fig. ALEEXL1.18., we can see three buttons at the bottom of the widget – **Default Setting** , **Preview** and **Generate**. Default Setting will reset all the mesh parameters to the default setting. **Preview** will create a subdomain geometry and generate surface mesh for the deforming region. **Generate** will generate solid mesh for the deforming region and add layered elements in the container and extrudate regions. If **Preview** is not clicked previously, **Generate** will complete all the tasks consecutively.
+Na obr. ALEEXL1.18 vidíme v spodnej časti widgetu tri tlačidlá – **Predvolené nastavenie**, **Náhľad** a **Vytvoriť**. Tlačidlo **Predvolené nastavenie** obnoví všetky parametre siete na predvolené hodnoty. ****Náhľad** vytvorí geometriu subdomény a vygeneruje povrchovú sieť pre deformovanú oblasť. **Vytvoriť** vygeneruje objemovú sieť pre deformovanú oblasť a pridá vrstvené prvky do kontajnerovej a extrudovanej oblasti. Ak predtým nebolo kliknuté na **Náhľad**, tlačidlo **Vytvoriť** vykoná všetky úlohy postupne.
 
-Click on **Generate** to generate the mesh of the workpiece. The generated workpiece mesh is shown in Fig. ALEEXL1.19. We can clearly see the regular mesh in deformation region and extruded mesh in container & extrudate regions. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material page.
+Kliknutím na tlačidlo **Generovať** vygenerujete sieť obrobku. Vygenerovaná sieť obrobku je znázornená na obr. ALEEXL1.19. Jasne vidíme pravidelnú sieť v oblasti deformácie a extrudovanú sieť v oblastiach nádoby a extrudátu. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Materiál.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0019.jpg' | relative_url }})
 
-Workpiece mesh generated
+Vytvorená sieť obrobku
 
-### Workpiece Material
+### Materiál obrobku
 
-Assign **ALUMINUM-6061[70-1000F(20-550C)]** as the material for Workpiece, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Boundary condition page.
+Ako materiál pre obrobok zadajte **ALUMINUM-6061[70-1000F(20-550C)]** a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku s okrajovými podmienkami.
 
-### Workpiece Boundary condition
+### Okrajová podmienka obrobku
 
-The system automatically assigned the symmetry plane BCC to the workpiece after mesh generation (see Fig. ALEEXL1.20.).
+Systém po vytvorení siete automaticky priradil obrobku rovinu symetrie BCC (pozri obr. ALEEXL1.20.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0020.jpg' | relative_url }})
 
-Symmetry BCC of the Workpiece
+Symetria BCC obrobku
 
-For ALE and Steady state extrusion, a Free Surface needs to be defined at the end of the extrudate. In the **Boundary** **conditions** dialog, click **Free****Surface** in the tree, rotate the workpiece so that you can see the bottom of the extrudate, select the bottom surface and then Click ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) to add the Free surface boundary condition (see Fig. ALEEXL1.21.).
+Pri extrudovaní metódou ALE a v ustálenom stave je potrebné na konci extrudátu definovať voľnú plochu. V dialógovom okne **Okrajové** **podmienky** kliknite na **Voľná****povrch** v stromovej štruktúre, otočte obrobok tak, aby ste videli spodnú časť extrudátu, vyberte spodnú plochu a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}), aby ste pridali okrajovú podmienku voľného povrchu (pozri obr. ALEEXL1.21.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0021.jpg' | relative_url }})
 
-Free Surface BCC of the Workpiece
+BCC voľného povrchu obrobku
 
-The system automatically assigned Heat Exchange with Environment BCC to the workpiece after mesh generation. For ALE & Steady state extrusion, Free Surface should not be assigned with Heat Exchange with Environment BCC hence, we should delete the existing Heat Exchange with Environment BCC on the free surface by clicking on '**Defined** ' and ![]({{ '/assets/icons/pre_icons/mo_delete_bcc_button.jpg' | relative_url }}). We redefine the Heat Exchange with Environment BCC. In the left pick bar, click the ![]({{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}) button to select all the surfaces, then click and click the Free Surface & symmetry surfaces to unselect them. Click ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) to add the Heat Exchange with Environment BCC. Defined Heat Exchange with Environment BCC is as shown in Fig. ALEEXL1.22. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Control page.
+Systém po vytvorení siete automaticky priradil obrobku výmenu tepla s okolím typu BCC. V prípade extrudovania ALE a v ustálenom stave by sa voľná plocha nemala priradiť k výmene tepla s prostredím BCC, preto by sme mali odstrániť existujúcu výmenu tepla s prostredím BCC na voľnej ploche kliknutím na „**Definované**“ a ![]({{ '/assets/icons/pre_icons/mo_delete_bcc_button.jpg' | relative_url }}). Predefinujeme výmenu tepla s prostredím BCC. V ľavom výberovom paneli kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}), aby ste vybrali všetky povrchy, potom kliknite na voľný povrch a symetrické povrchy, aby ste zrušili ich výber. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}), aby ste pridali výmenu tepla s prostredím BCC. Definovaná výmena tepla s prostredím BCC je znázornená na obr. ALEEXL1.22. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Control“.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0022.jpg' | relative_url }})
 
-Heat Exchange with Environment BCC of the Workpiece
+Výmena tepla s okolitým prostredím v objemovej bunke (BCC) obrobku
 
-## Controls
+## Ovládacie prvky
 
-In the Control page. we can use ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) to adjust the positions of objects.
+Na stránke „Ovládanie“ môžeme pomocou ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) nastaviť polohy objektov.
 
-All the die components were imported from the .stl files. The container and the die were in the correct locations. The ram is away from the workpiece. Hence, we need to move the ram down to touch the workpiece.
+Všetky súčasti formy boli naimportované zo súborov .stl. Kontajner aj forma sa nachádzali na správnych miestach. Závit je vzdialený od obrobku. Preto musíme posunúť závit nadol, aby sa dotýkal obrobku.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) and specify ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}) positioning. Select the **Ram** as the Positioning object and the **Workpiece** as the Reference. Verify that the Approach direction is**–Z**. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) and then ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Contact page.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) a zadajte polohu ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}). Ako polohovací objekt vyberte **Ram** a ako referenčný bod **Obrobok**. Skontrolujte, či je smer priblíženia **–Z**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) a potom na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Kontakt.
 
-## Contact
+## Kontakt
 
-A message will pop-up (see Fig. ALEEXL1.23.) as we enter the Inter-object relations page and ask if user wants to use special contact generation algorithm to generate full contact. Click ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}).
+Pri vstupe na stránku „Vzťahy medzi objektmi“ sa zobrazí okienko (pozri obr. ALEEXL1.23.), v ktorom sa používateľ opýta, či chce použiť špeciálny algoritmus na generovanie kontaktov na vytvorenie úplného kontaktu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0023.jpg' | relative_url }})
 
-FULL CONTACT GENERATION popup
+Vyskakovacie okno FULL CONTACT GENERATION
 
-In the Contact page, click ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) to create all the relationships of the workpiece with other objects. Then click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate full contact of the workpiece with other objects. Then, let's edit the parameters setting for contact relationships of the workpiece.
+Na stránke „Kontakt“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), aby ste vytvorili všetky vzťahy obrobku s ostatnými objektmi. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}), aby ste vygenerovali úplný kontakt obrobku s ostatnými objektmi. Následne upravíme nastavenie parametrov pre kontaktné vzťahy obrobku.
 
-Select the **Ram – Workpiece** relationship and click ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Define contact separation as '**Non-separable** ', **Shear** friction as '**1.0** ' and heat transfer coefficient as'**11.0** '.
+Vyberte vzťah **Ram – Obrobok** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Nastavte oddeliteľnosť kontaktu na „**Neoddeliteľné**“, trenie **šmykové** na „**1,0**“ a koeficient prenosu tepla na „**11,0**“.
 
-Select the **Container – Workpiece** relationship and click ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Define contact separation as '**Non-separable** ', **Shear** friction as'**1.0** ' and heat transfer coefficient as'**11.0** '.
+Vyberte vzťah **Kontajner – Obrobok** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Nastavte oddelenie kontaktov na hodnotu „**Neoddeliteľné**“, trenie **šmykové** na hodnotu „**1,0**“ a koeficient prenosu tepla na hodnotu „**11,0**“.
 
-Select the **Die – Workpiece** relationship and click ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Define contact separation as '**Non-separable** ', **Shear** friction as '**0.4** ' and heat transfer coefficient as '**11.0** ' (See Fig. ALEEXL1.24.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Step controls.
+Vyberte vzťah **Matrica – Obrobok** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Definujte oddelenie kontaktov ako „**Neoddeliteľné**“, trenie **šmykové** ako „**0,4**“ a koeficient prenosu tepla ako „**11,0**“ (pozri obr. ALEEXL1.24.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre prechod na ovládacie prvky krokov.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0024.jpg' | relative_url }})
 
-Full contact generation of the workpiece
+Úplný kontakt s obrobkom
 
-## Step Controls
+## Ovládacie prvky krokov
 
-Click '![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) ' to switch to expert mode in the top menu bar for step control.
+Kliknutím na položku „![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})“ v hornom paneli ponúk prejdete do expertného režimu na ovládanie krokov.
 
-### Simulation steps
+### Kroky simulácie
 
-In the Simulation steps ![]({{ '/assets/icons/pre_icons/mo_simulation_step.jpg' | relative_url }}) dialog, set **Number of simulation steps** as '**2000** ' and **Step****Increment****to****save** as '**100** '. Set**Primary die** as '**2 - Ram** ' (see Fig. ALEEXL1.25.).
+V dialógovom okne Simulačné kroky ![]({{ '/assets/icons/pre_icons/mo_simulation_step.jpg' | relative_url }}) nastavte **Počet simulačných krokov** na hodnotu „**2000**“ a **Krok****Prírastok****na****uloženie** na hodnotu „**100**“. Nastavte **Primárny výlisok** na hodnotu „**2 – Ram**“ (pozri obr. ALEEXL1.25.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0025.jpg' | relative_url }})
 
-Simulation step Setup
+Nastavenie simulačného kroku
 
-In ALE extrusion simulation, since there is no gap between the workpiece and the container, we can use constant step increment. But in ALE extrusion simulation, we must consider the limitations of the minimum element size and the workpiece dimensions to set the time step setting.
+Pri simulácii extrudovania metódou ALE, keďže medzi obrobkom a nádobou nie je žiadna medzera, môžeme použiť konštantný krok. Pri simulácii extrudovania metódou ALE však musíme pri nastavení časového kroku zohľadniť obmedzenia vyplývajúce z minimálnej veľkosti prvkov a rozmerov obrobku.
 
-  1. In this lab, the minimum element size is 2 mm. From the "3D_Lagrangian_EX_Lab1", the movement velocity of the extrudate is 21.16 mm/s, so the appropriate time/step of the ram would be 0.03 sec/step.
+  1. V tomto laboratórnom cvičení je minimálna veľkosť prvku 2 mm. Podľa súboru „3D_Lagrangian_EX_Lab1“ je rýchlosť pohybu extrudátu 21,16 mm/s, takže vhodný čas na jeden krok piestu by mal byť 0,03 s/krok.
 
-  2. The material should at least flow out the entire extrudate. In this lab, the length of extrudate is 120 mm, the minimum time for the material to flow out the free surface (the end of the extrudate) is 5.67 (120/21.16) s. If we want to simulation 2000 steps, the minimum time step increment should be 0.00284 sec/step.
+  2. Materiál by mal aspoň úplne vytekať z celého extrudátu. V tomto laboratórnom cvičení je dĺžka extrudátu 120 mm, minimálny čas potrebný na to, aby materiál vytekol z voľnej plochy (konca extrudátu), je 5,67 (120/21,16) s. Ak chceme simulovať 2000 krokov, minimálny prírastok časového kroku by mal byť 0,00284 s/krok.
 
-  3. The material cannot flow out of the container completely. In this lab, the length in container is 150 mm, the movement velocity of the ram is 4 mm/s, the maximum time for the material to flow out of the container completely is 37.5 (150/4) s. If we want to simulation 2000 steps, the maximum time step increment should be 0.01875 sec/step.
+  3. Materiál nemôže z nádoby vytekať úplne. V tomto laboratórnom experimente je dĺžka v nádobe 150 mm, rýchlosť pohybu piestu je 4 mm/s, maximálny čas potrebný na úplné vytečenie materiálu z nádoby je 37,5 (150/4) s. Ak chceme simulovať 2000 krokov, maximálny prírastok časového kroku by mal byť 0,01875 s/krok.
 
-Base on above three aspects, we can select **0.01** sec/step as the step increment. In the **Step****increment![]({{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }}) **dialog, set Solution step definition as **Time**. Set Step increment control to Constant and define it as '**0.01** ' sec/step (see Fig. ALEEXL1.26.).
+Na základe vyššie uvedených troch aspektov môžeme ako veľkosť kroku zvoliť **0,01** s/krok. V dialógovom okne **Step****increment![]({{ '/assets/icons/pre_icons/mo_step_increment.jpg' | relative_url }}) **nastavte definíciu kroku riešenia na **Čas**. Nastavte ovládací prvok „Krok“ na hodnotu „Konštanta“ a definujte ho ako „**0,01**“ s/krok (pozri obr. ALEEXL1.26.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0026.jpg' | relative_url }})
 
-Step increment setup
+Nastavenie krokového prírastku
 
-###  Stop criteria
+###  Kritériá na ukončenie
 
-In the **Stop criteria**![]({{ '/assets/icons/pre_icons/mo_stopping_criteria.jpg' | relative_url }}) dialog, click the **ALE****Steady****State** page, uncheck '**Turn on steady-state stop control** ' if not unchecked (see Fig. ALEEXL1.27.).
+V dialógovom okne **Kritériá zastavenia** ![]({{ '/assets/icons/pre_icons/mo_stopping_criteria.jpg' | relative_url }}) kliknite na kartu **ALE****Steady****State** a zrušte zaškrtnutie políčka „**Zapnúť riadenie zastavenia v ustálenom stave**“, ak ešte nie je odškrtnuté (pozri obr. ALEEXL1.27.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0027.jpg' | relative_url }})
 
-Stopping control
+Ovládanie zastavenia
 
-### Double constraints settings
+### Nastavenia dvojitých obmedzení
 
-For ALE and Steady state extrusion, the system will generate double constraints automatically in simulation.
+V prípade extrudovania metódou ALE a v ustálenom stave systém pri simulácii automaticky vygeneruje dvojité obmedzenia.
 
-## Generate DB
+## Vytvoriť databázu
 
-Then go to Generate DB page. Click ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) to see if anything was missed in the setup and then click on the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. Observe the message in Message tab informing database generation status.
+Potom prejdite na stránku „Generate DB“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali, či sa pri nastavení na niečo nezabudlo, a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) na vytvorenie databázy. Pozrite si správu na karte „Message“, ktorá informuje o stave vytvárania databázy.
 
-## Running Simulation
+## Spustenie simulácie
 
-Once the database has been generated switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. ALEEXL1.28.Use the default **Continue****Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do simulačného režimu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom operácií. Kliknutím na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. ALEEXL1.28.Použite predvolenú možnosť **Pokračovať****Spustiť** na výber možnosti „**Pokračovať od posledného kroku**“ (od kroku -1) a potom vyberte režim simulácie pomocou prepínača **Interaktívny**. Kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-To define MPI settings, click on ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}) button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend on your 3D MPI license).
+Ak chcete nastaviť parametre MPI, kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}). Rozbalí sa okno „Run Options“, v ktorom sa zobrazia možnosti na nastavenie parametrov MPI pre simuláciu (maximálny počet procesorov, ktorý je možné nastaviť, závisí od vašej licencie 3D MPI).
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0028.jpg' | relative_url }})
 
-Run Simulation Window
+Spustiť okno simulácie
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, make sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. User can view the Extrusion process from simulation graphics as the simulation proceeds to the specified Step definition.
+Priebeh simulácie môžete sledovať na kartách „Simulation Message“ a „Simulation Log“; uistite sa, že je zaškrtnutá možnosť ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). Používateľ môže sledovať proces extrudovania na simulačných grafoch v priebehu simulácie až do dosiahnutia zadaného kroku.
 
-## Acceleration Updating of State Variables
+## Zrýchlená aktualizácia stavových premenných
 
-After above simulation is completed, save the project by clicking ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) in the extrusion template. We should keep the simulation set up and simulation result of this project and do the simulation of acceleration with another project.
+Po dokončení vyššie uvedenej simulácie uložte projekt kliknutím na ![]({{ '/assets/icons/pre_icons/mo_save_to_a_file_icon.jpg' | relative_url }}) v šablóne extruzie. Nastavenie simulácie a výsledky simulácie tohto projektu by sme si mali uchovať a vykonať simuláciu zrýchlenia v rámci iného projektu.
 
-### Simulation step up of Acceleration
+### Simulácia postupného zvyšovania zrýchlenia
 
-In File menu ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) click on **New**![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) and click on ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) in both Question popups, new Project will be open with New project popup.
+V ponuke Súbor ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) kliknite na **Nový**![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) a v oboch vyskakujúcich oknách s otázkou kliknite na ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}); otvorí sa nový projekt s oknom Nový projekt.
 
-In New Project popup define the Project name as "**3D_ALE_EX_Lab1_ACC** ", select **Copy existing project** radio button, click on **browse** and browse " 3D_ALE_EX_Lab1" project and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) in New Project popup as shown in Fig. ALEEXL1.29.
+V okne „Nový projekt“ zadajte názov projektu ako „**3D_ALE_EX_Lab1_ACC**“, zaškrtnite políčko **Kopírovať existujúci projekt**, kliknite na **Prehľadávať**, vyhľadajte projekt „3D_ALE_EX_Lab1“ a v okne Nový projekt kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), ako je znázornené na obr. ALEEXL1.29.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0029.jpg' | relative_url }})
 
-New Project for Acceleration updating lab
+Nový projekt na urýchlenie modernizácie laboratória
 
-In the **Simulation setup** dialog, change both the **Strain****update** and **Temperature****update** with**50** per step in Acceleration, which means there will be 50 times acceleration updating in the next simulation. Keep other parameters settings untouched. Simulation setup is shown as Fig. ALEEXL1.30.
+V dialógovom okne **Nastavenie simulácie** zmeňte hodnoty **Aktualizácia deformácie****** a **Aktualizácia teploty****** v položke „Zrýchlenie“ na **50** na krok, čo znamená, že v nasledujúcej simulácii sa aktualizácia zrýchlenia vykoná 50-krát. Ostatné nastavenia parametrov ponechajte bez zmien. Nastavenie simulácie je znázornené na obr. ALEEXL1.30.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0030.jpg' | relative_url }})
 
-Simulation setup settings with State Variable update Acceleration
+Nastavenia simulačného prostredia s akceleráciou aktualizácie stavových premenných
 
-Go to **Step****Control** page. In the **Simulation****steps** dialog, set **Number of simulation** steps as '**40** ' and **Step Increment to save** as '**2** ' (see Fig. ALEEXL1.31.).
+Prejdite na stránku **Step****Control**. V dialógovom okne **Simulácia****kroky** nastavte **Počet simulačných** krokov na hodnotu „**40**“ a **Krok prírastku na uloženie** na hodnotu „**2**“ (pozri obr. ALEEXL1.31.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0031.jpg' | relative_url }})
 
-Simulation steps for Acceleration
+Kroky simulácie zrýchlenia
 
-Check the defined acceleration setting is in Step Control page -> **Advanced** options dialog -> **Frequency** page (see Fig. ALEEXL1.32.).
+Skontrolujte, či je nastavenie zrýchlenia definované na stránke „Step Control“ (Krokové riadenie) -> v dialógovom okne **Advanced** (Pokročilé) -> na stránke **Frequency** (Frekvencia) (pozri obr. ALEEXL1.32.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0032.jpg' | relative_url }})
 
-Acceleration settings in Frequency
+Nastavenia zrýchlenia v časti „Frekvencia“
 
-Then go to Generate DB page. Click ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) to see if anything was missed in the setup and then click on the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. Observe the message in Message tab informing database generation status.
+Potom prejdite na stránku „Generate DB“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali, či sa pri nastavení na niečo nezabudlo, a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) na vygenerovanie databázy. Pozrite si správu na karte „Message“, ktorá informuje o stave generovania databázy.
 
-### Running Simulation
+### Spustenie simulácie
 
-Once the database has been generated, switch to the Simulation mode by selecting the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the object tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. ALEEXL1.28.Use the default **Continue****Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do režimu simulácie výberom tlačidla ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom objektov. Kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. ALEEXL1.28.Použite predvolenú možnosť **Pokračovať****Spustiť** na výber možnosti „**Pokračovať od posledného kroku**“ (od kroku -1) a potom vyberte režim simulácie pomocou prepínača **Interaktívny**. Kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-## Post Processing
+## Následné spracovanie
 
-After the simulation of Extrusion process with acceleration of state variable update is completed, we can compare the simulation results in Post processor.
+Po dokončení simulácie procesu extrudovania s urýchlením aktualizácie stavových premenných môžeme výsledky simulácie porovnať v postprocesore.
 
-In DEFORM GUI Main window, highlight "3D_ALE_EX_Lab1.DB", then click ![]({{ '/assets/icons/pre_icons/mo_post_processor_gui_link.jpg' | relative_url }}) to open "**3D_ALE_EX_Lab1.DB** " in DEFORM Post processor.
+V hlavnom okne grafického rozhrania DEFORM označte súbor „3D_ALE_EX_Lab1.DB“ a potom kliknutím na ![]({{ '/assets/icons/pre_icons/mo_post_processor_gui_link.jpg' | relative_url }}) otvorte súbor „**3D_ALE_EX_Lab1.DB**“ v postprocesore DEFORM.
 
-In DEFORM-2D/3D DEFORM Post, from the top menu bar, click **File**![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Open** , select "**3D_ALE_EX_Lab1_ACC.DB** ", then click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
+V programe DEFORM-2D/3D DEFORM Post kliknite v hornom paneli ponúk na položku **Súbor**![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Otvoriť**, vyberte súbor „**3D_ALE_EX_Lab1_ACC.DB**“ a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
 
-From the top menu bar, click **Windows![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Tile Vertically** , we can see that both "3D_ALE_EX_Lab1.DB" and "3D_ALE_EX_Lab1_ACC.DB" are opened in DEFORM-2D/3D Post. Thus, we can compare the simulation results of 2 databases in the same display window.
+V hornom paneli ponúk kliknite na **Windows![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Usporiadať vertikálne**. Vidíme, že súbory „3D_ALE_EX_Lab1.DB“ aj „3D_ALE_EX_Lab1_ACC.DB“ sú otvorené v programe DEFORM-2D/3D Post. Takto môžeme porovnať výsledky simulácie z oboch databáz v jednom okne.
 
-For acceleration simulation, the effective step = simulation step * acceleration frequency. For example, in this lab, the acceleration frequency is 50, so the effective step is 1000 in simulation step 20, the effective step is 2000 in simulation step 40\. The effective step of acceleration simulation corresponds to the simulation step of simulation without acceleration.
+Pri simulácii zrýchlenia platí: efektívny krok = simulačný krok × frekvencia zrýchlenia. Napríklad v tomto laboratórnom cvičení je frekvencia zrýchlenia 50, takže efektívny krok je 1000 v simulačnom kroku 20 a efektívny krok je 2000 v simulačnom kroku 40. Efektívny krok simulácie zrýchlenia zodpovedá simulačnému kroku simulácie bez zrýchlenia.
 
-In the display window, with the right mouse, check both '**DB Info** ' and '**Title** ' to display the name of database and the simulation step.
+V okne zobrazenia kliknite pravým tlačidlom myši a zaškrtnite políčka „**DB Info**“ aj „**Title**“, aby sa zobrazil názov databázy a krok simulácie.
 
-Comparisons of Effective strain and Temperature of the workpiece at last step are given in Fig. ALEEXL1.33. and Fig. ALEEXL1.34. respectively. User can also compare the simulation results in other corresponding simulation steps.
+Porovnania efektívneho deformácie a teploty obrobku v poslednom kroku sú uvedené na obr. ALEEXL1.33 a obr. ALEEXL1.34. Používateľ môže tiež porovnať výsledky simulácie v ďalších príslušných krokoch simulácie.
 
-From the comparisons of simulation results, we can see the state variables match very well in the corresponding simulation step. On the other hand, from the message files in this lab, the simulation time without acceleration is about 2 hours, the simulation time with acceleration is about 20 minutes. So, acceleration updating of state variables is a useful way to save simulation time in ALE extrusion simulation.
+Z porovnania výsledkov simulácie je zrejmé, že stavové premenné sa v príslušnom simulačnom kroku veľmi dobre zhodujú. Na druhej strane, podľa súborov správ z tohto laboratórneho cvičenia trvá simulácia bez akcelerácie približne 2 hodiny, zatiaľ čo simulácia s akceleráciou trvá približne 20 minút. Aktualizácia stavových premenných pomocou akcelerácie je teda užitočným spôsobom, ako skrátiť čas simulácie pri simulácii extrudovania metódou ALE.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0033.jpg' | relative_url }})
 
-Strain Effective distribution at last step
+Efektívne rozdelenie napätia v poslednom kroku
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0034.jpg' | relative_url }})
 
-Temperature distribution at last step
+Rozloženie teploty v poslednom kroku

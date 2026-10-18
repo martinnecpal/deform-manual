@@ -1,261 +1,261 @@
 ---
 lang: sk
-title: "2D Heat Treatment Wizard Lab1"
+title: "Sprievodca 2D tepelným spracovaním – Lab1"
 ---
 
-# 2D Heat Treatment Wizard Lab1
+# Sprievodca 2D tepelným spracovaním – Laboratórna práca č. 1
 
-1.1. Introduction
+1.1. Úvod
 
-1.2. Starting a New problem
+1.2. Začatie riešenia novej úlohy
 
-1.3. Process Settings
+1.3. Nastavenia procesu
 
-1.4. Material definition
+1.4. Definícia pojmov
 
-1.5. Workpiece Object Type
+1.5. Typ objektu obrobku
 
-1.5.1. Defining Workpiece Object Data
+1.5.1. Definovanie údajov o obrobku
 
-1.5.2. Import Geometry
+1.5.2. Import geometrie
 
-1.5.3. Generate Mesh
+1.5.3. Vytvorenie siete
 
-1.5.4. Assigning Material
+1.5.4. Priradenie materiálu
 
-1.5.5. Generating Coating Mesh
+1.5.5. Vytvorenie mriežky povlaku
 
-1.5.6. Assigning Boundary conditions
+1.5.6. Nastavenie okrajových podmienok
 
-1.5.7. Workpiece Phase levels initialization
+1.5.7. Inicializácia úrovní fáz obrobku
 
-1.6. Medium Definition
+1.6. Definícia pojmu „stredný“
 
-1.7. Scheduled Definition
+1.7. Definícia pojmu „plánovaný“
 
-1.8. Simulation controls
+1.8. Ovládacie prvky simulácie
 
-1.9. Generate Database
+1.9. Vytvorenie databázy
 
-1.10. Starting the Simulation
+1.10. Spustenie simulácie
 
-1.11. Post processing
+1.11. Následné spracovanie
 
-## Introduction
+## Úvod
 
-The Heat Treatment Wizard is a convenient tool to set up complex multiple-operation heat treatment problem. This lab will demonstrate how to use this wizard to prepare a carburization-quench-tempering simulation of a steel part. This lab can also help users understand the capabilities of DEFORM-HT's phase transformation calculation scheme.
+Sprievodca tepelným spracovaním je praktický nástroj na nastavenie zložitých úloh tepelných procesov pozostávajúcich z viacerých operácií. V tomto laboratórnom cvičení si ukážeme, ako pomocou tohto sprievodcu pripraviť simuláciu nauhličovania, kalenia a popúšťania oceľového dielu. Toto laboratórne cvičenie môže používateľom pomôcť pochopiť možnosti schémy výpočtu fázových prechodov v programe DEFORM-HT.
 
-##  Starting a New problem
+##  Vytvorenie novej úlohy
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte položku DEFORM-v1x.xxx (kde .xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte položku **DEFORM GUI Main** vxx.xx. Zobrazí sa okno DEFORM GUI Main
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in [Fig. 2DHTWL1.1.]() Select " **Integrated Manufacturing Process** " radio button and units system as "**SI** " using radio button. Define Problem Name as "**QUENCH** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému, ako je znázornené na obrázku [Fig. 2DHTWL1.1.](). Vyberte prepínač „**Integrovaný výrobný proces**“ a ako systém jednotiek vyberte „**SI**“ pomocou prepínača. Názov úlohy zadajte ako „**QUENCH**“ a uistite sa, že je zaškrtnuté políčko „Zobraziť dialógové okno s možnosťami“ (ak nezaškrtnete políčko „**Zobraziť dialógové okno s možnosťami**“, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s použitím integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image014.jpg' | relative_url }})
 
-Problem type selection window
+Okno na výber typu problému
 
   
-Multiple operation wizard will open with the New Project dialog as shown in Fig. 2DHTWL1.2., at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title. In this lab we will use ‘**QUENCH** ’ as the project name. 
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom „Nový projekt“, ako je znázornené na obr. 2DHTWL1.2. V tomto bode bude používateľ vyzvaný, aby zadal názov projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a nadpis. V tomto laboratórnom cvičení použijeme ako názov projektu „**QUENCH**“. 
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0002.jpg' | relative_url }})
 
-MO wizard New project
+Sprievodca MO – Nový projekt
 
-User can also change the Unit system (File menu selected unit system will be selected by default) and add HT operation by selecting it from First operation pull down list and turning on checkbox (See Fig. 2DHTWL1.3.). Using copy Existing project option, we can import previous saved projects as new project. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.  
+Používateľ môže tiež zmeniť systém jednotiek (systém jednotiek vybraný v ponuke Súbor sa nastaví ako predvolený) a pridať operáciu HT tak, že ju vyberie z roletového zoznamu Prvá operácia a zaškrtne príslušné políčko (pozri obr. 2DHTWL1.3.). Pomocou možnosti Kopírovať existujúci projekt môžeme importovať predtým uložené projekty ako nové projekty. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.  
   
-Multiple Operation wizard will open. Add 2D HT Wizard operation from the Explorer Operations list. Add the operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to 2D HT Wizard or user can also add by drag and drop into the Operation Editor (See Fig. 2DHTWL1.3..). 
+Otvorí sa sprievodca viacerými operáciami. Zo zoznamu operácií v Průzkumníku pridajte operáciu „2D HT Wizard“. Operáciu pridáte kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa položky „2D HT Wizard“ alebo ju môžete pridať aj pretiahnutím do Editoru operácií (pozri obr. 2DHTWL1.3..). 
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0003.jpg' | relative_url }})
 
-Adding 2D HT Wizard into Operation Editor
+Pridanie sprievodcu 2D HT do editora operácií
 
-## Process Settings
+## Nastavenia procesu
 
-As the operation is added, Process settings page is opened as shown in Fig. 2DHTWL1.4. User can set the simulation mode based on the simulation requirement along with step definition controls.
+Po pridaní operácie sa otvorí stránka „Nastavenia procesu“, ako je znázornené na obr. 2DHTWL1.4. Používateľ môže nastaviť režim simulácie podľa požiadaviek simulácie spolu s ovládacími prvkami na definovanie krokov.
 
-Turn on "**Deformation** " and "**Phase****Transformation** " as we would like to predict residual stresses and phase transformation calculations during the process. Step definition will be defined in Simulation controls page. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) (See Fig. 2DHTWL1.4.). 
+Zapnite možnosti „**Deformácia**“ a „**Fázová transformácia**“, keďže chceme počas procesu predpovedať zvyškové napätia a vypočítať fázové premeny. Definícia kroku sa nastaví na stránke „Ovládacie prvky simulácie“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) (pozri obr. 2DHTWL1.4.). 
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0004.jpg' | relative_url }})
 
-Defining Process settings in 2D HT Wizard
+Nastavenie parametrov procesu v sprievodcovi 2D HT
 
-Initialization page will open, we can observe that Phase transformation and Deformation check boxes are turned on (See Fig. 2DHTWL1.5.), we will leave the settings in Initialization page as it is and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Otvorí sa stránka inicializácie, kde vidíme, že sú zaškrtnuté políčka „Fázová transformácia“ a „Deformácia“ (pozri obr. 2DHTWL1.5.). Nastavenia na stránke inicializácie ponecháme bez zmien a klikneme na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
   
   
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0005.jpg' | relative_url }})
 
-Initialization Setup window
+Okno nastavení inicializácie
 
-## Material definition
+## Definícia materiálu
 
-In Material window, load the material (JIS-S45C (Heat Treatment)) from DEFORM Material library, from Steel category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option. This can be done as shown in Fig. 2DHTWL1.6. by clicking ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button. Material can also be load from Materials list in Explorer. Then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) unitl Workpiece page. 
+V okne „Material“ načítajte materiál (JIS-S45C (tepelné spracovanie)) z knižnice materiálov DEFORM v kategórii „Steel“ pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice). To je možné vykonať tak, ako je znázornené na obr. 2DHTWL1.6, kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}). Materiál je možné načítať aj zo zoznamu materiálov v Průzkumníku. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka Obrobok. 
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0006.jpg' | relative_url }})
 
-Importing Material page
+Stránka „Import materiálu“
 
-## Defining Workpiece
+## Definovanie obrobku
 
-### Defining Workpiece Object Data
+### Definovanie údajov o obrobku
 
-In Workpiece page, change the object type to **Elasto-plastic** type, as we need to predict residual stresses (See Fig. 2DHTWL1.7.). Set object temperature as **900** °C. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Workpiece“ (Obrobok) zmeňte typ objektu na **Elasto-plastic**, keďže potrebujeme predpovedať zvyškové napätia (pozri obr. 2DHTWL1.7.). Nastavte teplotu objektu na **900** °C. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
   
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0007.jpg' | relative_url }})
 
-Workpiece object definition
+Definícia objektu obrobku
 
-### Import Geometry
+### Import geometrie
 
-In Geometry page, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (import geometry from library) option and import the **QUENCH_PART.IGS** file from installation path \SFTC\DEFORM\v*_*\2d\LABS as shown in Fig. 2DHTWL1.8. Use ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) action label to check the Geometry. A perfect geometry should display message as shown in Fig. 2DHTWL1.9. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke Geometria kliknite na možnosť ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (importovať geometriu z knižnice) a importujte súbor **QUENCH_PART.IGS** z inštalačnej cesty \SFTC\DEFORM\v*_*\2d\LABS, ako je znázornené na obr. 2DHTWL1.8. Pomocou akcie ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) skontrolujte geometriu. Pri správnej geometrii by sa mala zobraziť správa, ako je znázornené na obr. 2DHTWL1.9. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
   
   
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0008.jpg' | relative_url }})
 
-Importing Geometry for Workpiece
+Import geometrie obrobku
 
   
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0009.jpg' | relative_url }})
 
-Output of imported geometry checking
+Výstup kontroly importovanej geometrie
 
-### Generate Mesh
+### Vytvoriť sieť
 
-In Mesh page, enter**Target number of elements** as **500** and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button. After completion of generating mesh, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to assign material for workpiece. 
+Na stránke „Mesh“ zadajte **Cieľový počet prvkov** ako **500** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Po dokončení generovania siete kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste obrobku priradili materiál. 
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0010.jpg' | relative_url }})
 
-Mesh settings and mesh generated
+Nastavenia siete a vygenerovaná sieť
 
-### Assigning Material
+### Priradenie materiálu
 
-Select and assign **S45C-JAPAN** Material as shown in Fig. 2DHTWL1.11. Click ![]({{ '/assets/icons/pre_icons/mo_back_button.jpg' | relative_url }}) to generate coating mesh.
+Vyberte a priraďte materiál **S45C-JAPAN**, ako je znázornené na obr. 2DHTWL1.11. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_back_button.jpg' | relative_url }}) vygenerujte sieť povlaku.
 
   
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0011.jpg' | relative_url }})
 
-Assigning Material to workpiece
+Priradenie materiálu k obrobku
 
-### Generating Coating Mesh
+### Vytváranie mriežky povlaku
 
-Switch to expert mode by click on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). We will be adding coating layers to obtain better information about the phase transformations on surfaces. Select Coating tab and add 2 layers by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}) button. Set 500 and 1000 for thickness of layer 1 and 2 respectively as shown in Fig. 2DHTWL1.12., select same material **S45C-JAPAN** and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button. Click on ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) to change to guided mode. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until boundary conditions page.
+Prepnite do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). Budeme pridávať vrstvy povlaku, aby sme získali lepšie informácie o fázových premenách na povrchoch. Vyberte kartu „Coating“ a pridajte 2 vrstvy kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }}). Nastavte hrúbku vrstvy 1 na 500 a vrstvy 2 na 1000, ako je znázornené na obr. 2DHTWL1.12., vyberte rovnaký materiál **S45C-JAPAN** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}), aby ste prešli do režimu s navádzaním. Klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s okrajovými podmienkami.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0012.jpg' | relative_url }})
 
-Coating mesh settings used in Workpiece mesh generation
+Nastavenia siete povrchovej úpravy použité pri generovaní siete obrobku
 
-### Assigning Boundary conditions
+### Nastavenie okrajových podmienok
 
-  1. Select X direction and define velocity as 0, pick nodes along axis as shown in Fig. 2DHTWL1.13. to constrain nodal velocity in X direction, as this is an axi-symmetric set up.
+  1. Vyberte smer X a nastavte rýchlosť na 0, vyberte uzly pozdĺž osi tak, ako je znázornené na obr. 2DHTWL1.13, aby ste obmedzili rýchlosť uzlov v smere X, keďže ide o osovo symetrické usporiadanie.
 
-  2. Select Y direction and define velocity as 0, pick nodes along bottom surface of the workpiece as shown in Fig. 2DHTWL1.13. to constrain nodal velocity in Y direction of workpiece during quench.
+  2. Vyberte smer Y a nastavte rýchlosť na 0, vyberte uzly pozdĺž spodnej plochy obrobku, ako je znázornené na obr. 2DHTWL1.13, aby ste obmedzili rýchlosť uzlov v smere Y obrobku počas kalenia.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0013.jpg' | relative_url }})
 
-Assigning Velocity BCC
+Priradenie rýchlosti BCC
 
-### Workpiece Phase levels initialization
+### Inicializácia úrovní fáz obrobku
 
-Since we need to calculate phase transformation, we need to initialize initial level of each phase, keep note that sum of all phases at each element should be equal to 1. Since the object temp is 900°C and the material is steel, the material would have changed to Austenite phase completely, we will initialize entire workpiece to Austenite phase. To do so, click on object element data ![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}) and select Phase transformation tab under Microstructure. Initialize Austenite as 1 and zero for the rest by selecting phase and using ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) (See Fig. 2DHTWL1.14.). In Initialize Element Data window assign value using Range option by defining 1 as value as shown in Fig. 2DHTWL1.15. and then click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) button. Click on ![]({{ '/assets/icons/pre_icons/mo_close_button2.jpg' | relative_url }}) button to close the Initialize Element Data window and click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close Element data dialog. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the medium details.
+Keďže musíme vypočítať fázovú transformáciu, musíme nastaviť počiatočnú úroveň každej fázy; nezabudnite, že súčet všetkých fáz v každom prvku by mal byť rovný 1. Keďže teplota objektu je 900 °C a materiálom je oceľ, materiál by sa úplne premenil na austenitovú fázu, preto inicializujeme celý obrobok na austenitovú fázu. Na to kliknite na údaje prvku objektu ![]({{ '/assets/icons/pre_icons/mo_elemental_data_icon.jpg' | relative_url }}) a v časti Mikrostruktúra vyberte kartu Fázová transformácia. Inicializujte austenit na hodnotu 1 a ostatné fázy na nulu výberom fázy a použitím ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) (pozri obr. 2DHTWL1.14.). V okne „Inicializovať údaje prvku“ priraďte hodnotu pomocou možnosti „Rozsah“ tak, že zadáte hodnotu 1, ako je znázornené na obr. 2DHTWL1.15, a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_close_button2.jpg' | relative_url }}), aby ste zatvorili okno „Inicializovať údaje prvkov“, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste zatvorili dialógové okno „Údaje prvkov“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali podrobnosti o prostredí.
 
   
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0014.jpg' | relative_url }})
 
-Phase level initialization in object Element Data
+Inicializácia úrovne fázy v objekte „Element Data“
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0015.jpg' | relative_url }})
 
-Element Data initialization window
+Okno na inicializáciu údajov prvkov
 
-## Medium Definition
+## Definícia pojmu „stredný“
 
-The simulation consists of quenching, we need to define required medium for this operation, in this case we require water and air. In page “Medium details”, you will define various media and heat transfer zones associated with them as shown in Fig. 2DHTWL1.16.
+Simulácia pozostáva z rýchleho ochladzovania; pre túto operáciu je potrebné definovať požadované médiá, v tomto prípade ide o vodu a vzduch. Na stránke „Podrobnosti o médiách“ definujete rôzne médiá a s nimi súvisiace zóny prenosu tepla, ako je znázornené na obr. 2DHTWL1.16.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0016.jpg' | relative_url }})
 
-Medium Details window
+Okno „Podrobnosti o médiu“
 
-  1. Rename the first medium to “Air” and set the “Default” Heat transfer coefficient (HTC) and convection coefficient to constant 0.05 as shown in Fig. 2DHTWL1.16.
+  1. Premenujte prvé prostredie na „Air“ a nastavte koeficient prenosu tepla (HTC) a koeficient konvekcie v položke „Default“ na konštantu 0,05, ako je znázornené na obr. 2DHTWL1.16.
 
-  2. Add a media “Water”. For "Default" HTC, load convection coefficient data from file "WATER_HTC1_si.DAT".
+  2. Pridajte médium „Voda“. V prípade „štandardného“ modelu HTC načítajte údaje o konvekčnom koeficiente zo súboru „WATER_HTC1_si.DAT“.
 
-  3. Add one more heat transfer zone under media “Water”. Click on the object boundary to specify the start and end points of the zone. The zone is assigned to the bottom of the workpiece as shown in Fig. 2DHTWL1.17. For Zone #1 HTC, load convection coefficient from file " WATER_HTC2_si. DAT" and click on define function to observe the function data as shown in Fig. 2DHTWL1.18. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the schedule page.
+  3. Pridajte ešte jednu zónu prenosu tepla pod médium „Voda“. Kliknutím na ohraničenie objektu určite počiatočný a koncový bod zóny. Zóna je priradená k spodnej časti obrobku, ako je znázornené na obr. 2DHTWL1.17. Pre zónu č. 1 HTC načítajte koeficient konvekcie zo súboru „WATER_HTC2_si.DAT“ a kliknite na funkciu „Definovať“, aby ste si prezreli údaje o funkcii, ako je znázornené na obr. 2DHTWL1.18. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali stránku plánu.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0017.jpg' | relative_url }})
 
-Medium detail window showing zone allocation
+Okno so strednou úrovňou detailov zobrazujúce priradenie zón
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0018.jpg' | relative_url }})
 
-Function definition window
+Okno definície funkcie
 
-## Scheduled Definition
+## Definícia plánu
 
-In “Schedule” page, input a five-stage quench schedule as shown in Fig. 2DHTWL1.19. by clicking on 'Add' button. A procedure like this is sometimes referred as "Intensive Quenching", which is designed to create a very thin "crust" of Martensite on the part. Such a process can achieve high surface hardness with relative low part distortion. 
+Na stránke „Plán“ zadajte päťstupňový plán kalenia, ako je znázornené na obr. 2DHTWL1.19, kliknutím na tlačidlo „Pridať“. Takýto postup sa niekedy označuje ako „intenzívne kalenie“, ktoré je navrhnuté tak, aby na diele vytvorilo veľmi tenkú „kôru“ martenzitu. Takýmto procesom je možné dosiahnuť vysokú povrchovú tvrdosť pri relatívne nízkom deformovaní dielu. 
 
-1) 20 seconds(20s) cooling in the air at 20C
+1) 20 sekúnd (20 s) chladenie na vzduchu pri teplote 20 °C
 
-2) 10 seconds(10s) cooling in the water at 70C
+2) 10 sekúnd (10 s) chladenie vo vode s teplotou 70 °C
 
-3) 60 seconds(60s) cooling in the air at 20C
+3) 60 sekúnd (60 s) chladenie na vzduchu pri teplote 20 °C
 
-4) 5 seconds(10s) cooling in the water at 70C
+4) 5 sekúnd (10 s) chladenie vo vode s teplotou 70 °C
 
-5) 20 Minutes(1200 s) cooling in the air at 20C
+5) 20 minút (1200 s) chladenie na vzduchu pri teplote 20 °C
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0019.jpg' | relative_url }})
 
-Heat Treatment Schedule window
+Okno „Plán tepelného spracovania“
 
-The settings for each stage can be set or modified using ![]({{ '/assets/icons/pre_icons/mo_define.._button.jpg' | relative_url }}) button in advanced column. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Simulation controls page.
+Nastavenia pre každú fázu je možné nastaviť alebo upraviť pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_define.._button.jpg' | relative_url }}) v stĺpci „Pokročilé“. Klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Ovládacie prvky simulácie“.
 
-## Simulation controls
+## Ovládacie prvky simulácie
 
-In "Step Definition", select Auto radio button and change "Temp. Change per step" to 5°C and keep other default settings. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to DB generation page. (See Fig. 2DHTWL1.20.)
+V časti „Definícia kroku“ vyberte prepínač „Auto“, nastavte hodnotu „Zmena teploty na krok“ na 5 °C a ostatné predvolené nastavenia ponechajte bez zmeny. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku generovania databázy. (Pozri obr. 2DHTWL1.20.)
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0020.jpg' | relative_url }})
 
-Simulation controls window
+Okno ovládacích prvkov simulácie
 
-## Generate Database
+## Vytvoriť databázu
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) action label to check the problem. Generate a database by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) action label (see Fig. 2DHTWL1.21.). When the program is done writing the database, switch to ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab to run simulation.
+Kliknite na označenie akcie ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali problém. Vytvorte databázu kliknutím na označenie akcie ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) (pozri obr. 2DHTWL1.21.). Keď program dokončí zapisovanie databázy, prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) a spustite simuláciu.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0021.jpg' | relative_url }})
 
-Generate Database Window
+Okno na vytvorenie databázy
 
-## Starting the Simulation
+## Spustenie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. 2DHTWL1.22. Use the default **Continue Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation. As we click on the ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button simulation starts.
+Kliknite na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), čím otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. 2DHTWL1.22. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“ (od kroku -1), potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu. Po kliknutí na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) sa spustí simulácia.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0022.jpg' | relative_url }})
 
-Run simulation window
+Spustiť okno simulácie
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message and process monitor in Simulation mode. Click the Simulation Message tab to view the Message file. If ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked, which is the default setting, the Message file will refresh every couple of seconds.  
+Priebeh simulácie je možné počas jej vykonávania sledovať prostredníctvom okien „Simulation Message“ a „Process Monitor“ v režime simulácie. Kliknutím na kartu „Simulation Message“ zobrazíte súbor správ. Ak je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}), čo je predvolené nastavenie, súbor správ sa bude aktualizovať každých pár sekúnd.  
   
-The Message file provides information about which simulation step the simulation is currently on and gives information dealing with how well the simulation is running.  
-When the simulation has finished, the message will be added to the end of the Message file. (See Fig. 2DHTWL1.23.).  
+Súbor „Message“ obsahuje informácie o tom, v ktorom simulačnom kroku sa simulácia práve nachádza, a poskytuje údaje o tom, ako dobre simulácia prebieha.  
+Po ukončení simulácie sa správa pridá na koniec súboru správ. (Pozri obr. 2DHTWL1.23.)  
   
-Each stage defined will be executed as individual operation and user need to wait until all the stages simulation is completed.
+Každá definovaná fáza sa vykoná ako samostatná operácia a používateľ musí počkať, kým sa simulácia všetkých fáz dokončí.
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0023.jpg' | relative_url }})
 
-Simulation Message tab
+Karta „Simulačné správy“
 
-## Post processing
+## Následné spracovanie
 
-When the simulation has finished, click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}). In Step Browser click on ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}) button to view all steps. Plot Temperature state variable and observe the temperature distribution at different stages of quenching operation (See Fig. 2DHTWL1.24.). Also plot the volume fraction of each phases at the end of the Quenching process using Volume fraction state variable under microstructure. (See Fig. 2DHTWL1.25.).
+Po ukončení simulácie kliknite na ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}). V prehliadači krokov kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}), aby ste si zobraili všetky kroky. Zobrazte stavovú premennú „Teplota“ a sledujte rozloženie teploty v rôznych fázach procesu kalenia (pozri obr. 2DHTWL1.24.). Zobrazte tiež objemový podiel jednotlivých fáz na konci procesu kalenia pomocou stavovej premennej „Objemový podiel“ v časti „Mikroštruktúra“ (pozri obr. 2DHTWL1.25.).
 
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0024.jpg' | relative_url }})
 
-Temperature distribution at different stages of quenching operation.
+Rozloženie teploty v rôznych fázach procesu kalenia.
 
   
 ![]({{ '/assets/images/labs/heat_treatment_labs/2d_heat_treatment_wizard_lab1/image0025.jpg' | relative_url }})
 
-Volume fraction of each phases at the end of the Quenching process of quenching operation.
+Objemový podiel jednotlivých fáz na konci procesu kalenia.

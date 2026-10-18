@@ -1,579 +1,579 @@
 ---
 lang: sk
-title: "Shape Rolling Lab2"
+title: "Tvarové valcovanie Lab2"
 ---
 
-# Shape Rolling Lab2 (Lagrangian using Brick mesh)
+# Tvarové valcovanie Lab2 (Lagrangian pomocou tehlovej siete)
 
-In this lab we will be setting up simple Lagrangian multi-pass rolling operation using Shape Rolling template available in Integrated Manufacturing Process template.
+V tomto laboratóriu nastavíme jednoduchú lagrangeovskú viaccestnú valcovaciu operáciu pomocou šablóny Shape Rolling, ktorá je k dispozícii v šablóne integrovaného výrobného procesu.
 
-2.1. Creating a New problem
+2.1. Vytvorenie nového problému
 
-2.2. Adding Shape Rolling operation
+2.2. Operácia valcovania tvaru
 
-2.3. Set process conditions
+2.3. Nastavenie procesných podmienok
 
-2.4. Defining Workpiece
+2.4. Definovanie obrobku
 
-2.4.1. Defining Workpiece object
+2.4.1. Definovanie objektu obrobku
 
-2.4.2. Creating Workpiece Geometry
+2.4.2. Vytvorenie geometrie obrobku
 
-2.4.3. Generating Workpiece mesh
+2.4.3. Generovanie pletiva obrobku
 
-2.4.4. Assigning Workpiece material
+2.4.4. Priradenie materiálu obrobku
 
-2.4.5. Defining Workpiece boundary conditions
+2.4.5. Definovanie okrajových podmienok obrobku
 
-2.5. Defining Grooves
+2.5. Definovanie drážok
 
-2.5.1. Defining Grooves for Roll geometry
+2.5.1. Definovanie drážok pre geometriu kotúča
 
-2.6. Defining 4 passes with 2 Stands in 3rd and 4th pass
+2.6. Definovanie 4 priechodov s 2 stojanmi v 3. a 4. priechode
 
-2.7. Generating 3D Setup
+2.7. Generovanie 3D nastavenia
 
-2.7.1. 3D Roll geometry settings
+2.7.1. Nastavenia geometrie 3D Roll
 
-2.7.2. 3D Roll mesh settings
+2.7.2. Nastavenia povrchovej siete 3D Roll
 
-2.7.3. 3D Workpiece setup using Brick mesh
+2.7.3. 3D nastavenie obrobku pomocou tehlovej siete
 
-2.7.4. Pusher definition
+2.7.4. Definícia posunovača
 
-2.8. Simulation controls in rolling group level
+2.8. Ovládacie prvky simulácie na úrovni valivej skupiny
 
-2.9. Modifying Rolling pass operation 1 (Pass 1)
+2.9. Úprava operácie Rolling pass 1 (Pass 1)
 
-2.9.1. Stand table for pass 1
+2.9.1. Stojan na priechod 1
 
-2.9.2. Table back
+2.9.2. Zadná strana stola
 
-2.9.2.1. Defining Table back geometry
+2.9.2.1. Definovanie zadnej geometrie stola
 
-2.9.2.2. Table back Mesh Generation
+2.9.2.2. Stôl späť Mesh Generation
 
-2.9.2.3. Table Back Material assigning
+2.9.2.3. Priradenie materiálu spätného stola
 
-2.9.3. Pusher object
+2.9.3. Objekt posunovača
 
-2.9.3.1. Pusher object movement definition
+2.9.3.1. Definícia pohybu posunovacieho objektu
 
-2.9.4. Object positioning
+2.9.4. Umiestnenie objektu
 
-2.9.5. Defining Contact Relations
+2.9.5. Definovanie kontaktných vzťahov
 
-2.9.6. Defining Simulation Controls
+2.9.6. Definovanie ovládacích prvkov simulácie
 
-2.9.7. Generating Database
+2.9.7. Generovanie databázy
 
-2.10. Modifying Rolling pass operation 2 (Pass 2)
+2.10. Úprava operácie Rolling pass 2 (Pass 2)
 
-2.10.1. Creating the table geometry and generating the mesh
+2.10.1. Vytvorenie geometrie stola a vytvorenie povrchovej siete
 
-2.10.2. Pusher object movement definition
+2.10.2. Definícia pohybu posunovacieho objektu
 
-2.10.3. Schedule positioning definition
+2.10.3. Definícia polohovania harmonogramu
 
-2.10.4. Simulation controls page
+2.10.4. Stránka s ovládacími prvkami simulácie
 
-2.11. Modifying Rolling pass operation 3 (Pass 3)
+2.11. Úprava operácie Rolling pass 3 (Pass 3)
 
-2.11.1. Creating the table geometry and generating the mesh
+2.11.1. Vytvorenie geometrie stola a vytvorenie povrchovej siete
 
-2.11.2. Defining movement for stand2 rolls
+2.11.2. Definovanie pohybu valcov stojana 2
 
-2.11.3. Pusher object movement definition
+2.11.3. Definícia pohybu posunovacieho objektu
 
-2.11.4. Schedule positioning definition
+2.11.4. Definícia polohovania harmonogramu
 
-2.11.5. Simulation controls page
+2.11.5. Stránka s ovládacími prvkami simulácie
 
-2.12. Modifying Rolling pass operation 4 (Pass 4)
+2.12. Úprava operácie Rolling pass 4 (Pass 4)
 
-2.12.1. Creating the table geometry and generating the mesh
+2.12.1. Vytvorenie geometrie stola a vytvorenie povrchovej siete
 
-2.12.2. Defining movement for stand2 rolls
+2.12.2. Definovanie pohybu valcov stojana 2
 
-2.12.3. Pusher object movement definition
+2.12.3. Definícia pohybu posunovacieho objektu
 
-2.12.4. Schedule positioning definition
+2.12.4. Definícia polohovania harmonogramu
 
-2.12.5. Simulation controls page
+2.12.5. Stránka s ovládacími prvkami simulácie
 
-2.13. Running simulation
+2.13. Simulácia chodu
 
 2.14. Post Processing
 
-## Creating a New problem
+## Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na ** zariadení so systémom Windows ** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), zvoľte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte * * DEFORM GUI Main * * vxx.xx. Zobrazí SA hlavné okno Deform GUI.
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. L2.1. Select "**Integrated Manufacturing Process** " radio button and unit system as "**SI** " using radio button. Define Problem Name as "**SHR_LAG_LAB2** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})* ***Nový problém** alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Problem Setup (Nastavenie problému), ako je znázornené na obr. L2.1. Pomocou prepínača vyberte prepínač „* * Integrovaný výrobný proces * *“ a systém jednotiek ako „** SI * * “. Definujte názov problému ako „**SHR_LAG_LAB2 ** “ a uistite sa, že je zapnuté začiarkavacie políčko „** Zobraziť dialóg možností * *“ (ak nezapneme začiarkavacie políčko „**Zobraziť dialóg možností * * “, nezobrazí sa dialógové okno Nový projekt v používateľskom rozhraní MO). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) a otvorte nový problém pomocou integrovaného výrobného procesu deformácie.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0001.jpg' | relative_url }})
 
-Problem type selection window
+Okno výberu typu problému
 
-Multiple operation wizard will open with the New Project dialog as shown in Fig. L2.2., at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘****SHR_LAG_LAB2**** ’ as the project name. 3D Shape Rolling operation can also be added in "New Project" dialog (see Fig. L2.2.), in this lab we will add Shape rolling operation from Explorer operation list, so do not check "First operation" check box and "Shape Rolling" operation in "New Project" dialog. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation. 
+Sprievodca viacnásobnou operáciou sa otvorí s dialógovým oknom Nový projekt, ako je znázornené na obr. L2.2., v tomto bode sa používateľovi zobrazí výzva na zadanie názvu projektu (systém vytvorí samostatný priečinok s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „** * *SHR_LAG_LAB2** * * “. Operáciu 3D Shape Rolling je možné pridať aj v dialógu „New Project“ (pozri obr. L2.2.), v tomto laboratóriu pridáme operáciu valcovania tvaru zo zoznamu operácií prieskumníka, takže nezačiarknite políčko "Prvá operácia" a operáciu "Valcovanie tvaru" v dialógovom okne "Nový projekt". Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otvorení operácie.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0002.jpg' | relative_url }})
 
-Adding Shape Rolling Operation in MO UI from new Project window.
+Pridanie operácie valcovania tvaru v používateľskom rozhraní MO z nového okna projektu.
 
-##  Adding Shape Rolling operation
+## Operácia valcovania tvaru
 
-Add one Shape Rolling operation from the Explorer Operations list. Operation can be added by clicking on Shape Rolling operation ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button or user can also add by drag and drop into the Operation Editor. (See Fig. L2.3.). As we add operation, Process page will be opened in the properties area.
+Pridajte jednu operáciu valcovania tvaru zo zoznamu operácií prieskumníka. Operáciu možno pridať kliknutím na tlačidlo Operácia valcovania tvaru ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) alebo ju môže používateľ pridať aj presunutím myšou do editora operácií. (Pozri obr. L2.3.). Po pridaní operácie sa v oblasti vlastností otvorí stránka Proces.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0003.jpg' | relative_url }})
 
-Adding Shape Rolling Operation from explorer
+Pridanie operácie valcovania tvaru z prieskumníka
 
-## Set process conditions
+Procesné podmienky
 
-In Process page, select the rolling type as "**Lagrangian** ” and symmetry type as “**Full** ”, as we will be setting up quarter symmetry object. As we are interested in temperature gradient in rolls, select the "**Workpiece and rolls (non-isothermal)** " option. Define the friction coefficient value as **0.7** and heat transfer coefficient value as **11** as shown in Fig. L2.4.. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to WP_CrossSection page.
+Na stránke Proces vyberte typ valcovania ako „**Lagrangeovský** “ a typ symetrie ako „* * Plný * * “, pretože budeme nastavovať štvrťročný objekt symetrie. Keďže nás zaujíma teplotný gradient v kotúčoch, vyberte možnosť „**Obrobok a kotúče (neizotermické)** “. Definujte hodnotu koeficientu trenia ako **0,7 * * a hodnotu koeficientu prestupu tepla ako **11 * *, ako je znázornené na obr. L2.4. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku WP_CrossSection.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0004.jpg' | relative_url }})
 
-Defining rolling process conditions in Process page.
+Definovanie podmienok valivého procesu na stránke Proces.
 
-## Defining Workpiece
+## Definovanie obrobku
 
-### Defining Workpiece object
+### Definovanie objektu obrobku
 
-In WP_CrossSection window, keep the object type as ‘Plastic’ and specify workpiece temperature as 100°C (See Fig. L2.5.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+V okne WP_CrossSection ponechajte typ objektu ako „Plast“ a zadajte teplotu obrobku 100 °C (pozri obr. L2.5.). Pokračujte kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0005.jpg' | relative_url }})
 
-Workpiece Object Definition.
+Definícia objektu obrobku.
 
-### Creating Workpiece Geometry
+### Vytváranie geometrie obrobku
 
-We need to create a bar geometry for workpiece. To do so, in Geometry page select ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), from primitive geometry window select bar and define the parameters for Origin Point as (-50, -42.5), Width (W) as 100mm and Height (H) as 85mm as shown in Fig. L2.6. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh.
+Musíme vytvoriť geometriu tyče pre obrobok. Ak to chcete urobiť, na stránke Geometria vyberte ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), z okna primitívnej geometrie vyberte lištu a definujte parametre pre východiskový bod ako (-50, -42,5), šírku (W) ako 100 mm a výšku (H) ako 85 mm, ako je znázornené na obr. L2.6. Zatvorte kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0006.jpg' | relative_url }})
 
-Define Primitive.
+Definujte primitívne.
 
-### Generating Workpiece mesh
+### Generovanie pletiva obrobku
 
-Generate the workpiece mesh with number of elements as 100 and keep other options to their default settings (See Fig. L2.7.). If required, expert mode is accessible when we click on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) button, to access more settings to control 2D mesh. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Vygenerujte povrchovú sieť obrobku s počtom prvkov 100 a ponechajte ďalšie možnosti v ich predvolených nastaveniach (pozri obr. L2.7.). Ak je to potrebné, expertný režim je prístupný po kliknutí na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}), čím získate prístup k ďalším nastaveniam na ovládanie 2D povrchovej siete. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0007.jpg' | relative_url }})
 
-Workpiece mesh generation.
+Generovanie pletiva obrobku.
 
-### Assigning Workpiece material
+### Priradenie materiálu obrobku
 
-To assign material for workpiece, select the steel category material ‘**AISI-1045** ’ from material library and assign to workpiece. This can be done as shown in Fig. L2.8. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to BCC page.
+Ak chcete priradiť materiál pre obrobok, vyberte materiál kategórie ocele „**AISI-1045** “ z knižnice materiálov a priraďte ho k obrobku. Dá sa to urobiť tak, ako je znázornené na obr. L2.8. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na BCC.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0008.jpg' | relative_url }})
 
-Assigning material to Workpiece.
+Priradenie materiálu k obrobku.
 
-### Defining Workpiece boundary conditions
+### Definovanie hraničných podmienok obrobku
 
-During the mesh generation the heat exchange with environment BCC is assigned to workpiece as shown in Fig. L2.9. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Groove list page.
+Počas generovania siete je výmena tepla s prostredím BCC priradená k obrobku, ako je znázornené na obr. L2.9. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Groove list.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0009.jpg' | relative_url }})
 
-Workpiece boundary conditions page.
+Stránka hraničných podmienok obrobku.
 
-## Defining Grooves
+## Definovanie drážok
 
-In Groove List page, we can define rolls 2D cross-section by clicking on the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button. Click ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) thrice to add 3 grooves (See Fig. L2.10.), we will be using groove 1 for pass 1 and pass 2 and groove 2 & groove 3 for pass 3 and pass 4 (2-stands).
+Na stránke Groove List môžeme definovať 2D prierez valcov kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) trikrát pridáte 3 drážky (pozri obr. L2.10.), použijeme drážku 1 pre priechod 1 a priechod 2 a drážku 2 a drážku 3 pre priechod 3 a priechod 4 (2 stojany).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0010.jpg' | relative_url }})
 
-Groove list page.
+Stránka zoznamu drážok.
 
-### Defining Grooves for Roll geometry
+### Definovanie drážok pre geometriu kotúča
 
-Select the First groove and click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) to select the groove from one of the existing Roll groove primitives.
+Vyberte prvú drážku a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) vyberte drážku z jedného z existujúcich základných drážok Roll.
 
-Roll Groove Primitive page will be opened, select Flat rolls. Define 2D Cross-section geometry of roll grooves with width (W) as 120, radius (r1) as 5 and Roll Radius (RR) as 100 as shown in the Fig. L2.11. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Roll Groove Primitive page.
+Otvorí sa stránka Roll Groove Primitive, vyberte položku Flat rolls (Ploché kotúče). Definujte geometriu 2D prierezu valcových drážok so šírkou (W) ako 120, polomerom (r1) ako 5 a polomerom valca (RR) ako 100, ako je znázornené na obr. L2.11. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte stránku Roll Groove Primitive.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0011.jpg' | relative_url }})
 
-Defining Groove 1 Geometry
+Definovanie geometrie drážky 1
 
-Similarly select the second groove and click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), then select Flat rolls. Define 2D Cross-section geometry of roll grooves with width (W) as 60, radius (r1) as 5 and Roll Radius (RR) as 100 as shown in the Fig. L2.12. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Roll Groove Primitive page.
+Podobne vyberte druhú drážku a kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), potom vyberte Ploché valce. Definujte geometriu 2D prierezu valcových drážok so šírkou (W) ako 60, polomerom (r1) ako 5 a polomerom valca (RR) ako 100, ako je znázornené na obr. L2.12. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte stránku Roll Groove Primitive.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0012.jpg' | relative_url }})
 
-Defining Groove 2 Geometry
+Definovanie geometrie drážky 2
 
-Similarly select the third groove and click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), then select Flat rolls. Define 2D Cross-section geometry of roll grooves with width (W) as 120, radius (r1) as 5 and Roll Radius (RR) as 50 as shown in the Fig. L2.13. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Roll Groove Primitive page. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Pass page.
+Podobne vyberte tretiu drážku a kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), potom vyberte Ploché valce. Definujte geometriu 2D prierezu valcových drážok so šírkou (W) ako 120, polomerom (r1) ako 5 a polomerom valca (RR) ako 50, ako je znázornené na obr. L2.13. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte stránku Roll Groove Primitive. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Pass.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0013.jpg' | relative_url }})
 
-Defininig Groove 3 Geometry
+Geometria Defininig Groove 3
 
-## Defining 4 passes with 2 Stands in 3rd and 4th pass 
+## Definovanie 4 priechodov s 2 stojanmi v 3. a 4. priechode
 
-In pass table, using the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button, add 4 passes. At all four passes, keep
+V tabuľke priechodov pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) pridajte 4 priechody. Na všetkých štyroch priechodoch dodržujte
 
-  * Rollset type as vertical for all 4 passes. 
+* Typ rollsetu ako vertikálny pre všetky 4 priechody.
 
-  * Set Roll temperature as **40C** for all for passes.
+* Nastavte teplotu valca na **40C** pre všetky prihrávky.
 
-  * Define Roll speed as **50 rpm for** all four passes.
+* Definujte rýchlosť valenia ako **50 otáčok za minútu pre** všetky štyri priechody.
 
-Define **Groove1** as Top roll groove geometry for 1st and 2nd passes and **Groove2** as Top roll groove geometry for 3rd and 4th passes. Define Roll gap (mm) as **80mm** , **75mm** , **65mm** and **60mm** for 1st, 2nd , 3r d and 4th passes respectively. Turn ON the **Reverse****rolling** check box for 2nd and 4th passes as shown in the the Fig. L2.14.
+Definujte **drážku1** ako geometriu drážky horného valca pre 1. a 2. priechod a **drážku2** ako geometriu drážky horného valca pre 3. a 4. priechod. Definujte medzeru medzi valcami (mm) ako **80 mm ** , **75 mm** , **65 mm** a **60 mm** pre 1., 2., 3r d a 4. priechod. Zapnite začiarkavacie políčko **Reverse*** * Rolling * * pre 2. a 4. priechod, ako je znázornené na obr. L2.14.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0014.jpg' | relative_url }})
 
-Pass Table
+Tabuľka preukazov
 
-Select the Pass 3 and click on ![]({{ '/assets/icons/pre_icons/mo_stand_table_button.jpg' | relative_url }}) button as shown in the Fig. L2.14. to display stand table. In stand table, using the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button add 2nd stand and define the 2nd stand parameters as shown in the Fig. L2.15.
+Vyberte Pass 3 a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_stand_table_button.jpg' | relative_url }}), ako je znázornené na obr. L2.14. na zobrazenie stojanového stola. V tabuľke stojanov pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) pridajte 2. stojan a definujte parametre 2. stojanu, ako je znázornené na obr. L2.15.
 
-  * Define Rollset type as **horizontal** for 2nd stand. 
+* Typ rollsetu definujte ako **vodorovný** pre 2. stojan.
 
-  * Select Groove3 as groove geometry for Top roll at 2nd stand.
+* Vyberte Groove3 ako geometriu drážky pre horný valec na 2. stojane.
 
-  * Define Roll speed (rpm) as **0rpm**.
+* Definujte rýchlosť valenia (ot/min) ako **0 otáčok za minútu **.
 
-  * Define Roll gap (mm) as **90mm**.
+* Definujte medzeru medzi valcami (mm) ako **90 mm**.
 
-  * Set Roll temperature as **40C** at 2nd stand.
+* Nastavte teplotu kotúča na **40C** na 2. podstavci.
 
-  * Define X position (mm) as **0mm**.
+* Definujte polohu X (mm) ako **0 mm**.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close Stand table settings page.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte stránku nastavení stola.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0015.jpg' | relative_url }})
 
-Defining 2 stands in Stand Table for third pass
+Definovanie 2 stánkov v stánku pre tretí priechod
 
-Similarly, select the **Pass 4** and click on ![]({{ '/assets/icons/pre_icons/mo_stand_table_button.jpg' | relative_url }}) button.
+Podobne vyberte **Pass 4** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_stand_table_button.jpg' | relative_url }}).
 
-In stand table, using the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button add 2nd stand and define the 2nd stand as shown in the Fig. L2.16.
+V stolíku pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) pridajte 2. stojan a definujte 2. stojan, ako je znázornené na obr. L2.16.
 
-  * Define Rollset type as **horizontal** for 2nd stand. 
+* Typ rollsetu definujte ako **vodorovný** pre 2. stojan.
 
-  * Select **Groove3** as groove geometry for Top roll at 2nd stand.
+* Vyberte **Groove3** ako geometriu drážky pre horný valec na 2. stojane.
 
-  * Define Roll speed (rpm) as **0rpm.**
+* Definujte rýchlosť rolovania (ot/min) ako **0 otáčok za minútu.**
 
-  * Define Roll gap (mm) as **90mm**.
+* Definujte medzeru medzi valcami (mm) ako **90 mm**.
 
-  * Set Roll temperature as **40C** at 2nd stand.
+* Nastavte teplotu kotúča na **40C** na 2. podstavci.
 
-  * Define X position (mm) as **0mm**.
+* Definujte polohu X (mm) ako **0 mm**.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close Stand table settings page. Leave other settings in Pass table as default and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 3D setup page.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte stránku nastavení stola. Ponechajte ostatné nastavenia v tabuľke Pass ako predvolené a kliknite na stránku nastavenia ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku 3D.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0016.jpg' | relative_url }})
 
-Defining 2 stands in Stand Table for fourth pass
+Definovanie 2 stojanov v stánku pre štvrtý priechod
 
-## Generating 3D Setup
+## Generovanie nastavenia 3D
 
-In 3D setup page, we have options to set geometry and mesh settings for Workpiece, Rolls and Pusher that are applied to all passes and stands. Using the ![]({{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}) button adjacent to the respective objects, we can modify the settings. In this lab, select the “**Prevent twisting** ” check box if it is not selected by default as shown in Fig. L2.17.
+Na stránke 3D nastavenia máme možnosti nastavenia geometrie a povrchovej siete pre obrobok, rolky a posunovač, ktoré sa vzťahujú na všetky priechody a stojany. Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}) vedľa príslušných objektov môžeme upraviť nastavenia. V tomto laboratóriu zaškrtnite políčko „**Zabrániť krúteniu** “, ak nie je predvolene zaškrtnuté, ako je znázornené na obr. L2.17.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0017.jpg' | relative_url }})
 
-3D Setup page.
+Stránka 3D Setup (Nastavenie 3D).
 
-### 3D Roll geometry settings
+### Nastavenia geometrie 3D rolky
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}) button of 3D Rolls geometry, 3D roll geometry window will be opened with settings for 3D roll geometry. Define **number of layers** for rolls as **72** using the “**Uniform****geometry generation** ” option as shown in Fig. L2.18. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) button to generate rolls with defined settings for all the passes and stands. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button to close the 3D roll geometry window.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}) geometrie 3D valcov, otvorí sa okno geometrie 3D valcov s nastaveniami geometrie 3D valcov. Definujte **počet vrstiev** pre kotúče ako **72** pomocou možnosti „**Uniform****geometry generation** “, ako je znázornené na obr. L2.18. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) vygenerujete kotúče s definovanými nastaveniami pre všetky prihrávky a stojany. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte okno geometrie 3D rolovania.
 
   
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0018.jpg' | relative_url }})
 
-3D Roll Geometry settings page
+Stránka nastavení 3D Roll Geometry
 
-### 3D Roll mesh settings
+### Nastavenia 3D rolovacej siete
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}) button of 3D rolls mesh, 3D roll mesh window will be opened with settings for 3D roll mesh. Define **number of revolved sections** for rolls as **72** using the “**Uniform mesh generation** ” option and import the die material ‘AISI-H-13’ from material library to assign to rolls as shown in Fig. L2.19. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) button to generate mesh for rolls with defined settings for all passes and stands and assign material. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button to close the 3D roll mesh window.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}) 3D rolovacej siete, otvorí sa okno 3D rolovacej siete s nastaveniami pre 3D rolovaciu sieť. Definujte **počet otočných profilov** pre kotúče ako **72** pomocou možnosti „**Uniform mesh generation** “ a importujte materiál matrice „AISI-H-13“ z knižnice materiálov na priradenie k kotúčom, ako je znázornené na obr. L2.19. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) vygenerujete povrchovú sieť pre kotúče s definovanými nastaveniami pre všetky priechody a stojany a priradíte materiál. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte okno 3D rolovacej siete.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0048.jpg' | relative_url }})
 
-3D Roll mesh settings page
+Stránka nastavení povrchovej siete 3D Roll
 
-### 3D Workpiece setup using Brick mesh
+### 3D nastavenie obrobku pomocou tehlovej siete
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}) button of 3D Workpiece, Mesh window with 3D Workpiece mesh settings will be opened. Select user radio button for **Workpiece Length** and define the length as **600mm** , define **Number of Layers** as **120** using “**Uniform****thickness of layers** ” option to generate uniform mesh as shown in the Fig. L2.20. For lagrangian setup we will be having only the Boolean meshing method available. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}) to generate 3D Workpiece mesh. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Mesh window of Workpiece mesh settings after generating the mesh. 
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}) 3D obrobku, otvorí sa okno Mesh s nastaveniami siete 3D obrobku. Vyberte prepínač používateľa pre ** Dĺžka obrobku ** a definujte dĺžku ako **600 mm** , definujte **Počet vrstiev** ako **120** pomocou možnosti „**Jednotná *** *hrúbka vrstiev** “ na vytvorenie rovnomernej siete, ako je znázornené na obr. L2.20. Pre nastavenie lagrangian budeme mať k dispozícii iba metódu boolean meshing. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}) vygenerujete 3D povrchovú sieť obrobku. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte okno Mesh nastavenia povrchovej siete obrobku po vygenerovaní povrchovej siete.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0019.jpg' | relative_url }})
 
-3D Workpiece mesh settings page
+Stránka nastavení 3D povrchovej siete obrobku
 
-### Pusher definition
+### Definícia posunovača
 
-In 3D setup page, we can select the pusher as object or BCC. In this lab setup, we will be using the pusher as object so, select “**Object** ” radio button and click on ![]({{ '/assets/icons/pre_icons/mo_auto_position_button.jpg' | relative_url }}) button as shown in the Fig. L2.21. to position Workpiece with respect to rolls depending on the rolls movement direction and Pusher to Workpiece. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to simulation controls page.
+Na stránke 3D nastavenia môžeme vybrať posunovač ako objekt alebo BCC. V tomto laboratórnom nastavení budeme používať posunovač ako objekt, takže zvoľte prepínač „**Objekt** “ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_auto_position_button.jpg' | relative_url }}), ako je znázornené na obr. L2.21. na umiestnenie obrobku vo vzťahu k valcom v závislosti od smeru pohybu valcov a posunovača k obrobku. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku ovládacích prvkov simulácie.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0020.jpg' | relative_url }})
 
-Pusher object definition in 3D setup page.
+Definícia objektu posunovača na stránke nastavenia 3D.
 
-## Simulation controls in rolling group level
+## Ovládacie prvky simulácie na úrovni valcovacej skupiny
 
-In this simulation controls page we need to select the solver as **MUMPS** since we are using the horizontal rolls having torsion movement in the 3rd and 4th pass. After selecting the solver, click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_passes_button.jpg' | relative_url }}) button. Now save the project and select the Rolling Pass operation 1 in operation editor by clicking on the operation tile to modify settings of Pass 1.
+Na tejto stránke s ovládacími prvkami simulácie musíme vybrať riešiteľa ako **PRÍUŠNICE**, pretože používame horizontálne valce s torzným pohybom v 3. a 4. priechode. Po výbere riešiteľa kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_passes_button.jpg' | relative_url }}). Teraz uložte projekt a vyberte operáciu Rolling Pass 1 v editore operácií kliknutím na dlaždicu operácie a upravte nastavenia funkcie Pass 1.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0021.jpg' | relative_url }})
 
-Simulation controls in rolling group level
+Ovládacie prvky simulácie na úrovni valivej skupiny
 
-## Modifying Rolling pass operation 1 (Pass 1)
+## Úprava operácie Rolling pass 1 (Pass 1)
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0022.jpg' | relative_url }})
 
-Rolling pass operation
+Prevádzka Rolling Pass
 
-As you select the Rolling Pass operation 1, Stand table page will appear as shown in Fig. L2.23. which shows the Pass 1 data.
+Pri výbere operácie Rolling Pass 1 sa zobrazí stránka tabuľky Stand, ako je znázornené na obr. L2.23. ktorý zobrazuje údaje Pass 1.
 
-### Stand table for pass 1
+### Stôl na stojan pre priechod 1
 
-We need to use the **Table****back** and **Table****front** in this lab, so turn on the check box as shown in the Fig. L2.24. As mesh is generated and material is assigned for rolls, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Table (Back) page.
+V tomto laboratóriu musíme použiť **stôl *** * zadný * * a ** stôl ** ** predný * *, takže zapnite začiarkavacie políčko, ako je znázornené na obr. L2.24. Keď sa vygeneruje povrchová sieť a priradí sa materiál pre kotúče, kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Tabuľka (Späť).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0023.jpg' | relative_url }})
 
-Stand table for Pass 1
+Stôl stojana pre Pass 1
 
-### Table (Back)
+### Stôl (chrbát)
 
-In Table (Back) page, accept the default temperature and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke Tabuľka (Späť) potvrďte predvolenú teplotu a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0026.jpg' | relative_url }})
 
-Table (back) page
+Tabuľka (zadná) strana
 
-#### Defining Table back geometry
+#### Definovanie zadnej geometrie stola
 
-In Table back geometry page, select the 'Define primitive' and define the parameters as mentioned below for back Table geometry.  
-Origin Point X = -50mm  
-Width W = 100mm  
-Height H = 5mm  
-Length = 750
+Na stránke geometrie zadnej strany tabuľky vyberte položku „Definovať primitívne“ a definujte parametre uvedené nižšie pre geometriu zadnej strany tabuľky.
+Východiskový bod X = -50 mm
+Šírka W = 100 mm
+Výška H = 5 mm
+Dĺžka = 750
 
-Check "Align to the top of bottom roll for strip rolling" check box  
-Pass Line = 2.5mm.
+Začiarknite políčko „Zarovnať k hornej časti spodného valca pre valcovanie pásov“
+Pass Line = 2,5 mm.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) to create table and ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Table/Guide geometry Primitive page and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to mesh page.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) pre vytvorenie tabuľky a ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) pre zatvorenie geometrie tabuľky/vodiacej lišty Primitívna stránka a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre povrchovú sieť.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0027.jpg' | relative_url }})
 
-Back Table Geometry creation
+Vytvorenie geometrie zadnej tabuľky
 
-#### Table back Mesh Generation
+#### Stôl späť Mesh Generation
 
-Switch to Expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}), then define the **Uniform Thickness number of layers** as **5** and keep the rest of the settings as default. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) to generate mesh for the Table.
+Prepnite do Expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}), potom definujte **Uniform Thickness number of layers** as * * 5 * * a ponechajte zvyšok nastavení ako predvolené. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) vygenerujete povrchovú sieť pre tabuľku.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0028.jpg' | relative_url }})
 
-Back Table mesh generation
+Generovanie povrchovej siete zadnej tabuľky
 
-#### Table Back Material assigning
+#### Priradenie materiálu zadného stola
 
-To assign material for back Table, select the material ‘**AISI-H-13** ’ from material window. This can be done as shown in Fig. L2.28. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Table Front page.
+Ak chcete priradiť materiál pre zadný stôl, vyberte materiál „**AISI-H-13** “ z okna materiálu. Dá sa to urobiť tak, ako je znázornené na obr. L2.28. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po prednú stranu tabuľky.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0029.jpg' | relative_url }})
 
-Table back material Assigning
+Priradenie materiálu zadnej časti stola
 
   
-Define the Table Front as Table back with same settings for the geometry, mesh and material.
+Prednú stranu stola definujte ako zadnú stranu stola s rovnakými nastaveniami pre geometriu, povrchovú sieť a materiál.
 
-### Pusher object
+### Objekt posunovača
 
-The Pusher object is created automatically using the workpiece dimensions. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to check the created geometry and assigned movement controls.
+Objekt posunovača sa vytvorí automaticky pomocou rozmerov obrobku. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) skontrolujte vytvorenú geometriu a priradené ovládacie prvky pohybu.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0030.jpg' | relative_url }})
 
-Pusher object page
+Stránka objektu posunovača
 
-#### Pusher object movement definition
+#### Definícia pohybu posunovacieho objektu
 
-Select Speed option. Speed of the pusher should be 50 to 60% of the relative velocity of the rolls and hence assign a **constant speed** of **340** mm/sec for pusher as shown in Fig. L2.30. The preview of the movement can be seen by clicking on the "Preview Movement" option. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Object Positioning page.
+Vyberte možnosť Rýchlosť. Rýchlosť posunovača by mala byť 50 až 60% relatívnej rýchlosti valcov, a preto priradiť **konštantnú rýchlosť** 340 ** mm/s pre posunovač, ako je znázornené na obr. L2.30. Náhľad pohybu môžete vidieť kliknutím na možnosť „Náhľad pohybu“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Umiestnenie objektu.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0031.jpg' | relative_url }})
 
-Pusher object movement definition
+Definícia pohybu posunovacieho objektu
 
-### Object positioning
+### Umiestnenie objektu
 
-The objects are automatically positioned correctly when we click ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}) button in the 3D setup page and the Table front and table back are created at proper position automatically so, we don't need to do any positioning now. The objects positioned should appear as shown in Fig. L2.31.
+Objekty sa automaticky umiestnia správne, keď klikneme na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}) na stránke 3D nastavenia a predná a zadná strana stola sa automaticky vytvoria na správnej pozícii, takže teraz nemusíme robiť žiadne polohovanie. Umiestnené predmety by sa mali objaviť tak, ako je znázornené na obr. L2.31.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0032.jpg' | relative_url }})
 
-Position of the objects
+Poloha objektov
 
-### Defining Contact Relations
+### Definovanie kontaktných vzťahov
 
-In the Contact page, master-slave relations will be automatically added between rolls and Workpiece. Select the first relation and define the **Shear** friction as **0.7** and Interface heat transfer coefficient as **11**(See Fig. L2.32.) using ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) button. Using ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button, we will apply same frictional conditions between all stands Top Rolls and Workpiece. Click the ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) to determine an intelligent contact tolerance and click on the ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button to generate contacts between objects. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation controls page. 
+Na stránke Kontakt sa automaticky pridajú vzťahy master-slave medzi valcami a obrobkom. Vyberte prvý vzťah a definujte * * šmykové * * trenie ako **0,7** a súčiniteľ prestupu tepla rozhraním ako **11**(pozri obr. L2.32.) pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}). Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) budeme aplikovať rovnaké trecie podmienky medzi všetkými stojanmi Top Rolls a obrobkom. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) určíte inteligentnú toleranciu kontaktu a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) vygenerujete kontakty medzi objektmi. Kliknite na stránku ovládacích prvkov simulácie ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0033.jpg' | relative_url }})
 
-Contact generation.
+Generovanie kontaktov.
 
-### Defining Simulation Controls
+### Definovanie ovládacích prvkov simulácie
 
-In simulation controls page, switch to guided mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}), then set **Number of steps** as **5000** for this simulation with a**step increment to save** as **10** and **Time per step** as **0.001** sec. For stopping criteria, use default stopping plane point and select **X direction**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to generate database.
+Na stránke ovládacích prvkov simulácie prepnite do režimu vedenia kliknutím na položku ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) a potom nastavte **Počet krokov** ako **5000** pre túto simuláciu s krokom ** na uloženie* * ako * *10** a **Čas na krok** ako **0,001** s. Pre kritériá zastavenia použite predvolený bod roviny zastavenia a vyberte ** smer X **. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujete databázu.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0034.jpg' | relative_url }})
 
-Simulation controls.
+Ovládacie prvky simulácie.
 
-### Generating Database
+### Generovanie databázy
 
-In the database generation page, user can check the data required for the analysis and proceed to generate the database (See Fig. L2.34.).
+Na stránke generovania databázy môže používateľ skontrolovať údaje potrebné na analýzu a pristúpiť k generovaniu databázy (pozri obr. L2.34.).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0035.jpg' | relative_url }})
 
-Database Generation
+Generovanie databázy
 
-## Modifying Rolling pass operation 2 (Pass 2)
+## Úprava operácie Rolling pass 2 (Pass 2)
 
-Now save the project and select the Rolling Pass operation 2 in operation editor by clicking on the operation tile to modify settings of pass 2. We need to use tables at back and front in pass 2, so turn on Table back and Table front check boxes in pass2 stand table as shown in Fig. L2.24. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until the Top Roll mesh page.
+Teraz uložte projekt a vyberte operáciu Rolling Pass 2 v editore operácií kliknutím na dlaždicu operácie, aby ste upravili nastavenia Pass 2. Potrebujeme použiť stoly vzadu a vpredu v priechode 2, takže zapnite zaškrtávacie políčka Table back a Table front v stolíku pass2, ako je znázornené na obr. L2.24. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Top Roll mesh.
 
-### Creating the table geometry and generating mesh
+### Vytvorenie geometrie stola a vytvorenie povrchovej siete
 
-Similarly create the table geometry, generate mesh and assign material for both the table back and table front as mentioned in 2.9.2
+Podobne vytvorte geometriu stola, vygenerujte povrchovú sieť a priraďte materiál pre zadnú aj prednú stranu stola, ako je uvedené v 2.9.2
 
-### Pusher object movement definition
+### Definícia pohybu posunovacieho objektu
 
-In pusher movement page define the direction of the pusher object as**-X** direction and constant speed as **340mm/sec** as shown in the Fig. L2.35.
+Na stránke pohybu posunovača definujte smer objektu posunovača ako* * -X * * smer a konštantnú rýchlosť ako **340 mm/s**, ako je znázornené na obr. L2.35.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0036.jpg' | relative_url }})
 
-Pusher movement definition
+Definícia pohybu posunovača
 
-### Schedule positioning definition
+### Definícia plánovaného polohovania
 
-In schedule positioning page select the first relation and click on edit button, then change the**reference object** as **Top** **roll** from first encounter and use the default approach direction as **-X.** click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button as shown in the Fig. L2.36.
+Na stránke plánovania polohy vyberte prvý vzťah a kliknite na tlačidlo upraviť, potom zmeňte **referenčný objekt** ako **Top* ** roll * * od prvého stretnutia a použite predvolený smer priblíženia ako * * -X. * * kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), ako je znázornené na obr. L2.36.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0037.jpg' | relative_url }})
 
-Schedule positioning definition
+Definícia polohovania harmonogramu
 
-### Simulation controls page
+### Stránka ovládacích prvkov simulácie
 
-In simulation controls, switch to guided mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) , when clicked on the Apply to all passes in the rolling group simulation controls, for each pass the normal direction will be defined by default depending on the reverse rolling check box status. For this pass, the normal direction should be**-X direction** as shown in the Fig. L2.37. Select the Rolling Pass operation 3 in operation editor by clicking on the operation tile to modify settings of Pass 3.
+V ovládacích prvkoch simulácie prepnite do režimu vedenia kliknutím na ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) , po kliknutí na tlačidlo Použiť na všetky prechody v ovládacích prvkoch simulácie valivej skupiny, pre každý prechod bude predvolene definovaný normálny smer v závislosti od stavu začiarkavacieho políčka spätného valenia. Pre tento prechod by mal byť normálny smer **-X smer**, ako je znázornené na obr. L2.37. Vyberte operáciu Rolling Pass 3 v editore operácií kliknutím na dlaždicu operácie a upravte nastavenia funkcie Pass 3.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0038.jpg' | relative_url }})
 
-Simulation controls page
+Stránka ovládacích prvkov simulácie
 
-## Modifying Rolling pass operation 3 (Pass 3)
+## Úprava operácie Rolling pass 3 (Pass 3)
 
-We have two stands in Pass 3. We will be using tables at front and back for Stand1, so turn on checkboxes of **Table back** and **Table****front** of Stand1 as shown in the Fig. L2.38. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until RollStand1 Top Roll mesh page.
+V priechode 3 máme dva stojany. Budeme používať stoly vpredu a vzadu pre stojan 1, takže zapnite začiarkavacie políčka * * Table back * * a * * Table * ***front** stojana 1, ako je znázornené na obr. L2.38. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku RollStand1 Top Roll Mesh.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0039.jpg' | relative_url }})
 
-Stand table for pass 3
+Stôl stojana pre preukaz 3
 
-### Creating the table geometry and generating the mesh
+### Vytvorenie geometrie stola a vytvorenie povrchovej siete
 
-In Table back page, accept the default 20C temperature and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to geometry page. In Table back geometry page, select the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) and define the parameters as mentioned below for back Table geometry.  
-Origin Point X = -30mm  
-Width W = 60mm  
-Height H = 5mm  
-Length = 750mm
+Na zadnej strane tabuľky akceptujte predvolenú teplotu 20C a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku geometrie. Na stránke geometrie zadnej strany stola vyberte ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) a definujte parametre uvedené nižšie pre geometriu zadnej strany stola.
+Východiskový bod X = -30 mm
+Šírka W = 60 mm
+Výška H = 5 mm
+Dĺžka = 750 mm
 
-Check "Align to the top of bottom roll for strip rolling" check box  
-Pass Line = 5mm.
+Začiarknite políčko „Zarovnať k hornej časti spodného valca pre valcovanie pásov“
+Pass Line = 5 mm.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) to create table and ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Table/Guide geometry primitive page and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh page.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) vytvoríte tabuľku a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvoríte primitívnu stránku Tabuľka/Vodiaca geometria a kliknete na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Sieť.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0040.jpg' | relative_url }})
 
-Back Table Geometry creation
+Vytvorenie geometrie zadnej tabuľky
 
   
-In mesh page, switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}), then define the Uniform Thickness number of layers as **5** and keep the rest of the brick mesh settings as default. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) to generate mesh for the Table as shown in Fig. L2.27.  
+Na stránke povrchovej siete prepnite do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}), potom definujte počet vrstiev s jednotnou hrúbkou ako * * 5 * * a ponechajte zvyšok nastavení tehlovej siete ako predvolené. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) vygenerujete povrchovú sieť pre tabuľku, ako je znázornené na obr. L2.27.
   
-Assign ‘**AISI-H-13** ’ material for the table back object from material window. This can be done as shown in Fig. L2.28. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Table Front page.  
+Priraďte materiál „**AISI-H-13* * “ pre zadný objekt stola z okna materiálu. Dá sa to urobiť tak, ako je znázornené na obr. L2.28. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po prednú stranu tabuľky.
   
-Similarly define the Table Front as Table back with same settings for the geometry, mesh and material.
+Podobne definujte prednú stranu stola ako zadnú stranu stola s rovnakými nastaveniami pre geometriu, povrchovú sieť a materiál.
 
-### Defining the movement controls for stand2 rolls
+### Definovanie ovládacích prvkov pohybu pre kotúče stand2
 
-For rolls, the mesh is already generated and material is assigned so, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to movement page. Switch to guided mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}), then define the rotation type as “**Torque** ” with constant **0** **N-mm** as shown in the Fig. L2.40.
+V prípade kotúčov je sieťka už vygenerovaná a materiál je priradený tak, že kliknete na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránke pohybu. Prepnite do riadeného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}), potom definujte typ otáčania ako „* * Krútiaci moment * * “ s konštantou **0** **N-mm**, ako je znázornené na obr. L2.40.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0041.jpg' | relative_url }})
 
-Stand2 top roll movement page
+Stránka pohybu horného kotúča stojana 2
 
-Similarly, define the movement controls even for the bottom roll.
+Podobne definujte ovládacie prvky pohybu aj pre spodný valec.
 
-### Pusher object movement definition
+### Definícia pohybu posunovacieho objektu
 
-In pusher movement page, switch to expert mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}), then define the direction of the pusher object as **X** **direction** and constant **speed** as **340mm****/sec** as shown in the Fig. L2.41.
+Na stránke pohybu posunovača prepnite do expertného režimu kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}), potom definujte smer objektu posunovača ako * * X ** * smer * * a konštantnú ** rýchlosť ** ako ** 340 mm * ***/s**, ako je znázornené na obr. L2.41.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0042.jpg' | relative_url }})
 
-Pusher object movement page for pass 3
+Stránka pohybu objektu posunovača pre prechod 3
 
-### Schedule positioning definition
+### Definícia plánovaného polohovania
 
-In schedule positioning page select the first relation and click on edit button, then change the **reference object** as **2 - Top roll** of roll stand1 from first encounter and use the default approach direction as **X**. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button as shown in the Fig. L2.42.
+Na stránke plánovania umiestnenia vyberte prvú reláciu a kliknite na tlačidlo upraviť, potom zmeňte **referenčný objekt** ako **2 - Top roll** stojana rolky 1 od prvého stretnutia a použite predvolený smer priblíženia ako **X**. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), ako je znázornené na obr. L2.42.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0043.jpg' | relative_url }})
 
-Schedule positioning definition
+Definícia polohovania harmonogramu
 
-### Simulation controls page
+### Stránka ovládacích prvkov simulácie
 
-In simulation controls, switch to guided mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}), by default when we click on the ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_passes_button.jpg' | relative_url }}) in rolling group simulation controls for each pass the normal direction will defined by default depending on the roll direction. In the pass the normal direction should be **X direction**. Select the Rolling Pass operation 4 in operation editor by clicking on the operation tile to modify settings of pass 4.
+V ovládacích prvkoch simulácie prepnite do režimu vedenia kliknutím na ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}), v predvolenom nastavení, keď klikneme na ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_passes_button.jpg' | relative_url }}) v ovládacích prvkoch simulácie valivých skupín pre každý prechod, normálny smer bude predvolene definovaný v závislosti od smeru valenia. Pri prechode by normálny smer mal byť **X smer**. Vyberte operáciu Rolling Pass 4 v editore operácií kliknutím na dlaždicu operácie a upravte nastavenia funkcie Pass 4.
 
-## Modifying Rolling pass operation 4 (Pass 4)
+## Úprava operácie Rolling pass 4 (Pass 4)
 
-We have two stands in Pass 4. We will be using tables at front and back for Stand1, so turn on checkboxes of Table back and Table front of Stand1 similarly as shown in the Fig. L2.39. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Table (Back) page.
+V Pass 4 máme dva stojany. Budeme používať tabuľky vpredu a vzadu pre stojan 1, takže zapnite začiarkavacie políčka Tabuľka vzadu a Tabuľka pred stojanom 1 podobne, ako je znázornené na obr. L2.39. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Tabuľka (späť).
 
-### Creating the table geometry and generating the mesh
+### Vytvorenie geometrie stola a vytvorenie povrchovej siete
 
-Similarly create the table geometry, generate mesh and assign material for both the table back and table front as mentioned in the 2.11.1.
+Podobne vytvorte geometriu stola, vygenerujte povrchovú sieť a priraďte materiál pre zadnú aj prednú stranu stola, ako je uvedené v 2.11.1.
 
-### Defining the movement controls for stand2 rolls
+### Definovanie ovládacích prvkov pohybu pre kotúče stand2
 
-Since the mesh is already generated and material is assigned for rolls, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to movement page. Define the rotation type as “**Torque** ” with constant **0 N-mm** similarly as 2.11.3. for both top and bottom roll.
+Keďže sieť je už vygenerovaná a materiál je priradený pre kotúče, kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku pohybu. Typ otáčania definujte ako „**Krútiaci moment** “ s konštantou **0N-mm* * podobne ako 2.11.3. pre horný aj dolný valec.
 
-### Pusher object movement definition
+### Definícia pohybu posunovacieho objektu
 
-In pusher movement page, similar to 2.10.2. define the direction of the pusher object as **-X direction** and constant speed as **340mm****/sec**.
+Na stránke pohybu posunovača, podobne ako v bode 2.10.2., definujte smer objektu posunovača ako **-X smer** a konštantnú rýchlosť ako **340 mm****/s**.
 
-### Schedule positioning definition
+### Definícia plánovaného polohovania
 
-Similar to 2.10.3 in schedule positioning page select the first relation and click on edit button, then change the **reference object** as **2 - Top roll** of roll stand1 from first encounter and use the default approach direction as **-X**.
+Podobne ako v bode 2.10.3 na stránke plánovania polohy vyberte prvú reláciu a kliknite na tlačidlo upraviť, potom zmeňte **referenčný objekt** ako **2 - Top roll** stojana rolky 1 od prvého stretnutia a použite predvolený smer priblíženia ako **-X**.
 
-### Simulation controls page
+### Stránka ovládacích prvkov simulácie
 
-In simulation controls, switch to guided mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}), by default when we click on the ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_passes_button.jpg' | relative_url }}) in rolling group simulation controls for each pass the normal direction will defined by default depending on the roll direction. In this pass the **normal** direction should be **-X direction** and use the default stopping plane point.
+V ovládacích prvkoch simulácie prepnite do režimu vedenia kliknutím na ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}), v predvolenom nastavení, keď klikneme na ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_passes_button.jpg' | relative_url }}) v ovládacích prvkoch simulácie valivých skupín pre každý prechod, normálny smer bude predvolene definovaný v závislosti od smeru valenia. Pri tomto prechode by mal byť * * normálny * * smer **-X smer** a mal by sa použiť predvolený bod zastavenia roviny.
 
-## Running simulation
+## Simulácia behu
 
-Once the database has been generated switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. L2.43. Use the default **Continue****Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vygenerovaní databázy prejdite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad operačným stromom. Kliknutím na štítok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvorte dialógové okno Možnosti točenia, ako je znázornené na obr. L2.43. Použite predvolenú možnosť **Pokračovať*** * Spustiť * * a vyberte možnosť „**Pokračovať z posledného kroku** “ (z kroku -1) a potom vyberte režim simulácie ako prepínač * * Interaktívne * *. Kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) pre spustenie simulácie.
 
-To define MPI settings, click on ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}) button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend on your 3D MPI license).
+Ak chcete definovať nastavenia MPI, kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}), okno Možnosti spustenia sa rozbalí a zobrazí možnosti definovania nastavení MPI pre simuláciu (maximálny počet procesorov, ktoré možno definovať v závislosti od vašej licencie 3D MPI).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0044.jpg' | relative_url }})
 
-Run Simulation Popup.
+Spustiť vyskakovacie okno simulácie.
 
   
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. User can view the rolling process as the simulation proceeds from Simulation graphics  
+Sledujte priebeh simulácie tak, že sa pozriete na kartu Simulation Message and Simulation Log a uistite sa, že je začiarknutá možnosť ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). Používateľ môže zobraziť proces valcovania, pretože simulácia prebieha z grafiky simulácie
   
-Simulation will stop after reaching steady state with a below message in Message file.
+Simulácia sa zastaví po dosiahnutí stabilného stavu s nižšie uvedenou správou v súbore správy.
 
-“PROGRAM STOPPED!  
-Stopping plane: All nodes of Object 1 has exited the die/roll.”
+„PROGRAM ZASTAVENÝ!
+Rovina zastavenia: Všetky uzly objektu 1 opustili matricu/valcovanie.“
 
-## Post Processing
+Postprocessing
 
-After the simulation has completed, click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab, MO post processor will open (as shown in Fig. L2.44.).
+Po dokončení simulácie kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), otvorí sa postprocesor MO (ako je znázornené na obr. L2.44.).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0045.jpg' | relative_url }})
 
-MO Post mode after simulation is completed.
+Režim MO Post po dokončení simulácie.
 
-Go to last step, plot **Effective strain** and **Temperature** state variables and observe the state variable distribution.
+Prejdite na posledný krok, zakreslite **Efektívne napätie** a **Teplota** stavové premenné a sledujte rozdelenie stavových premenných.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0046.jpg' | relative_url }})
 
-Effective strain distribution
+Efektívne rozloženie napätia
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/shape_rolling_lab2/image0047.jpg' | relative_url }})
 
-Temperature distribution
+Rozloženie teploty

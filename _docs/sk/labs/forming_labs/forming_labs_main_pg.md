@@ -1,6 +1,6 @@
 ---
 lang: sk
-title: "Forming Labs Main Pg"
+title: "Hlavná stránka Forming Labs"
 ---
 
 # Forming Labs 

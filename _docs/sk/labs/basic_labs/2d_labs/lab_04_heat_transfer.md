@@ -1,282 +1,282 @@
 ---
 lang: sk
-title: "Lab 04 Heat Transfer"
+title: "Laboratórna práca č. 04 – Prenos tepla"
 ---
 
-# Lab 04 Heat Transfer
+# Laboratórna úloha č. 04 – Prenos tepla
 
-4.1. Creating a New problem
+4.1. Vytvorenie novej úlohy
 
-4.2. Adding Heat Transfer operation
+4.2. Pridanie operácie prenosu tepla
 
-4.3. Changing operation Name
+4.3. Zmena názvu operácie
 
-4.4. Heating in Furnace
+4.4. Ohrev v peci
 
-4.5. Heating in Furnace Process
+4.5. Ohrev v peci
 
-4.6. Furnace Heat Condition
+4.6. Teplotné podmienky v peci
 
-4.7. Workpiece Setup
+4.7. Nastavenie obrobku
 
-4.8. Heating Furnace Step controls
+4.8. Ovládacie prvky krokov vykurovacej pece
 
-4.9. DB Generation for Heating Furnace
+4.9. Vytvorenie databázy pre vykurovaciu pec
 
-4.10. Air Cool operation
+4.10. Prevádzka s vzduchovým chladením
 
-4.11. Air cool operation Process page
+4.11. Stránka procesu prevádzky s vzduchovým chladením
 
-4.12. Step Controls For Air cooling
+4.12. Regulácia krokov pri vzduchovom chladení
 
-4.13. DB Generation For Air Cooling
+4.13. Vytvorenie databázy pre vzduchové chladenie
 
-4.14. Starting the Simulation
+4.14. Spustenie simulácie
 
-4.15. Post-Processing the Results
+4.15. Následné spracovanie výsledkov
 
-In this lab we will setup two operation:
+V tomto laboratórnom cvičení nastavíme dve operácie:
 
-**Operation 1** \- Heating in Furnace : In this operation, we are heating the billet in a furnace for 1 hour at 1800°F temperature environment.
+**Operácia 1** – Ohrev v peci: V rámci tejto operácie zahrievame sochoru v peci po dobu 1 hodiny pri teplote 1800 °F.
 
-**Operation 2** \- Air cool operation: In this operation, we are cooling the billet in room temperature for 60 seconds.
+**Operácia 2** – Chladenie vzduchom: Pri tejto operácii chladíme polotovar pri izbovej teplote po dobu 60 sekúnd.
 
-## Creating a New problem
+## Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear. as shown below [Fig. L4.1.]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_04_heat_transfer/' | relative_url }}#Fig_L4_1_DEFORM-2D/3D_GUI_main_window)
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte položku DEFORM-v1x.xxx (kde .xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte položku **DEFORM GUI Main** vxx.xx. Zobrazí sa okno DEFORM GUI Main, ako je znázornené nižšie [Fig. L4.1.]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_04_heat_transfer/' | relative_url }}#Fig_L4_1_DEFORM-2D/3D_GUI_main_window)
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg' | relative_url }})
 
-DEFORM-2D/3D GUI main window
+Hlavné okno grafického používateľského rozhrania programu DEFORM-2D/3D
 
-Create a new problem either by selecting **File****![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. L4.2. Select " **Integrated Manufacturing Process** " radio button and unit system as "**English** " using radio button. Define Problem Name as "**Heat_Transfer** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor****![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému, ako je znázornené na obr. L4.2. Vyberte tlačidlo „**Integrovaný výrobný proces**“ a ako systém jednotiek vyberte „**Angličtina**“ pomocou príslušného tlačidla. Názov úlohy zadajte ako „**Heat_Transfer**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak toto políčko nezaškrtnete, nezobrazí sa dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili novú úlohu s použitím integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg' | relative_url }})
 
-Problem type selection window
+Okno na výber typu úlohy
 
-Multiple operation wizard will open with the New Project dialog (See Fig. L4.3.), at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we use ‘**Heat_Transfer** ’ as the project name. Select the **First****operation** as **2D Heat transfer** operation and **check** the **checkbox** to add Heat transfer operation as first operation. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom Nový projekt (pozri obr. L4.3.). V tomto bode bude používateľ vyzvaný, aby zadal názov projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názov tejto relácie. V tejto relácii použijeme ako názov projektu „**Heat_Transfer**“. Ako **prvú operáciu** vyberte operáciu **2D prenos tepla** a **zaškrtnite** **políčko**, aby ste operáciu prenosu tepla pridali ako prvú operáciu. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0001.jpg' | relative_url }})
 
-MO New project settings window
+MO Okno nastavení nového projektu
 
-## Adding Heat transfer operation
+## Pridanie operácie prenosu tepla
 
-Multiple Operation wizard will opens the 2D heat transfer operation with new project called Heat_Transfer (See Fig. L4.4.). Add another 2D Heat Transfer operation as second operation from operation list in Explorer. Operation can be add by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to 2D Heat Transfer operation or user can also add the operations by dragging and dropping the operation into Operation Editor region.
+Sprievodca viacerými operáciami otvorí operáciu 2D prenosu tepla s novým projektom s názvom Heat_Transfer (pozri obr. L4.4.). Pridajte ďalšiu operáciu 2D prenosu tepla ako druhú operáciu zo zoznamu operácií v Průzkumníku. Operáciu je možné pridať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa operácie 2D prenosu tepla alebo ju môžete pridať aj pretiahnutím a umiestnením do oblasti Editoru operácií.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0002.jpg' | relative_url }})
 
-MO heat transfer project with 2d Heat Transfer operation
+Projekt prenosu tepla v MO s 2D simuláciou prenosu tepla
 
-## Changing operation Name
+## Zmena názvu operácie
 
-To change the operation name, double click on Heat Transfer field on 2D Heat transfer operation list in Operation editor, change the operation name to "**Heating in Furnace** " and press Enter in Keyboard. repeat the same sequence to change the second Heat transfer operation name to " **Air cool** " , See Fig. L4.5. and Fig. L4.6.
+Ak chcete zmeniť názov operácie, dvakrát kliknite na pole „Prenos tepla“ v zozname 2D operácií prenosu tepla v editore operácií, zmeňte názov operácie na „**Ohrev v peci**“ a stlačte klávesu Enter. Opakujte rovnaký postup, aby ste zmenili názov druhej operácie prenosu tepla na „**Chladenie vzduchom** “, pozri obr. L4.5 a obr. L4.6.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0003.jpg' | relative_url }})
 
-Changing Operation name from Operation Editor
+Zmena názvu operácie v editore operácií
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0004.jpg' | relative_url }})
 
-After changing the operation name
+Po zmene názvu operácie
 
-## Heating in Furnace
+## Kúrenie v peci
 
-In this operation we are heating the billet at Room temperature in Heating furnace at 1800°F for 3600 seconds until it reaches steady state.
+V rámci tohto procesu zahrievame sochoru pri izbovej teplote v ohrevnej peci na teplotu 1800 °F po dobu 3600 sekúnd, kým nedosiahne ustálený stav.
 
-## Heating in Furnace Process
+## Kúrenie v pecnom procese
 
-Highlight the first 2D Heat Transfer operation, in geometry type page select **2D Axisymmetric** geometry type (See Fig. L4.7.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Zvýraznite prvú operáciu 2D prenosu tepla a na stránke s typom geometrie vyberte typ geometrie **2D osovo symetrická** (pozri obr. L4.7.). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0005.jpg' | relative_url }})
 
-Geometry type selection page
+Stránka na výber typu geometrie
 
-In Heat transfer type page, select **Heat in furnace** Heat transfer type as shown in Fig. L4.8.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Na stránke „Typ prenosu tepla“ vyberte typ prenosu tepla **Teplo v peci**, ako je znázornené na obr. L4.8. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0006.jpg' | relative_url }})
 
-Heat Transfer type selection
+Výber typu prenosu tepla
 
-## Furnace Process condition
+## Stav procesu v peci
 
-In Process Condition page, Change the **Environment temperature** to **1800** °F and use default **process time** as **3600** sec and use default Convective coefficient value in this lab. (see Fig. L4.9.) Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button. In simulation control select default setting and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button until Workpiece page.
+Na stránke „Process Condition“ (Podmienky procesu) nastavte **teplotu prostredia** na **1800** °F, ako **čas procesu** použite predvolenú hodnotu **3600** sekúnd a v tomto laboratórnom cvičení použite predvolenú hodnotu koeficientu konvekcie. (pozri obr. L4.9.) Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). V ovládacom paneli simulácie vyberte predvolené nastavenie a klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka „Obrobok“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0007.jpg' | relative_url }})
 
-Process condition page
+Stránka s podmienkami procesu
 
-## Workpiece Setup
+## Upevnenie obrobku
 
-Change the Object Name to " **Billet** " and select object type as ****(see Fig. L4.10.). At the start of the simulation, the billet will be going into the furnace, so the Temperature should be defined as room temperature, or 68°F. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Zmeňte názov objektu na „**Billet**“ a ako typ objektu vyberte ****(pozri obr. L4.10.). Na začiatku simulácie sa sochor vloží do pece, preto by mala byť teplota nastavená na izbovú teplotu, t. j. 68 °F. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0008.jpg' | relative_url }})
 
-Workpiece object window
+Okno objektu obrobku
 
-### Creating geometry
+### Vytvorenie geometrie
 
-In Geometry page click on ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}), enter the following XYR coordinates value in the Table 1. (See Fig. L4.11.) and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button,
+Na stránke „Geometria“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}), do tabuľky 1 zadajte nasledujúce hodnoty súradníc XYR (pozri obr. L4.11) a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}),
 
 X |  Y |  R  
 ---|---|---  
 0 |  0 |  0  
-1.5 |  0 |  0.12  
-1.5 |  4 |  0.12  
+1,5 |  0 |  0,12  
+1,5 |  4 |  0,12  
 0 |  4 |  0  
   
-Geometry XYR coordinates value
+Hodnota súradníc XYR v geometrii
 
-Then click on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button, Use the default checking parameters and click ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). A message saying, "**Geometry is legal** " will appear. Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), použite predvolené parametre kontroly a kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Zobrazí sa správa: „**Geometria je správna**“. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) a následne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0009.jpg' | relative_url }})
 
-Workpiece Edit geometry page
+Stránka „Úprava geometrie obrobku“
 
-### Generating mesh
+### Vytvorenie siete
 
-Use the default system mesh settings and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). A mesh with approximately 1000 elements will be generated. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Použite predvolené nastavenia systémovej siete a kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Vygeneruje sa sieť s približne 1000 prvkami. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-###  Assign Billet Material
+###  Priradiť materiál na výkovky
 
-In Material list window, load the material **AISI-1025[1800-2200F(1000-1200C)]** from DEFORM Material library, from Steel category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option. Then click on ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}), under Thermal tab of the material data, the ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) icon can be used for view the Heat capacity and thermal conductivity data. AISI-1025 has been loaded into the problem and it is automatically assigned to the Billet. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+V okne Zoznam materiálov načítajte materiál **AISI-1025[1800–2200 °F (1000–1200 °C)]** z knižnice materiálov DEFORM v kategórii Oceľ pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice). Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_material_edit_button.jpg' | relative_url }}); na karte „Thermal“ (Tepelné vlastnosti) v údajoch o materiáli môžete pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) zobraziť údaje o tepelnej kapacite a tepelnej vodivosti. Materiál AISI-1025 bol načítaný do úlohy a automaticky priradený k polotovaru. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0010.jpg' | relative_url }})
 
-Edit material window
+Okno na úpravu materiálu
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0011.jpg' | relative_url }})
 
-Thermal Conductivity material data
+Údaje o tepelnej vodivosti materiálov
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0012.jpg' | relative_url }})
 
-Heat Capacity material data
+Údaje o tepelnej kapacite materiálu
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0013.jpg' | relative_url }})
 
-Object Material window
+Okno „Materiál objektu“
 
-### Defining Billet Heat Transfer Boundary Conditions
+### Definovanie okrajových podmienok prenosu tepla v polotovare
 
-In BCC page, check the default assigned Heat exchange with Environment BCC to the entire outer surface of the Billet (which does not include the centerline since these nodes are inside the object) default BCC are assigned automatically due to selection of problem type as axisymmetric (See Fig. L4.16.). Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button until Step page.
+Na stránke BCC skontrolujte predvolené priradenie výmeny tepla s prostredím BCC na celý vonkajší povrch polotovaru (čo nezahŕňa os, keďže tieto uzly sa nachádzajú vnútri objektu). Predvolené BCC sa priraďujú automaticky na základe výberu typu úlohy ako osovo symetrickej (pozri obr. L4.16.). Potom klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku „Step“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0014.jpg' | relative_url }})
 
-Billet BCC window
+Okno BCC z hliníkového bloku
 
-## Heating Furnace Step controls
+## Ovládacie prvky krokov vykurovacej pece
 
-In Step page, change the **Number of Steps** to **240** , set **increment to save** as **10** and Solution step definition **Time** as **15** sec (See Fig. L4.17.), then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Na stránke „Kroky“ zmeňte **Počet krokov** na **240**, nastavte **krok ukladania** na **10** a **Čas** definície kroku riešenia na **15** sekúnd (pozri obr. L4.17.), potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0015.jpg' | relative_url }})
 
-Step controls page
+Stránka s ovládacími prvkami krokov
 
-## DB Generation for Heating Furnace
+## Vytvorenie databázy pre vykurovaciu pec
 
-Once the operation has been completely set up, the last step is to generate a database file. The FEM engine (the part of DEFORM® that calculates the solution) uses a database file to store the finite element solutions for the problem. When you generate a database in the DEFORM MO Pre-processor, all of the information defined in the Pre-processor (such as the material properties, movement controls, object geometries, etc.) is transferred to the database file.
+Po úplnom nastavení operácie je posledným krokom vytvorenie databázového súboru. Modul FEM (časť programu DEFORM®, ktorá vypočítava riešenie) používa databázový súbor na ukladanie riešení problému pomocou metódy konečných prvkov. Pri generovaní databázy v preprocesore DEFORM MO sa všetky informácie definované v preprocesore (napríklad vlastnosti materiálov, riadenie pohybu, geometrie objektov atď.) prenesú do databázového súboru.
 
-In Generate DB page. Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process:
+Na stránke „Generate DB“. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) spustíte kontrolu programu, či sa pri nastavení úlohy na niečo nezabudlo. Počas kontroly:
 
-Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).
+Správy v červenej farbe označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli zadať údaje o materiáloch).
 
-Click on![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, click on ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) button to go to next operation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Keď program dokončí zapisovanie databázy, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}), aby ste prešli k ďalšej operácii.
 
-## Air cool operation
+## Prevádzka s vzduchovým chladením
 
-In this operation we are cooling the billet in Room temperature for 60 seconds and the billet object is read from DB.
+V tomto kroku nechávame polotovar 60 sekúnd vychladnúť na izbovú teplotu a z databázy sa načíta údaj o polotovare.
 
-## Air cool operation process page
+## Stránka s popisom prevádzky s vzduchovým chladením
 
-In Process page, select Heat transfer type as **Transfer through air**. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Na stránke „In Process“ vyberte typ prenosu tepla ako **Prenos vzduchom**. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-Change the **Transfer time** to **60** second, and use default Environment Temperature (68°F) and use default convective coefficient value as shown in Fig. L4.18. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object page. If Top die and Bottom Die objects are added in object list, then delete Object 2 and Object 3 using ![]({{ '/assets/icons/pre_icons/mo_delete_object_button.jpg' | relative_url }}) option. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until are Step page.
+Zmeňte **čas prenosu** na **60** sekúnd, použite predvolenú teplotu okolia (68 °F) a predvolenú hodnotu konvekčného koeficientu, ako je znázornené na obr. L4.18. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Object“ (Objekt). Ak sú v zozname objektov pridané objekty „Top die“ (Horná forma) a „Bottom Die“ (Spodná forma), odstráňte objekt 2 a objekt 3 pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_delete_object_button.jpg' | relative_url }}). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Step“ (Krok).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0016.jpg' | relative_url }})
 
-Process condition window
+Okno s podmienkami procesu
 
-## Step Controls For Air cooling
+## Ovládacie prvky pre vzduchové chladenie
 
-In Steps page, change the **Number of Steps** to **60** , **set increment to save** as **4** and Solution step definition **Time** as **1** sec/step (See [Fig. L4.19.]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_03_spike_isothermal/' | relative_url }})), then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Na stránke „Kroky“ zmeňte **Počet krokov** na **60**, **nastavte krok ukladania** na **4** a **čas** definície kroku riešenia na **1** s/krok (pozri [Fig. L4.19.]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_03_spike_isothermal/' | relative_url }})), potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0017.jpg' | relative_url }})
 
-Step controls page
+Stránka s ovládacími prvkami krokov
 
-## DB Generation For Air Cooling
+## Vytvorenie databázy pre vzduchové chladenie
 
-In Generate DB page see the status, if we are seeing status as "Input error" check the missing data and complete the setup. Save the project and switch to ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab to run simulation.
+Na stránke „Generate DB“ skontrolujte stav. Ak sa zobrazuje stav „Chyba zadania“, skontrolujte chýbajúce údaje a dokončite nastavenie. Uložte projekt a prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}), kde spustíte simuláciu.
 
-## Starting the Simulation
+## Spustenie simulácie
 
-Click on ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) under the simulation tab (See Fig. L4.20.), as we click on the Run option, Run simulation dialog will open (See Fig. L4.21.), Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) na karte „Simulácia“ (pozri obr. L4.20.). Po kliknutí na možnosť „Spustiť“ sa otvorí dialógové okno „Spustiť simuláciu“ (pozri obr. L4.21.). Použite predvolenú možnosť **Pokračovať v spustení**, aby ste vybrali možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_03_spike_isothermal/2d_mobl3_image0032.jpg' | relative_url }})
 
-Simulation Options
+Možnosti simulácie
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0024.jpg' | relative_url }})
 
-Run Simulation window
+Okno „Spustiť simuláciu“
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message and Simulation Graphics in Simulation mode. Click the Simulation Message tab to view the Message file. As long as the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked, which is the default setting, the Message file will refresh every couple of seconds.
+Priebeh simulácie je možné počas jej vykonávania sledovať v režime Simulácia prostredníctvom okien Simulačné správy a Simulačná grafika. Kliknutím na kartu Simulačné správy zobrazíte súbor správ. Pokiaľ je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}), čo je predvolené nastavenie, súbor správ sa bude aktualizovať každých pár sekúnd.
 
-The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.
+Súbor „Message“ obsahuje informácie o tom, v ktorom simulačnom kroku sa simulácia momentálne nachádza, a zároveň poskytuje údaje o tom, ako dobre simulácia prebieha.
 
-When the simulation has finished, the following message will be added to the end of the LOG file file: "MULTIPLE OPERATION COMPLETED."
+Po ukončení simulácie sa na koniec súboru LOG pridá nasledujúca správa: „MULTIPLE OPERATION COMPLETED.“
 
-## Post-Processing the Results
+## Následné spracovanie výsledkov
 
-After simulation has been completed, switch to tab, MO post processor will open.
+Po dokončení simulácie prejdite na kartu, čím sa otvorí postprocesor MO.
 
-### State variable Plot
+### Graf stavovej premennej
 
-Click the ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) icon and select Temperature as the variable. Right-click on the Color Bar in the DISPLAY window and select Temperature as the ColorBar Type. This provides a more intuitive color scheme when viewing temperatures (See Fig. L4.22.).
+Kliknite na ikonu ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) a ako premennú vyberte „Teplota“. Kliknite pravým tlačidlom myši na farebnú lištu v okne DISPLAY a ako typ farebnej lišty vyberte „Teplota“. Tým sa pri zobrazení teplôt dosiahne intuitívnejšie farebné schéma (pozri obr. L4.22.).
 
-Play through the steps and observe how the billet heats up in Heating operation and how it cools in Air cool operation (See Fig. L4.23.).
+Prejdite jednotlivými krokmi a sledujte, ako sa polotovar zahrieva v režime ohrevu a ako chladne v režime vzduchového chladenia (pozri obr. L4.23.).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0018.jpg' | relative_url }})
 
-Plotting Temperature state variable with Temperature type Colorbar type
+Zobrazenie premennej stavu „Teplota“ s typom „Teplota“ a typom farebnej stupnice
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0019.jpg' | relative_url }})
 
-Temperature plot for Heat Transfer lab operations
+Graf teploty pre laboratórne úlohy z oblasti prenosu tepla
 
-### Summary
+### Zhrnutie
 
-The Summary button can be used to plot the minimum and maximum state variable graph. Click ![]({{ '/assets/icons/post_icons/mo_summary_icon.jpg' | relative_url }}) to open the SUMMARY window. To better understand how the billet heated up and cooling in this lab, select the Thermal tab and then click![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) to Temperature (See Fig. L4.24.).
+Tlačidlo „Summary“ slúži na vytvorenie grafu minimálnych a maximálnych hodnôt stavových premenných. Kliknutím na ![]({{ '/assets/icons/post_icons/mo_summary_icon.jpg' | relative_url }}) otvoríte okno SUMMARY. Ak chcete lepšie pochopiť, ako sa v tomto laboratórnom cvičení zahrieval a ochladzoval blok, vyberte kartu Thermal a potom kliknite na ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) pre zobrazenie teploty (pozri obr. L4.24.).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0020.jpg' | relative_url }})
 
-Temperature Summary plot
+Graf s prehľadom teplôt
 
-### Point tracking
+### Sledovanie bodov
 
-Temperatures at specific locations in the billet can be tracked using point tracking option.
+Teploty v konkrétnych miestach sochory je možné sledovať pomocou funkcie bodového sledovania.
 
-Click the ![]({{ '/assets/icons/post_icons/mo_point_tracking_icon.jpg' | relative_url }}) icon to open the POINT TRACKING window. Track the temperatures at three points halfway up the billet, at approximately the locations shown below Fig. L4.25. and Fig. L4.26.
+Kliknutím na ikonu ![]({{ '/assets/icons/post_icons/mo_point_tracking_icon.jpg' | relative_url }}) otvoríte okno „POINT TRACKING“. Sledujte teploty v troch bodoch v polovici dĺžky polotovaru, približne v miestach znázornených na obr. L4.25 a obr. L4.26.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0021.jpg' | relative_url }})
 
-Selecting points for Point tracking
+Výber bodov pre sledovanie bodov
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0022.jpg' | relative_url }})
 
-Temperature plot at selected region using point-tracking option
+Graf teploty vo vybranej oblasti s využitím funkcie sledovania bodov
 
-We would like to zoom in on the steps at the end of the simulation when the air cool takes place. Right click on Graph in display window and select set graph properties option in list, change the range of both the X-Axis and the Y-Axis to the values shown below Fig. L4.27. and click on ![]({{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}).
+Radi by sme sa podrobnejšie pozreli na kroky na konci simulácie, keď prebieha chladenie vzduchom. Kliknite pravým tlačidlom myši na graf v zobrazovacom okne a zo zoznamu vyberte možnosť „Nastaviť vlastnosti grafu“, zmeňte rozsah osí X aj Y na hodnoty uvedené nižšie na obr. L4.27 a kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button2.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_04_heat_transfer/2d_mobl4_image0023.jpg' | relative_url }})
 
-Graph Properties window
+Okno „Vlastnosti grafu“
 
-After these changes are made, it is much easier to see that the point on the OD of the billet (Point 3) cooled much faster than the point near the center (Point 1).
+Po vykonaní týchto zmien je oveľa ľahšie vidieť, že bod na vonkajšom priemere polotovaru (bod 3) chladol oveľa rýchlejšie ako bod v blízkosti stredu (bod 1).
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [35.1. 2D Heat Transfer Operation]({{ '/docs/sk/operation_templates/35_heat_transfer/35_1_2d_heat_transfer_operation/' | relative_url }})
 

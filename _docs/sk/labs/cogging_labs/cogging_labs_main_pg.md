@@ -1,6 +1,6 @@
 ---
 lang: sk
-title: "Cogging Labs Main Pg"
+title: "Hlavná stránka Cogging Labs"
 ---
 
 # Cogging Labs 

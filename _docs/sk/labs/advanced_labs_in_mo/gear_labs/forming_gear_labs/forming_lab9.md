@@ -1,66 +1,66 @@
 ---
 lang: sk
-title: "Forming Lab 9"
+title: "Laboratórium tvarovania 9"
 ---
 
-# Lab 9. Screw Press
+# Laboratórna práca č. 9. Šnekový lis
 
-### Create a new Problem
+### Vytvoriť nový problém
 
-Create a new project called **Gear_Screw** and copy the existing project **Gear_LargerBillet**. Click on the **Upset** operation and go to **Top****Die** Movement page.
+Vytvorte nový projekt s názvom **Gear_Screw** a skopírujte existujúci projekt **Gear_LargerBillet**. Kliknite na operáciu **Upset** a prejdite na stránku **Top****Die** Movement.
 
-### Top die movement
+### Pohyb hornej matrice
 
-We will use a screw press with maximum energy **3450** Klb-in., a flywheel moment-of-inertia (MOI) of 250 Klbin-s^2 and a lead screw pitch of 4 in/rev.
+Použijeme skrutkový lis s maximálnou energiou **3450** Klb-in., momentom zotrvačnosti (MOI) zotrvačníka 250 Klbin-s² a stúpaním vodiacich skrutiek 4 in/rev.
 
-We will use reduced energy for the first hit, and full energy for the 2nd hit.
+Pri prvom údere použijeme zníženú energiu a pri druhom údere plnú energiu.
 
-Select **Screw****press****type** movement for **Top****die** movement, set the **Energy** to **1000** , the **Moment****of****inertia** to **250** the **Lead****screw****pitch** to **4** as shown in Fig. L9.1. Define the **efficiency** as a **function****of****force** according to this table and Fig. L9.2.
+Vyberte pohyb typu **Šnekový****lis****** pre pohyb **Horného****lisovacieho nástroja**, nastavte **Energiu** na hodnotu **1000** a **Moment****zotrvačnosti** na hodnotu **250** a **rozstup závitov vodiacich skrutiek** na hodnotu **4**, ako je znázornené na obr. L9.1. Definujte **účinnosť** ako **funkciu****sily** podľa tejto tabuľky a obr. L9.2.
 
-**Force** |  **Screw Press Efficiency**  
+**Sila** |  **Účinnosť šnekového lisu**  
 ---|---  
-0 |  0.9  
-1.0e3 |  0.8  
-1.0e4 |  0.7  
-1.0e5 |  0.6  
-1.0e6 |  0.5  
-1.0e7 |  0.2  
+0 |  0,9  
+1,0e3 |  0,8  
+1,0e4 |  0,7  
+1,0e5 |  0,6  
+1,0e6 |  0,5  
+1,0e7 |  0,2  
   
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab9_image0001.jpg' | relative_url }})
 
-Top die Screw press movement window
+Okienko na sledovanie pohybu vrchného lisovacieho šneku
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab9_image0002.jpg' | relative_url }})
 
-Function of Force Blow efficiency window
+Funkcia okna zobrazujúceho účinnosť silového úderu
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Generate DB page.
+Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Generate DB“.
 
-### Generate DB
+### Vytvoriť databázu
 
-Generate the Database and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Next operation **Top****die****movement** page.
+Vytvorte databázu a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s názvom „Next operation **Top****die****movement**“.
 
-### Forming operation
+### Tvarovacia operácia
 
-**Top die movement**
+**Pohyb hornej matrice**
 
-Use the same movement defined in first operation (see section 9.2), except use the full Energy of **3450** Klb-in.
+Použite ten istý pohyb, ktorý bol definovaný v prvej operácii (pozri časť 9.2), avšak použite celkovú energiu **3450** Klb-in.
 
-Save the project and click on the MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode button (above the operation tree) to start the simulation.
+Uložte projekt a kliknite na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode“ (nad stromom operácií), aby ste spustili simuláciu.
 
-### Run and monitor a simulation
+### Spustenie a sledovanie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog. Use the default **Continue****Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), čím otvoríte dialógové okno Možnosti spustenia. Použite predvolenú možnosť **Pokračovať****Spustiť**, aby ste vybrali možnosť „**Pokračovať od posledného kroku**“, a potom vyberte režim simulácie pomocou prepínača **Interaktívny**. Kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}), aby ste spustili simuláciu.
 
-Note that Operation 1 ends when the flywheel energy is expended. Operation 2 stops on the predefined stopping control.
+Všimnite si, že prevádzka 1 sa ukončí, keď sa energia zotrvačníka vyčerpá. Prevádzka 2 sa zastaví na základe vopred definovaného riadiaceho signálu na zastavenie.
 
-### Review the results
+### Prezrite si výsledky
 
-When the simulation is completed, click the MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode button to review results.
+Po dokončení simulácie kliknite na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode“, aby ste si prezreli výsledky.
 
-**Graph**  
-In the Post-processor, use the Graph ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) tool to plot **Y-Speed** vs. **Time** to review ram speed decay as the part is formed. (See Fig. L9.3.)
+**Graf**  
+V postprocesore použite nástroj Graph ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) na vytvorenie grafu **Rýchlosť Y** v závislosti od **Času**, aby ste mohli sledovať pokles rýchlosti ram počas tvarovania dielu. (Pozri obr. L9.3.)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab9_image0003.jpg' | relative_url }})
 
-Y-Speed vs Time graph plot
+Graf závislosti rýchlosti Y od času

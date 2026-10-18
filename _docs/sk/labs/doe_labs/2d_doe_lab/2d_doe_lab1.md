@@ -1,420 +1,420 @@
 ---
 lang: sk
-title: "2D DOE Lab1"
+title: "2D DOE – laboratórna úloha č. 1"
 ---
 
-# 2D DOE Lab1
+# 2D DOE – Laboratórna práca č. 1
 
-In this lab we import the Multi Stand Drawing setup keyfile from 2D labs and then continue with the nominal project simulation and DOE setup.
+V tomto laboratórnom cvičení naimportujeme konfiguračný súbor „Multi Stand Drawing“ z laboratórnych cvičení z oblasti 2D a následne budeme pokračovať v simulácii nominálneho projektu a nastavení DOE.
 
-1.1. Nominal Project setup and simulation
+1.1. Nastavenie a simulácia nominálneho projektu
 
-1.2. Check and define the Nominal Project
+1.2. Skontrolujte a definujte nominálny projekt
 
-1.3. Add DOE Project
+1.3. Pridať projekt DOE
 
-1.4. Add die geometry variation as DOE variable
+1.4. Pridať variáciu geometrie matrice ako premennú DOE
 
-1.5. Add Friction coefficient as DOE variable
+1.5. Pridajte koeficient trenia ako premennú DOE
 
-1.6. Check DOE Variables table
+1.6. Skontrolujte tabuľku premenných DOE
 
-1.7. DOE Samples definition
+1.7. Definícia vzoriek DOE
 
-1.8. Define DOE Output operation
+1.8. Definícia operácie „Výstup DOE“
 
-1.8.1. Select DOE Operation and object to Study
+1.8.1. Výber operácie DOE a predmetu štúdie
 
-1.8.2. Define Output variables
+1.8.2. Definovanie výstupných premenných
 
-1.9. Simulate DOE project
+1.9. Simulácia projektu DOE
 
-1.10. Review the DOE results
+1.10. Preskúmať výsledky testu DOE
 
-1.10.1. Check Operation min/max (all steps) variables
+1.10.1. Kontrola premenných min/max prevádzky (všetky kroky)
 
-1.10.2. Check Summary min/max (last step) variables
+1.10.2. Skontrolujte premenné „Súhrn min/max“ (posledný krok)
 
-1.10.3. Check Location specific (One step) variables
+1.10.3. Skontrolujte premenné špecifické pre danú lokalitu (jedno krokové)
 
-## Nominal Project setup and simulation
+## Nastavenie a simulácia nominálneho projektu
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte položku DEFORM-v1x.xxx (kde .xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte položku **DEFORM GUI Main** vxx.xx. Zobrazí sa okno DEFORM GUI Main.
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. DOEL1.1. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** " radio button in unit field. Define Problem Name as " **DoeMultiStandDraw** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému, ako je znázornené na obr. DOEL1.1. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte prepínač „**Anglický**“. Názov úlohy zadajte ako „**DoeMultiStandDraw**“ a uistite sa, že je zaškrtnuté políčko „Zobraziť dialógové okno s možnosťami“ (ak nezakliknete políčko „**Zobraziť dialógové okno s možnosťami**“, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s využitím integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0001.jpg' | relative_url }})
 
-New Problem page
+Stránka „Nový problém“
 
   
-Integrated Manufacturing Process will open, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In New Project popup define Problem Name as '**DoeMultiStandDraw** ', select First Operation as 2D Forming and select English unit system as shown in Fig. DOEL1.2. , click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to add project.
+Otvorí sa okno „Integrated Manufacturing Process“; v tomto momente bude používateľ vyzvaný, aby zadal názov projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názov tejto relácie. V okne Nový projekt zadajte Názov problému ako „**DoeMultiStandDraw**“, ako Prvú operáciu vyberte 2D tvarovanie a vyberte anglický systém jednotiek, ako je znázornené na obr. DOEL1.2. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pridajte projekt.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0002.jpg' | relative_url }})
 
-New Project creation window
+Okno na vytvorenie nového projektu
 
   
   
-Click on ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}) (Import DB/Keyfile) icon and import **MultiStandDraw.key** file from installation path 2D/LABS folder as shown in Fig. DOEL1.3.
+Kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}) (Import DB/Keyfile) a naimportujte súbor **MultiStandDraw.key** zo zložky 2D/LABS v inštalačnom adresári, ako je znázornené na obr. DOEL1.3.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0003.jpg' | relative_url }})
 
-Importing Nominal project setup keyfile
+Import súboru s nastaveniami projektu „Nominal“
 
   
-After importing the keyfile MO will display all objects as shown in Fig. DOEL1.4.
+Po importe súboru s kľúčom program MO zobrazí všetky objekty tak, ako je znázornené na obr. DOEL1.4.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0004.jpg' | relative_url }})
 
-MO project layout after importing the setup keyfile
+Rozloženie projektu MO po importe konfiguračného súboru s kľúčmi
 
-## Check and define the Nominal Project
+## Skontrolujte a definujte nominálny projekt
 
-Imported keyfile is an Multi stand drawing setup having 2 stands, each stand dies are named as pass1 Die and Pass2 Die. Workpiece is pulled in these dies to perform the drawing process, this is accomplished by applying velocity for Workpiece.  
+Importovaný súbor kľúčov predstavuje nastavenie ťahania s viacerými stojanmi, ktoré obsahuje 2 stojany; matrice na každom stojane sú označené ako „Pass1 Die“ a „Pass2 Die“. Obrobok sa vťahuje do týchto matríc na vykonanie procesu ťahania, čo sa dosahuje pôsobením rýchlosti na obrobok.  
   
-Select the Workpiece Boundary Conditions from operation tree to observe the workpiece velocity Boundary Conditions defined at the front end to pull the workpiece through the dies and fixed velocity at the centerline as shown in Fig. DOEL1.5.
+Z stromu operácií vyberte „Okrajové podmienky obrobku“, aby ste mohli sledovať okrajové podmienky rýchlosti obrobku definované na prednej strane, ktoré slúžia na ťahanie obrobku cez lisovacie formy, a pevnú rýchlosť na stredovej osi, ako je znázornené na obr. DOEL1.5.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0005.jpg' | relative_url }})
 
-Workpiece front end velocity boundary condition
+Okrajová podmienka rýchlosti na prednom konci obrobku
 
-Similarly select the X Fixed velocity BCC and observe the centerline fixed velocity as shown in Fig. DOEL1.6.
+Podobne vyberte BCC s pevnou rýchlosťou X a sledujte pevnú rýchlosť stredovej čiary, ako je znázornené na obr. DOEL1.6.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0006.jpg' | relative_url }})
 
-Workpiece centerline velocity boundary condition
+Okrajová podmienka rýchlosti osi obrobku
 
   
-As we vary the Pass1 Die diameter in DOE project, Workpiece has to position with respect to varied die geometry diameter by interference in –Y direction during DOE simulations. So we have to schedule workpiece position with respect to die.  
+Keďže v rámci projektu DOE meníme priemer matrice Pass1, obrobok sa musí počas simulácií DOE polohovať vzhľadom na meniaci sa priemer geometrie matrice tak, aby dochádzalo k interferencii v smere –Y. Musíme teda naplánovať polohu obrobku vzhľadom na matricu.  
   
-Click on Scheduled position in operation tree to define the scheduled positioning of workpiece with respect to Pass1 Die. Click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add) button to add the scheduled positioning definition (See Fig. DOEL1.7.) and interference position the Workpiece with respect to Pass1 Die in –Y direction a shown in Fig. DOEL1.8.
+Kliknite na položku „Plánovaná poloha“ v prevádzkovom strome, aby ste definovali plánované umiestnenie obrobku vo vzťahu k forme Pass1. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať), aby ste pridali definíciu naplánovaného polohovania (pozri obr. DOEL1.7.) a nastavili polohu obrobku vo vzťahu k forme Pass1 tak, aby nedošlo ku kolízii v smere –Y, ako je znázornené na obr. DOEL1.8.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0007.jpg' | relative_url }})
 
-Scheduled positioning window
+Plánované časové okno na polohovanie
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0008.jpg' | relative_url }})
 
-Interference positioning Workpiece with respect to Pass1 Die
+Určenie polohy obrobku vzhľadom na formu Pass1
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Scheduled positioning definition. Select Contact in operation tree to observe the Inter-object relationship between Dies and Workpiece and its friction coefficient value. (See Fig. DOEL1.9.)
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvoríte definíciu naplánovaného polohovania. V strome operácií vyberte položku „Kontakt“, aby ste si prezreli vzťah medzi objektmi „Matrice“ a „Obrobok“ a hodnotu koeficientu trenia. (Pozri obr. DOEL1.9.)
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0009.jpg' | relative_url }})
 
-Inter-object relationship window
+Okno vzťahov medzi objektmi
 
-Select the Generate Database in operation tree, when we visit Generate Database we will get "**Apply scheduled Positioning** " popup due to scheduled positioning data, click "**Yes** " in popup and generate Database. (See Fig. DOEL1.10.)
+V strome operácií vyberte položku „Generate Database“ (Vygenerovať databázu). Keď otvoríte položku „Generate Database“, zobrazí sa vám v dôsledku naplánovaných údajov o polohovaní vyskakovacie okno s textom „**Apply scheduled Positioning**“ (Použiť naplánované polohovanie). V tomto okne kliknite na „**Yes**“ (Áno) a vygenerujte databázu. (Pozri obr. DOEL1.10.)
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0010.jpg' | relative_url }})
 
-Generate database window
+Okno na vytvorenie databázy
 
   
-Click on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) MO Mode button to submit to simulate. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. DOEL1.11. Use the default **Continue Run** option to select “**Continue from the last step** ”option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) MO Mode, aby ste spustili simuláciu. Kliknite na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), čím otvoríte dialógové okno Run Options, ako je znázornené na obr. DOEL1.11. Použite predvolenú možnosť **Pokračovať v spustení**, vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0011.jpg' | relative_url }})
 
-Run simulation window
+Spustiť okno simulácie
 
   
-After completing the simulation click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) MO mode button to play the steps and check the nominal simulation as shown in Fig. DOEL1.12.
+Po dokončení simulácie kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) v režime MO, aby ste prehrali jednotlivé kroky a skontrolovali nominálnu simuláciu, ako je znázornené na obr. DOEL1.12.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0012.jpg' | relative_url }})
 
-DOE nominal project post mode
+Režim nominálneho projektového príspevku DOE
 
-## Add DOE Project
+## Pridať projekt DOE
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) MO mode button to add the DOE Study. Click on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) (Add) button at top left corner of graphics window and select Add DOE Study option as shown in Fig. DOEL1.13.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) v režime MO, aby ste pridali štúdiu DOE. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) (Pridať) v ľavom hornom rohu grafického okna a vyberte možnosť Pridať štúdiu DOE, ako je znázornené na obr. DOEL1.13.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0013.jpg' | relative_url }})
 
-Adding DOE Study Project
+Pridanie projektu štúdie DOE
 
-DOE project will be added along with the DOE output operation needed to study the DOE results as shown in Fig. DOEL1.14.
+Projekt DOE bude pridaný spolu s operáciou spracovania výstupov DOE, ktorá je potrebná na analýzu výsledkov DOE, ako je znázornené na obr. DOEL1.14.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0014.jpg' | relative_url }})
 
-Added DOE Study Project
+Pridaný projekt štúdie Ministerstva energetiky (DOE)
 
-## Add die geometry variation as DOE variable
+## Pridať variáciu geometrie výlisku ako premennú DOE
 
-Select the Forming operation from Operation Editor to add DOE variables. To vary the first stand die diameter select Pass1 Die Geometry from operation tree and add geometry as DOE variable by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add DOE Variable) button as shown in Fig. DOEL1.15.
+Na pridanie premenných DOE vyberte operáciu „Tvarovanie“ v editore operácií. Ak chcete zmeniť priemer formy v prvom stánku, vyberte v strome operácií položku „Geometria formy Pass1“ a pridajte geometriu ako premennú DOE kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať premennú DOE), ako je znázornené na obr. DOEL1.15.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0015.jpg' | relative_url }})
 
-Adding geometry as DOE variable
+Pridanie geometrie ako premennej DOE
 
-Name the DOE variable as “Dia” and select the number of samples as 2. User can add the Description about the DOE variable definition, in this lab as we varying internal dia from 0.2 to 0.24 add the description as “**Internal****dia is varied from 0.2183 to 0.2 for lower bound and 0.24 for upper bound.** ” as shown in Fig. DOEL1.16.
+Pomenujte premennú DOE ako „Dia“ a zvoľte počet vzoriek 2. Používateľ môže pridať popis definície premennej DOE. V tomto laboratórnom cvičení, keďže meníme vnútorný priemer v rozmedzí od 0,2 do 0,24, pridajte popis: „**Vnútorný****priemer sa mení od 0,2183 do 0,2 (dolná hranica) a 0,24 (horná hranica).**“, ako je znázornené na obr. DOEL1.16.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0016.jpg' | relative_url }})
 
-DOE variable definition window
+Okno na definovanie premenných DOE
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_edit_geometry_button.jpg' | relative_url }}) to define lower and upper bound geometry. In 2D geometry editor confirm that the DOE type is **Lower**. (See Fig. DOEL1.17.)
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_edit_geometry_button.jpg' | relative_url }}), aby ste definovali geometriu dolnej a hornej hranice. V 2D geometrickom editore skontrolujte, či je typ DOE nastavený na **Dolná**. (Pozri obr. DOEL1.17.)
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0017.jpg' | relative_url }})
 
-2D DOE geometry editor window
+Okno editora geometrie 2D DOE
 
   
-Click on **Geometry** tab to observe the internal flat region dia 0.2183 in X column of the table. Select the innermost dia point and select the ![]({{ '/assets/icons/pre_icons/mo_move.jpg' | relative_url }}) (Move) icon and move the point by (-0.0183,0) as shown in Fig. DOEL1.18.
+Kliknite na kartu **Geometria** a v stĺpci X tabuľky si všimnite vnútornú plochú oblasť s priemerom 0,2183. Vyberte bod s najmenším priemerom, kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_move.jpg' | relative_url }}) (Presunúť) a presuňte bod o (-0,0183; 0), ako je znázornené na obr. DOEL1.18.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0018.jpg' | relative_url }})
 
-Moving the internal dia points for lower bound geometry
+Posunutie bodov vnútorného priemeru pre geometriu s dolnou hranicou
 
-Similarly move other end of the flat dia point 0.0183 in towards centerline as shown in Fig. DOEL1.19.
+Podobne posuňte druhý koniec plochého hrotu o 0,0183 in smerom k osi, ako je znázornené na obr. DOEL1.19.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0019.jpg' | relative_url }})
 
-Moving 2nd dia flat point
+Posun 2. dia s plochou špičkou
 
-In order to maintain the same entry and exit angle of the die, move the top and bottom taper edge end points for the same amount towards centerline. Finally the lower bound geometry and geometry table looks as shown in Fig. DOEL1.20.
+Aby sa zachoval rovnaký uhol vstupu a výstupu matrice, posuňte koncové body horného a dolného zúženého okraja o rovnakú vzdialenosť smerom k stredovej osi. Geometria dolnej hranice a tabuľka geometrie nakoniec vyzerajú tak, ako je znázornené na obr. DOEL1.20.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0020.jpg' | relative_url }})
 
-Lower bound geometry
+Geometria dolnej hranice
 
   
-Select objects tab to define the upper bound of DOE geometry variable and select the **Upper** for DOE type as shown in Fig. DOEL1.21.
+Vyberte kartu „Objekty“, aby ste definovali hornú hranicu geometrickej premennej DOE, a ako je znázornené na obr. DOEL1.21, ako typ DOE vyberte možnosť **Horná**.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0021.jpg' | relative_url }})
 
-Upper bound geometry variable selection
+Výber premennej geometrie s hornou hranicou
 
-Select back the geometry tab and move the internal flat dia points by 0.0217 away from centerline, so the dia changes from 0.2183 to 0.24 as shown in Fig. DOEL1.22.
+Znovu vyberte kartu „Geometria“ a posuňte body vnútorného plochého priemeru o 0,0217 od stredovej osi, aby sa priemer zmenil z 0,2183 na 0,24, ako je znázornené na obr. DOEL1.22.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0022.jpg' | relative_url }})
 
-Moving Upper bound internal flat dia points
+Posúvanie bodov vnútornej plochého priemeru v hornej hranici
 
   
-Similar to the flat edge end points move the top and bottom taper edge end points for the same amount away from centerline in order to maintain the same entry and exit angle of the die. Finally the upper bound geometry and geometry table looks as shown in Fig. DOEL1.23.
+Podobne ako v prípade koncových bodov rovnej hrany posuňte horné a dolné koncové body zúženej hrany o rovnakú vzdialenosť od stredovej čiary, aby sa zachoval rovnaký uhol vstupu a výstupu z lisovacej formy. Geometria hornej hranice a tabuľka geometrie nakoniec vyzerajú tak, ako je znázornené na obr. DOEL1.23.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0023.jpg' | relative_url }})
 
-Upper bound final geometry points
+Horná hranica konečných bodov geometrie
 
-Click on objects tab and drag the morph sliding bar to observe the transition of the geometry variation from lower to upper bound as shown in Fig. DOEL1.24.
+Kliknite na kartu „Objekty“ a posuňte posuvník „Morph“, aby ste mohli sledovať prechod zmeny geometrie od dolnej po hornú hranicu, ako je znázornené na obr. DOEL1.24.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0024.jpg' | relative_url }})
 
-Morphed geometry between defined geometry variations
+Premenená geometria medzi definovanými variantmi geometrie
 
   
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close 2D Geometry Editor and again click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Geometry DOE variable definition for Pass1 die. Observe the green color fill around the ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) (edit geometry) button (See Fig. DOEL1.25.) indicating the DOE variable defined successfully. If the definition having any errors then red color fill can be observed around the DOE variables field.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste zatvorili 2D geometrický editor, a opäť kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste zatvorili definíciu premennej DOE geometrie pre matricu Pass1. Všimnite si zelené sfarbenie okolo tlačidla ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) (upraviť geometriu) (pozri obr. DOEL1.25.), ktoré označuje, že premenná DOE bola úspešne definovaná. Ak definícia obsahuje chyby, okolo poľa premenných DOE sa zobrazí červené sfarbenie.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0025.jpg' | relative_url }})
 
-Geometry window after DOE variable definition
+Okno „Geometria“ po definovaní premenných DOE
 
-## Add Friction coefficient as DOE variable
+## Pridať koeficient trenia ako premennú DOE
 
-Select the **Contact** in operation tree to define the Pass2 die and workpiece friction coefficient as second DOE variable. (See Fig. DOEL1.26.)
+V prevádzkovom strome vyberte položku **Kontakt**, aby ste ako druhú premennú DOE definovali koeficient trenia medzi matricou Pass2 a obrobkom. (Pozri obr. DOEL1.26.)
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0026.jpg' | relative_url }})
 
-Inter object definition window
+Okno definície objektu Inter
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) for Pass2 Die and Workpiece contact relation (See Fig. DOEL1.26.). Right click on the constant Friction field and add as DOE variable as shown in Fig. DOEL1.27.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) pre vzťah medzi formou Pass2 a obrobkom (pozri obr. DOEL1.26.). Kliknite pravým tlačidlom na pole s konštantou trenia a pridajte ho ako premennú DOE, ako je znázornené na obr. DOEL1.27.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0027.jpg' | relative_url }})
 
-Inter object relations edit window deformation tab
+Vzťahy medzi objektmi – okno úprav – karta „Deformácia“
 
   
-DOE variable definition window will open (See Fig. DOEL1.28.). Name the DOE variable as "**Friction** ", number of samples as 2, define upper value as 0.084 and lower value as 0.076 as shown in Fig. DOEL1.28. For this variable we add the description as "**Friction coefficient varied 5 percentage above and below the nominal value.** ".
+Otvorí sa okno na definovanie premennej DOE (pozri obr. DOEL1.28.). Pomenujte premennú DOE ako „**Trenie**“, počet vzoriek nastavte na 2, hornú hodnotu definujte ako 0,084 a dolnú hodnotu ako 0,076, ako je znázornené na obr. DOEL1.28. K tejto premennej pridáme popis: „**Koeficient trenia sa menil o 5 percent nad a pod nominálnou hodnotou.**“.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0028.jpg' | relative_url }})
 
-DOE variable Friction coefficient definition window
+Okno s definíciou premennej koeficientu trenia v programe DOE
 
-Confirm the DOE variable definition not having any error by green color fill around the friction coefficient value field as shown in Fig. DOEL1.29.
+Overte, či definícia premennej DOE neobsahuje žiadnu chybu – to spoznáte podľa zelenej farby okolo poľa s hodnotou koeficientu trenia, ako je znázornené na obr. DOEL1.29.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0029.jpg' | relative_url }})
 
-Inter object edit window deformation tab after DOE variable definition
+Karta „Deformácia“ v okne úpravy objektu Inter po definovaní premenných DOE
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close Edit Inter-Object definition window.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvoríte okno „Edit Inter-Object definition“.
 
-## Check DOE Variables table
+## Skontrolujte tabuľku premenných DOE
 
-Select the DOE Variables table to observe the defined DOE variables list (See Fig. DOEL1.30.). User can edit the DOE variable definition easily from the DOE Variables table for constant values by double click on the values. Function values can be edited by clicking on the single Edit button below the Upper value column.
+Vyberte tabuľku „Premenné DOE“, aby ste si prezreli zoznam definovaných premenných DOE (pozri obr. DOEL1.30.). Používateľ môže definíciu premenných DOE ľahko upravovať v tabuľke „Premenné DOE“ – v prípade konštantných hodnôt stačí na ne dvakrát kliknúť. Hodnoty funkcií je možné upravovať kliknutím na jediné tlačidlo „Upraviť“ pod stĺpcom „Horná hodnota“.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0030.jpg' | relative_url }})
 
-DOE variables list in DOE variables window
+Zoznam premenných DOE v okne premenných DOE
 
-## DOE Samples definition
+## Definícia vzoriek DOE
 
-Select the DOE Sampling tab and select sampling method as **Full Factorial** and observe the total number of simulation text next to it as shown in Fig. DOEL1.31. In this lab as the number of samples for both the DOE variables are 2, total number of DOE Runs/Simulations becomes 4 (2x2).
+Vyberte kartu „DOE Sampling“ (Odber vzoriek DOE), ako metódu odberu vzoriek zvoľte **Full Factorial** a všimnite si celkový počet simulácií uvedený vedľa nej, ako je znázornené na obr. DOEL1.31. V tomto laboratórnom cvičení je počet vzoriek pre obe premenné DOE 2, takže celkový počet behov/simulácií DOE je 4 (2x2).
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0031.jpg' | relative_url }})
 
-DOE Sampling window
+Okno na odber vzoriek DOE
 
-## Define DOE Output operation
+## Definícia operácie „DOE Output“
 
-### Select DOE Operation and object to Study
+### Vyberte prevádzku DOE a objekt, ktorý sa má skúmať
 
-Select DOE output operation from operation editor and select the forming operation check box in operation selection window (See Fig. DOEL1.32.). If the Nominal project is having more than one operation and DOE variables are defined more than one operation then user can select the both the operations to study. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the Output types.
+V editore operácií vyberte operáciu výstupu DOE a v okne výberu operácií zaškrtnite políčko „tvarovacia operácia“ (pozri obr. DOEL1.32.). Ak projekt „Nominal“ obsahuje viac ako jednu operáciu a premenné DOE sú definované pre viac ako jednu operáciu, používateľ môže na analýzu vybrať obe operácie. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujte typy výstupov.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0032.jpg' | relative_url }})
 
-Operation Selection window
+Okno výberu operácie
 
-### Define Output variables
+### Definovanie výstupných premenných
 
-Check the Operation min/max value, Local min/max value and SV on all nodes/elements (Last step of selected operation) output types (see Fig. DOEL1.33.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the Region of Interest.
+Skontrolujte výstupné typy „Minimálna/maximálna hodnota operácie“, „Miestna minimálna/maximálna hodnota“ a „SV“ na všetkých uzloch/prvkoch (posledný krok vybranej operácie) (pozri obr. DOEL1.33.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali oblasť záujmu.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0033.jpg' | relative_url }})
 
-DOE Output selection window
+Okno výberu výstupu DOE
 
   
-Click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add) button to add region and click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) (See Fig. DOEL1.34.).
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať), aby ste pridali región, a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) (pozri obr. DOEL1.34.).
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0034.jpg' | relative_url }})
 
-Region of interest window
+Okno „Zaujímavá oblasť“
 
-Create the **hollow****cylinder** primitive of **Radius** 1.1 and **Height** 1.5 (See Fig. DOEL1.35..). Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the geometry definition. Click on **P******osi** tioning **and define **Offset** as (-0.1, -1) as shown in Fig. DOEL1.36. and then click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}).
+Vytvorte primitív **dutý valec** s **polomerom** 1,1 a **výškou** 1,5 (pozri obr. DOEL1.35..). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) uzavrite definíciu geometrie. Kliknite na **P******osi** tioning **a nastavte **Offset** na (-0,1; -1), ako je znázornené na obr. DOEL1.36, a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0035.jpg' | relative_url }})
 
-Region of interest geometry creation
+Vytvorenie geometrie sledovanej oblasti
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0036.jpg' | relative_url }})
 
-Positioning of Region of Interest 
+Určenie polohy oblasti záujmu 
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Operation Min/Max (All steps in operation) and add **Effective Stress** and **Effective Strain** state variables as shown in Fig. DOEL1.37. Minimum value as component, select **Max** in Min/max and **workpiece** as Object and click **![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})**.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre funkciu Min/Max (všetky kroky v operácii) a pridajte stavové premenné **Efektívne napätie** a **Efektívne deformácia**, ako je znázornené na obr. DOEL1.37. Ako minimálnu hodnotu zložky vyberte v okne Min/max možnosť **Max**, ako objekt vyberte **obrobok** a kliknite na **![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})**.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0037.jpg' | relative_url }})
 
-Operation Min/Max output variables definition window
+Okno na definovanie výstupných premenných operácie Min/Max
 
   
-Click ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) twice to add **Minimum Effective Stress** and **Strain** at last step of the operation as summary variables and **Workpiece** as Object as shown in [Fig. DOEL1.38.]({{ '/docs/sk/labs/doe_labs/2d_doe_lab/2d_doe_lab1/' | relative_url }}#Fig_DOEL1_38_Summary_Min/Max_variables_definition_window)
+Dvakrát kliknite na ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}), aby ste v poslednom kroku operácie pridali **minimálne efektívne napätie** a **deformáciu** ako súhrnné premenné a **obrobok** ako objekt, ako je znázornené na obrázku [Fig. DOEL1.38.]({{ '/docs/sk/labs/doe_labs/2d_doe_lab/2d_doe_lab1/' | relative_url }}#Fig_DOEL1_38_Summary_Min/Max_variables_definition_window)
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0038.jpg' | relative_url }})
 
-Summary Min/Max variables definition window
+Okno s prehľadom definícií premenných Min/Max
 
   
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and click ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}) button thrice to define 3 Location specific state variables. Add **Effective Strain** , **Effective Stress** and **Effective Strain rate** state variables and select the Common Mesh Region as **REGION001** at the bottom of the window as shown in Fig. DOEL1.39.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a trikrát kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_button_2.jpg' | relative_url }}), aby ste definovali 3 stavové premenné špecifické pre danú polohu. Pridajte stavové premenné **Efektívna deformácia**, **Efektívne napätie** a **Efektívna rýchlosť deformácie** a v dolnej časti okna vyberte spoločnú oblasť siete **REGION001**, ako je znázornené na obr. DOEL1.39.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0039.jpg' | relative_url }})
 
-Location specific (all nodes) variables definition window
+Okno na definovanie premenných špecifických pre danú polohu (všetky uzly)
 
   
-Selecting the defined Region of Interest region as Common Mesh Region system adds the Mesh window next to this. So click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button to generate mesh for the region as shown in Fig. DOEL1.40.
+Po výbere definovanej oblasti záujmu (Region of Interest) ako spoločnej oblasti siete (Common Mesh Region) sa vedľa nej zobrazí okno „Mesh“. Kliknite teda na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a potom na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}), čím sa vygeneruje sieť pre túto oblasť, ako je znázornené na obr. DOEL1.40.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0040.jpg' | relative_url }})
 
-Region of interest region mesh generation window
+Okno na generovanie siete oblasti záujmu
 
   
-As we are not defining any Variable and Fill constraints click on ![]({{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}) (Save project) icon. If user want to limit any state variable value user can define variable constraints or if user need to filter the underfill and lap deflects user can check fill constrains.
+Keďže nedefinujeme žiadne obmedzenia pre premenné a výplň, kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}) (Uložiť projekt). Ak chce používateľ obmedziť hodnotu akejkoľvek stavovej premennej, môže definovať obmedzenia pre premenné; ak potrebuje filtrovať deformácie spôsobené nedostatočnou výplňou a prekrývaním, môže zaškrtnúť obmedzenia pre výplň.
 
-Select ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) MO mode button to submit DOE project to simulate.
+Stlačte tlačidlo režimu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) MO, aby ste odoslali projekt DOE na simuláciu.
 
-## Simulate DOE project
+## Simulácia projektu DOE
 
-Click on ![]({{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}) button to submit to simulate Click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) for Run DOE/OPT pop-up (See Fig. DOEL1.41.) and select the simulation server in the available Sim Server list. Click on ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}) button (See Fig. DOEL1.42.) to start DOE samples DB generation and simulations. System generates the database for all runs and then start simulating from DOE **Run 1** to **Run N** (last Run) in queue. If user selected more than one **Simultaneous simulations** then selected number of simulations will run simultaneously.
+Kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}) na spustenie simulácie. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), čím sa otvorí vyskakovacie okno „Run DOE/OPT“ (pozri obr. DOEL1.41.), a vyberte simulačný server zo zoznamu dostupných simulačných serverov. Kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_submit_to_qeue_button.jpg' | relative_url }}) (pozri obr. DOEL1.42.), čím spustíte generovanie databázy vzoriek DOE a simulácie. Systém vygeneruje databázu pre všetky behy a následne začne simulovať od **behu 1** po **beh N** (posledný beh) v poradí. Ak používateľ zvolil viac ako jednu **súbežnú simuláciu**, potom sa vybraný počet simulácií spustí súbežne.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0041.jpg' | relative_url }})
 
-DOE simulations Run window
+Simulácie DOE – Okno spustenia
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0042.jpg' | relative_url }})
 
-DOE simulations Run window
+Simulácie DOE – Okno spustenia
 
   
-Observe the Simulation Jobs tab to monitor the DOE running jobs status as shown in Fig. DOEL1.43.
+Sledujte kartu „Simulation Jobs“ (Simulačné úlohy), kde môžete sledovať stav prebiehajúcich úloh DOE, ako je znázornené na obr. DOEL1.43.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0043.jpg' | relative_url }})
 
-DOE runs Simulation jobs status
+DOE – stav simulačných úloh
 
   
-Select the DOE Log file to observe the DOE running jobs more details as shown in Fig. DOEL1.44.
+Vyberte súbor protokolu DOE, aby ste mohli sledovať podrobnosti o úlohách spustených v DOE, ako je znázornené na obr. DOEL1.44.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0044.jpg' | relative_url }})
 
-DOE jobs Log details
+Podrobnosti o záznamoch úloh DOE
 
   
-From DEFORM Main GUI explorer window user can observe the file structure for the DOE projects as shown in Fig. DOEL1.45.
+V hlavnom okne prehliadača grafického používateľského rozhrania programu DEFORM si používateľ môže prezrieť štruktúru súborov projektov DOE, ako je znázornené na obr. DOEL1.45.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0045.jpg' | relative_url }})
 
-DOE Project file structure
+Štruktúra súborov projektu DOE
 
-Confirm the DOE runs simulation by 'Simulation is done" message in DOE Log tab then click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) MO mode button to open the DOE post.
+Overte, či sa simulácia DOE vykonala, podľa správy „Simulácia je dokončená“ na karte „Protokol DOE“, a potom kliknite na tlačidlo režimu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) MO, aby sa otvoril výstup DOE.
 
-## Review the DOE results
+## Prehľad výsledkov DOE
 
-In MO Post click on button to open the DOE SQL Database file (SDB) in DOE post as MO Post do not give the DOE results statistical analysis features. DOE Post will open in other window as shown in Fig. DOEL1.46.
+V programe MO Post kliknite na tlačidlo na otvorenie súboru databázy DOE SQL (SDB) v programe DOE Post, keďže program MO Post neposkytuje funkcie na štatistickú analýzu výsledkov DOE. Program DOE Post sa otvorí v samostatnom okne, ako je znázornené na obr. DOEL1.46.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0046.jpg' | relative_url }})
 
-DOE Post
+Príspevok DOE
 
   
-Table view will be displaying in the graphics window. We can select respective check boxes in the property window area which to be displayed in the table view (DOE Input and DOE Output).
+V grafickom okne sa zobrazí tabuľkový pohľad. V oblasti okna vlastností môžeme zaškrtnúť príslušné políčka, ktoré sa majú v tabuľkovom pohľade zobraziť (Vstupy DOE a Výstupy DOE).
 
-### Check Operation min/max (all steps) variables
+### Skontrolujte premenné min/max operácie (všetky kroky)
 
-Select the Operation Min/Max variable in output tree and click on ![]({{ '/assets/icons/post_icons/doe_post_table_view.jpg' | relative_url }}) table view. All DOE runs global minimum values are zero, so no need to plot other curves.
+Vo výstupnom strome vyberte premennú „Operation Min/Max“ a kliknite na zobrazenie tabuľky ![]({{ '/assets/icons/post_icons/doe_post_table_view.jpg' | relative_url }}). Všetky behy DOE majú globálne minimálne hodnoty rovné nule, takže nie je potrebné vykresľovať ďalšie krivky.
 
-In table view for Diameter DOE geometry variable Dia 0 indicates lower bound geometry and 1 indicates upper bound geometry, as we are taken only 2 samples there is no geometry variation between lower and upper bound. In such case it display fraction value, if it is more than 0.5 it indicates between nominal and upper bound.
+V tabuľkovom zobrazení pre geometriu Diameter DOE hodnota Dia 0 označuje dolnú hranicu geometrie a hodnota 1 hornú hranicu geometrie. Keďže sme odobrali len 2 vzorky, medzi dolnou a hornou hranicou neexistuje žiadna geometrická odchýlka. V takomto prípade sa zobrazí hodnota podielu; ak je väčšia ako 0,5, znamená to, že hodnota sa nachádza medzi nominálnou hodnotou a hornou hranicou.
 
-### Check Summary min/max (last step) variables
+### Skontrolujte premenné „súhrn min/max“ (posledný krok)
 
-Select Summary Effective Strain and click on ![]({{ '/assets/icons/post_icons/doe_post_response surface_button.jpg' | relative_url }}) (3D response surface plot) icon to observe the 3d representation of this response for input DOE variables. (See Fig. DOEL1.47.).
+Vyberte položku „Súhrnné efektívne napätie“ a kliknite na ikonu ![]({{ '/assets/icons/post_icons/doe_post_response surface_button.jpg' | relative_url }}) (3D graf odozvy), aby ste si prezreli 3D znázornenie tejto odozvy pre vstupné premenné DOE. (Pozri obr. DOEL1.47.)
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0047.jpg' | relative_url }})
 
-Minimum Effective Strain summary response surface
+Súhrnná odozva povrchu odozvy pre minimálne efektívne deformácie
 
-Click on ![]({{ '/assets/icons/post_icons/doe_post_response_contour_button.jpg' | relative_url }}) (2d contour response surface) to view the response of selected output variables on 2d plane as shown in Fig. DOEL1.48. From tool menu bar select ![]({{ '/assets/icons/post_icons/doe_post_change_layout_icon.jpg' | relative_url }}) Change layout button and select “Grid4_1” to divide graphics area equally for all 4 windows as shown in the Fig. DOEL1.48.
+Kliknite na ![]({{ '/assets/icons/post_icons/doe_post_response_contour_button.jpg' | relative_url }}) (2D povrch odozvy) a zobrazíte odozvu vybraných výstupných premenných v 2D rovine, ako je znázornené na obr. DOEL1.48. Z panela nástrojov vyberte tlačidlo ![]({{ '/assets/icons/post_icons/doe_post_change_layout_icon.jpg' | relative_url }}) Zmeniť rozloženie a vyberte „Grid4_1“, čím rozdelíte grafickú oblasť rovnomerne medzi všetky 4 okná, ako je znázornené na obr. DOEL1.48.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0048.jpg' | relative_url }})
 
-2D contour response surface for Minimum Effective stress
+2D kontúrová odozvová plocha pre minimálne efektívne napätie
 
-Also, try-out the tornado, sensitivity, scatter and histogram plots to analyze the Minimum Effective stress output variable. (See Fig. DOEL1.49.)
+Vyskúšajte tiež grafy typu „tornádo“, citlivosti, rozptylu a histogramu na analýzu výstupnej premennej „Minimálne efektívne napätie“. (Pozri obr. DOEL1.49.)
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0049.jpg' | relative_url }})
 
-DOE variables sensitivity plots for Minimum effective stress summary variable
+Grafy citlivosti premenných DOE pre súhrnnú premennú „Minimálne efektívne napätie“
 
   
-**Tornado chart** gives relative magnitude and direction of influence of DOE variables selected output variable. In the Fig. DOEL1.49. tornado chart indicating Diameter is having more influence compared to Friction on Minimum effective stress at last step and both are inversely affecting.
+**Tornádový graf** znázorňuje relatívnu veľkosť a smer vplyvu premenných DOE na vybranú výstupnú premennú. Na obr. DOEL1.49 je z tornádového grafu zrejmé, že v poslednom kroku má priemer väčší vplyv na minimálne efektívne napätie v porovnaní s trením a že oba faktory pôsobia opačne.
 
-**Sensitivity plot** show the effect of each DOE study input variable to the selected output variable as slope. For Minimum effective stress both input variations are inversely affecting.
+**Graf citlivosti** znázorňuje vplyv každej vstupnej premennej štúdie DOE na vybranú výstupnú premennú vo forme sklonu krivky. V prípade minimálneho efektívneho napätia majú obe zmeny vstupných premenných opačný vplyv.
 
-**Scatter plot** show correlation between DOE study input variable and selected output variable by linear regression. In the above Fig. DOEL1.49. we can observe the linear regression equation along with the sampling points.
+**Bodový graf** znázorňuje koreláciu medzi vstupnou premennou štúdie DOE a vybranou výstupnou premennou prostredníctvom lineárnej regresie. Na vyššie uvedenom obr. DOEL1.49 môžeme pozorovať rovnicu lineárnej regresie spolu s bodmi odberu vzoriek.
 
-**Histogram plot** shows the frequency of the DOE runs output variables within small ranges. So it's an Number of DOE runs Vs Selected output variable bar graph.
+**Graf histogramu** znázorňuje frekvenciu výstupných premenných v jednotlivých pokusoch DOE v rámci malých rozsahov. Ide teda o stĺpcový graf, v ktorom je na jednej osi počet pokusov DOE a na druhej osi vybraná výstupná premenná.
 
-### Check Location specific (One step) variables
+### Skontrolujte premenné špecifické pre danú lokalitu (jedno krokové)
 
-Select the location specific Effective strain value in the DOE Output tree. As explained in the Summary variables check plot the 3d and 2d response surfaces and observe the output variable response for the selected input as shown in Fig. DOEL1.50. For location specific output variable it will plot the state variable information only for the defined region of interest when we are in the common mesh tab as shown in Fig. DOEL1.50.
+V stromovej štruktúre „DOE Output“ vyberte hodnotu efektívneho deformácie pre konkrétnu polohu. Ako je vysvetlené v časti „Summary variables“, skontrolujte grafy 3D a 2D odozvových plôch a sledujte odozvu výstupnej premennej pre vybraný vstup, ako je znázornené na obr. DOEL1.50. V prípade výstupnej premennej špecifickej pre danú polohu sa informácie o stavovej premennej vykreslia iba pre definovanú oblasť záujmu, ak sa nachádzame na karte „Spoločná sieť“, ako je znázornené na obr. DOEL1.50.
 
 ![]({{ '/assets/images/labs/doe_labs/2d_doe_labs/2d_doe_lab1/image0050.jpg' | relative_url }})
 
-3D and 2D Response surface plot for location specific Effective strain
+3D a 2D graf odozvy povrchu pre efektívne deformácie v konkrétnych miestach
 
-For more details on these post analysis features refer the chapter [54\. DOE Post Processor]({{ '/docs/sk/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/' | relative_url }}).
+Ďalšie informácie o týchto funkciách na analýzu záznamov nájdete v kapitole [54\. DOE Post Processor]({{ '/docs/sk/doe_and_optimization/54_doe_post_processor/54_1_doe_post_processor/' | relative_url }}).
 
   
-**Related Topics:**
+**Súvisiace témy:**
 
 ****[52.1. DOE and DOE Output Operation Setup]({{ '/docs/sk/doe_and_optimization/52_doe_study/52_1_doe_and_doe_output_operation_setup/' | relative_url }})
 

@@ -1,514 +1,514 @@
 ---
 lang: sk
-title: "2D Heat Transfer Operations Lab"
+title: "Laboratórium 2D operácií prenosu tepla"
 ---
 
-# 2D Heat Transfer Operations Lab
+# Laboratórium 2D prevádzky prenosu tepla
 
-This lab will demonstrate how to setup a typical multiple operation simulation involving different heat transfer and forging operations. During this lab we will also attempt to highlight various features of the system that user can include in other type of multiple operation situations. These operations can be a set of heat resting operation (see Fig. 2DHTRL1.1.), a set of deformation operations with changing dies between operations, or a combination of both heat transfer and deformation operations (see Fig. 2DHTRL1.1..). The model is 2D axisymmetric and the following 3D images are used for illustration purpose only.
+V tomto laboratórnom cvičení si ukážeme, ako nastaviť typickú simuláciu viacerých operácií zahŕňajúcu rôzne operácie prenosu tepla a kovania. Počas tohto cvičenia sa tiež pokúsime poukázať na rôzne funkcie systému, ktoré môže používateľ využiť v iných typoch situácií s viacerými operáciami. Tieto operácie môžu predstavovať súbor operácií s tepelným odpočinkom (pozri obr. 2DHTRL1.1.), súbor deformačných operácií s výmenou foriem medzi jednotlivými operáciami alebo kombináciu operácií prenosu tepla a deformačných operácií (pozri obr. 2DHTRL1.1.). Model je 2D osovo symetrický a nasledujúce 3D obrázky slúžia iba na ilustračné účely.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0001.jpg' | relative_url }})
 
-3D illustration of Heat Resting and Forming operations
+3D znázornenie procesov tepelného odpočinku a tvarovania
 
-In this lab, we setup a four operations model involving one ‘Heat Furnace’, ‘Heat Transfer', ‘Heat Resting’ one ‘Deformation’ and Heat Dwelling operations. The part is cylindrical workpiece, which first undergoes a furnace heating operation for one hour at 2000 F, followed by a heat transfer operation for 15 seconds during the transfer from the furnace to the forming station. This operation will be followed by a heat resting operation where the workpiece rests on forming dies for 4 seconds prior to a deformation operation. Deformation operation runs for a specific stroke of (7.25”) the upper die. Finally Dwelling operation for 4 seconds. The entire sequence can be setup using this system and all the operations can be simulated without user intervention in batch mode.
+V tomto laboratóriu sme nastavili model so štyrmi operáciami, ktorý zahŕňa jednu operáciu „ohrev v peci“, „prenos tepla“, „odpočinok v teple“, jednu operáciu „deformácia“ a operáciu „udržanie tepla“. Súčiastka je valcovitý obrobok, ktorý najprv prejde operáciou ohrevu v peci po dobu jednej hodiny pri teplote 2000 F, na čo nadväzuje operácia prenosu tepla trvajúca 15 sekúnd počas presunu z pece do formovacej stanice. Po tejto operácii nasleduje operácia tepelného odpočinku, pri ktorej obrobok odpočíva na tvárniacich maticiach po dobu 4 sekúnd pred operáciou deformácie. Operácia deformácie prebieha počas špecifického zdvihu (7,25”) hornej matice. Na záver nasleduje fáza udržiavania teploty trvajúca 4 sekundy. Celú sekvenciu je možné nastaviť pomocou tohto systému a všetky operácie je možné simulovať bez zásahu používateľa v dávkovom režime.
 
-1.1. Creating New Problem and Adding Operations
+1.1. Vytvorenie novej úlohy a pridanie operácií
 
-1.2. Operation1: Furnace Heating Setup
+1.2. Operácia 1: Nastavenie ohrevu pece
 
-1.3. Operation2: Air Transfer
+1.3. Operácia 2: Preprava vzduchu
 
-1.4. Operation3: Heat Resting
+1.4. Operácia 3: Tepelné odležanie
 
-1.5. Operation4: Forming
+1.5. Operácia 4: Tvarovanie
 
-1.6. Operation5: Heat Dwelling
+1.6. Operácia 5: Teplo v obydlí
 
-1.7. Simulate problem
+1.7. Simulácia problému
 
-1.8. Post Processing
+1.8. Následné spracovanie
 
-## Creating New Problem and Adding Operations
+## Vytvorenie nového problému a pridanie operácií
 
-### Creating New Problem
+### Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2.) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear. 
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v1x.xxx (kde .xxx označuje číslo verzie, napr. v14.0.2.) a z ponuky vyberte **DEFORM GUI Main** vxx.xx. Zobrazí sa hlavné okno DEFORM GUI Main. 
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. 2DHTRL1.2. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** " radio button in unit field. Define Problem Name as " ******Heat_Transfer_Operations** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie úlohy, ako je znázornené na obr. 2DHTRL1.2. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte prepínač „**Anglický**“. Názov úlohy zadajte ako „******Heat_Transfer_Operations**“ a uistite sa, že je zaškrtnuté políčko „Zobraziť dialógové okno s možnosťami“ (ak nezaškrtnete políčko „**Zobraziť dialógové okno s možnosťami**“, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s využitím integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg' | relative_url }})
 
-New Problem Popup
+Vyskakovacie okno s novým problémom
 
-MO wizard will open, along with project naming window (see Fig. 2DHTRL1.3.), defined problem name is updated as ‘**Heat_Transfer_Operations** ’ as the project name and selected unit system updated. User can also change the Unit system and add operation by selecting from First operation pull down list and checkbox (see Fig. 2DHTRL1.3.). Using Copy Existing project option we can import previous saved projects as new project. Select the **F****irst operation** as **2D Heat transfer** operation and check the check box to add Heat transfer operation as first operation. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Otvorí sa sprievodca MO spolu s oknom na zadanie názvu projektu (pozri obr. 2DHTRL1.3.), pričom definovaný názov úlohy sa aktualizuje na „**Heat_Transfer_Operations**“ ako názov projektu a aktualizuje sa aj vybraný systém jednotiek. Používateľ môže tiež zmeniť systém jednotiek a pridať operáciu výberom z roletového zoznamu Prvá operácia a zaškrtnutím príslušného políčka (pozri obr. 2DHTRL1.3.). Pomocou možnosti Kopírovať existujúci projekt môžeme importovať predtým uložené projekty ako nový projekt. Vyberte **F****irst operation** ako operáciu **2D Heat transfer** a zaškrtnite políčko, aby ste pridali operáciu prenosu tepla ako prvú operáciu. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0003.jpg' | relative_url }})
 
-MO Wizard New Project Opening Window
+Okno na otvorenie nového projektu v nástroji MO Wizard
 
-### Adding other operations
+### Pridávanie ďalších operácií
 
-Multiple Operation wizard will opens new project with one 2d Heat transfer operation. Add two more heat transfer operations for Air transfer and Resting, one Forming operation and heat transfer operation for Dwelling after forming from Explorer Operations list clicking ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button as shown in Fig. 2DHTRL1.4.
+Sprievodca viacerými operáciami otvorí nový projekt s jednou 2D operáciou prenosu tepla. Pridajte ďalšie dve operácie prenosu tepla pre prenos vzduchu a odpočinok, jednu operáciu tvarovania a operáciu prenosu tepla pre zotrvanie po tvarovaní zo zoznamu operácií v Průzkumníku kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}), ako je znázornené na obr. 2DHTRL1.4.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0004.jpg' | relative_url }})
 
-Adding Operations
+Pridávanie operácií
 
-## Operation1: Furnace Heating Setup
+## Operácia 1: Nastavenie vykurovania pece
 
-For first heat transfer operation change the operation name as "**Furnace Heating** " by double clicking on Operation name in Operation Editor window as shown in Fig. 2DHTRL1.5. and press **Enter** in Keyboard.
+Pre prvú operáciu prenosu tepla zmeňte názov operácie na „**Ohrev v peci**“ dvojitým kliknutím na názov operácie v okne Editor operácií, ako je znázornené na obr. 2DHTRL1.5, a stlačte klávesu **Enter** na klávesnici.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0005.jpg' | relative_url }})
 
-Name the first operation as Furnace Heating
+Prvú operáciu nazvite „Vyhrievanie v peci“
 
-### Select Geometry Type
+### Vyberte typ geometrie
 
-In this lab we are using Axisymmetric geometries, so activate **2D Axisymmetric** radio button in geometry type window as shown in Fig. 2DHTRL1.4., then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+V tomto laboratórnom cvičení používame osovo symetrické geometrie, preto v okne typu geometrie zaškrtnite políčko **2D osovo symetrické**, ako je znázornené na obr. 2DHTRL1.4., a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
-### Select Heat Transfer Type for Furnace Heating
+### Výber typu prenosu tepla pre vykurovanie pece
 
-Select **Heat in Furnace** heat transfer type for Furnace heating operation as shown in Fig. 2DHTRL1.6. This will set the default heat transfer settings for heating operation. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Pre režim kúrenia v peci vyberte typ prenosu tepla **Teplo v peci**, ako je znázornené na obr. 2DHTRL1.6. Tým sa nastavia predvolené nastavenia prenosu tepla pre režim kúrenia. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0006.jpg' | relative_url }})
 
-Heat transfer type selection for Furnace Heating
+Výber typu prenosu tepla pre vykurovanie pece
 
-### Set Process Conditions for Furnace Heating
+### Nastavenie prevádzkových podmienok pre ohrev v peci
 
-Define Heating time as **3600** sec (one hour of heating) at **2000** °F furnace temperature or environment temperature as shown in Fig. 2DHTRL1.7. and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Nastavte dobu ohrevu na **3600** sekúnd (jedna hodina ohrevu) pri teplote pece alebo okolitej teplote **2000** °F, ako je znázornené na obr. 2DHTRL1.7, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0007.jpg' | relative_url }})
 
-Process Condition settings for Furnace Heating
+Nastavenia prevádzkových podmienok pre ohrev v peci
 
-### Select Simulation Controls for Furnace Heating
+### Výber ovládacích prvkov simulácie pre ohrev pece
 
-Keep only Heat Transfer mode checked as only heat transfer is modeling as shown in Fig. 2DHTRL1.8. and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Nechajte zaškrtnutý len režim „Heat Transfer“, pretože sa modeluje iba prenos tepla, ako je znázornené na obr. 2DHTRL1.8, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0008.jpg' | relative_url }})
 
-Simulation Controls settings for Furnace Heating
+Nastavenia ovládacích prvkov simulácie pre vykurovanie pece
 
-### Import Workpiece Material
+### Import materiálu obrobku
 
-In Material window, load the material **AISI-8620** from DEFORM Material library, from **Steel** category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option. This can be done as shown in Fig. 2DHTRL1.9. by clicking ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button. Material can also be load from Materials list in Explorer. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) for Material list page.
+V okne „Material“ načítajte materiál **AISI-8620** z knižnice materiálov DEFORM v kategórii **Steel** pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice). To môžete urobiť tak, ako je znázornené na obr. 2DHTRL1.9, kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}). Materiál je možné načítať aj zo zoznamu materiálov v prehliadači. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre prechod na stránku so zoznamom materiálov.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0009.jpg' | relative_url }})
 
-Importing Workpiece material from DEFORM library
+Import materiálu obrobku z knižnice DEFORM
 
-### Check Material properties
+### Skontrolujte vlastnosti materiálu
 
-In Material **AISI-8620** page to check the thermal material properties, select **Thermal** tab (see Fig. 2DHTRL1.10.) and click on ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) (Define) button next to Thermal Conductivity to observe the Thermal conductivity function of temperature as shown in Fig. 2DHTRL1.11.
+Na stránke materiálu **AISI-8620**, kde chcete skontrolovať tepelné vlastnosti materiálu, vyberte kartu **Thermal** (pozri obr. 2DHTRL1.10.) a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) (Definovať) vedľa položky Tepelná vodivosť, aby ste mohli sledovať priebeh tepelnej vodivosti v závislosti od teploty, ako je znázornené na obr. 2DHTRL1.11.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0010.jpg' | relative_url }})
 
-Material property definition window for AISI-8620
+Okno na definovanie vlastností materiálu pre AISI-8620
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0011.jpg' | relative_url }})
 
-Thermal Conductivity function of temperature data for AISI-8620
+Funkcia tepelnej vodivosti na základe údajov o teplote pre materiál AISI-8620
 
-Similarly click on ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) (Define) button next to Heat capacity and observe the function data as shown in Fig. 2DHTRL1.12.
+Podobne kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) (Definovať) vedľa položky „Teplotná kapacita“ a prezrite si údaje o funkcii, ako je znázornené na obr. 2DHTRL1.12.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0012.jpg' | relative_url }})
 
-Heat capacity function of temperature data for AISI-8620
+Funkcia tepelnej kapacity na základe údajov o teplote pre materiál AISI-8620
 
-For Emissivity and Mass density constant value is defined as shown in Fig. 2DHTRL1.10. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) for Material properties and Object window, as only Workpiece object is enough heating operation.
+Pre emisivitu a hustotu hmoty je definovaná konštantná hodnota, ako je znázornené na obr. 2DHTRL1.10. Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre okno „Vlastnosti materiálu“ a „Objekt“, keďže na operáciu ohrevu stačí iba objekt „Obrobok“.
 
-### Define Workpiece
+### Definícia obrobku
 
-In Workpiece object window keep the object type as ‘**Plastic** ’ (see Fig. 2DHTRL1.13.). At this stage user can also specify initial temperature of the workpiece as **68°** F. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue and import the workpiece geometry.
+V okne „Objekt obrobku“ ponechajte typ objektu ako „**Plast**“ (pozri obr. 2DHTRL1.13.). V tejto fáze môže používateľ tiež zadať počiatočnú teplotu obrobku ako **68°** F. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte a načítajte geometriu obrobku.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0013.jpg' | relative_url }})
 
-Workpiece Object definition
+Definícia objektu obrobku
 
-### Import Workpiece Geometry
+### Import geometrie obrobku
 
-In Geometry page, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) ( Load Geometry from Library) button and import ‘**Disk_wkp****.****igs** ’ as shown in Fig. 2DHTRL1.14. Other options available at this stage are defining the workpiece from the Primitive geometry and 2D geometry Editor using ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) and ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) options. Click ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) If System ask the 2D\LABS\ location to be saved as library location.
+Na stránke Geometria kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) a importujte súbor „**Disk_wkp****.****igs**“, ako je znázornené na obr. 2DHTRL1.14. Ďalšie možnosti dostupné v tejto fáze sú definovanie obrobku z primitívnej geometrie a 2D geometrického editora pomocou možností ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) a ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}). Ak systém požiada o zadanie umiestnenia 2D\LABS\ ako umiestnenia knižnice, kliknite na ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0014.jpg' | relative_url }})
 
-Import geometry from DEFORM library
+Importovať geometriu z knižnice DEFORM
 
-Once the geometry is imported click on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option to check and correct the imported geometry if required (see Fig. 2DHTRL1.15.). Depending upon the imported geometry type, after clicking on ‘Check & Correct Geometry’ makes sure that the object boundary mark (shaded region next to the boundary) remains inside the boundary. If the system fails to correct the geometry choose among the options ‘System detects’, ‘Closed’ and ‘Open’ to correct the geometry.
+Po importovaní geometrie kliknite na možnosť ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste importovanú geometriu skontrolovali a v prípade potreby opravili (pozri obr. 2DHTRL1.15.). V závislosti od typu importovanej geometrie sa po kliknutí na „Skontrolovať a opraviť geometriu“ uistite, že značka ohraničenia objektu (tieňovaná oblasť vedľa ohraničenia) zostáva vnútri ohraničenia. Ak sa systému nepodarí geometriu opraviť, vyberte jednu z možností „Systém zistil“, „Uzavreté“ a „Otvorené“, aby ste geometriu opravili.
 
-If the geometry orientation is not correct, the system attempts to correct the same during the meshing stage, but it is recommended to check and correct the object geometry as and when we import the same. This procedure remains the same any time we need to import the object geometry. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Ak orientácia geometrie nie je správna, systém sa pokúsi túto chybu opraviť počas fázy vytvárania siete, odporúča sa však skontrolovať a opraviť geometriu objektu už pri jej importe. Tento postup zostáva rovnaký vždy, keď potrebujeme importovať geometriu objektu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0015.jpg' | relative_url }})
 
-Geometry checking and correcting
+Kontrola a oprava geometrie
 
-### Generate Workpiece Mesh
+### Vytvorenie siete obrobku
 
-Generate the mesh using 2000 elements (see Fig. 2DHTRL1.16.). Complete range of meshing options are also available in expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})), if user needs to have more control on the mesh generated. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Vytvorte sieť s použitím 2000 prvkov (pozri obr. 2DHTRL1.16.). V expertnom režime (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) je k dispozícii aj kompletná škála možností vytvárania sietí, ak potrebujete mať väčšiu kontrolu nad vytvorenou sieťou. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0016.jpg' | relative_url }})
 
-Mesh generation window
+Okno na generovanie siete
 
-### Assign Workpiece Material
+### Priradiť materiál obrobku
 
-To assign material for workpiece select the material ‘**AISI****-8620** ’ from material window. This can be done as shown in Fig. 2DHTRL1.17. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Ak chcete obrobku priradiť materiál, vyberte v okne materiálov materiál „**AISI****-8620**“. Postupujte podľa obrázku 2DHTRL1.17. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0017.jpg' | relative_url }})
 
-Object material selection window
+Okno na výber materiálu objektu
 
-### Define Workpiece Boundary Conditions
+### Definovanie okrajových podmienok obrobku
 
-In BCC page, check the default assigned Heat exchange with Environment BCC to the entire outer surface of the Billet (which does not include the centerline since these nodes are inside the object) by clicking on Defined under Heat exchange with Environment. Default BCC are assigned automatically due to selection of problem type as axisymmetric (see Fig. 2DHTRL1.18.).
+Na stránke BCC skontrolujte, či je pre celý vonkajší povrch polotovaru predvolene priradená voľba „Výmena tepla s prostredím“ (ktorá nezahŕňa os, keďže tieto uzly sa nachádzajú vnútri objektu), a to kliknutím na položku „Definované“ v časti „Výmena tepla s prostredím“. Predvolené BCC sa priradia automaticky na základe výberu typu úlohy ako osovo symetrickej (pozri obr. 2DHTRL1.18.).
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0018.jpg' | relative_url }})
 
-Boundary condition definition for Furnace Heating
+Definícia okrajových podmienok pre ohrev v peci
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Step controls window as there is no object positioning and Thermal stopping controls definition is required.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí okno „Ovládacie prvky krokov“, keďže nie je definované polohovanie objektov a je potrebné definovať ovládacie prvky tepelného zastavenia.
 
-### Define Step Controls for Furnace Heating
+### Nastavenie krokových regulátorov pre vykurovanie pece
 
-Set the **number of simulation steps** as **100** at **36** sec each and saving every **10** **steps**(see Fig. 2DHTRL1.19.). Advanced Simulation controls settings are available in expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed to the database generation stage.
+Nastavte **počet simulačných krokov** na **100**, pričom dĺžka každého kroku je **36** sekúnd, a ukladajte výsledky každých **10** **krokov** (pozri obr. 2DHTRL1.19.). Nastavenia pokročilých ovládacích prvkov simulácie sú k dispozícii v expertnom režime (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite do fázy generovania databázy.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0019.jpg' | relative_url }})
 
-Simulation controls settings for Furnace Heating
+Nastavenia ovládacích prvkov simulácie pre vykurovanie pece
 
-### Generate Database
+### Vytvoriť databázu
 
-In the database generation stage user can check the data required for the analysis and proceed to generate the database (see Fig. 2DHTRL1.20.). First operation of any multiple operations, user is required to generate the database. For all the subsequent operations we only need to setup the process data and simulation controls. At this stage user also has an option of importing a keyword file, which is particularly useful for the later operations. Functionality of this feature of ‘Append user defined keyword file’ will be discussed in the later sections of this lab. Click on ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) to proceed to the next operation of ‘Air Transfer’.
+V etape vytvárania databázy môže používateľ skontrolovať údaje potrebné na analýzu a pokračovať vo vytváraní databázy (pozri obr. 2DHTRL1.20.). Ako prvú z viacerých operácií musí používateľ vytvoriť databázu. Pre všetky nasledujúce operácie stačí len nastaviť procesné údaje a parametre simulácie. V tejto fáze má používateľ tiež možnosť importovať súbor kľúčových slov, čo je obzvlášť užitočné pre neskoršie operácie. Funkčnosť tejto funkcie „Pridať používateľsky definovaný súbor kľúčových slov“ bude rozoberaná v neskorších častiach tohto laboratórneho cvičenia. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}), aby ste prešli k ďalšej operácii „Air Transfer“.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0020.jpg' | relative_url }})
 
-Database Generation window for first operation
+Okno „Vytvorenie databázy“ pre prvú operáciu
 
-## Operation2: Air Transfer
+## Operácia 2: Letecký transport
 
-In this operation we setup a heat transfer to air stage of the operation involving a 15 sec transfer time of the part from furnace to the forming station. During this time the part which is at about 2000°F undergoes some cooling in ambient air.
+V rámci tohto pracovného kroku sme nastavili fázu odvodu tepla do ovzdušia, pri ktorej trvá presun dielu z pece do formovacej stanice 15 sekúnd. Počas tejto doby sa diel, ktorého teplota je približne 2000 °F, čiastočne ochladí na teplotu okolitého vzduchu.
 
-### Select Heat Transfer Type for Air Transfer
+### Výber typu prenosu tepla pri prenose vzduchom
 
-Name the operation as "**Air Transfer** " by double clicking on Operation name in Operation Editor and press Enter from Keyboard to close. Select '**Transfer through air** ' heat transfer type as shown in Fig. 2DHTRL1.21. and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Pomenujte operáciu ako „**Air Transfer**“ dvojitým kliknutím na položku „Názov operácie“ v editore operácií a stlačením klávesy Enter na klávesnici operáciu zatvorte. Vyberte typ prenosu tepla „**Transfer through air**“, ako je znázornené na obr. 2DHTRL1.21, a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0021.jpg' | relative_url }})
 
-Heat Transfer type selection for Air Transfer
+Výber typu prenosu tepla pre prenos vzduchom
 
-### Set Process Conditions for Air Transfer
+### Nastavenie prevádzkových podmienok pre prepravu vzduchu
 
-Define the process conditions as **transfer time** of **15** sec in a **68** °F environment using the default convection coefficient as shown in Fig. 2DHTRL1.22.
+Nastavte podmienky procesu na **doba prenosu** **15** sekúnd v prostredí s teplotou **68** °F s použitím predvoleného koeficientu konvekcie, ako je znázornené na obr. 2DHTRL1.22.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0022.jpg' | relative_url }})
 
-Process condition settings for Air Transfer
+Nastavenia prevádzkových podmienok pre vzduchový transport
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Workpiece object window and accept object type as ‘Read from DB’ (see Fig. 2DHTRL1.23.). This indicates that workpiece thermal history from the furnace heating operation will be available as a starting data for this operation. Click on Step controls branch in operation tree.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno „Objekt obrobku“, a potvrďte typ objektu ako „Načítať z databázy“ (pozri obr. 2DHTRL1.23.). To znamená, že teplotná história obrobku z operácie ohrevu v peci bude k dispozícii ako vstupné údaje pre túto operáciu. Kliknite na vetvu „Ovládanie krokov“ v strome operácií.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0023.jpg' | relative_url }})
 
-Read from DB object selection for workpiece
+Načítanie výberu objektu z databázy pre obrobok
 
-### Set Step definition for Air Transfer
+### Nastavenie definície kroku pre vzduchový prenos
 
-In Step Controls window define **15** steps at **1** sec increment and saving at every**5** steps (see Fig. 2DHTRL1.24.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+V okne „Step Controls“ nastavte **15** krokov s krokom **1** sekunda a ukladajte každých **5** krokov (pozri obr. 2DHTRL1.24.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0024.jpg' | relative_url }})
 
-Step controls settings for Air Transfer
+Krok: Nastavenia pre funkciu Air Transfer
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) to open the Heat resting operation (see Fig. 2DHTRL1.25.), as database will generate for subsequent operations during simulation in batch mode.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) otvoríte operáciu „Heat resting“ (pozri obr. 2DHTRL1.25.), ktorú databáza vygeneruje pre nasledujúce operácie počas simulácie v dávkovom režime.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0025.jpg' | relative_url }})
 
-Database generation window for subsequent operations in batch mode
+Okno na vytvorenie databázy pre následné operácie v dávkovom režime
 
-**Note** :
+**Poznámka**:
 
-At this stage user has an option to bring in additional object or simulation data by opting to ‘Append user defined keyword file’ (see Fig. 2DHTRL1.22.). Please not that, this keyword when defined will be read in by the system before the DB generation of the second operation. However no checking of the user defined data from this keyword file will be done at this stage.
+V tejto fáze má používateľ možnosť pridať ďalšie údaje o objektoch alebo simuláciách výberom možnosti „Pridať súbor s používateľsky definovanými kľúčovými slovami“ (pozri obr. 2DHTRL1.22.). Upozorňujeme, že ak bude toto kľúčové slovo definované, systém ho načíta pred vytvorením databázy pre druhú operáciu. V tejto fáze sa však nebude vykonávať žiadna kontrola údajov definovaných používateľom z tohto súboru kľúčových slov.
 
-## Operation3: Heat Resting
+## Operácia 3: Odpočinok pri teple
 
-In this operation we setup a heat transfer where the workpiece rests on forming dies for 4 seconds prior to a deformation operation.
+V tomto pracovnom kroku nastavujeme prenos tepla tak, že obrobok spočíva na tvárniacich maticiach po dobu 4 sekúnd pred samotnou deformáciou.
 
-### Select Heat Transfer Type for Heat Resting
+### Výber typu prenosu tepla pri tepelnej stabilizácii
 
-Name the operation as "**Heat Resting** " by double clicking on Operation name in Operation Editor and press Enter from Keyboard to close. Select '**Rest on die** ' heat transfer type as shown in Fig. 2DHTRL1.26. and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Pomenujte operáciu ako „**Teplotné odležanie**“ dvojitým kliknutím na názov operácie v editore operácií a stlačením klávesy Enter na klávesnici operáciu zatvorte. Vyberte typ prenosu tepla „**Odležanie na matrici**“, ako je znázornené na obr. 2DHTRL1.26, a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0026.jpg' | relative_url }})
 
-Heat transfer type selection for heat resting operation
+Výber typu prenosu tepla pre prevádzku s tepelným odpočinkom
 
-### Set Process Condition for Heat Resting
+### Nastavenie podmienok procesu pre tepelné odležanie
 
-Set process condition as **resting****time** of **4** sec in a 68°F environment using the default convection coefficient as shown in Fig. 2DHTRL1.27. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Nastavte podmienku procesu na **doba odpočinku****** v trvaní **4** sekúnd v prostredí s teplotou 68°F s použitím predvoleného konvekčného koeficientu, ako je znázornené na obr. 2DHTRL1.27. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0027.jpg' | relative_url }})
 
-Process condition settings for Heat Resting operation
+Nastavenia prevádzkových podmienok pre operáciu tepelného odležania
 
-### Add Die Objects
+### Pridať objekty s kockami
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object window and accept the ‘Number of Objects’ as 3 as the total number of objects, as we will be bringing in both the dies at 300°F for the resting operation. We can now see the object tree is expanded to include both the dies, details for which will be now be defined.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno „Object“, a potvrďte hodnotu „Number of Objects“ ako 3 (celkový počet objektov), keďže pre operáciu odležania budeme vkladať obe formy pri teplote 300°F. Teraz vidíme, že strom objektov je rozbalený a obsahuje obe matrice, ktorých podrobnosti budeme teraz definovať.
 
-### Define Top Die
+### Definícia hornej matrice
 
-Click on Top Die in operation tree to define the Dies. Accept the Top Die temperature 300°F and Object type as rigid as shown in Fig. 2DHTRL1.28. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Kliknite na položku „Top Die“ v strome operácií, aby ste definovali lisovacie formy. Potvrďte teplotu hornej lisovacej formy 300 °F a typ objektu „rigid“, ako je znázornené na obr. 2DHTRL1.28. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0028.jpg' | relative_url }})
 
-Top die object definition window for heat resting operation
+Okno definície hornej matrice pre operáciu tepelného odpočinku
 
-### Import Top Die Geometry
+### Import geometrie hornej matrice
 
-In Top die Geometry window, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load Geometry from Library) button and import ‘**Disk_top****.igs** ' as shown in Fig. 2DHTRL1.29.
+V okne „Top die Geometry“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) a načítajte súbor „**Disk_top****.igs**“, ako je znázornené na obr. 2DHTRL1.29.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0029.jpg' | relative_url }})
 
-Importing the top die geometry from DEFORM Library
+Import geometrie hornej matrice z knižnice DEFORM
 
-### Generate Top Die Mesh
+### Vytvoriť sieť hornej formy
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and generate mesh using 600 elements as shown in Fig. 2DHTRL1.30. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to material page.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a vytvorte sieť s 600 prvkami, ako je znázornené na obr. 2DHTRL1.30. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku s materiálmi.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0030.jpg' | relative_url }})
 
-Generating mesh for Top die
+Vytvorenie siete pre hornú matricu
 
-### Import Material for Dies
+### Materiál na výrobu foriem
 
-Load the material **AISI-H13** from DEFORM Material library, from **Die_material** category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option as shown in Fig. 2DHTRL1.31. Select the loaded material to assign it to the Top Die.
+Načítajte materiál **AISI-H13** z knižnice materiálov DEFORM, z kategórie **Die_material**, pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice), ako je znázornené na obr. 2DHTRL1.31. Vyberte načítaný materiál a priraďte ho k hornej matrici.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0031.jpg' | relative_url }})
 
-Loading Die material from DEFORM library
+Načítavanie materiálu formy z knižnice DEFORM
 
-### Define Top Die BCC
+### Definícia hornej matrice BCC
 
-In the ‘Define BCC’ window, ‘Heat Exchange with Environment’ BCC automatically assigned to the all sides excluding axis side. Click on Defined branch under Heat Exchange with Environment BCC to confirm the BCC definition (see Fig. 2DHTRL1.32.). Click on Bottom Die branch in operation tree to lower die.
+V okne „Definovať BCC“ sa BCC „Výmena tepla s okolím“ automaticky priradí ku všetkým stranám okrem strany osi. Kliknutím na vetvu „Definované“ pod BCC „Výmena tepla s okolím“ potvrďte definíciu BCC (pozri obr. 2DHTRL1.32.). Kliknite na vetvu „Spodná matrica“ v prevádzkovom strome, aby ste spustili matricu.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0032.jpg' | relative_url }})
 
-Heat exchange with Environment BCC for top die
+Výmena tepla s prostredím BCC pre hornú matricu
 
-### Define Bottom Die
+### Definícia spodnej matrice
 
-For Bottom die also accept 300°F Object temperature and Rigid object type. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Pre spodnú formu je povolená aj teplota objektu 300°F a typ tuhého objektu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
-### Import Bottom Die Geometry
+### Import geometrie spodnej matrice
 
-In Bottom die geometry window, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load Geometry from Library) button and import ‘**Disk_btm****.igs** ' as shown in Fig. 2DHTRL1.33. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to mesh page.
+V okne „Geometria spodnej formy“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) a načítajte súbor „**Disk_btm****.igs**“, ako je znázornené na obr. 2DHTRL1.33. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku vytvorenia siete.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0033.jpg' | relative_url }})
 
-Loading Bottom die geometry from DEFORM library
+Načítanie geometrie spodnej matrice z knižnice DEFORM
 
-### Generate Bottom Die Mesh
+### Vytvorenie siete spodnej formy
 
-Generate mesh using 600 elements as shown in Fig. 2DHTRL1.34.
+Vytvorte sieť s použitím 600 prvkov, ako je znázornené na obr. 2DHTRL1.34.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0034.jpg' | relative_url }})
 
-Generating mesh for bottom die
+Vytvorenie siete pre spodnú formu
 
-### Assign Material for Bottom Die
+### Priradiť materiál pre spodnú formu
 
-Select **AISI-H13** material from material list to assign it to the Bottom Die. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Boundary condition.
+Zoznamu materiálov vyberte materiál **AISI-H13** a priraďte ho k spodnej matrici. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na okrajové podmienky.
 
-### Define Bottom Die BCC
+### Definícia spodnej matrice BCC
 
-Confirm the automatically assigned Heat Exchange with Environment BCC to all sides excluding axis side by clicking on Defined under Heat exchange with Environment BCC as shown in Fig. 2DHTRL1.35. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until positioning page.
+Potvrďte automaticky priradenú výmenu tepla s prostredím BCC na všetkých stranách okrem strany osi kliknutím na položku „Definované“ v časti „Výmena tepla s prostredím BCC“, ako je znázornené na obr. 2DHTRL1.35. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s nastavením polohy.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0035.jpg' | relative_url }})
 
-Heat exchange with Environment BCC for bottom die
+Výmena tepla s prostredím BCC pre spodnú formu
 
-### Position Top Die
+### Poloha hornej matrice
 
-Now from the ‘Positioning’ enter the ‘Positioning objects’ menu where we first move the top die away from the workpiece so that heat resting accounts for the heat transfer between workpiece and bottom die.
+Teraz z položky „Polohovanie“ prejdite do ponuky „Polohovanie objektov“, kde najskôr posunieme hornú matricu ďalej od obrobku, aby teplo z tepelného odpočinku zohľadňovalo prenos tepla medzi obrobkom a spodnou matricou.
 
-To accomplish this first click on ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. Select the top die,‘**Offset** ’ method and distance vector as (x=0, y=4). Click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) will move the top die away from the workpiece. (see Fig. 2DHTRL1.36.)
+Na to najprv kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}). Vyberte hornú maticu, metódu „**Offset**“ a vektor vzdialenosti (x=0, y=4). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) sa horná matrica posunie ďalej od obrobku. (pozri obr. 2DHTRL1.36.)
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the ‘Object Positioning window. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define scheduled position the bottom die.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvoríte okno „Polohovanie objektu“. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) nastavíte plánovanú polohu spodnej matrice.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0036.jpg' | relative_url }})
 
-Positioning Top die in resting operation
+Polohovanie hornej matrice v kľudovom režime
 
-### Schedule Position Bottom Die
+### Poloha spodnej matrice v rozvrhu
 
-As Bottom die we need to position with respect to Read from DB object Workpiece, so we have to schedule position during DB generation. Click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add) button and select the ‘Positioning object’ as bottom die, method as ‘Interference’ with respect to ‘Workpiece’ in the **+Y** direction (see Fig. 2DHTRL1.37.). Note that positioning details added in the scheduled positioning will be accounted prior to inter object data generation for this operation. No physical movement of the dies will be seen at this point. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Spodnú formu musíme umiestniť vzhľadom na objekt „Workpiece“ z databázy, preto musíme jej polohu naplánovať už pri generovaní databázy. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať) a vyberte „Polohovací objekt“ ako spodnú maticu, metódu „Interferencia“ vo vzťahu k „Obrobku“ v smere **+Y** (pozri obr. 2DHTRL1.37.). Upozorňujeme, že podrobnosti polohovania pridané v naplánovanom polohovaní sa zohľadnia pred generovaním údajov o vzájomných vzťahoch medzi objektmi pre túto operáciu. V tomto bode nebude viditeľný žiadny fyzický pohyb foriem. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0037.jpg' | relative_url }})
 
-Scheduled positioning Bottom die With respect to workpiece
+Plánované polohovanie spodnej formy vo vzťahu k obrobku
 
-### Schedule Inter-Object Contact Relationships for Heat Resting
+### Naplánovanie vzťahov medzi objektmi pre tepelné odležanie
 
-Select **User** type contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add relationship) button and select Bottom die as Master and Workpiece as Slave as shown in Fig. 2DHTRL1.38.
+Vyberte kontakt typu **Používateľ**, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať vzťah) a vyberte „Spodná forma“ ako hlavný prvok a „Obrobok“ ako podriadený prvok, ako je znázornené na obr. 2DHTRL1.38.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0038.jpg' | relative_url }})
 
-Inter-object relationship between workpiece and bottom die
+Vzťah medzi obrobkom a spodnou matricou
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) (Edit) relationship button and select the pull down option " **Free Resting** " in the thermal section to define the inter-object heat transfer coefficient as shown in Fig. 2DHTRL1.39. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Editing window. It will generate the inter-object contact at the beginning of the resting operation while simulating. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until step controls window.
+Kliknite na tlačidlo vzťahu ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) (Upraviť) a v sekcii „Teplo“ vyberte z roletového menu možnosť „**Voľný pokojový stav**“, čím definujete koeficient prenosu tepla medzi objektmi, ako je znázornené na obr. 2DHTRL1.39. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte okno úprav. Tým sa počas simulácie vytvorí kontakt medzi objektmi na začiatku fázy voľného stavu. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno ovládania krokov.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0039.jpg' | relative_url }})
 
-Inter-object Heat transfer coefficient selection for resting
+Výber koeficientu prenosu tepla medzi objektmi v pokojovom stave
 
-### Define Step controls for Heat Resting
+### Nastavenie krokov pre tepelné odležanie
 
-In Step Controls window select **number of steps** as **10** , with**0.4** sec each and saving every **second** step (see Fig. 2DHTRL1.40.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Generate DB window and click on ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) from Database generation window to continue defining Forming operation.
+V okne „Step Controls“ nastavte **počet krokov** na **10**, pričom každý krok trvá **0,4** s a každý **druhý** krok sa uloží (pozri obr. 2DHTRL1.40.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) v okne Generate DB a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) v okne Database generation, aby ste pokračovali v definovaní operácie tvárnenia.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0040.jpg' | relative_url }})
 
-Step controls for heat resting operation
+Ovládacie prvky krokov pre prevádzku s tepelným odpočinkom
 
-## Operation4: Forming
+## Operácia 4: Tvarovanie
 
-The Forming operation runs for a specific stroke of (7.25”) the upper die. As we are making all objects as read from DB, objects data will come from previous operations, with thermal history. So pass the all objects from Heat resting operation to Forming operation as shown in Fig. 2DHTRL1.41.
+Operácia tvárnenia prebieha počas konkrétneho zdvihu (7,25”) hornej matrice. Keďže všetky objekty vyrábame podľa údajov z databázy, údaje o objektoch pochádzajú z predchádzajúcich operácií vrátane tepelnej histórie. Preto všetky objekty z operácie tepelného odpočinku prejdú do operácie tvárnenia, ako je znázornené na obr. 2DHTRL1.41.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0041.jpg' | relative_url }})
 
-Passing objects to read from DB
+Odovzdávanie objektov na čítanie z databázy
 
-### Select Simulation Modes for Forming
+### Výber simulačných režimov pre tvárnenie
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) for Geometry type window and accept the Simulation controls default Simulation modes selected (Deformation and Heat transfer) as shown in Fig. 2DHTRL1.42. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until object window.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), čím otvoríte okno „Typ geometrie“, a potvrďte predvolené režimy simulácie vybrané v časti „Ovládacie prvky simulácie“ (Deformácia a Prenos tepla), ako je znázornené na obr. 2DHTRL1.42. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno s objektom.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0042.jpg' | relative_url }})
 
-Simulation controls settings for Forming operation
+Nastavenia ovládacích prvkov simulácie pre operáciu tvárnenia
 
-In objects page confirm all objects data type as Read from DB and with no movement defined, click on Top Die- Movement branch from operation to define top die movement controls.
+Na stránke objektov overte, či je typ údajov všetkých objektov nastavený na „Načítané z databázy“ a či nie je definovaný žiadny pohyb; kliknite na vetvu „Horná matrica – pohyb“ v rámci operácie, aby ste definovali ovládacie prvky pohybu hornej matrice.
 
-### Define Top Die Movement Controls
+### Definovanie ovládacích prvkov pre pohyb hornej matrice
 
-For the top die assign a constant die movement of **1** in/sec in the negative 'Y’ direction as shown in Fig. 2DHTRL1.43. (Click preview object movement icon to view the movement of the top die, if the Step increment is defined).
+Hornému valcu priraďte konštantný pohyb **1** palca za sekundu v zápornom smere osi „Y“, ako je znázornené na obr. 2DHTRL1.43. (Ak je definovaný krok, kliknutím na ikonu náhľadu pohybu objektu si môžete prezrieť pohyb horného valca).
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0043.jpg' | relative_url }})
 
-Movement controls for Top die
+Ovládanie pohybu hornej matrice
 
-### Schedule Position Top Die
+### Poloha hornej matrice podľa plánu
 
-Click on Scheduled positioning branch in operation tree to define the positioning for Top die. Now click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add) button and select the ‘Positioning object’ as top die, method as ‘Interference’ with respect to ‘Workpiece’ in the -Y direction (see Fig. 2DHTRL1.44.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Kliknite na vetvu „Plánované polohovanie“ v prevádzkovom strome, aby ste definovali polohu hornej matrice. Teraz kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať) a ako „Polohovací objekt“ vyberte hornú matricu, ako metódu „Interferencia“ vo vzťahu k „Obrobku“ v smere -Y (pozri obr. 2DHTRL1.44.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0044.jpg' | relative_url }})
 
-Scheduled positioning for Top die in forming operation
+Plánované polohovanie hornej matrice pri tvárnení
 
-### Schedule Inter-Object Contact Relationships for Forming
+### Naplánovanie vzťahov medzi objektmi na účely formovania
 
-Select user type contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. It will add the relationship between the Billet, Top Die and Bottom Die (see Fig. 2DHTRL1.46.). As the Dies are Rigid and Billet is plastic, Top and Bottom Dies are considered as Master and Billet as Slave. In order to predict the fold during deformation, self contact will be assigned for Billet.
+Vyberte typ kontaktu „užívateľ“ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Tým sa pridá vzťah medzi polotovarom, hornou maticou a spodnou maticou (pozri obr. 2DHTRL1.46.). Keďže matrice sú tuhé a polotovar je plastický, horná a spodná matrica sa považujú za hlavné a polotovar za podriadený. S cieľom predpovedať ohyb počas deformácie sa polotovaru priradí vlastný kontakt.
 
-Highlight the **Top Die – Billet** relationship and click the ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button to modify the contact conditions. In the friction section of the screen (see Fig. 2DHTRL1.45.), there is a pull-down menu that allows the user to choose the appropriate friction conditions of common forming processes.
+Zvýraznite vzťah **Horná matrica – polotovar** a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) upravte podmienky kontaktu. V časti obrazovky venovanej treniu (pozri obr. 2DHTRL1.45.) sa nachádza roletové menu, ktoré umožňuje používateľovi vybrať vhodné podmienky trenia pre bežné procesy tvárnenia.
 
-Since this is hot forming simulation and the dies are steel, use the pull down menu and select **Hot forming (lubricated)** from the list. A friction value of **0.3** will automatically be selected.
+Keďže ide o simuláciu tvárnenia za tepla a formy sú z ocele, použite roletové menu a zo zoznamu vyberte možnosť **Tvárnenie za tepla (s mazaním)**. Hodnota trenia **0,3** sa nastaví automaticky.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0045.jpg' | relative_url }})
 
-Inter-object friction coefficient definition window
+Okno na definovanie koeficientu trenia medzi objektmi
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to go back to Inter-Object window, Since the friction conditions are the same for all the object pairs, the ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button can be used to copy the interface properties from the first relationship to all of the others. After this is done, all relationships will have a friction of 0.3 defined as shown in Fig. 2DHTRL1.46. Since the contact will initialize and generate while generating database. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) sa vrátite do okna „Inter-Object“. Keďže podmienky trenia sú rovnaké pre všetky páry objektov, pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môžete skopírovať vlastnosti rozhrania z prvého vzťahu do všetkých ostatných. Po vykonaní tejto operácie budú mať všetky vzťahy trenie 0,3, ako je znázornené na obr. 2DHTRL1.46. Keďže sa kontakt inicializuje a vygeneruje počas vytvárania databázy, kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0046.jpg' | relative_url }})
 
-Inter-Object relationship definition for forming operation
+Definícia vzťahu medzi objektmi pre formovaciu operáciu
 
-### Define Stopping Control for Forming
+### Definovanie riadenia zastavenia pri tvárnení
 
-In stopping control window check the Max. die stroke stopping control and define **primary die displacement** as (0,7.25) as shown in Fig. 2DHTRL1.47. Advanced stopping options are available in Expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the step controls.
+V okne riadenia zastavenia zaškrtnite políčko „Max. zdvih matrice“ a nastavte **primárny posun matrice** na hodnotu (0,7,25), ako je znázornené na obr. 2DHTRL1.47. Pokročilé možnosti zastavenia sú k dispozícii v režime Expert (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste nastavili krokové ovládanie.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0047.jpg' | relative_url }})
 
-Die stroke stopping control for forming operation
+Ovládanie zastavenia zdvihu lisovacej matice pri tvárnení
 
-### Define Step Controls for Forming
+### Definovanie ovládacích prvkov krokov pre formovanie
 
-In step controls window define **number of steps** as **100** , at **0.0725** ” per step of die movement, step increment to save as **10** for the primary die (which is object number 2 in this simulation) as shown in Fig. 2DHTRL1.48.
+V okne nastavenia krokov nastavte **počet krokov** na **100** , pri **0,0725** ” na jeden krok pohybu matrice uložte krok pre primárnu matricu (ktorá je v tejto simulácii objektom číslo 2) na hodnotu **10**, ako je znázornené na obr. 2DHTRL1.48.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0048.jpg' | relative_url }})
 
-Step controls settings for forming operation
+Krok určuje nastavenia pre operáciu tvárnenia
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and click on ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) button to continue define the Heat Dwelling operation.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a potom na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}), aby ste pokračovali v definovaní operácie „Heat Dwelling“.
 
-## Operation5: Heat Dwelling
+## Operácia 5: Otepľovanie obydlia
 
-Heat dwelling is nothing but heat transfer after the deformation operation for a particular time and the corresponding time is called heat dwelling time or simply dwell time.
+Teplotné držanie nie je nič iné ako udržanie tepla po deformácii počas určitého času, pričom tento čas sa nazýva doba teplotného držania alebo jednoducho doba držania.
 
-### Select the Heat Transfer Type for Heat Dwelling
+### Vyberte typ prenosu tepla pre zadržanie tepla
 
-Name the Operation as **Heat Dwelling** and select the **Dwell on die** heat transfer type radio button as shown in Fig. 2DHTRL1.49.
+Operáciu nazvite **Heat Dwelling** a vyberte prepínač typu prenosu tepla **Dwell on die**, ako je znázornené na obr. 2DHTRL1.49.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0049.jpg' | relative_url }})
 
-Heat transfer type for Heat Dwelling operation
+Typ prenosu tepla pre prevádzku v režime „Heat Dwelling“
 
-### Set Process Condition for Heat Dwelling
+### Nastavenie podmienok spracovania pre dobu zdržania v ohrievacom priestore
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and accept the **Dwell****time** of **4** sec in Environment temperature **68** °F and default Convection coefficient as shown in Fig. 2DHTRL1.50.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a potvrďte **doba zdržania****** **4** sekundy pri teplote okolia **68** °F a predvolenom koeficiente konvekcie, ako je znázornené na obr. 2DHTRL1.50.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0050.jpg' | relative_url }})
 
-Process condition settings for Heat Dwelling operation
+Nastavenia prevádzkových podmienok pre režim udržiavania tepla
 
-The default data is set for all the objects are read from DB (coming from the previous operations, along with thermal history). Accept the default conditions for the objects and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed until Contact (Inter-Object Contact) window.
+Pre všetky objekty sú nastavené predvolené údaje načítané z databázy (pochádzajúce z predchádzajúcich operácií spolu s teplotnou históriou). Potvrďte predvolené podmienky pre objekty a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali až do okna „Kontakt“ (Kontakt medzi objektmi).
 
-### Schedule Inter-Object Contact Relationships for Heat Dwelling
+### Naplánovanie vzťahov medzi objektmi z hľadiska zadržiavania tepla
 
-Select **user** type contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. Highlight the **Top Die – Billet** relationship and click the ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button to modify the contact conditions. Select the pull down option " **Free Resting** " in the thermal section to define the inter-object heat transfer coefficient as shown in Fig. 2DHTRL1.37.
+Vyberte typ kontaktu **užívateľ** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Zvýraznite vzťah **Horná matrica – polotovar** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}), aby ste upravili podmienky kontaktu. V sekcii tepelnej analýzy vyberte z roletového menu možnosť „**Free Resting**“, aby ste definovali koeficient prenosu tepla medzi objektmi, ako je znázornené na obr. 2DHTRL1.37.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button and click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Editing window (see Fig. 2DHTRL1.51.). It will generate the inter-object contact during database generation. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until step controls window.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) a potom na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), čím zatvoríte okno úprav (pozri obr. 2DHTRL1.51.). Tým sa počas vytvárania databázy vygeneruje kontakt medzi objektmi. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno s ovládacími prvkami krokov.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0051.jpg' | relative_url }})
 
-Inter-object contact relationship for heat dwelling operation
+Vzťah medzi objektmi v rámci prevádzky vykurovania obytných priestorov
 
-### Define Step Controls for Heat Dwelling
+### Definovanie ovládacích prvkov krokov pre dobu pôsobenia tepla
 
-In Step Controls window select number of steps as **10** , with **0.4** sec each and saving every **second** step (see Fig. 2DHTRL1.52.). This completes the multiple operations with all heat transfer operations setup, so to simulate the problem switch to Simulation tab above the object tree.
+V okne „Step Controls“ nastavte počet krokov na **10**, pričom každý krok trvá **0,4** s a každý **druhý** krok sa uloží (pozri obr. 2DHTRL1.52.). Týmto je nastavenie viacerých operácií vrátane všetkých operácií prenosu tepla dokončené, takže na simuláciu problému prejdite na kartu „Simulation“ nad stromom objektov.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0052.jpg' | relative_url }})
 
-Step controls for heat dwelling operation
+Ovládacie prvky pre prevádzku v režime vykurovania
 
-## Simulate problem
+## Simulácia problému
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. 2DHTRL1.53. Use the default **Continue Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), čím otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. 2DHTRL1.53. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“ (od kroku -1), potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0053.jpg' | relative_url }})
 
-Run Simulation popup window
+Vyskočné okno „Spustiť simuláciu“
 
-Monitor the progress of the simulation by looking at the Simulation Graphics, Simulation Message and Simulation Log tab, making sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. (see Fig. 2DHTRL1.54.)
+Sledujte priebeh simulácie na kartách „Simulation Graphics“, „Simulation Message“ a „Simulation Log“ a uistite sa, že je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). (pozri obr. 2DHTRL1.54.)
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0054.jpg' | relative_url }})
 
-Simulation mode displaying the furnace heating running status
+Simulačný režim zobrazujúci stav prevádzky ohrevu pece
 
-After completion of the all multiple operation in Simulation log file it gives the log message as "MULTIPLE OPERATION COMPLETED.", then switch to Post tab to view the simulation results.
+Po dokončení všetkých viacnásobných operácií sa v súbore protokolu simulácie zobrazí správa „MULTIPLE OPERATION COMPLETED.“. Následne prejdite na kartu „Post“, kde si môžete prezrieť výsledky simulácie.
 
-## Post Processing
+## Následné spracovanie
 
-In post processor Step list below the graphic area indicates step numbers available from the different operations simulated. A set of state variables available from the ‘Post’ menu can be used review the model response. Please note that for the first two operations only the thermal data for the workpiece is available as the dies are introduced from the third operation. And the deformation results can be seen for the Deformation operation (see Fig. 2DHTRL1.55.)
+V zozname krokov postprocesora pod grafickou oblasťou sú uvedené čísla krokov, ktoré sú k dispozícii z rôznych simulovaných operácií. Na kontrolu odozvy modelu je možné použiť súbor stavových premenných dostupných v ponuke „Post“. Upozorňujeme, že pre prvé dve operácie sú k dispozícii iba tepelné údaje o obrobku, keďže lisovacie formy sa zavádzajú až od tretej operácie. Výsledky deformácie sú viditeľné pri operácii „Deformácia“ (pozri obr. 2DHTRL1.55).
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0055.jpg' | relative_url }})
 
-MO Post processor after simulating all operations
+Postprocesor MO po simulácii všetkých operácií
 
-Some important state variables can be selected directly from ‘Post’ and the rest can be accessed through State Variable dialog by clicking on ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) icon. (see Fig. 2DHTRL1.56.)
+Niektoré dôležité stavové premenné je možné vybrať priamo z položky „Post“, k ostatným sa dostanete cez dialógové okno „State Variable“ kliknutím na ikonu ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}). (pozri obr. 2DHTRL1.56.)
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0056.jpg' | relative_url }})
 
-Temperature plot for all objects at the end of multiple operations
+Graf teplôt všetkých objektov na konci viacerých operácií
 
-Plot **Temperature** state variable and play the steps from first operation to observe the heat transfer in workpiece and dies from Furnace heating to Heat dwelling operation as shown in Fig. 2DHTRL1.57.
+Zaznačte stavovú premennú **Teplota** a prehrajte jednotlivé kroky od prvej operácie, aby ste mohli pozorovať prenos tepla v obrobku a formách od fázy ohrevu v peci až po fázu udržovania teploty, ako je znázornené na obr. 2DHTRL1.57.
 
 ![]({{ '/assets/images/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/image0057.jpg' | relative_url }})
 
-Hat transfer in objects from furnace heating to heat dwelling operation
+Prenos tepla v objektoch z vykurovania pecí do prevádzky vykurovania obytných priestorov

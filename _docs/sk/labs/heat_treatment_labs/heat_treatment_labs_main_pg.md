@@ -1,9 +1,9 @@
 ---
 lang: sk
-title: "Heat Treatment Labs Main Pg"
+title: "Hlavná stránka laboratórií tepelného spracovania"
 ---
 
-# Heat Treatment Labs 
+# Laboratóriá tepelného spracovania 
 
 [2D HT Lab 1 Heating]({{ '/docs/sk/labs/heat_treatment_labs/2d_ht_lab1_heating/' | relative_url }})
 

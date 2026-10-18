@@ -1,234 +1,234 @@
 ---
 lang: sk
-title: "Forming Lab 4"
+title: "Laboratórium tvárnenia 4"
 ---
 
-# Lab 4. Symmetry
+# Cvičenie č. 4. Symetria
 
-### Creating a New Problem
+### Vytvorenie nového problému
 
-To investigate 3D symmetry in DEFORM, open the new project with **Gear_3D_Thermal_Sym** name and with **English** unit.
+Ak chcete preskúmať 3D symetriu v programe DEFORM, otvorte nový projekt s názvom **Gear_3D_Thermal_Sym** a jednotkami **English**.
 
-This project is the same as the previous **Gear_3D_Thermal**(Lab 3), with the exception that only 45° of the workpiece is modeled. For this 45°sector of the part to deform the same as the full part, symmetry boundary conditions must be used. This lab will go over the differences when setting up a simulation with symmetry.
+Tento projekt je rovnaký ako predchádzajúci **Gear_3D_Thermal** (laboratórna úloha 3), s tým rozdielom, že je modelovaných len 45° obrobku. Aby sa tento 45° sektor dielu deformoval rovnako ako celý diel, je potrebné použiť symetrické okrajové podmienky. V tomto laboratórnom cvičení sa budeme venovať rozdielom pri nastavovaní simulácie so symetriou.
 
-### Add Operations
+### Pridať operácie
 
-Add three operations from the Explorer:
+Pridajte tri operácie z programu Explorer:
 
   * [3D] Heat Transfer Express
 
-  * [3D] Heat Transfer and
+  * [3D] Prenos tepla a
 
-  * [3D] Forming
+  * [3D] Tvarovanie
 
   
-Double-click on the title of the first operation and change it to **Air****Transfer**. Change the second operation title to **Rest****on****Die**. Leave the third Forming title as it is.
+Dvojitým kliknutím na názov prvej operácie ho zmeňte na **Air****Transfer**. Názov druhej operácie zmeňte na **Rest****on****Die**. Názov tretej operácie „Forming“ ponechajte bez zmeny.
 
-Right-click the **Workpiece** and **Pass object to All operations**. Similarly, right-click on the **Top Die** and **Bottom****Die** and use **Pass object to Next operation** for both objects.
+Kliknite pravým tlačidlom na **obrobok** a vyberte možnosť **Preniesť objekt do všetkých operácií**. Podobne kliknite pravým tlačidlom na **hornú matricu** a **spodnú****matricu** a pre oba objekty použite možnosť **Preniesť objekt do nasledujúcej operácie**.
 
-### Define Air transfer
+### Definícia pojmu „prenos vzduchu“
 
-Click on the **Air****Transfer** operation in Operation Editor. In this lab, we will use the **Symmetry** part. Verify that the heating type is set to **Transfer**. Select the Symmetry geometry type, leave the **Accuracy** and **Complexity** sliders at **Moderate**(See Fig. L4.1.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Workpiece page.
+V editore operácií kliknite na operáciu **Air****Transfer**. V tomto cvičení budeme používať diel **Symmetry**. Skontrolujte, či je typ ohrevu nastavený na **Transfer**. Vyberte typ geometrie Symmetry, posuvníky **Accuracy** a **Complexity** nechajte v polohe **Moderate** (pozri obr. L4.1.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Workpiece.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab4_image0001.jpg' | relative_url }})
 
-Air Transfer operation Process window
+Okno procesu prevádzky leteckej prepravy
 
-### Define Workpiece General data
+### Definovanie všeobecných údajov o obrobku
 
-Leave the workpiece temperature at 2250°F. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to geometry page.
+Nechajte teplotu obrobku na hodnote 2250 °F. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku s geometriou.
 
-#### Create Workpiece geometry from Primitive
+#### Vytvorenie geometrie obrobku z primitívu
 
-Define the geometry as a primitive **cylinder** with a diameter of **5** in, **height** of **8.1** in, **Revolve****angle** as **45** degree and **corner****radius** of**0.2** in. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to assign symmetry planes in symmetry page.
+Definujte geometriu ako základný **valec** s priemerom **5** palcov, **výškou** **8,1** palca, **uhol otáčania****45** stupňov a **polomer rohu****0,2** palca. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste na stránke symetrie priradili roviny symetrie.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab4_image0002.jpg' | relative_url }})
 
-Workpiece Geometry Primitive window
+Okno „Geometrické primitíva obrobku“
 
-#### Assign Symmetry for Workpiece
+#### Nastaviť symetriu pre obrobok
 
-Select each of the two cut surfaces and add as a **Symmetry****plane** by picking them with the mouse and then clicking ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Click each of the entries under Planar Symmetry and observe the surfaces that get highlighted (See Fig. L4.3.).
+Vyberte obe rezané plochy a pridajte ich ako **symetrickú****rovinu** tak, že ich označíte myšou a potom kliknete na ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Kliknite na jednotlivé položky v časti „Planárna symetria“ a sledujte, ktoré plochy sa zvýraznia (pozri obr. L4.3.).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab4_image0003.jpg' | relative_url }})
 
-Workpiece Symmetry window
+Okno „Symetria obrobku“
 
-#### Generating mesh for Workpiece
+#### Vytvorenie siete pre obrobok
 
-Select **User****defined** radio button and define target number of elements as **10000** and Generate a mesh. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material page.
+Vyberte voľbu **User****defined** a nastavte cieľový počet prvkov na hodnotu **10000** a vygenerujte sieť. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Material“.
 
-#### Assign Material for Workpiece
+#### Priradiť materiál k obrobku
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button. Select the **Steel_at_Extended_Temperatures** category, then **AISI-8620[1550-2200F(850 -1200C)]** and click the ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button. Click on the **AISI-8620[1550-2200F(850 -1200C)]** in the material window to assign the material to the workpiece. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to BCC page.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať materiál z knižnice). Vyberte kategóriu **Steel_at_Extended_Temperatures**, potom **AISI-8620[1550-2200F(850 -1200C)]** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}). Kliknite na položku **AISI-8620[1550–2200 °F (850 – 1200 °C)]** v okne s materiálmi, aby ste materiál priradili k obrobku. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku BCC.
 
-#### Workpiece BCC
+#### Obrobok BCC
 
-By default, BCC for Symmetry planes, and Heat exchange with the environment are generated. Confirm that symmetry boundary conditions are defined on the symmetry planes, and that heat exchange with environment is defined on all faces except the symmetry planes. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Heat Condition page.
+Štandardne sa generujú okrajové podmienky BCC pre roviny symetrie a výmena tepla s okolím. Uistite sa, že na rovinách symetrie sú definované okrajové podmienky symetrie a že výmena tepla s okolím je definovaná na všetkých plochách okrem rovín symetrie. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Heat Condition“ (Teplotné podmienky).
 
-### Assign Heat Condition
+### Nastaviť teplotné podmienky
 
-Set the **Transfer****time** as **5** sec, accept the default **Environment temperature** and **Convection****coefficient**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation controls page.
+Nastavte **čas prenosu** na **5** sekúnd, ponechajte predvolené hodnoty **teploty okolia** a **konvekčného koeficientu**. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Ovládacie prvky simulácie.
 
-### Simulation controls
+### Ovládacie prvky simulácie
 
-Use default Step definition, Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to generate DB.
+Použite predvolenú definíciu kroku a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujte databázu.
 
-### Generate Database
+### Vytvoriť databázu
 
-Click ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), If there is no errors and warnings in message tab, go ahead and click![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) .
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}). Ak sa na karte „Správy“ nenachádzajú žiadne chyby ani varovania, pokračujte a kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
-Now click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to move to Next operation.
+Teraz kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli k ďalšej operácii.
 
-### Rest on Die operation
+### Operácia „Rest on Die“
 
-For the 2nd operation, the heat transfer type will be **Rest on die**. This simulates the heat lost from the workpiece to the tool from the time it is placed on the bottom die until the press is stroked. For this operation, the workpiece should be contacting the bottom die, but the top die should be positioned some distance away from the workpiece.
+Pri druhej operácii bude typ prenosu tepla **Odpočinok na matrici**. Tým sa simuluje únik tepla z obrobku do nástroja od okamihu jeho umiestnenia na spodnú matricu až do dokončenia zdvihu lisu. Pri tejto operácii by mal obrobok priliehať k spodnej matrici, zatiaľ čo horná matrica by mala byť umiestnená v určitej vzdialenosti od obrobku.
 
-Note: The Dwell on die is intended for heat transfer after forging, and uses higher heat transfer coefficients corresponding to more complete die contact.
+Poznámka: Forma typu „Dwell on“ je určená na odvod tepla po kovaní a využíva vyššie koeficienty odvodu tepla, ktoré zodpovedajú úplnejšiemu kontaktu s formou.
 
-### Heat Transfer type
+### Typ prenosu tepla
 
-By default, heat transfer type will be **Rest on die**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Process condition page
+V predvolenom nastavení bude typ prenosu tepla **Rest on die**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Process condition“ (Podmienky spracovania).
 
-### Process condition
+### Prevádzkové podmienky
 
-The **Resting****time** will be **4** seconds. Accept the **default temperature** and **convection****coefficient**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Object page.
+**Doba odpočinku** bude **4** sekundy. Potvrďte **predvolenú teplotu** a **koeficient konvekcie**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Objekt“.
 
-### Object list
+### Zoznam objektov
 
-Confirm that 3 objects are present in the table. If not, click the ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) (insert object) button three times to add 3 objects. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Workpiece page.
+Overte, či sa v tabuľke nachádzajú 3 objekty. Ak nie, kliknite trikrát na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) (vložiť objekt), aby ste pridali 3 objekty. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Obrobok“.
 
-### Workpiece
+### Obrobok
 
-All data for workpiece will be read from the first operation results in the database. Skip over the workpiece and move to the Top Die.
+Všetky údaje o obrobku sa načítajú z výsledkov prvej operácie v databáze. Preskočte obrobok a prejdite k hornej matrici.
 
-### Top die General page
+### Hlavná stránka „Top die“
 
-Verify that the Top Die temperature is **300** °F. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Top die geometry page.
+Skontrolujte, či je teplota hornej matrice **300** °F. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku s geometriou hornej matrice.
 
-#### Import Top die geometry
+#### Import geometrie hornej matrice
 
-Import the gear top die geometry from an STLfile. Click the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) button and ![]({{ '/assets/icons/pre_icons/mo_open_button.jpg' | relative_url }}) open (import) the file “**gear top die.STL** ”. The geometry for top die is located in DEFORM installation folder \Tutorials directory. The die comes in oriented along a different axis than the workpiece. We will address that in a later step.
+Načítajte geometriu hornej matrice ozubeného kolesa zo súboru STL. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) a ![]({{ '/assets/icons/pre_icons/mo_open_button.jpg' | relative_url }}) otvorte (načítajte) súbor „**gear top die.STL**“. Geometria hornej matrice sa nachádza v inštalačnej zložke programu DEFORM v adresári \Tutorials. Matrice je orientovaná pozdĺž inej osi ako obrobok. Týmto sa budeme zaoberať v neskoršom kroku.
 
-We will use a die distance stopping control when we run the forming simulation, but since the tools are defined in the current operation, reference points must also be defined now. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Properties page.
+Pri spustení simulácie tvárnenia použijeme riadenie zastavenia na základe vzdialenosti medzi formami, ale keďže nástroje sú definované v aktuálnej operácii, je potrebné teraz definovať aj referenčné body. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Vlastnosti.
 
-#### Top die Properties
+#### Hlavné vlastnosti matrice
 
-Select **Properties![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Reference** Use **Coordinate** and pick a point on the flash land (See Fig. L3.7.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Bottom die page.
+Vyberte **Vlastnosti![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Referencia**. Použite **Súradnice** a vyberte bod na plochu s výrezom (pozri obr. L3.7.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Spodná forma“.
 
-### Bottom die general page
+### Všeobecná stránka o spodnej matrici
 
-Verify that the Bottom Die temperature is **300** °F. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Bottom die geometry page.
+Skontrolujte, či je teplota spodnej matrice **300** °F. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku s geometriou spodnej matrice.
 
-#### Import Bottom die geometry
+#### Import geometrie spodnej matrice
 
-Import the bottom die geometry from an STL file. Click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load geometry from library) button and ![]({{ '/assets/icons/pre_icons/mo_open_button.jpg' | relative_url }}) open (import) the file “**gear bottom die.STL** ”. This can also be imported using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) button by browsing the geometry file path. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Properties page.
+Načítajte geometriu spodnej matrice zo súboru STL. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) a ![]({{ '/assets/icons/pre_icons/mo_open_button.jpg' | relative_url }}) otvorte (načítajte) súbor „**gear bottom die.STL**“. Súbor môžete importovať aj pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) tak, že vyhľadáte cestu k súboru s geometriou. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Vlastnosti.
 
-#### Bottom die Properties
+#### Vlastnosti spodnej matrice
 
-Select **Properties![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Reference** Use **Coordinate** and pick a point on the flash gutter (See Fig. L3.8.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to positioning page.
+Vyberte **Vlastnosti![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Referencia**. Použite **Súradnice** a vyberte bod na odtokovom žľabe (pozri obr. L3.8.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku s polohovaním.
 
-### Positioning dies
+### Polohovacie matrice
 
-At this point, the workpiece is oriented along the Z axis, and the tools are oriented along the Y axis.
+V tomto bode je obrobok orientovaný pozdĺž osi Z a nástroje sú orientované pozdĺž osi Y.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}).
 
-First, rotate the dies to be oriented along the Z axis. Set Method to **Rotational**. Set the following:
+Najskôr otočte matrice tak, aby boli orientované pozdĺž osi Z. Nastavte metódu na **Rotácia**. Nastavte nasledujúce parametre:
 
-Positioning object: **Top Die**.
+Polohovací objekt: **Horná matrica**.
 
-Axis: X
+Osa: X
 
-Rotation center: User-defined (0,0,0)
+Stred otáčania: Definovaný používateľom (0,0,0)
 
-Angle: 90 deg.
+Uhol: 90 stupňov.
 
-We want to rotate both dies together, so go to the **Coupled** tab, and check Bottom Die. This will couple any positioning that is done (See [Fig. L3.9.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab3/' | relative_url }}#Fig_L3_9_Positioning_Top_die_with_Coupled_Bottom_object)). Click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) to rotate the tools to be aligned with the workpiece.
+Chceme otočiť obe matrice súčasne, preto prejdite na kartu **Coupled** a zaškrtnite políčko „Bottom Die“. Tým sa prepojí akékoľvek vykonané polohovanie (pozri [Fig. L3.9.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab3/' | relative_url }}#Fig_L3_9_Positioning_Top_die_with_Coupled_Bottom_object)). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) otočte nástroje tak, aby boli zarovnané s obrobkom.
 
-Now the tools and workpiece are all aligned along the Z axis, but the tools are too close together. The next step is to move the Top Die into an "up" position away from the workpiece. 
+V súčasnosti sú nástroje aj obrobok zarovnané pozdĺž osi Z, nástroje sú však umiestnené príliš blízko pri sebe. Ďalším krokom je posunúť hornú matricu do „hornej“ polohy, ďalej od obrobku. 
 
-**Uncheck** the coupled positioning, then position the Top Die using Offset a distance of **12** in using **Offset** in the **Z** direction.
+**Zrušte zaškrtnutie** voľby „spojené polohovanie“ a následne nastavte polohu hornej matrice pomocou funkcie „Offset“ na vzdialenosť **12** v smere **Z**.
 
-Finally, we need to make sure that the Bottom Die will properly contact the Workpiece. Since the Workpiece will be read from the database at this operation, we can't use regular positioning. However, we can use scheduled positioning that will be completed when the project is running. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close Object positioning dialog and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Scheduled positioning page.
+Nakoniec sa musíme uistiť, že spodná forma bude správne priliehať k obrobku. Keďže obrobok sa pri tejto operácii načítava z databázy, nemôžeme použiť bežné polohovanie. Môžeme však použiť naplánované polohovanie, ktoré sa dokončí počas behu projektu. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvoríte dialógové okno Polohovanie objektu a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdete na stránku Plánované polohovanie.
 
-### Scheduled positioning
+### Plánované polohovanie
 
-Use ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) to add a scheduled positioning operation, and **Interference** position the **Bottom****Die** in the **Z** direction to the **Workpiece**.
+Pomocou ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) pridajte naplánovanú polohovaciu operáciu a pomocou funkcie **Interference** nastavte polohu **spodnej** **matrice** vo smere **Z** voči **obrobku**.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) and the scheduled positioning page should show this scheduled operation. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Contact page.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) a na stránke naplánovaného polohovania by sa mala zobraziť táto naplánovaná operácia. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdete na stránku „Kontakt“.
 
-### Contact
+### Kontakt
 
-In Contact, assign default contact relations, and be sure the scheduled contact Initialize and Generate options are checked. Friction doesn’t need to be defined because this operation is strictly heat transfer. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Step controls page.
+V okne „Kontakt“ priraďte predvolené vzťahy medzi kontaktmi a uistite sa, že sú zaškrtnuté možnosti „Inicializovať“ a „Generovať“ pre naplánovaný kontakt. Trenie nie je potrebné definovať, pretože táto operácia spočíva výlučne v prenose tepla. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Ovládacie prvky krokov“.
 
-### Step controls
+### Ovládacie prvky krokov
 
-In Stopping controls, the Process duration is already set to 4 seconds. For heat transfer with contact, run 10 steps per second. So for a 4 second model, run 40 steps with a time step of 0.1 sec. Define **Number of steps** as **40** ,Constant **time per step** as **0.1** sec. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until generate DB page.
+V nastaveniach zastavenia je trvanie procesu už nastavené na 4 sekundy. Pri prenose tepla s kontaktom vykonajte 10 krokov za sekundu. Pre 4-sekundový model teda spustite 40 krokov s časovým krokom 0,1 s. Nastavte **Počet krokov** na **40** a konštantný **čas na krok** na **0,1** s. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nevytvorí stránka databázy.
 
-### DB generation
+### Vytvorenie databázy
 
-Data checking will be executed. You will see a message saying DB will not be generated. The database for this operation will be generated automatically after the first operation simulation is completed.
+Prebehne kontrola údajov. Zobrazí sa správa, že databáza nebude vytvorená. Databáza pre túto operáciu sa vytvorí automaticky po dokončení simulácie prvej operácie.
 
-### Forming operation
+### Tvarovacie operácie
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) or just click on the Forming tile in the Operation Editor to set up the forming operation.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) alebo jednoducho kliknite na dlaždicu „Forming“ v editore operácií, aby ste nastavili operáciu tvárnenia.
 
-All objects will be read from the database at the end of the previous Rest on Die operation, so we only need to set:
+Všetky objekty sa načítajú z databázy na konci predchádzajúcej operácie „Rest on Die“, takže stačí len nastaviť:
 
-  * Movement controls
+  * Ovládanie pohybu
 
-  * Positioning
+  * Polohovanie
 
-  * Inter-object relationships
+  * Vzťahy medzi objektmi
 
-  * Simulation and stopping controls
+  * Simulácia a ovládacie prvky na zastavenie
 
-### Assign Top die movement
+### Priradiť pohyb hornej matrice
 
-Click on Top Die **Movement** page in Operation tree and set the **Speed** to a constant value of **3** in/sec in the **-Z** direction. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Scheduled Positioning page.
+Kliknite na stránku „Top Die **Movement**“ v strome operácií a nastavte **rýchlosť** na konštantnú hodnotu **3** palcov za sekundu v smere **-Z**. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Scheduled Positioning“.
 
-### Scheduled Positioning
+### Plánované polohovanie
 
-Click ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button and define **Interference** position for the **Top****Die** to the **Workpiece** in the **-Z** direction. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Contact page.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) a nastavte polohu **interferencie** medzi **hornou matricou****Die** a **obrobkom** v smere **-Z**. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Kontakt“.
 
-### Inter-Object relation
+### Vzťah medzi objektmi
 
-Click on **Contact** and define inter-object relationships with friction 0.3. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Stopping controls page.
+Kliknite na **Kontakt** a definujte vzťahy medzi objektmi s trením 0,3. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Ovládacie prvky zastavenia.
 
-### Assign Step and Stopping controls
+### Priradenie ovládacích prvkov krokov a zastavenia
 
-In Stopping controls, set the **Die****Distance** stopping criteria to 0.25 in., using the **Top Die** and **Bottom****Die** as the reference objects and **Z** as the direction. Save the project. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Step controls page.
+V časti „Ovládacie prvky zastavenia“ nastavte kritérium zastavenia **Vzdialenosť medzi maticami** na 0,25 in., pričom ako referenčné objekty použite **Hornú maticu** a **Spodnú maticu** a ako smer nastavte **Z**. Projekt uložte. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Ovládacie prvky krokovania.
 
-Set the **Number of steps** to **100** and the **Step increment to save** to **5**.
+Nastavte **Počet krokov** na **100** a **Krok pri ukladaní** na **5**.
 
-Set the step size to a **die displacement** of **0.085** in.
+Nastavte veľkosť kroku na **posun matrice** **0,085** palca.
 
-Click on the MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode button (above the operation tree) to start the simulation.
+Kliknutím na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode“ (nad stromom operácií) spustíte simuláciu.
 
-### Run and monitor a simulation
+### Spustenie a sledovanie simulácie
 
-3D simulations can be made to run faster by taking advantage of multiple processors or multiple cores on one processor. If your computer processors has 4 cores, then Click the ![]({{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}) label.
+3D simulácie je možné spustiť rýchlejšie využitím viacerých procesorov alebo viacerých jadier na jednom procesore. Ak má váš počítač 4 jadrá, kliknite na štítok ![]({{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}).
 
-set the Simulation Mode to **Interactive** and select **Continue****Run**  
-specify the Processors Per Job as **4.** Then click on ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) button and then **![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}). (See[ Fig. L3.13.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab3/' | relative_url }}#Fig_L3_13_Run_option_window)).**
+nastavte režim simulácie na **Interaktívny** a vyberte **Pokračovať****Spustiť**  
+Nastavte počet procesorov na úlohu na hodnotu **4.** Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) a následne na **![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}). (Pozri [ Fig. L3.13.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab3/' | relative_url }}#Fig_L3_13_Run_option_window)).**
 
-As the simulation is running, click the Temperature ![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }}) button to view temperatures in the graphics window. It is helpful to use Multi object mode ![]({{ '/assets/icons/pre_icons/mo_show_multi_obj_icon.jpg' | relative_url }}) to make the dies transparent. 
+Počas behu simulácie kliknite na tlačidlo „Temperature“ (![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }})), aby ste si v grafickom okne mohli prezrieť teploty. Na zviditeľnenie čipov je užitočné použiť režim „Multi object“ (![]({{ '/assets/icons/pre_icons/mo_show_multi_obj_icon.jpg' | relative_url }})). 
 
-Once the simulation is completed, click the MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode button to review results.
+Po dokončení simulácie kliknite na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode“, aby ste si prezreli výsledky.
 
-### Review results in Post Mode
+### Výsledky kontroly v režime príspevku
 
-Click the 3D Mirroring ![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | relative_url }}) icon. Confirm that the **Add** option is selected and click on a symmetry plane of the object. A mirrored symmetry object will be added. Keep clicking on the symmetry plane until the full object is created. If you make a mistake, the Delete option can be used to delete the added sections.
+Kliknite na ikonu 3D zrkadlenie ![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | relative_url }}). Uistite sa, že je zvolená možnosť **Pridať**, a kliknite na rovinu symetrie objektu. Pridá sa zrkadlovo otočený objekt. Pokračujte v klikaní na rovinu symetrie, kým nevytvoríte celý objekt. Ak urobíte chybu, pridané časti môžete odstrániť pomocou možnosti Vymazať.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab4_image0004.jpg' | relative_url }})
 
-3D Mirroring window in MO post
+Okno 3D zrkadlenia v príspevku na MO
 
-Play through the steps of the simulation. Compare results to the full model. The results should be essentially the same.
+Prejdite jednotlivými krokmi simulácie. Porovnajte výsledky s výsledkami úplného modelu. Výsledky by mali byť v podstate rovnaké.
 
-Note: When plotting the load vs. stroke curve, the load displayed is only for this 45° section. The Graph ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) dialog has a Scale option that allows you to multiply the load by 8 to get the load to form the full part.
+Poznámka: Pri vykresľovaní krivky závislosti zaťaženia od zdvihu sa zobrazované zaťaženie vzťahuje iba na tento 45° úsek. Dialógové okno Graph ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) obsahuje možnosť Scale, ktorá umožňuje vynásobiť zaťaženie číslom 8, čím sa získa zaťaženie potrebné na vytvorenie celého dielu.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab4_image0005.jpg' | relative_url }})
 
-Load Stroke graph with scale
+Graf zdvihu zaťaženia so stupnicou

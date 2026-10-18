@@ -1,64 +1,64 @@
 ---
 lang: sk
-title: "Forming Express Lab8"
+title: "Založenie spoločnosti Express Lab8"
 ---
 
-# Lab 8. Hammer Forging
+# Laboratórna práca č. 8. Kovanie kladivom
 
-### Creating New Problem
+### Vytvorenie nového problému
 
-Create a new project called **FE_Gear_Hammer**. Check First operation check box and set it to **[2D] Multi Blow Forging**. The Unit system should be **English**.
+Vytvorte nový projekt s názvom **FE_Gear_Hammer**. Zaškrtnite políčko „Prvá operácia“ a nastavte ju na **[2D] Kovanie viacerými údermi**. Systém jednotiek by mal byť **anglický**.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab8_image0001.jpg' | relative_url }})
 
-New Problem Window
+Okno „Nový problém“
 
-### Process
+### Postup
 
-On the **Process** page, set the **Energy** to **150** Klb-in. This is the maximum hammer energy. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Blow Table.
+Na stránke **Proces** nastavte hodnotu **Energia** na **150** Klb-in. Ide o maximálnu energiu kladiva. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre prechod na tabuľku výbuchov.
 
-### Blow Table
+### Tabuľka výdychov
 
-For the Hit 1, set **% Blow** to **50** and the **Efficiency** to**0.7**.
+Pre úder 1 nastavte **% sily úderu** na **50** a **účinnosť** na **0,7**.
 
-Note: The “No. Hits” field updates the table immediately. It is easy to accidently overwrite previously defined hits if you try typing in the number manually. For this reason, it is recommended to use the up/down arrows to adjust number of hits for this operation.
+Poznámka: Pole „Počet zásahov“ okamžite aktualizuje tabuľku. Ak sa pokúsite číslo zadať ručne, ľahko sa môže stať, že omylom prepíšete predtým zadané zásahy. Z tohto dôvodu sa odporúča používať šípky nahor/nadol na úpravu počtu zásahov pre túto operáciu.
 
-Increase the No. Hits to 2 using the up arrow. Set the % Blow energy to 100 for hit 2, then click the up arrow to increase the No. Hits to 10. This blow table contains a light first blow then nine full energy blows (see Fig. L8.2.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry Type.
+Pomocou šípky nahor zvýšte počet úderov na 2. Nastavte % energie úderu na 100 pre úder č. 2, potom kliknite na šípku nahor, aby ste zvýšili počet úderov na 10. Táto tabuľka úderov obsahuje jeden ľahký úvodný úder a potom deväť úderov s plnou energiou (pozri obr. L8.2.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre typ geometrie.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab8_image0002.jpg' | relative_url }})
 
-Blow Table window
+Zatvoriť okno „Tabuľka“
 
-At this point, we will import a previously set-up model from a different project. Go to **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Import** and open **FE_Gear_LargerBillet.DB.** Select the **first**(negative) **step** of **Operation****2**. It should be around step **101** , Click **No** for Global/Local Time popup asking "Do you want to use new time definition?" for Global time. This option initialize the global time from the DB to zero. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top die movement page.
+V tejto fáze naimportujeme predtým vytvorený model z iného projektu. Prejdite do **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Import** a otvorte súbor **FE_Gear_LargerBillet.DB.** Vyberte **prvý** (záporný) **krok** **operácie****2**. Malo by to byť okolo kroku **101**. V okienku s otázkou „Chcete použiť novú definíciu času?“ pre globálny čas kliknite na **Nie**. Táto voľba vynuluje globálny čas z databázy. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s pohybom hornej matrice.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab8_image0003.jpg' | relative_url }})
 
-Step selection window
+Okno výberu krokov
 
-### Top Die Movement
+### Pohyb hornej matrice
 
-The movement in the dialog should be defined as **Hammer** with an Energy of **150** Klb-in.
+Pohyb v dialógu by mal byť definovaný ako **Hammer** s energiou **150** Klb-in.
 
-Click the Mass calculator ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) icon. Enter a mass of **1000** pounds. The system will convert the mass to DEFORM consistent units. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Generate DB page.
+Kliknite na ikonu kalkulátora hmotnosti ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}). Zadajte hmotnosť **1000** libier. Systém prepočíta hmotnosť na jednotky kompatibilné s DEFORM. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Generate DB“.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab8_image0004.jpg' | relative_url }})
 
-Hammer movement window
+Okienko s mechanizmom kladivka
 
-### Generating DB
+### Vytvorenie databázy
 
-Go to Generate DB page and generate the database. Click on the MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode button (above the operation tree) to start the simulation.
+Prejdite na stránku „Generate DB“ a vygenerujte databázu. Kliknutím na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode“ (nad stromom operácií) spustite simuláciu.
 
-### Run and monitor a simulation
+### Spustenie a sledovanie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog. Use the default **Continue****Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), čím otvoríte dialógové okno Možnosti spustenia. Použite predvolenú možnosť **Pokračovať****Spustiť**, aby ste vybrali možnosť „**Pokračovať od posledného kroku**“, a potom vyberte režim simulácie pomocou prepínača **Interaktívny**. Kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}), aby ste spustili simuláciu.
 
-### Review the results
+### Prezrite si výsledky
 
-When the simulation is completed, click the MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode button to review results.
+Po dokončení simulácie kliknite na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode“, aby ste si prezreli výsledky.
 
-Play the steps and note that the dies do not fill and the simulation stops after all the blows are completed. (See Fig. L8.5.)
+Prejdite jednotlivé kroky a všimnite si, že formy sa nenapĺňajú a simulácia sa zastaví po dokončení všetkých úderov. (Pozri obr. L8.5.)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_express_gear_labs/lab8_image0005.jpg' | relative_url }})
 
-Last of last blow operation step
+Posledný krok operácie „Last of Last Blow“

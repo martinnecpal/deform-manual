@@ -1,219 +1,219 @@
 ---
 lang: sk
-title: "Lab 08 Hammer Press"
+title: "Laboratórium 08 – Kladivový lis"
 ---
 
-# Lab 08 Hammer Press
+# Laboratórna úloha č. 08: Kladivový lis
 
-Requirement: To setup this operation, First we have to setup [Lab 03 Spike Isothermal Lab.]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_03_spike_isothermal/' | relative_url }})
+Požiadavka: Na nastavenie tejto operácie musíme najskôr nastaviť [Lab 03 Spike Isothermal Lab.]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_03_spike_isothermal/' | relative_url }})
 
-8.1. Creating a New Problem
+8.1. Vytvorenie nového problému
 
-8.2. Adding Operation
+8.2. Pridanie operácie
 
-8.3. Importing Database
+8.3. Import databázy
 
-8.4. Material List
+8.4. Zoznam materiálov
 
-8.5. Assigning Temperature for Billet
+8.5. Stanovenie teploty sochory
 
-8.6. Assigning Hammer Movement for Top Die
+8.6. Nastavenie pohybu kladiva pre hornú matricu
 
-8.7. Generating 1st Operation Database
+8.7. Vytvorenie databázy prvých operácií
 
-8.8. Simulating 1st Operation
+8.8. Simulácia prvej operácie
 
-8.9. Post-Processing the 1st operation Results
+8.9. Následné spracovanie výsledkov prvej operácie
 
-8.10. Adding 2nd operation
+8.10. Pridanie druhej operácie
 
-8.11. Adding objects
+8.11. Pridávanie objektov
 
-8.12. Assigning Top Die Movement
+8.12. Nastavenie pohybu hornej matrice
 
-8.13. Generate Inter-object Contacts
+8.13. Vytvorenie kontaktov medzi objektmi
 
-8.14. Step Controls
+8.14. Ovládacie prvky krokov
 
-8.15. Generating 2nd operation Database
+8.15. Vytvorenie databázy druhej operácie
 
-8.16. Simulating 2nd operation
+8.16. Simulácia druhej operácie
 
-8.17. Post-Processing the 2nd Operation Results
+8.17. Následné spracovanie výsledkov druhej operácie
 
-8.18. Closing MO Wizard
+8.18. Ukončenie sprievodcu MO
 
-## Creating a New Problem
+## Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte položku DEFORM-v1x.xxx (kde .xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte položku **DEFORM GUI Main** vxx.xx. Zobrazí sa okno DEFORM GUI Main.
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** " radio button in unit field. Define Problem Name as " ******Spike_Hammer** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte prepínač „**Angličtina**“. Názov úlohy zadajte ako „******Spike_Hammer**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak políčko „Zobraziť dialógové okno s možnosťami“ nezaškrtnete, nezobrazí sa vám dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili novú úlohu s použitím integrovaného výrobného procesu Deform.
 
-Multiple operation wizard will open with the New Project dialog (See Fig. L8.1.), at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this lab we use ‘**Spike_Hammer** ’ as the project name.
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom Nový projekt (pozri obr. L8.1.), kde bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tomto cvičení použijeme ako názov projektu „**Spike_Hammer**“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_08_hammer_press/2d_mobl8_image0001.jpg' | relative_url }})
 
-Assigning Project Name
+Priradenie názvu projektu
 
-User can also change the Unit system, project saving file location and add operation by selecting from First operation pull down list and checkbox (See Fig. L8.1.). Using copy Existing project option we can import previous saved projects as new project. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Používateľ môže tiež zmeniť systém jednotiek, umiestnenie súboru na uloženie projektu a pridať operáciu výberom z roletového zoznamu „Prvá operácia“ a zaškrtnutím príslušného políčka (pozri obr. L8.1.). Pomocou možnosti „Kopírovať existujúci projekt“ môžeme importovať predchádzajúce uložené projekty ako nové projekty. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.
 
-## Adding Operation
+## Pridanie operácie
 
-Multiple Operation wizard will open. Add 2D Forming operation from the Explorer Operations list. Operation can be add by clicking on 2D Forming operation ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button or user can also add by drag and drop into the Operation Editor.
+Otvorí sa sprievodca viacerými operáciami. Zo zoznamu operácií v prehliadači pridajte operáciu 2D tvárnenia. Operáciu je možné pridať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) pre operáciu 2D tvárnenia alebo ju môžete pridať aj pretiahnutím do editora operácií.
 
-## Importing Database
+## Importovanie databázy
 
-Using Import option ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}), load the database of problem **Spike_Isothermal** , select **-1** step in the Step selection window (See Fig. L8.2.), then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
+Pomocou možnosti importu ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}) načítajte databázu úlohy **Spike_Isothermal**, v okne výberu krokov vyberte krok **-1** (pozri obr. L8.2.) a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_08_hammer_press/2d_mobl8_image0002.jpg' | relative_url }})
 
-Selecting step in Step Selection window
+Výber kroku v okne „Výber kroku“
 
-## Material List
+## Zoznam materiálov
 
-In material list, delete the AISI-1035,COLD[70-400F(20-200C)] material from the list by highlighting the material click on ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) button (See Fig. L8.3.).
+V zozname materiálov odstráňte materiál AISI-1035, COLD [70–400 °F (20–200 °C)] tak, že ho označíte a kliknete na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) (pozri obr. L8.3.).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_08_hammer_press/2d_mobl8_image0003.jpg' | relative_url }})
 
-Deleting the Material from the Material list
+Odstránenie materiálu zo zoznamu materiálov
 
-Load the material **AISI-1045_(20-1100C)** from DEFORM Material library, from **Steel** category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) upto Billet page.
+Načítajte materiál **AISI-1045_(20-1100C)** z knižnice materiálov DEFORM v kategórii **Oceľ** pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice). Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka „Sochor“.
 
-## Assigning Temperature for Billet
+## Nastavenie teploty sochory
 
-Assign **Object****temperature** as **2250** °F (See Fig. L8.4.) and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top die movement page.
+Nastavte **teplotu objektu** na hodnotu **2250** °F (pozri obr. L8.4.) a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Top die movement“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_08_hammer_press/2d_mobl8_image0004.jpg' | relative_url }})
 
-Billet Object page
+Stránka objektu „Billet“
 
-## Assigning Hammer Movement for Top Die
+## Nastavenie pohybu kladiva pre hornú maticu
 
-In **Top Die movement** page, select **Hammer** movement type, define **Energy** as **250Klb-in** , **Hammer****mass** as **0.265e-3** **Klb-s^2/in** and **Blow****efficiency** as**0.6** (see Fig. L8.5.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Generate DB page.
+Na stránke **Pohyb hornej matrice** vyberte typ pohybu **Kladivo**, nastavte **Energiu** na hodnotu **250 Klb-in** a **Hmotnosť kladiva** na hodnotu **0,265e-3** **Klb-s^2/in** a **účinnosť úderu** na hodnotu **0,6** (pozri obr. L8.5.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Generate DB.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_08_hammer_press/2d_mobl8_image0005.jpg' | relative_url }})
 
-Top die movement page
+Na začiatok stránky o pohybe matrice
 
-## Generating 1st Operation Database
+## Vytvorenie databázy prvých operácií
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process:
+Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) spustíte kontrolu programu, či v nastavení úlohy niečo nechýba. Počas kontroly:
 
-Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).
+Správy v červenej farbe označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli definovať údaje o materiáloch).
 
-Click on![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, click on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab to run simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Keď program dokončí zapisovanie databázy, kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) a spustite simuláciu.
 
-## Simulating 1st Operation
+## Simulácia prvej operácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), aby sa otvorilo dialógové okno „Run Options“ (Možnosti spustenia). Pomocou predvolenej možnosti **Continue Run** (Pokračovať v spúšťaní) vyberte možnosť „**Continue from the last step**“ (Pokračovať od posledného kroku), potom nastavte režim simulácie na **Interactive** (Interaktívny) a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message and Simulation Graphics in Simulation mode. Click the Simulation Message tab to view the Message file. As long as the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked, which is the default setting, the Message file will refresh every couple of seconds.
+Priebeh simulácie je možné počas jej vykonávania sledovať v režime Simulácia v častiach „Simulačné správy“ a „Simulačná grafika“. Kliknutím na kartu „Simulačné správy“ zobrazíte súbor správ. Pokiaľ je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) (čo je predvolené nastavenie), súbor správ sa bude obnovovať každých pár sekúnd.
 
-The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.
+Súbor „Message“ obsahuje informácie o tom, v ktorom simulačnom kroku sa simulácia momentálne nachádza, a zároveň poskytuje údaje o tom, ako dobre simulácia prebieha.
 
-When the simulation has finished, the following message will be added to the end of the Message file:
+Po ukončení simulácie sa na koniec súboru so správami pridá nasledujúca správa:
 
-"PROGRAM STOPPED!
+"PROGRAM SA ZASTAVIL!
 
-***** PRESS ENERGY HAS BEEN FULLY CONSUMED.".
+***** „ENERGIA TLAČE BOLA ÚPLNE SPOTREBOVANÁ.“.
 
-## Post-Processing the 1st operation Results
+## Následné spracovanie výsledkov prvej operácie
 
-After simulation has been completed, click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab, MO post processor will open.
+Po dokončení simulácie kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) – otvorí sa postprocesor MO.
 
-#### Load Stroke graph
+#### Graf zdvihu zaťaženia
 
-**Plot Y Load-Stroke graph:**  
-Click the ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) icon, the Load Stroke Graph window will open. Select the Top Die in Plot object list, in X-Axis pull down menu select Stroke and in Y-Axis pull down menu select Y Load. Click on options tab and check Step tracer check box, then click on ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}). Click on ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}) button in Step browser and Play animation (See Fig. L8.6.).
+**Vytvorte graf závislosti medzi zaťažením a zdvihom na osi Y:**  
+Kliknite na ikonu ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}), otvorí sa okno „Load Stroke Graph“ (Graf zaťaženia zdvihu). V zozname objektov „Plot“ vyberte položku „Top Die“, v roletovom menu osi X vyberte položku „Stroke“ a v roletovom menu osi Y vyberte položku „Y Load“. Kliknite na kartu „Možnosti“ a zaškrtnite políčko „Step tracer“, potom kliknite na ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}). V prehliadači krokov kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}) a spustite animáciu (pozri obr. L8.6.).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_08_hammer_press/2d_mobl8_image0006.jpg' | relative_url }})
 
-Load Stroke Graph plot
+Graf zdvihu zaťaženia
 
-**Plot Y Velocity -Stroke graph:**  
-In Y-Axis pull down menu select Y-Speed and click on ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) and see the Graph. (See Fig. L8.7.)
+**Graf rýchlosti na osi Y – zdvih:**  
+V roletovom menu na osi Y vyberte položku „Y-Speed“, kliknite na ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) a pozrite si graf. (Pozri obr. L8.7.)
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_08_hammer_press/2d_mobl8_image0007.jpg' | relative_url }})
 
-Velocity Stroke graph plot
+Graf rýchlosti a zdvihu
 
-## Adding 2nd operation
+## Pridanie druhej operácie
 
-After completion of Post processing, click on ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) button, add another 2D Forming operation. In this operation we are using the same objects and we are doing second blow operation.
+Po dokončení následného spracovania kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) a pridajte ďalšiu operáciu 2D tvárnenia. V tejto operácii používame tie isté objekty a vykonávame druhú operáciu vyfukovania.
 
-Click on second Forming operation in Operation editor, Select Interactive mode type in Setup type popup, then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object page.
+V editore operácií kliknite na druhú operáciu tvarovania, v rozbaľovacom menu „Typ nastavenia“ vyberte „Interaktívny režim“ a potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Objekt“.
 
-## Adding objects
+## Pridávanie objektov
 
-In interactive mode all previous operation objects are added and their data is loaded from previous operation last step automatically, as shown in Fig. L8.8. As no new objects are required in 2nd operation and all objects data is loaded from previous operation last step select Top die Movement branch from object Tree.
+V interaktívnom režime sa pridajú všetky objekty predchádzajúcej operácie a ich údaje sa automaticky načítajú z posledného kroku predchádzajúcej operácie, ako je znázornené na obr. L8.8. Keďže v druhej operácii nie sú potrebné žiadne nové objekty a všetky údaje o objektoch sa načítajú z posledného kroku predchádzajúcej operácie, vyberte z objektového stromu vetvu „Top die Movement“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_08_hammer_press/2d_mobl8_image0008.jpg' | relative_url }})
 
-Interactive 2nd operation setup object page
+Interaktívna stránka s nastavením druhého operačného objektu
 
-## Assigning Top Die Movement
+## Nastavenie pohybu hornej matrice
 
-In Movement page, define **Energy** value as **250** **Klb-in**. Click on Contact branch in object tree.
+Na stránke „Pohyb“ nastavte hodnotu **Energie** na **250** **Klb-in**. V strome objektov kliknite na vetvu „Kontakt“.
 
-## Generate Inter-object Contacts
+## Vytvorenie prepojení medzi objektmi
 
-Contact relation ship data has be already copied from previous operation as shown in Fig. L8.9., if not by selecting user type click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button and select appropriate friction coefficient using ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) (Edit) button. After defining the friction coefficient for any relation same values can be copied to other relations using ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button and use ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) icon to determine a suitable contact tolerance to generate the contacts using ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button.
+Údaje o kontaktných vzťahoch už boli skopírované z predchádzajúcej operácie, ako je znázornené na obr. L8.9. Ak tomu tak nie je, vyberte typ používateľa, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) a vyberte príslušný koeficient trenia pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) (Upraviť). Po definovaní koeficientu trenia pre akýkoľvek vzťah je možné rovnaké hodnoty skopírovať do ostatných vzťahov pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) a pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) určiť vhodnú toleranciu kontaktu, aby sa kontakty vygenerovali pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}).
 
-For this lab as inter-object relations data and contacts are loaded from previous operation no need to generate the contacts, so click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Step controls window.
+V rámci tohto cvičenia sa údaje o vzťahoch medzi objektmi a kontakty načítajú z predchádzajúcej operácie, takže nie je potrebné generovať kontakty; kliknite teda na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až kým sa nezobrazí okno „Step controls“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_08_hammer_press/2d_mobl8_image0009.jpg' | relative_url }})
 
-Inter-object Contact generation page
+Stránka na generovanie kontaktov medzi objektmi
 
-## Step Controls
+## Ovládacie prvky krokov
 
-In Step controls page, define Solution step definition with constant **die displacement** as **0.015** in and **number of steps** to **50**(see Fig. L8.10.). Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Step controls“ (Ovládacie prvky krokov) definujte definíciu kroku riešenia s konštantným **posunom matrice** nastaveným na hodnotu **0,015** a **počtom krokov** na **50** (pozri obr. L8.10.). Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_08_hammer_press/2d_mobl8_image0010.jpg' | relative_url }})
 
-Simulation controls
+Ovládacie prvky simulácie
 
-## Generating 2nd operation Database
+## Vytvorenie databázy druhej operácie
 
-In Generate DB page, click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup.
+Na stránke „Generate DB“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby program skontroloval, či v nastavení úlohy niečo nechýba.
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, click on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab to run simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Keď program dokončí zapisovanie databázy, kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) a spustite simuláciu.
 
-## Simulating 2nd operation
+## Simulácia druhej operácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), aby sa otvorilo dialógové okno „Run Options“ (Možnosti spustenia). Pomocou predvolenej možnosti **Continue Run** (Pokračovať v spúšťaní) vyberte možnosť „**Continue from the last step**“ (Pokračovať od posledného kroku), potom nastavte režim simulácie na **Interactive** (Interaktívny) a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message and Simulation Graphics in Simulation mode. Click the Simulation Message tab to view the Message file. As long as the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked, which is the default setting, the Message file will refresh every couple of seconds.
+Priebeh simulácie je možné počas jej vykonávania sledovať v režime simulácie prostredníctvom okien „Simulation Message“ a „Simulation Graphics“. Kliknutím na kartu „Simulation Message“ zobrazíte súbor správ. Pokiaľ je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}), čo je predvolené nastavenie, súbor správ sa bude aktualizovať každých pár sekúnd.
 
-The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.
+Súbor „Message“ obsahuje informácie o tom, v ktorom simulačnom kroku sa simulácia momentálne nachádza, a zároveň poskytuje údaje o tom, ako dobre simulácia prebieha.
 
-When the simulation has finished, the following message will be added to the end of the Message file:
+Po ukončení simulácie sa na koniec súboru so správami pridá nasledujúca správa:
 
-"PROGRAM STOPPED!
+"PROGRAM SA ZASTAVIL!
 
-***** PRESS ENERGY HAS BEEN FULLY CONSUMED.".
+***** „ENERGIA TLAČE BOLA ÚPLNE SPOTREBENÁ.“.
 
-## Post-Processing the 2nd Operation Results
+## Následné spracovanie výsledkov druhej operácie
 
-After simulation has been completed, click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab, MO post processor will open.
+Po dokončení simulácie kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) – otvorí sa postprocesor MO.
 
-#### Load Stroke graph :
+#### Graf zdvihu zaťaženia:
 
-Review LOAD-STROKE and VELOCITY-STROKE plots of 2nd operation as shown in Fig. L8.11. and Fig. L8.12.
+Prezrite si grafy ZÁŤAŽ-ZÁBER a RÝCHLOSŤ-ZÁBER pre druhý pracovný cyklus, ako je znázornené na obr. L8.11 a obr. L8.12.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_08_hammer_press/2d_mobl8_image0011.jpg' | relative_url }})
 
-Load verses Stroke Graph
+Graf závislosti zaťaženia od zdvihu
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_08_hammer_press/2d_mobl8_image0012.jpg' | relative_url }})
 
-Velocity verses Stroke Graph
+Graf rýchlosti v závislosti od zdvihu
 
-## Closing MO Wizard
+## Ukončenie sprievodcu MO
 
-After completion of Post processing, save the Project and close the MO wizard by clicking Close ![]({{ '/assets/icons/pre_icons/mo_quit_icon.jpg' | relative_url }}) button or selecting Quit option under File menu.
+Po dokončení následného spracovania uložte projekt a zatvorte sprievodcu MO kliknutím na tlačidlo „Close ![]({{ '/assets/icons/pre_icons/mo_quit_icon.jpg' | relative_url }})“ alebo výberom možnosti „Quit“ v ponuke „File“.
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [15\. Movement Controls Settings]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 

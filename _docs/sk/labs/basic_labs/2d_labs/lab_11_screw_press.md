@@ -1,115 +1,115 @@
 ---
 lang: sk
-title: "Lab 11 Screw press"
+title: "Laboratórna práca č. 11: Šnekový lis"
 ---
 
-# Lab 11 Screw press
+# Laboratórna práca č. 11: Šnekový lis
 
-Requirement: To setup this operation, First we have to setup [Lab 03 Spike Isothermal Lab.]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_03_spike_isothermal/' | relative_url }})
+Požiadavka: Na nastavenie tejto operácie musíme najskôr nastaviť [Lab 03 Spike Isothermal Lab.]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_03_spike_isothermal/' | relative_url }})
 
-11.1. Creating a New Problem
+11.1. Vytvorenie novej úlohy
 
-11.2. Adding Operation
+11.2. Pridanie operácie
 
-11.3. Importing Database
+11.3. Import databázy
 
-11.4. Material List
+11.4. Zoznam materiálov
 
-11.5. Assigning Temperature for Billet
+11.5. Stanovenie teploty sochoru
 
-11.6. Assigning Screw press movement for Top Die
+11.6. Nastavenie pohybu šnekového lisu pre hornú matricu
 
-11.7. Generating Database
+11.7. Vytvorenie databázy
 
-11.8. Starting the Simulation
+11.8. Spustenie simulácie
 
-11.9. Post-Processing the Results
+11.9. Následné spracovanie výsledkov
 
-## Creating a New Problem
+## Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte **DEFORM GUI Main** vxx.xx. Zobrazí sa hlavné okno DEFORM GUI Main.
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** " radio button in unit field. Define Problem Name as " ******Spike_Screwpress** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Zvoľte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek zvoľte prepínač „**Anglický**“. Názov úlohy zadajte ako „******Spike_Screwpress**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak nezaškrtnete políčko „Zobraziť dialógové okno s možnosťami“, nezobrazí sa dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s použitím integrovaného výrobného procesu Deform.
 
-Multiple operation wizard will open with the New Project dialog (see Fig. L11.1.), at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this lab we use ‘**Spike_Screwpress** ’ as the project name.
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom „Nový projekt“ (pozri obr. L11.1.), kde bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tomto cvičení použijeme ako názov projektu „**Spike_Screwpress**“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_11_screw_press/2d_mobl11_image0001.jpg' | relative_url }})
 
-Assigning Project Name
+Priradenie názvu projektu
 
-User can also change the Unit system, project saving file location and add operation by selecting from First operation pull down list and checkbox (see Fig. L11.1.). Using copy Existing project option we can import previous saved projects as new project. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Používateľ môže tiež zmeniť systém jednotiek, umiestnenie súboru na uloženie projektu a pridať operáciu výberom z roletového zoznamu „Prvá operácia“ a zaškrtnutím príslušného políčka (pozri obr. L11.1.). Pomocou možnosti „Kopírovať existujúci projekt“ môžeme importovať predtým uložené projekty ako nové projekty. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.
 
-## Adding Operation
+## Pridanie operácie
 
-Multiple Operation wizard will open. Add 2D Forming operation from the Explorer Operations list. Operation can be add by clicking on 2D Forming operation ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button or user can also add by drag and drop into the Operation Editor.
+Otvorí sa sprievodca viacerými operáciami. Zo zoznamu operácií v Průzkumníku pridajte operáciu 2D tvárnenie. Operáciu je možné pridať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) pre operáciu 2D tvárnenie alebo ju môžete pridať aj pretiahnutím do editora operácií.
 
-## Importing Database
+## Importovanie databázy
 
-Using Import option ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}), Load the database of problem **Spike_Isothermal** , select**-1** step in the Step selection window, then click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Material page.
+Pomocou možnosti Importu ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}) načítajte databázu úlohy **Spike_Isothermal**, v okne Výber kroku vyberte krok **-1** a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku Materiál.
 
-## Material List
+## Zoznam materiálov
 
-In material list, delete the AISI-1035,COLD[70-400F(20-200C)] material from the list by highlighting the material click on ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) button (See Fig. L11.2.).
+V zozname materiálov odstráňte materiál AISI-1035, COLD [70–400 °F (20–200 °C)] tak, že ho označíte a kliknete na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_icon2.jpg' | relative_url }}) (pozri obr. L11.2.).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_08_hammer_press/2d_mobl8_image0003.jpg' | relative_url }})
 
-Deleting the Material from the Material list
+Odstránenie materiálu zo zoznamu materiálov
 
-Load the material **AISI-1045_(20-1100C)** from DEFORM Material library, from **Steel** category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Billet page.
+Načítajte materiál **AISI-1045_(20-1100C)** z knižnice materiálov DEFORM v kategórii **Oceľ** pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice). Následne klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka „Billet“.
 
-## Assigning Temperature for Billet
+## Nastavenie teploty sochory
 
-Assign **Object temperature** as **2250** °F (see Fig. L11.3.) and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top die movement page.
+Nastavte **teplotu objektu** na hodnotu **2250** °F (pozri obr. L11.3.) a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Top die movement“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_11_screw_press/2d_mobl11_image0002.jpg' | relative_url }})
 
-Billet Object page
+Stránka objektu „Billet“
 
-## Assigning Screw press movement for Top Die
+## Nastavenie pohybu skrutkového lisu pre hornú matricu
 
-In Top Die movement page, select **Screw press movement** type, define **Energy** as**75 Klb-in** , **Blow efficiency** as **0.8** , **Movement of Inertia** as **0.25 Klb-in-s^2** and**Lead screw pitch** as **5** **in/rev** (see Fig. L11.4.). Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Generate DB page.
+Na stránke „Pohyb hornej matrice“ vyberte typ **Pohyb skrutkového lisu**, nastavte **Energiu** na **75 Klb-in**, **Účinnosť zdvihu** na **0,8**, **zotrvačnosť** na **0,25 Klb-in-s²** a **rozstup vodiacich skrutiek** na **5** **in/rev** (pozri obr. L11.4.). Potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Generate DB.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_11_screw_press/2d_mobl11_image0003.jpg' | relative_url }})
 
-Top die movement page
+Na začiatok stránky o pohybe matrice
 
-## Generating Database
+## Vytvorenie databázy
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process:
+Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) spustíte kontrolu programu, či v nastavení úlohy niečo nechýba. Počas kontroly:
 
-Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).
+Správy v červenej farbe označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli definovať údaje o materiáloch).
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, click on tab to run simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Keď program dokončí zapisovanie databázy, kliknite na kartu, aby ste spustili simuláciu.
 
-## Starting the Simulation
+## Spustenie simulácie
 
-Click on ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) under the simulation tab, as we click on the Run option, Run simulation dialog will open, use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) na karte „Simulácia“. Po kliknutí na možnosť „Spustiť“ sa otvorí dialógové okno „Spustiť simuláciu“. Použite predvolenú možnosť **Pokračovať v spúšťaní**, aby ste vybrali možnosť „**Pokračovať od posledného kroku** a potom vyberte režim simulácie **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie.
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message and Simulation Graphics in Simulation mode. Click the Simulation Message tab to view the Message file. As long as the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked, which is the default setting, the Message file will refresh every couple of seconds.
+Priebeh simulácie je možné počas jej vykonávania sledovať v režime Simulácia v častiach „Simulačné správy“ a „Simulačná grafika“. Kliknutím na kartu „Simulačné správy“ zobrazíte súbor správ. Pokiaľ je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) (čo je predvolené nastavenie), súbor správ sa bude aktualizovať každých pár sekúnd.
 
-The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.
+Súbor „Message“ obsahuje informácie o tom, v ktorom simulačnom kroku sa simulácia práve nachádza, a tiež poskytuje údaje o tom, ako dobre simulácia prebieha.
 
-When the simulation has finished, the following message will be added to the end of the Message file:
+Po ukončení simulácie sa na koniec súboru „Message“ pridá nasledujúca správa:
 
-"PROGRAM STOPPED!
+"PROGRAM SA ZASTAVIL!
 
-***** PRESS ENERGY HAS BEEN FULLY CONSUMED.".
+***** „ENERGIA PRE TLAČ BOLA ÚPLNE VYČERPANÁ.“.
 
-## Post-Processing the Results
+## Následné spracovanie výsledkov
 
-After simulation has been completed, click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab, MO post processor will open.
+Po dokončení simulácie kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) – otvorí sa postprocesor MO.
 
-Plot **Load-Stroke** and **Speed- Stroke graph** and observe the graph as shown in Fig. L11.5. and Fig. L11.6:
+Vytvorte grafy **zaťaženie – zdvih** a **rýchlosť – zdvih** a sledujte ich, ako je znázornené na obr. L11.5 a obr. L11.6:
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_11_screw_press/2d_mobl11_image0004.jpg' | relative_url }})
 
-Y Load -Stroke graph plot
+Graf závislosti zaťaženia Y od zdvihu
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_11_screw_press/2d_mobl11_image0005.jpg' | relative_url }})
 
-Y Speed - Stroke graph plot
+Rýchlosť Y – graf zdvihu
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [15\. Movement Controls Settings]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 

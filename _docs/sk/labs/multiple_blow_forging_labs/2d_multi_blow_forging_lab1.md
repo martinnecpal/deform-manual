@@ -1,296 +1,296 @@
 ---
 lang: sk
-title: "2D Multi Blow Forging Lab1"
+title: "2D Multifunkčné kovacie laboratórium1"
 ---
 
-# 2D Multi Blow Forging Lab1
+# 2D Multifunkčné kovacie laboratórium1
 
-The intent of the lab is to demonstrate to the user how to prepare a multiple-blow simulation in DEFORM for successive hammer blows using 2D Multi Blow Forging operation with adaptive reheat DEFORM feature. The simulation is performed as a 2D non-isothermal simulation.
+Zámerom laboratória je ukázať používateľovi, ako pripraviť simuláciu viacnásobného úderu v DEFORMÁCII pre následné údery kladivom pomocou operácie 2D Multi Blow Forging s adaptívnou funkciou DEFORMÁCIE ohrevu. Simulácia sa vykonáva ako 2D neizotermická simulácia.
 
-1.1. Creating New Problem
+1.1. Vytvorenie nového problému
 
-1.2. Adding Operation
+1.2. Prevádzka pridávania
 
-1.3. Define Process settings
+1.3. Definujte nastavenia procesu
 
-1.4. Defining Blow Table
+1.4. Definovanie fúkacieho stola
 
-1.5. Geometry type selection
+1.5. Výber typu geometrie
 
-1.6. Simulation Controls
+1.6. Ovládacie prvky simulácie
 
-1.7. Loading Material
+1.7. Načítanie materiálu
 
-1.8. Adding Objects
+1.8. Pridávanie objektov
 
-1.9. Define Workpiece
+1.9. Definujte obrobok
 
-1.10. Defining Top Die
+1.10. Definovanie hornej matrice
 
-1.11. Defining Bottom Die
+1.11. Definovanie spodnej matrice
 
-1.12. Positioning
+1.12. Umiestnenie
 
-1.13. Contact Generation
+1.13. Generovanie kontaktov
 
-1.14. Step controls page
+1.14. Stránka krokových ovládacích prvkov
 
-1.15. Generating Database
+1.15. Generovanie databázy
 
-1.16. Starting the Simulation
+1.16. Spustenie simulácie
 
-1.17. Post-Processing the Results
+1.17. Následné spracovanie výsledkov
 
-## Creating New Problem
+## Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear as shown in Fig. 2DMBL1.1.
+Na ** zariadení so systémom Windows ** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), zvoľte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte * * DEFORM GUI Main * * vxx.xx. Zobrazí SA hlavné okno Deform GUI, ako je znázornené na obr. 2DMBL1.1.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg' | relative_url }})
 
-DEFORM GUI main
+DEFORMÁCIA hlavného grafického používateľského rozhrania
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. 2DMBL1.2. Select "**Integrated Manufacturing Process** " radio button and units system as "**English** " using radio button. Define Problem Name as "**2D_MB_Forging** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom * * Súbor * *![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Nový problém** alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému, ako je znázornené na obr. 2DMBL1.2. Pomocou prepínača vyberte možnosť „**Integrated Manufacturing Process** “ (Integrovaný výrobný proces * *) a systém jednotiek ako „**English** “ (Angličtina * *). Definujte názov problému ako "**2D_MB_Forging** " a uistite sa, že je zapnuté začiarkavacie políčko "Zobraziť dialóg možností" (ak nezapneme začiarkavacie políčko "**Zobraziť dialóg možností ** ", potom nedostaneme dialógové okno Nový projekt v používateľskom rozhraní MO). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) a otvorte nový problém pomocou integrovaného výrobného procesu deformácie.
 
-Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use "**2D_MB_Forging** " as the project name. To add first operation as 2D Multi Blow Forging operation check the checkbox as shown in Fig. 2DMBL1.2. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+V dialógovom okne Nový projekt sa otvorí sprievodca viacerými operáciami, v tomto bode sa používateľovi zobrazí výzva na zadanie názvu projektu (systém vytvorí samostatný priečinok s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „**2D_MB_Forging * * “. Ak chcete pridať prvú operáciu ako operáciu 2D viacfúknutého kovania, začiarknite políčko, ako je znázornené na obr. 2DMBL1.2. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otvorení operácie.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0002.jpg' | relative_url }})
 
-MO wizard new project opening window
+Otváracie okno nového projektu sprievodcu MO
 
-## Adding Operation
+## Pridanie operácie
 
-Multiple Operation wizard will open by adding the 2D Multi Blow Forging operation automatically as shown in Fig. 2DMBL1.3. if user selects to use it as first operation. Operation can also be add by clicking on 2D Multi Blow Forging operation ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button or by drag and drop into the Operation Editor.
+Sprievodca viacnásobnou operáciou sa otvorí pridaním operácie 2D Multi Blow Forging automaticky, ako je znázornené na obr. 2DMBL1.3, ak sa používateľ rozhodne použiť ju ako prvú operáciu. Operáciu je možné pridať aj kliknutím na tlačidlo 2D Multi Blow Forging Operation ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) alebo presunutím myšou do editora operácií.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0003.jpg' | relative_url }})
 
-Adding multi blow operations
+Pridávanie operácií viacnásobného vyfukovania
 
-## Define Process settings
+## Definovať nastavenia procesu
 
-Define the process settings as below, (see Fig. 2DMBL1.4.)
+Definujte nastavenia procesu, ako je uvedené nižšie (pozri obr. 2DMBL1.4).
 
-  * In Process page, define the **Press****energy** as **240****Klb-in**.
+* Na stránke Proces definujte * * Stlačte * *** Energy * * ako **240****Klb-in**.
 
-  * Make sure energy specification method is **Ratio to max energy** (%).
+* Uistite sa, že metóda špecifikácie energie je **Pomer k maximálnej energii** (%).
 
-  * Turn on the **Use****dwell** check box, Define the **Dwell****time** as **1** sec, Time per step as **0.2** and **Heat****transfer****coefficient** as **0.0003**.
+* Zapnite začiarkavacie políčko **Použiť*** zotrvanie **, definujte * * zotrvanie ** ** čas ** ako ** 1 ** s, čas na krok ako * * 0,2 * * a * * teplo * ***prenos* ***koeficient** ako **0,0003**.
 
-  * Turn on **Reheat****check****box** and define the **reheat****temperature** as **2150°** F.
+* Zapnite **Reheat****začiarknite****box** a definujte **reheat * ***teplotu** ako **2150°** F.
 
-  * Turn on**Use workpiece rotation** to rotate workpiece between blows and **Initialize****strain on reheat** check boxes to initialize strain to zero upon reheat.
+* Zapnite**Použite otáčanie obrobku ** na otáčanie obrobku medzi údermi a * * Inicializujte * * **namáhanie pri opätovnom zahriatí ** začiarkavacie políčka na inicializáciu namáhania na nulu pri opätovnom zahriatí.
 
-  * Turn on **Use heating Simulation** check box, define the **Heating****time** as **800** sec, Heat **Time****step** as **1****sec** , to simulate heat loss during transfer from dies to furnace and vice versa define **Transfer-in-time** as **3** sec, Transfer-out-time as **3** sec and **Transfer time** **step** as **1** sec.
+* Zapnite **Použite zaškrtávacie políčko Heating Simulation**, definujte **Heating* ** time * * as * *800** sec, Heat ** * * step ** as ** 1 ** * sec ** , na simuláciu tepelných strát pri prenose z lisovníc do pece a naopak definujte * * Transfer-in-time ** as ** 3 ** sec, Transfer-out-time as * * 3 * * sec a **Transfer time* ** *step** as **1** sec.
 
-  * Turn on **Use Adaptive reheat** check box so that system automatically identifies when to start reheat based on the billet temperature at the end of the blow, Define the **upper** **limit** as **2150°** F, **lower limit** as **1750°** F and **Temperature** **to****stop****reheat** as **1950°** F. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Blow table.
+* Zapnite **Použite začiarkavacie políčko Adaptívne opätovné ohrievanie**, aby systém automaticky identifikoval, kedy začať opätovné ohrievanie na základe teploty predvalku na konci fúkania, Definujte * * horný ** ** limit ** ako ** 2150° * * F, * * dolný limit * * ako * * 1750° * * F a * * Teplota * ** * do * ** zastavenie * * ** opätovného ohrievania ** ako **1950°** F. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre stôl fúkania.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0004.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-## Defining Blow Table
+## Definovanie fúkacieho stola
 
-In Blow table, define the **number****of****hits** as **9** and define the rest of the settings as mentioned in the Fig. 2DMBL1.5. Max energy available for that blow is defined below % Blow and also efficiency of each blow is defined below efficiency. Workpiece is flipped at the end of each blow. ![]({{ '/assets/icons/pre_icons/mo_reheat_check_box.jpg' | relative_url }}) under Reheat indicates adaptive reheat is checked and system will decide when to reheat the workpiece. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V tabuľke Fúkania definujte * * číslo * ****z*** *zásahov* * ako * * 9 * * a definujte zvyšok nastavení, ako je uvedené na obr. 2DMBL1.5. Maximálna dostupná energia pre tento úder je definovaná pod % úderu a tiež účinnosť každého úderu je definovaná pod účinnosťou. Obrobok sa na konci každého úderu prevráti. ![]({{ '/assets/icons/pre_icons/mo_reheat_check_box.jpg' | relative_url }}) pod Reheat označuje, že sa kontroluje adaptívny ohrev a systém rozhodne, kedy sa má obrobok ohriať. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0005.jpg' | relative_url }})
 
-Define Blow table settings
+Definovať nastavenia tabuľky fúkania
 
-## Geometry type selection
+## Výber typu geometrie
 
-Select the Geometry type as **2D Axisymmetric**. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Vyberte typ geometrie ako **2D osovo symetrický**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0006.jpg' | relative_url }})
 
-Geometry type selection page
+Stránka výberu typu geometrie
 
-## Simulation Controls
+## Ovládacie prvky simulácie
 
-In this lab as we are setting up simple non Isothermal problem, in Simulation controls keep both the **Heat****transfer** and **Deformation** modes turn on (see Fig. 2DMBL1.7.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V tomto laboratóriu, keď nastavujeme jednoduchý neizotermický problém, v ovládacích prvkoch simulácie nechajte zapnuté režimy ** Prenos tepla *** * a ** Deformácia * * (pozri obr. 2DMBL1.7). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0007.jpg' | relative_url }})
 
-Simulation controls page
+Stránka ovládacích prvkov simulácie
 
-## Loading material 
+## Načítanie materiálu
 
-Load the material '**AISI-4340[1550-2200F(850-1200C)]** ' from DEFORM Material library, **Steel** category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option. This can be done as as shown in below by clicking ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button as shown in Fig. 2DMBL1.8. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until object page.
+Načítajte materiál „**AISI-4340[1550-2200F (850-1200C)]** “ z knižnice materiálov DEFORM, **Oceľ * * kategória pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice). Môžete to urobiť, ako je znázornené nižšie, kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}), ako je znázornené na obr. 2DMBL1.8. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku objektu.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0008.jpg' | relative_url }})
 
-Material library window
+Okno knižnice materiálov
 
-## Adding Objects
+pridávanie objektov
 
-For this operation we require three objects, hence in Object window keep three objects which are added by default, else add 3 objects using ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) option (see Fig. 2DMBL1.9.) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Pre túto operáciu požadujeme tri objekty, preto v okne Objekt ponechajte tri objekty, ktoré sú predvolene pridané, inak pridajte 3 objekty pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) (pozri obr. 2DMBL1.9.) Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0009.jpg' | relative_url }})
 
-Adding objects window
+Okno Pridávanie objektov
 
-## Define Workpiece
+## Definovať obrobok
 
-In workpiece page, define the workpiece temperature as **1950** °F and select object type as **Plastic** as shown in Fig. 2DMBL1.10. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke obrobku definujte teplotu obrobku ako * * 1950 * * ° F a vyberte typ objektu ako **Plast * *, ako je znázornené na obr. 2DMBL1.10. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0010.jpg' | relative_url }})
 
-Workpiece page
+Stránka obrobku
 
-### Loading Workpiece Geometry
+### Načítanie geometrie obrobku
 
-In Geometry window, load **MB_Forging_workpiece.geo** geometry file from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load geometry from library) option or can also be imported using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) option as shown in Fig. 2DMBL1.11. The geometry for billet is located in DEFORM installation folder \2D\LABS directory. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to mesh page.
+V okne Geometria načítajte **MB_Forging_workpiece.geo ** súbor geometrie z knižnice pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) alebo ho môžete tiež importovať pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru), ako je znázornené na obr. 2DMBL1.11. Geometria sochora sa nachádza v priečinku DEFORMÁCIE inštalácie\2D\LABS. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku s povrchovou sieťou.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0011.jpg' | relative_url }})
 
-Workpiece geometry page
+Stránka geometrie obrobku
 
-### Generating mesh for Workpiece
+### Generovanie pletiva pre obrobok
 
-Define the **Target number of elements** as **400** and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). A mesh with approximately 400 elements will be generated as shown in Fig. 2DMBL1.12. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to material page.
+Definujte **Cieľový počet prvkov* * ako * *400** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Vygeneruje sa sieť s približne 400 prvkami, ako je znázornené na obr. 2DMBL1.12. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku materiálu.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0012.jpg' | relative_url }})
 
-Workpiece mesh generation
+Generovanie pletiva obrobku
 
-### Assign Workpiece Material
+### Priradiť materiál obrobku
 
-In Material list window, select the '**AISI-4340[1550-2200F(850-1200C)]** ' from the list as shown in Fig. 2DMBL1.13. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Boundary condition page.
+V okne zoznamu materiálov vyberte zo zoznamu „**AISI-4340 [1550-2200F (850-1200C)]** “, ako je znázornené na obr. 2DMBL1.13. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Podmienky ohraničenia.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0013.jpg' | relative_url }})
 
-Workpiece material selection
+Výber materiálu obrobku
 
-### Workpiece BCC
+### Obrobok BCC
 
-In BCC page, check the default assigned Deformation BCC for Left side of the workpiece in X-Direction, default BCC are assigned automatically due to selection of problem type as axisymmetric (see Fig. 2DMBL1.14.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top die page.
+Na stránke BCC skontrolujte predvolenú priradenú deformáciu BCC pre ľavú stranu obrobku v smere X, predvolené BCC sú priradené automaticky z dôvodu výberu typu problému ako osovo symetrického (pozri obr. 2DMBL1.14.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Top die.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0014.jpg' | relative_url }})
 
-Workpiece BCC page
+Stránka BCC obrobku
 
-## Defining Top Die
+## Definovanie hornej matrice
 
-In Top die page ( Fig. 2DMBL1.15.) select Object type as **Rigid** and keep the temperature as **300** °F, we will not mesh the dies in this lab as we are not interested in dies temperature. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na hornej strane matrice ( obr. 2DMBL1.15.) vyberte Typ objektu ako **Pevný** a udržujte teplotu ako **300** ° F, nebudeme mriežkovať matrice v tomto laboratóriu, pretože nemáme záujem o teplotu matrice. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0015.jpg' | relative_url }})
 
-Top die page
+Horná strana matrice
 
-### Top die geometry
+### Geometria hornej formy
 
-In Geometry window, load **MB_Forging_Top_die.geo** geometry file from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load geometry from library) option or can also be imported using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) option as shown in Fig. 2DMBL1.16. The geometry is located in DEFORM installation folder \2D\LABS directory. Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option to make sure the geometry is OK. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top die movement page.
+V okne Geometria načítajte **MB_Forging_Top_die.geo ** súbor geometrie z knižnice pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) alebo ho môžete importovať aj pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru), ako je znázornené na obr. 2DMBL1.16. Geometria sa nachádza v priečinku DEFORMÁCIE\2D\LABS. Skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste sa uistili, že geometria je v poriadku. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku pohybu hornej matrice.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0016.jpg' | relative_url }})
 
-Top die geometry page
+Stránka geometrie hornej matrice
 
-### Top Die movement
+### Pohyb hornej matrice
 
-User can use Multi blow forging template for both hammer and screw presses. In this lab we will be using **hammer** , hence select **hammer****movement** type and define **energy****as****240****Klb-in** and **Mass** as **0.025****Klb-s^2/in** as shown in Fig. 2DMBL1.17. As it is multiple blow simulation constant blow efficiency values for multiple blows definition is allowed in blow table only. If user using blow efficiency as function of force then efficiency function data is allowed to define in movement window. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Bottom Die page
+Používateľ môže použiť šablónu na kovanie s viacerými údermi pre kladivové aj skrutkové lisy. V tomto laboratóriu budeme používať * * kladivo * * , preto vyberte * * kladivo * *** pohyb * * typ a definujte * * energiu * *** ako * ** 240 * * ** Klb-in * * a * * hmotnosť * * ako * * 0,025 * *** Klb-s ^2/in**, ako je znázornené na obr. 2DMBL1.17. Keďže ide o viacnásobnú simuláciu vyfukovania, konštantné hodnoty účinnosti vyfukovania pre definíciu viacnásobných vyfukovaní sú povolené len v tabuľke vyfukovania. Ak používateľ používa účinnosť fúkania ako funkciu sily, údaje o funkcii účinnosti sa môžu definovať v okne pohybu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Spodná matrica
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0017.jpg' | relative_url }})
 
-Top die movement page
+Stránka pohybu hornej matrice
 
-## Defining Bottom Die
+## Definovanie spodnej matrice
 
-In Bottom die page select Object type as **Rigid** and define the **temperature** as **300** °F (see Fig. 2DMBL1.18.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to geometry page
+Na stránke Spodná matrica vyberte Typ objektu ako **Pevný** a definujte **teplotu** ako **300** °F (pozri obr. 2DMBL1.18.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku geometrie
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0018.jpg' | relative_url }})
 
-Bottom Die page
+Spodná strana matrice
 
-### Bottom die geometry definition
+### Definícia geometrie spodnej matrice
 
-In Geometry window, load **MB_Forging_Bottom_die.geo** geometry file from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load geometry from library) option. The geometry is located in DEFORM installation folder \2D\LABS directory. Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option to make sure the geometry is OK. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Positioning page.
+V okne Geometria načítajte **MB_Forging_Bottom_die.geo** súbor geometrie z knižnice pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice). Geometria sa nachádza v priečinku DEFORMÁCIE\2D\LABS. Skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste sa uistili, že geometria je v poriadku. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až do stránky Positioning.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0019.jpg' | relative_url }})
 
-Bottom Die geometry definition
+Definícia geometrie spodnej matrice
 
-## Positioning
+VIZUÁL PRE
 
-In this operation setup we will use **Automatic** **position** option to position the objects. In Positioning page select positioning direction as Z (Y) - direction and click on ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}) button, it will position the objects as shown in Fig. 2DMBL1.20. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Contact page.
+V tomto nastavení operácie použijeme možnosť **Automatická* ** *poloha * * na umiestnenie objektov. Na stránke Polohovanie vyberte smer polohovania ako Z (Y) - smer a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}), umiestni objekty tak, ako je znázornené na obr. 2DMBL1.20. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Kontakt.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0020.jpg' | relative_url }})
 
-Positioning the objects
+Umiestnenie objektov
 
-## Contact Generation
+## Generovanie kontaktov
 
-Select **user****type** contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. It will add the relationship between the Billet, Top Die and Bottom Die as shown in Fig. 2DMBL1.21. As the Dies are Rigid and Billet is plastic, Top and Bottom Dies are considered as Master and Billet as Slave. In order to predict the fold during deformation, self contact will be assigned for Billet.
+Vyberte **user****type** contact a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Pridá vzťah medzi predvalkom, hornou matricou a spodnou matricou, ako je znázornené na obr. 2DMBL1.21. Keďže matrice sú tuhé a polotovar je plastový, horné a dolné matrice sa považujú za hlavné a polotovar za otroka. Aby bolo možné predpovedať záhyb počas deformácie, pre Billet bude priradený vlastný kontakt.
 
-Define the **shear** **friction** value of **0.2** and **Heat****transfer****coefficient** as **0.004** for **Top die** and **workpiece** relation.
+Definujte **strihové* ** *trenie** hodnotu * * 0,2 * * a * * teplo * *** prenos * ***koeficient** ako **0,004** pre **hornú matricu** a **obrobok** vzťah.
 
-Define the **shear****friction** value of **0.25** and **Heat****transfer****coefficient** as **0.004** for **Bottom die** and **workpiece** relation.
+Definujte **strihové* ***trenie** hodnotu * * 0,25 * * a * * teplo * *** prenos * ***koeficient** ako **0,004** pre **spodnú matricu** a **obrobok** vzťah.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to go back to Inter-Object window, use ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) icon to determine a suitable contact tolerance (a value of about 0.00123929" will be calculated) and then click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button to generate contact. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Step page as no Stopping controls are necessary to define for this simulation
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) sa vrátite do okna Inter-Object, pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) určíte vhodnú toleranciu kontaktu (vypočíta sa hodnota približne0,00123929 ") a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) na vygenerovanie kontaktu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Krok, pretože na definovanie tejto simulácie nie sú potrebné žiadne ovládacie prvky zastavenia
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0021.jpg' | relative_url }})
 
-Inter object relations
+Vzťahy medzi objektmi
 
-## Step controls page
+## Stránka krokových ovládacích prvkov
 
-In Step controls, define the **Number of steps** as **400** , **step****increment** of **10** and **time****increment** of **0.0001** as shown in Fig. 2DMBL1.22. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) for DB generation page.
+V krokových ovládacích prvkoch definujte **počet krokov** ako **400** , **krok*** * prírastok * * 10 * * a **čas****prírastok** 0,0001 **, ako je znázornené na obr. 2DMBL1.22. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre generovanie DB.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0022.jpg' | relative_url }})
 
-Step Controls page
+Stránka krokových ovládacích prvkov
 
-## Generating Database
+## Generovanie databázy
 
-Once the problem has been completely set up, the last step is to generate a database file. The FEM engine (the part of DEFORM® that calculates the solution) uses a database file to store the finite element solutions for the problem. When you generate a database in the DEFORM MO Pre-processor, all of the information defined in the Pre-processor (such as the material properties, movement controls, object geometries, etc.) is transferred to the database file.
+Po úplnom nastavení problému je posledným krokom vygenerovanie databázového súboru. FEM engine (časť DEFORM®, ktorá vypočítava riešenie) používa databázový súbor na uloženie riešení konečných prvkov pre daný problém. Keď vygenerujete databázu v predprocesore DEFORM MO, všetky informácie definované v predprocesore (ako sú vlastnosti materiálu, ovládacie prvky pohybu, geometrie objektu atď.) sa prenesú do databázového súboru.
 
-In Generate DB page, we can observe the Operation Simulation setup summary. Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process, messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).
+Na stránke Generate DB môžeme pozorovať zhrnutie nastavenia simulácie prevádzky. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) skontrolujete program, aby ste zistili, či v nastavení problému niečo chýbalo. Počas procesu kontroly správy v červenej farbe označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad keď zabudnete definovať akékoľvek údaje o materiáli).
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, switch to ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab to run simulation.
+Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) vygenerujete databázu. Po dokončení zápisu databázy prepnite na kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) a spustite simuláciu.
 
-## Starting the Simulation
+## Spustenie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. 2DMBL1.23. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknutím na štítok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvorte dialógové okno Možnosti točenia, ako je znázornené na obr. 2DMBL1.23. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať z posledného kroku** “ a potom vyberte režim simulácie ako **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0023.jpg' | relative_url }})
 
-Run Simulation window
+Okno Spustiť simuláciu
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. As long as the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.
+Priebeh simulácie je možné monitorovať počas jej priebehu tak, že sa pozriete na kartu Simulačná správa a Simulačná grafika z oblasti grafického zobrazenia v režime simulácie. Pokiaľ je možnosť ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) začiarknutá na karte Simulation Message (Správa simulácie), ktorá je predvoleným nastavením, súbor správy sa automaticky obnoví.
 
-The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.
+Súbor Správa poskytuje informácie o tom, v ktorom simulačnom kroku sa simulácia momentálne nachádza, a tiež poskytuje informácie o tom, ako dobre simulácia prebieha.
 
-When the simulation is finished without any issues, the following message will be added to the end of the Message file:PROGRAM STOPPED!
+Po dokončení simulácie bez akýchkoľvek problémov sa na koniec súboru správy pridá nasledujúca správa:PROGRAM ZASTAVENÝ!
 
-THE CURRENT TIME 41.8737368
+AKTUÁLNY ČAS 41,8737368
 
-THE CURRENT LOCAL TIME 1.0085369 HAS REACHED THE SPECIFIED LIMIT 1.0085369 (see Fig. 2DMBL1.24.)
+AKTUÁLNY MIESTNY ČAS 1.0085369 DOSIAHOL STANOVENÝ LIMIT 1.0085369 (pozri obr. 2DMBL1.24.)
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0024.jpg' | relative_url }})
 
-Simulation message tab
+Karta správy simulácie
 
-## Post-Processing the Results
+## Následné spracovanie výsledkov
 
-After simulation has been completed, switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab to view results, MO post processor will open.
+Po dokončení simulácie prepnite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) a zobrazte výsledky, otvorí sa procesor MO post.
 
-Play the Animation to go through the flipping of the workpiece (Workpiece rotation)..
+Prehrajte animáciu a prejdite preklopením obrobku (otáčanie obrobku).
 
-Directly by clicking on the State variables icons user can plot the important state variables contour plots as shown in below Fig. 2DMBL1.25. and Fig. 2DMBL1.26.
+Priamo kliknutím na ikony stavových premenných môže používateľ vykresliť dôležité stavové premenné obrysové grafy, ako je znázornené na obr. 2DMBL1.25. a obr. 2DMBL1.26.
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0025.jpg' | relative_url }})
 
-Stress effective plot
+Efektívna krivka napätia
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0026.jpg' | relative_url }})
 
-Strain Effective plot
+Kmeň Efektívny graf
 
-User can go through the multiple blows and reheat operations by selecting particular step from step browser and playing the steps. From step browser operations order we can observe that adaptive reheat triggered after BL5-DWL operation as the object minimum temperature dropped below the adaptive reheat lower limit temperature 1750°F. Also adaptive heat simulation stopped after the workpiece reached the reheat stopping temperature 1950°F has been reached. (see Fig. 2DMBL1.27.)
+Používateľ môže prejsť viacerými operáciami úderov a opätovného ohrevu výberom konkrétneho kroku z prehliadača krokov a prehrávaním krokov. Z poradia operácií prehliadača Step môžeme pozorovať, že adaptívne opätovné zahriatie sa spustilo po operácii BL5-DWL, keď minimálna teplota objektu klesla pod minimálnu teplotu adaptívneho opätovného zahriatia 1750° F. Aj adaptívna simulácia tepla sa zastavila, keď obrobok dosiahol teplotu zastavenia opätovného ohrevu 1950° F. (pozri obr. 2DMBL1.27.)
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0027.jpg' | relative_url }})
 
-Step browser indicating adaptive reheat simulations
+Prehliadač krokov indikujúci adaptívne simulácie opätovného ohrevu
 
-Temperature contour of the workpiece before and after the adaptive reheat as shown in Fig. 2DMBL1.28. Note that before adaptive heating is started, the minimum temperature of the billet is 1740°F (specified limit is 1750°F).
+Teplotný obrys obrobku pred a po adaptívnom ohreve, ako je znázornené na obr. 2DMBL1.28. Všimnite si, že pred začatím adaptívneho ohrevu je minimálna teplota predvalku 1740° F (špecifikovaný limit je 1750° F).
 
 ![]({{ '/assets/images/labs/multiple_blow_forging_labs/2d_multi_blow_forging_lab1/image0028.jpg' | relative_url }})
 
-Workpiece temperature contour before and after the adaptive reheat after BL5-DWL
+Obrys teploty obrobku pred a po adaptívnom ohreve po BL5-DWL

@@ -5,303 +5,303 @@ title: "Spinning Lab"
 
 # Spinning Lab
 
-In this Lab we will be setting up simple Spinning process with ALE model and Implicit solver
+V tomto laboratóriu nastavíme jednoduchý proces odstreďovania s modelom ale a implicitným riešiteľom
 
   
-1.1. Creating a New Problem
+1.1. Vytvorenie nového problému
 
-1.2. Process Page
+1.2. Stránka procesu
 
-1.3. Simulation setup
+1.3. Nastavenie simulácie
 
-1.4. Objects
+1.4. Predmety
 
-1.5. Workpiece
+1.5. Obrobok
 
-1.6. Mandrel
+1.6. Vreteno
 
-1.7. Tail stock
+1.7. Koniec
 
 1.8. Roll
 
-1.9. Pass Table
+1.9. Priechodný stôl
 
-1.10. Controls
+1.10. Ovládacie prvky
 
-1.11. Contact
+1.11. Kontakt
 
-1.12. Stopping Controls
+1.12. Ovládacie prvky zastavenia
 
-1.13. Simulation controls
+1.13. Ovládacie prvky simulácie
 
-1.14. Generate Database
+1.14. Generovať databázu
 
-1.15. Running Simulation
+1.15. Simulácia chodu
 
-1.16. Post processing
+1.16. Po spracovaní
 
-## Creating a New Problem
+## Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na ** zariadení so systémom Windows ** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), zvoľte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte * * DEFORM GUI Main * * vxx.xx. Zobrazí SA hlavné okno Deform GUI.
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. 3DSPL1.1. Select " **Integrated Manufacturing Process** " radio button and Unit system as "**SI** " using radio button. Define Problem Name as "**SpinLab** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})* ***Nový problém** alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému, ako je znázornené na obr. 3DSPL1.1. Pomocou prepínača vyberte prepínač „ * * Integrovaný výrobný proces * *“ a systém jednotiek ako „** SI * * “. Definujte názov problému ako "** SpinLab * * " a uistite sa, že je zapnuté začiarkavacie políčko "Zobraziť dialóg možností" (ak nezapneme začiarkavacie políčko "**Zobraziť dialóg možností ** ", potom nedostaneme dialógové okno Nový projekt v používateľskom rozhraní MO). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) a otvorte nový problém pomocou integrovaného výrobného procesu deformácie.
 
 ![]({{ '/assets/images/applications/55_2_arc_welding/image0002.jpg' | relative_url }})
 
-New Problem page
+Nový problém
 
-Multiple operation wizard will open with the New Project dialog, At this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘SpinLab’ as the project name. 3D Spinning operation can also be added in "New Project" dialog, in this lab we will add Spinning g operation from Explorer operation list, so do not check "First operation" check box in "New Project" dialog. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to continue to open the operation.
+Sprievodca viacerými operáciami sa otvorí v dialógovom okne Nový projekt. V tomto bode sa používateľovi zobrazí výzva na zadanie názvu projektu (systém vytvorí samostatný priečinok s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „SpinLab“. Operáciu 3D Spinning je možné pridať aj v dialógovom okne "Nový projekt", v tomto laboratóriu pridáme operáciu Spinning g zo zoznamu operácií Prieskumníka, takže nezačiarknite políčko "Prvá operácia" v dialógovom okne "Nový projekt". Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) pokračujte v otvorení operácie.
 
-Add 3D Spinning operation from the Explorer Operations list. Add the operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button available next to 3D Spinning or user can also add by drag and drop into the Operation Editor (see Fig. 3DSPL1.2.). When we add the Spinning operation, If the current Screen upward direction is "Z" direction then we will get below popup. Click "**YES-Change** " in "Change screen upward axis" popup.
+Pridajte operáciu 3D Spinning zo zoznamu Explorer Operations (Operácie prieskumníka). Pridajte operáciu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}), ktoré je k dispozícii vedľa 3D Spinning, alebo ho môžete pridať aj presunutím myšou do editora operácií (pozri obr. 3DSPL1.2). Keď pridáme operáciu odstreďovania, ak je aktuálny smer obrazovky smerom nahor smer "Z", dostaneme sa pod vyskakovacie okno. V kontextovom okne „Change screen upward axis“ (Zmeniť obrazovku smerom nahor) kliknite na „** YES-Change * *“ (Zmeniť).
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0002.jpg' | relative_url }})
 
-Screen upward direction popup
+Zobrazenie vyskakovacieho okna smeru nahor
 
-Now the process settings window will open by default. 3D Spinning operation can also be added from Operation Explorer in MO.
+Teraz sa predvolene otvorí okno nastavení procesu. Operáciu 3D Spinning je možné pridať aj z Prieskumníka operácií v MO.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0003.jpg' | relative_url }})
 
-Opened 3D Spinning operation
+Otvorená operácia 3D odstreďovania
 
-## Process Page
+## Stránka procesu
 
-In Process page select "**Spinning** " and define Mandrel **Rotational****speed** as **90** rpm as shown in Fig. 3DSPL1.4. This speed is also applied to both tail stock and head stock if we used. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation setup page.
+Na stránke Proces vyberte "**Spinning** " a definujte rýchlosť vretena * * Rotational ** * * ako * * 90 * * rpm, ako je znázornené na obr. 3DSPL1.4. Táto rýchlosť sa vzťahuje aj na chvostovú aj hlavovú pažbu, ak sme ju použili. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku nastavenia simulácie.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0004.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-## Simulation setup
+## Nastavenie simulácie
 
-In Simulation setup, select solution method as "**ALE** " and solver type as "**Implicit** ". Since, we are not interested in temperature profile we will select "**Constant temperature (isothermal)** " type Thermal calculation and Turn on **Active in FEM** check box to activate Target volume calculation (see Fig. 3DSPL1.5.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Objects page.
+V nastavení simulácie vyberte metódu riešenia ako „** ale ** “ a typ riešiteľa ako „**Implicitný** “. Keďže nás teplotný profil nezaujíma, vyberieme typ „**Konštantná teplota (izotermická)** “ Tepelný výpočet a políčko Zapnúť **Aktívne v FEM** aktivujeme výpočet cieľového objemu (pozri obr. 3DSPL1.5.). Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na objekty.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0005.jpg' | relative_url }})
 
-Simulation setup page
+Stránka nastavenia simulácie
 
-## Objects
+Predmety podnikania
 
-In this spinning lab, we will use Workpiece, Mandrel, Tail stock and one Roll. In Objects list, by default Mandrel, Tail stock and Head stock check box will be checked. Uncheck the Head stock check box and keep Number of Rolls as 1 as shown in Fig. 3DSPL1.6. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Workpiece page.
+V tomto spriadacom laboratóriu použijeme obrobok, tŕň, chvost a jednu rolku. V zozname objektov sa predvolene začiarkne políčko Mandrel, Tail stock a Head stock. Zrušte začiarknutie políčka Head stock a ponechajte počet valcov ako 1, ako je znázornené na obr. 3DSPL1.6. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na obrobok.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0006.jpg' | relative_url }})
 
-Objects list
+Zoznam objektov
 
-## Workpiece
+## Obrobok
 
-In the Workpiece page, keep the object name as **Workpiece** , object temperature of 20°C and Object type as **Plastic** as shown in Fig. 3DSPL1.7. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 2D Geometry page.
+Na stránke Obrobok ponechajte názov objektu ako * * Obrobok** , teplotu objektu 20 °C a typ objektu ako * * Plast * *, ako je znázornené na obr. 3DSPL1.7. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 2D Geometry.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0007.jpg' | relative_url }})
 
-Workpiece General page
+Všeobecná stránka obrobku
 
-### Importing Workpiece 2D Geometry
+### Import 2D geometrie obrobku
 
-Import 2D geometry, “**SpinLab-blank.DXF** ” from the "3D/Labs/Spinning" folder. Click on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) and then click on Check and correct geometry in the pop-up to verify the geometry. The geometry will be corrected for its orientation, click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) in the message pop-up window and then ok button to close the geometry verification window. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh page.
+Import 2D geometrie, „**SpinLab-blank.DXF** “ z priečinka „3D/Labs/Spinning“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) a potom kliknite na Skontrolovať a opraviť geometriu vo vyskakovacom okne na overenie geometrie. Geometria bude opravená z hľadiska jej orientácie, kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) vo vyskakovacom okne správy a potom na tlačidlo OK pre zatvorenie okna overenia geometrie. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh.
 
-### Generating Mesh
+### Generovanie sieťoviny
 
-In mesh page, select mesh type as Brick mesh and define **Target number of Elements** as **90** for Cross section mesh. For 3D mesh define **Number of revolved sections** as **100**. Since the set up is ALE implicit we need finer mesh at contact for capturing accurate contact hence, we will define Finer Mesh in the contact region by 15 degree Angle and Size ratio as 4. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_2d_mesh_button.jpg' | relative_url }})and then click on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}). The mesh should look like as shown in Fig. 3DSPL1.8. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material page. 
+Na stránke povrchovej siete vyberte typ povrchovej siete ako povrchovú sieť z tehál a definujte **cieľový počet prvkov** ako **90** pre povrchovú sieť prierezu. Pre 3D povrchovú sieť definujte **Počet otočných sekcií** ako **100**. Keďže nastavenie je implicitné ale, potrebujeme jemnejšiu sieťku pri kontakte na zachytenie presného kontaktu, preto definujeme jemnejšiu sieťku v kontaktnej oblasti o 15 stupňov uhol a pomer veľkosti ako 4. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_2d_mesh_button.jpg' | relative_url }})a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}). Sieť by mala vyzerať tak, ako je znázornené na obr. 3DSPL1.8. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na materiál.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0008.jpg' | relative_url }})
 
-Generated 3D Mesh for Workpiece
+Vygenerované 3D pletivo pre obrobok
 
-### Assign Material
+Priradiť materiál ``+``
 
-In Material page, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) icon and load the material **Steel** group material "**AISI-1010,COLD[70F(20C)]** " from material library window. Assign the "**AISI-1010,COLD[70F(20C)]** " material for Workpiece as shown in Fig. 3DSPL1.9. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Mandrel page.
+Na stránke Materiál kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať materiál z knižnice) a načítajte materiál * * Oceľ * * skupinový materiál "**AISI-1010,COLD[70F(20C)]** " z okna knižnice materiálov. Priraďte materiál „**AISI-1010,COLD[70F(20C)]** “ pre obrobok, ako je znázornené na obr. 3DSPL1.9. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) do stránky Mandrel.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0009.jpg' | relative_url }})
 
-Assigning Material for Workpiece
+Priradenie materiálu pre obrobok
 
-## Mandrel
+Priebojník
 
-In the Mandrel General page keep the default values for name as **Mandrel** and temperature as 200°C. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry 2D cross-section page.
+Na stránke Mandrel General ponechajte predvolené hodnoty pre názov * *Mandrel** a teplotu 200 °C. Kliknite na stránku prierezu ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na geometriu 2D.
 
-### Importing Mandrel 2D Geometry - Cross section
+### Import 2D geometrie vretena - prierez
 
-Import 2D geometry, “**SpinLab-mandrel.DXF** ” from the "3D/Labs/Spinning" folder. Click on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) and then click on Check and correct geometry in the pop-up to verify the geometry. The geometry will be corrected for its orientation, click ok in the message pop-up window and then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button to close the geometry verification window. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 3D Geometry page.
+Import 2D geometrie, „**SpinLab-mandrel.DXF** “ z priečinka „3D/Labs/Spinning“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) a potom kliknite na Skontrolovať a opraviť geometriu vo vyskakovacom okne na overenie geometrie. Geometria sa opraví z hľadiska jej orientácie, v kontextovom okne správy kliknite na tlačidlo OK a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) na zatvorenie okna overenia geometrie. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 3D Geometry.
 
-### Generate Mandrel 3D Geometry
+### Generovať 3D geometriu vretena
 
-Using default value of 100 as "Number of revolved sections" generate 3D geometry by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) option (see Fig. 3DSPL1.10.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Reference point setup page.
+Použitím predvolenej hodnoty 100 ako „Počet otočených sekcií“ vygenerujete 3D geometriu kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) (pozri obr. 3DSPL1.10.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku nastavenia referenčného bodu.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0010.jpg' | relative_url }})
 
-Generated Mandrel 3D Geometry
+Vygenerovaná 3D geometria vretena
 
-### Mandrel Reference Page
+### Referenčná stránka vretena
 
-In this page we can define Reference point of Mandrel, we will use default calculated value of D "-63.5" as shown in Fig. 3DSPL1.11. “D” is the distance between the Deform Origin and the origin of the Mandrel along X axis and will be used to position the mandrel. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Tail Stock page.
+Na tejto stránke môžeme definovať referenčný bod tŕňa, použijeme predvolenú vypočítanú hodnotu D "-63,5", ako je znázornené na obr. 3DSPL1.11. „D“ je vzdialenosť medzi začiatkom deformácie a začiatkom vretena pozdĺž osi X a použije sa na umiestnenie vretena. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Tail Stock.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0011.jpg' | relative_url }})
 
-Reference point setup page
+Stránka nastavenia referenčného bodu
 
-## Tail stock
+## Chvostové zásoby
 
-In the Tail stock General page keep the default values for name as **Tail stock** and temperature as 200°C. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry 2D cross- section page.
+Na stránke Tail stock General ponechajte predvolené hodnoty pre name ako **Tail stock** a teplotu ako 200°C. Kliknite na stránku prierezu ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na geometriu 2D.
 
-### Importing Tail stock 2D Geometry - Cross section
+### Importovanie 2D geometrie chvosta - prierez
 
-Import 2D geometry, “**SpinLab-tailstock.DXF** ” from the "**3D/Labs/Spinning** " folder. Click on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})and then click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) in the pop-up to verify the geometry. The geometry will be corrected for its orientation, click ok in the message pop-up window and then ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button to close the geometry verification window. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 3D Geometry page.
+Import 2D geometrie, „**SpinLab-tailstock.DXF** “ z priečinka „**3D/Labs/Spinning** “. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }})a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) vo vyskakovacom okne na overenie geometrie. Geometria sa opraví z hľadiska jej orientácie, kliknite na tlačidlo ok v kontextovom okne správy a potom na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) na zatvorenie okna overenia geometrie. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 3D Geometry.
 
-### Generate Tail stock 3D Geometry
+### Generovať 3D geometriu chvosta
 
-Using default value of 100 for "**Number of revolved sections** " generate 3D geometry by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) option (see Fig. 3DSPL1.12.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Roll page.
+Použitím predvolenej hodnoty 100 pre "**Počet otáčaných sekcií** " vygenerujte 3D geometriu kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) (pozri obr. 3DSPL1.12.). Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Roll.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0012.jpg' | relative_url }})
 
-Generated Tail stock 3D geometry
+Generovaná 3D geometria chvosta
 
-## Roll
+Prevaľovať
 
-In the Roll General page keep the default values for name as Roll and temperature as 200°C. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 2D cross- section page.
+Na stránke Roll General ponechajte predvolené hodnoty pre name ako Roll a teplotu ako 200 °C. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku 2D prierezu.
 
-### Importing Roll 2D Geometry - Cross section
+### Importovanie 2D geometrie rolky - prierez
 
-Import 2D geometry, “**SpinLab-roll.DXF** ” from the "**3D/Labs/Spinning** " folder. Click on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) and then click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) in the pop-up to verify the geometry. The geometry will be corrected for its orientation, click ok in the message pop-up window and then ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button to close the geometry verification window. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 3D Geometry page.
+Import 2D geometrie, „**SpinLab-roll.DXF** “ z priečinka „**3D/Labs/Spinning** “. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) vo vyskakovacom okne na overenie geometrie. Geometria sa opraví z hľadiska jej orientácie, kliknite na tlačidlo ok v kontextovom okne správy a potom na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) na zatvorenie okna overenia geometrie. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 3D Geometry.
 
-### Generate Roll 3D Geometry
+### Generovať 3D geometriu rolky
 
-Using default value **100** for "**Number of revolved sections** " generate 3D geometry by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) option (see Fig. 3DSPL1.13.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Orientation page.
+Použitím predvolenej hodnoty **100** pre "**Počet otočných sekcií** " vygenerujte 3D geometriu kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_generate_3d_geometry_button.jpg' | relative_url }}) (pozri obr. 3DSPL1.13.). Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na orientáciu.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0013.jpg' | relative_url }})
 
-Generated Roll 3D geometry
+Vygenerovaná 3D geometria rolky
 
-### Orientation
+Orientácia
 
-In this lab the movement of the roll along the mandrel axis is defined using path movement which requires roll datum to be defined. It should be noted that rolls require a unique setup approach due to their use of the path movement control. Roll translation will be defined by a path that is applied in a local UV (axial/radial) coordinate system. A single point on the roll, the reference point (datum), will follow this path. The current location of the reference point, and thus the roll, is determined by the path data and the current time. Each roll following a path must have a reference point defined for it. 
+V tomto laboratóriu je pohyb valca pozdĺž osi vretena definovaný pomocou pohybu dráhy, ktorý vyžaduje definovanie dátumu valca. Treba poznamenať, že valce vyžadujú jedinečný prístup k nastaveniu kvôli použitiu ovládania pohybu dráhy. Preklad kotúča bude definovaný dráhou, ktorá sa použije v lokálnom UV (axiálnom/radiálnom) súradnicovom systéme. Jediný bod na valci, referenčný bod (dátum), bude nasledovať túto cestu. Aktuálne umiestnenie referenčného bodu, a teda rolovania, je určené údajmi o ceste a aktuálnym časom. Každý kotúč sledujúci dráhu musí mať definovaný referenčný bod.
 
-User can select the Roll datum point using the button ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) next to Roll Datum field (see Fig. 3DSPL1.15.) which will provide options as shown in Fig. 3DSPL1.16. User can also enter the Datum Co-ordinates manually. In this lab, Rotation center will be selected in Roll Datum wizard dialog, path definition for the roller are already properly configured according to the origin (0,0) reference point hence we will leave Roll Datum co-ordinates to default (0,0).
+Používateľ môže zvoliť počiatočný bod Roll pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) vedľa poľa Roll Datum (pozri obr. 3DSPL1.15.), ktoré poskytne možnosti, ako je znázornené na obr. 3DSPL1.16. Používateľ môže tiež zadať súradnice dátumu manuálne. V tomto laboratóriu sa centrum rotácie vyberie v dialógovom okne Roll Datum, definícia cesty pre valec je už správne nakonfigurovaná podľa referenčného bodu pôvodu (0,0), preto ponecháme súradnice Roll Datum na predvolené (0,0).
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0014.jpg' | relative_url }})
 
-Orientation page
+orientácia strany
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0015.jpg' | relative_url }})
 
-Roll Datum Wizard
+Sprievodca dátumom rolovania
 
-The roll needs to be tilted to the proper spinning orientation, which is 45 degrees in this case. To do so, in Orientation page define Orientation angle as 45 as shown in Fig. 3DSPL1.16. and click ![]({{ '/assets/icons/pre_icons/mo_apply_orientation_angle_button.jpg' | relative_url }}). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Pass Table page.
+Valček musí byť naklonený na správnu orientáciu otáčania, ktorá je v tomto prípade 45 stupňov. Ak to chcete urobiť, na stránke Orientácia definujte orientačný uhol ako 45, ako je znázornené na obr. 3DSPL1.16. a kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_orientation_angle_button.jpg' | relative_url }}). Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Pass Table.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0016.jpg' | relative_url }})
 
-Roll Orientation page
+Stránka orientácie rolovania
 
-## Pass Table
+## Tabuľka preukazov
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button to define Movement for Roll 1 in Pass table (see Fig. 3DSPL1.17.).
+Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) definujete Pohyb pre Roll 1 v Pass table (pozri obr. 3DSPL1.17.).
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0017.jpg' | relative_url }})
 
-Path Table window
+Okno tabuľky ciest
 
-Since the roll moves along a particular path we will select Path and definition of path type as **Function of Time** path type as shown in Fig. 3DSPL1.18.
+Keďže sa valček pohybuje po určitej ceste, vyberieme cestu a definíciu typu cesty ako **funkciu času * * typu cesty, ako je znázornené na obr. 3DSPL1.18.
 
-Note that curvilinear G-Code path data must be reduced to linear data, since DEFORM does not support curvilinear paths.
+Všimnite si, že údaje o krivkovitej dráhe G-kódu musia byť znížené na lineárne údaje, pretože deformácia nepodporuje krivkovité dráhy.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0018.jpg' | relative_url }})
 
 Roll 1 Movement page
 
-Click ![]({{ '/assets/icons/pre_icons/mo_define_button2.jpg' | relative_url }}) and click ![]({{ '/assets/icons/pre_icons/mo_load_button_2.jpg' | relative_url }}) to open **SpinLab-roll-path_table.dat**. from**/3D/Labs/Spinning** folder. Change the plot type to **U-V** to see a graphical representation of the axial (U) and radial (V) roller movement profile (see Fig. 3DSPL1.20.). Click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) in Synchronization with path movement popup and click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to close the definition.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_button2.jpg' | relative_url }}) a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_load_button_2.jpg' | relative_url }}) otvorte priečinok **SpinLab-roll-path_table.dat **. z priečinka **/3D/Labs/Spinning**. Zmeňte typ grafu na **U-V**, aby ste videli grafické znázornenie axiálneho (U) a radiálneho (V) profilu pohybu valca (pozri obr. 3DSPL1.20). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) v okne Synchronizácia s pohybom cesty a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) zatvorte definíciu.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0019.jpg' | relative_url }})
 
-Synchronization with path movement popup
+Synchronizácia s vyskakovacím oknom pohybu cesty
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0020.jpg' | relative_url }})
 
-U-V Plot 
+U-V graf
 
-Note that the Rotation 1 center point is already defined by the path translation data.
+Všimnite si, že stredový bod Rotácia 1 je už definovaný údajmi o prenose cesty.
 
-Select Rotation type as "**Torque** " for Roll 1and leave the value at 0 since the roll rotates based on torque free. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close movement page. We will not define any other values for this lab and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Positioning page.
+Vyberte typ otáčania ako „**Krútiaci moment** “ pre valec 1 a ponechajte hodnotu na 0, pretože valec sa otáča na základe krútiaceho momentu. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte stránku pohybu. Pre toto laboratórium nedefinujeme žiadne iné hodnoty a klikneme na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na Polohovanie.
 
-## Controls
+Príkazy
 
-All of the objects that are mounted along the machine axis (headstock, mandrel, workpiece, tailstock) were imported at the correct location. 
+Všetky predmety, ktoré sú namontované pozdĺž osi stroja (vreteník, tŕň, obrobok, koník), boli dovezené na správne miesto.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0021.jpg' | relative_url }})
 
-Automatic positioning issue
+Problém s automatickým polohovaním
 
-Go to **Controls** page, then click on **Automatic Positioning**. **Initial (t=0)** option will move the roller to the path location of time = 0. At contact option will move the roller to the path location of the time at contact. Use **At contac****t** and click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) in popup. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close Contact page.
+Prejdite na stránku **Ovládacie prvky * * a potom kliknite na **Automatické polohovanie**. **Počiatočná (t=0)** možnosť presunie valec do polohy dráhy času = 0. Pri možnosti kontaktu sa valček presunie na miesto dráhy času pri kontakte. Použite **At contac****t** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) v kontextovom okne. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte stránku Kontakt.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0022.jpg' | relative_url }})
 
-Automatic positioning window
+Okno automatického polohovania
 
-## Contact
+Kontakt
 
-In Contact page, select "**User** " type and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. In table we will observe default relations being added, turn on sticking check box for Mandrel -Workpiece and Tail stock - Workpiece relations. Now define **Shear** friction value of **0.12** and click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button. Click on ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) button to calculate default contact tolerance value and Generate contact by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button. Select Yes in "STICKING CONDITION" popup. Generated contact which looks like as shown in Fig. 3DSPL1.23. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Stopping controls page.
+Na stránke Kontakt vyberte typ „**User** “ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). V tabuľke budeme pozorovať pridávanie predvolených vzťahov, zapnite začiarkavacie políčko pre tŕň - Pracovný kus a chvost - Vzťahy obrobku. Teraz definujte **Šmykovú** hodnotu trenia **0,12** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) vypočítate predvolenú hodnotu tolerancie kontaktu a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) vytvoríte kontakt. V kontextovom okne „STAV PRILEPENIA“ vyberte možnosť Áno. Vygenerovaný kontakt, ktorý vyzerá ako na obr. 3DSPL1.23. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Zastavenie ovládacích prvkov.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0023.jpg' | relative_url }})
 
-Contact page
+stránka s kontaktnými informáciami
 
-## Stopping Controls
+## Zastavenie ovládacích prvkov
 
-Define **Process Duration** as **22** sec as shown in Fig. 3DSPL1.24. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation controls page.
+Definujte ** Trvanie procesu ** ako **22** s, ako je znázornené na obr. 3DSPL1.24. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na ovládacie prvky simulácie.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0024.jpg' | relative_url }})
 
-Process Duration page
+Stránka trvania procesu
 
-## Simulation controls
+## Ovládacie prvky simulácie
 
-Enter**Number of steps** as **999999** , **Step increment to save** as **50** and **Time per step** as **0.001** sec in Simulation controls page as shown in Fig. 3DSPL1.25. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Generate DB page.
+Zadajte**Počet krokov* * ako * * 999999 * *, * * Prírastok kroku, aby ste ušetrili** ako **50** a **Čas na krok* * ako * * 0,001 * * s na stránke ovládacích prvkov simulácie, ako je znázornené na obr. 3DSPL1.25. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujete stránku DB.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0025.jpg' | relative_url }})
 
-Simulation Controls page
+Stránka s ovládacími prvkami simulácie
 
-## Generate Database
+Všeobecné
 
-In Generate DB page, click on the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. Observe the message in Message tab informing database generation status.
+Na stránke Generate DB kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) a vygenerujte databázu. Sledujte správu na karte Správa, ktorá informuje o stave generovania databázy.
 
-## Running Simulation
+## Simulácia behu
 
-Once the database has been generated, switch to the Simulation mode by selecting the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the object tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. 3DSPL1.26.. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vygenerovaní databázy prepnite do režimu simulácie výberom tlačidla ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom objektov. Kliknutím na štítok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvorte dialógové okno Možnosti točenia, ako je znázornené na obr. 3DSPL1.26. Použite predvolenú možnosť **Pokračovať v točení * * a vyberte možnosť „* *Pokračovať z posledného kroku** “ a potom vyberte režim simulácie ako * * Interaktívny * * a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0026.jpg' | relative_url }})
 
-Run Simulation Window
+Okno Spustiť simuláciu
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. User can view the Spinning process as the simulation proceeds to the specified stopping criteria from Simulation graphics.
+Sledujte priebeh simulácie tak, že sa pozriete na kartu Simulation Message and Simulation Log a uistite sa, že je začiarknutá možnosť ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). Používateľ môže zobraziť proces odstreďovania, keď simulácia pokračuje podľa zadaných kritérií zastavenia zo simulačnej grafiky.
 
-## Post processing
+Postprocessing
 
-When the simulation is completed, review the results by switching to Post mode using the button above the Simulation tool bar.
+Po dokončení simulácie skontrolujte výsledky prepnutím do režimu Post pomocou tlačidla nad panelom nástrojov simulácie.
 
-Play through the steps of the simulation and look how the Workpiece part is formed during Spinning process.
+Prehrajte si kroky simulácie a pozrite sa, ako sa tvorí časť obrobku počas procesu odstreďovania.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0027.jpg' | relative_url }})
 
-At step -1
+V kroku -1
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0028.jpg' | relative_url }})
 
-At Step 10000
+V kroku 10000
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0029.jpg' | relative_url }})
 
-At last step
+V poslednom kroku
 
-Plot **Strain - Effective** State variable and observe the Strain distribution.
+Graf **Kmeň - Efektívna** stavová premenná a sledujte rozdelenie napätia.
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0030.jpg' | relative_url }})
 
-At step -1
+V kroku -1
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0031.jpg' | relative_url }})
 
-At step 10000
+V kroku 10000
 
 ![]({{ '/assets/images/labs/spinning_labs/spinning_lab/image0032.jpg' | relative_url }})
 
-At last step
+V poslednom kroku

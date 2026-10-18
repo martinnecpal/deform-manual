@@ -1,235 +1,235 @@
 ---
 lang: sk
-title: "2D Die Stress Study with Multiple Steps"
+title: "Štúdia napätia v 2D s viacerými krokmi"
 ---
 
-# Lab2 : 2D Die Stress study at Multiple steps of an Operation 
+# Lab2: Štúdia napätia v 2D pri viacerých krokoch operácie 
 
-2.1. Setup the Nominal project
+2.1. Nastavenie projektu „Nominal“
 
-2.2. Adding Die Stress study
+2.2. Pridanie analýzy napätia v lisovacej forme
 
-2.3. Step Selection
+2.3. Výber kroku
 
-2.4. Objects definition for Die Stress Study
+2.4. Definícia objektov pre analýzu napätia v lisovacom nástroji
 
-2.5. Defining Punch
+2.5. Definícia úderu
 
-2.5.1. Defining Punch object data
+2.5.1. Definovanie údajov objektu „Punch“
 
-2.5.2. Generating mesh for Punch
+2.5.2. Vytvorenie siete pre Punch
 
-2.5.3. Assigning material to Punch
+2.5.3. Priradenie materiálu k dieru
 
-2.5.4. Assigning Boundary conditions to Punch
+2.5.4. Priradenie okrajových podmienok k výrezu
 
-2.5.5. Interpolating force from Billet and scheduling interpolation
+2.5.5. Interpolácia sily z polotovaru a plánovanie interpolácie
 
-2.6. Defining Bottom Die
+2.6. Definícia spodnej formy
 
-2.6.1. Defining Bottom Die object data
+2.6.1. Definovanie údajov objektu spodnej formy
 
-2.6.2. Generating mesh for Bottom Die
+2.6.2. Vytvorenie siete pre spodnú formu
 
-2.6.3. Assigning material to Bottom Die
+2.6.3. Priradenie materiálu k spodnej matrici
 
-2.6.4. Assigning Boundary conditions to Bottom Die
+2.6.4. Priradenie okrajových podmienok spodnej matrici
 
-2.6.5. Interpolating force from Billet and scheduling interpolation
+2.6.5. Interpolácia sily z polotovaru a plánovanie interpolácie
 
-2.7. Defining Simulation Controls
+2.7. Definovanie ovládacích prvkov simulácie
 
-2.8. Generating Database
+2.8. Vytvorenie databázy
 
-2.9. Running simulation
+2.9. Spustenie simulácie
 
-2.10. Post-Processing simulation results
+2.10. Následné spracovanie výsledkov simulácie
 
-In this lab we will be using Die Stress Study to analyse stresses on dies at multiple steps of an operation. Currently, multiple steps to analyse stresses should be from same operation. In a typical die stress simulation, the workpiece is removed, and the forces exerted onto the dies by the workpiece are interpolated onto the tools. 
+V tomto laboratórnom cvičení budeme používať nástroj „Die Stress Study“ na analýzu napätí v lisovacích formách v rôznych fázach operácie. V súčasnosti by mali všetky fázy analýzy napätí pochádzať z tej istej operácie. Pri typickej simulácii napätí v lisovacích formách sa obrobok odstráni a sily, ktoré obrobok pôsobí na lisovacie formy, sa interpolujú na nástroje. 
 
-In this lab we will be using Die Stress Study to analyse stresses on dies at multiple steps of an operation. Currently, multiple steps to analyse stresses should be from same operation. In a typical die stress simulation, the workpiece is removed, and the forces exerted onto the dies by the workpiece are interpolated onto the tools.  
-When we use the multiple steps option, we will be setting up Die stress analysis for the first step of the selected steps and for future steps of die stress analysis, we will be scheduling interpolation of forces from workpiece. The object data, simulation controls and other settings will be carried on from the first die stress analysis step. From v13.1.1, two new options have been introduced in the object page to position the dies in future steps, see Fig. 2DDSL2.1.
+V tomto laboratórnom cvičení budeme používať modul „Die Stress Study“ na analýzu napätí v lisovacích formách v rôznych fázach operácie. V súčasnosti by mali všetky fázy analýzy napätí pochádzať z tej istej operácie. Pri typickej simulácii napätí v lisovacích formách sa obrobok odstráni a sily, ktoré obrobok pôsobí na lisovacie formy, sa interpolujú na nástroje.  
+Ak použijeme možnosť viacerých krokov, nastavíme analýzu napätia v lisovacej forme pre prvý krok zo zvolených krokov a pre nasledujúce kroky analýzy napätia v lisovacej forme naplánujeme interpoláciu síl pôsobiacich na obrobok. Údaje o objektoch, ovládacie prvky simulácie a ďalšie nastavenia sa prenesú z prvého kroku analýzy napätia v lisovacej forme. Od verzie v13.1.1 boli na stránke objektov zavedené dve nové možnosti na umiestnenie lisovacích foriem v nasledujúcich krokoch, pozri obr. 2DDSL2.1.
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0021.jpg' | relative_url }})
 
-Die positioning options for future steps in die stress study
+Možnosti umiestnenia formy pre ďalšie kroky v štúdii namáhania formy
 
   
-**Die positioning in future steps in multi-step die stress study:**
+**Umiestnenie lisovacej formy v ďalších krokoch viacstupňovej analýzy namáhania lisovacej formy:**
 
-In a multiple step die stress study, if the object requires positioning, then the user needs to choose how the object must be positioned in future steps by turning on the Need positioning check box in object page as shown in Fig. 2DDSL2.1.
+V prípade viacstupňovej analýzy napätia v lisovacej forme, ak objekt vyžaduje polohovanie, musí používateľ určiť, ako má byť objekt polohovaný v nasledujúcich krokoch, a to zaškrtnutím políčka „Potreba polohovania“ na stránke objektu, ako je znázornené na obr. 2DDSL2.1.
 
-  * If the object is part of the nominal setup and requires positioning, then user needs to turn on Need positioning check box and select the respective object from the nominal setup as Following object.
+  * Ak je objekt súčasťou nominálnej konfigurácie a vyžaduje sa jeho polohovanie, musí používateľ zaškrtnúť políčko „Vyžaduje sa polohovanie“ a z nominálnej konfigurácie vybrať príslušný objekt ako „Nasledujúci objekt“.
 
-  * If the object is not part of the nominal setup but is within the bounding box of the nominal setup object and requires positioning, then user needs to turn on Need positioning check box and select the respective object from the nominal setup within whose bounding box the current object resides as Following object. We should not turn on the Not original object check box so that Force interpolation from the nominal setup can be executed onto the current object.
+  * Ak objekt nie je súčasťou nominálnej konfigurácie, ale nachádza sa v ohraničujúcom obdĺžniku objektu nominálnej konfigurácie a vyžaduje polohovanie, musí používateľ zaškrtnúť políčko „Vyžaduje polohovanie“ a z nominálnej konfigurácie vybrať príslušný objekt, v ktorého ohraničujúcom obdĺžniku sa aktuálny objekt nachádza, ako „Nasledujúci objekt“. Zaškrtávacie políčko „Nie je pôvodný objekt“ by sme nemali zaškrtávať, aby sa na aktuálny objekt mohla uplatniť funkcia „Vynútiť interpoláciu z nominálnej konfigurácie“.
 
-  * If the object is not part of the nominal setup and is not within the bounding box of the any of the nominal setup objects and requires positioning, then user needs to turn on Need positioning check box and select the object from the nominal setup with which the current object makes contact or follow as Following object. We should also turn on the Not original object checkbox. When user turns on the Not original object check box for an object, then the force interpolation will not be executed onto that object.
+  * Ak objekt nie je súčasťou nominálnej konfigurácie, nenachádza sa v ohraničujúcom obdĺžniku žiadneho z objektov nominálnej konfigurácie a vyžaduje polohovanie, musí používateľ zaškrtnúť políčko „Vyžaduje polohovanie“ a vybrať objekt z nominálnej konfigurácie, s ktorým je aktuálny objekt v kontakte, alebo ho určiť ako „Nasledujúci objekt“. Mali by sme tiež zaškrtnúť políčko „Nie je pôvodný objekt“. Ak používateľ zaškrtne políčko „Nie je pôvodný objekt“ pre daný objekt, na tento objekt sa nebude vykonávať interpolácia sily.
 
   
-We will be using Stub Shaft project generated during [Lab 25 Stub Shaft]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/' | relative_url }}) in MO Basic Labs to setup the Die Stress Study at multiple steps.
+Na nastavenie analýzy napätia v matrici v niekoľkých krokoch budeme používať projekt „Stub Shaft“, ktorý bol vytvorený počas cvičenia [Lab 25 Stub Shaft]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/' | relative_url }}) v rámci laboratórnych cvičení z jazyka MO Basic.
 
-## Setup the Nominal project
+## Nastavenie projektu „Nominal“
 
-Setup the [Lab 25 Stub Shaft]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/' | relative_url }}) in MO Basic Labs. After the completion of the simulation, switch to ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) tab. (See Fig. 2DDSL2.2.)
+Nastavte [Lab 25 Stub Shaft]({{ '/docs/sk/labs/basic_labs/2d_labs/lab_25_stub_shaft_labs/' | relative_url }}) v prostredí MO Basic Labs. Po dokončení simulácie prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}). (Pozri obr. 2DDSL2.2.)
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0001.jpg' | relative_url }})
 
-Simulation monitor showing the end of Stub Shaft lab simulation.
+Simulačný monitor zobrazujúci koniec laboratórnej simulácie hriadeľa „Stub Shaft“.
 
-##  Adding Die Stress study
+##  Pridanie analýzy napätia v matici
 
-At top Left corner of the Display window, click on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button and select Add Die stress Study operation as shown in Fig. 2DDSL2.3. A Die Stress Study operation tab will be added in display area and Die Stress operation tile will be available in operation editor under new tab as shown in Fig. 2DDSL2.4.
+V ľavom hornom rohu okna „Display“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) a vyberte operáciu „Add Die stress Study“, ako je znázornené na obr. 2DDSL2.3. V zobrazovacej oblasti sa pridá karta operácie Štúdia napätia čipu a dlaždica operácie Napätie čipu bude k dispozícii v editore operácií v rámci novej karty, ako je znázornené na obr. 2DDSL2.4.
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0002.jpg' | relative_url }})
 
-Adding Die stress study operation.
+Pridanie operácie „Analýza napätia v lisovacej forme“.
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0003.jpg' | relative_url }})
 
-Display of Die Stress Study operation.
+Zobrazenie operácie „Analýza napätí v lisovacej matrici“.
 
-## Step Selection
+## Výber kroku
 
-Since we want analyze stresses at multiple steps of an operation, select “**Multiple steps** ” radio button as Die stress selection type. Select “**Load steps from DB** ” radio button to load the object data from the first step of the selected steps and using “**User defined** ” radio button, select steps 10, 25, 45, 65, 85 and 96 of Cone operation in step selection page to analyze stresses at these steps as shown in Fig. 2DDSL2.5. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Keďže chceme analyzovať napätia vo viacerých krokoch operácie, vyberte ako typ výberu napätia v lisovacej forme prepínač „**Viac krokov**“. Vyberte rádio tlačidlo „**Načítať kroky z databázy**“, aby sa načítali údaje o objekte z prvého kroku vybraných krokov, a pomocou rádio tlačidla „**Definované používateľom**“ vyberte kroky 10, 25, 45, 65, 85 a 96 operácie „Cone“ na stránke výberu krokov, aby ste mohli analyzovať napätia v týchto krokoch, ako je znázornené na obr. 2DDSL2.5. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0004.jpg' | relative_url }})
 
-Selecting multiple steps of Cone operation to analyse stresses in dies.
+Výber viacerých krokov operácie „Cone“ na analýzu napätí v lisovacích formách.
 
-## Objects definition for Die Stress Study
+## Definícia objektov pre analýzu napätia v matrici
 
-Since we need to do the Die stress study only on Punch and Bottom Die, we will delete rest of the objects. In the objects page, delete the Ejector object as shown in Fig. 2DDSL2.6. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Keďže analýzu napätia v lisovacej forme musíme vykonať len na razníku a spodnej matrici, zvyšné objekty odstránime. Na stránke s objektmi odstráňte objekt „Ejector“, ako je znázornené na obr. 2DDSL2.6. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0005.jpg' | relative_url }})
 
-Deleting unnecessary objects in Objects page.
+Odstránenie nepotrebných objektov na stránke „Objekty“.
 
-## Defining Punch 
+## Definícia pojmu „punch“ 
 
-### Defining Punch object data
+### Definovanie údajov objektu Punch
 
-By default, the object type of rigid objects from the loaded step will be changed to elastic. Keep the object type as elastic for the Punch object. Since this object exists in nominal operation and requires positioning in future steps, turn on Need positioning checkbox and select Punch object of nominal operation as Following object from pulldown menu as shown in Fig. 2DDSL2.7 Cick ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Mesh page.
+V predvolenom nastavení sa typ tuhých objektov z načítaného kroku zmení na pružný. Pre objekt Punch ponechajte typ objektu ako pružný. Keďže tento objekt existuje v nominálnej prevádzke a vyžaduje polohovanie v budúcich krokoch, zaškrtnite políčko Potrebné polohovanie a z roletového menu vyberte objekt Punch z nominálnej prevádzky ako Nasledujúci objekt, ako je znázornené na obr. 2DDSL2.7. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka Sieť.
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0019.jpg' | relative_url }})
 
-Punch object page
+Stránka objektu „Punch“
 
-### Generating mesh for Punch
+### Vytvorenie siete pre Punch
 
-To generate mesh, define target number of elements as 2500 as shown in Fig. 2DDSL2.8. and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Material page.
+Na vytvorenie siete nastavte cieľový počet prvkov na 2500, ako je znázornené na obr. 2DDSL2.8, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Material“ (Materiál).
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0006.jpg' | relative_url }})
 
-Mesh settings for Punch.
+Nastavenia siete pre nástroj „Punch“.
 
-### Assigning material to Punch
+### Priradenie materiálu k dieru
 
-Import material AISI-D3 from the material library. Choose **AISI-D3** from the list to assign the material for Punch as shown in Fig. 2DDSL2.9. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Boundary conditions page.
+Naimportujte materiál AISI-D3 z knižnice materiálov. Zo zoznamu vyberte **AISI-D3**, aby ste tento materiál priradili k dielu „Punch“, ako je znázornené na obr. 2DDSL2.9. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Okrajové podmienky“.
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0007.jpg' | relative_url }})
 
-Assigning material to Punch.
+Priradenie materiálu k programu Punch.
 
-### Assigning Boundary conditions to Punch
+### Priradenie okrajových podmienok k výrezu
 
-We need to apply boundary conditions to Punch so that it does not fly off into space when the forming loads are applied to it. By default, for an axisymmetric product all nodes along x direction at centerline are fixed, if not make sure that the direction of the boundary condition is set to X and then click on centreline using By edge ![]({{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }}) button from picking options. Using ![]({{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }}) button from picking options, we can add BCC to all nodes/elements on an edge. Pick a point on the centerline of the Punch and click on ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) button, you should see that all nodes on centerline are fixed along X direction. 
+Musíme na teleso „Punch“ aplikovať okrajové podmienky, aby neodletelo do vesmíru, keď naň pôsobia zaťaženia pri tvárnení. V predvolenom nastavení sú pri osovo symetrickom výrobku všetky uzly pozdĺž osi x na stredovej línii pevné; ak tomu tak nie je, uistite sa, že smer okrajovej podmienky je nastavený na X, a potom kliknite na stredovú líniu pomocou tlačidla „By edge ![]({{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }})“ z možností výberu. Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }}) z možností výberu môžeme pridať BCC ku všetkým uzlom/prvkom na hrane. Vyberte bod na stredovej osi dielu Punch a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}). Mali by ste vidieť, že všetky uzly na stredovej osi sú zafixované v smere X. 
 
   
-Now to set the boundary condition along Y direction, select the top surface of the Punch using ![]({{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }}) button from picking options to fix all those nodes along Y direction and click on ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) button. (See Fig. 2DDSL2.10.) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Force interpolation page.
+Teraz, aby ste nastavili okrajovú podmienku v smere osi Y, vyberte hornú plochu razníka pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }}) z možností výberu, čím zafixujete všetky uzly v smere osi Y, a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}). (Pozri obr. 2DDSL2.10.) Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) otvoríte stránku „Vynútiť interpoláciu“.
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0008.jpg' | relative_url }})
 
-Assigning boundary conditions to Punch.
+Priradenie okrajových podmienok k programu Punch.
 
-### Interpolating force from Billet and scheduling interpolation
+### Interpolácia sily z polotovaru a plánovanie interpolácie
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}) to interpolate the forces exerted onto dies by the Billet, once the forces are interpolated, we should be observing a message comparing the forces from the Billet to the new forces on the Punch in Force interpolation page as shown in Fig. 2DDSL2.11. These forces should be relatively close to one another. 
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}) vykonajte interpoláciu síl pôsobiacich na matrice zo strany polotovaru; po dokončení interpolácie by sa mala na stránke „Interpolácia síl“ zobraziť správa porovnávajúca sily pôsobiace zo strany polotovaru s novými silami pôsobiacimi na razník, ako je znázornené na obr. 2DDSL2.11. Tieto sily by mali byť relatívne blízko seba. 
 
-Since we are simulating for multiple steps, we need to schedule the interpolation of forces from Billet. To do so, turn on checkbox adjacent to “Interpolation force” and keep Tolerance as “0” so that tolerance for interpolation is auto calculated. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define Bottom Die.
+Keďže simulujeme viacero krokov, musíme naplánovať interpoláciu síl z polotovaru. Na to zaškrtnite políčko vedľa položky „Interpolácia sily“ a hodnotu tolerancie ponechajte na „0“, aby sa tolerancia pre interpoláciu vypočítala automaticky. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali spodnú maticu.
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0009.jpg' | relative_url }})
 
-Interpolated forces onto Punch from Billet.
+Interpolované sily pôsobiace na razník zo surového materiálu.
 
-## Defining Bottom Die
+## Definícia spodnej formy
 
-### Defining Bottom Die object data
+### Definovanie údajov objektu spodnej matrice
 
-We will keep the object type as Elastic for the Bottom Die. Turn ON Need positioning checkbox and select Bottom Die of Nominal database objects from Following object pulldown menu as shown in Fig. 2DDSL2.12. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Mesh page to generate mesh.
+Pre spodnú matricu ponecháme typ objektu „Elastic“. Zaškrtnite políčko „Need positioning“ a z roletového menu „Following object“ vyberte „Bottom Die“ z objektov nominálnej databázy, ako je znázornené na obr. 2DDSL2.12. Klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Mesh“, a vygenerujte sieť.
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0020.jpg' | relative_url }})
 
-Bottom Die Object page
+Stránka objektu „Spodná matrica“
 
-### Generating mesh for Bottom Die
+### Vytvorenie siete pre spodnú formu
 
-Define target number of elements as 2500 as shown in Fig. 2DDSL2.13. and Generate mesh, then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Material page.
+Nastavte cieľový počet prvkov na 2500, ako je znázornené na obr. 2DDSL2.13, a vygenerujte sieť; potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Material“.
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0010.jpg' | relative_url }})
 
-Mesh Settings for Bottom Die.
+Nastavenia sieťoviny pre spodnú matricu.
 
-### Assigning material to Bottom Die
+### Priradenie materiálu k spodnej matrici
 
-In Material page, choose AISI-D3 from the list to assign the material for Bottom Die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Boundary conditions page.
+Na stránke „Materiál“ vyberte zo zoznamu položku „AISI-D3“, čím priradíte materiál pre spodnú formu. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Okrajové podmienky“.
 
-###  Assigning Boundary conditions to Bottom Die
+###  Priradenie okrajových podmienok spodnej formy
 
-Next, we need to apply boundary conditions to the Bottom Die so that it does not fly off into space when the forming loads are applied to it.
+Ďalej musíme na spodnú matricu aplikovať okrajové podmienky, aby neodletela do vesmíru, keď na ňu pôsobia formovacie zaťaženia.
 
-Now, set the boundary condition direction to Y, select the bottom edge of the Bottom Die to fix all those nodes along Y direction. (See Fig. 2DDSL2.14.) and click on click on ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) button. Since it is an axi-symmetric setup, X direction is already constrained, if not, constrain the centerline nodes in X direction similar to Y direction on bottom edge. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Force interpolation page.
+Teraz nastavte smer okrajovej podmienky na os Y, vyberte spodný okraj spodnej formy, aby ste zafixovali všetky uzly v smere osi Y. (Pozri obr. 2DDSL2.14.) a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}). Keďže ide o osovo symetrickú konfiguráciu, smer X je už obmedzený; ak nie je, obmedzte uzly stredovej línie v smere X podobne ako v smere Y na spodnom okraji. Klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Force interpolation“ (Vynútiť interpoláciu).
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0011.jpg' | relative_url }})
 
-Assigning Boundary conditions to Bottom Die.
+Priradenie okrajových podmienok spodnej formy.
 
-### Interpolating force from Billet and scheduling interpolation
+### Interpolácia sily z polotovaru a plánovanie interpolácie
 
-Once the mesh is generated, the forming loads from the Billet need to be interpolated onto the Bottom Die. Click on ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}), once the forces are interpolated, we should be observing a message comparing the forces from the Billet to the new forces on the Bottom Die in Force interpolation page as shown in Fig. 2DDSL2.15. These forces should be relatively close to one another. 
+Po vytvorení siete je potrebné interpolovať formovacie zaťaženia zo sochoru na spodnú matricu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_interpolate_force_button.jpg' | relative_url }}). Po interpolácii síl by sa na stránke Interpolácia síl mala zobraziť správa porovnávajúca sily pôsobiace na sochársku surovinu s novými silami pôsobiacimi na spodnú formu, ako je znázornené na obr. 2DDSL2.15. Tieto sily by mali byť relatívne blízko pri sebe. 
 
-To schedule force interpolation for future steps of die stress analysis, turn on check box adjacent to “Interpolation force” and keep “Tolerance” as “0”. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Simulation controls window.
+Ak chcete naplánovať interpoláciu sily pre nasledujúce kroky analýzy napätia v lisovacej forme, zaškrtnite políčko vedľa položky „Interpolácia sily“ a hodnotu „Tolerancia“ ponechajte na „0“. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno Ovládacie prvky simulácie.
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0012.jpg' | relative_url }})
 
-Interpolated forces onto Bottom Die from Billet 
+Interpolované sily pôsobiace na spodnú matricu zo sochoru 
 
-## Defining Simulation Controls
+## Definovanie ovládacích prvkov simulácie
 
-Define the Number of steps as 2 and keep the rest of the settings as default as shown in Fig. 2DDSL2.16. These settings will be carried on for future die stress analysis steps. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Nastavte počet krokov na hodnotu 2 a ostatné nastavenia ponechajte v predvolenom stave, ako je znázornené na obr. 2DDSL2.16. Tieto nastavenia sa budú používať aj v ďalších krokoch analýzy napätia čipu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0015.jpg' | relative_url }})
 
-Simulation controls settings for die stress analysis
+Nastavenia ovládacích prvkov simulácie pre analýzu napätia v výlisku
 
-## Generating Database
+## Vytvorenie databázy
 
-In DB Generation page, check the data for any errors in setup and generate database. After generating database, switch to ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) mode to run the simulation.
+Na stránke „DB Generation“ skontrolujte, či v nastaveniach nie sú chyby, a vygenerujte databázu. Po vygenerovaní databázy prejdite do režimu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) a spustite simuláciu.
 
-## Running simulation
+## Spustenie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation. As we click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button, simulation starts.
+Kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia). Pomocou predvolenej možnosti **Continue Run** (Pokračovať v spustení) vyberte možnosť „**Continue from the last step**“ (Pokračovať od posledného kroku), potom nastavte režim simulácie na **Interactive** (Interaktívny) a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu. Po kliknutí na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) sa spustí simulácia.
 
-After simulation of all steps die stress analysis is completed, log file displays message “MULTIPLE OPERATION COMPLETED” as shown in Fig. 2DDSL2.17. Switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab to view results.
+Po dokončení simulácie všetkých krokov analýzy napätia v lisovacej forme sa v súbore protokolu zobrazí správa „MULTIPLE OPERATION COMPLETED“, ako je znázornené na obr. 2DDSL2.17. Pre zobrazenie výsledkov prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0016.jpg' | relative_url }})
 
-Log file displaying end of simulation for all selected steps of die stress analysis
+Protokolový súbor zobrazujúci koniec simulácie pre všetky vybrané kroky analýzy napätia v matrici
 
-## Post-Processing simulation results
+## Následné spracovanie výsledkov simulácie
 
-Each selected step will be displayed as separate operation with operation name as From Step XX (XX is selected step number). The main variables to look at for a die stress simulation are the Effective stress and the Maximum principal stress.  
+Každý vybraný krok sa zobrazí ako samostatná operácia s názvom „Od kroku XX“ (XX je číslo vybraného kroku). Hlavnými premennými, na ktoré je potrebné pri simulácii napätia v výlisku venovať pozornosť, sú efektívne napätie a maximálne hlavné napätie.  
   
-The effective stress is used to see whether any location in the die underwent plastic deformation. If any area of the die has an effective stress close to or exceeding the yield stress of the die material, that region is at risk of plastically deforming. (See Fig. 2DDSL2.18.)  
+Efektívne napätie sa používa na zistenie, či v niektorej časti formy došlo k plastickej deformácii. Ak má akákoľvek oblasť formy efektívne napätie blízke medze tečnosti materiálu formy alebo ju prekračujúce, hrozí v tejto oblasti plastická deformácia. (Pozri obr. 2DDSL2.18.)  
   
-The maximum principal stress is used to see which regions of the die are in a state of compression and which are in a state of tension. Maximum principal stress is extremely important in determining whether a die will experience any cracking due to fatigue. To display the maximum principal stress, click the state variable “Set up” button ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) and then select Stress – Max Principal from the list. (See Fig. 2DDSL2.19.)
+Maximálne hlavné napätie sa používa na zistenie, ktoré oblasti matrice sú v stave stlačenia a ktoré v stave ťahu. Maximálne hlavné napätie je mimoriadne dôležité pri určovaní, či na matrici dôjde k prasknutiu v dôsledku únavy materiálu. Ak chcete zobraziť maximálne hlavné napätie, kliknite na tlačidlo „Nastaviť“ pre stavovú premennú ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) a potom zo zoznamu vyberte možnosť Napätie – Maximálne hlavné. (Pozri obr. 2DDSL2.19.)
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0017.jpg' | relative_url }})
 
-Effective Stress distribution at the end of last step of die stress analysis in Cone operation
+Rozloženie efektívneho napätia na konci posledného kroku analýzy napätia v matrici pri operácii „Cone“
 
 ![]({{ '/assets/images/labs/die_stess_study_labs/2d_die_stress_study_with_multiple_steps/image0018.jpg' | relative_url }})
 
-Maximum Principal Stress distribution at the end of last step of die stress analysis in Cone operation
+Rozloženie maximálneho hlavného napätia na konci posledného kroku analýzy napätí v matrici pri operácii „Cone“
 
 [2D Die Stress Study with Single step]({{ '/docs/sk/labs/die_stess_study_labs/2d_die_stress_study_with_single_step/' | relative_url }})
 

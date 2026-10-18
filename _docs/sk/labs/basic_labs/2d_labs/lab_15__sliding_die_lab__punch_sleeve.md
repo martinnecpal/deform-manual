@@ -1,319 +1,319 @@
 ---
 lang: sk
-title: "Lab 15 Sliding die lab - Punch Sleeve"
+title: "Laboratórna úloha č. 15 – Laboratórna úloha s posuvnou matricou – puzdro razníka"
 ---
 
-# Lab 15 Sliding die lab - Punch Sleeve
+# Laboratórna práca č. 15 – Laboratórna práca s posuvnou matricou – puzdro razníka
 
-This lab will demonstrate how to setup movement controls for a Punch Sleeve loaded with springs, the other end of the springs or mounted onto punch. The Sleeve slides back when load is applied beyond pre-load.
+V tomto laboratórnom cvičení si ukážeme, ako nastaviť ovládanie pohybu pre puzdro razníka, do ktorého sú vložené pružiny, pričom druhý koniec pružín je pripevnený k razníku. Puzdro sa posunie dozadu, keď sa naň pôsobí zaťaženie presahujúce predpätie.
 
   
-15.1. Create New Problem
+15.1. Vytvoriť nový problém
 
-15.2. Geometry Type
+15.2. Typ geometrie
 
-15.3. Simulation Controls
+15.3. Ovládacie prvky simulácie
 
-15.4. Loading Material for Workpiece
+15.4. Vkladanie materiálu do stroja
 
-15.5. Adding objects
+15.5. Pridávanie objektov
 
-15.6. Workpiece
+15.6. Obrobok
 
-15.7. Punch Definition
+15.7. Definícia dierovacieho nástroja
 
-15.8. Die Definition
+15.8. Definícia
 
-15.9. Sleeve Definition
+15.9. Definícia rukáva
 
-15.10. Ejector Definition
+15.10. Definícia ejektora
 
-15.11. Positioning
+15.11. Polohovanie
 
-15.12. Contact Generation
+15.12. Generovanie kontaktov
 
-15.13. Stopping Controls
+15.13. Ovládacie prvky na zastavenie
 
-15.14. Step Controls
+15.14. Ovládacie prvky krokov
 
-15.15. Generate Database
+15.15. Vytvorenie databázy
 
-15.16. Running Simulation
+15.16. Spustenie simulácie
 
-15.17. Post Processing the Results
+15.17. Následné spracovanie výsledkov
 
-## Create New Problem
+## Vytvoriť nový problém
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte položku DEFORM-v1x.xxx (kde .xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte položku **DEFORM GUI Main** vxx.xx. Zobrazí sa okno DEFORM GUI Main.
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** " radio button in unit field. Define Problem Name as "**Punch_Sleeve** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Vyberte prepínač „**Integrated Manufacturing Process**“ a v poli jednotiek vyberte prepínač „**English**“. Názov úlohy zadajte ako „**Punch_Sleeve**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak nezaškrtnete políčko „Zobraziť dialógové okno s možnosťami“, nezobrazí sa dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s použitím integrovaného výrobného procesu Deform.
 
-Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session, we use ‘**Punch_Sleeve** ’ as the project name. Add **2d forming operation** as**first operation** by selecting it from First operation pull down list and turning on checkbox as shown in Fig. L15.1. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom Nový projekt. V tomto bode bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie; ako názov projektu použijeme „**Punch_Sleeve**“. Pridajte **2D tvarovaciu operáciu** ako **prvú operáciu** tak, že ju vyberiete z roletového zoznamu Prvá operácia a zaškrtnete políčko, ako je znázornené na obr. L15.1. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0001.jpg' | relative_url }})
 
-MO wizard New Project
+Sprievodca MO – Nový projekt
 
-## Geometry Type
+## Typ geometrie
 
-In this lab, we will be using Axisymmetric geometries so, select **2D Axisymmetric** radio button from geometry type page as shown in Fig. L15.2. and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). 
+V tomto laboratórnom cvičení budeme používať osovo symetrické geometrie, preto na stránke s typmi geometrií vyberte voľbu **2D osovo symetrická**, ako je znázornené na obr. L15.2, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). 
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0002.jpg' | relative_url }})
 
-Axisymmetric Geometry type selection
+Výber typu osovo symetrickej geometrie
 
-## Simulation Controls
+## Ovládacie prvky simulácie
 
-We will be modelling Non- Isothermal sliding die movement setup in this lab so, in Simulation controls make sure both **Deformation** and **Heat transfer** **modes** are checked as shown in Fig. L15.3. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V tomto laboratórnom cvičení budeme modelovať nastavenie neizotermického pohybu kĺzavého lisovacieho nástroja, preto v okne „Simulation controls“ skontrolujte, či sú zaškrtnuté oba **režimy** **Deformation** a **Heat transfer**, ako je znázornené na obr. L15.3. Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0003.jpg' | relative_url }})
 
-Simulation control window
+Okno riadenia simulácie
 
-## Loading Material for Workpiece
+## Vkladanie materiálu do stroja
 
-In Material list window, Load the material '**AISI-1015** ' from DEFORM Material library, **Steel** category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option. This can be done as shown in below by clicking ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button, see Fig. L15.4. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object page.
+V okne Zoznam materiálov načítajte materiál „**AISI-1015**“ z knižnice materiálov DEFORM v kategórii **Oceľ** pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice). To môžete urobiť tak, ako je znázornené nižšie, kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}), pozri obr. L15.4. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Objekt.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0004.jpg' | relative_url }})
 
-Material List window
+Okno „Zoznam materiálov“
 
-##  Adding objects
+##  Pridávanie objektov
 
-For this operation we need five objects, hence in Object window add **five****objects** by clicking ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button (see Fig. L15.5.) and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na túto operáciu potrebujeme päť objektov, preto v okne „Objekt“ pridajte **päť****objektov** kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) (pozri obr. L15.5.) a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0005.jpg' | relative_url }})
 
-Adding Object Window
+Okno na pridávanie objektov
 
-## Workpiece
+## Obrobok
 
-In Workpiece window select the object type as **Plastic** and keep the temperature as 68°F, see Fig. L15.6. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V okne „Workpiece“ (Obrobok) vyberte typ objektu **Plastic** a ponechajte teplotu na hodnote 68 °F, pozri obr. L15.6. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0006.jpg' | relative_url }})
 
-Workpiece object Window
+Okno objektu obrobku
 
-### Workpiece Geometry
+### Geometria obrobku
 
-In the Geometry page, select ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) and define a cylinder with **radius** of **0.4** ” and a **height** of **2.7** ” (see Fig. L15.7.). Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button. Check geometry and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh page.
+Na stránke Geometria vyberte ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) a definujte valec s **polomerom** **0,4** ” a **výškou** **2,7** ” (pozri obr. L15.7.). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Skontrolujte geometriu a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Mesh“ (Sieť).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0007.jpg' | relative_url }})
 
-Defining the Geometry
+Definovanie geometrie
 
-### Mesh generation
+### Vytváranie sietí
 
-The default number of elements are adequate for this lab, so keep the **number of elements** as **1000** and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) to generate the Mesh (see Fig. L15.8.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Predvolený počet prvkov je pre toto cvičenie postačujúci, preto ponechajte **počet prvkov** na hodnote **1000** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}), aby ste vygenerovali sieť (pozri obr. L15.8.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0008.jpg' | relative_url }})
 
-Workpiece Mesh window
+Okno so sieťou obrobkov
 
-### Assigning Workpiece Material
+### Priradenie materiálu obrobku
 
-To assign material for workpiece select the material **AISI-1015** from material window. This can be done by selecting material from the list in the material window as shown in below Fig. L15.9. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Ak chcete obrobku priradiť materiál, vyberte v okne materiálov materiál **AISI-1015**. To môžete urobiť výberom materiálu zo zoznamu v okne materiálov, ako je znázornené na nižšie uvedenej obr. L15.9. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0009.jpg' | relative_url }})
 
-Material selection window
+Okno na výber materiálu
 
-### Workpiece Boundary conditions
+### Okrajové podmienky obrobku
 
-In BCC page, verify the Deformation BCC assigned to Left side of the workpiece in X-Direction and Heat exchange with Environment BCC to the entire outer surface of the workpiece (which does not include the centerline since these nodes are inside the object) that are assigned by default during meshing. If the BCC’s are not assigned, assign them manually as shown in below Fig. L15.10. and Fig. L15.11. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top die page.
+Na stránke BCC skontrolujte, či je deformácia BCC priradená k ľavej strane obrobku v smere osi X a či je výmena tepla s okolím BCC priradená k celému vonkajšiemu povrchu obrobku (čo nezahŕňa stredovú os, keďže tieto uzly sa nachádzajú vnútri objektu), ktoré sú priradené štandardne počas vytvárania siete. Ak nie sú BCC priradené, priraďte ich ručne podľa obrázkov L15.10 a L15.11 nižšie. Potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku „Top die“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0010.jpg' | relative_url }})
 
-Assigned Velocity BCC for Workpiece
+Nastavená rýchlosť BCC pre obrobok
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0011.jpg' | relative_url }})
 
-Assigned Heat Exchange with Environment BCC for Workpiece
+Priradená výmena tepla s okolím (BCC) pre obrobok
 
-## Punch Definition
+## Definícia pojmu „punch“
 
-In Top Die page change the Name to **Punch** , keep the Object type as **Rigid** and Object Temperature 68°F, Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Top Die“ zmeňte názov na **Punch**, typ objektu ponechajte ako **Rigid** a teplotu objektu na 68 °F. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Import Punch geometry
+### Import geometrie výseku
 
-In Geometry window, load **PunchSleeve_Lab_Punch.geo** geometry file from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load geometry from library) option as shown in Fig. L15.12., Click **Yes** for the 'User Library' popup asking whether to use the installation labs folder path as default library location. The geometry is located in DEFORM installation folder \2D\Labs directory. Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option to make sure the geometry is OK. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until movement page.
+V okne Geometria načítajte súbor geometrie **PunchSleeve_Lab_Punch.geo** z knižnice pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice), ako je znázornené na obr. L15.12., V rozbaľovacom okne „User Library“ (Používateľská knižnica), v ktorom sa pýta, či chcete použiť cestu k inštalačnej zložke labs ako predvolené umiestnenie knižnice, kliknite na **Áno**. Geometria sa nachádza v inštalačnej zložke DEFORM v adresári \2D\Labs. Skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste sa uistili, že je v poriadku. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až kým sa nezobrazí stránka s pohybmi.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0012.jpg' | relative_url }})
 
-Punch Geometry page
+Stránka „Geometria dierovania“
 
-### Assign Movement to Punch
+### Priradiť pohyb k úderu
 
-Define a **speed** of **10** in/sec in **-Y** direction for this lab (see Fig. L15.13.). Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Bottom Die page.
+Pre toto laboratórne cvičenie nastavte **rýchlosť** **10** palcov za sekundu v smere **-Y** (pozri obr. L15.13.). Potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Bottom Die“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0013.jpg' | relative_url }})
 
-Punch Movement page
+Stránka „Punch Movement“
 
-## Die Definition
+## Definícia
 
-In Bottom Die page change the name to **Die** , keep the object type as **rigid** and temperature 68°F, Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Bottom Die“ zmeňte názov na **Die**, typ objektu ponechajte ako **rigid** a teplotu na 68 °F. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Import Die Geometry
+### Import geometrie formy
 
-Import **PunchSleeve_Lab_Die.geo** file using Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button as shown in Fig. L15.14. Check geometry and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) up to object 4 page. 
+Načítajte súbor **PunchSleeve_Lab_Die.geo** pomocou tlačidla „Načítať geometriu z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), ako je znázornené na obr. L15.14. Skontrolujte geometriu a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stranu s objektom 4. 
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0014.jpg' | relative_url }})
 
-Die Geometry page
+Stránka „Geometria“
 
-## Sleeve Definition
+## Vysvetlenie pojmu „rukáv“
 
-In Object 4 page change the Name to **Sleeve** , keep the Object type as **Rigid** and Object Temperature as 68°F, Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V objekte 4 na stránke zmeňte názov na **Sleeve**, typ objektu ponechajte ako **Rigid** a teplotu objektu ako 68°F. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Import Die Geometry
+### Import geometrie lisovacej formy
 
-Import **PunchSleeve_Lab_Sleeve.geo** file using Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button as shown in Fig. L15.15. Check geometry and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until movement page.
+Načítajte súbor **PunchSleeve_Lab_Sleeve.geo** pomocou tlačidla „Načítať geometriu z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), ako je znázornené na obr. L15.15. Skontrolujte geometriu a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s pohybmi.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0015.jpg' | relative_url }})
 
-Sleeve object page
+Stránka objektu „Sleeve“
 
-### Assign Movement to Sleeve
+### Priradiť pohyb k rukávu
 
-Select Movement type as **Sliding****die**. Define Sliding movement direction as **Y** with constant **stiffness****10****klb/in** , **Preload****1** **klb** and **Max. displacement****0.5** ". Select other end of spring as mounted on **Punch object** as shown in Fig. L15.16. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until object 5 page.
+Vyberte typ pohybu ako **Kĺzavý****lisovací nástroj**. Definujte smer posuvného pohybu ako **Y** s konštantnou **tuhosťou****10****klb/in**, **predpätím****1** **klb** a **max. posunom****0,5** ". Vyberte druhý koniec pružiny ako namontovaný na **objekte Punch**, ako je znázornené na obr. L15.16. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až do strany s objektom 5.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0016.jpg' | relative_url }})
 
-Sleeve Movement Page
+Stránka o pohybe rukáva
 
-## Ejector Definition
+## Definícia ejektora
 
-In Object 5 page change the Name to **Ejector** , keep the Object type as **Rigid** and Object Temperature 68°F, Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V objekte 5 na stránke zmeňte názov na **Ejector**, typ objektu ponechajte ako **Rigid** a teplotu objektu 68°F. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Ejector Geometry
+### Geometria vyhadzovača
 
-Import **DieSleeve_Lab_Ejector.geo** file using Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button (see Fig. L15.17.). Check geometry and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Positioning page.
+Načítajte súbor **DieSleeve_Lab_Ejector.geo** pomocou tlačidla „Načítať geometriu z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (pozri obr. L15.17.). Skontrolujte geometriu a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Polohovanie“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0017.jpg' | relative_url }})
 
-Ejector geometry defining
+Definovanie geometrie vyhadzovača
 
-## Positioning
+## Polohovanie
 
-In this lab if objects are created or imported as per instructions then objects will be at correct position (see Fig. L15.18. ). If objects are not positioned correctly, use ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button to position the objects as shown in Fig. L15.18. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until contact page.
+Ak v tomto laboratórnom cvičení vytvoríte alebo naimportujete objekty podľa pokynov, budú sa nachádzať na správnej pozícii (pozri obr. L15.18). Ak objekty nie sú správne umiestnené, použite tlačidlo ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) na ich umiestnenie tak, ako je znázornené na obr. L15.18. Klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí kontaktná stránka.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0018.jpg' | relative_url }})
 
-Objects position
+Poloha objektov
 
-## Contact Generation
+## Získavanie kontaktov
 
-Select **User** type contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. It will add relationships between the Workpiece, Punch, Die, Sleeve and Ejector as shown in Fig. L15.19.
+Vyberte typ kontaktu **Používateľ** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Tým sa pridajú vzťahy medzi obrobkom, razníkom, matricou, puzdrom a vyhadzovačom, ako je znázornené na obr. L15.19.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0019.jpg' | relative_url }})
 
-Default relations in contact Generation page
+Predvolené vzťahy na stránke Vytvorenie kontaktu
 
-Highlight the **Punch – Workpiece** relationship and click the ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) button to modify the relationship. In the friction section of the screen (see Fig. L15.20.), there is a pull-down menu that allows the user to choose the appropriate friction conditions for common forming processes.
+Zvýraznite vzťah **Punch – Workpiece** a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) tento vzťah upravte. V časti obrazovky venovanej treniu (pozri obr. L15.20.) sa nachádza roletové menu, ktoré používateľovi umožňuje vybrať vhodné podmienky trenia pre bežné procesy tvárnenia.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0020.jpg' | relative_url }})
 
-Inter-Object data definition window
+Okno definície údajov medzi objektmi
 
-In **F******riction** pull down menu** select **Cold Forming (carbide dies)** from the list, a friction value of **0.08** will be added to the Constant friction field. Under **Thermal****tab** select **Forming** type Heat transfer coefficient from list, **0.002** value will be added to Heat transfer coefficient field. (See Fig. L15.21.)
+V roletovom menu **F******riction** vyberte zo zoznamu položku **Cold Forming (carbide dies)**; do poľa Constant friction sa vloží hodnota trenia **0,08**. Na **kartu „Thermal“****** vyberte zo zoznamu typ **tvarovania** „Koeficient prenosu tepla“; do poľa „Koeficient prenosu tepla“ sa vloží hodnota **0,002**. (Pozri obr. L15.21.)
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0021.jpg' | relative_url }})
 
-Inter Object Relation Thermal page
+Stránka „Inter Object Relation Thermal“
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to go back to contact window, Since the friction conditions are the same for all the object pairs, the ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button can be used to copy the interface properties from the first relationship to all of the other relationships. After this is done, all relationships will have a friction of 0.08 and Heat transfer coefficient of 0.002 defined.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) sa vrátite do okna kontaktov. Keďže podmienky trenia sú rovnaké pre všetky páry objektov, pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môžete skopírovať vlastnosti rozhrania z prvého vzťahu do všetkých ostatných vzťahov. Po vykonaní tejto operácie budú mať všetky vzťahy definované trenie 0,08 a koeficient prenosu tepla 0,002.
 
-The sleeve with sliding movement controls is mounted on the punch and moves with the punch as the simulation progresses. The sleeve contacts, and may penetrate, the die, so define a contact relation between the die and the sleeve and make die the master. Click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button to add a contact relation. Select **Die** as the **master** and **Sleeve**(which has sliding movement controls) as the **slave**. (See Fig. L15.22.)
+Puzdro s ovládacími prvkami posuvného pohybu je namontované na razníku a v priebehu simulácie sa pohybuje spolu s ním. Puzdro prichádza do kontaktu s matricou a môže do nej preniknúť, preto definujte vzťah kontaktu medzi matricou a puzdrom a nastavte matricu ako hlavný objekt. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) pridajte kontaktný vzťah. Ako **hlavný objekt** vyberte **matricu** a ako **podriadený objekt** vyberte **rukáv** (ktorý má ovládače posuvného pohybu). (Pozri obr. L15.22.)
 
-Use ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) icon to determine a suitable contact tolerance (a value of about 0.000403" will be calculated), then click ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button to generate contact. (See Fig. L15.22.) Switch to Message tab or Observe status bar to know about the contacts generated. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) určte vhodnú toleranciu kontaktu (vypočíta sa hodnota približne 0,000403"), potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) na vytvorenie kontaktu. (Pozri obr. L15.22.) Prejdite na kartu Správa alebo sledujte stavový riadok, aby ste zistili informácie o vygenerovaných kontaktoch. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0022.jpg' | relative_url }})
 
-Contact generated between objects
+Kontakt vznikajúci medzi objektmi
 
-## Stopping Controls
+## Ovládacie prvky na zastavenie
 
-We will stop the simulation when punch moves by 0.48”. In the Stopping Controls screen, check the **Max Die stroke** option and then define the **Y** stroke value as **0.48** ". (See Fig. L15.23.) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Simuláciu zastavíme, keď sa razník posunie o 0,48”. Na obrazovke „Stopping Controls“ zaškrtnite možnosť **Max Die stroke** a následne nastavte hodnotu zdvihu v osi **Y** na **0,48** ". (Pozri obr. L15.23.) Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0023.jpg' | relative_url }})
 
-Stopping Controls window
+Okno „Ovládacie prvky zastavenia“
 
-## Step Controls
+## Ovládacie prvky krokov
 
-In step controls page, define **Number of steps** as **1000** , **Step increment to save** as **5** and **Die displacement per step** as **0.005** ". As we defined more number of steps than required for total primary die displacement, simulation will stop when it reaches the stopping control. Set the punch as Primary Die if not selected automatically, see Fig. L15.24. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke nastavení krokov nastavte **Počet krokov** na hodnotu **1000**, **Krok na uloženie** na hodnotu **5** a **Posun matrice na krok** na hodnotu **0,005**. Keďže sme definovali väčší počet krokov, ako je potrebný na celkový posun primárneho razníka, simulácia sa zastaví, keď dosiahne kontrolný bod zastavenia. Nastavte razník ako primárny razník, ak sa nevybral automaticky, pozri obr. L15.24. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0024.jpg' | relative_url }})
 
-Step Controls window
+Okno „Ovládacie prvky krokov“
 
-## Generate Database
+## Vytvoriť databázu
 
-In Generate DB page, click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process:
+Na stránke „Generate DB“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby program skontroloval, či v nastavení úlohy niečo nechýba. Počas kontroly:
 
-Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).
+Správy v červenej farbe označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli definovať údaje o materiáloch).
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu.
 
-## Running Simulation
+## Spustenie simulácie
 
-Once the database has been generated, switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. L15.25. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom operácií. Kliknutím na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno Možnosti spustenia, ako je znázornené na obr. L15.25. Použite predvolenú možnosť **Pokračovať v spustení**, aby ste vybrali možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0033.jpg' | relative_url }})
 
-Run Simulation window
+Okno „Spustiť simuláciu“
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. As long as the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.
+Priebeh simulácie je možné počas jej vykonávania sledovať na karte „Simulation Message“ a v časti „Simulation Graphics“ v oblasti zobrazenia „Graphics“ v režime simulácie. Pokiaľ je na karte „Simulation Message“ zaškrtnutá voľba „![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }})“ (čo je predvolené nastavenie), súbor správ sa bude automaticky aktualizovať.
 
-The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.
+Súbor „Message“ obsahuje informácie o tom, v ktorom simulačnom kroku sa simulácia práve nachádza, a zároveň poskytuje údaje o tom, ako dobre simulácia prebieha.
 
-When the simulation has finished, the following message will be displayed at the end of the Message file (See Fig. L15.26.):
+Po ukončení simulácie sa na konci súboru so správami zobrazí nasledujúca správa (pozri obr. L15.26.):
 
-"PROGRAM STOPPED!
+"PROGRAM SA ZASTAVIL!
 
-THE STROKE -0.4800000 HAS EXCEEDED THE SPECIFIED LIMIT 0.4800000".
+„HODNOTA STROKE -0,4800000 PREKROČILA ŠPECIFIKOVANÝ LIMIT 0,4800000“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0025.jpg' | relative_url }})
 
-Simulation Message file
+Súbor so simulačnými správami
 
-## Post Processing the Results
+## Následné spracovanie výsledkov
 
-After simulation has been completed, click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab, MO post processor will open. Select Display Stroke from right click options in step list. Play the steps until sleeve starts moving upward when punch stroke is around 0.275". (See Fig. L15.27.)
+Po dokončení simulácie kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), čím sa otvorí postprocesor MO. V zozname krokov vyberte možnosť „Zobraziť zdvih“ z ponuky, ktorá sa zobrazí po kliknutí pravým tlačidlom myši. Prehrávajte kroky, kým sa puzdro nezačne pohybovať nahor, keď je zdvih razníka približne 0,275". (Pozri obr. L15.27.)
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0026.jpg' | relative_url }})
 
-Load-Stroke graph at step sleeve starts sliding up
+Graf zaťaženia a zdvihu v okamihu, keď sa posuvná objímka začne posúvať nahor
 
-Plot **Load-stroke** curve and observe the load at this point. We observe that as sleeve experiences load beyond defined Pre-load that is 1 klb, it starts moving upwards. Continue to play animation and stop it when sleeve reverses its movement direction, at this point measure the distance between the Sleeve bottom right corner and Die top right corner and compare it with the Max. Displacement defined in Sleeve sliding movement controls. We can observe that sleeve stopped moving upward once the Max. Displacement defined in Sleeve sliding movement controls is reached. (See Fig. L15.28.)
+Vykreslite krivku **zaťaženie – zdvih** a sledujte zaťaženie v tomto bode. Vidíme, že keď sa na puzdro pôsobí zaťaženie presahujúce definované predpätie, ktoré je 1 klb, začne sa pohybovať nahor. Pokračujte v prehrávaní animácie a zastavte ju, keď puzdro zmení smer pohybu. V tomto bode zmerajte vzdialenosť medzi pravým dolným rohom puzdra a pravým horným rohom matrice a porovnajte ju s maximálnym posunom definovaným v nastaveniach posuvu puzdra. Môžeme pozorovať, že puzdro prestalo stúpať hneď po dosiahnutí maximálneho posunu definovaného v nastaveniach posuvu puzdra. (Pozri obr. L15.28.)
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0027.jpg' | relative_url }})
 
-Sleeve load and displacement when it reached max displacement
+Zaťaženie puzdra a jeho posunutie pri dosiahnutí maximálneho posunutia
 
-Continue to play animation to observe material flow and at last step check the total top die displacement using measurement option. (See Fig. L15.29.)
+Pokračujte v prehrávaní animácie, aby ste mohli sledovať tok materiálu, a v poslednom kroku skontrolujte celkový posun hornej formy pomocou možnosti merania. (Pozri obr. L15.29.)
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0028.jpg' | relative_url }})
 
-Workpiece at last step
+Obrobok v poslednom kroku
 
-####  State variables:
+####  Stavové premenné:
 
-Go to last step and from the **State variables** list, plot important state variables like **Effective strain** , **Effective stress** , **Temperature** and **Damage** as shown in Fig. L15.30. to Fig. L15.33.
+Prejdite na posledný krok a zo zoznamu **Stavové premenné** vyneste do grafu dôležité stavové premenné, ako sú **efektívne deformácie**, **efektívne napätia**, **teplota** a **poškodenie**, ako je znázornené na obr. L15.30 až obr. L15.33.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0029.jpg' | relative_url }})
 
-Effective Strain state variable plot
+Graf premennej stavu „efektívne deformácie“
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0030.jpg' | relative_url }})
 
-Effective Stress state variable plot
+Graf premennej stavu „efektívne napätie“
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0031.jpg' | relative_url }})
 
-Temperature state variable plot
+Graf premennej teploty
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_15__sliding_die_lab__punch_sleeve/2d_mobl15_image0032.jpg' | relative_url }})
 
-Damage state variable plot
+Graf premennej stavu poškodenia

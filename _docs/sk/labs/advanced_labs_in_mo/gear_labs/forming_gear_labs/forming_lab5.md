@@ -1,134 +1,134 @@
 ---
 lang: sk
-title: "Forming Lab 5"
+title: "Laboratórium tvarovania 5"
 ---
 
-# Lab 5. 2D to 3D conversion
+# Cvičenie č. 5. Premena z 2D do 3D
 
-### Creating a New Problem
+### Vytvorenie nového problému
 
-Create a new project called **Gear23** and copy the existing project **Gear_LargerBillet**.
+Vytvorte nový projekt s názvom **Gear23** a skopírujte existujúci projekt **Gear_LargerBillet**.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab5_image0001.jpg' | relative_url }})
 
-MO New Project window
+Okno „Nový projekt“ v programe MO
 
-### Adding operations
+### Pridávanie operácií
 
-Right-click on the 2nd operation tile in operation editor and delete it. Add the following operations:
+Kliknite pravým tlačidlom myši na druhú dlaždicu operácie v editore operácií a odstráňte ju. Pridajte nasledujúce operácie:
 
   * [2D] Heat Transfer Express
 
-  * 2D to 3D Converter (located in Simulation Operator)
+  * Konvertor z 2D do 3D (nachádza sa v nástroji Simulation Operator)
 
   * [3D] Forming Express
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab5_image0002.jpg' | relative_url }})
 
-Operations list in Operation Editor
+Zoznam operácií v editore operácií
 
-### Upset Operation
+### Prevádzka v núdzovom režime
 
-In the initial Upset tile in Operation Editor, right-click on the **Workpiece** and **Pass object to All operations**.
+V úvodnej karte „Upset“ v editore operácií kliknite pravým tlačidlom myši na **obrobok** a vyberte možnosť **Preniesť objekt do všetkých operácií**.
 
-Select **Upset** operation and Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). Go to Simulation controls and **check****Heat****transfer** mode.
+Vyberte operáciu **Upset** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). Prejdite do časti „Simulation controls“ a **zaškrtnite****režim****Heat****transfer**.
 
-**Generating DB**  
-Select **Generate****DB** from the operation tree and Generate the Database. Click ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) to Heat Transfer Express operation.
+**Vytvorenie databázy**  
+V strome operácií vyberte položku **Generate****DB** a vygenerujte databázu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}), aby ste spustili operáciu Heat Transfer Express.
 
-### Heat Transfer Express operation
+### Prevádzka služby „Heat Transfer Express“
 
-#### Process
+#### Postup
 
-In Process page, select the heating type as **Transfer**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Object list.
+Na stránke „V procese“ vyberte typ vykurovania **Transfer**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre zobrazenie zoznamu objektov.
 
-#### Object selection
+#### Výber objektov
 
-Select**1 workpiece only** radio button. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Heat condition.
+Zvoľte**len 1 obrobok** (rádiové tlačidlo). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre stav „Heat“.
 
-#### Heat Condition
+#### Teplotné podmienky
 
-Set the **transfer****time** to **5** seconds and accept the **default temperature** and **convection****coefficient**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation controls.
+Nastavte **čas prenosu****time** na **5** sekúnd a potvrďte **predvolenú teplotu** a **koeficient konvekcie****coefficient**. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite do ovládacích prvkov simulácie.
 
-#### Simulation Controls
+#### Ovládacie prvky simulácie
 
-Use the default value and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until 2D to 3D Convertor operation.
+Použite predvolenú hodnotu a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nespustí operácia konvertora 2D na 3D.
 
-### Convert 2D to 3D operation
+### Operácia prevodu 2D na 3D
 
-Verify **Z** is up (consistent with other models) and in 3D parameters start angle and Revolve angle should be 0 and 360 to generate whole workpiece. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Workpiece geometry page.
+Skontrolujte, či je **Z** nastavené nahor (v súlade s ostatnými modelmi) a či sú v 3D parametroch počiatočný uhol a uhol otáčania nastavené na 0 a 360, aby sa vytvoril celý obrobok. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Geometria obrobku.
 
-#### Workpiece Geometry
+#### Geometria obrobku
 
-The **# of sections** sets the number of geometry sections around the circumference. One section per degree of rotation works well, so set the **# of sections** to **360**. click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to workpiece mesh page.
+**Počet sekcií** určuje počet geometrických sekcií po obvode. Osvedčilo sa nastaviť jednu sekciu na jeden stupeň otáčania, preto nastavte **počet sekcií** na **360**. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku so sieťou obrobku.
 
-#### Workpiece Mesh
+#### Sieť obrobku
 
-Leave the Mesh at the default **32000** elements. click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to workpiece Material page.
+Nechajte počet prvkov siete na predvolenom počte **32000**. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Materiál obrobku“.
 
-#### Workpiece Material
+#### Materiál obrobku
 
-Leave the Material as (inherited) in Material page. click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Forming express Top die general page.
+Na stránke „Materiál“ ponechajte nastavenie „(zdedené)“. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí hlavná stránka „Forming Express – Horná matrica“.
 
 ### 3D Forming Express
 
-#### Top die general
+#### Všeobecný prehľad
 
-Keep the default **300** °F temperature for Top die, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Top die geometry page.
+Ponechajte predvolenú teplotu **300** °F pre hornú matricu a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku s geometriou hornej matrice.
 
-#### Top die geometry
+#### Geometria hornej matrice
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) button and ![]({{ '/assets/icons/pre_icons/mo_open_button.jpg' | relative_url }}) open (import) the file “**gear top die.STL** ”. The geometry for top die is located in DEFORM installation folder \Tutorials directory. Define a reference point on the flash land using ![]({{ '/assets/icons/pre_icons/mo_define_reference_point_button.jpg' | relative_url }}) option. click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Top die movement page.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) a pomocou ![]({{ '/assets/icons/pre_icons/mo_open_button.jpg' | relative_url }}) otvorte (importujte) súbor „**gear top die.STL**“. Geometria hornej matrice sa nachádza v inštalačnej zložke programu DEFORM v adresári \Tutorials. Pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_define_reference_point_button.jpg' | relative_url }}) definujte referenčný bod na odlievacej ploche. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Pohyb hornej matrice.
 
-#### Top die Movement
+#### Pohyb hornej matrice
 
-Set the **Speed** to a constant value of **3** in/sec in the **-Z** direction. click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Bottom die page.
+Nastavte **rýchlosť** na konštantnú hodnotu **3** palcov za sekundu v smere **-Z**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku spodnej matrice.
 
-#### Bottom Die general
+#### Všeobecné informácie o spodnej matrici
 
-Keep the default **300** °F temperature for bottom die, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to bottom die geometry page.
+Ponechajte predvolenú teplotu **300** °F pre spodnú maticu a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku s geometriou spodnej matice.
 
-#### Bottom die geometry
+#### Geometria spodnej matrice
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) button and ![]({{ '/assets/icons/pre_icons/mo_open_button.jpg' | relative_url }}) open (import) the file “**gear bottom die.STL** ”. The geometry for gear bottom die is located in DEFORM installation folder \Tutorials directory. Define a reference point on the flash gutter using ![]({{ '/assets/icons/pre_icons/mo_define_reference_point_button.jpg' | relative_url }}) option. click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to positioning page.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) a pomocou ![]({{ '/assets/icons/pre_icons/mo_open_button.jpg' | relative_url }}) otvorte (importujte) súbor „**gear bottom die.STL**“. Geometria spodnej matrice ozubeného kolesa sa nachádza v inštalačnej zložke programu DEFORM v adresári \Tutorials. Pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_define_reference_point_button.jpg' | relative_url }}) definujte referenčný bod na odtokovom žľabe. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku polohovania.
 
-#### Positioning dies
+#### Polohovacie matrice
 
-Rotate both dies 90° about the X axis so that they line up with the Workpiece. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Scheduled positioning page.
+Otočte obe matice o 90° okolo osi X tak, aby boli zarovnané s obrobkom. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Naplánované polohovanie“.
 
-#### Scheduled positioning
+#### Plánované umiestnenie
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_auto_button.jpg' | relative_url }}) in scheduled positioning page and you can see the positioning scheduled as shown in Fig. L5.3\. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until stopping controls page.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_auto_button.jpg' | relative_url }}) na stránke s naplánovaným polohovaním a uvidíte naplánované polohovanie, ako je znázornené na obr. L5.3. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s ovládacími prvkami na zastavenie.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/lab5_image0003.jpg' | relative_url }})
 
-Scheduled positioning window
+Plánované časové okno na zameranie polohy
 
-#### Stopping controls
+#### Ovládacie prvky na zastavenie
 
-Set the Distance between objects to **0.25** in. and set the **Top Die** and **Bottom Die** as reference objects. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to assign Primary die stroke page.
+Nastavte vzdialenosť medzi objektmi na **0,25** palca a ako referenčné objekty nastavte **hornú matricu** a **spodnú matricu**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste priradili stránku primárneho zdvihu matrice.
 
-#### Primary die stroke
+#### Zdvih primárneho valca
 
-Define **Primary die stroke** value as **1.5** in input field. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation controls page.
+V zadávacom poli nastavte hodnotu **Primárny zdvih matrice** na **1,5**. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Ovládacie prvky simulácie.
 
-#### Simulation controls
+#### Ovládacie prvky simulácie
 
-Set **Number of steps** to **1000** , **Step****increment** to **5** , select **User****type** step definition method and define **constant****die****displacement** as **0.02** in.
+Nastavte **počet krokov** na **1000**, **Krok****prírastok** na **5**, vyberte metódu definície kroku **Typ****užívateľský** a definujte **konštantný****posun****matrice** ako **0,02** palca.
 
-Save the project and click on the MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode button (above the operation tree) to start the simulation.
+Uložte projekt a kliknite na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode“ (nad stromom operácií), aby ste spustili simuláciu.
 
-### Run and monitor a simulation
+### Spustenie a sledovanie simulácie
 
-3D simulations can be made to run faster by taking advantage of multiple processors or multiple cores on one processor. If your computer processors has 4 cores, then Click the ![]({{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}) label.
+3D simulácie je možné spustiť rýchlejšie využitím viacerých procesorov alebo viacerých jadier v jednom procesore. Ak má váš počítač 4-jadrový procesor, kliknite na označenie ![]({{ '/assets/icons/simulator_icons/mo_run_options_action_lable.jpg' | relative_url }}).
 
-set the Simulation Mode to **Interactive** and select **Continue****Run**  
-specify the Processors Per Job as **4.**(**** See ****[Fig. L3. 13.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab3/' | relative_url }}#Fig_L3_13_Run_option_window))****
+nastavte režim simulácie na **Interaktívny** a vyberte **Pokračovať****Spustiť**  
+zadajte počet procesorov na úlohu ako **4.** (**** pozri ****[Fig. L3. 13.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_labs/forming_gear_labs/forming_lab3/' | relative_url }}#Fig_L3_13_Run_option_window))****
 
-****Then click on![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) button and then **![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}).**
+****Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_save_button.jpg' | relative_url }}) a následne na **![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}).**
 
-Once the simulation is completed, click the MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode button to review results.
+Po dokončení simulácie kliknite na tlačidlo „MO ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode“, aby ste si prezreli výsledky.
 
-### Review the results
+### Prezrite si výsledky
 
-Play through all steps and observe the object shapes in 2D and 3D operations.
+Prejdite všetky kroky a sledujte tvary objektov pri operáciách v 2D a 3D.

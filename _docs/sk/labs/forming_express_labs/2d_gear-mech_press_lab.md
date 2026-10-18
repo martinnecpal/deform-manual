@@ -1,320 +1,320 @@
 ---
 lang: sk
-title: "2D Gear-Mech Press Lab"
+title: "Laboratórium 2D Gear-Mech Press"
 ---
 
-# 2D Gear-Mech Press Lab
+# Laboratórium 2D Gear-Mech Press
 
-In this lab, we will setup simple Gear blank operation using Mechanical press type movement controls in 2D Forming Express wizard.
+V tomto laboratórnom cvičení nastavíme jednoduchú operáciu s polotovarom ozubeného kolesa pomocou ovládacích prvkov pohybu mechanického lisu v sprievodcovi 2D Forming Express.
 
-1\. Operation 1
+1\. Operácia 1
 
-1.1 Creating a New problem
+1.1 Vytvorenie novej úlohy
 
-1.2 Process
+1.2 Postup
 
-1.3. Temperature Calculation
+1.3. Výpočet teploty
 
-1.4. Object Page
+1.4. Stránka objektu
 
-1.5. Workpiece
+1.5. Obrobok
 
-1.6. Top Die
+1.6. Horná matrica
 
-1.7. Bottom Die
+1.7. Spodná forma
 
-1.8. Positioning
+1.8. Polohovanie
 
-1.9. Stopping Controls
+1.9. Ovládacie prvky na zastavenie
 
-1.10. Primary Die Stroke
+1.10. Zdvih primárneho lisovacieho nástroja
 
-1.11. Simulation Controls
+1.11. Ovládacie prvky simulácie
 
-1.12. Generate DB
+1.12. Vytvorenie databázy
 
-1.13. Running Simulation
+1.13. Spustenie simulácie
 
-1.14. Post process the results
+1.14. Následná spracovanie výsledkov
 
-2\. Operation 2
+2\. Operácia 2
 
-2.1. Problem Setup
+2.1. Formulácia problému
 
-2.2. Top Die
+2.2. Horná matrica
 
-2.3. Bottom Die
+2.3. Spodná forma
 
-2.4. Positioning
+2.4. Polohovanie
 
-2.5. Primary Die Stroke
+2.5. Zdvih primárneho lisovacieho nástroja
 
-2.6 Simulation Controls
+2.6 Ovládacie prvky simulácie
 
-2.7. Generate DB
+2.7. Vytvorenie databázy
 
-2.8. Running Simulation
+2.8. Spustenie simulácie
 
-2.9. Post process the results
+2.9. Následná spracovanie výsledkov
 
-## Operation 1
+## Operácia 1
 
-### Creating a New problem
+### Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear. Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**2D Forming Express** " radio button and unit system as "**English** " radio button in unit field as shown in Fig. 2DGML1.1. Define Problem Name as "******Gear-MechPress** " and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Integrated Manufacturing Process.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte **DEFORM GUI Main** vxx.xx. Zobrazí sa hlavné okno DEFORM GUI Main. Vytvorte nový problém buď výberom položky **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem**, alebo kliknutím na ikonu New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Problem Setup. Vyberte radiacie tlačidlo „**2D Forming Express**“ a v poli jednotiek vyberte radiacie tlačidlo „**English**“, ako je znázornené na obr. 2DGML1.1. Názov úlohy zadajte ako „******Gear-MechPress**“ a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) otvoríte novú úlohu s využitím integrovaného výrobného procesu.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0001.jpg' | relative_url }})
 
-Problem type selection window
+Okno na výber typu problému
 
-Confirm that a **2D Forming Express** operation tile is present in the operation editor. Rename the first operation to “**Upset** ” by double clicking on the operation tile in the operation editor (See Fig. 2DGML1.2.).
+Overte, či sa v editore operácií nachádza dlaždica operácie **2D Forming Express**. Premenujte prvú operáciu na „**Upset**“ dvojitým kliknutím na dlaždicu operácie v editore operácií (pozri obr. 2DGML1.2.).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0002.jpg' | relative_url }})
 
-Renaming Operation name in Operation Editor
+Pomenovanie názvu operácie v editore operácií
 
-### Process
+### Postup
 
-In the Process page choose **2D Axisymmetric** , **Hot forging** , and set both slider bars one notch below moderate to speed up the simulation time (See Fig. 2DGML1.3.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to the temperature calculation page.
+Na stránke „Process“ vyberte možnosti **2D Axisymmetric** a **Hot forging** a nastavte oba posuvníky o jeden stupeň nižšie ako „moderate“, aby ste skrátili čas simulácie (pozri obr. 2DGML1.3.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku výpočtu teploty.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0003.jpg' | relative_url }})
 
-Process Page
+Stránka procesu
 
-### Temperature Calculation
+### Výpočet teploty
 
-In the Temperature calculation page, select **constant temperature (Isothermal)**. Selecting constant temperature means we are neglecting changes in workpiece temperature during forming. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Object page.
+Na stránke „Výpočet teploty“ vyberte možnosť **konštantná teplota (izotermická)**. Výberom konštantnej teploty zanedbávame zmeny teploty obrobku počas tvárnenia. Kliknite na stránku „![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) k objektu“.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0004.jpg' | relative_url }})
 
-Temperature Calculation page
+Stránka „Výpočet teploty“
 
-### Object Page
+### Stránka objektu
 
-In the objects page select **1 workpiece + 2 dies** and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to the workpiece page.
+Na stránke „Objekty“ vyberte **1 obrobok + 2 formy** a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku obrobku.
 
-### Workpiece
+### Obrobok
 
-We will use an object temperature of **2200****°F** for our workpiece. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to move to the geometry page of the workpiece.
+Pre náš obrobok použijeme teplotu objektu **2200****°F**. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdete na stránku s geometriou obrobku.
 
-#### Workpiece Geometry
+#### Geometria obrobku
 
-In the geometry page, we will use primitives geometries available to define workpiece geometry. Select Cylindrical primitive and define the dimensions of **Cylinder** as **2.5in Radius** , **8.267in height** , with**0.1in corner radius (R1 and R2)** (See Fig. 2DGML1.5.) and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to Close. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed the mesh page.
+Na stránke „Geometria“ budeme na definovanie geometrie obrobku používať dostupné základné geometrické tvary. Vyberte základný tvar „Valec“ a nastavte rozmery **valca** na **polomer 2,5 palca**, **výšku 8,267in** a **polomer rohu 0,1in (R1 a R2)** (pozri obr. 2DGML1.5.) a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) na zatvorenie. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku siete.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0005.jpg' | relative_url }})
 
-Defining the Geometry
+Definovanie geometrie
 
-#### Workpiece Mesh
+#### Sieť obrobku
 
-Confirm that system is selected in Mesh page. You should see a value of 1000 in the number of elements field. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to the material page of the workpiece.
+Uistite sa, že na stránke „Mesh“ je vybraný systém. V poli „Počet prvkov“ by sa mala zobrazovať hodnota 1000. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) a potom na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), čím prejdete na stránku s materiálmi obrobku.
 
-#### Workpiece Material
+#### Materiál obrobku
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button as shown in Fig. 2DGML1.6. Select only "Hot Forming" check box if all category check box selected, select the **Steel_at_Extended_Temperatures** category, then **AISI-8620[1550-2200F(850 -1200C)]** and click the ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button. The material will be added to the material list and selected. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top Die Geometry page.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať materiál z knižnice), ako je znázornené na obr. 2DGML1.6. Zaškrtnite iba políčko „Hot Forming“ (Tepelné tvárnenie). Ak sú zaškrtnuté všetky políčka kategórií, vyberte kategóriu **Steel_at_Extended_Temperatures** (Oceľ pri rozšírených teplotách) a potom **AISI-8620[1550-2200F(850 -1200C)]** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}). Materiál sa pridá do zoznamu materiálov a bude vybraný. Klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Top Die Geometry (Geometria hornej matrice).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0006.jpg' | relative_url }})
 
-Workpiece material selection from Material Library
+Výber materiálu obrobku z knižnice materiálov
 
-### Top Die
+### Horná matrica
 
-#### Top Die Geometry
+#### Geometria hornej matrice
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button and import “**flat top die.igs** ” from the 2D\ LABS folder located in the installation directory and be sure to reverse the geometry after importing. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a naimportujte súbor „**flat top die.igs**“ zo zložky 2D\ LABS nachádzajúcej sa v inštalačnom adresári a nezabudnite po importe geometriu otočiť. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }})
 
-#### Top Die Movement page
+#### Stránka „Pohyb hornej matrice“
 
-Here we will define our top die as a mechanical press. Select the **mechanical press** radio button and observe the options that are available.
+Tu definujeme našu hornú matricu ako mechanický lis. Zvoľte tlačidlo **mechanický lis** a pozrite si dostupné možnosti.
 
-Keep the default movement direction of **–Y.** Stiffness and connecting rod length are optional inputs for defining the mechanical press. For the first operation we will use a **total stroke** of **40** inches and **1** stroke/sec. Select "**Distance between dies** " and confirm the current stroke = -(total stroke) (See Fig. 2DGML1.7. ). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until bottom die geometry page.
+Zachovajte predvolený smer pohybu **–Y**. Tuhosť a dĺžka ojnice sú voliteľné vstupné údaje pre definovanie mechanického lisu. Pre prvú operáciu použijeme **celkový zdvih** **40** palcov a **1** zdvih/sek. Vyberte „**Vzdialenosť medzi maticami**“ a potvrďte aktuálny zdvih = -(celkový zdvih) (pozri obr. 2DGML1.7). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s geometriou spodnej matice.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0007.jpg' | relative_url }})
 
-Top Die movement data
+Údaje o pohybe hornej matrice
 
-### Bottom Die
+### Spodná matrica
 
-#### Bottom Die Geometry
+#### Geometria spodnej matrice
 
-In the bottom die geometry page select define primitive to create the bottom die using cylinder primitive. Define a **radius** of **8** inches and a **height** of **4** inches and click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) on when finished (See Fig. 2DGML1.8.).
+Na stránke s geometriou spodnej formy vyberte možnosť „Definovať primitív“, aby ste vytvorili spodnú formu pomocou valcového primitívu. Zadajte **polomer** **8** palcov a **výšku** **4** palce a po dokončení kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) (pozri obr. 2DGML1.8.).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0008.jpg' | relative_url }})
 
-Bottom Die geometry
+Geometria spodnej matrice
 
-Observe the position of the three objects (See Fig. 2DGML1.9.). The top and bottom die are currently positioned inside of the workpiece which will result in excessive remeshing and unrealistic results. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Positioning page.
+Pozrite si polohu troch objektov (pozri obr. 2DGML1.9.). Horná a spodná forma sa momentálne nachádzajú vnútri obrobku, čo povedie k nadmernému prepočítavaniu siete a nerealistickým výsledkom. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Polohovanie“.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0009.jpg' | relative_url }})
 
-Objects Position after creating
+Poloha objektov po vytvorení
 
-### Positioning
+### Polohovanie
 
-In the positioning page, click the ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}) button. You should see the top and bottom die position above and below the workpiece. Automatic positioning performs two actions:
+Na stránke polohovania kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_automatic_positioning_button.jpg' | relative_url }}). Mali by ste vidieť polohu hornej a dolnej matrice nad a pod obrobkom. Automatické polohovanie vykonáva dve akcie:
 
-  1. Interference position bottom die to workpiece while coupled with top die without updating stroke
+  1. Poloha spodnej matrice voči obrobku pri spojení s hornou matricou bez úpravy zdvihu
 
-  2. Interference position top die to workpiece while updating stroke.
+  2. Poloha, v ktorej horná matrica zasahuje do obrobku počas aktualizácie zdvihu.
 
-After the dies have been positioned, keep the default contact settings and skip to the stopping controls page.
+Po umiestnení foriem ponechajte predvolené nastavenia kontaktov a prejdite na stránku s ovládacími prvkami zastavenia.
 
-### Stopping Controls
+### Ovládacie prvky na zastavenie
 
-For the distance between dies method we need to specify a distance between objects stopping criteria. Select the points on Top die and Bottom die similar to the points as shown in Fig. 2DGML1.10.
+Pri metóde „vzdialenosť medzi formami“ je potrebné určiť kritériá zastavenia na základe vzdialenosti medzi objektmi. Vyberte body na hornej a spodnej forme podobne ako body znázornené na obr. 2DGML1.10.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0010.jpg' | relative_url }})
 
-Distance between objects Stopping controls
+Vzdialenosť medzi objektmi Brzdové ovládacie prvky
 
-For the first operation, we want the top die to travel **6 inches** to create the correct shape. Input a die distance value **of 2.267****inches** for distance between objects as shown in Fig. 2DGML1.10.). Click on ![]({{ '/assets/icons/pre_icons/mo_back_button.jpg' | relative_url }}) to primary die stroke page.
+Pri prvej operácii chceme, aby sa horná matrica posunula o **6 palcov**, aby sa vytvoril správny tvar. Zadajte hodnotu vzdialenosti medzi matricami **2,267****palca** pre vzdialenosť medzi objektmi, ako je znázornené na obr. 2DGML1.10.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_back_button.jpg' | relative_url }}), aby ste prešli na hlavnú stránku zdvihu matrice.
 
-### Primary Die Stroke
+### Zdvih primárneho valca
 
-Notice the total primary die travel is set to roughly 6 inches. The distance between dies method automatically calculates total primary die travel for the user. **When the exact amount checkbox is checked the value shown in the total primary die travel field is used as the forming stroke**(See Fig. 2DGML1.11.**). In operation 2 we will cover situations where exact amount is unchecked.** Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Simulation controls page.
+Všimnite si, že celkový posun primárneho lisovacieho nástroja je nastavený približne na 6 palcov. Metóda „vzdialenosť medzi lisovacími nástrojmi“ automaticky vypočíta celkový posun primárneho lisovacieho nástroja za používateľa. **Ak je zaškrtnuté políčko „presná hodnota“, ako tvoriaci zdvih sa použije hodnota zobrazená v poli „celkový posun primárneho lisovacieho nástroja“** (pozri obr. 2DGML1.11.**). V kroku 2 sa budeme venovať situáciám, keď nie je zaškrtnuté políčko „presná hodnota“.** Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka „Simulation controls“ (Ovládacie prvky simulácie).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0011.jpg' | relative_url }})
 
-Primary die stroke
+Základný zdvih matrice
 
-### Simulation Controls
+### Ovládacie prvky simulácie
 
-We will be using the default system options and proceed to the generate DB page (See Fig. 2DGML1.12.).
+Budeme používať predvolené systémové nastavenia a prejdeme na stránku na vytvorenie databázy (pozri obr. 2DGML1.12.).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0012.jpg' | relative_url }})
 
-Simulation Controls page
+Stránka „Ovládacie prvky simulácie“
 
-### Generate DB
+### Vytvoriť databázu
 
-In Generate DB page, click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process:
+Na stránke „Generate DB“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby program skontroloval, či v nastavení úlohy niečo nechýba. Počas kontroly:
 
-Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).
+Správy v červenej farbe označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli definovať údaje o materiáloch).
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, Save the project and click on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) mode to run the simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Keď program dokončí zapisovanie databázy, uložte projekt a kliknite na režim ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}), aby ste spustili simuláciu.
 
-### Running Simulation - Operation 1
+### Simulácia behu – Operácia 1
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno Možnosti spustenia. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0024.jpg' | relative_url }})
 
-Run Simulation window
+Okno „Spustiť simuláciu“
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. As long as the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.
+Priebeh simulácie je možné počas jej vykonávania sledovať na karte „Simulation Message“ a v časti „Simulation Graphics“ v oblasti zobrazenia „Graphics“ v režime simulácie. Pokiaľ je na karte „Simulation Message“ zaškrtnutá voľba „![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }})“ (čo je predvolené nastavenie), súbor správ sa bude automaticky aktualizovať.
 
-### Post process the results - Operation 1
+### Následná spracovanie výsledkov – Operácia 1
 
-After the simulation is completed, switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab to view the result.
+Po dokončení simulácie prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), kde si môžete prezrieť výsledok.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0013.jpg' | relative_url }})
 
-MO Post processor
+Postprocesor MO
 
-Some important state variables can be selected directly from ‘Post Tools’ window and the rest can be accessed through State Variable dialog by clicking on ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) icon.
+Niektoré dôležité stavové premenné je možné vybrať priamo z okna „Post Tools“, k ostatným sa dostanete cez dialógové okno „State Variable“ kliknutím na ikonu ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}).
 
-Click on ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) Graph (Load-Stroke) and plot Time (sec) vs Load (klb) and also plot Time (sec) Vs Speed (in/sec) for top die.
+Kliknite na graf ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) (zaťaženie – zdvih) a vytvorte graf času (s) v závislosti od zaťaženia (klb), ako aj graf času (s) v závislosti od rýchlosti (in/s) pre hornú maticu.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0014.jpg' | relative_url }})
 
-Strain Effective state variable plot for workpiece at 1st operation last step
+Graf efektívnej stavovej premennej deformácie pre obrobok v poslednom kroku 1. operácie
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0015.jpg' | relative_url }})
 
-Y-Load v/s Time Graph of Top die in 1st operation
+Graf závislosti zaťaženia Y od času pre hornú matricu v 1. operácii
 
-## Operation 2
+## Operácia 2
 
-###  Problem Setup
+###  Zadanie úlohy
 
-Add a new **2D Forming Express** operation and select “**NO****\- batch setup** ” as your method of defining the operation.
+Pridajte novú operáciu **2D Forming Express** a ako spôsob definovania operácie vyberte „**NO****\- hromadné nastavenie**“.
 
-### Top Die
+### Horná matrica
 
-By default, all objects will be passed to the second operation as read from DB objects. Skip to the top die page in the tree. All settings from the previous operation will be passed to operation 2 so there is no need to revisit the earlier pages. For the mechanical press, it is best to never use a read from DB top die. Select "**Define** " as the object type for the top die (see Fig. 2DGML1.17.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to go to the geometry page for the top die.
+V predvolenom nastavení sa všetky objekty odovzdajú do druhej operácie ako objekty načítané z databázy. Prejdite na stránku hornej matrice v strome. Všetky nastavenia z predchádzajúcej operácie sa odovzdajú do operácie 2, takže nie je potrebné vracať sa na predchádzajúce stránky. V prípade mechanického lisu je najlepšie nikdy nepoužívať hornej matrice načítanú z databázy. Ako typ objektu pre hornú matricu vyberte „**Definovať**“ (pozri obr. 2DGML1.17.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku geometrie hornej matrice.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0016.jpg' | relative_url }})
 
-Top Die page
+Stránka „Top Die“
 
-#### Top Die Geometry
+#### Geometria hornej matrice
 
-Import the geometry **g****ear top die.IGS** from the 2D\ LABS folder located in the installation directory. Check the geometry, and verify the shading / point numbering is correct.
+Načítajte geometriu **g****ear top die.IGS** zo zložky 2D\ LABS, ktorá sa nachádza v inštalačnom adresári. Skontrolujte geometriu a overte, či je správne tieňovanie a číslovanie bodov.
 
-#### Top Die Movement
+#### Pohyb hornej matrice
 
-Go to the top die movement page and select **exact forming stroke**. The previous press settings for total stroke and cycles per second are the same (See Fig. 2DGML1.18.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Prejdite na hlavnú stránku pohybu matrice a vyberte **presný tvarovací zdvih**. Predchádzajúce nastavenia lisu pre celkový zdvih a počet cyklov za sekundu zostávajú nezmenené (pozri obr. 2DGML1.18.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0017.jpg' | relative_url }})
 
-Top die movement page
+Hlavná stránka o pohybe matrice
 
-### Bottom Die
+### Spodná matrica
 
-Select **Define** as the object type. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to the geometry page.
+Ako typ objektu vyberte **Definovať**. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku geometrie.
 
-#### Bottom Die Geometry
+#### Geometria spodnej matrice
 
-Import **gear bottom die.IGS** from the 2D\LABS folder located in the installation directory. Check the geometry, and verify the shading / point numbering is correct. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until the positioning page.
+Načítajte súbor **gear bottom die.IGS** zo zložky 2D\LABS, ktorá sa nachádza v inštalačnom adresári. Skontrolujte geometriu a overte, či je správne tieňovanie a číslovanie bodov. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s polohovaním.
 
-### Positioning
+### Polohovanie
 
-For operation 2 we will use the bottom dead center position action check box to calculate our forming stroke. In order to use this action checkbox, the top and bottom die must be positioned at bottom dead center.
+Pri operácii 2 použijeme zaškrtávacie políčko „Poloha dolnej mŕtvej polohy“ na výpočet nášho tvárniaceho zdvihu. Aby bolo možné použiť toto zaškrtávacie políčko, horná a spodná matrica musia byť umiestnené v dolnej mŕtvej polohe.
 
-Before positioning, take note of the forming stroke value in the top die movement page. In the positioning page **interference position** the top die down to the bottom die in the –Y direction.
+Pred nastavením polohy si zapíšte hodnotu formovacieho zdvihu uvedenú na stránke venovanej pohybu hornej matrice. Na stránke venovanej nastavovaniu polohy nastavte **polohu kolízie** hornej matrice voči spodnej matrici v smere –Y.
 
-Then **offset position** the top die by 0.2 inches in the Y direction. The dies are now at bottom dead center position. **Switch** to the top die movement page and notice the forming stroke and current stroke that are updated based on the positioning which was applied. **For the mechanical press in Forming Express, forming stroke is always updated when the top die is positioned.**
+Potom **posuňte** hornú matricu o 0,2 palca v smere osi Y. Matice sa teraz nachádzajú v dolnej mŕtvej polohe. **Prejdite** na stránku pohybu hornej matrice a všimnite si, že zdvih formovania a aktuálny zdvih sa aktualizujú na základe použitého polohovania. **V prípade mechanického lisu v programe Forming Express sa zdvih formovania vždy aktualizuje pri polohovaní hornej matrice.**
 
-### Primary Die Stroke
+### Zdvih primárneho valca
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until the primary die stroke page. Take note that there is no positioning scheduled and the distance between objects stopping criteria is disabled in Stopping Controls Page, because exact forming stroke was selected in the top die movement page.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí hlavná stránka zdvihu lisovacej formy. Vezmite na vedomie, že nie je naplánované žiadne polohovanie a kritérium zastavenia na základe vzdialenosti medzi objektmi je na stránke „Ovládacie prvky zastavenia“ deaktivované, pretože na hornej stránke pohybu lisovacej formy bol zvolený presný tvarovací zdvih.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0018.jpg' | relative_url }})
 
-Primary Die stroke page
+Hlavná stránka o zdvihu lisovacej matrice
 
-As mentioned previously, when exact amount is checked total primary die travel = forming stroke. The forming stroke was recently updated with positioning which explains the negative value seen for total primary die travel. Red text indicates that the value entered for total primary die stroke is outside of the legal range (See Fig. 2DGML1.19.).
+Ako už bolo spomenuté, pri kontrole presnej hodnoty platí, že celkový primárny zdvih formy = tvárniaci zdvih. Tvárniaci zdvih bol nedávno aktualizovaný o polohovanie, čo vysvetľuje zápornú hodnotu, ktorá sa zobrazuje pri celkovom primárnom zdvihu formy. Červený text označuje, že zadaná hodnota celkového primárneho zdvihu formy je mimo povoleného rozsahu (pozri obr. 2DGML1.19.).
 
-It is up to the user to fix illegal total primary die travel value. Check the bottom dead center position check box and observe that the exact amount box is no longer checked as a result.
+Je na užívateľovi, aby opravil nesprávnu hodnotu celkového primárneho zdvihu matrice. Zaškrtnite políčko „Poloha spodného mŕtveho bodu“ a skontrolujte, či sa v dôsledku toho už nezaškrtáva políčko „Presná hodnota“.
 
-When exact amount is unchecked total primary die travel is not equal to forming stroke and is only used to calculate the step size for the simulation. The user is required to input an approximate value for how far the top die is expected to travel.
+Ak nie je zaškrtnutá možnosť „presná hodnota“, celkový posun primárnej matrice sa nerovná formovaciemu zdvihu a slúži iba na výpočet veľkosti kroku pre simuláciu. Používateľ musí zadať približnú hodnotu, o koľko sa má horná matrica posunúť.
 
-In this case the top die needs to travel approximately 2 inches to reach bottom dead center (See Fig. 2DGML1.20.).
+V tomto prípade sa horná matrica musí posunúť približne o 2 palce, aby dosiahla dolnú mŕtvu polohu (pozri obr. 2DGML1.20.).
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0019.jpg' | relative_url }})
 
-Bottom dead center position checked in Primary die stroke page
+Poloha dolnej mŕtvej polohy bola skontrolovaná na stránke „Primárny zdvih matrice“
 
-The bottom dead center position check box will automatically add scheduled positioning and adjust the forming stroke to zero. Jump to scheduled positioning and the top die movement page to view these changes. The forming stroke value will be updated after scheduled positioning has been executed at DB generation. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Simulation controls.
+Zaškrtnutím políčka „Poloha dolnej mŕtvej polohy“ sa automaticky pridá naplánované polohovanie a zdvih formovania sa nastaví na nulu. Prejdite na stránku „Naplánované polohovanie“ a „Pohyb hornej matrice“, kde si môžete tieto zmeny prezrieť. Hodnota zdvihu formovania sa aktualizuje po vykonaní naplánovaného polohovania pri generovaní DB. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazia ovládacie prvky simulácie.
 
-### Simulation Controls
+### Ovládacie prvky simulácie
 
-We will be using the default system options (See Fig. 2DGML1.21.) and proceed to the generate DB page.
+Budeme používať predvolené systémové nastavenia (pozri obr. 2DGML1.21.) a prejdeme na stránku na vytvorenie databázy.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0020.jpg' | relative_url }})
 
-Simulation Controls page
+Stránka Ovládacie prvky simulácie
 
-### Generate DB
+### Vytvoriť databázu
 
-In Generate DB page. Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button and click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, save the project and click on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) mode to run the simulation.
+Na stránke „Generate DB“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) a potom na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vygenerovali databázu. Keď program dokončí zapisovanie databázy, uložte projekt a kliknite na režim ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}), aby ste spustili simuláciu.
 
-### Running Simulation - Operation 2
+### Simulácia behu – Operácia 2
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog. Use the default **Continue Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno Možnosti spustenia. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“ (od kroku -1), potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-### Post process the results - Operation 2
+### Následné spracovanie výsledkov – Operácia 2
 
-After the simulation is completed, Switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab to view the result.
+Po dokončení simulácie prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), kde si môžete prezrieť výsledok.
 
-Some important state variables can be selected directly from ‘Post Tools’ window and the rest can be accessed through State Variable dialog by clicking on ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) icon.
+Niektoré dôležité stavové premenné je možné vybrať priamo z okna „Post Tools“, k ostatným sa dostanete cez dialógové okno „State Variable“ kliknutím na ikonu ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}).
 
-Click on ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) Graph (Load-Stroke) and plot Time (sec) vs Load (klb) and also plot Time (sec) Vs Speed (in/sec) for top die for Operation 2.
+Kliknite na graf ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) (zaťaženie – zdvih) a vytvorte graf závislosti času (s) od zaťaženia (klb), ako aj graf závislosti času (s) od rýchlosti (in/s) pre hornú maticu pri operácii 2.
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0021.jpg' | relative_url }})
 
-Strain Effective state variable plot for workpiece at 2nd operation last step
+Graf efektívnej stavovej premennej deformácie pre obrobok v poslednom kroku 2. operácie
 
 ![]({{ '/assets/images/labs/forming_express_labs/2d_gear-mech_press_lab/image0022.jpg' | relative_url }})
 
-Y-Load v/s Time Graph of Top die in 2nd Operation
+Graf závislosti zaťaženia Y od času pre hornú matricu v 2. operácii

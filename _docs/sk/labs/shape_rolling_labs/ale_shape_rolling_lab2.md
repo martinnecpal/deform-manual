@@ -1,228 +1,228 @@
 ---
 lang: sk
-title: "ALE Shape Rolling Lab2"
+title: "Ale Shape Rolling Lab2"
 ---
 
-# ALE Shape Rolling Lab2 (using Boolean Mesh)
+# ale Shape Rolling Lab2 (pomocou booleovskej siete)
 
   
-2.1. Creating a New problem
+2.1. Vytvorenie nového problému
 
-2.2. Adding Shape Rolling operation
+2.2. Operácia valcovania tvaru
 
-2.3. Set process conditions
+2.3. Nastavenie procesných podmienok
 
-2.4. Define Workpiece
+2.4. Definujte obrobok
 
-2.5. Defining Grooves
+2.5. Definovanie drážok
 
-2.6. Pass Table
+2.6. Priechodný stôl
 
-2.7. 3D Setup
+2.7. Nastavenie 3D
 
-2.8. Rolling pass operation
+2.8. Prevádzka Rolling Pass
 
-2.9. Stand Table
+2.9. Stojanový stôl
 
-2.10. Defining Contact Relations
+2.10. Definovanie kontaktných vzťahov
 
-2.11. Simulation Controls
+2.11. Ovládacie prvky simulácie
 
-2.12. Generate Database
+2.12. Vytvoriť databázu
 
-2.13. Running Simulation
+2.13. Simulácia chodu
 
 2.14. Post Processing
 
-##  Creating a New problem
+##  Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na ** zariadení so systémom Windows ** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), zvoľte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte * * DEFORM GUI Main * * vxx.xx. Zobrazí SA hlavné okno Deform GUI.
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. ALEL2.1. Select " **Integrated Manufacturing Process** " radio button and Unit system as "**SI** " using radio button. Define Problem Name as Name as "**MO_ALE_LAB2** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})* ***Nový problém** alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Problem Setup (Nastavenie problému), ako je znázornené na obr. ALEL2.1. Pomocou prepínača vyberte prepínač „ * * Integrovaný výrobný proces * *“ a systém jednotiek ako „** SI * * “. Definujte názov problému ako názov ako "**MO_ale_LAB2 ** " a uistite sa, že je zapnuté začiarkavacie políčko "Zobraziť dialóg možností" (ak nezapneme začiarkavacie políčko "Zobraziť dialóg možností", potom nedostaneme dialógové okno Nový projekt v používateľskom rozhraní MO). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) a otvorte nový problém pomocou integrovaného výrobného procesu deformácie.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0001.jpg' | relative_url }})
 
-Problem type selection window
+Okno výberu typu problému
 
-Multiple operation wizard will open with the New Project dialog as shown in (see Fig. ALEL2.2.), at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘**MO_ALE_LAB2** ’ as the project name. 3D Shape Rolling operation can also be added in "New Project" dialog (see Fig. ALEL2.2.), in this lab we will add Shape rolling operation from Explorer operation list, so do not check "First operation" check box and "Shape Rolling" operation in "New Project" dialog. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Sprievodca viacerými operáciami sa otvorí s dialógovým oknom Nový projekt, ako je znázornené na (pozri obr. ALEL2.2.), v tomto bode sa používateľovi zobrazí výzva na zadanie názvu projektu (systém vytvorí samostatný priečinok s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „**MO_ale_LAB2 ** “. Operáciu 3D Shape Rolling je možné pridať aj v dialógu „New Project“ (pozri obr. ALEL2.2.), v tomto laboratóriu pridáme operáciu valcovania tvaru zo zoznamu operácií prieskumníka, takže nezačiarknite políčko "Prvá operácia" a operáciu "Valcovanie tvaru" v dialógovom okne "Nový projekt". Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otvorení operácie.
 
-## Adding Shape Rolling operation
+## Operácia valcovania tvaru
 
-Add one Shape Rolling operation from the Explorer Operations list. Operation can be added by clicking on Shape Rolling operation ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button or user can also add by drag and drop into the Operation Editor (see Fig. ALEL2.3.)).
+Pridajte jednu operáciu valcovania tvaru zo zoznamu operácií prieskumníka. Operáciu možno pridať kliknutím na tlačidlo Operácia valcovania tvaru ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) alebo ju môže používateľ pridať aj presunutím myšou do editora operácií (pozri obr. ALEL2.3.)).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0002.jpg' | relative_url }})
 
-MO Wizard with new Project opening window
+Sprievodca MO s novým otváracím oknom projektu
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0003.jpg' | relative_url }})
 
-Adding Shape Rolling Operation from explorer
+Pridanie operácie valcovania tvaru z prieskumníka
 
-## Set process conditions
+Procesné podmienky
 
-Select the rolling type as "Steady-State ALE" and symmetry type as "Full" as we will be setting up complete object. As we are not interested in temperature gradient in rolls, select the "**Workpiece only (non-isothermal)** " option. Define the friction coefficient value as **0.7** and heat transfer coefficient value as **11** as shown in Fig. ALEL2.4. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to WP_CrossSection page.
+Vyberte typ valcovania ako "Steady-State ale" a typ symetrie ako "Full", pretože budeme nastavovať kompletný objekt. Keďže nás teplotný gradient v kotúčoch nezaujíma, vyberte možnosť „** Len obrobok (neizotermický)** “. Definujte hodnotu koeficientu trenia ako **0,7 * * a hodnotu koeficientu prestupu tepla ako **11 * *, ako je znázornené na obr. ALEL2.4. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na WP_CrossSection.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0004.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-## Define Workpiece
+## Definovať obrobok
 
-In WP_CrossSection page, keep the object type as ‘Plastic’ and specify workpiece temperature as 100°C (see Fig. ALEL2.5.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Na stránke WP_CrossSection ponechajte typ objektu ako „Plast“ a zadajte teplotu obrobku 100 °C (pozri obr. ALEL2.5.). Pokračujte kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0005.jpg' | relative_url }})
 
-Workpiece Object Definition
+Definícia objektu obrobku
 
-### Create Workpiece Geometry
+### Vytvoriť geometriu obrobku
 
-To create a rectangular bar geometry for workpiece, in Geometry page select ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). From primitive geometry window select **Bar** and define the parameters
+Ak chcete vytvoriť obdĺžnikovú geometriu tyče pre obrobok, na stránke Geometria vyberte položku ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). Z okna primitívnej geometrie vyberte **Bar** a definujte parametre
 
-Origin Point = (-50, -42.5), Width W = 100mm and Height H = 85mm and click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close. A rectangular bar will create as shown in Fig. ALEL2.6. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh page.
+Východiskový bod = (-50, -42,5), šírka W = 100 mm a výška H = 85 mm a zatvorte kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Vytvorí sa obdĺžniková lišta, ako je znázornené na obr. ALEL2.6. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0006.jpg' | relative_url }})
 
-Define Primitive
+Definovať primitívne
 
-### Generate Workpiece mesh
+### Generovať pletivo obrobku
 
-Generate the workpiece mesh with default number of elements and settings (see Fig. ALEL2.7.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Vygenerujte povrchovú sieť obrobku s predvoleným počtom prvkov a nastavení (pozri obr. ALEL2.7.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0007.jpg' | relative_url }})
 
-Workpiece mesh generation
+Generovanie pletiva obrobku
 
-### Assigning Workpiece material
+### Priradenie materiálu obrobku
 
-To assign material for workpiece, select the material ‘AISI-1045’ from material window. This can be done as shown in Fig. ALEL2.8. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to until Groove list page.
+Ak chcete priradiť materiál pre obrobok, vyberte materiál „AISI-1045“ z okna materiálu. Dá sa to urobiť tak, ako je znázornené na obr. ALEL2.8. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku zoznamu drážok.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0008.jpg' | relative_url }})
 
-Assigning material for Workpiece
+Priradenie materiálu pre obrobok
 
-## Defining Grooves
+## Definovanie drážok
 
-In Groove List page, we can add grooves by clicking on the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button. Click ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) once to add one groove (see Fig. ALEL2.9.), we will be using same groove for top and bottom roll.
+Na stránke Groove List môžeme pridať drážky kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Jedným kliknutím na ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) pridáte jednu drážku (pozri obr. ALEL2.9.), použijeme rovnakú drážku pre horný a dolný valec.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0009.jpg' | relative_url }})
 
-Groove list page
+Stránka zoznamu drážok
 
-### Defining Groove1
+### Definovanie drážky1
 
-Select the First groove and click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), Roll Groove Primitive page will be opened, select Flat rolls. For roll geometry, Define width (W) as 120, radius (r1) as 5 and Roll Radius (RR) as 100 (see Fig. ALEL2.10.). Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Pass page.
+Vyberte prvú drážku a kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), otvorí sa stránka Roll Groove Primitive, vyberte Flat rolls. Pre geometriu kotúča definujte šírku (W) ako 120, polomer (r1) ako 5 a polomer kotúča (RR) ako 100 (pozri obr. ALEL2.10.). Kliknutím ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Pass.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0010.jpg' | relative_url }})
 
-Groove Geometry defining
+Definovanie geometrie drážky
 
-## Pass Table
+## Tabuľka preukazov
 
-In pass table, we will assign the groove geometries for top roll.
+V priechodnom stole priradíme geometrie drážok pre horný valec.
 
-Under Pass1, select the Groove 1 for Top roll, system will copy the top roll geometry for bottom roll bottom roll if asymmetric rolling check box is not checked.
+V časti Pass1 vyberte možnosť Groove 1 for Top roll, systém skopíruje geometriu horného valca pre spodný valec spodného valca, ak nie je začiarknuté políčko asymetrického valcovania.
 
-Define the Roll speed (rpm) as 50, Roll gap (mm) as 80 and Environment temperature as 20C. Leave other settings as default. Use Default Number of sections as 20. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to setup 3D objects for workpiece and Rolls.
+Definujte rýchlosť valenia (ot/min) ako 50, medzeru valenia (mm) ako 80 a teplotu prostredia ako 20° C. Ostatné nastavenia ponechajte ako predvolené. Použite predvolený počet sekcií ako 20. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) nastavíte 3D objekty pre obrobok a valce.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0011.jpg' | relative_url }})
 
-Pass Table
+Tabuľka preukazov
 
-## 3D Setup
+## Nastavenie 3D
 
-3D Rolls and Workpiece geometry and mesh settings are available in this page to setup 3D models. (See Fig. ALEL2.12.).
+Nastavenia geometrie a povrchovej siete 3D Rolls a obrobku sú k dispozícii na tejto stránke na nastavenie 3D modelov. (Pozri obr. ALEL2.12.).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0013.jpg' | relative_url }})
 
-3D Setup page
+Stránka nastavenia 3D
 
-### 3D Rolls geometry Setup
+### Nastavenie geometrie 3D roliek
 
-Select the ![]({{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}) button of 3D rolls geometry, 3D roll geometry settings window will open, In 3D rolls Geometry settings window, define the number of layers for rolls as 72 and select the 'Finer geometry from' option as shown in Fig. ALEL2.13. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) button to generate rolls with new settings. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button to close the 3D rolls Geometry settings window.
+Vyberte tlačidlo ![]({{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}) geometrie 3D valcov, otvorí sa okno nastavení geometrie 3D valcov. V okne nastavení geometrie 3D valcov definujte počet vrstiev pre valce ako 72 a vyberte možnosť „Jemnejšia geometria od“, ako je znázornené na obr. ALEL2.13. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) vygenerujete kotúče s novými nastaveniami. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte okno nastavení geometrie 3D rolls.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0012.jpg' | relative_url }})
 
-3D Roll Geometry settings page
+Stránka nastavení 3D Roll Geometry
 
-### 3D Workpiece setup using Boolean mesh method
+### Nastavenie 3D obrobku pomocou metódy Boolean mesh
 
-In this lab we will be using boolean method to generate 3D mesh for workpiece, material from workpiece at the intersection of roll and workpiece will be removed.
+V tomto laboratóriu budeme používať booleovskú metódu na generovanie 3D siete pre obrobok, materiál z obrobku na priesečníku valca a obrobku bude odstránený.
 
-Select the ![]({{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}) button of 3D Workpiece, 3D Workpiece mesh settings window will open. Select the user radio button for Workpiece Length and define the length as 100mm, Select Meshing method as Boolean, define Number of Layers as 36 and select the finer mesh from 0.333 to 0.6667. Then click on ![]({{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}). Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Workpiece mesh settings window. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Vyberte tlačidlo ![]({{ '/assets/icons/pre_icons/mo_3d_setup_edit_button.jpg' | relative_url }}) 3D obrobku, otvorí sa okno nastavení povrchovej siete 3D obrobku. Vyberte prepínač používateľa pre dĺžku obrobku a definujte dĺžku ako 100 mm, vyberte metódu povrchovej siete ako Boolean, definujte počet vrstiev ako 36 a vyberte jemnejšiu povrchovú sieť od 0,333 do 0,6667. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_3d_mesh_button.jpg' | relative_url }}). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte okno nastavení povrchovej siete obrobku. Pokračujte kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0014.jpg' | relative_url }})
 
-3D Workpiece mesh settings page
+Stránka nastavení 3D povrchovej siete obrobku
 
-Now save the project and select the Rolling Pass operation in operation editor.
+Teraz uložte projekt a vyberte operáciu Rolling Pass v editore operácií.
 
-## Rolling pass operation
+## Prevádzka valcovacej priepustky
 
-Select the Rolling Pass operation in the operation editor.
+V editore operácií vyberte operáciu Rolling Pass.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0015.jpg' | relative_url }})
 
-Rolling pass operation
+Prevádzka Rolling Pass
 
-## Stand Table
+## Stôl na stojan
 
-As you select the Rolling Pass operation stand table page will appear as shown in figure. In this lab we will not be using Tables and keep 20°C temperature for Rolls. So click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Contact page.
+Pri výbere stránky tabuľky operačného stojana Rolling Pass sa zobrazí, ako je znázornené na obrázku. V tomto laboratóriu nebudeme používať tabuľky a udržiavať teplotu 20° C pre kotúče. Takže kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Kontakt.
 
-## Defining Contact Relations
+## Definovanie kontaktných vzťahov
 
-In the Contact relations page, master-slave relations will be automatically added. Define the shear friction as 0.7 and interface heat transfer coefficient as 11 (see Fig. ALEL2.16.). Click the ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) to determine an intelligent contact tolerance and click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button to generate contacts between objects. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button. 
+Na stránke Contact relations sa automaticky pridajú vzťahy master-slave. Definujte šmykové trenie ako 0,7 a koeficient prestupu tepla rozhrania ako 11 (pozri obr. ALEL2.16.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) určíte inteligentnú toleranciu kontaktu a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) vytvoríte kontakty medzi objektmi. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0016.jpg' | relative_url }})
 
-Contact Relations generation
+Generovanie kontaktných vzťahov
 
-## Simulation Controls 
+## Ovládacie prvky simulácie
 
-In simulation controls page set Time steps as 5000 for this simulation with a step increment to save as 10 and Time per step as 0.001 sec. From DEFORM v12, ALE steady state convergence stopping criteria option has been added in Step controls, user can define ALE steady state stopping criteria for ALE rolling operation. In this lab we will use default values as shown in Fig. ALEL2.17. , click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to generate DB.
+V ovládacích prvkoch simulácie nastavte stránku Časové kroky ako 5000 pre túto simuláciu s krokom na uloženie ako 10 a Čas na krok ako 0,001 s. Z DEFORMÁCIE v12 bola v krokových ovládacích prvkoch pridaná možnosť zastavenia konvergencie ale v ustálenom stave, používateľ môže definovať kritériá zastavenia ale v ustálenom stave pre valcovaciu prevádzku ale. V tomto laboratóriu použijeme predvolené hodnoty, ako je znázornené na obr. ALEL2.17. , kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre vygenerovanie DB.
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0017.jpg' | relative_url }})
 
-Simulation controls 
+Ovládacie prvky simulácie
 
-## Generate Database
+Všeobecné
 
-In the database generation stage user can check the data required for the analysis and proceed to generate the database (see Fig. ALEL2.18.).
+Vo fáze generovania databázy môže používateľ skontrolovať údaje potrebné na analýzu a pristúpiť k generovaniu databázy (pozri obr. ALEL2.18.).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0018.jpg' | relative_url }})
 
-Database Generation
+Generovanie databázy
 
-## Running Simulation
+## Simulácia behu
 
-Once the database has been generated switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. ALEL2.19. Use the default **Continue****Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vygenerovaní databázy prejdite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad operačným stromom. Kliknutím na štítok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvorte dialógové okno Možnosti točenia, ako je znázornené na obr. ALEL2.19. Použite predvolenú možnosť **Pokračovať*** * Spustiť * * a vyberte možnosť „**Pokračovať z posledného kroku** “ (z kroku -1) a potom vyberte režim simulácie ako prepínač * * Interaktívne * *. Kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) pre spustenie simulácie.
 
-To define MPI settings, click on ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}) button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend on your 3D MPI license).
+Ak chcete definovať nastavenia MPI, kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}), okno Možnosti spustenia sa rozbalí a zobrazí možnosti definovania nastavení MPI pre simuláciu (maximálny počet procesorov, ktoré možno definovať v závislosti od vašej licencie 3D MPI).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0019.jpg' | relative_url }})
 
-Run Option dialog
+Dialógové okno Spustiť možnosť
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. User can view the process as the simulation proceeds from Simulation graphics
+Sledujte priebeh simulácie tak, že sa pozriete na kartu Simulation Message and Simulation Log a uistite sa, že je začiarknutá možnosť ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). Používateľ môže zobraziť proces, ako simulácia prebieha z grafiky simulácie
 
-Simulation will stop after reaching steady state with a below message in Message file.
+Simulácia sa zastaví po dosiahnutí stabilného stavu s nižšie uvedenou správou v súbore správy.
 
-" PROGRAM STOPPED!
+" PROGRAM ZASTAVENÝ!
 
-CURRENT ROLLING PASS HAS REACHED STEADY-STATE CONDITIONS "
+AKTUÁLNY VALIVÝ PRIECHOD DOSIAHOL PODMIENKY USTÁLENÉHO STAVU “
 
-## Post Processing
+Postprocessing
 
-After the simulation has completed, click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab, MO post processor will open (See Fig. ALEL2.20.).
+Po dokončení simulácie kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), otvorí sa postprocesor MO (pozri obr. ALEL2.20.).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0020.jpg' | relative_url }})
 
-MO Post mode
+Režim MO Post
 
-Go to last step, Plot Strain - Effective and Stress Max principal state available and observe the state variable distribution (see Fig. ALEL2.21. and Fig. ALEL2.22. ).
+Prejdite na posledný krok, Plot Strain - Effective a Stress Max principal state available a sledujte rozdelenie stavových premenných (pozri obr. ALEL2.21. a obr. ALEL2.22. ).
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0021.jpg' | relative_url }})
 
-Strain - Effective Plot
+Kmeň - efektívny graf
 
 ![]({{ '/assets/images/labs/shape_rolling_labs/ale_shape_rolling_lab2/image0022.jpg' | relative_url }})
 

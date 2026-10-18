@@ -1,9 +1,9 @@
 ---
 lang: sk
-title: "Ring Rolling Labs Main PG"
+title: "Ring Rolling Labs Hlavné PG"
 ---
 
-# Ring Rolling Labs 
+# Ring Rolling Labs
 
 [Ring Rolling Lab1]({{ '/docs/sk/labs/ring_rolling_labs/ring_rolling_lab1/' | relative_url }})
 

@@ -1,111 +1,111 @@
 ---
 lang: sk
-title: "Lab 09 Hammer Multiple Operation"
+title: "Laboratórna úloha č. 09: Viacnásobná operácia s nástrojom „Hammer“"
 ---
 
-# Lab 09 Hammer Multiple Operation
+# Cvičenie 09: Viacnásobná operácia v programe Hammer
 
-The intent of the lab is to demonstrate to the user how to prepare a multiple-blow simulation in DEFORM for three successive hammer blows using 2D Multi Blow Forging operation. The simulation is performed as a 2D non-isothermal simulation.
+Cieľom tohto laboratórneho cvičenia je ukázať používateľovi, ako v programe DEFORM pripraviť simuláciu viacerých úderov pre tri po sebe idúce údery kladivom s využitím operácie „2D Multi Blow Forging“. Simulácia sa vykonáva ako 2D neizotermická simulácia.
 
-9.1. Creating a New Problem
+9.1. Vytvorenie nového problému
 
-9.2. Adding Operation
+9.2. Pridanie operácie
 
-9.3. Importing Keyfile
+9.3. Import súboru s kľúčom
 
-9.4. Setup Process settings
+9.4. Nastavenia procesu
 
-9.5. Editing Blow table
+9.5. Úprava tabuľky „Blow“
 
-9.6. Generating Inter-object Contact
+9.6. Vytváranie kontaktu medzi objektmi
 
-9.7. Generating Database
+9.7. Vytvorenie databázy
 
-9.8. Starting the Simulation
+9.8. Spustenie simulácie
 
-## Creating a New Problem
+## Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte položku DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte položku **DEFORM GUI Main** vxx.xx. Zobrazí sa okno DEFORM GUI Main.
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** " radio button in unit field. Define Problem Name as "**HM_FORGE** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Zvoľte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek zvoľte prepínač „**Angličtina**“. Názov úlohy zadajte ako „**HM_FORGE**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak políčko „Zobraziť dialógové okno s možnosťami“ nezaškrtnete, nezobrazí sa dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili novú úlohu s použitím integrovaného výrobného procesu Deform.
 
-Multiple operation wizard will open with the New Project dialog (See Fig. 9.1.), at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this lab we use ‘****HM_FORGE**** ’ as the project name.
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom Nový projekt (pozri obr. 9.1.), kde bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tomto cvičení použijeme ako názov projektu „****HM_FORGE****“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0001.jpg' | relative_url }})
 
-Assigning project name
+Priradenie názvu projektu
 
-User can also change the Unit system, project saving file location and add operation by selecting from First operation pull down list and checkbox (See Fig. 9.1.). Using copy Existing project option we can import previous saved projects as new project. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Používateľ môže tiež zmeniť systém jednotiek, umiestnenie súboru na uloženie projektu a pridať operáciu výberom z roletového zoznamu „Prvá operácia“ a zaškrtnutím príslušného políčka (pozri obr. 9.1.). Pomocou možnosti „Kopírovať existujúci projekt“ je možné importovať predtým uložené projekty ako nové projekty. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.
 
-## Adding Operation
+## Pridanie operácie
 
-Multiple Operation wizard will open. Add 2D Multi Blow Forging operation from the Explorer Operations list. Operation can be add by clicking on 2D Multi Blow Forging operation ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button or user can also add by drag and drop into the Operation Editor. (See Fig. 9.2.)
+Otvorí sa sprievodca viacerými operáciami. Zoznamu operácií v prehliadači pridajte operáciu „2D Multi Blow Forging“. Operáciu je možné pridať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) pre operáciu „2D Multi Blow Forging“ alebo ju môžete pridať aj pretiahnutím do editora operácií. (Pozri obr. 9.2.)
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0002.jpg' | relative_url }})
 
-Added Multi Blow Forging operation into Operation Editor
+Do editora operácií bola pridaná operácia „Multi Blow Forging“
 
-## Importing Keyfile
+## Importovanie súboru s kľúčom
 
-Import **HAMMER_LAB.KEY** from DEFORM installation folder \2d\LABS using Import ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}) option.
+Naimportujte súbor **HAMMER_LAB.KEY** z inštalačnej zložky DEFORM \2d\LABS pomocou možnosti Import ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}).
 
-## Setup Process settings
+## Nastavenie parametrov procesu
 
-Energy has been loaded from the Primary Die movement definition. Keep the same energy. Check the Use Workpiece rotation checkbox to flip the workpiece after every blow. Keep the Use Dwell checkbox checked, as no heating is going on between the blows in this lab. Do not check the Use Reheat checkbox. (see Fig. 9.3.) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to edit Blow table.
+Energia bola načítaná z definície pohybu primárneho lisovacieho nástroja. Zachovajte rovnakú energiu. Zaškrtnite políčko „Použiť rotáciu obrobku“, aby sa obrobok po každom údere otočil. Nechajte zaškrtnuté políčko „Použiť pauzu“, pretože v tomto laboratórnom cvičení medzi údermi nedochádza k ohrevu. Nezaškrtávajte políčko „Použiť opätovný ohrev“. (pozri obr. 9.3.) Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste upravili tabuľku úderov.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0003.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-## Editing Blow table
+## Úprava tabuľky „Blow“
 
-In the Blow Table add two more hits in addition to the default blow for a total of three blows. In all three rows change the Dwell time to 1.5 seconds by double clicking on the field. In the first row check the Flip checkbox. In the second row check the Flip checkbox and change the % Blow to 90. In the third row check change the % Blow to 80. (See Fig. 9.4.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until the Contact page.
+V tabuľke „Blow Table“ pridajte okrem predvoleného úderu ešte dva ďalšie údery, čím sa ich celkový počet zvýši na tri. Vo všetkých troch riadkoch zmeňte čas zdržania (Dwell time) na 1,5 sekundy dvojitým kliknutím na príslušné pole. V prvom riadku zaškrtnite políčko „Flip“. V druhom riadku zaškrtnite políčko „Flip“ a nastavte hodnotu „% Blow“ na 90. V treťom riadku nastavte hodnotu „% Blow“ na 80. (Pozri obr. 9.4.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Contact“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0004.jpg' | relative_url }})
 
-Edit Blow table
+Upraviť tabuľku Blow
 
-## Generating Inter-object Contact
+## Vytváranie kontaktu medzi objektmi
 
-In contact page, click on workpiece -workpiece relationship ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) button for define Shear friction value as **0******.2** 5 - Warm forming** from pull down menu list (See Fig. 9.5.), 0.25 value will be added as Shear friction value and define Heat transfer coefficient (HTC) value as **Forming** automatically 0.004 value will be added (See Fig. 9.6.).
+Na stránke „Kontakt“ kliknite na tlačidlo vzťahu medzi obrobkom a obrobkom ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}), aby ste v roletovom menu nastavili hodnotu šmykového trenia na **0******.2** 5 – **Teplé tvárnenie** (pozri obr. 9.5.), Hodnota 0,25 sa pridá ako hodnota šmykového trenia a po nastavení hodnoty koeficientu prenosu tepla (HTC) na **Tvarovanie** sa automaticky pridá hodnota 0,004 (pozri obr. 9.6.).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0005.jpg' | relative_url }})
 
-Deformation Inter-object data definition window
+Okno definície údajov o deformáciách medzi objektmi
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0006.jpg' | relative_url }})
 
-Thermal Inter-object data definition window
+Okno definície údajov o tepelnej interakcii medzi objektmi
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to go back to Contact window, since the friction conditions are the same for all the object pairs, the ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button can be used to copy the interface properties from the first relationship to all of the others. After this is done, all relationships will have a friction of 0.25 and HTC of 0.004 defined. Use ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) icon to determine a suitable contact tolerance (a value of about 0.00099" will be calculated), then click ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button to generate contacts for all relationships (see Fig. 9.7.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Data base generation page.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) sa vrátite do okna „Kontakt“; keďže podmienky trenia sú rovnaké pre všetky páry objektov, tlačidlom ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môžete skopírovať vlastnosti rozhrania z prvého vzťahu do všetkých ostatných. Po vykonaní tejto operácie budú mať všetky vzťahy definované trenie 0,25 a HTC 0,004. Pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) určite vhodnú toleranciu kontaktu (vypočíta sa hodnota približne 0,00099"), potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}), aby sa vygenerovali kontakty pre všetky vzťahy (pozri obr. 9.7.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Vytvorenie databázy.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_09_hammer_multiple_operation/2d_mobl9_image0007.jpg' | relative_url }})
 
-Generated contact relationship
+Vytvorený vzťah s kontaktom
 
-## Generating Database
+## Vytvorenie databázy
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process:
+Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) spustíte kontrolu programu, či sa pri nastavení úlohy niečo neprehliadlo. Počas kontroly:
 
-Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).
+Správy v červenej farbe označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli zadať údaje o materiáloch).
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, click on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab to run simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Keď program dokončí zapisovanie databázy, kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}), aby ste spustili simuláciu.
 
-## Starting the Simulation
+## Spustenie simulácie
 
-Click on ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) under the simulation tab, as we click on the Run option, Run simulation dialog will open, use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknite na ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) na karte „Simulácia“. Po kliknutí na možnosť „Spustiť“ sa otvorí dialógové okno „Spustiť simuláciu“. Použite predvolenú možnosť **Pokračovať v spúšťaní** na výber možnosti „**Pokračovať od posledného kroku**“ a potom vyberte režim simulácie **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie.
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message and Simulation Graphics in Simulation mode. Click the Simulation Message tab to view the Message file. As long as the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked, which is the default setting, the Message file will refresh every couple of seconds.
+Priebeh simulácie je možné počas jej vykonávania sledovať v režime Simulácia prostredníctvom okien Simulačné správy a Simulačná grafika. Kliknutím na kartu Simulačné správy zobrazíte súbor správ. Pokiaľ je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) (čo je predvolené nastavenie), súbor správ sa bude aktualizovať každých pár sekúnd.
 
-The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.
+Súbor „Message“ obsahuje informácie o tom, v ktorom simulačnom kroku sa simulácia práve nachádza, a tiež informácie o tom, ako dobre simulácia prebieha.
 
-When the simulation has finished, the following message will be added to the end of the LOG file:
+Po ukončení simulácie sa na koniec súboru LOG pridá nasledujúca správa:
 
-"MULTIPLE OPERATION COMPLETED."
+„VŠETKY OPERÁCIE BOLI UKONČENÉ.“
 
 ****
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [15\. Movement Controls Settings]({{ '/docs/sk/pre_processor/15_movement_controls_definition/15_movement_controls_settings/' | relative_url }})
 

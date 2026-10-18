@@ -1,220 +1,220 @@
 ---
 lang: sk
-title: "Steady State Extrusion Lab1"
+title: "Laboratórium extrudovania v ustálenom stave 1"
 ---
 
-# Steady State Extrusion Lab1
+# Laboratórne cvičenie č. 1: Extrúzia v ustálenom stave
 
-In this Lab we are setting up a simple operation of Steady state extrusion by importing a DB of the [ALE Extrusion lab]({{ '/docs/sk/labs/extrusion_labs/ale_extrusion_lab1/' | relative_url }}) ([3D_ALE_EX_Lab1]({{ '/docs/sk/labs/extrusion_labs/ale_extrusion_lab1/' | relative_url }}#3D_ALE_EX_Lab1)) . We will also use bearing length adjustment in this Lab.
+V tomto cvičení nastavíme jednoduchý proces extrudovania v ustálenom stave importom databázy modelu [ALE Extrusion lab]({{ '/docs/sk/labs/extrusion_labs/ale_extrusion_lab1/' | relative_url }}) ([3D_ALE_EX_Lab1]({{ '/docs/sk/labs/extrusion_labs/ale_extrusion_lab1/' | relative_url }}#3D_ALE_EX_Lab1)). V rámci tohto cvičenia využijeme aj nastavenie dĺžky ložiska.
 
-The application of this lab will extrude 5 small cylinder parts from a large cylinder billet. The model of the workpiece used in ALE is with symmetry as shown in Fig. SSEXTL1.1. The diameter of D0 is 140 mm. The diameter of D1 is 26 mm. The diameters of D2 and D4 are 27 mm. The diameters of D3 and D5 are 28 mm.
+V rámci tejto laboratórnej úlohy sa z veľkého valcového polotovaru vytlačia 5 malých valcových dielov. Model obrobku použitý v programe ALE je symetrický, ako je znázornené na obr. SSEXTL1.1. Priemer D0 je 140 mm. Priemer D1 je 26 mm. Priemery D2 a D4 sú 27 mm. Priemery D3 a D5 sú 28 mm.
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0001.jpg' | relative_url }})
 
-Model of the Workpiece
+Model obrobku
 
-1.1. Creating a New Problem
+1.1. Vytvorenie nového problému
 
-1.2. Adding Operation
+1.2. Pridanie operácie
 
-1.3. Importing ALE Extrusion Database
+1.3. Import databázy extrúzií ALE
 
-1.4. Simulation Setup
+1.4. Nastavenie simulácie
 
-1.5. Step Controls
+1.5. Ovládacie prvky krokov
 
-1.6. Generate DB
+1.6. Vytvorenie databázy
 
-1.7. Running Simulation
+1.7. Spustenie simulácie
 
-1.8. Post Processing
+1.8. Následné spracovanie
 
-1.9. Bearing Length Adjustment
+1.9. Nastavenie dĺžky ložiska
 
-1.10. Comparisons of simulation results
+1.10. Porovnanie výsledkov simulácií
 
-## Creating a New Problem 
+## Vytvorenie nového problému 
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear as shown below Fig. SSEXTL1.2.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v1x.xxx (kde .xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte **DEFORM GUI Main** vxx.xx. Zobrazí sa hlavné okno DEFORM GUI Main, ako je znázornené na obrázku SSEXTL1.2.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg' | relative_url }})
 
-DEFORM GUI Main window
+Hlavné okno programu DEFORM GUI
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. SSEXTL1.3. Select "**Integrated Manufacturing Process** " radio button and unit system as "**SI** " radio button in unit field. Define Problem Name as "**********3D_SS_EX_Lab1**** **" and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie úlohy, ako je znázornené na obr. SSEXTL1.3. Vyberte tlačidlo „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte systém jednotiek „**SI**“. Zadajte názov úlohy ako „**********3D_SS_EX_Lab1**** **“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak nezaškrtnete políčko „**Zobraziť dialógové okno s možnosťami**“, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s využitím integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/applications/55_2_arc_welding/image0002.jpg' | relative_url }})
 
-New Problem page
+Stránka „Nový problém“
 
-Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use "**3D_SS_EX_Lab1** " as the project name. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Otvorí sa sprievodca viacerými operáciami s dialógovým oknom „Nový projekt“, kde bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „**3D_SS_EX_Lab1**“. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie.
 
-##  Adding Operation
+##  Pridanie operácie
 
-Add 3D Extrusion operation from the Explorer Operations list. Add the operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button available next to 3D Extrusion or user can also add by drag and drop into the Operation Editor. When we add the 3D Extrusion operation, process settings Window will open by default.
+Pridajte operáciu „3D Extrusion“ zo zoznamu operácií v prehliadači. Operáciu pridáte kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}), ktoré sa nachádza vedľa položky „3D Extrusion“, alebo ju môžete pridať aj pretiahnutím do editora operácií. Po pridaní operácie „3D Extrusion“ sa štandardne otvorí okno nastavení procesu.
 
-## Importing ALE Extrusion Database
+## Import databázy extrúzií ALE
 
-At this point, we can import the first step from the ALE database (Database generated in [**ALE Extrusion Lab1**]({{ '/docs/sk/labs/extrusion_labs/ale_extrusion_lab1/' | relative_url }}) (**3D_ALE_EX_Lab1**) setup). Click **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Import** , select **3D_ALE_EX_Lab1.DB** and choose Step **-1.** Now we just need to change the things that are different between the ALE simulation and the new Steady State analysis.
+V tomto bode môžeme importovať prvý krok z databázy ALE (databáza vytvorená v nastavení [**ALE Extrusion Lab1**]({{ '/docs/sk/labs/extrusion_labs/ale_extrusion_lab1/' | relative_url }}) (**3D_ALE_EX_Lab1**)). Kliknite na **Súbor![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Import**, vyberte súbor **3D_ALE_EX_Lab1.DB** a zvoľte krok **-1.** Teraz už stačí len upraviť rozdiely medzi simuláciou ALE a novou analýzou ustáleného stavu.
 
-## Simulation Setup
+## Nastavenie simulácie
 
-Go to **Simulation setup** , and choose **Steady state extrusion** radio button in Simulation method. Set the **Strain update** and **Temperature****update** with **0** per step in Acceleration, then **uncheck** the **Strain update** and **Temperature****update** check boxes. Simulation setup is shown in Fig. SSEXTL1.4. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Step controls or choose Step Controls from Operation tree.
+Prejdite do časti **Nastavenie simulácie** a v položke Metóda simulácie vyberte voľbu **Extrúzia v ustálenom stave**. V časti **Zrýchlenie** nastavte **Aktualizáciu deformácie** a **Aktualizáciu teploty** na hodnotu **0** na krok, potom **zrušte zaškrtnutie** políčok **Aktualizácia deformácie** a **Aktualizácia teploty**. Nastavenie simulácie je znázornené na obr. SSEXTL1.4. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po ovládacie prvky krokov alebo vyberte Ovládacie prvky krokov zo stromu Operácie.
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0004.jpg' | relative_url }})
 
-Simulation setup
+Nastavenie simulácie
 
-## Step Controls
+## Ovládacie prvky krokov
 
-Click ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) to switch to expert mode in the top menu bar for step control.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) v hornom paneli ponúk prejdete do expertného režimu pre krokové riadenie.
 
-### Simulation steps
+### Kroky simulácie
 
-In the simulation of Steady state extrusion, the geometry will be updated only at the last step based on the calculated velocity field.
+Pri simulácii extrudovania v ustálenom stave sa geometria aktualizuje až v poslednom kroku na základe vypočítaného poľa rýchlostí.
 
-If we define contact separation relationship between workpiece and the die with 'Non-separable', the velocity field will reach the steady state after 2 simulation steps. In this situation, 5 steps of simulation are enough for Steady state extrusion.
+Ak vzťah medzi obrobkom a matricou v rámci oddelenia kontaktov nastavíme na „Neoddeliteľné“, pole rýchlostí dosiahne ustálený stav po 2 simulačných krokoch. V tejto situácii stačí na simuláciu extrudovania v ustálenom stave 5 simulačných krokov.
 
-If we define contact separation relationship between workpiece and the die with 'Separable', there will be separation and contacting in the bearing region at every simulation step. So, we need more simulation steps for the velocity field to reach the steady state. In this situation, 10 steps of simulation are generally enough for Steady state extrusion.
+Ak vzťah medzi obrobkom a matricou definujeme ako „oddeliteľný“, v oblasti ložiska bude v každom simulačnom kroku dochádzať k oddeleniu a kontaktu. Preto potrebujeme viac simulačných krokov, aby rýchlostné pole dosiahlo ustálený stav. V tejto situácii zvyčajne stačí 10 simulačných krokov na extrudovanie v ustálenom stave.
 
-So, in this lab, we set **Number****of** **simulation** steps as '**5** ' and **Step****Increment****to** **save** as '**1** ' in the Simulation steps dialog (see Fig. SSEXTL1.5.).
+V tomto laboratórnom cvičení sme teda v dialógovom okne „Simulačné kroky“ nastavili **Počet****** **simulačných** krokov na hodnotu „**5**“ a **Krok****inkrement** na **uloženie** na hodnotu „**1**“ v dialógovom okne Simulačné kroky (pozri obr. SSEXTL1.5.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0005.jpg' | relative_url }})
 
-Simulation step setup
+Nastavenie simulačného kroku
 
-### Stop criteria
+### Kritériá ukončenia
 
-In the **Stop****criteria** dialog, click the **ALE** **Steady** **State** page, **uncheck** 'T**urn on steady-state stop control** ' if not unchecked (see Fig. SSEXTL1.6.).
+V dialógovom okne **Kritériá zastavenia** kliknite na kartu **ALE** **Steady** **State** a **zrušte zaškrtnutie** políčka „**Zapnúť riadenie zastavenia v ustálenom stave**“, ak nie je už zrušené (pozri obr. SSEXTL1.6.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/ale_extrusion_lab1/image0027.jpg' | relative_url }})
 
-Stopping control
+Ovládanie zastavenia
 
-## Generate DB
+## Vytvoriť databázu
 
-Then go to Generate DB page. Click ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) to see if anything was missed in the setup and then click on the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. Observe the message in Message tab informing database generation status.
+Potom prejdite na stránku „Generate DB“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali, či sa pri nastavení na niečo nezabudlo, a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) na vytvorenie databázy. Pozrite si správu na karte „Message“, ktorá informuje o stave vytvárania databázy.
 
-## Running Simulation
+## Spustenie simulácie
 
-Once the database has been generated switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. SSEXTL1.7.. Use the default **Continue****Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do simulačného režimu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom operácií. Kliknutím na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. SSEXTL1.7. Použite predvolenú možnosť **Pokračovať****Spustiť** na výber možnosti „**Pokračovať od posledného kroku**“ (od kroku -1) a potom vyberte režim simulácie pomocou prepínača **Interaktívny**. Kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-To define MPI settings, click on ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}) button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend on your 3D MPI license).
+Ak chcete nastaviť parametre MPI, kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}). Rozbalí sa okno „Run Options“, v ktorom sa zobrazia možnosti na nastavenie parametrov MPI pre simuláciu (maximálny počet procesorov, ktorý je možné nastaviť, závisí od vašej licencie 3D MPI).
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0007.jpg' | relative_url }})![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0007.jpg' | relative_url }})
 
-Run Simulation Window
+Spustiť okno simulácie
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, make sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. User can view the Extrusion process from Simulation graphics as the simulation proceeds to the specified Step definition.
+Priebeh simulácie môžete sledovať na kartách „Simulation Message“ a „Simulation Log“; uistite sa, že je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). Počas priebehu simulácie až po dosiahnutie zadaného kroku si používateľ môže prezrieť proces extrudovania na grafických zobrazeniach simulácie.
 
-## Post Processing
+## Následné spracovanie
 
-When the simulation is completed, review the results by switching to Post mode using the ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) button above the Simulation tool bar.
+Po dokončení simulácie si výsledky prezrite tak, že prejdete do režimu Post pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) nad panelom nástrojov Simulácia.
 
-Plots of the **Effective****Strain** and **Temperature** of the workpiece at last step are given in Fig. SSEXTL1.8. and Fig. SSEXTL1.9.
+Grafy **efektívneho****deformácie** a **teploty** obrobku v poslednom kroku sú uvedené na obr. SSEXTL1.8 a obr. SSEXTL1.9.
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0008.jpg' | relative_url }})
 
-Effective Strain distribution at last step
+Efektívne rozloženie deformácie v poslednom kroku
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0009.jpg' | relative_url }})
 
-Temperature distribution at last step
+Rozloženie teploty v poslednom kroku
 
-Plot of the X displacement and Y displacement of the workpiece at last step is given in Fig. SSEXTL1.10. and Fig. SSEXTL1.11. Even though the displacements are very small we cannot observe the shape bending, but from the displacement distribution in X direction, we can see the dominated displacement is located at profile D3 with negative value. From the displacement distribution in Y direction, we can see the dominated displacement is located at profile D2 with negative value. This concludes that surround profiles (D2 & D3) bent toward the central profile (D1) after extrusion, which is similar to the simulation result of Lagrangian extrusion.
+Graf posunutia v smere X a posunutia v smere Y obrobku v poslednom kroku je uvedený na obr. SSEXTL1.10 a obr. SSEXTL1.11. Hoci sú posuny veľmi malé, nemôžeme pozorovať ohyb tvaru, ale z rozloženia posunov v smere X vidíme, že prevládajúci posun sa nachádza na profile D3 s zápornou hodnotou. Z rozloženia posunov v smere Y je zrejmé, že prevládajúci posun sa nachádza na profile D2 a má zápornú hodnotu. Z toho vyplýva, že okrajové profily (D2 a D3) sa po extrudovaní ohnuli smerom k centrálnemu profilu (D1), čo je podobné výsledku simulácie Lagrangeovej extrudácie.
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0010.jpg' | relative_url }})
 
-X- Displacement distribution of the workpiece at last step
+X – Rozloženie posunu obrobku v poslednom kroku
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0011.jpg' | relative_url }})
 
-Y-Displacement distribution of the workpiece at last step
+Rozloženie posunu v smere Y obrobku v poslednom kroku
 
-## Bearing Length Adjustment
+## Nastavenie dĺžky ložiska
 
-In extrusion, bending, wrap and twist of profiles are mainly caused by the unbalance material flowing. In this example, for surround profiles, the material of outer side flew faster than that of inner side, which caused the bending. We can use bearing length adjustment to reduce the bending of surround profiles.
+Pri extrudovaní sú ohyby, skrútenia a zvlnenia profilov spôsobené hlavne nerovnomerným tokom materiálu. V tomto príklade, pri obvodových profiloch, materiál na vonkajšej strane tiekol rýchlejšie ako na vnútornej strane, čo spôsobilo ohyb. Ohyb obvodových profilov môžeme znížiť nastavením dĺžky ložiska.
 
-We should keep the simulation set up and simulation result of this project and do the simulation of bearing length adjustment with another project.
+Mali by sme si uchovať nastavenie simulácie a výsledky simulácie z tohto projektu a v rámci iného projektu vykonať simuláciu úpravy dĺžky ložiska.
 
-### Simulation step up of bearing length adjustment
+### Simulácia postupného nastavovania dĺžky ložiska
 
-In **File** menu, click on New ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) and click on ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) in both Questions popups, new Project will be open with New project popup.
+V ponuke **Súbor** kliknite na položku Nový ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) a v oboch vyskakujúcich oknách Otázky kliknite na ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}). Otvorí sa nový projekt s vyskakujúcim oknom Nový projekt.
 
-In New Project popup define the Project name as "**3D_SS_EX_Lab1_BRGADJ** ", select **Copy****existing** **project** radio button, click on **browse** and browse " **3D_SS_EX_Lab1** " **project** and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) in New Project popup. The " 3D_SS_EX_Lab1" project is copied into "3D_SS_EX_Lab1_BRGADJ " along with all settings.
+V okne „Nový projekt“ zadajte názov projektu ako „**3D_SS_EX_Lab1_BRGADJ**“, vyberte **Kopírovať****existujúci** **projekt**, kliknite na **Prehľadať**, vyhľadajte **projekt** „**3D_SS_EX_Lab1**“ a v okne Nový projekt kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}). Projekt „3D_SS_EX_Lab1“ sa skopíruje do projektu „3D_SS_EX_Lab1_BRGADJ“ spolu so všetkými nastaveniami.
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0012.jpg' | relative_url }})
 
-New Project for bearing length adjustment lab
+Nový projekt pre laboratórium na nastavovanie dĺžky ložísk
 
-Go to **Die![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Die Bearing Control Points** page.
+Prejdite na stránku **Die![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Kontrolné body ložiska matice**.
 
-In this lab, we will reduce the inner side bearing length of profile D2 to speed up the material flowing on this side, and increase the outer side bearing length of profile D3 to slow down the material flowing on that side.
+V tomto laboratórnom cvičení skrátime dĺžku vnútorného oporného úseku profilu D2, aby sme urýchlili tok materiálu na tejto strane, a predĺžime dĺžku vonkajšieho oporného úseku profilu D3, aby sme spomalili tok materiálu na tej strane.
 
-In the **Die****Bearing****Control****Points** page, select bearing surface 1 (highlighted with green color in display window), define 3 control points by clicking on the bearing entry edge at positions of inner side, middle and outer side. Then we can edit their coordinates and length scales in the control points table. Select point 1 in the table, change its coordinates to (0,31.5,0), change its Length Scale to '0.55'. Select point 2 in the table, change its coordinates to (13.5,45,0), keep its Length Scale as '1'. Select point 3 in the table, change its coordinates to (0,58.5,0), keep its Length Scale as '1'. We can see the bearing shape and bearing length for surface 1 are changed (see Fig. SSEXTL1.13.).
+Na stránke **Die****Bearing****Control****Points** vyberte ložiskovú plochu 1 (v okne zobrazenia je zvýraznená zelenou farbou) a definujte 3 kontrolné body kliknutím na vstupnú hranu ložiska v polohách vnútornej strany, stredu a vonkajšej strany. Potom môžeme v tabuľke kontrolných bodov upraviť ich súradnice a mierky dĺžky. Vyberte bod 1 v tabuľke, zmeňte jeho súradnice na (0,31,5,0) a zmeňte jeho mierku dĺžky na „0,55“. Vyberte bod 2 v tabuľke, zmeňte jeho súradnice na (13,5; 45; 0) a dĺžkové mierky ponechajte na hodnote „1“. Vyberte bod 3 v tabuľke, zmeňte jeho súradnice na (0; 58,5; 0) a dĺžkové mierky ponechajte na hodnote „1“. Vidíme, že tvar ložiska a dĺžka ložiska pre povrch 1 sa zmenili (pozri obr. SSEXTL1.13.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0013.jpg' | relative_url }})
 
-Control points setting of bearing surface 1
+Nastavenie kontrolných bodov opornej plochy 1
 
-Select bearing surface 3 (highlighted with green color in display window), define 3 control points by clicking on the bearing entry edge at positions of inner side, middle and outer side. Then we can edit their coordinates and length scales in the control points table. Select point 1 in the table, change its coordinates to (31,0,0), keep its Length Scale as '1'. Select point 2 in the table, change its coordinates to (45,14,0), keep its Length Scale as '1'. Select point 3 in the table, change its coordinates to (59,0,0), change its Length Scale to '1.5'. We can see the bearing shape and bearing length for surface 3 are changed (see Fig. SSEXTL1.14.).
+Vyberte ložiskovú plochu 3 (v okne zobrazenia zvýraznenú zelenou farbou) a definujte 3 kontrolné body kliknutím na vstupnú hranu ložiska v polohách vnútornej strany, stredu a vonkajšej strany. Následne môžete v tabuľke kontrolných bodov upravovať ich súradnice a mierky dĺžky. Vyberte bod 1 v tabuľke, zmeňte jeho súradnice na (31,0,0), mierku dĺžky ponechajte na hodnote „1“. Vyberte bod 2 v tabuľke, zmeňte jeho súradnice na (45,14,0), mierku dĺžky ponechajte na hodnote „1“. Vyberte bod 3 v tabuľke, zmeňte jeho súradnice na (59,0,0) a zmeňte jeho mierku dĺžky na „1,5“. Vidíme, že tvar a dĺžka nosníka pre plochu 3 sa zmenili (pozri obr. SSEXTL1.14.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0014.jpg' | relative_url }})
 
-Control points setting of bearing surface 3
+Nastavenie kontrolných bodov opornej plochy 3
 
-Click in the Die Bearing Control Points page, rotate the object in the Display window, we can see the modified die geometry in Fig. SSEXTL1.15.
+Kliknite na stránku „Die Bearing Control Points“, otočte objekt v okne „Display“ – upravenú geometriu formy môžete vidieť na obr. SSEXTL1.15.
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0015.jpg' | relative_url }})
 
-Die geometry after bearing length adjustment
+Geometria matice po nastavení dĺžky ložiska
 
-Go to **Step Control** page, in the **Stop** **criteria** dialog, click the **ALE****Steady****State** page, **uncheck** 'T**urn on steady-state stop control** ' (see Fig. SSEXTL1.6.).
+Prejdite na stránku **Kontrola krokov**, v dialógovom okne **Kritériá zastavenia** kliknite na stránku **ALE****Steady****State**, **zrušte zaškrtnutie** políčka „**Zapnúť riadenie zastavenia v ustálenom stave**“ (pozri obr. SSEXTL1.6.).
 
-### Generate DB
+### Vytvoriť databázu
 
-Then go to Generate DB page. Click ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) to see if anything was missed in the setup and then click on the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. Observe the message in Message tab informing database generation status.
+Potom prejdite na stránku „Generate DB“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali, či sa pri nastavení na niečo nezabudlo, a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) na vytvorenie databázy. Pozrite si správu na karte „Message“, ktorá informuje o stave vytvárania databázy.
 
-### Running Simulation
+### Spustenie simulácie
 
-Once the database has been generated switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. SSEXTL1.16. Use the default **Continue****Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do simulačného režimu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom operácií. Kliknutím na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. SSEXTL1.16. Použite predvolenú voľbu **Pokračovať****Spustiť** na výber možnosti „**Pokračovať od posledného kroku**“ (od kroku -1) a potom vyberte režim simulácie pomocou prepínača **Interaktívny**. Kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-To define MPI settings, click on ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}) button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend on your 3D MPI license).
+Ak chcete nastaviť parametre MPI, kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}). Rozbalí sa okno „Run Options“, v ktorom sa zobrazia možnosti na nastavenie parametrov MPI pre simuláciu (maximálny počet procesorov, ktorý je možné nastaviť, závisí od vašej licencie 3D MPI).
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0016.jpg' | relative_url }})
 
-Run Simulation Window
+Spustiť okno simulácie
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, make sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. User can view the Extrusion process as the simulation proceeds to the specified Step definition from Simulation graphics.
+Priebeh simulácie môžete sledovať na kartách „Simulation Message“ a „Simulation Log“; uistite sa, že je zaškrtnutá možnosť ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). Počas simulácie, keď sa proces posúva k zadanému kroku, si používateľ môže v grafickom zobrazení simulácie prezrieť proces extrudovania.
 
-## Comparisons of simulation results
+## Porovnanie výsledkov simulácií
 
-After the simulation of modified bearing surface is completed, we can compare the simulation results in Post processor.
+Po dokončení simulácie upravenej ložiskovej plochy môžeme výsledky simulácie porovnať v postprocesore.
 
-In **DEFORM GUI Main** window, highlight "**3D_SS_EX_Lab1.DB** ", then click ![]({{ '/assets/icons/pre_icons/mo_post_processor_gui_link.jpg' | relative_url }}) to open "**3D_SS_EX_Lab1.DB** " in Post processor.
+V okne **DEFORM GUI Main** označte súbor „**3D_SS_EX_Lab1.DB**“ a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_post_processor_gui_link.jpg' | relative_url }}), aby sa súbor „**3D_SS_EX_Lab1.DB**“ otvoril v postprocesore.
 
-In Post-processor, from the top menu bar, click **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Open** , select "**3D_SS_EX_Lab1_BRGADJ.DB** ", then click ![]({{ '/assets/icons/pre_icons/mo_open_button.jpg' | relative_url }}).
+V programe Post-processor kliknite v hornom paneli ponúk na položku **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Open**, vyberte súbor „**3D_SS_EX_Lab1_BRGADJ.DB**“ a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_open_button.jpg' | relative_url }}).
 
-From the top menu bar, click **Windows**![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})******Tile Vertically** , we can see that both "**3D_SS_EX_Lab1.DB** " and "**3D_SS_EX_Lab1_BRGADJ.DB** " are opened in Post processor. Thus, we can compare the simulation results of 2 databases in the same display window.
+V hornom paneli ponúk kliknite na **Windows**![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})******Usporiadať vertikálne**. Vidíme, že v postprocesore sú otvorené súbory „**3D_SS_EX_Lab1.DB**“ aj „**3D_SS_EX_Lab1_BRGADJ.DB**“. Vďaka tomu môžeme porovnať výsledky simulácie oboch databáz v jednom okne.
 
-In the display window, with the right mouse, both check '**DB Info** ' and '**Title** ' to display the name of database and the simulation step.
+V okne zobrazenia kliknite pravým tlačidlom myši a zaškrtnite políčka „**DB Info**“ aj „**Title**“, aby sa zobrazil názov databázy a krok simulácie.
 
-Firstly, we compare the contacts of the workpiece at last step. We can obviously see the different contacts in surround profiles D2 & D3 after their bearing length adjustments (see Fig. SSEXTL1.17.).
+Najskôr porovnáme styčné body obrobku v poslednom kroku. Je zrejmé, že po úprave dĺžky opory vidíme odlišné styčné body v okrajových profiloch D2 a D3 (pozri obr. SSEXTL1.17.).
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0017.jpg' | relative_url }})
 
-Contacts comparison of the workpiece at last step
+Porovnanie kontaktov obrobku v poslednom kroku
 
-Then, we compare the displacements. Comparison of X-Displacement of the workpiece at last step is given in Fig. SSEXTL1.18. We can see the dominated displacement in X direction marked with Min value reduced to 20% after bearing length adjustment.
+Následne porovnáme posuny. Porovnanie posunu v smere X obrobku v poslednom kroku je znázornené na obr. SSEXTL1.18. Vidíme, že prevládajúci posun v smere X, označený hodnotou Min, sa po úprave dĺžky ložiska znížil na 20 %.
 
-Comparison of Y-Displacement of the workpiece at last step is given in Fig. SSEXTL1.19. We can see the dominated displacement in Y direction marked with Min value reduced to 40% after bearing length adjustment.
+Porovnanie posunutia obrobku v smere Y v poslednom kroku je uvedené na obr. SSEXTL1.19. Vidíme, že prevládajúce posunutie v smere Y, označené hodnotou Min, sa po úprave dĺžky ložiska znížilo na 40 %.
 
-So, bearing length adjustment is an effective method to change the balance of material flowing for ALE & Steady state extrusion.
+Nastavenie dĺžky ložiska je teda účinnou metódou na zmenu rovnováhy toku materiálu pri extrudovaní v režime ALE aj v ustálenom stave.
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0018.jpg' | relative_url }})
 
-X-Displacement comparison of the workpiece at last step
+Porovnanie posunu X obrobku v poslednom kroku
 
 ![]({{ '/assets/images/labs/extrusion_labs/steady_state_extrusion_lab1/image0019.jpg' | relative_url }})
 
-Y-Displacement comparison of the workpiece at last step
+Porovnanie posunu v smere Y obrobku v poslednom kroku

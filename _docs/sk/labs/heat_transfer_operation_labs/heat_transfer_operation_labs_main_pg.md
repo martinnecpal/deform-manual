@@ -1,9 +1,9 @@
 ---
 lang: sk
-title: "Heat Transfer Operation Labs Main Pg"
+title: "Hlavná stránka laboratórnych cvičení z prenosu tepla"
 ---
 
-# Heat Transfer Operation Labs 
+# Praktické cvičenia z prenosu tepla 
 
 [2D Heat Transfer Operations Lab]({{ '/docs/sk/labs/heat_transfer_operation_labs/2d_heat_transfer_operations_lab/' | relative_url }})
 

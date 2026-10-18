@@ -1,9 +1,9 @@
 ---
 lang: sk
-title: "Advanced Labs in MO Main Pg"
+title: "Pokročilé laboratóriá v štáte Missouri – hlavná stránka"
 ---
 
-# Advanced Labs in MO 
+# Pokročilé laboratóriá v štáte Missouri 
 
 **GEAR Blank:**
 

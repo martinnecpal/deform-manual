@@ -1,99 +1,99 @@
 ---
 lang: sk
-title: "Gear Blank EN Lab 10"
+title: "Polotovar na ozubené kolesá EN Lab 10"
 ---
 
-# Lab 10 Gear Blank Symmetry Operation
+# Cvičenie č. 10: Operácia symetrie s polotovarom ozubeného kolesa
 
-Open DEFORM and create a new project named **Gear_sym** to setup the isothermal symmetry workpiece forming of gear blank.
+Spustite program DEFORM a vytvorte nový projekt s názvom **Gear_sym**, aby ste mohli nastaviť izotermické symetrické tvárnenie polotovaru ozubeného kolesa.
 
-### Add operation and objects
+### Pridať operáciu a objekty
 
-Add the **3D forming operation** in operation editor from **explorer**.
+V editore operácií pridajte **3D tvarovaciu operáciu** z **priečinka**.
 
-In the Simulation controls branch in operation tree uncheck the Heat transfer mode from simulation control main tab as this is an isothermal simulation. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V vetve „Simulačné ovládacie prvky“ v strome operácií zrušte zaškrtnutie políčka „Režim prenosu tepla“ na hlavnej karte „Simulačné ovládacie prvky“, keďže ide o izotermickú simuláciu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-Load the **AISI-8620[1550-2200F(850-1200C)]** material from the **Steel_at_Extended_Temperatures** library.
+Načítajte materiál **AISI-8620[1550–2200 °F (850–1200 °C)]** z knižnice **Steel_at_Extended_Temperatures**.
 
-Click **Objects** branch in operation tree to add objects and continue setup. Add three objects (if they don't already exist) and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define workpiece.
+Kliknite na vetvu **Objekty** v strome operácií, aby ste pridali objekty a pokračovali v nastavení. Pridajte tri objekty (ak ešte neexistujú) a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali obrobok.
 
-### Define Symmetry workpiece
+### Definovanie symetrie obrobku
 
-Set Temperature to **2250** ° F and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to create Geometry.
+Nastavte teplotu na **2250** °F a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vytvorte geometriu.
 
-**Create workpiece Geometry**  
-Click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) to create a workpiece from a primitive **cylinder** with **5** ” diameter, **0.1** ” corner **radii** , **8.15** “ tall and **30** ° revolve angle with **30** sections. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close menu.
+**Vytvorenie geometrie obrobku**  
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), aby ste vytvorili obrobok z primitívu **valca** s priemerom **5** ”, **0,1** ” **polomermi** rohov, výškou **8,15** “ a uhlom otáčania **30** ° s **30** rezmi. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvoríte ponuku.
 
-As the dies upward direction is Y Workpiece must be rotated to align with the dies upward direction. So click on **Positioning** branch in operation tree and rotate workpiece 90° about the –X axis and center (0,0,0) using ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) option, as was the case in [Lab5]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab5/' | relative_url }}).
+Keďže smer hornej časti formy je Y, obrobok je potrebné otočiť tak, aby bol zarovnaný so smerom hornej časti formy. Kliknite teda na vetvu **Polohovanie** v strome operácií a otočte obrobok o 90° okolo osi –X a stredu (0,0,0) pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}), rovnako ako v prípade [Lab5]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab5/' | relative_url }}).
 
-Go back to Workpiece Geometry window by clicking **Geometry** branch in operation tree to define symmetry planes.
+Vráťte sa do okna „Geometria obrobku“ kliknutím na vetvu **Geometria** v strome operácií, aby ste mohli definovať symetrické roviny.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}) button. Select Planar symmetry branch, using left side tool bar (below explorer) pick the symmetrical planes from graphics window as shown in Fig. L10.1., one at a time.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}). Vyberte vetvu „Planárna symetria“ a pomocou panela nástrojov na ľavej strane (pod prehliadačom) vyberte v grafickom okne symetrické roviny, ako je znázornené na obr. L10.1., vždy po jednej.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab10_image0001.jpg' | relative_url }})
 
-Symmetry surfaces
+Symetrické plochy
 
-Once you have selected a plane, click on the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add) button to add planar symmetry planes.
+Po výbere roviny kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať), aby ste pridali rovinné symetrické roviny.
 
-Note:
+Poznámka:
 
-Symmetry will assist the mesh generator in determining edges to protect during meshing.
+Symetria pomôže generátoru sietí pri určovaní hrán, ktoré je potrebné chrániť počas vytvárania siete.
 
-Added symmetry surfaces appears under Planar symmetry branch as shown in Fig. L10.2. Confirm the symmetry planes by selecting the added branches under planar symmetry and observing the highlighted plane in graphics window.
+Pridané symetrické plochy sa zobrazia v časti „Rovinná symetria“, ako je znázornené na obr. L10.2. Overte symetrické roviny tak, že v časti „Rovinná symetria“ vyberiete pridané vetvy a v grafickom okne si všimnete zvýraznenú rovinu.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab10_image0002.jpg' | relative_url }})
 
-Added symmetry planes
+Pridané symetrické roviny
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and generate mesh with **10000** elements. Deform will ask if you would like to use the geometries symmetric definition in the mesh BCC. Click ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}). (See Fig. L10.3.)
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a vygenerujte sieť s **10 000** prvkami. Program Deform sa vás opýta, či chcete v sieti BCC použiť symetrickú definíciu geometrie. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}). (Pozri obr. L10.3.)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab10_image0003.jpg' | relative_url }})
 
-Generating Mesh BCC from Geometry BCC popup
+Vytvorenie siete BCC z geometrie – kontextové menu BCC
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select the **AISI-8620** material in material list.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a v zozname materiálov vyberte materiál **AISI-8620**.
 
-Go to the **Workpiece****Boundary****condition** window in operation tree and confirm the 2 symmetry planes. (See Fig. L10.4.)
+Prejdite v stromovej štruktúre operácií do okna **Okrajové podmienky obrobku** a overte 2 roviny symetrie. (Pozri obr. L10.4.)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab10_image0004.jpg' | relative_url }})
 
-Generated mesh symmetry BCC from geometry symmetry BCC
+Symetria generovanej siete BCC na základe symetrie geometrie BCC
 
-Click on **Top****die** in operation tree to import dies.
+Kliknite na položku **Top****die** v prevádzkovom strome, aby ste naimportovali matrice.
 
-### Importing dies
+### Importovanie foriem
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) to import the top die object from the first step of the forge operation (op 2) of “**Gear_t.DB**.”
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}), aby ste naimportovali objekt hornej matrice z prvého kroku operácie kovania (op 2) súboru „**Gear_t.DB**“.
 
-Click on **Bottom****die** in operation tree.
+Kliknite na položku **Spodná forma** v strome operácií.
 
-Similarly import object for bottom die at first step of operation 2 (from **Gear_t****.DB**).
+Podobne naimportujte objekt spodnej matrice v prvom kroku operácie 2 (zo súboru **Gear_t****.DB**).
 
-### Generate inter-object relations
+### Vytvorenie vzťahov medzi objektmi
 
-In Contact page, add three relations using ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button. For first relation, select Workpiece as Master and Slave to model self-contact, for second relation select Top Die as Master and Workpiece as Slave and for last relation select Bottom Die as Master and Workpiece as Slave. Click on ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) and define Shear friction as 0.3, to assign same friction to all relations click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}), then click on ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) button to calculate tolerance value and click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define **stopping** and **simulation** controls.
+Na stránke „Kontakt“ pridajte tri vzťahy pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}). Pre prvý vzťah vyberte „Obrobok“ ako hlavný prvok a „Obrobok“ ako podriadený prvok, čím modelujete vlastný kontakt; pre druhý vzťah vyberte „Horná forma“ ako hlavný prvok a „Obrobok“ ako podriadený prvok; a pre posledný vzťah vyberte „Spodná forma“ ako hlavný prvok a „Obrobok“ ako podriadený prvok. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) a nastavte hodnotu trenia pri šmyku na 0,3. Ak chcete priradiť rovnakú hodnotu trenia všetkým vzťahom, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}), potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) na výpočet hodnoty tolerancie a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) na vytvorenie kontaktu. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali ovládacie prvky **zastavenia** a **simulácie**.
 
-### Define stopping and Simulation controls
+### Nastavenie ovládacích prvkov zastavenia a simulácie
 
-Set the **Stopping criteria** to create a flash thickness of **0.20** inches.
+Nastavte **kritériá zastavenia** tak, aby sa dosiahla hrúbka blesku **0,20** palca.
 
-As the dies distance between objects stopping controls reference points are also imported with object in stopping controls window check the Distance between objects check box and select the object 1 as Top die and object 2 as Bottom die. This will read the top and bottom die imported reference points and display the same in graphics window. Define**0.2** inches in data field and Y as distance direction.
+Keďže sa vzdialenosť medzi objektmi v zastavovacích kontrolách importuje spolu s objektmi do okna zastavovacích kontrol, zaškrtnite políčko „Vzdialenosť medzi objektmi“ a vyberte objekt 1 ako hornú maticu a objekt 2 ako spodnú maticu. Tým sa načítajú importované referenčné body hornej a spodnej matice a zobrazia sa v grafickom okne. V dátovom poli zadajte hodnotu **0,2** palca a ako smer vzdialenosti vyberte Y.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define simulation controls.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste nastavili ovládacie prvky simulácie.
 
-Setup the Step controls in Simulation Controls. Use **300** steps for this operation. Measure the distance between the tools to determine an appropriate die displacement value. Divide the total distance (8.0) by the number of steps (300) to get a die displacement of (**0.02667**). Save every **10** steps.
+Nastavte ovládacie prvky krokov v časti „Simulation Controls“ (Ovládacie prvky simulácie). Pre túto operáciu použite **300** krokov. Zmerajte vzdialenosť medzi nástrojmi, aby ste určili vhodnú hodnotu posunu formy. Celkovú vzdialenosť (8,0) vydelite počtom krokov (300), čím získate posun formy (**0,02667**). Ukladajte každých **10** krokov.
 
-### Generate database and run the simulation
+### Vytvorte databázu a spustite simuláciu
 
-Check and Generate database and click on the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) mode button (above the operation tree) to start the simulation.
+Zaškrtnite políčko „Skontrolovať a vygenerovať databázu“ a kliknite na tlačidlo režimu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) (nad stromom operácií), aby ste spustili simuláciu.
 
-Run simulation, after completion of simulation click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) mode button to review results.
+Spustite simuláciu a po jej dokončení kliknite na tlačidlo režimu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), aby ste si prezreli výsledky.
 
-### Review Results
+### Výsledky hodnotenia
 
-In MO post processor, use the mirroring tool ![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | relative_url }}) from post tools to create a full 360 degree workpiece. In the mirroring mode, you can click on one of the workpiece symmetry planes to mirror it. It will take 11 clicks to get the full workpiece. You can switch to the delete mode and click on the mirrored objects to delete them from the display. (See Fig. L10.5.)
+V postprocesore MO použite nástroj na zrkadlenie ![]({{ '/assets/icons/post_icons/mo_3d_mirroring_icon.jpg' | relative_url }}) z nástrojov postprocesora na vytvorenie kompletného obrobku s rozsahom 360 stupňov. V režime zrkadlenia môžete kliknúť na jednu z rovín symetrie obrobku, aby ste ho zrkadlili. Na vytvorenie kompletného obrobku bude potrebných 11 kliknutí. Môžete prejsť do režimu mazania a kliknutím na zrkadlené objekty ich odstrániť z obrazovky. (Pozri obr. L10.5.)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab10_image0005.jpg' | relative_url }})
 
-Mirrored symmetry object with pointer mirroring on symmetry plane
+Objekt so zrkadlovou symetriou so zrkadlením ukazovateľa v rovine symetrie

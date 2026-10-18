@@ -1,54 +1,54 @@
 ---
 lang: sk
-title: "Gear Blank EN Lab 11"
+title: "Polotovar na ozubené kolesá EN Lab 11"
 ---
 
-# Lab 11 Interpreting Results
+# Cvičenie č. 11 – Vyhodnocovanie výsledkov
 
-Browse the project **Gear_t** in DEFORM GUI Main and select DB. Click on ![]({{ '/assets/icons/pre_icons/2d_3d_post_label.jpg' | relative_url }}) Post Processor link to open it in Next Gen Post.
+Prezrite si projekt **Gear_t** v hlavnom okne DEFORM GUI a vyberte DB. Kliknite na odkaz ![]({{ '/assets/icons/pre_icons/2d_3d_post_label.jpg' | relative_url }}) Post Processor, aby sa otvoril v programe Next Gen Post.
 
-**Play through the steps**
+**Prejdite si jednotlivé kroky**
 
-Click on ![]({{ '/assets/icons/post_icons/mo_play_button.jpg' | relative_url }}) Play steps forward and watch the workpiece fill the tooling. Set up a simple view without the mesh ![]({{ '/assets/icons/pre_icons/mo_shading_mode_icon.jpg' | relative_url }}) and turn on contact ![]({{ '/assets/icons/pre_icons/mo_show_cotact_icon.jpg' | relative_url }}). Play through the process one step at a time (use Next ![]({{ '/assets/icons/post_icons/mo_next_step_icon.jpg' | relative_url }}) and Previous ![]({{ '/assets/icons/post_icons/mo_prevoius_step_icon.jpg' | relative_url }}) step buttons) and watch the workpiece contact with the top and bottom die. (See Fig. L11.1.)
+Kliknite na ![]({{ '/assets/icons/post_icons/mo_play_button.jpg' | relative_url }}) „Prehrať kroky dopredu“ a sledujte, ako obrobok vyplňuje nástroj. Nastavte jednoduchý pohľad bez siete ![]({{ '/assets/icons/pre_icons/mo_shading_mode_icon.jpg' | relative_url }}) a zapnite kontakt ![]({{ '/assets/icons/pre_icons/mo_show_cotact_icon.jpg' | relative_url }}). Prehrávajte proces krok po kroku (použite tlačidlá „Ďalší“ ![]({{ '/assets/icons/post_icons/mo_next_step_icon.jpg' | relative_url }}) a „Predchádzajúci“ ![]({{ '/assets/icons/post_icons/mo_prevoius_step_icon.jpg' | relative_url }})) a sledujte, ako sa obrobok dotýka hornej a spodnej matrice. (Pozri obr. L11.1.)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab11_image0001.jpg' | relative_url }})
 
-Workpiece contact with tools as it fill the tooling
+Kontakt obrobku s nástrojmi pri ich vkladaní do upínacieho zariadenia
 
-FLOWNET can be used to create a pattern on the workpiece at the start of the forging operation and to track the distortion through the simulation. Turn off the field variables and click on the FLOWNET ![]({{ '/assets/icons/post_icons/mo_flownet_icon.jpg' | relative_url }}) icon to open flownet definition window. Click the ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button and choose the **Polygon grid** pattern. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), Define the slicing plane down the center of the workpiece. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and define 4 as the Number of polygons. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) & ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) to generate a default circular pattern, which can be reviewed by stepping through the step list. To watch the pattern deform with the workpiece, turn on the workpiece ![]({{ '/assets/icons/pre_icons/mo_shading_mode_icon.jpg' | relative_url }}) and then slice it so that you can see the mesh and flownet as shown in Fig. L11.2.
+Program FLOWNET možno použiť na vytvorenie vzoru na obrobku na začiatku procesu kovania a na sledovanie deformácie prostredníctvom simulácie. Vypnite premenné poľa a kliknite na ikonu FLOWNET ![]({{ '/assets/icons/post_icons/mo_flownet_icon.jpg' | relative_url }}), čím otvoríte okno definície FLOWNET. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a vyberte vzor **Polygon grid**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a definujte rezaciu rovinu v strede obrobku. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a ako počet polygónov zadajte hodnotu 4. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a ![]({{ '/assets/icons/post_icons/mo_generate_button.jpg' | relative_url }}) vygenerujte predvolený kruhový vzor, ktorý si môžete prezrieť postupným prechádzaním zoznamu krokov. Ak chcete sledovať, ako sa vzor deformuje spolu s obrobkom, zapnite obrobok ![]({{ '/assets/icons/pre_icons/mo_shading_mode_icon.jpg' | relative_url }}) a potom ho rozrežte tak, aby ste mohli vidieť sieť a flownet, ako je znázornené na obr. L11.2.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab11_image0002.jpg' | relative_url }})
 
-Workpiece at last step with polygon grid pattern with sliced plane
+Obrobok v poslednom kroku s mriežkovým vzorom z mnohouholníkov a rezovou rovinou
 
-Open “**Gear_sym****.****DB** ” in Next Gen Post as explained for Gear_t.DB. The DEFORM has an enhanced offset flownet that helps to predict folds. Go to the post, slice the object and watch the fold form. Go to the last step, right click on the folding icon in the tree and select **Show folding**. This will show you areas where the workpiece folded over and made contact with itself. DEFORM removes these regions to help with convergence.
+Otvorte súbor „**Gear_sym****.****DB**“ v programe Next Gen Post podľa pokynov uvedených pre súbor Gear_t.DB. Model DEFORM obsahuje vylepšenú sieť posunov, ktorá pomáha predpovedať vznik záhybov. Prejdite na príspevok, rozrežte objekt a sledujte, ako sa vytvára záhyb. Prejdite na posledný krok, kliknite pravým tlačidlom na ikonu skladania v strome a vyberte **Zobraziť skladanie**. Tým sa zobrazia oblasti, kde sa obrobok preložil a dotkol sa sám seba. DEFORM tieto oblasti odstráni, aby pomohol konvergencii.
 
-Use the Offset flownet used for finding folds. It can detect a folding tendency that is not shown in the mesh. Go to the last step and view the flownet. You can see that the fold remains even though the fold has been removed from the workpiece mesh.
-
-* * *
-
-Optional exercise – time permitting– PIP (Picture in picture) / Animation
-
-\- On the toolbar, go to File/Import DB (PIP) and import the same DB. You now have two pictures in graphics window that you can manipulate. Rotate, pan and zoom in on the workpiece in the top viewport. Plot strain and play through the simulation.
-
-\- Create a load-stroke graph in the one picture. Play through the simulation.
-
-\- On the toolbar,click on ![]({{ '/assets/icons/post_icons/mo_animation_icon.jpg' | relative_url }}) (Animation Setup). View the settings below and click Save. Play the animation file.
-
-  * **General tab:** File name is the name of the animation. The animation files will be saved in a DEF_ANIM folder in the current simulation directory (by default).
-
-  * **Settings tab:** adjusts the time stepping between frames and at the beginning and end of the animation
-
-  * **Export tab:** Select WMV file to create a WMV format animation that can be played on almost any computer.
+Použite sieť Offset flownet, ktorá slúži na vyhľadávanie záhybov. Táto sieť dokáže odhaliť tendenciu k tvorbe záhybov, ktorá sa v sieti neobjavuje. Prejdite na posledný krok a zobrazte si sieť flownet. Uvidíte, že záhyb pretrváva, hoci bol zo siete obrobku odstránený.
 
 * * *
 
-Optional exercise – time permitting – Purge
+Voliteľné cvičenie – ak to čas dovolí – PIP (obraz v obraze) / Animácia
 
-\- Open the steplist ![]({{ '/assets/icons/post_icons/mo_step_list_icon.jpg' | relative_url }}). The steps that are highlighted in blue are selected. The highlighted steps are what you see when you play through the simulation. You can click any step or click and drag several steps to select/de-select one or more steps. There are also tools on the right to help you select the desired steps.
+\- Na paneli nástrojov prejdite na Súbor/Importovať databázu (PIP) a importujte tú istú databázu. V grafickom okne máte teraz dva obrázky, s ktorými môžete pracovať. V hornom zobrazení môžete s obrobkom otáčať, posúvať ho a približovať. Zaznačte deformáciu a prehrajte simuláciu.
 
-\- Click on None then enter 50 into the Increment field and press the Enter key. Click on the Remeshing button.
+\- Vytvorte graf zaťaženia a zdvihu na jednom obrázku. Prehrajte simuláciu.
 
-\- Go to Database Purging then click Save Selected Steps. This will create a new database called Gear_sym_PUR.DB. The new database will only contain the steps that you selected. Any unselected step will be removed (purged). The result is a database that is smaller and easy to archive.
+\- Na paneli nástrojov kliknite na ![]({{ '/assets/icons/post_icons/mo_animation_icon.jpg' | relative_url }}) (Nastavenie animácie). Prezrite si nižšie uvedené nastavenia a kliknite na Uložiť. Prehrajte súbor s animáciou.
+
+  * **Záložka Všeobecné:** Názov súboru je názov animácie. Súbory animácií sa uložia do priečinka DEF_ANIM v aktuálnom adresári simulácie (štandardne).
+
+  * **Karta Nastavenia:** slúži na nastavenie časového kroku medzi snímkami, ako aj na začiatku a na konci animácie
+
+  * **Karta Export:** Vyberte súbor WMV, aby ste vytvorili animáciu vo formáte WMV, ktorú je možné prehrať takmer na každom počítači.
+
+* * *
+
+Voliteľné cvičenie – ak to čas dovolí – Čistenie
+
+\- Otvorte zoznam krokov ![]({{ '/assets/icons/post_icons/mo_step_list_icon.jpg' | relative_url }}). Modro zvýraznené kroky sú vybrané. Práve tieto zvýraznené kroky uvidíte pri prehrávaní simulácie. Môžete kliknúť na ľubovoľný krok alebo kliknúť a pretiahnuť kurzorom cez viacero krokov, čím vyberiete alebo zrušíte výber jedného alebo viacerých krokov. Na pravej strane sa nachádzajú aj nástroje, ktoré vám pomôžu vybrať požadované kroky.
+
+\- Kliknite na „None“, potom do poľa „Increment“ zadajte hodnotu 50 a stlačte klávesu Enter. Kliknite na tlačidlo „Remeshing“.
+
+\- Prejdite do časti „Vyčistenie databázy“ a kliknite na „Uložiť vybrané kroky“. Tým sa vytvorí nová databáza s názvom Gear_sym_PUR.DB. Nová databáza bude obsahovať iba kroky, ktoré ste vybrali. Všetky nevybrané kroky budú odstránené (vyčistené). Výsledkom je menšia databáza, ktorú je jednoduché archivovať.
 
 * * *

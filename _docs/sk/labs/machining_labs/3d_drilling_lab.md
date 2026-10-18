@@ -1,218 +1,218 @@
 ---
 lang: sk
-title: "3D Drilling Lab"
+title: "3D vŕtacie laboratórium"
 ---
 
-# 3D Drilling Lab
+# 3D vŕtacie laboratórium
 
-1.1. Summary
+1.1 Zhrnutie
 
-1.2. Starting the 3D machining wizard
+1.2. Spustenie sprievodcu 3D obrábaním
 
-1.3. Define Machining Process data
+1.3. Definujte údaje o procese obrábania
 
-1.4. Defining Drill bit
+1.4. Definovanie vrtáka
 
-1.4.1. Drill bit object definition
+1.4.1. Definícia objektu vrtáka
 
-1.4.2. Defining drill bit geometry
+1.4.2. Definovanie geometrie vrtáka
 
-1.4.3. Assigning the tool material
+1.4.3. Priradenie materiálu nástroja
 
-1.4.4. Generating mesh for Tool
+1.4.4. Generovanie povrchovej siete pre nástroj
 
-1.4.5. Defining BCC for Tool
+1.4.5. Definovanie BCC pre nástroj
 
-1.5. Defining Workpiece
+1.5. Definovanie obrobku
 
-1.5.1. Workpiece object definition
+1.5.1. Definícia objektu obrobku
 
-1.5.2. Defining geometry for Workpiece
+1.5.2. Definovanie geometrie obrobku
 
-1.5.3. Defining Workpiece material
+1.5.3. Definovanie materiálu obrobku
 
-1.5.4. Workpiece Mesh Generation
+1.5.4. Generovanie pletiva obrobku
 
-1.5.5. Defining BCC for Workpiece
+1.5.5. Definovanie BCC pre obrobok
 
-1.6. Positioning the objects
+1.6. Umiestnenie predmetov
 
-1.7. Defining tool wear parameters
+1.7. Definovanie parametrov opotrebenia nástroja
 
-1.8. Defining inter-object relations
+1.8. Definovanie vzťahov medzi predmetmi
 
-1.9. Defining step controls
+1.9. Definovanie krokových ovládacích prvkov
 
-1.10. Generating database
+1.10. Generovanie databázy
 
-1.11.Running Simulation
+1.11. Simulácia pretekov
 
-1.12. Post Processing simulation results
+1.12. Výsledky simulácie po spracovaní
 
-## Summary
+Zhrnutie
 
-In this lab, we will demonstrate how to setup drilling lab using 3D Cutting wizard. Drilling simulations in DEFORM are time consuming due to the number of revolutions of a drill necessary to establish characteristic behaviour. Therefore, every effort will be made to optimize problem size. Considerations include keeping the workpiece as small as possible while capturing geometry (both in diameter and thickness), using the largest element which can adequately capture chip geometry, and possibly pre-shaping the workpiece to eliminate the necessity to simulate the transient point penetration before the drill reaches full depth. This tutorial will use the example of a 6mm two flute twist drill running at 400RPM with a 0.15mm/rev feed.
+V tomto laboratóriu ukážeme, ako nastaviť vŕtacie laboratórium pomocou sprievodcu 3D rezaním. Simulácie vŕtania v DEFORMÁCII sú časovo náročné vzhľadom na počet otáčok vŕtačky potrebných na stanovenie charakteristického správania. Preto bude vynaložené maximálne úsilie na optimalizáciu veľkosti problému. Úvahy zahŕňajú zachovanie čo najmenšej veľkosti obrobku pri zachytávaní geometrie (priemeru aj hrúbky), použitie najväčšieho prvku, ktorý dokáže primerane zachytiť geometriu triesky, a prípadné predtvarovanie obrobku, aby sa eliminovala potreba simulovať prenikanie prechodného bodu predtým, ako vŕtačka dosiahne plnú hĺbku. Tento návod bude používať príklad 6 mm vŕtačky s dvoma závitmi, ktorá beží pri 400 otáčkach za minútu s posuvom 0,15mm/ot.
 
-## Starting the 3D machining wizard
+## Spustenie sprievodcu 3D obrábaním
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. 3DDL1.1.) Select " **3D Cutting** " radio button and Unit system as "**SI** " (See Fig. 3DDL1.1.). Define Problem Name as "**3D_drilling** " and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem with 3D Cutting operation in MO wizard.
+Vytvorte nový problém buď výberom **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})* ***Nový problém** alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému, ako je znázornené na obr. 3DDL1.1.) Vyberte prepínač „ * * 3D rezanie * * “ a systém jednotiek ako „**SI * * “ (pozri obr. 3DDL1.1). Definujte názov problému ako „**3D_Drilling** “ a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) otvorte nový problém s operáciou 3D rezania v sprievodcovi MO.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0001.jpg' | relative_url }})
 
-Creating new Machining operation
+Vytvorenie novej operácie obrábania
 
-## Define Machining Process data
+## Definujte údaje o procese obrábania
 
-In the ‘Process’ page, select Cutting type as '**Drilling** ', enter the **Environment temperature** as **20** °C and use default **Convection coefficient** as **0.02** N/sec/mm/C. Define **Rotational speed** as **400** rpm and **feed rate** (f) as **0.15** mm/rev as shown in the Fig. 3DDL1.2. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Tool page.
+Na stránke „Proces“ vyberte typ rezania ako „* * Vŕtanie * *“, zadajte * * Teplota prostredia ** ako ** 20 ** °C a použite predvolený * * Konvekčný koeficient ** ako ** 0,02 ** N/s/mm/C. Definujte * * Rýchlosť otáčania * * ako ** 400 ** ot./min. a ** rýchlosť posuvu ** (f) ako **0,15** mm/ot., ako je znázornené na obr. 3DDL1.2. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Nástroj.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0002.jpg' | relative_url }})
 
-Setting up process parameters for Drilling operation
+Nastavenie parametrov procesu pre prevádzku vŕtania
 
-## Defining Drill bit
+## Definovanie vrtáka
 
-### Drill bit object definition
+### Definícia objektu vrtáka
 
-In this Tool page, Define the **temperature** as **20** °C and turn on the “**Calculate****tool temperature** ” check box so that we can mesh the tool to calculate temperature distribution as shown in the Fig. 3DDL1.3. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Tool geometry page.
+Na tejto stránke nástroja definujte * * teplotu * * ako **20** °C a zapnite začiarkavacie políčko „**Vypočítať*** * teplotu nástroja ** “, aby sme mohli nástroj na výpočet rozloženia teploty sieťovať, ako je znázornené na obr. 3DDL1.3. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Geometria nástroja.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0003.jpg' | relative_url }})
 
-Tool object page
+Stránka objektu nástroja
 
-### Defining drill bit geometry
+### Definovanie geometrie vrtáka
 
-In this Insert Geometry page, the user needs to define the tool geometry using the Define primitive link. Using the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) link as shown in the Fig. 3DDL1.4., we will be opening ‘Drillbit Primitive’ window as shown in the Fig. 3DDL1.5. click on ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}) button to create drill bit geometry using the parameters as shown in the Fig. 3DDL1.5.
+Na tejto stránke Vložiť geometriu musí používateľ definovať geometriu nástroja pomocou odkazu Definovať primitívne. Pomocou odkazu ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), ako je znázornené na obr. 3DDL1.4., otvoríme okno „Drillbit Primitive“, ako je znázornené na obr. 3DDL1.5. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}) vytvoríte geometriu vrtáka pomocou parametrov, ako je znázornené na obr. 3DDL1.5.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0004.jpg' | relative_url }})
 
-Tool geometry page
+Stránka geometrie nástroja
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0005.jpg' | relative_url }})
 
-Defining drill bit geometry
+Definovanie geometrie vrtáka
 
-### Assigning the tool material
+### Priradenie materiálu nástroja
 
-In Material Window, we need to load the material from the library. So, click on “Load form Library” option ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) and select **hot forming****die material** category and select '**Carbide(15%Cobalt)** ' material from the list to assign the material for tool as shown in the Fig. 3DDL1.6. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to generate mesh for tool.
+V okne Materiál potrebujeme načítať materiál z knižnice. Takže kliknite na možnosť „Load form Library“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a vyberte ** tvarovanie za tepla ****die material** category a vyberte „**Carbide(15%Cobalt)** “ material from the list to assign the material for tool as shown in the Fig. 3DDL1.6. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujete povrchovú sieť pre nástroj.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0006.jpg' | relative_url }})
 
-Assigning the Tool Material
+Priradenie materiálu nástroja
 
-### Generating mesh for Tool
+### Generovanie povrchovej siete pre nástroj
 
-In Tool mesh page, select the **Use****Relative** **mesh** **size** method. Define **target number of elements** as **20000** and **size ratio** as **0.3** as shown in the Fig. 3DDL1.7. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) to generate mesh. Mesh looks like as shown in Fig. 3DDL1.7. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to BCC page.
+Na stránke Tool mesh vyberte metódu **Use****Relative* ** * mesh * **size**. Definujte **cieľový počet prvkov** ako **20000** a ** pomer veľkosti ** ako **0,3**, ako je znázornené na obr. 3DDL1.7. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) vygenerujete povrchovú sieť. Sieť vyzerá tak, ako je znázornené na obr. 3DDL1.7. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na BCC.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0007.jpg' | relative_url }})
 
-Tool Mesh Generation using relative mesh size
+Generovanie povrchovej siete nástroja pomocou relatívnej veľkosti ôk
 
-### Defining BCC for Tool
+### Definovanie BCC pre nástroj
 
-In this BCC Page, the user can define Thermal BCCs “**Heat****Exchange with****Environment** ” and “**Temperature** ”. The default BCC is assigned to the entre outer surface of the drill bit automatically after generating the mesh as shown in the Fig. 3DDL1.8.
+Na tejto stránke BCC môže používateľ definovať tepelné BCC „* * teplo * ***výmena s* ***prostredím** “ a „**teplota** “. Predvolený BCC je automaticky priradený k vonkajšiemu povrchu vrtáka po vygenerovaní povrchovej siete, ako je znázornené na obr. 3DDL1.8.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0008.jpg' | relative_url }})
 
-Heat exchange BCC over Tool
+Výmena tepla BCC nad nástrojom
 
-## Defining Workpiece
+## Definovanie obrobku
 
-### Workpiece object definition
+### Definícia objektu obrobku
 
-In this Workpiece object page, define the temperature as **20** °C and object type as **plastic** as shown in the Fig. 3DDL1.9. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to workpiece geometry page.
+Na tejto stránke objektu obrobku definujte teplotu ako * * 20 * * °C a typ objektu ako **plast**, ako je znázornené na obr. 3DDL1.9. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku geometrie obrobku.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0009.jpg' | relative_url }})
 
-Workpiece object Page
+Stránka objektu obrobku
 
-### Defining geometry for Workpiece
+### Definovanie geometrie obrobku
 
-In this Workpiece Geometry page, we need to define the workpiece geometry using the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). In workpiece geometry primitive page, select the **cylinder** radio button and define**Diameter**(D) as **12mm** , **Thickness** as **4mm** and **Drill****tip** depth as **3.15mm** as shown in the Fig. 3DDL1.10.
+Na tejto stránke Geometria obrobku musíme definovať geometriu obrobku pomocou ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). Na primitívnej stránke geometrie obrobku vyberte prepínač **valec** a definujte * * priemer ** (D) ako * * 12 mm * *, * * hrúbku * * ako * *4 mm** a **vrták****hrot** hĺbku ako **3,15mm**, ako je znázornené na obr. 3DDL1.10.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0010.jpg' | relative_url }})
 
-Creating the cylinder workpiece geometry
+Vytvorenie geometrie obrobku valca
 
-### Defining Workpiece material
+### Definovanie materiálu obrobku
 
-In Material Window, we need to load the material from the library. So, click on “**Load****form****Library** ” option ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) and select **AISI-1045(Machining)** from the **Steel** category to assign the material for workpiece as shown in the Fig. 3DDL1.11. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to generate mesh for workpiece.
+V okne Materiál potrebujeme načítať materiál z knižnice. Takže kliknite na možnosť „**Load*** *Form*** *Library * * “ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a vyberte ** AISI-1045 (Machining)** z kategórie * * Steel * * pre priradenie materiálu k obrobku, ako je znázornené na obr. 3DDL1.11. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujete sieťovinu pre obrobok.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0011.jpg' | relative_url }})
 
-Assigning the material for the workpiece
+Priradenie materiálu pre obrobok
 
-### Workpiece Mesh Generation
+### Generovanie pletiva obrobku
 
-After the work piece geometry is generated, in mesh page, using the **absolute mesh size** method define element **size ratio** as **10** , and **Minimum element size** as **0.04** mm as shown in Fig. 3DDL1.12. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) to complete mesh generation for the Workpiece.
+Po vygenerovaní geometrie obrobku na strane s okami pomocou metódy **absolútnej veľkosti ôk ** definujte pomer veľkosti ** ako ** 10 ** a ** minimálnu veľkosť prvku ** ako ** 0,04 ** mm, ako je znázornené na obr. 3DDL1.12. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) dokončíte generovanie siete pre obrobok.
 
-**Runtime meshing parameters:**
+**Runtime meshing parametre:**
 
-To set runtime meshing parameters, switch to expert mode using ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). In expert mode select**weighting factors** tab and define **Strain** weight to about **0.65** , **Strain****Rate** weight to about **0.35** and make other weights to zero (Including mesh windows) as runtime mesh parameters (See the Fig. 3DDL1.13.). After setting weighing factors, switch to guided mode using ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to BCC page.
+Ak chcete nastaviť parametre záberu za chodu, prepnite do expertného režimu pomocou ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}). V expertnom režime zvoľte**váhové faktory** kartu a definujte **Kmeň** hmotnosť na približne **0,65** , **Kmeň***rýchlosť** hmotnosť na približne **0,35** a nastavte iné hmotnosti na nulu (vrátane okien s okami) ako parametre sieťoviny za chodu (pozri obr. 3DDL1.13.). Po nastavení faktorov váženia prepnite do režimu vedenia pomocou ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}). Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na BCC.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0012.jpg' | relative_url }})
 
-Workpiece mesh generation using absolute mesh size
+Generovanie ôk obrobku pomocou absolútnej veľkosti ôk
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0013.jpg' | relative_url }})
 
-Runtime Workpiece mesh generation weighting factor parameters
+Parametre váhového faktora generovania povrchovej siete obrobku Runtime
 
-### Defining BCC for Workpiece
+### Definovanie BCC pre obrobok
 
-In BCC Page, by default the velocity of all nodes on the circumference of the workpiece are fixed in X, Y and Z directions as shown in the Fig. 3DDL1.14. Heat exchange boundary conditions are assigned to top and bottom surfaces automatically during mesh generation as shown in the Fig. 3DDL1.15. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Control page.
+Na stránke BCC je v predvolenom nastavení rýchlosť všetkých uzlov na obvode obrobku fixovaná v smere X, Y a Z, ako je znázornené na obr. 3DDL1.14. Hraničné podmienky výmeny tepla sú automaticky priradené horným a spodným povrchom počas generovania siete, ako je znázornené na obr. 3DDL1.15. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Control.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0014.jpg' | relative_url }})
 
-Defining the velocity BCC data
+Definovanie údajov BCC o rýchlosti
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0015.jpg' | relative_url }})
 
-Defining Heat Exchange BCC
+Definovanie výmeny tepla BCC
 
-## Positioning the objects
+## Umiestnenie objektov
 
-In Control page, click on **'Position objects’** and check the position of Tool. If the Tool is not in contact with Workpiece, position the tool using interference method and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define tool wear parameters.
+Na stránke Control kliknite na **'Position objects’** a skontrolujte polohu nástroja. Ak nástroj nie je v kontakte s obrobkom, umiestnite nástroj pomocou metódy interferencie a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujte parametre opotrebovania nástroja.
 
-## Defining tool wear parameters
+## Definovanie parametrov opotrebenia nástroja
 
-In Tool wear page, turn on the “**Define****model to calculate tool wea** r” check box and select **Usui** model, use the default parameters for Usui model as shown in the Fig. 3DDL1.16. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Contact page.
+Na stránke Opotrebenie nástroja zapnite začiarkavacie políčko „**Definovať****model na výpočet opotrebenia nástroja ** r“ a vyberte **Usui** model, použite predvolené parametre pre model Usui, ako je znázornené na obr. 3DDL1.16. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Kontakt.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0016.jpg' | relative_url }})
 
-Defining Tool Wear parameters
+Definovanie parametrov opotrebenia nástroja
 
-## Defining inter-object relations
+## Definovanie vzťahov medzi objektmi
 
-In Contact page, we will use default relations. Click on **Tool - Workpiece** relation Edit button and define shear friction factor as **0.6** and the interface heat transfer coefficient as **40** N/sec/mm/C (as shown in Fig. 3DDL1.17.), click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contacts. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Step Control page.
+Na stránke Kontakt použijeme predvolené vzťahy. Kliknite na tlačidlo **Nástroj - Obrobok ** vzťah Upraviť a definujte koeficient šmykového trenia ako **0,6** a súčiniteľ prestupu tepla rozhrania ako **40** N/sec/mm/C (ako je znázornené na obr. 3DDL1.17.), kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) pre generovanie kontaktov. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Step Control.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0017.jpg' | relative_url }})
 
-Contact page
+stránka s kontaktnými informáciami
 
-## Defining step controls
+## Definovanie krokových ovládacích prvkov
 
-In Step control page, define the **drill** **depth** as **3.5mm** and select **User** radio button to set user defined**time step increment** as **0.0005** , keep the rest of the values to default as shown in the Fig. 3DDL1.18. and proceed to generate the database by clicking ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke ovládania kroku definujte * * vrták * ** *hĺbku** ako **3,5 mm** a zvoľte * * Užívateľ * * prepínač pre nastavenie užívateľom definovaného** prírastku časového kroku * * ako * * 0,0005 * * , ponechajte zvyšok hodnôt v predvolenom nastavení, ako je znázornené na obr. 3DDL1.18. a pokračujte generovaním databázy kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0018.jpg' | relative_url }})
 
-Step controls page in GUIDED Mode
+Stránka krokových ovládacích prvkov v režime SO SPRIEVODCOM
 
-## Generating database
+## Generovanie databázy
 
-In Generate database page, click on the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. Observe messages in Message tab informing database generation status. If there are any errors, we need to correct them before generating Database
+Na stránke Generovať databázu kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) a vygenerujte databázu. Sledujte správy na karte Správa informujúce o stave generovania databázy. Ak sa vyskytnú nejaké chyby, musíme ich opraviť pred generovaním databázy
 
-## Running Simulation
+## Simulácia behu
 
-Once the database has been generated switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. 3DDL1.19. Use the default **Continue****Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vygenerovaní databázy prejdite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad operačným stromom. Kliknutím na štítok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvorte dialógové okno Možnosti točenia, ako je znázornené na obr. 3DDL1.19. Pomocou predvolenej možnosti **Pokračovať***Spustiť** vyberte možnosť „**Pokračovať z posledného kroku** “ (z kroku -1) a potom vyberte režim simulácie ako prepínač * * Interaktívne * *. Kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) pre spustenie simulácie.
 
-To define MPI settings, click on ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}) button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend on your 3D MPI license).
+Ak chcete definovať nastavenia MPI, kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}), okno Možnosti spustenia sa rozbalí a zobrazí možnosti definovania nastavení MPI pre simuláciu (maximálny počet procesorov, ktoré možno definovať v závislosti od vašej licencie 3D MPI).
 
 ![]({{ '/assets/images/labs/machining_labs/3d_drilling_lab/image0019.jpg' | relative_url }})
 
-Run Simulation Window
+Okno Spustiť simuláciu
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. User can view the drilling process as the simulation proceeds to the specified drill depth from Simulation graphics.
+Sledujte priebeh simulácie tak, že sa pozriete na kartu Simulation Message and Simulation Log a uistite sa, že je začiarknutá možnosť ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). Používateľ môže zobraziť proces vŕtania, keď simulácia pokračuje do určenej hĺbky vŕtania z grafiky simulácie.
 
-##  Post Processing simulation results
+## Výsledky simulácie po spracovaní
 
-When the simulation is completed, review the results by switching to Post mode using the ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) button above the Simulation tool bar. Play through the steps of the simulation and observe the chip formation during drilling process.
+Po dokončení simulácie skontrolujte výsledky prepnutím do režimu Post pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) nad panelom nástrojov simulácie. Prehrajte si kroky simulácie a sledujte tvorbu triesok počas procesu vŕtania.

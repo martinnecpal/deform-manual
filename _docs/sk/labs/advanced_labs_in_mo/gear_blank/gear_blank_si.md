@@ -1,13 +1,13 @@
 ---
 lang: sk
-title: "Gear Blank (SI)"
+title: "Polotovar ozubeného kolesa (SI)"
 ---
 
-# Gear Blank (SI)
+# Polotovar na ozubené kolesá (SI)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0000.jpg' | relative_url }})
 
-**List of Labs:**
+**Zoznam laboratórií:**
 
 [Lab 1. 2D upset operation]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab1/' | relative_url }})
 

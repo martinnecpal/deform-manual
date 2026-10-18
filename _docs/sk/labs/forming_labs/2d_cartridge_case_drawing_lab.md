@@ -1,15 +1,15 @@
 ---
 lang: sk
-title: "2D Cartridge case drawing lab"
+title: "Laboratórium na kreslenie 2D nábojníc"
 ---
 
-# 2D Cartridge case drawing lab
+# Laboratórium kreslenia 2D nábojníc
 
-**Problem Summary:**
+**Zhrnutie problému:**
 
-In this lab, we will be demonstrating about how to use Integrated Manufacturing Process UI (MO) to setup multiple stages of forming process in batch mode. We will be setting up a multi-stage extrusion process to simulate cartridge case forming using [2D]Forming operation from Integrated Manufacturing Process UI. The process involves three stages of extrusion with annealing in between each stage for strain relief. 
+V tomto laboratórnom cvičení si ukážeme, ako pomocou používateľského rozhrania integrovaného výrobného procesu (MO) nastaviť viaceré fázy tvárniaceho procesu v dávkovom režime. Nastavíme viacstupňový proces extrudovania s cieľom simulovať tvárnenie nábojníc pomocou operácie [2D]Forming v používateľskom rozhraní integrovaného výrobného procesu. Proces zahŕňa tri fázy extrudovania s medzilehlým žíhaním medzi jednotlivými fázami na zmiernenie napätia. 
 
-We will be setting up all 3 stations at a time in batch mode, Workpiece will be transferred to all operations while changing dies for station 2 and station3. We will be simulating only forming process in this lab and not annealing process, instead we will initialize the strain, damage and velocity of the workpiece in successive forming operations. The dies will be positioned using schedule positioning so that objects are positioned during DB generation. The contact generation also will be scheduled so that the contacts between objects will be generated during DB generation.
+Všetky tri stanice nastavíme naraz v dávkovom režime; obrobok bude prenášaný do všetkých operácií počas výmeny foriem na stanici 2 a stanici 3. V tomto laboratórnom cvičení budeme simulovať iba proces tvárnenia, nie proces žíhania; namiesto toho inicializujeme deformáciu, poškodenie a rýchlosť obrobku v po sebe nasledujúcich operáciách tvárnenia. Polohovanie foriem sa vykoná pomocou plánovaného polohovania tak, aby sa objekty umiestnili počas generovania databázy. Generovanie kontaktov sa tiež naplánuje tak, aby sa kontakty medzi objektmi vytvorili počas generovania databázy.
 
 [1\. Creating New Problem and Adding Operations]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#1_Creating_New_problem_and_Adding_Operations)
 
@@ -87,466 +87,466 @@ We will be setting up all 3 stations at a time in batch mode, Workpiece will be 
 
 [6\. Post Processing]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#6_Post_Processing)
 
-## Creating New problem and Adding Operations
+## Vytvorenie nového problému a pridanie operácií
 
-### Creating a New problem
+### Vytvorenie nového problému
 
-On a **Windows machine** , press ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button, select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na **počítači so systémom Windows** stlačte tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte položku DEFORM-v1x.xxx (kde .xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte položku **DEFORM GUI Main** vxx.xx. Zobrazí sa hlavné okno programu DEFORM GUI Main.
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select " **Integrated Manufacturing Process** " radio button and unit system as "**English** " using radio button. Define Problem Name as "**Cartridge_Case_Lab** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to close the New Problem dialog and open the project in Integrated Manufacturing Process UI.
+Vytvorte nový problém buď výberom položky **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Zvoľte rádio tlačidlo „**Integrovaný výrobný proces**“ a ako systém jednotiek zvoľte „**Angličtina**“ pomocou rádio tlačidla. Názov úlohy zadajte ako „**Cartridge_Case_Lab**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak nezaškrtnete políčko „**Zobraziť dialógové okno s možnosťami**“, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) zatvoríte dialógové okno Nový problém a otvoríte projekt v používateľskom rozhraní Integrovaný výrobný proces.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image001.jpg' | relative_url }})
 
-New problem dialog
+Dialógové okno „Nový problém“
 
-### Adding operations to Operation Editor
+### Pridávanie operácií do editora operácií
 
-Multiple Operation wizard will open the new project. Add three 2d forming operations from Operations Explorer list clicking ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button.
+Sprievodca viacerými operáciami otvorí nový projekt. Pridajte tri 2D tvárniace operácie zo zoznamu v Průzkumníku operácií kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image002.jpg' | relative_url }})
 
-Adding operations
+Pridávanie operácií
 
-## Setting up Station1:
+## Nastavenie stanice 1:
 
-Select first forming operation and change the operation name to "**Station1** " by double clicking on Operation name in Operation Editor window and press Enter in Keyboard.
+Vyberte prvú formovaciu operáciu a zmeňte jej názov na „**Station1**“ dvojitým kliknutím na názov operácie v okne Editor operácií a stlačte klávesu Enter na klávesnici.
 
-### Select Geometry Type and Simulation modes
+### Výber typu geometrie a režimov simulácie
 
-Select the **2D Axisymmetric** radio button in geometry type window as show in [Fig. 2DCCDL1.3.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_3_Geometry_type_selection) and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue to Simulation controls page. In Simulation controls page, uncheck the Heat transfer mode check box as shown in [Fig. 2DCCDL1.4.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_4_Simulation_controls_page) and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V okne typu geometrie vyberte voľbu **2D osovo symetrická**, ako je znázornené na obrázku [Fig. 2DCCDL1.3.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_3_Geometry_type_selection), a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Nastavenia simulácie. Na stránke Ovládacie prvky simulácie zrušte zaškrtnutie políčka Režim prenosu tepla, ako je znázornené na obrázku [Fig. 2DCCDL1.4.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_4_Simulation_controls_page), a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image003.jpg' | relative_url }})
 
-Geometry type selection
+Výber typu geometrie
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image004.jpg' | relative_url }})
 
-Simulation controls page
+Stránka s ovládacími prvkami simulácie
 
-### Material List 
+### Zoznam materiálov 
 
-Once the geometry type an simulation modes are set, we will load the materials required for this setup. Using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) button in Material list page, import "**C26000, Cartridge Brass, 70%, annealed [70F(20C)]** " material keyword from /2D/LABS/Cartridge_Lab folder, see [Fig. 2DCCDL1.5.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_5_Material_List) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Object page.
+Po nastavení typu geometrie a simulačných režimov načítajú materiály potrebné pre túto konfiguráciu. Pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) na stránke Zoznam materiálov importujte „**C26000, Mosadz na náboje, 70 %, žíhaná [70F(20C)]**“ z priečinka /2D/LABS/Cartridge_Lab, pozri [Fig. 2DCCDL1.5.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_5_Material_List). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Objekt.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image005.jpg' | relative_url }})
 
-Material List
+Zoznam materiálov
 
-### Objects
+### Objekty
 
-We need four objects, Workpiece, Die Punch and Ejector to model for this setup. By default, three objects are added to the object list, we will add one more by clicking on![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) button. The objects will be renamed suitably as we progress through the setup. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Workpiece page.
+Na modelovanie tohto nastavenia potrebujeme štyri objekty: obrobok, razník a vyhadzovač. V predvolenom nastavení sú do zoznamu objektov pridané tri objekty; ďalší pridáme kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}). Objekty budú v priebehu nastavovania primerane premenované. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Obrobok“.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image006.jpg' | relative_url }})
 
-Objects list page
+Stránka so zoznamom objektov
 
-### Workpiece
+### Obrobok
 
-#### Workpiece object type definition
+#### Definícia typu objektu obrobku
 
-Keep the default Object name as "**Workpiece** ", Object Type as **Plastic** and it’s Temperature as **68** °F as shown in [Fig. 2DCCDL1.7.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_7_Workpiece_object_page) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Geometry page to define Workpiece geometry.
+Nechajte predvolený názov objektu „**Obrobok**“, typ objektu **Plast** a jeho teplotu **68** °F, ako je znázornené v [Fig. 2DCCDL1.7.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_7_Workpiece_object_page). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Geometria, kde môžete definovať geometriu obrobku.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image007.jpg' | relative_url }})
 
-Workpiece object page
+Stránka objektu obrobku
 
-#### Defining Workpiece Geometry
+#### Definovanie geometrie obrobku
 
-We will define workpiece geometry using primitives. From the Workpiece’s geometry page, click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), select Solid cylinder and define **Diameter** as **0.82** " and **Height** as **0.125** ", see [Fig. 2DCCDL1.8.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_8_Defining_Workpiece_geometry) Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button in the Primitive window to close the window and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to navigate to Workpiece Mesh page.
+Geometriu obrobku definujeme pomocou základných tvarov. Na stránke „Geometria obrobku“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), vyberte možnosť „Plný valec“ a nastavte **priemer** na hodnotu **0,82** " a **Výšku** ako **0,125** ", pozri [Fig. 2DCCDL1.8.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_8_Defining_Workpiece_geometry). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) v okne „Základné tvary“, aby ste okno zatvorili, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Sieť obrobku“.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image008.jpg' | relative_url }})
 
-Defining Workpiece geometry
+Definovanie geometrie obrobku
 
-#### Generating mesh for Workpiece
+#### Vytvorenie siete pre obrobok
 
-In Mesh page, click on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) to change to expert mode so that we can have access to various options to control mesh. Define the T**arget number of elements** as **1000** , **Thickness** **elements** as **4** and **Size****ratio** as **3** , click the ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button to generate the mesh for workpiece, see [Fig. 2DCCDL1.9.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_9_Mesh_settings_for_Workpiece) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to Material page.
+Na stránke „Mesh“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}), aby ste prešli do expertného režimu, v ktorom budete mať prístup k rôznym možnostiam ovládania siete. Nastavte **cieľový počet prvkov** na **1000**, **hrúbku** **prvkov** na **4** a **Pomer veľkostí****** na **3**, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) na vytvorenie siete pre obrobok, pozri [Fig. 2DCCDL1.9.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_9_Mesh_settings_for_Workpiece). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Materiál.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image009.jpg' | relative_url }})
 
-Mesh settings for Workpiece
+Nastavenia siete pre obrobok
 
-####  Assigning material to Workpiece
+####  Priradenie materiálu k obrobku
 
-Select the "**C26000, Cartridge Brass, 70%, annealed [70F(20C)]** " in the material window to assign the material to the Workpiece, see [Fig. 2DCCDL1.10.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_10_Assigning_material_to_Workpiece) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to move to Workpiece Boundary conditions page.
+V okne materiálov vyberte „**C26000, Mosadz na kazety, 70 %, žíhaná [70 °F (20 °C)]**“ v okne materiálov, aby ste priradili materiál k obrobku, pozri [Fig. 2DCCDL1.10.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_10_Assigning_material_to_Workpiece). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Okrajové podmienky obrobku.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image010.jpg' | relative_url }})
 
-Assigning material to Workpiece
+Priradenie materiálu k obrobku
 
-#### Boundary conditions for Workpiece
+#### Okrajové podmienky pre obrobok
 
-For Axi-symmetric setup by default, velocity in x-direction will be fixed for all the nodes along the axis, we can observe the same in the BCC page for the Workpiece, see [Fig. 2DCCDL1.11.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_11_Velocity_BCC_for_Workpiece) We do not need any additional BCC, hence click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to navigate to Workpiece Properties page.
+Pri predvolenom osovo-symetrickom nastavení bude rýchlosť v smere osi x pevne stanovená pre všetky uzly pozdĺž tejto osi; to isté môžeme pozorovať na stránke BCC pre obrobok, pozri [Fig. 2DCCDL1.11.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_11_Velocity_BCC_for_Workpiece). Nepotrebujeme žiadne ďalšie nastavenia BCC, preto kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku Vlastnosti obrobku.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image011.jpg' | relative_url }})
 
-Velocity BCC for Workpiece
+Rýchlosť BCC pre obrobok
 
-#### Setting Limiting strain rate value for Workpiece
+#### Nastavenie hodnoty medznej rýchlosti deformácie pre obrobok
 
-In Workpiece Properties page, we will modify the **Limiting** **strain** **rate** value to **0.001** from **Strain** rate tab to capturing the strains more accurately at lower strain rates, see [Fig. 2DCCDL1.12.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_12_Setting_Limiting_strain_rate_value_for_Workpiece) As we do not need to define anything else for Workpiece we will click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button until we reach Top Die object page or select Punch from Operation tree.
+Na stránke „Vlastnosti obrobku“ upravíme hodnotu ****medznej** **rýchlosti** **deformácie** z **Rýchlosť deformácie** na **0,001**, aby sme presnejšie zachytili deformácie pri nižších rýchlostiach deformácie, pozri [Fig. 2DCCDL1.12.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_12_Setting_Limiting_strain_rate_value_for_Workpiece). Keďže pre obrobok nemusíme definovať nič ďalšie, budeme klikať na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nedostaneme na stránku objektu Horná matrica, alebo vyberieme položku Dierovač zo stromu operácií.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image012.jpg' | relative_url }})
 
-Setting Limiting strain rate value for Workpiece.
+Nastavenie hodnoty medznej rýchlosti deformácie pre obrobok.
 
 ### Punch
 
-#### Punch object type definition
+#### Definícia typu objektu „Punch“
 
-Change the object name to "**Punch** ", keep the Object type as **Rigid** and the Temperature as **68** °F. Make sure that the **Primary die** check box is turned on as this is a moving object and the step controls and stopping controls will be applied to this object, see [Fig. 2DCCDL1.13.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_13_Punch_object_definition) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Punch Geometry page.
+Zmeňte názov objektu na „**Punch**“, typ objektu ponechajte ako **Rigid** a teplotu ako **68** °F. Uistite sa, že je zaškrtnuté políčko **Primary die**, pretože ide o pohybujúci sa objekt a na tento objekt sa budú uplatňovať ovládacie prvky krokovania a zastavenia, pozrite si stránku [Fig. 2DCCDL1.13.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_13_Punch_object_definition) Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre vyrazenie geometrie.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image013.jpg' | relative_url }})
 
-Punch object definition
+Definícia objektu „Punch“
 
-#### Punch Geometry Definition
+#### Definícia geometrie razníka
 
-We will load the geometry for the Punch from a file stored in \2D\LABS\Cartridge_Lab directory. Click the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) button and import the file “**Punch.geo** ” by browsing the geometry file path located in DEFORM installation folder /2D/LABS/Cartridge_Lab directory, see [Fig. 2DCCDL1.14.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_14_Loading_Punch_geometry) Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option to make sure the geometry is OK. The imported geometry should not have any issues. After defining the geometry for the Punch, we will use ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to navigate until Movement page. We will not generate mesh for the Punch as the object type is Rigid and we do not intend to calculate temperature distribution.
+Geometriu pre nástroj Punch načítajeme zo súboru uloženého v adresári \2D\LABS\Cartridge_Lab. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) a importujte súbor „**Punch.geo**“ vyhľadaním cesty k súboru s geometriou v inštalačnom priečinku DEFORM /2D/LABS/Cartridge_Lab, pozri [Fig. 2DCCDL1.14.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_14_Loading_Punch_geometry). Skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste sa uistili, že je v poriadku. Importovaná geometria by nemala mať žiadne problémy. Po definovaní geometrie pre Punch použijeme tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na prechod na stránku Movement. Pre Punch nebudeme generovať sieť, pretože typ objektu je Rigid a nemáme v úmysle vypočítať rozloženie teploty.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image014.jpg' | relative_url }})
 
-Loading Punch geometry
+Načítavanie geometrie razníka
 
-#### Defining Movement for Punch
+#### Definovanie pohybu pre úder
 
-The default mode for Punch movement is Constant speed. Input a value of **10** in/sec for the Constant value and confirm that the Direction is **-Y** , see [Fig. 2DCCDL1.15.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_15_Movement_controls_for_Punch) As we do not need to define anything else for Punch, we will click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button until we reach Bottom Die object.
+Predvolený režim pohybu vŕtačky je „Konštantná rýchlosť“. Zadajte hodnotu **10** in/sec do poľa „Constant“ a overte, či je smer nastavený na **-Y**, pozri [Fig. 2DCCDL1.15.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_15_Movement_controls_for_Punch). Keďže pre Punch nemusíme definovať nič ďalšie, budeme klikať na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým nedosiahneme objekt „Bottom Die“.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image015.jpg' | relative_url }})
 
-Movement controls for Punch
+Ovládanie pohybu v hre Punch
 
-### Die
+### Zomrieť
 
-#### Die object type definition
+#### Definícia typu objektu „Die“
 
-Change the object name to "**Die** ", keep the Object type as **Rigid** and the Temperature as **68** ° F, see [Fig. 2DCCDL1.16.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_16_Die_Object_page) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Die Geometry page.
+Zmeňte názov objektu na „**Die**“, typ objektu ponechajte ako **Rigid** a teplotu ako **68** °F, pozri [Fig. 2DCCDL1.16.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_16_Die_Object_page). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Geometria Die.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image016.jpg' | relative_url }})
 
-Die Object page
+Stránka objektu „Die“
 
-#### Die Geometry
+#### Geometria lisovacej formy
 
-For Die geometry, we will import the file “**Die.geo** ” by browsing the geometry file path located in DEFORM installation folder \2D\LABS\Cartridge_Lab directory using the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) button in Geometry page, see [Fig. 2DCCDL1.17.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_17_Loading_Die_geometry) Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option to make sure the geometry is OK. We do not need to define mesh or movement controls for Die as the Die is a rigid object, stationary and we are not calculating temperature distribution over the Die, we will click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button until we reach Object 4 page.
+V prípade geometrie formy naimportujeme súbor „**Die.geo**“ tak, že vyhľadáme cestu k súboru s geometriou nachádzajúcu sa v inštalačnej zložke programu DEFORM \2D\LABS\Cartridge_Lab pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) na stránke Geometria, pozri [Fig. 2DCCDL1.17.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_17_Loading_Die_geometry). Skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste sa uistili, že je v poriadku. Pre matricu nemusíme definovať sieť ani ovládacie prvky pohybu, pretože matrica je tuhý objekt, je nehybná a nevypočítavame rozloženie teploty na matrici; budeme klikať na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nedostaneme na stránku „Object 4“.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image017.jpg' | relative_url }})
 
-Loading Die geometry
+Načítavanie geometrie lisovacej formy
 
-### Ejector
+### Vyhadzovač
 
-#### Ejector object type definition
+#### Definícia typu objektu „Ejector“
 
-Change the object name from Object 4 to "**Ejector** ", keep the Object type as **Rigid** and the Temperature as **68** ° F, see [Fig. 2DCCDL1.18.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_18_Ejector_object_page) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Ejector Geometry page.
+Zmeňte názov objektu z „Object 4“ na „**Ejector**“, typ objektu ponechajte ako **Rigid** a teplotu ako **68** °F; pozrite si [Fig. 2DCCDL1.18.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_18_Ejector_object_page). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Ejector Geometry“.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image018.jpg' | relative_url }})
 
-Ejector object page
+Stránka objektu „Ejector“
 
-#### Defining Ejector Geometry
+#### Definovanie geometrie vyhadzovača
 
-We will import the file “**Ejector.geo** ” for Ejector geometry by browsing the geometry file path located in DEFORM installation folder \2D\LABS\Cartridge_Lab directory using the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) button in Geometry page, see [Fig. 2DCCDL1.19.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_19_Loading_Ejector_geometry) Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option to make sure the geometry is OK. We do not need to define mesh or movement controls for Ejector as the Ejector is a rigid object, stationary and we are not calculating temperature distribution over the Ejector, we will click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button until we reach Scheduled positioning page.
+Na načítanie geometrie vyhadzovača importujeme súbor „**Ejector.geo**“ tak, že vyhľadáme cestu k súboru s geometriou nachádzajúcu sa v inštalačnej zložke DEFORM v adresári \2D\LABS\Cartridge_Lab pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) na stránke Geometria, pozri [Fig. 2DCCDL1.19.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_19_Loading_Ejector_geometry). Skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste sa uistili, že je v poriadku. Pre Ejector nemusíme definovať sieť ani ovládacie prvky pohybu, keďže Ejector je tuhý objekt, ktorý je nehybný a nevypočítavame rozloženie teploty na Ejectore; budeme klikať na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nedostaneme na stránku Naplánované polohovanie.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image019.jpg' | relative_url }})
 
-Loading Ejector geometry
+Načítavanie geometrie vyhadzovača
 
-### Defining Scheduled positioning
+### Definícia plánovaného umiestnenia
 
-We will be using Scheduled positioning so that the objects are positioned automatically based on the sequence of positioning defined in the Scheduled positioning page before DB is generated in DB generation page. To schedule position for Station1 objects, click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button to add a positioning item and select ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}). Change the Positioning object to the **Workpiece** and the Reference object to the **Die** , select the Approach Direction to **-Y.** Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) and we can observe that a positioning step being added based on our definition in the Scheduled positioning page. 
+Budeme používať funkciu „Plánované polohovanie“, aby sa objekty automaticky umiestnili na základe postupnosti polohovania definovanej na stránke „Plánované polohovanie“ ešte pred vytvorením databázy na stránke „Vytvorenie databázy“. Ak chcete naplánovať polohu pre objekty Station1, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}), aby ste pridali položku polohovania, a vyberte ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}). Zmeňte objekt polohovania na **Obrobok** a referenčný objekt na **Formu**, vyberte smer priblíženia **-Y**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) a uvidíte, že sa pridáva krok polohovania na základe našej definície na stránke Naplánované polohovanie. 
 
-Similarly, position Punch over Workpiece by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button and select ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}), change the Positioning Object to the **Punch** , the Reference object to the **Workpiece** and select the Approach Direction to **-Y**. We can observe the scheduled positioning sequence as shown in [Fig. 2DCCDL1.20.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_20_Scheduled_positioning_definition_for_Station) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to navigate to Contact page to define contact conditions.
+Podobne nastavte polohu razníka nad obrobkom kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) a vyberte ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}), zmeňte polohovací objekt na **razník**, referenčný objekt na **obrobok** a vyberte smer priblíženia **-Y**. Môžeme si prezrieť naplánovanú sekvenciu polohovania, ako je znázornené na obrázku [Fig. 2DCCDL1.20.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_20_Scheduled_positioning_definition_for_Station). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Kontakt“, kde môžete definovať podmienky kontaktu.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image020.jpg' | relative_url }})
 
-Scheduled positioning definition for Station1
+Definícia plánovaného polohovania pre stanicu 1
 
-### Defining contact conditions
+### Stanovenie podmienok kontaktu
 
-As we are using schedule positioning to position the objects, we need to schedule the contact generation so that contacts between objects can be generated between the objects based on the positioning defined in the Schedule positioning. Turn on the checkboxes Initialize and Generate to initialize contacts and then generate new contacts based on the contact relations defined, see Fig. 2DCCDL1.21\. Assign the default inter-object relationships using ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. Click on the ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button for one of the relationships. An Inter-object data window will open, select **Hybrid** type friction radio button in Deformation tab, define **0.1** value for both Coulomb and Shear. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to exit the Inter-object data window. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to apply the same friction conditions defined for the selected relation to all other relations in the list, see [Fig. 2DCCDL1.21.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_21_Defining_contact_conditions) Since contacts will be generated during DB generation, we will click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to navigate to Stopping controls page to define stopping controls.
+Keďže na umiestňovanie objektov používame funkciu „Schedule positioning“, musíme naplánovať generovanie kontaktov tak, aby sa kontakty medzi objektmi mohli generovať na základe umiestnenia definovaného v tejto funkcii. Zaškrtnite políčka Inicializovať a Generovať, aby sa inicializovali kontakty a následne vygenerovali nové kontakty na základe definovaných kontaktných vzťahov, pozri obr. 2DCCDL1.21\. Priraďte predvolené vzťahy medzi objektmi pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) pre jeden z vzťahov. Otvorí sa okno „Inter-object data“ (Dáta medzi objektmi), na karte „Deformation“ (Deformácia) vyberte prepínač typu trenia **Hybrid** a pre Coulomb aj Shear nastavte hodnotu **0,1**. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte okno „Inter-object data“. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}), aby ste uplatnili rovnaké podmienky trenia, ktoré ste definovali pre vybraný vzťah, na všetky ostatné vzťahy v zozname, pozrite [Fig. 2DCCDL1.21.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_21_Defining_contact_conditions). Keďže kontakty budú generované počas generovania databázy, klikneme na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby sme prešli na stránku Ovládacie prvky zastavenia a definovali ovládacie prvky zastavenia.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image021.jpg' | relative_url }})
 
-Defining contact conditions
+Definovanie podmienok kontaktu
 
-### Stopping controls
+### Ovládacie prvky na zastavenie
 
-We will be defining stopping controls so that simulation stops when the Workpiece crosses a plane. In Stopping controls page, click on **Stopping****plane** tab, turn on Defined checkbox and define Origin as (**0,-0.1**) and Vector as (**0,****-1**), see [Fig. 2DCCDL1.22.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_22_Defining_Stopping_controls_for_Station1) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to navigate to Step page to define simulation step controls.
+Nastavíme kontrolné body zastavenia tak, aby sa simulácia zastavila v okamihu, keď obrobok prekročí rovinu. Na stránke „Kontrolné body zastavenia“ kliknite na kartu **Zastavenie****rovina**, zaškrtnite políčko „Definované“ a nastavte počiatok na (**0,-0,1**) a vektor na (**0,****-1**), pozri [Fig. 2DCCDL1.22.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_22_Defining_Stopping_controls_for_Station1). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Krok“ a definovali ovládacie prvky krokov simulácie.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image022.jpg' | relative_url }})
 
-Defining Stopping controls for Station1
+Nastavenie ovládacích prvkov zastavenia pre stanicu 1
 
-### Step Controls
+### Ovládacie prvky krokov
 
-We will be defining settings to control the simulation steps in Step page. Define **Number of Steps** for simulation as **10000** , **Step increment to save** steps into database as **10** and **Die displacement per step** as **0.001** , see[ Fig. 2DCCDL1.23.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_23_Simulation_step_controls_for_Station1) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Generate DB page.
+Na stránke „Step“ nastavíme parametre na riadenie krokov simulácie. Nastavte **počet krokov** simulácie na hodnotu **10000**, **Krok prírastku na uloženie** krokov do databázy nastavte na **10** a **Posun matrice na krok** na **0,001**, pozri [ Fig. 2DCCDL1.23.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_23_Simulation_step_controls_for_Station1). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre generovanie stránky databázy.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image023.jpg' | relative_url }})
 
-Simulation step controls for Station1
+Ovládacie prvky simulačných krokov pre stanicu 1
 
-### Generating Database
+### Vytvorenie databázy
 
-In Generate database page, click on the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button, the data checking system will confirm that defined data is appropriate for running a simulation.Red marks indicate missing or incorrect data that will prevent a simulation from running. It is necessary to correct those errors before the database can be generated.
+Na stránke „Vytvoriť databázu“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}). Systém kontroly údajov potvrdí, či zadané údaje sú vhodné na spustenie simulácie. Červené značky označujú chýbajúce alebo nesprávne údaje, ktoré zabránia spusteniu simulácie. Pred vytvorením databázy je potrebné tieto chyby opraviť.
 
   
-Yellow marks indicate data which may be suspect and should be reviewed. These should be investigated carefully, as they might result in system instability or erroneous (incorrect) results.  
+Žlté značky označujú údaje, ktoré môžu byť pochybné a mali by sa skontrolovať. Tieto údaje je potrebné dôkladne preveriť, pretože môžu viesť k nestabilite systému alebo k chybným (nesprávnym) výsledkom.  
   
-Review the data checking information. If there are no yellow or red marks, click the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button.  
-You should look for the words: Database has been generated in the Message tab. When you see this, it means that your inputs have been saved to the database.
+Preverte si informácie o kontrole údajov. Ak sa nezobrazujú žiadne žlté ani červené značky, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).  
+Na karte Správa by ste mali hľadať text: „Databáza bola vytvorená“. Keď sa tento text zobrazí, znamená to, že vaše údaje boli uložené do databázy.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) to proceed to set up ‘Station2’.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}), aby ste pokračovali v nastavení „Station2“.
 
-## Setting up Station2:
+## Nastavenie Station2:
 
-Change the operation name to "**Station2** " for the 2nd Forming operation in Operation editor tab as done for first operation by double clicking on the operation name and press Enter in Keyboard after editing the operation name. 
+Zmeňte názov operácie na „**Station2**“ pre druhú operáciu tvárnenia na karte „Editor operácií“, rovnako ako v prípade prvej operácie – dvojitým kliknutím na názov operácie a po úprave názvu stlačením klávesy Enter. 
 
-When we navigated to Station2, all objects from Station1 are moved to Station2 as Read from DB objects. In Station2, we will change the Die, Punch and Ejector geometries, and initialize the Strain, Damage and Velocity of the Workpiece to 0 as the Workpiece will undergo strain relaxation between the forming operations.
+Keď prejdeme na stanicu 2, všetky objekty zo stanice 1 sa presunú na stanicu 2 ako objekty načítané z databázy. Na stanici 2 zmeníme geometriu matrice, razníka a vyhadzovača a nastavenia deformácie, poškodenia a rýchlosti obrobku na hodnotu 0, keďže obrobok medzi jednotlivými operáciami tvárnenia prejde relaxáciou deformácie.
 
-### Select Geometry Type and Simulation modes
+### Výber typu geometrie a režimov simulácie
 
-Keep the **2D Axisymmetric** radio button selected as geometry type and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue to Simulation controls page. In Simulation controls page, uncheck the Heat transfer mode check box as shown in [Fig. 2DCCDL1.3.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_3_Geometry_type_selection) of Station1 and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Workpiece page as we do not need any additional objects to be added to the Objects list for this operation.
+Nechajte zaškrtnuté tlačidlo **2D Axisymmetric** ako typ geometrie a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Simulation controls“. Na stránke Ovládacie prvky simulácie zrušte zaškrtnutie políčka Režim prenosu tepla, ako je znázornené na obrázku [Fig. 2DCCDL1.3.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_3_Geometry_type_selection) v stanici 1, a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku Obrobok, pretože pre túto operáciu nepotrebujeme do zoznamu objektov pridávať žiadne ďalšie objekty.
 
-### Workpiece 
+### Obrobok 
 
-#### Workpiece object type definition
+#### Definícia typu objektu obrobku
 
-We can notice that Object type of the Workpiece is Read from DB, the Workpiece object data will be read from the last step of the previous operation. We will keep the Workpiece as Read from DB, see [Fig. 2DCCDL1.24.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_24_Workpiece_object_page) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Workpiece Properties page as we will not be redefining the mesh or bcc for the Workpiece.
+Môžeme si všimnúť, že typ objektu „Obrobok“ je nastavený na „Načítané z databázy“; údaje objektu „Obrobok“ sa načítajú z posledného kroku predchádzajúcej operácie. Necháme nastavenie „Obrobok“ ako „Načítané z databázy“ (pozri [Fig. 2DCCDL1.24.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_24_Workpiece_object_page)). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka „Vlastnosti obrobku“, pretože nebudeme pre obrobok nanovo definovať sieť ani bcc.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image024.jpg' | relative_url }})
 
-Workpiece object page
+Stránka objektu obrobku
 
-#### Setting Limiting strain rate value for Workpiece
+#### Nastavenie hodnoty medznej rýchlosti deformácie pre obrobok
 
-We will change the Limiting Strain rate value to capture the lower strain rates in the Workpiece. We will **turn****on****Redefine Strain rate checkbox** and **Limiting** as ‘**0.001** ’, see [Fig. 2DCCDL1.25.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_25_Redefining_Limiting_Strain_rate_for_Workpiece) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Initialize page to initialize Workpiece conditions.
+Zmeníme hodnotu „Limiting Strain rate“, aby sme zohľadnili nižšie rýchlosti deformácie v obrobku. Zaškrtneme **políčko Redefine Strain rate** a nastavíme **Limiting** na hodnotu „**0,001**“, pozri stránku [Fig. 2DCCDL1.25.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_25_Redefining_Limiting_Strain_rate_for_Workpiece) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Initialize, kde inicializujeme podmienky obrobku.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image025.jpg' | relative_url }})
 
-Redefining Limiting Strain rate for Workpiece
+Nové vymedzenie medznej rýchlosti deformácie pre obrobok
 
-#### Initializing Workpiece conditions
+#### Inicializácia podmienok obrobku
 
-In Initialize page, turn on **Strain** , **Damage** and **Velocity** check boxes and define value as ‘**0** ’ so that we can take into account the strain relaxation of the Workpiece, see [Fig. 2DCCDL1.26.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_26_Initializing_Workpiece_conditions_in_Station2) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Punch object page.
+Na stránke „Initialize“ zapnite políčka **Strain**, **Poškodenie** a **Rýchlosť** a nastavte hodnotu na „**0**“, aby sme mohli zohľadniť relaxáciu deformácie obrobku, pozri [Fig. 2DCCDL1.26.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_26_Initializing_Workpiece_conditions_in_Station2). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku objektu „Punch“.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image026.jpg' | relative_url }})
 
-Initializing Workpiece conditions in Station2
+Inicializácia podmienok obrobku v stanici 2
 
 ### Punch
 
-#### Punch object type definition
+#### Definícia typu objektu „Punch“
 
-We need to change the Punch geometry for the Station2, hence change the Object type from Read from DB to **Rigid** , see [Fig. 2DCCDL1.27.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_27_Punch_object_page) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Punch Geometry page.
+Musíme zmeniť geometriu výrezu pre Station2, a preto zmeniť typ objektu z „Read from DB“ na **Rigid**; pozri [Fig. 2DCCDL1.27.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_27_Punch_object_page). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Punch Geometry“.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image027.jpg' | relative_url }})
 
-Punch object page
+Stránka objektu „Punch“
 
-#### Changing Punch Geometry
+#### Zmena geometrie razníka
 
-In Punch Geometry page, import the file “**Punch2.geo** ” by browsing the geometry file path located in DEFORM installation folder \2D\LABS\Cartridge_Lab directory, see [Fig. 2DCCDL1.28.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_28_Punch_geometry_in_Station2) Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option to make sure the geometry is OK. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until we reach Punch movement page.
+Na stránke „Punch Geometry“ (Geometria výseku) načítajte súbor „**Punch2.geo**“ tak, že vyhľadáte cestu k súboru s geometriou nachádzajúcu sa v inštalačnej zložke programu DEFORM v adresári \2D\LABS\Cartridge_Lab, pozri [Fig. 2DCCDL1.28.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_28_Punch_geometry_in_Station2). Skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste sa uistili, že je v poriadku. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nedostanete na stránku „Punch movement“.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image028.jpg' | relative_url }})
 
-Punch geometry in Station2
+Geometria dier v programe Station2
 
-#### Assign Movement to Punch in Station2
+#### Priradenie pohybu k úderu v Station2
 
-The default mode is constant speed. Input a value of **10** in/sec for the Constant value and confirm that the Direction is -Y. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Die object page.
+Predvoleným režimom je konštantná rýchlosť. Do poľa „Constant“ zadajte hodnotu **10** in/sec a overte, či je smer nastavený na -Y. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka objektu „Die“.
 
-### Die
+### Zomrieť
 
-#### Die object type definition
+#### Definícia typu objektu „Die“
 
-We need to change the Die geometry for the Station2, hence change the Object type from Read from DB to **Rigid**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Die Geometry page.
+Musíme zmeniť geometriu formy pre Station2, a preto zmeniť typ objektu z „Read from DB“ na **Rigid**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Die Geometry“.
 
-#### Changing Die Geometry
+#### Zmena geometrie lisovacej formy
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) button and import the file “**Die2.geo** ” by browsing the geometry file path located in DEFORM installation folder \2D\LABS\Cartridge_Lab directory, see [Fig. 2DCCDL1.29.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_29_Die_geometry_for_Station2) Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option to make sure the geometry is OK. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Ejector object page.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) a importujte súbor „**Die2.geo**“ tak, že vyhľadáte cestu k súboru s geometriou nachádzajúcu sa v inštalačnej zložke programu DEFORM \2D\LABS\Cartridge_Lab, pozri [Fig. 2DCCDL1.29.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_29_Die_geometry_for_Station2). Skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste sa uistili, že je v poriadku. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka objektu Ejector.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image029.jpg' | relative_url }})
 
-Die geometry for Station2
+Geometria matrice pre Station2
 
-### Ejector
+### Vyhadzovač
 
-#### Ejector object type definition
+#### Definícia typu objektu „Ejector“
 
-We need to change the Ejector geometry for the Station2, hence change the Object type from Read from DB to **Rigid**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Ejector Geometry page.
+Musíme zmeniť geometriu vyhadzovača pre Station2, a preto zmeniť typ objektu z „Read from DB“ na **Rigid**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Ejector Geometry“.
 
-#### Changing Ejector Geometry
+#### Zmena geometrie vyhadzovača
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})(Load geometry from a file) button and import the file “**Ejector2.geo** ” by browsing the geometry file path located in DEFORM installation folder \2D\LABS\Cartridge_Lab directory, see [Fig. 2DCCDL1.30.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_30_Ejector_geometry_for_Station2) Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option to make sure the geometry is OK. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Scheduled positioning page.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) a importujte súbor „**Ejector2.geo**“ tak, že vyhľadáte cestu k súboru s geometriou nachádzajúcu sa v inštalačnom priečinku DEFORM \2D\LABS\Cartridge_Lab, pozri [Fig. 2DCCDL1.30.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_30_Ejector_geometry_for_Station2). Skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste sa uistili, že je v poriadku. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Naplánované polohovanie.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image030.jpg' | relative_url }})
 
-Ejector geometry for Station2
+Geometria vyhadzovača pre Station2
 
-### Scheduled Positioning
+### Plánované polohovanie
 
-Currently, we do not have the Workpiece geometry output from Station1 simulation to position the dies as the Station1 is not yet simulated. Hence, we will use schedule positioning method which will position dies during DB generation for Station2 with respect to the Workpiece geometry output from Station1, Workpiece object type is Read from DB. 
+V súčasnosti nemáme k dispozícii výstup geometrie obrobku zo simulácie stanice 1, ktorý by slúžil na umiestnenie foriem, keďže simulácia stanice 1 ešte nebola vykonaná. Preto použijeme metódu umiestňovania podľa plánu, ktorá umiestni formy počas generovania databázy pre stanicu 2 s ohľadom na geometriu obrobku získanú zo stanice 1; typ objektu obrobku je „Načítané z databázy“. 
 
-To schedule position for Station2 objects, click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button to add a positioning item and select ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}). Change the Positioning object to the **Workpiece** and the Reference object to the **Die** , select the Approach Direction to **-Y.** Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) and we can observe that a positioning step being added based on our definition in the Scheduled positioning page. Similarly, position Punch over Workpiece by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button and select ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}), change the Positioning Object to the **Punch** , the Reference object to the **Workpiece** and select the Approach Direction to **-Y**. We can observe the scheduled positioning sequence as shown in [Fig. 2DCCDL1.31.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_31_Scheduled_positioning_definition_for_Station2) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to navigate to Contact page to define contact conditions.
+Ak chcete naplánovať polohu pre objekty Station2, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}), aby ste pridali polohovaciu položku, a vyberte ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}). Zmeňte objekt polohovania na **Obrobok** a referenčný objekt na **Formu**, ako smer priblíženia vyberte **-Y.** Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) môžeme pozorovať, že sa pridáva polohovací krok na základe našej definície na stránke Naplánované polohovanie. Podobne umiestnite razník nad obrobok kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) a výberom ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}), zmeňte objekt polohovania na **razník**, referenčný objekt na **obrobok** a vyberte smer priblíženia **-Y**. Môžeme vidieť naplánovanú sekvenciu polohovania, ako je znázornené v [Fig. 2DCCDL1.31.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_31_Scheduled_positioning_definition_for_Station2). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Kontakt“ a definovali podmienky kontaktu.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image031.jpg' | relative_url }})
 
-Scheduled positioning definition for Station2
+Definícia plánovaného polohovania pre stanicu 2
 
-### Defining Contact conditions and scheduling contact generation for Station2
+### Definovanie podmienok kontaktu a naplánovanie vytvorenia kontaktov pre Station2
 
-We need to schedule the contact generation so that contacts between objects can be generated with between the objects based on the positioning defined in the Schedule positioning. Turn on the check boxes Initialize and Generate to initialize contacts and then generate new contacts based on the contact relations defined, see [Fig. 2DCCDL1.32.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDl1_32_Defining_contact_conditions_for_Stage_2) Assign the default inter-object relationships using ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. Click on the ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button for one of the relationships. Select **Hybrid type** friction radio button in Deformation tab, define **0.1** value for both **Coulomb** and **Shear** in Inter-object data window. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to exit the Inter-object data window. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to apply the same friction conditions defined for the selected relation to all other relations in the list, see [Fig. 2DCCDL1.32.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDl1_32_Defining_contact_conditions_for_Stage_2) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to navigate to Stopping controls page to define stopping controls.
+Musíme naplánovať generovanie vzťahov tak, aby sa vzťahy medzi objektmi mohli generovať na základe polohy definovanej v položke „Plánovanie polohy“. Zaškrtnite políčka Inicializovať a Generovať, aby sa inicializovali kontakty a následne sa vygenerovali nové kontakty na základe definovaných kontaktných vzťahov, pozri [Fig. 2DCCDL1.32.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDl1_32_Defining_contact_conditions_for_Stage_2). Priraďte predvolené vzťahy medzi objektmi pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) pre jeden z vzťahov. Na karte Deformácia vyberte prepínač **Hybridný typ** trenia a v okne Medziobjektové údaje nastavte hodnotu **0,1** pre položky **Coulomb** aj **Šmyk**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste opustili okno **Medziobjektové údaje**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}), aby ste uplatnili rovnaké podmienky trenia definované pre vybraný vzťah na všetky ostatné vzťahy v zozname, pozri [Fig. 2DCCDL1.32.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDl1_32_Defining_contact_conditions_for_Stage_2). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku **Ovládacie prvky zastavenia** a definovali ovládacie prvky zastavenia.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image032.jpg' | relative_url }})
 
-Defining contact conditions for Stage 2
+Stanovenie podmienok kontaktu pre 2. fázu
 
-### Stopping controls for Station2
+### Ovládacie prvky na zastavenie pre Stanicu 2
 
-In Stopping controls page, we will define stopping plane as stopping criteria. Click on **Stopping****plane** tab, turn on Defined checkbox and define origin as (**0** ,**-0.1**) and vector as (**0** ,**-1**) see [Fig. 2DCCDL1.33.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig2DCCDL1_33_Stopping_plane_stopping_criteria_for_Station2) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to navigate to Step page to define simulation step controls.
+Na stránke „Ovládacie prvky zastavenia“ definujeme rovinu zastavenia ako kritérium zastavenia. Kliknite na kartu **Rovina zastavenia**, zaškrtnite políčko „Definované“ a nastavte počiatok na (**0**, **-0,1**) a vektor na (**0**, **-1**), pozri [Fig. 2DCCDL1.33.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig2DCCDL1_33_Stopping_plane_stopping_criteria_for_Station2). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Step“ (Krok) a definovali ovládacie prvky simulačných krokov.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image033.jpg' | relative_url }})
 
-Stopping plane stopping criteria for Station2
+Kritériá zastavenia lietadla pre stanicu 2
 
-### Step Controls for Station2
+### Ovládacie prvky krokov pre stanicu 2
 
-In Steps page, define **Number of Steps** as **10000** , **Step increment to save** steps into database as **10** and **Die displacement per step** as **0.001**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Generate DB page, since database will be generated during runtime after completion of the Station1 simulation for a batch mode operation setup, we will click on ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) to setup Station3.
+Na stránke „Kroky“ nastavte **Počet krokov** na hodnotu **10000**, **Krok pre uloženie** do databázy na hodnotu **10** a **Posun matrice na krok** na hodnotu **0,001**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránke „Generovať databázu“. Keďže databáza sa vygeneruje počas behu programu po dokončení simulácie stanice 1 v rámci nastavenia dávkového režimu, klikneme na ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}), aby sme nastavili stanicu 3.
 
-## Station3
+## Stanica 3
 
-Change the operation name to "**Station3** " for the 3rd Forming operation in Operation editor tab as done in previous operations setup by double clicking on the operation name and press Enter in Keyboard after editing the operation name. 
+Zmeňte názov operácie na „**Station3**“ pre tretiu operáciu tvarovania na karte „Editor operácií“, tak ako ste to urobili pri nastavení predchádzajúcich operácií – dvojitým kliknutím na názov operácie a stlačením klávesy Enter po úprave názvu operácie. 
 
-Similar to Station2 for Station3, we will change the Die, Punch and Ejector geometries, and initialize the Strain, Damage and Velocity of the Workpiece to 0 as the Workpiece will undergo strain relaxation between the forming operations.
+Podobne ako v prípade stanice 2 aj pre stanicu 3 zmeníme geometriu matrice, razníka a vyhadzovača a nastavíme deformáciu, poškodenie a rýchlosť obrobku na hodnotu 0, keďže obrobok bude medzi jednotlivými operáciami tvárnenia podliehať relaxácii deformácie.
 
-### Select Geometry Type and Simulation modes
+### Výber typu geometrie a režimov simulácie
 
-Keep the **2D Axisymmetric** radio button selected as geometry type and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue to Simulation controls page. In Simulation controls page, uncheck the Heat transfer mode check box as shown in Fig. 2DCCDL1.4\. of Station1 and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Workpiece page as we do not need any additional objects to be added to the Objects list for this operation.
+Nechajte zaškrtnuté tlačidlo **2D Axisymmetric** ako typ geometrie a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Simulation controls“. Na stránke Ovládacie prvky simulácie zrušte zaškrtnutie políčka Režim prenosu tepla, ako je znázornené na obr. 2DCCDL1.4\. v Station1, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku Obrobok, pretože pre túto operáciu nepotrebujeme do zoznamu Objektov pridávať žiadne ďalšie objekty.
 
-### Workpiece 
+### Obrobok 
 
-#### Workpiece object type definition
+#### Definícia typu objektu obrobku
 
-We can notice that Object type of the Workpiece is Read from DB, the Workpiece object data will be read from the last step of the previous operation. We will keep the Workpiece as Read from DB. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Workpiece Properties page.
+Môžeme si všimnúť, že typ objektu „Workpiece“ je nastavený na „Read from DB“; údaje objektu „Workpiece“ sa načítajú z posledného kroku predchádzajúcej operácie. Typ objektu „Workpiece“ ponecháme nastavený na „Read from DB“. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Workpiece Properties“.
 
-#### Setting Limiting strain rate value for Workpiece
+#### Nastavenie hodnoty medznej rýchlosti deformácie pre obrobok
 
-We will turn on **Redefine** **Strain****rate** checkbox and **Limiting** as ‘**0.001** ’, see [Fig. 2DCCDL1.34.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_34_Redefining_Limiting_Strain_rate_for_Workpiece) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Initialize page to initialize Workpiece conditions.
+Zaškrtneme políčko **Predefinovať** **rýchlosť deformácie** a nastavíme **Obmedzenie** na hodnotu „**0,001**“; pozri stránku [Fig. 2DCCDL1.34.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_34_Redefining_Limiting_Strain_rate_for_Workpiece). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na inicializáciu podmienok obrobku inicializujeme podmienky obrobku.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image034.jpg' | relative_url }})
 
-Redefining Limiting Strain rate for Workpiece
+Nové vymedzenie medznej rýchlosti deformácie pre obrobok
 
-#### Initializing Workpiece conditions
+#### Inicializácia podmienok obrobku
 
-In Initialize page, turn on Strain, Damage, Velocity checkboxes and define value as ‘**0** ’ so that we can take into account the strain relaxation of the Workpiece, see [Fig. 2DCCDL1.35.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_35_Initializing_Workpiece_conditions_in_Station3) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Punch object page.
+Na stránke „Initialize“ zaškrtnite políčka „Strain“, „Damage“ a „Velocity“ a nastavte hodnotu na „**0**“, aby sme mohli zohľadniť relaxáciu deformácie obrobku; pozri [Fig. 2DCCDL1.35.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_35_Initializing_Workpiece_conditions_in_Station3). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Punch object“.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image035.jpg' | relative_url }})
 
-Initializing Workpiece conditions in Station3
+Inicializácia podmienok obrobku v stanici 3
 
 ### Punch
 
-#### Punch object type definition
+#### Definícia typu objektu „Punch“
 
-We need to change the Punch geometry for the Station3, hence change the Object type from Read from DB to **Rigid** , see [Fig. 2DCCDL1.36.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_36_Punch_object_page_Station3) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Punch Geometry page.
+Musíme zmeniť geometriu výrezu pre Station3, a preto zmeniť typ objektu z „Read from DB“ na **Rigid**; pozri [Fig. 2DCCDL1.36.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_36_Punch_object_page_Station3). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Punch Geometry“.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image036.jpg' | relative_url }})
 
-Punch object page Station3
+Stránka objektu Punch – Stanica 3
 
-#### Changing Punch Geometry
+#### Zmena geometrie razníka
 
-In Punch Geometry page, import the file “**Punch3.geo** ” by browsing the geometry file path located in DEFORM installation folder \2D\LABS\Cartridge_Lab directory, see [Fig. 2DCCDL1.37.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_37_Punch_geometry_for_Station3) Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option to make sure the geometry is OK. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until we reach Punch movement page.
+Na stránke „Punch Geometry“ (Geometria dierovacieho nástroja) načítajte súbor „**Punch3.geo**“ tak, že vyhľadáte cestu k súboru s geometriou nachádzajúcu sa v inštalačnej zložke programu DEFORM v adresári \2D\LABS\Cartridge_Lab, pozri [Fig. 2DCCDL1.37.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_37_Punch_geometry_for_Station3). Skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste sa uistili, že je v poriadku. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nedostanete na stránku „Punch movement“.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image037.jpg' | relative_url }})
 
-Punch geometry for Station3
+Geometria razníka pre Station3
 
-#### Assign Movement to Punch in Station2
+#### Priradenie pohybu k úderu v Station2
 
-The default mode is constant speed. Input a value of **10** in/sec for the Constant value and confirm that the Direction is **-Y**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Die object page.
+Predvoleným režimom je konštantná rýchlosť. Do poľa „Constant“ zadajte hodnotu **10** in/sec a overte, či je v poli „Direction“ nastavená hodnota **-Y**. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka objektu „Die“.
 
-### Die
+### Zomrieť
 
-#### Die object type definition
+#### Definícia typu objektu „Die“
 
-We need to change the Die geometry for the **Station3** , hence change the Object type from Read from DB to **Rigid**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Die Geometry page.
+Musíme zmeniť geometriu formy pre **Station3**, a preto zmeniť typ objektu z „Read from DB“ na **Rigid**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Die Geometry“.
 
-#### Changing Die Geometry
+#### Zmena geometrie lisovacej formy
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) button and import the file “**Die3.geo** ” by browsing the geometry file path located in DEFORM installation folder \2D\LABS\Cartridge_Lab directory, see Fig. 2DCCDL1.38\. Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option to make sure the geometry is OK. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Ejector object page.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) a importujte súbor „**Die3.geo**“ tak, že vyhľadáte cestu k súboru s geometriou nachádzajúcu sa v inštalačnej zložke DEFORM v adresári \2D\LABS\Cartridge_Lab, pozri obr. 2DCCDL1.38\. Skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste sa uistili, že je v poriadku. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka objektu Ejector.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image038.jpg' | relative_url }})
 
-Die geometry for Station3
+Geometria matrice pre Station3
 
-### Ejector
+### Vyhadzovač
 
-#### Ejector object type definition
+#### Definícia typu objektu „Ejector“
 
-We need to change the Ejector geometry for the Station3, hence change the Object type from Read from DB to **Rigid**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Ejector Geometry page.
+Musíme zmeniť geometriu vyhadzovača pre Station3, a preto zmeniť typ objektu z „Read from DB“ na **Rigid**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Ejector Geometry“.
 
-#### Changing Ejector Geometry
+#### Zmena geometrie vyhadzovača
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) button and import the file “**Ejector3.geo** ” by browsing the geometry file path located in DEFORM installation folder \2D\LABS\Cartridge_Lab directory, see [Fig. 2DCCDL1.39.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_39_Ejector_geometry_for_Station3) Check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option to make sure the geometry is OK. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Scheduled positioning page.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) a importujte súbor „**Ejector3.geo**“ tak, že vyhľadáte cestu k súboru s geometriou nachádzajúcu sa v inštalačnej zložke programu DEFORM v adresári \2D\LABS\Cartridge_Lab, pozri [Fig. 2DCCDL1.39.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_39_Ejector_geometry_for_Station3). Skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste sa uistili, že je v poriadku. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Naplánované polohovanie.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image039.jpg' | relative_url }})
 
-Ejector geometry for Station3
+Geometria vyhadzovača pre Station3
 
-### Scheduled Positioning
+### Plánované polohovanie
 
-Similar to Station2, we will use Schedule positioning for Station3. Add schedule positioning of interference for **Workpiece** with **Die** as Reference object in**-Y** direction. Add item of interference positioning **Punch** with **Workpiece** as Reference object in **-Y** direction. We can observe the scheduled positioning sequence as shown in [Fig. 2DCCDL1.40.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_40_Scheduled_positioning_definition_for_Station3) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to navigate to Contact page to define contact conditions.
+Podobne ako v prípade Station2 použijeme aj pre Station3 polohovanie podľa plánu. Pridajte polohovanie kolízie podľa plánu pre **obrobok** s **matricou** ako referenčným objektom v smere **-Y**. Pridajte položku polohovania kolízie **razníka** s **obrobkom** ako referenčným objektom v smere **-Y**. Môžeme si prezrieť naplánovanú sekvenciu polohovania, ako je znázornené v [Fig. 2DCCDL1.40.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_40_Scheduled_positioning_definition_for_Station3). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Kontakt, kde môžete definovať kontaktné podmienky.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image040.jpg' | relative_url }})
 
-Scheduled positioning definition for Station3
+Definícia plánovaného polohovania pre stanicu 3
 
-### Defining Contact conditions and scheduling contact generation for Station3
+### Definovanie podmienok kontaktu a naplánovanie generovania kontaktov pre Station3
 
-Similar to Station 2, we will schedule the contact generation for Station3, turn on the checkboxes Initialize and Generate to initialize contacts and then generate new contacts, see [Fig. 2DCCDL1.41.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_41_Defining_contact_conditions_for_Stage_3) ssign the default inter-object relationships using ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. Click on the ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button for one of the relationships. Select **Hybrid** type friction radio button in **Deformation** tab, define **0.1** value for both **Coulomb** and **Shear** in Inter-object data window. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to exit the Inter-object data window. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to apply the same friction conditions defined for the selected relation to all other relations in the list, see [Fig. 2DCCDL1.41.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_41_Defining_contact_conditions_for_Stage_3) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to navigate to Stopping controls page to define stopping controls.
+Podobne ako v prípade stanice 2 naplánujeme generovanie kontaktov pre stanicu 3, zaškrtneme políčka „Inicializovať“ a „Generovať“, aby sme inicializovali kontakty a následne vygenerovali nové kontakty; pozri [Fig. 2DCCDL1.41.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_41_Defining_contact_conditions_for_Stage_3) – priradenie predvolených vzťahov medzi objektmi pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) pre jeden z vzťahov. Na karte **Deformácia** vyberte prepínač typu trenia **Hybridný** a v okne **Dáta medzi objektmi** nastavte hodnotu **0,1** pre položky **Coulomb** aj **Šmyk**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste opustili okno **Inter-object data**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}), aby ste uplatnili rovnaké podmienky trenia definované pre vybraný vzťah na všetky ostatné vzťahy v zozname, pozri [Fig. 2DCCDL1.41.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_41_Defining_contact_conditions_for_Stage_3). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku **Stopping controls** a definovali ovládacie prvky zastavenia.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image046.jpg' | relative_url }})
 
-Defining contact conditions for Stage 3
+Stanovenie podmienok kontaktu pre 3. fázu
 
-### Stopping controls for Station3
+### Ovládacie prvky na zastavenie pre Stanicu 3
 
-In Stopping controls page, click on **Stopping****plane** tab, turn on **Defined****checkbox** and define origin as (**0,-0.25**) and vector as (**0** ,**-1**) see [Fig. 2DCCDL1.42.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_42_Stopping_plane_stopping_criteria_in_3rd_operation) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to navigate to Step page to define simulation step controls.
+Na stránke „Ovládacie prvky zastavenia“ kliknite na kartu **Zastavenie****roviny**, zaškrtnite **políčko „Definované“** a nastavte počiatok na (**0,-0,25**) a vektor na (**0**,**-1**), pozri [Fig. 2DCCDL1.42.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_42_Stopping_plane_stopping_criteria_in_3rd_operation). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Step“ (Krok) a definovali ovládacie prvky simulačných krokov.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image041.jpg' | relative_url }})
 
-Stopping plane stopping criteria in 3rd operation
+Kritériá zastavenia lietadla v 3. fáze operácie
 
-### Step Controls for Station3
+### Ovládacie prvky krokov pre Station3
 
-In Steps page, define **Number of Steps** as **10000** , **Step increment to save** steps into database as **10** and **Die displacement** per step as **0.001**. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Generate DB page, since database will be generated during runtime after completion of the Station2 simulation for a batch mode operation setup, we will now run the simulation.
+Na stránke „Kroky“ nastavte **Počet krokov** na hodnotu **10000**, **Krok pre uloženie** do databázy na hodnotu **10** a **Posun matrice** na jeden krok na hodnotu **0,001**. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránke „Generovať databázu“. Keďže sa databáza vygeneruje počas behu programu po dokončení simulácie Station2 v rámci nastavenia prevádzky v dávkovom režime, teraz spustíme simuláciu.
 
-## Running Simulation
+## Spustenie simulácie
 
-Switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in [Fig. 2DCCDL1.43.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_43_Run_Simulation_popup_window) Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Prepnite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom operácií. Kliknutím na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obrázku [Fig. 2DCCDL1.43.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_43_Run_Simulation_popup_window). Použite predvolenú možnosť **Continue Run** (Pokračovať v spúšťaní) a vyberte možnosť „**Pokračovať od posledného kroku**“ a potom vyberte režim simulácie ako **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image042.jpg' | relative_url }})
 
-Run Simulation popup window
+Vyskočiace okno „Spustiť simuláciu“
 
-## Post Processing 
+## Následné spracovanie 
 
-Once the simulation is completed, the DB will be moved to Finished in Simulation tab and in Log file we can observe the message as “Multiple operations completed.”. We can now switch to the **Post mode** by clicking on the ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) button to view the simulation results. In Post, Step browser below the graphic area indicates step numbers available from the different operations simulated see [Fig. 2DCCDL1.44.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_44_Step_list_page) A set of state variables available from the ‘**Post** ’ menu can be used review the model response, see [Fig. 2DCCDL1.45.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_45_Damage_results_at_last_step_of_last_operation) shows Damage state variable distribution at the last step of Station 1, Station 2 and Station 3. [Fig. 2DCCDL1.46.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_46_Strain_effective_results_at_last_step_of_last_operation) shows Effective strain state variable distribution at the last step of Station 1, Station 2 and Station 3. [ Fig. 2DCCDL1.47.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_47_Stress_effective_results_at_last_step_of_last_operation) shows Effective stress state variable distribution at the last step of Station 1, Station 2 and Station 3.
+Po dokončení simulácie sa DB presunie do sekcie „Dokončené“ na karte „Simulácia“ a v súbore protokolu sa zobrazí správa „Dokončených bolo viacero operácií.“. Teraz môžeme prejsť do **režimu Post** kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) a zobraziť výsledky simulácie. V režime Post prehliadač krokov pod grafickou oblasťou zobrazuje čísla krokov dostupných z rôznych simulovaných operácií, pozri [Fig. 2DCCDL1.44.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_44_Step_list_page). Sada stavových premenných dostupných v ponuke „**Post**“ možno použiť na kontrolu odozvy modelu, pozri [Fig. 2DCCDL1.45.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_45_Damage_results_at_last_step_of_last_operation), ktorý zobrazuje rozloženie stavovej premennej poškodenia v poslednom kroku stanice 1, stanice 2 a stanice 3. [Fig. 2DCCDL1.46.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_46_Strain_effective_results_at_last_step_of_last_operation) zobrazuje rozloženie stavovej premennej efektívneho deformácie v poslednom kroku stanice 1, stanice 2 a stanice 3. [ Fig. 2DCCDL1.47.]({{ '/docs/sk/labs/forming_labs/2d_cartridge_case_drawing_lab/' | relative_url }}#Fig_2DCCDL1_47_Stress_effective_results_at_last_step_of_last_operation) znázorňuje rozloženie stavovej premennej efektívneho napätia v poslednom kroku stanice 1, stanice 2 a stanice 3.
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image047.jpg' | relative_url }})
 
-Step list in Post processor
+Zoznam krokov v postprocesore
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image043.jpg' | relative_url }})
 
-Damage results at last step of last operation
+Výsledok poškodenia v poslednom kroku poslednej operácie
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image044.jpg' | relative_url }})
 
-Strain effective results at last step of last operation
+Výsledky s ohľadom na deformáciu v poslednom kroku poslednej operácie
 
 ![]({{ '/assets/images/labs/forming_labs/2d_cartridge_case_drawing_lab/image045.jpg' | relative_url }})
 
-Stress effective results at last step of last operation
+Výsledky zohľadňujúce napätie v poslednom kroku poslednej operácie

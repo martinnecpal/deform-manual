@@ -1,688 +1,688 @@
 ---
 lang: sk
-title: "Lab07 Gear Carrier Lab"
+title: "Laboratórium Lab07 pre nosič prevodoviek"
 ---
 
-# Lab 07 Gear Carrier Lab
+# Laboratórna práca č. 07 – Laboratórna práca s nosičom ozubených kolies
 
-## Introduction
+## Úvod
 
-This is the second lab based on an actual industrial part from the 1999 German Forging Industry Association Benchmark. This part will be used to illustrate realistic problem setup. Depending on hardware and system settings, this problem will run from several hours to a day.
+Toto je druhé laboratórne cvičenie založené na skutočnom priemyselnom diele z porovnávacieho testu Nemeckého združenia kováčskeho priemyslu z roku 1999. Tento diel poslúži na ilustráciu reálnej úlohy. V závislosti od hardvéru a nastavení systému bude riešenie tejto úlohy trvať od niekoľkých hodín až po jeden deň.
 
-The previous lab, [Lab04: Steering Link]({{ '/docs/sk/labs/basic_labs/3d_labs/lab04_steering_link/' | relative_url }}), explained the mesh settings in detail which are used to optimize execution time and problem resolution.
+V predchádzajúcom laboratórnom cvičení [Lab04: Steering Link]({{ '/docs/sk/labs/basic_labs/3d_labs/lab04_steering_link/' | relative_url }}) sme podrobne vysvetlili nastavenia siete, ktoré slúžia na optimalizáciu času spracovania a riešenie úlohy.
 
-## The Process: Mechanical Press Forging
+## Postup: Kovanie na mechanickom lise
 
-Tooling and Billet Geometry given for 1/12 (300) section
+Geometria nástrojov a polotovaru uvedená pre prierez 1/12 (300)
 
 **Billet:**
 
-Dimensions: 31.5mm dia. x 67mm high
+Rozmery: priemer 31,5 mm × výška 67 mm
 
-Material: DIN C35
+Materiál: DIN C35
 
-Preheat:1230 C
+Predohrev: 1230 °C
 
-**Tool:** Temperature: 80 C 
+**Nástroj:** Teplota: 80 °C 
 
-**Transfer from furnace:** 7 seconds
+**Čas prenosu z pece:** 7 sekúnd
 
-**Dwell on die:** 0.7 seconds
+**Doba zotrvania na čipe:** 0,7 sekundy
 
-**First operation:** Flat upset to 9.5mm 
+**Prvá operácia:** Ploché valcovanie na 9,5 mm 
 
-**Transfer to 2nd tool:** 3 seconds
+**Prechod na druhý nástroj:** 3 sekundy
 
-**Second operation:** Forge to shape
+**Druhý krok:** Tvarovanie v kováčskej dielni
 
-## Planning the Simulation
+## Plánovanie simulácie
 
-This is a two-step forging operation with a relatively long dwell between the furnace and the press. The first operation is straightforward and is not likely to cause difficulties. The second operation is more complex, and results are much more difficult to predict, which makes simulation useful. There are three possible approaches to simulate this process:
+Ide o dvojfázový proces kovania s pomerne dlhým časom odpočinku medzi pecou a lisom. Prvá fáza je jednoduchá a pravdepodobne nespôsobí žiadne ťažkosti. Druhá fáza je zložitejšia a jej výsledky sa oveľa ťažšie predpovedajú, čo zvyšuje užitočnosť simulácie. Existujú tri možné prístupy k simulácii tohto procesu:
 
-  1. Simulate the entire process in 3D, including heat transfer, upset, and finisher. This is straightforward to run, and accurately captures temperature and strain distributions in the workpiece.
+  1. Simulujte celý proces v 3D, vrátane prenosu tepla, lisovania a dokončovacieho spracovania. Simulácia sa ľahko spúšťa a presne zachytáva rozloženie teploty a deformácie v obrobku.
 
-  2. Simulate the upset in 2D, transfer the data to 3D, and simulate the extrude in 3D. The 2D operation is easier to set up and runs very quickly. Translation to 3D requires the use of 2D to 3D conversion utility, which is available with DEFORM ®. Like the entire 3D simulation, this approach accurately captures temperature and strain distributions in the workpiece.
+  2. Simulujte zúženie v 2D, preneste údaje do 3D a simulujte vytláčanie v 3D. 2D operáciu je jednoduchšie nastaviť a prebieha veľmi rýchlo. Prevod do 3D si vyžaduje použitie nástroja na konverziu z 2D do 3D, ktorý je k dispozícii v programe DEFORM®. Rovnako ako celá 3D simulácia, aj tento prístup presne zachytáva rozloženie teploty a deformácie v obrobku.
 
-  3. Create the upset part geometry in a CAD model and simulate only the second operation. This method is quick, and requires less effort than running the full simulation, but temperature and strain distributions will not be correct, and the discrepancies will affect load calculations, and in some cases may affect material flow behavior.
+  3. Vytvorte geometriu zúženej časti v CAD modeli a simulujte len druhú operáciu. Táto metóda je rýchla a vyžaduje menej úsilia ako spustenie úplnej simulácie, avšak rozloženie teploty a deformácie nebude správne a tieto odchýlky ovplyvnia výpočty zaťaženia a v niektorých prípadoch môžu ovplyvniť aj správanie sa materiálu pri tečení.
 
-For this problem, we will run the entire simulation in 3D (See Fig. 3DL7.1.). We will set up all operations in batch mode.
+V rámci tejto úlohy spustíme celú simuláciu v 3D (pozri obr. 3DL7.1.). Všetky operácie nastavíme v dávkovom režime.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image001.jpg' | relative_url }})
 
-3D CAD model of Upsetting and Finish Forging output
+3D CAD model výstupu z procesu zhutňovania a dokončovacieho kovania
 
-## Setting up simulation
+## Nastavenie simulácie
 
-### Creating New Problem and Adding First Heat transfer operation
+### Vytvorenie nového problému a pridanie prvej operácie prenosu tepla
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear as shown in Fig. 3DL7.2.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte **DEFORM GUI Main** vxx.xx. Zobrazí sa okno DEFORM GUI Main, ako je znázornené na obr. 3DL7.2.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image002.jpg' | relative_url }})
 
-GUI Main Window
+Hlavné okno grafického používateľského rozhrania
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image003.jpg' | relative_url }})
 
-New problem popup
+Vyskočilo nové hlásenie o probléme
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. 3DL7.3. Select " Integrated Manufacturing Process" radio button and unit system as "**SI** " radio button in Units field. Define Problem Name as " **Gear_Carrier** "and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.  
+Vytvorte nový problém buď výberom položky **Súbor![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému, ako je znázornené na obr. 3DL7.3. Vyberte prepínač „Integrovaný výrobný proces“ a v poli Jednotky vyberte systém jednotiek pomocou prepínača „**SI**“. Názov úlohy zadajte ako „**Gear_Carrier**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak nezaškrtnete políčko „Zobraziť dialógové okno s možnosťami“, nezobrazí sa dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s použitím integrovaného výrobného procesu Deform.  
   
-MO (Multiple operation) template will open, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session, we will use ‘**Gear_Carrier** ’ as the project name. Select the first operation as 3D Heat transfer operation and turn on the “First operation” checkbox to add Heat transfer operation as first operation. Select the **SI** Units radio button, click on to open the operation.
+Otvorí sa šablóna MO (Multiple operation) a v tomto bode bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „**Gear_Carrier**“. Ako prvú operáciu vyberte operáciu 3D prenosu tepla a zaškrtnite políčko „Prvá operácia“, čím pridáte operáciu prenosu tepla ako prvú operáciu. Vyberte prepínač **SI** jednotiek a kliknutím otvoríte operáciu.
 
-### Operation1: Air Transfer
+### Operácia 1: Letecká preprava
 
-In this operation, we setup a heat transfer operation (air stage of the operation) involving transferring of a part for 7 sec from furnace to the forming station. During this time, the part which is at about 2000°F undergoes some cooling in ambient air.
+V rámci tohto procesu sme nastavili operáciu prenosu tepla (vzduchová fáza procesu), pri ktorej sa diel počas 7 sekúnd prenáša z pece do formovacej stanice. Počas tejto doby sa diel, ktorého teplota je približne 2000 °F, čiastočne ochladzuje na teplotu okolitého vzduchu.
 
-#### Define Operation Name
+#### Definovať názov operácie
 
-Name the operation as "**Air Transfer** " by double clicking on Operation name in Operation Editor and press Enter from Keyboard to accept the change as shown in Fig. 3DL7.4\. 
+Pomenujte operáciu ako „**Air Transfer**“ dvojitým kliknutím na položku „Názov operácie“ v editore operácií a stlačením klávesy Enter na klávesnici potvrďte zmenu, ako je znázornené na obr. 3DL7.4. 
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image004.jpg' | relative_url }})
 
-Changing operation name in operation editor.
+Zmena názvu operácie v editore operácií.
 
-#### Defining Heat Transfer Type
+#### Určenie typu prenosu tepla
 
-Select “**Transfer****through air** ” as heat transfer type as shown in Fig. 3DL7.5. and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Ako typ prenosu tepla vyberte „**Prenos****vzduchom**“, ako je znázornené na obr. 3DL7.5, a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image005.jpg' | relative_url }})
 
-Heat transfer type selection for Air Transfer operation.
+Výber typu prenosu tepla pre prevádzku s prenosom vzduchom.
 
-#### Defining Process Conditions 
+#### Stanovenie podmienok procesu 
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and define the “**Transfer****time** ” as **7** sec with “**Environment****temperature** ” as **20** °C and keep default **Convection coefficient** **0.02** N/sec/mm/C as shown in Fig. 3DL7.6.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a nastavte „**Čas prenosu**“ na hodnotu **7** sekúnd a „**Teplotu prostredia**“ na hodnotu **20** °C a ponechajte predvolený **koeficient konvekcie** **0,02** N/s/mm/°C, ako je znázornené na obr. 3DL7.6.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image006.jpg' | relative_url }})
 
-Process Condition settings for Air transfer operation.
+Nastavenia prevádzkových podmienok pre prevádzku s prívodom vzduchu.
 
-#### Defining Simulation Controls 
+#### Definovanie ovládacích prvkov simulácie 
 
-Keep only Heat Transfer mode checked as shown in Fig. 3DL7.7. as only heat transfer is modelled. User can use expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) for advanced features, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Nechajte zaškrtnutý iba režim „Heat Transfer“ (Prenos tepla), ako je znázornené na obr. 3DL7.7, keďže sa modeluje iba prenos tepla. Pre pokročilé funkcie môže používateľ využiť expertný režim (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})); pre pokračovanie kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image007.jpg' | relative_url }})
 
-Simulation control page for Air Transfer operation.
+Stránka riadenia simulácie pre prevádzku vzduchového prenosu.
 
-#### Importing material for workpiece
+#### Import materiálu pre obrobok
 
-In Material window, load the material '**DIN-C15[20-2200F(20-1200C)]** ' from DEFORM Material library, using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option. This can be done as shown in Fig. 3DL7.8. Material can also be loaded from Materials list in Explorer. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Objects page.
+V okne „Material“ načítajte materiál „**DIN-C15[20-2200F(20-1200C)]**“ z knižnice materiálov DEFORM pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice). Postupujte podľa obrázku 3DL7.8. Materiál je možné načítať aj zo zoznamu materiálov v Průzkumníku. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre prechod na stránku Objekty.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image008.jpg' | relative_url }})
 
-Importing material for Workpiece from DEFORM library.
+Import materiálu pre obrobok z knižnice DEFORM.
 
-#### Defining Workpiece
+#### Definovanie obrobku
 
-##### Defining Workpiece Object settings
+##### Nastavenie objektu obrobku
 
-In Workpiece object window, keep the object type as ‘**Plastic** ’ and specify workpiece temperature as **1230** °C (See Fig. 3DL7.9.). Other option available at this stage is ‘Import Object’ from another keyword file or database. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue and import the workpiece geometry.
+V okne „Objekt obrobku“ ponechajte typ objektu ako „**Plast**“ a nastavte teplotu obrobku na **1230** °C (pozri obr. 3DL7.9.). Ďalšou možnosťou, ktorá je v tejto fáze k dispozícii, je „Importovať objekt“ z iného súboru kľúčových slov alebo databázy. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali a importovali geometriu obrobku.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image009.jpg' | relative_url }})
 
-Workpiece object definition.
+Definícia objektu obrobku.
 
-##### Importing Workpiece Geometry
+##### Import geometrie obrobku
 
-In Geometry page, using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load Geometry from Library) button import ‘**IDS_GC_Billet****.stl** ' from installation path **/3D/LABS/** as shown in Fig. 3DL7.10. Primitive geometry creation option also available at this stage to create the geometry.
+Na stránke „Geometria“ pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) načítajte súbor „**IDS_GC_Billet****.stl**“ z inštalačnej zložky **/3D/LABS/**, ako je znázornené na obr. 3DL7.10. V tejto fáze je k dispozícii aj možnosť vytvorenia základnej geometrie na vytvorenie geometrie.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0010.jpg' | relative_url }})
 
-Importing geometry for Workpiece.
+Import geometrie pre obrobok.
 
-After importing any geometry, click on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button to check the geometry, geometry checking window will appear which gives a summary of the object’s geometry (See Fig. 3DL7.11.).
+Po importe akejkoľvek geometrie kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste geometriu skontrolovali. Zobrazí sa okno na kontrolu geometrie, ktoré obsahuje prehľad geometrie objektu (pozri obr. 3DL7.11.).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0011.jpg' | relative_url }})
 
-Geometry Check output for Workpiece.
+Výstup kontroly geometrie obrobku.
 
   
-Symmetry planes can be defined using Symmetry Planes label in the geometry page. Click on ****![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }})**** and select **symmetry****surfaces** of the billet as shown in Fig. 3DL7.12. The symmetry surface definition will be carried onto BCC, if permitted during mesh generation. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh page.
+Roviny symetrie je možné definovať pomocou položky „Symmetry Planes“ na stránke geometrie. Kliknite na ****![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }})**** a vyberte **symetrické****plochy** polotovaru, ako je znázornené na obr. 3DL7.12. Definícia symetrických plôch sa prenesie do BCC, ak to bude počas generovania siete povolené. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku Sieť.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0012.jpg' | relative_url }})
 
-Symmetry planes definition for Workpiece.
+Definícia rovín symetrie pre obrobok.
 
-##### Generating Workpiece Mesh
+##### Vytvorenie siete obrobku
 
-We will generate the mesh by switching to expert mode using ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}), select **absolute****mesh** , define **Size****Ratio** as **3** and set **Minimum****element****size** as **0.33** mm (See Fig. 3DL7.13.). Set the **Weighting Factors** of **Surface****Curvature** as**0.9,** **Temperature** as **0.0,** **Strain****Distribution** as **0.1** and **Strain****Rate****Distribution** as **0.1** (See Fig. 3DL7.14.). Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button to generate mesh. During mesh generation, Default Boundary Conditions pop-up appears as shown in Fig. 3DL7.15. regarding transferring Symmetry conditions from geometry to BCC, click on “**Yes** ” to transfer symmetry bcc from geometry to mesh. Click on ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}) to switch back to guided mode. After mesh generation is completed (see Fig. 3DL7.16.), click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Sieť vygenerujeme tak, že pomocou ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) prejdeme do expertného režimu, vyberieme **absolútnu****sieť**, nastavíme **Veľkosť******3** a nastavíme **minimálnu veľkosť prvku** na **0,33** mm (pozri obr. 3DL7.13.). Nastavíme **váhové koeficienty** pre **krivost povrchu** na **0,9**, pre **teplotu** na **0,0**, **distribúciu deformačného napätia** na **0,1** a **distribúciu rýchlosti deformácie** na **0,1** (pozri obr. 3DL7.14.). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) na vytvorenie siete. Počas generovania siete sa zobrazí okno s predvolenými okrajovými podmienkami, ako je znázornené na obr. 3DL7.15. Pokiaľ ide o prenesenie podmienok symetrie z geometrie do BCC, kliknite na „**Áno**“, aby sa podmienky symetrie preniesli z geometrie do siete. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}), aby ste sa vrátili do režimu s návodom. Po dokončení generovania siete (pozri obr. 3DL7.16.) kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0013.jpg' | relative_url }})
 
-Workpiece mesh settings.
+Nastavenia siete obrobku.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0014.jpg' | relative_url }})
 
-Mesh Weighing factors settings for Workpiece.
+Nastavenie váhových koeficientov siete pre obrobok.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0015.jpg' | relative_url }})
 
-Default Boundary Conditions pop-up during mesh generation.
+Pri generovaní siete sa zobrazí okno s predvolenými okrajovými podmienkami.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0016.jpg' | relative_url }})
 
-Mesh generated for Workpiece.
+Vytvorená sieť pre obrobok.
 
-##### Assigning Workpiece Material
+##### Priradenie materiálu obrobku
 
-To assign material for workpiece select the material ‘**DIN****-C15[70-2200F(20-1200C)]** ’ from material window, this can be done as shown in Fig. 3DL7.17. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Na priradenie materiálu k obrobku vyberte v okne materiálov materiál „**DIN****-C15[70-2200F(20-1200C)]**“; postupujte podľa obr. 3DL7.17. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0017.jpg' | relative_url }})
 
-Assigning material for Workpiece.
+Priradenie materiálu k obrobku.
 
-##### Defining workpiece Boundary Conditions
+##### Definovanie okrajových podmienok obrobku
 
-In BCC page, check the defined symmetry planes and default assigned Heat exchange with Environment BCC to the entire outer surface of the Billet except planes as shown in Fig. 3DL7.18. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Step page.
+Na stránke BCC skontrolujte definované roviny symetrie a predvolené nastavenie výmeny tepla s prostredím BCC pre celý vonkajší povrch sochory s výnimkou rovín, ako je znázornené na obr. 3DL7.18. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku Step.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0018.jpg' | relative_url }})
 
-BCC for Workpiece
+BCC pre obrobok
 
-##### Defining Step controls
+##### Definovanie ovládacích prvkov krokov
 
-Set the**number of simulation steps** as **14** at **0.5** sec each and saving every **2** steps (See Fig. 3DL7.19.). Advanced Simulation controls settings are available in expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed to the database generation stage.
+Nastavte **počet simulačných krokov** na **14** s dĺžkou každého kroku **0,5** sekundy a ukladajte výsledky každých **2** kroky (pozri obr. 3DL7.19.). Nastavenia pokročilých ovládacích prvkov simulácie sú k dispozícii v expertnom režime (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite do fázy generovania databázy.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0019.jpg' | relative_url }})
 
-Step control page for Air Transfer operation.
+Stránka riadenia krokov pre prevádzku vzduchového prenosu.
 
-##### Generating Database
+##### Vytvorenie databázy
 
-In the database generation stage user can check the data required for the analysis and proceed to generate the database (See Fig. 3DL7.20.). First operation of any multiple operations, user is required to generate the database. For all the subsequent operations we only need to setup the process data and simulation controls.
+V etape vytvárania databázy môže používateľ skontrolovať údaje potrebné na analýzu a pokračovať vo vytváraní databázy (pozri obr. 3DL7.20.). Pred vykonaním akejkoľvek z viacerých operácií je používateľ povinný vytvoriť databázu. Pre všetky nasledujúce operácie stačí len nastaviť procesné údaje a parametre simulácie.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0020.jpg' | relative_url }})
 
-Generating DB for first operation - Air Transfer.
+Vytvorenie databázy pre prvú operáciu – letecký prevoz.
 
-### Operation 2: Rest on die
+### Operácia 2: Odpočinok na kockách
 
-#### Adding Second Heat Transfer operation
+#### Pridanie druhej operácie prenosu tepla
 
-After generating DB of first operation, add another 3D Heat transfer operation by clicking ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button as shown in Fig. 3DL7.21. Name the operation as "**Rest on Die** " by double clicking on Operation name in Operation Editor and press Enter from Keyboard to close.
+Po vytvorení databázy prvej operácie pridajte ďalšiu 3D operáciu prenosu tepla kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}), ako je znázornené na obr. 3DL7.21. Operáciu pomenujte „**Rest on Die**“ dvojitým kliknutím na názov operácie v editore operácií a stlačením klávesy Enter na klávesnici operáciu zatvorte.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0021.jpg' | relative_url }})
 
-Adding another 3D heat transfer operation to setup Rest on Die operation.
+Pridanie ďalšej operácie 3D prenosu tepla na nastavenie operácie „Rest on Die“.
 
-#### Defining Heat Transfer Type
+#### Určenie typu prenosu tepla
 
-Select '**Rest on die** ' as heat transfer type as shown in Fig. 3DL7.22. and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue to set up operation.
+Ako typ prenosu tepla vyberte „**Rest on die**“, ako je znázornené na obr. 3DL7.22, a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte v nastavovaní prevádzky.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0022.jpg' | relative_url }})
 
-Heat transfer type selection for Rest on die operation.
+Výber typu prenosu tepla pre prevádzku typu „Rest on die“.
 
-#### Defining Process Conditions 
+#### Stanovenie podmienok procesu 
 
-Define “**Resting****time** ” as **0.7** sec with “**Environment****temperature** ” as **20** °C and keep default **Convection****coefficient** as **0.02** N/sec/mm/C as shown in Fig. 3DL7.23. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object page in this operation.
+Nastavte „**Doba odpočinku******“ na hodnotu **0,7** s a „**Teplota okolia******“ na **20** °C a ponechajte predvolený ****konvekčný koeficient**** na hodnote **0,02** N/s/mm/°C, ako je znázornené na obr. 3DL7.23. V tejto operácii klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Objekt.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0024.jpg' | relative_url }})
 
-Process Condition settings for Rest on Die operation.
+Nastavenia procesných podmienok pre operáciu „Rest on Die“.
 
-#### Defining Simulation Controls 
+#### Definovanie ovládacích prvkov simulácie 
 
-Keep only Heat Transfer mode checked as only heat transfer is modelled as shown in Fig. 3DL7.24. and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Nechajte zaškrtnutý iba režim „Heat Transfer“, pretože sa modeluje iba prenos tepla, ako je znázornené na obr. 3DL7.24, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0023.jpg' | relative_url }})
 
-Simulation Controls settings for Rest on die operation.
+Nastavenia ovládacích prvkov simulácie pre operáciu „Odpočinok na matrici“.
 
-#### Add Die Objects
+#### Pridať objekty s kockami
 
-For resting on die operation, we need to have “**Bottom********Die** ” object hence delete top die object using as shown in Fig. 3DL7.25. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Workpiece object page.
+Aby sme mohli pokračovať v operácii s maticou, potrebujeme objekt „**Bottom********Die**“, preto odstráňte objekt hornej matice podľa obrázku 3DL7.25. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s objektom obrobku.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0025.jpg' | relative_url }})
 
-Objects for Rest on Die operation.
+Objekty určené na operáciu „Odpočinok na kocke“.
 
-#### Defining Workpiece object type
+#### Definovanie typu objektu „obrobok“
 
-In Workpiece object page, we will keep the default selection of object type as ‘**Read****from DB’** (See Fig. 3DL7.26.), this indicates that workpiece object data from Air transfer operation will be available as a starting data for this operation. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Bottom die object page.
+Na stránke objektu obrobku ponecháme predvolený výber typu objektu ako „**Načítať****z databázy**“ (pozri obr. 3DL7.26.), čo znamená, že údaje o obrobku z operácie „Prenos vzduchom“ budú k dispozícii ako východiskové údaje pre túto operáciu. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka objektu „Spodná forma“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0026.jpg' | relative_url }})
 
-Workpiece object page.
+Stránka objektu obrobku.
 
-#### Define Bottom Die
+#### Definícia spodnej formy
 
-##### Defining Bottom Die Object settings
+##### Nastavenie objektu spodnej matrice
 
-In Bottom die object window, keep the object type as ‘**Rigid** ’ and specify temperature as **80** °C (See Fig. 3DL7.27.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue and import the Bottom die geometry.
+V okne „Bottom die object“ ponechajte typ objektu ako „**Rigid**“ a zadajte teplotu **80** °C (pozri obr. 3DL7.27.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali a importovali geometriu spodnej formy.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0027.jpg' | relative_url }})
 
-Bottom Die object page.
+Stránka objektu „Spodná matrica“.
 
-##### Importing Bottom Die Geometry
+##### Import geometrie spodnej matrice
 
-In Geometry page, using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load Geometry from Library) button import “**IDS_GC_Upset_Bot****.****stl** ” from installation path **/3D/LABS/** as shown in Fig. 3DL7.28. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh page.
+Na stránke Geometria pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) naimportujte súbor „**IDS_GC_Upset_Bot****.****stl**“ z inštalačnej cesty **/3D/LABS/**, ako je znázornené na obr. 3DL7.28. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Mesh“ (Sieť).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0028.jpg' | relative_url }})
 
-Importing Bottom Die geometry.
+Import geometrie spodnej matrice.
 
-##### Generating Bottom Die Mesh
+##### Vytvorenie mriežky spodnej formy
 
-We will generate mesh for Bottom Die using **32000** elements as shown in Fig. 3DL7.29. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material page.
+Vytvoríme sieť pre spodnú matricu s použitím **32 000** prvkov, ako je znázornené na obr. 3DL7.29. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Materiál“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0029.jpg' | relative_url }})
 
-Generating mesh for Bottom Die.
+Vytvorenie siete pre spodnú formu.
 
-##### Import Material for Dies
+##### Import materiálu pre lisovacie formy
 
-We will load the material **AISI-H13** from DEFORM Material library ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Die_material** category, using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option as shown in Fig. 3DL7.30. Select the loaded material to assign it to the Bottom Die.
+Načítame materiál **AISI-H13** z knižnice materiálov DEFORM ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) v kategórii **Die_material** pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice), ako je znázornené na obr. 3DL7.30. Vyberte načítaný materiál a priraďte ho k spodnej matrici.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0030.jpg' | relative_url }})
 
-Loading Die material from DEFORM library for Bottom Die.
+Načítavanie materiálu formy zo knižnice DEFORM pre spodnú formu.
 
-##### Define Bottom Die BCC
+##### Definícia spodnej matrice BCC
 
-Confirm the automatically assigned Heat Exchange with Environment BCC to all surfaces by clicking on '**Defined** ' under Heat exchange with Environment BCC as shown in Fig. 3DL7.31. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Positioning page.
+Potvrďte automaticky priradenú položku „Výmena tepla s prostredím BCC“ pre všetky plochy kliknutím na „**Definované**“ v položke „Výmena tepla s prostredím BCC“, ako je znázornené na obr. 3DL7.31. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Polohovanie“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0031.jpg' | relative_url }})
 
-Heat exchange with Environment BCC for Bottom Die.
+Výmena tepla s okolitým prostredím BCC pre spodnú formu.
 
-#### Schedule Positioning for Bottom die
+#### Nastavenie polohy spodnej formy
 
-Define the positioning of Bottom die by clicking on “**Schedule********Positioning** ” label and then add action by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Add) button, select the ‘**Positioning****object** ’ as **Bottom Die** , method as ‘**Interference** ’ with respect to ‘**Workpiece** ’ in the **Z** direction (See Fig. 3DL7.32.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Definujte polohu spodnej formy kliknutím na popisok „**Plán********Polohovanie**“ a následne pridajte akciu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) (Pridať), vyberte „**Polohovanie****objekt**“ ako **spodná forma**, metódu ako „**interferencia**“ vo vzťahu k „**obrobku**“ v smere **Z** (pozri obr. 3DL7.32.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0032.jpg' | relative_url }})
 
-Scheduled positioning for Bottom Die in Rest on Die operation.
+Plánované nastavenie polohy spodnej formy v režime „Rest on Die“.
 
-#### Scheduling Contact generation
+#### Plánovanie vytvárania kontaktov
 
-In Contact page, select **User****type** contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. Highlight the **Bottom Die** – **Workpiece** relationship and click on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button to modify the contact conditions (See Fig. 3DL7.33.). In Thermal tab, select "**Free Resting** " from the drop-down menu to define inter-object heat transfer coefficient of **1** N/sec/mm/C as shown in Fig. 3DL7.34. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Editing window  
+Na stránke „Kontakt“ vyberte kontakt typu **User****type** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Zvýraznite vzťah **Spodná forma** – **Obrobok** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}), aby ste upravili podmienky kontaktu (pozri obr. 3DL7.33.). Na karte „Thermal“ vyberte z roletového menu položku „**Free Resting**“, čím definujete koeficient prenosu tepla medzi objektmi na hodnotu **1** N/s/mm/°C, ako je znázornené na obr. 3DL7.34. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte okno úprav.  
   
-Make sure Initialize and Generate checkboxes are turned on under Schedule contact (See Fig. 3DL7.33.) so that system would generate the inter-object contact during database generation of second operation. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until step controls window.
+Uistite sa, že v časti „Naplánovať kontakt“ sú zaškrtnuté políčka „Inicializovať“ a „Generovať“ (pozri obr. 3DL7.33.), aby systém vygeneroval kontakt medzi objektmi počas vytvárania databázy v rámci druhej operácie. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno s ovládacími prvkami krokov.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0033.jpg' | relative_url }})
 
-Inter-object contact relationship for Rest on die operation.
+Vzťah kontaktu medzi objektmi pre operáciu „Opieranie o formu“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0034.jpg' | relative_url }})
 
-Inter-object contact HTC for Rest on Die operation.
+Kontakt medzi objektmi (HTC) pri operácii „Rest on Die“.
 
-#### Define Step controls
+#### Nastavenie ovládacích prvkov krokov
 
-Set the number of simulation steps as 7 at 0.1 sec each and saving every step (See Fig. 3DL7.35.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed to the database generation stage. Check for any errors in the Database generation page, we will not be generating database as we are setting up second operation in batch mode and database will be generated during runtime after the completion of previous operation simulation.
+Nastavte počet simulačných krokov na 7, každý s dĺžkou 0,1 s, a uložte každý krok (pozri obr. 3DL7.35.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite do fázy generovania databázy. Skontrolujte, či na stránke Generovanie databázy nie sú žiadne chyby. Databázu nebudeme generovať, pretože nastavujeme druhú operáciu v dávkovom režime a databáza sa vygeneruje počas behu programu po dokončení simulácie predchádzajúcej operácie.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0035.jpg' | relative_url }})
 
-Step Control definition for Rest on Die operation.
+Definícia krokového riadenia pre operáciu „Odpočinok na matrici“.
 
-### Setting up 3rd Operation: Upset operation
+### Nastavenie 3. operácie: Operácia s deformáciou
 
-#### Adding first Forming operation
+#### Pridanie prvej tvarovacej operácie
 
-After setting up second operation, we will add first forming operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button as shown in Fig. 3DL7.36. Name the operation as "**Upsetting** " by double clicking on Operation name in Operation Editor and press Enter from Keyboard to close.
+Po nastavení druhej operácie pridáme prvú tvarovaciu operáciu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}), ako je znázornené na obr. 3DL7.36. Operáciu pomenujte „**Upsetting**“ dvojitým kliknutím na položku „Názov operácie“ v editore operácií a stlačením klávesy Enter na klávesnici operáciu zatvorte.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0036.jpg' | relative_url }})
 
-Adding Forming operation to set up Upsetting operation.
+Pridanie operácie tvarovania na nastavenie operácie lisovania.
 
-#### Select Simulation Controls for upsetting
+#### Vyberte ovládacie prvky simulácie pre lisovanie
 
-For this operation we need both Deformation and Heat Transfer modes checked as we will be simulating both deformation and heat transfer, see Fig. 3DL7.37. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object page.
+Pre túto operáciu musíme zaškrtnúť oba režimy – Deformácia aj Prenos tepla –, keďže budeme simulovať ako deformáciu, tak aj prenos tepla (pozri obr. 3DL7.37). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Objekt.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0037.jpg' | relative_url }})
 
-Simulation Controls settings for Upsetting.
+Nastavenia ovládacích prvkov simulácie pre proces lisovania.
 
-#### Objects for Upsetting operation
+#### Predmety určené na deformáciu stlačením
 
-In object page, we can observe that they are three objects. Workpiece and Bottom Die as Read from DB and new Rigid object Top Die is added automatically as object 2 (See Fig. 3DL7.38.). Workpiece and Bottom Die are of “Read from DB” object types, which means object data will be read from the last step of the previous operation simulation.
+Na stránke objektov môžeme vidieť, že sa tu nachádzajú tri objekty. Obrobok a spodná matrica sú načítané z databázy a nový tuhý objekt – horná matrica – sa automaticky pridá ako objekt č. 2 (pozri obr. 3DL7.38.). Obrobok a spodná forma sú objektov typu „Načítané z databázy“, čo znamená, že údaje o objektoch sa načítajú z posledného kroku simulácie predchádzajúcej operácie.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0038.jpg' | relative_url }})
 
-Objects for Upsetting operation.
+Predmety určené na operáciu lisovania.
 
-#### Defining volume compensation for Workpiece object
+#### Definovanie kompenzácie objemu pre objekt „Obrobok“
 
-Since the Workpiece is of Read from DB object type, we will define only volume compensation related data for it. Click on Workpiece’s Properties in object tree, Properties page will be opened. Turn on “**Redefine** : **Target****volume** ” check box an select Target Volume as **Active in FEM + meshing**. Click on ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) to calculate volume of the workpiece, a pop-up appears with information about volume of mesh and geometry, we will use the geometry volume as the target volume, hence click on **Yes** in the pop-up as shown in Fig. 3DL7.39 and set it as volume to compensate during remeshing. Select Top Die object from object tree.
+Keďže obrobok je objektu typu „Read from DB“, definujeme preň iba údaje súvisiace s kompenzáciou objemu. Kliknite na Vlastnosti obrobku v stromovej štruktúre objektov, otvorí sa stránka Vlastnosti. Zaškrtnite políčko „**Predefinovať**: **Cieľový****objem**“ a vyberte Cieľový objem ako **Aktívny v FEM + vytváranie siete**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_target_volume_icon.jpg' | relative_url }}) na výpočet objemu obrobku; zobrazí sa vyskakovacie okno s informáciami o objeme siete a geometrie. Ako cieľový objem použijeme objem geometrie, preto v kontextovom menu kliknite na **Áno** v okne, ako je znázornené na obr. 3DL7.39, a nastavte ho ako objem, ktorý sa má kompenzovať počas opätovného vytvárania siete. V stromovej štruktúre objektov vyberte objekt *Horná matrica*.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0039.jpg' | relative_url }})
 
-Setting volume compensation for Workpiece.
+Nastavenie kompenzácie objemu pre obrobok.
 
-#### Defining Top Die
+#### Definovanie hornej matrice
 
-##### Defining Top Die Object settings
+##### Nastavenie objektu „Top Die“
 
-When we select Top Die object from object tree, Top Die object page will be opened. In Top Die object page, keep the object type as ‘**Rigid** ’ and specify Temperature as **80** °C and turn on “**Primary****die** ” check box as shown in Fig. 3DL7.40. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue and import the Top Die geometry.
+Keď v stromovej štruktúre objektov vyberieme objekt „Top Die“, otvorí sa stránka objektu „Top Die“. Na stránke objektu Top Die ponechajte typ objektu ako „**Rigid**“ a zadajte teplotu **80** °C a zaškrtnite políčko „**Primary****die**“, ako je znázornené na obr. 3DL7.40. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte a importujte geometriu hornej matrice.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0040.jpg' | relative_url }})
 
-Upsetting operation Top die object definition
+Operácia „Upsetting“ – Definícia objektu hornej matrice
 
-##### Importing Top Die Geometry
+##### Import geometrie hornej matrice
 
-In Geometry page, using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load Geometry from Library) button import ‘**IDS_GC_Upset_Top****.****stl** ’ from installation path /3D/LABS/ as shown in Fig. 3DL7.41. Click on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button to check the geometry, geometry checking window will appear which gives a summary of the object’s geometry. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh page.
+Na stránke Geometria pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) načítajte súbor „**IDS_GC_Upset_Top****.****stl**“ z inštalačnej zložky /3D/LABS/, ako je znázornené na obr. 3DL7.41. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) na kontrolu geometrie. Zobrazí sa okno kontroly geometrie, ktoré obsahuje prehľad geometrie objektu. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre prechod na stránku „Mesh“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0041.jpg' | relative_url }})
 
-Importing geometry for Top Die of Upsetting operation.
+Import geometrie pre hornú matricu pri operácii zhutňovania.
 
-##### Generating Mesh for Top Die
+##### Vytvorenie siete pre hornú matricu
 
-We will generate mesh using default 32000 elements as shown in Fig. 3DL7.42. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material page.
+Vytvoríme sieť s predvoleným počtom 32 000 prvkov, ako je znázornené na obr. 3DL7.42. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Material“ (Materiál).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0042.jpg' | relative_url }})
 
-Generating mesh for Top die of Upsetting operation.
+Vytvorenie siete pre hornú matricu pri operácii zhutňovania.
 
-##### Assigning Material for Top Die
+##### Priradenie materiálu pre hornú matricu
 
-Select AISI-H13 material from material list which was already loaded in the previous operation (see 7.4.3.7.4.) to assign it to the Top Die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to BCC page.
+Zoznamu materiálov, ktorý bol načítaný už v predchádzajúcej operácii (pozri 7.4.3.7.4.), vyberte materiál AISI-H13 a priraďte ho k hornej matrici. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku BCC.
 
-##### Define Top Die BCC
+##### Definícia hornej matrice BCC
 
-In ‘Define BCC’ page, we can observe that ‘Heat Exchange with Environment’ BCC is automatically assigned to all surfaces. Click on **Defined** branch under Heat Exchange with Environment BCC to confirm the BCC definition (See Fig. 3DL7.43.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Movement page.
+Na stránke „Definovať BCC“ môžeme vidieť, že BCC „Výmena tepla s okolím“ je automaticky priradená ku všetkým povrchom. Kliknutím na vetvu **Definované** pod BCC „Výmena tepla s okolím“ potvrdíme definíciu BCC (pozri obr. 3DL7.43.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Pohyb“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0043.jpg' | relative_url }})
 
-Heat exchange with Environment BCC for Top Die.
+Výmena tepla s prostredím BCC pre hornú matricu.
 
-##### Defining Top Die Movement
+##### Definovanie pohybu hornej matrice
 
-Select movement type as **Mechanical****press** , define **Total****stroke** as **270** mm, **Forging****stroke** as **92.5** mm and **Cycle/sec** as **1.4** (See Fig. 3DL7.44.). Then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Positioning page.
+Vyberte typ pohybu ako **Mechanický****lis**, nastavte **Celkový****zdvih** na **270** mm, **závit** **kovania** na **92,5** mm a **Cyklus/s** na **1,4** (pozri obr. 3DL7.44.). Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Polohovanie.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0044.jpg' | relative_url }})
 
-Top die movement definition for Upsetting operation.
+Definícia pohybu hornej matrice pri operácii lisovania.
 
-#### Defining Scheduled positioning
+#### Definovanie plánovaného umiestnenia
 
-We need to position the Top Die over the workpiece, to do so we will use Schedule positioning as the current operation is in batch mode. Click on **Schedule positioning** link and add action to scheduled position Top Die with respect to Workpiece by interference method in -Z direction as shown in Fig. 3DL7.45. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Contact page.
+Musíme umiestniť hornú matricu nad obrobok; na tento účel použijeme plánované polohovanie, keďže aktuálna operácia prebieha v dávkovom režime. Kliknite na odkaz **Plánované polohovanie** a pridajte akciu na naplánovanie polohy hornej matrice vo vzťahu k obrobku metódou kolízie v smere -Z, ako je znázornené na obr. 3DL7.45. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Kontakt“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0045.jpg' | relative_url }})
 
-Schedule positioning of Top Die for Upsetting operation.
+Nastavenie polohy hornej matrice pre operáciu lisovania.
 
-#### Scheduling contact generation
+#### Plánovanie generovania kontaktov
 
-In Contact page, select **User type** contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. It will add the relationship between the Workpiece, Top Die and Bottom Die as shown in Fig. 3DL7.46. Since the Dies are Rigid and Workpiece is plastic, Top Die and Bottom Die are considered as Master and Workpiece as Slave. Make sure Initialize and Generate checkboxes are turned on under Schedule contact (See Fig. 3DL7.46.) so that system would generate the inter-object contact during database generation of second operation. 
+Na stránke „Kontakt“ vyberte kontakt typu **Typ používateľa** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Tým sa pridá vzťah medzi obrobkom, hornou maticou a spodnou maticou, ako je znázornené na obr. 3DL7.46. Keďže matrice sú tuhé a obrobok je plastický, horná a spodná matrica sa považujú za hlavné objekty a obrobok za podriadený objekt. Uistite sa, že sú zaškrtnuté políčka Inicializovať a Generovať v časti Naplánovať kontakt (pozri obr. 3DL7.46), aby systém vygeneroval kontakt medzi objektmi počas generovania databázy druhej operácie. 
 
-Highlight the **Top Die** – **workpiece** relationship and click on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button to modify the contact conditions. In the friction tab, there is a drop-down menu that allows the user to choose the appropriate friction conditions of common forming processes. Since this is hot forming simulation and the dies are steel, use the drop-down menu and select **Hot forming (lubricated)** from the list (see Fig. 3DL7.47.). A friction value of 0.3 will automatically be selected. 
+Zvýraznite vzťah **Horná matrica** – **obrobok** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}), aby ste upravili podmienky kontaktu. Na karte „Trenie“ sa nachádza roletové menu, ktoré používateľovi umožňuje vybrať vhodné podmienky trenia pre bežné procesy tvárnenia. Keďže ide o simuláciu tvárnenia za tepla a matrice sú oceľové, použite roletové menu a zo zoznamu vyberte možnosť **Tvárnenie za tepla (mazané)** (pozri obr. 3DL7.47.). Automaticky sa vyberie hodnota trenia 0,3. 
 
-The Thermal data needs to be modified so that a 'Forming' heat transfer coefficient is used. Click on **Thermal** tab and Select **Forming** in pull down menu as shown in Fig. 3DL7.48.
+Tepelné údaje je potrebné upraviť tak, aby sa použil koeficient prenosu tepla pre „tvarovanie“. Kliknite na kartu **Thermal** a v roletovom menu vyberte položku **Forming**, ako je znázornené na obr. 3DL7.48.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0046.jpg' | relative_url }})
 
-Inter-Object relationship definition for Upsetting operation.
+Definícia vzťahu medzi objektmi pre operáciu lisovania.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0047.jpg' | relative_url }})
 
-Inter-object friction coefficient definition window.
+Okno s definíciou koeficientu trenia medzi objektmi.
 
   
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0048.jpg' | relative_url }})
 
-Inter-object HTC definition window.
+Okno s definíciou medziobjektovej HTC.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to go back to Contact page, since the friction conditions are the same for all the object pairs, ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button can be used to copy the interface properties from the first relationship to all of the others. After this is done, all relationships will have a friction of 0.3 defined as shown in Fig. 3DL7.49. Since the contact will initialize and generate while generating database. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Stopping controls page.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) sa vrátite na stránku „Kontakt“, keďže podmienky trenia sú rovnaké pre všetky páry objektov, pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môžete skopírovať vlastnosti rozhrania z prvého vzťahu do všetkých ostatných. Po vykonaní tejto operácie budú mať všetky vzťahy trenie 0,3, ako je znázornené na obr. 3DL7.49. Keďže sa kontakt inicializuje a vygeneruje počas vytvárania databázy, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku „Stopping controls“ (Ovládacie prvky zastavenia).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0049.jpg' | relative_url }})
 
-Inter-Object relationship definition for Upsetting operation.
+Definícia vzťahu medzi objektmi pre operáciu lisovania.
 
-#### Defining Stopping Controls for upsetting
+#### Definovanie zastavovacích prvkov pre tvárenie
 
-In Stopping controls page, turn on the Max. die stroke stopping control check box and define primary die displacement as (**0,0,270**) as shown in Fig. 3DL7.50. Advanced stopping options are available in Expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the Step controls.
+Na stránke „Ovládacie prvky zastavenia“ zaškrtnite políčko „Ovládací prvok zastavenia pri maximálnom zdvihu matrice“ a nastavte primárny posun matrice na (**0,0,270**), ako je znázornené na obr. 3DL7.50. Pokročilé možnosti zastavenia sú k dispozícii v režime Expert (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) nastavte ovládacie prvky krokovania.
 
   
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0050.jpg' | relative_url }})
 
-Die stroke stopping control for Upsetting operation.
+Ovládanie zastavenia zdvihu matrice pri operácii zhutňovania.
 
-#### Define Step Controls for upsetting
+#### Definovanie ovládacích prvkov krokov pre zúženie
 
-In Step page, define number of steps as 120 at 0.5 mm/step of die movement, step increment to save as 10 for the primary die, make sure Top Die is selected as Primary Die as shown in Fig. 3DL7.51. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to DB Generation page, we will not be generating database since the database will be generated during runtime after the completion of previous operation simulation.
+Na stránke „Step“ nastavte počet krokov na 120 pri posuve formy 0,5 mm/krok a krok prírastku na 10 pre primárnu formu. Uistite sa, že je ako primárna forma vybraná horná forma, ako je znázornené na obr. 3DL7.51. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „DB Generation“ (Vytvorenie databázy). Databázu nebudeme vytvárať, pretože sa vytvorí počas behu programu po dokončení simulácie predchádzajúcej operácie.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0051.jpg' | relative_url }})
 
-Step controls settings for Upsetting operation.
+Krok určuje nastavenia pre operáciu lisovania.
 
-### Setting up 4th Operation: Transfer to second tool
+### Nastavenie 4. operácie: Prechod na druhý nástroj
 
-#### Adding third heat transfer operation
+#### Pridanie tretej operácie prenosu tepla
 
-After setting up upsetting operation, add another Heat transfer operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button as shown inn Fig. 3DL7.52. Name the operation as "**Transfer 2** " by double clicking on Operation name in Operation Editor and press Enter from Keyboard to close.
+Po nastavení operácie tvárnenia pridajte ďalšiu operáciu prenosu tepla kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}), ako je znázornené na obr. 3DL7.52. Operáciu pomenujte ako „**Transfer 2**“ dvojitým kliknutím na položku „Názov operácie“ v editore operácií a stlačením klávesy Enter na klávesnici operáciu zatvorte.
 
-#### Select Heat Transfer Type 
+#### Vyberte typ prenosu tepla 
 
-Select '**Transfer through air** ' as heat transfer type as shown in Fig. 3DL7.52. and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Ako typ prenosu tepla vyberte „**Prenos vzduchom**“, ako je znázornené na obr. 3DL7.52, a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0052.jpg' | relative_url }})
 
-Heat transfer type selection for trransfer to second tool operation.
+Výber typu prenosu tepla pre prevod do druhého pracovného cyklu nástroja.
 
-#### Set Process Condition for Heat Transfer operation
+#### Nastavenie prevádzkových podmienok pre prevádzku s prenosom tepla
 
-In Process condition page, define **transfer time** as **3** sec with **20** °C **environment** using the default **convection coefficient** of **0.02** N/sec/mm/C as shown in Fig. 3DL7.53. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object page.
+Na stránke „Stav procesu“ nastavte **čas prenosu** na **3** s pri **20** °C **okolitej teplote** s použitím predvoleného **konvekčného koeficientu** **0,02** N/s/mm/°C, ako je znázornené na obr. 3DL7.53. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Objekt“.
 
   
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0053.jpg' | relative_url }})
 
-Process condition settings for transfer to second tool operation.
+Nastavenia podmienok spracovania pre prechod na druhú operáciu s nástrojom.
 
-#### Delete Die Objects
+#### Odstrániť objekty typu „Die“
 
-In this operation, we are using transfer through air hence we need to delete both “Top die” and “Bottom Die” objects, Object page should look like as shown in Fig. 3DL7.54. We will keep object type of Workpiece as “Read from DB”, since we need to read object data from the last step of previous simulation as a starting data for this operation. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Step page.
+V tejto operácii využívame prenos vzduchom, preto musíme odstrániť oba objekty „Top die“ a „Bottom Die“. Stránka „Object“ by mala vyzerať tak, ako je znázornené na obr. 3DL7.54. Typ objektu „Workpiece“ ponecháme ako „Read from DB“, pretože ako počiatočné údaje pre túto operáciu potrebujeme načítat údaje objektu z posledného kroku predchádzajúcej simulácie. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa dostanete na stránku „Step“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0054.jpg' | relative_url }})
 
-Object page of transfer to second tool. 
+Stránka objektu týkajúca sa presunu do druhého nástroja. 
 
-#### Defining Step controls 
+#### Definovanie ovládacích prvkov krokov 
 
-In Step page, define Number of steps as 6, Step increment as 1 and Solution step definition for each step as 0.5 sec. (See Fig. 3DL7.55.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to DB Generation page, we will not be generating database since the database will be generated during runtime after the completion of previous operation simulation. 
+Na stránke „Step“ nastavte počet krokov na 6, krok na 1 a definíciu kroku riešenia pre každý krok na 0,5 s. (Pozri obr. 3DL7.55.) Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Vytvorenie databázy“; databázu nebudeme vytvárať, pretože sa vytvorí počas behu programu po dokončení simulácie predchádzajúcej operácie. 
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0055.jpg' | relative_url }})
 
-Step controls for transfer to second tool operation.
+Ovládacie prvky krokov na prechod k druhej operácii s nástrojom.
 
-### Setting up 5th Operation: Finish forging
+### Nastavenie piateho pracovného kroku: Dokončenie kovania
 
-#### Adding second Forming operation
+#### Pridanie druhej formovacej operácie
 
-We will add a finish forging operation to the gear carrier lab. From the Explorer tab on the left side of the user interface, go to **Forming![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Single** and then click the ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to **[3D] Forming** as shown in Fig. 3DL7.56. Name the operation as "**Finish forging** " by double clicking on Operation name in Operation Editor and press Enter from Keyboard to close.
+Do laboratórneho cvičenia na nosiči ozubeného kolesa pridáme operáciu dokončovacieho kovania. Na karte Explorer v ľavej časti používateľského rozhrania prejdite na položku **Forming![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Single** a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa položky **[3D] Formovanie**, ako je znázornené na obr. 3DL7.56. Operáciu pomenujte „**Dokončovacie kovanie**“ dvojitým kliknutím na položku Názov operácie v editore operácií a stlačením klávesy Enter na klávesnici operáciu zatvorte.
 
   
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0056.jpg' | relative_url }})
 
-Adding 3D Forming operation to setup Finish Forging operation.
+Pridanie operácie 3D tvarovania do nastavenia operácie konečného kovania.
 
-#### Select Simulation Controls for Finish operation
+#### Vyberte ovládacie prvky simulácie pre operáciu „Dokončenie“
 
-In this operation, similar to the Upsetting operation, we will keep both Deformation and Heat Transfer modes checked as shown in Fig. 3DL7.57. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until object page.
+V tejto operácii, podobne ako pri operácii „Upsetting“, ponecháme zaškrtnuté oba režimy – „Deformation“ aj „Heat Transfer“ – ako je znázornené na obr. 3DL7.57. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka s objektom.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0057.jpg' | relative_url }})
 
-Simulation Controls settings for Finish Forging operation.
+Nastavenia ovládacích prvkov simulácie pre operáciu „Dokončenie kovania“.
 
-#### Defining objects for Finish forging 
+#### Definovanie objektov pre dokončenie kovania 
 
-In objects page, confirm that three objects are added, and for workpiece object type is set as Read from DB and for Top Die and Bottom Die object type is set as “**Rigid** ”, See Fig. 3DL7.58. Click on Top Die from object tree. 
+Na stránke objektov sa uistite, že boli pridané tri objekty, pričom pre objekt „obrobok“ je nastavený typ „Načítať z databázy“ a pre objekty „Horná forma“ a „Spodná forma“ je nastavený typ „**Pevný**“. Pozrite obr. 3DL7.58. Kliknite na objekt „Horná forma“ v stromovej štruktúre objektov. 
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0058.jpg' | relative_url }})
 
-Object page of Finish forging operation.
+Stránka objektu „Dokončenie kováčskej operácie“.
 
-#### Defining Top Die Object
+#### Definovanie objektu hornej matrice
 
-##### Defining Top Die Object settings
+##### Nastavenie objektu hornej matrice
 
-In Top Die object page, keep the object type as ‘**Rigid** ’ and specify temperature as **80** °C (See Fig. 3DL7.59.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue and import the Top Die geometry.
+Na stránke objektu „Top Die“ ponechajte typ objektu ako „**Rigid**“ a zadajte teplotu **80** °C (pozri obr. 3DL7.59.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali a importovali geometriu „Top Die“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0059.jpg' | relative_url }})
 
-Finish forging Top die object definition.
+Dokončite definíciu objektu hornej formy.
 
-##### Defining Finish forging Top Die Geometry
+##### Definovanie geometrie hornej matrice na dokončovacie kovanie
 
-In Geometry page, using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load Geometry from Library) button import ‘**IDS_GC_Finish_Top****.stl** ' from installation path /3D/LABS/ as shown in Fig. 3DL7.60. Click on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button to check the geometry, geometry checking window will appear which gives a summary of the object’s geometry.
+Na stránke Geometria pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) načítajte súbor „**IDS_GC_Finish_Top****.stl**“ z inštalačnej zložky /3D/LABS/, ako je znázornené na obr. 3DL7.60. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) skontrolujte geometriu. Zobrazí sa okno kontroly geometrie, ktoré obsahuje prehľad geometrie objektu.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0060.jpg' | relative_url }})
 
-Importing geometry for Finish forging Top Die.
+Import geometrie hornej matrice pre kovanie metódou Finish.
 
-Since the imported geometry is of 1/12 section, we need to define symmetry planes. Symmetry planes can be defined using Symmetry planes label in the geometry page. Click on ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}) and select symmetry surfaces of the Top Die as shown in Fig. 3DL7.61. The symmetry surface definition will be carried onto BCC during mesh generation if permitted during mesh generation. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh page.
+Keďže importovaná geometria má rez 1/12, musíme definovať symetrické roviny. Symetrické roviny je možné definovať pomocou položky „Symetrické roviny“ na stránke geometrie. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}) a vyberte symetrické plochy hornej matrice, ako je znázornené na obr. 3DL7.61. Definícia symetrických plôch sa prenesie do BCC počas generovania siete, ak to bude počas generovania siete povolené. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Mesh“ (Sieť).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0061.jpg' | relative_url }})
 
-Defining symmetry planes for Finish forging Top Die.
+Určenie rovín symetrie pre hornú formu pri finálnom kovaní.
 
-##### Generate Top Die Mesh
+##### Vytvoriť sieť s najvyššou hustotou
 
-We will generate mesh using default 32000 elements as shown in Fig. 3DL7.62. Click on “**Yes** ” in “Default Boundary Conditions” pop-up during mesh generation. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material page.
+Sieť vytvoríme s použitím predvoleného počtu 32 000 prvkov, ako je znázornené na obr. 3DL7.62. Počas vytvárania siete kliknite na „**Áno**“ v rozbaľovacom okne „Predvolené okrajové podmienky“. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Materiál.
 
   
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0062.jpg' | relative_url }})
 
-Generating mesh for Finish forging Top Die.
+Vytvorenie siete pre hornú maticu kováčskej formy.
 
-##### Assign Material for Top Die
+##### Priradiť materiál pre hornú matricu
 
-Select **AISI-H13** material from material list which was already loaded in the previous operation (see 7.4.3.7.4.) to assign it to the Top Die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to BCC page.
+Zoznamu materiálov, ktorý bol načítaný už v predchádzajúcej operácii (pozri 7.4.3.7.4.), vyberte materiál **AISI-H13** a priraďte ho k hornej matrici. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku BCC.
 
-##### Defining Top Die Boundary Conditions
+##### Definovanie okrajových podmienok hornej formy
 
-In BCC page, check the defined symmetry planes and default assigned Heat exchange with Environment BCC to the entire outer surface of the Top Die except symmetry planes as shown in Fig. 3DL7.63. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define movement.
+Na stránke BCC skontrolujte definované roviny symetrie a predvolené priradenie výmeny tepla s prostredím BCC na celý vonkajší povrch hornej matrice s výnimkou rovín symetrie, ako je znázornené na obr. 3DL7.63. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali pohyb.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0063.jpg' | relative_url }})
 
-BCC for Finish forging Top die.
+BCC pre finálne kovanie hornej matrice.
 
-##### Assigning Top Die Movement
+##### Nastavenie pohybu hornej matrice
 
-Select Mechanical movement type, define **Total****stroke** as **270** mm, **Forging****stroke** as **24.6** mm and **Cycle/sec** as **1.4** (See Fig. 3DL7.64.). Then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Bottom Die page.
+Vyberte typ mechanického pohybu, nastavte **Celkový****zdvih** na hodnotu **270** mm, **Kovacie****zdvih** na hodnotu **24,6** mm a **Cyklus/s** na hodnotu **1,4** (pozri obr. 3DL7.64.). Potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Spodná matrica.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0064.jpg' | relative_url }})
 
-Finish forging Top die movement definition page.
+Dokončiť stránku s definíciami pohybov hornej matrice pri kovaní.
 
-#### Defining Bottom Die Object type
+#### Definovanie typu objektu „spodná matrica“
 
-##### Defining Bottom Die Object type
+##### Definovanie typu objektu „spodná matrica“
 
-In Bottom Die object window keep the object type as ‘**Rigid** ’ and specify temperature as **80** °C (See Fig. 3DL7.65.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue and import the Bottom die geometry.
+V okne objektu „Bottom Die“ ponechajte typ objektu ako „**Rigid**“ a nastavte teplotu na **80** °C (pozri obr. 3DL7.65.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali a importovali geometriu spodnej formy.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0065.jpg' | relative_url }})
 
-Finish forging Bottom die object page.
+Dokončiť tvorbu stránky objektu „Spodná matica“.
 
-##### Defining Finish forging Bottom Die Geometry
+##### Definovanie geometrie spodnej matrice na dokončovacie kovanie
 
-In Geometry page, using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load Geometry from Library) button import ‘**IDS_GC_Finish_Bot****.****stl** ’ from installation path **/3D/LABS/** as shown in Fig. 3DL7.66. Click on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button to check the geometry, geometry checking window will appear which gives a summary of the object’s geometry.
+Na stránke Geometria pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) naimportujte súbor „**IDS_GC_Finish_Bot****.****stl**“ z inštalačnej cesty **/3D/LABS/**, ako je znázornené na obr. 3DL7.66. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) skontrolujte geometriu; zobrazí sa okno na kontrolu geometrie, ktoré obsahuje prehľad geometrie objektu.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0066.jpg' | relative_url }})
 
-Importing geometry for Finish forging Bottom Die.
+Import geometrie pre spodnú matricu kováčskeho nástroja Finish.
 
-Since the imported geometry is of 1/12 section, we need to define symmetry planes. Symmetry planes can be defined using Symmetry planes label in the geometry page. Click on ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}) and select symmetry surfaces of the Bottom Die as shown in Fig. 3DL7.67. The symmetry surface definition will be carried onto BCC during mesh generation if permitted during mesh generation. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Mesh page.
+Keďže importovaná geometria má prierez 1/12, musíme definovať roviny symetrie. Roviny symetrie je možné definovať pomocou položky „Symmetry planes“ na stránke geometrie. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_symmetry_planes_label.jpg' | relative_url }}) a vyberte symetrické plochy spodnej matrice, ako je znázornené na obr. 3DL7.67. Definícia symetrických plôch sa prenesie do BCC počas generovania siete, ak to bude počas generovania siete povolené. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Mesh“ (Sieť).
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0067.jpg' | relative_url }})
 
-Defining symmetry planes for Finish forging Bottom Die.
+Určenie symetrických rovín pre spodnú formu na kovanie.
 
-##### Generate Bottom Die Mesh
+##### Vytvoriť sieť spodnej formy
 
-We will generate mesh using default 32000 elements as shown in Fig. 3DL7.68. Click on “**Yes** ” in “Default Boundary Conditions” pop-up during mesh generation. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material page.
+Sieť vytvoríme s použitím predvoleného počtu 32 000 prvkov, ako je znázornené na obr. 3DL7.68. Počas vytvárania siete kliknite v rozbaľovacom okne „Predvolené okrajové podmienky“ na „**Áno**“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Materiál“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0068.jpg' | relative_url }})
 
-Generating mesh for Finish forging Bottom Die.
+Vytvorenie siete pre spodnú formu na kovanie metódou Finish.
 
-##### Assign Material for Bottom Die
+##### Priradiť materiál pre spodnú matricu
 
-Select **AISI-H13** material from material list which was already loaded in the previous operation (see 7.4.3.7.4) to assign it to the Bottom Die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to BCC page.
+Zoznamu materiálov, ktorý bol načítaný už v predchádzajúcej operácii (pozri 7.4.3.7.4), vyberte materiál **AISI-H13** a priraďte ho k spodnej matrici. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku BCC.
 
-##### Defining Bottom Die Boundary Conditions
+##### Definovanie okrajových podmienok spodnej formy
 
-In BCC page, check the defined symmetry planes and default assigned Heat exchange with Environment BCC to the entire outer surface of the Bottom Die except symmetry planes, see Fig. 3DL7.69.
+Na stránke BCC skontrolujte definované roviny symetrie a predvolene priradenú výmenu tepla s prostredím BCC pre celý vonkajší povrch spodnej matrice s výnimkou rovín symetrie, pozri obr. 3DL7.69.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0069.jpg' | relative_url }})
 
-BCC for Finish forging Bottom Die.
+BCC pre dokončenie kovania spodnej matrice.
 
-#### Defining Scheduled positioning
+#### Definícia plánovaného umiestnenia
 
-In Finish forging operation objects are not in correct position, to position the objects properly, we will use Schedule positioning as the current operation is in batch mode. Click on **Schedule****positioning** link and add action to scheduled position Bottom Die with respect to Workpiece by interference method in + Z direction as shown in Fig. 3DL7.70. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Contact page.
+V operácii „Dokončenie kovania“ nie sú objekty v správnej polohe. Na ich správne umiestnenie použijeme funkciu „Plánované polohovanie“, keďže aktuálna operácia prebieha v dávkovom režime. Kliknite na odkaz **Plánované polohovanie** a pridajte akciu na plánované polohovanie spodnej matrice vo vzťahu k obrobku metódou kolízie v smere +Z, ako je znázornené na obr. 3DL7.70. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre prechod na stránku Kontakt.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0070.jpg' | relative_url }})
 
-Schedule positioning of Bottom Die in Finish forging operation.
+Naplánujte umiestnenie spodnej matrice pri záverečnej fáze kovania.
 
-#### Scheduling contact generation for Finish forging operation
+#### Naplánovanie generovania kontaktov pre operáciu „Dokončenie kovania“
 
-Select **user type** contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. It will add the relationship between the Workpiece, Top Die and Bottom Die (See Fig. 3DL7.71.). As the Dies are Rigid and workpiece is plastic, Top Die and Bottom Die are considered as Master and Workpiece as Slave. Make sure Initialize and Generate checkboxes are turned on under Schedule contact (See Fig. 3DL7.71..) so that system would generate the inter-object contact during database generation of second operation. 
+Vyberte kontakt typu **užívateľ** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Tým sa pridá vzťah medzi obrobkom, hornou maticou a spodnou maticou (pozri obr. 3DL7.71.). Keďže matrice sú tuhé a obrobok je plastický, horná a spodná matrica sa považujú za hlavné objekty a obrobok za podriadený objekt. Uistite sa, že sú zaškrtnuté políčka Initialize a Generate v časti Schedule contact (pozri obr. 3DL7.71.), aby systém počas generovania databázy druhej operácie vytvoril vzájomný kontakt medzi objektmi. 
 
-Highlight the**Top Die** – **workpiece** relationship and click the ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button to modify the contact conditions. In the friction tab, there is a pull-down menu that allows the user to choose the appropriate friction conditions of common forming processes. Since this is hot forming simulation and the dies are steel, use the drop-down menu and select **Hot forming (lubricated)** from the list. A friction value of **0.3** will automatically be selected.
+Zvýraznite vzťah medzi **hornou maticou** a **obrobkom** a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) upravte podmienky kontaktu. Na karte „Trenie“ sa nachádza roletové menu, ktoré umožňuje používateľovi vybrať vhodné podmienky trenia pre bežné procesy tvárnenia. Keďže ide o simuláciu tvárnenia za tepla a matrice sú oceľové, použite roletové menu a zo zoznamu vyberte položku **Tvárnenie za tepla (mazané)**. Automaticky sa vyberie hodnota trenia **0,3**.
 
   
-Similarly, Thermal data needs to be modified so that a 'Forming' heat transfer coefficient is used. Click on **Thermal** tab and Select **Forming** in drop-down menu.
+Podobne je potrebné upraviť tepelné údaje tak, aby sa použil koeficient prenosu tepla pre „tvarovanie“. Kliknite na kartu **Tepelné** a v roletovom menu vyberte položku **Tvarovanie**.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to go back to Contact page, since the friction conditions are the same for all the object pairs, ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button can be used to copy the interface properties from the first relationship to all other relations. After this is done, all relationships will have a friction of 0.3 defined as shown in Fig. 3DL7.71. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) sa vrátite na stránku Kontakt. Keďže podmienky trenia sú rovnaké pre všetky páry objektov, tlačidlom ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môžete skopírovať vlastnosti rozhrania z prvého vzťahu do všetkých ostatných vzťahov. Po vykonaní tejto operácie budú mať všetky vzťahy trenie 0,3, ako je znázornené na obr. 3DL7.71. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
   
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0071.jpg' | relative_url }})
 
-Inter-Object relationship definition of Finish forging operation.
+Definícia vzťahu medzi objektmi v rámci operácie „Dokončenie kovania“.
 
-#### Define stopping control
+#### Definovanie riadenia zastavenia
 
-In Stopping controls page, define **Max****load** as **1.0e6** N as shown in Fig. 3DL7.72. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Step page.
+Na stránke „Stopping controls“ nastavte hodnotu **Max****load** na **1,0e6** N, ako je znázornené na obr. 3DL7.72. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Step“.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0072.jpg' | relative_url }})
 
-Stopping controls for Finish forging operation.
+Ovládacie prvky na zastavenie operácie dokončovania kovania.
 
-#### Defining Step controls 
+#### Definovanie ovládacích prvkov krokov 
 
-In Step Controls window, define **Number of steps** as **200** , **Step****increment** as **10** and **Solution****step****definition** for each step as **0.5** sec. (See Fig. 3DL7.73.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to go to Generate DB window. 
+V okne „Step Controls“ nastavte **počet krokov** na **200**, **Krok****prírastok** na **10** a **Riešenie****krok****definícia** pre každý krok na **0,5** s. (Pozri obr. 3DL7.73.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite do okna Generate DB. 
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0073.jpg' | relative_url }})
 
-Step control definition for Finish forging operation.
+Definícia krokového riadenia pre operáciu dokončovacieho kovania.
 
-### Simulate problem
+### Simulácia problému
 
-Start the simulation by clicking the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }})action label and selecting "**Continue Run** " option. (See Fig. 3DL7.74.)
+Simuláciu spustíte kliknutím na popisok ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }})action a výberom možnosti „**Pokračovať v behu**“. (Pozri obr. 3DL7.74.)
 
   
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0074.jpg' | relative_url }})
 
-Run Simulation popup window.
+Otvorí sa okno „Spustiť simuláciu“.
 
   
   
-Monitor the progress of the simulation by looking at the Simulation Graphics, Simulation Message and Simulation Log tab, make sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. (See Fig. 3DL7.75.)
+Sledujte priebeh simulácie na kartách „Simulation Graphics“, „Simulation Message“ a „Simulation Log“ a uistite sa, že je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). (Pozri obr. 3DL7.75.)
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0075.jpg' | relative_url }})
 
-Simulation mode displaying the furnace transfer simulation.
+Simulačný režim zobrazujúci simuláciu prenosu tepla v peci.
 
-After completion of all multiple operations, in Simulation log file, it gives the log message as "MULTIPLE OPERATION COMPLETED.", then switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab to view the simulation results.
+Po dokončení všetkých viacnásobných operácií sa v súbore protokolu simulácie zobrazí správa „MULTIPLE OPERATION COMPLETED.“; následne prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), kde si môžete prezrieť výsledky simulácie.
 
-### Post Processing
+### Následné spracovanie
 
-In Post-Processor, plot **Temperature** state variable and play the steps from first operation to observe the heat transfer in workpiece and dies from Air transfer to second forming operation. Temperature distribution in Workpiece at last step of each operation is as shown in Fig. 3DL7.76.
+V postprocesore vykreslite stavovú premennú **Teplota** a prehrajte jednotlivé kroky od prvej operácie, aby ste mohli sledovať prenos tepla v obrobku a formách od vzduchového prenosu až po druhú tvárniacu operáciu. Rozloženie teploty v obrobku v poslednom kroku každej operácie je znázornené na obr. 3DL7.76.
 
   
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0076.jpg' | relative_url }})
 
-Temperature distribution in Workpiece at last step of each operation from Air transfer to Finish forging operation.
+Rozloženie teploty v obrobku v poslednom kroku každej operácie od prenosu vzduchom až po finálne kovanie.
 
-Click on Mirror symmetry ![]({{ '/assets/icons/pre_icons/mo_mirror_merge_icon.jpg' | relative_url }}) icon and then click on the symmetry faces until you can see the whole part. This will take 11 clicks and the whole part at last step of the simulation will appear as shown in Fig. 3DL7.77.
+Kliknite na ikonu Zrkadlová symetria ![]({{ '/assets/icons/pre_icons/mo_mirror_merge_icon.jpg' | relative_url }}) a potom klikajte na symetrické plochy, kým neuvidíte celý diel. Bude to vyžadovať 11 kliknutí a celý diel sa v poslednom kroku simulácie zobrazí tak, ako je znázornené na obr. 3DL7.77.
 
 ![]({{ '/assets/images/labs/basic_labs/3d_labs/lab07_gear_carrier_lab/image0077.jpg' | relative_url }})
 
-Mirroring of Workpiece symmetric faces in Post-Processor.
+Zrkadlenie symetrických plôch obrobku v postprocesore.

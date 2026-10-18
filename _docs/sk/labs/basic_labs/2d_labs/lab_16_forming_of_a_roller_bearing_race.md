@@ -1,275 +1,275 @@
 ---
 lang: sk
-title: "Lab 16 Forming of a Roller Bearing race using a Porous material"
+title: "Laboratórna práca č. 16: Výroba oběžnice valivého ložiska z porézneho materiálu"
 ---
 
-# Lab 16 FORMING OF A ROLLER BEARING RACE USING A POROUS MATERIAL
+# Laboratórna práca č. 16: VÝROBA BEHÚNKU VALČEKOVÉHO LOŽISKA Z PORÉZNÉHO MATERIÁLU
 
-This lab will simulate the forming of the tapered roller bearing race, shown below, using a porous material. Since this part is axisymmetric, only a section of it will be modelled and simulated. The dies will be rigid. For simplicity, the top die/mandrel combination will be modelled as a single object. 
+V tomto laboratórnom cvičení budeme simulovať tvárnenie dráhy kužeľíkového ložiska, znázornenej nižšie, s použitím porézneho materiálu. Keďže tento diel je osovo symetrický, modelovať a simulovať budeme len jeho časť. Formy budú tuhé. Pre zjednodušenie bude kombinácia hornej formy a trnu modelovaná ako jeden objekt. 
 
-16.1 Creating a New Problem
+16.1 Vytvorenie novej úlohy
 
-16.2 Adding Operation
+16.2 Pridanie operácie
 
-16.3. Geometry type selection
+16.3. Výber typu geometrie
 
-16.4. Simulation Controls
+16.4. Ovládacie prvky simulácie
 
-16.5. Loading material for Workpiece
+16.5. Vkladanie materiálu do obrobku
 
-16.6. Adding Objects
+16.6. Pridávanie objektov
 
-16.7. Workpiece
+16.7. Obrobok
 
-16.8. Top Die
+16.8. Horná matrica
 
-16.9. Bottom Die
+16.9. Spodná matrica
 
-16.10. Object Positioning
+16.10. Polohovanie objektov
 
-16.11. Schedule Inter-Object Contact Relationships
+16.11. Nastavenie vzťahov medzi objektmi
 
-16.12. Define Stopping Control
+16.12. Definícia riadenia zastavenia
 
-16.13. Define Step Controls for Forming
+16.13. Definovanie ovládacích prvkov krokov pre formovanie
 
-16.14. Generating Database
+16.14. Vytvorenie databázy
 
-16.15. Starting the Simulation
+16.15. Spustenie simulácie
 
-16.16. Post-Processing the Results
+16.16. Následné spracovanie výsledkov
 
-## Creating a New Problem
+## Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear. as shown in below Fig. L16.1.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte položku DEFORM-v1x.xxx (kde .xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte položku **DEFORM GUI Main** vxx.xx. Zobrazí sa hlavné okno DEFORM GUI Main, ako je znázornené na obrázku L16.1 nižšie.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image0001.jpg' | relative_url }})
 
-DEFORM GUI main window
+Hlavné okno programu DEFORM GUI
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. L16.2. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** ". Define Problem Name as "**Porous_Race** " see Fig. L16.2. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Nový problém vytvoríte buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie úlohy, ako je znázornené na obr. L16.2. Vyberte prepínač „**Integrovaný výrobný proces**“ a ako systém jednotiek vyberte „**Angličtina**“. Názov úlohy zadajte ako „**Porous_Race**“, pozri obr. L16.2. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) otvoríte novú úlohu s využitím integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image0002.jpg' | relative_url }})
 
-Problem type selection window
+Okno na výber typu problému
 
-## Adding Operation
+## Pridanie operácie
 
-In Multiple operation wizard, add **2D Forming** operation from the Explorer![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Operations list. Add the operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button available next to 2D Forming Operation or user can also add by drag and drop into the Operation Editor. When we add the 2D Forming operation, process settings window will be opened by default (see Fig. L16.3.).
+V sprievodcovi viacerých operácií pridajte operáciu **2D formovanie** zo zoznamu Explorer![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})Operations. Operáciu pridáte kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa operácie 2D Forming, alebo ju môžete pridať aj pretiahnutím do editora operácií. Po pridaní operácie 2D Forming sa štandardne otvorí okno nastavení procesu (pozri obr. L16.3.).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image0003.jpg' | relative_url }})
 
-Add 2D Forming operation
+Pridať operáciu 2D tvarovania
 
-## Geometry type selection
+## Výber typu geometrie
 
-In this lab we are using Axisymmetric geometries, so select **2D Axisymmetric** radio button in Geometry type ( Fig. L16.4.), then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) .
+V tomto laboratórnom cvičení používame osovo symetrické geometrie, preto v položke „Typ geometrie“ vyberte tlačidlo **2D osovo symetrické** (obr. L16.4.) a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image0004.jpg' | relative_url }})
 
-Geometry type selection
+Výber typu geometrie
 
-## Simulation Controls
+## Ovládacie prvky simulácie
 
-In this lab we will be showing how to setup simple Isothermal problem. So, in Simulation controls **uncheck** the **Heat****transfer** mode check box (see Fig. L16.5.) and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V tomto cvičení vám ukážeme, ako nastaviť jednoduchú izotermickú úlohu. V okne „Simulation controls“ teda **zrušte zaškrtnutie** políčka **Heat****transfer** (pozri obr. L16.5.) a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image0005.jpg' | relative_url }})
 
-Simulation control window
+Okno riadenia simulácie
 
-## Loading material for Workpiece
+## Načítavanie materiálu pre obrobok
 
-In material list window, load the material '**AISI-4340 [1550-2200 F]'** from DEFORM Material library, **Steel** category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})(Load material data from library) option. This can be done as shown in Fig. L16.6. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Object page.
+V okne so zoznamom materiálov načítajte materiál „**AISI-4340 [1550–2200 F]**“ z knižnice materiálov DEFORM v kategórii **Oceľ** pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice). Postupujte podľa obr. L16.6. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Objekt.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image0006.jpg' | relative_url }})
 
-Material Library Window
+Okno knižnice materiálov
 
-## Adding Objects
+## Pridávanie objektov
 
-For this operation we need three objects, if there aren't already three objects, add three objects by clicking the ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) button. The three objects will be named as Workpiece, Top Die and Bottom Die. (See Fig. L16.7.), then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na túto operáciu potrebujeme tri objekty. Ak tam ešte nie sú tri objekty, pridajte ich kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}). Tieto tri objekty budú pomenované ako „Obrobok“, „Horná matrica“ a „Spodná matrica“ (pozri obr. L16.7.), potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image0007.jpg' | relative_url }})
 
-Adding Object Window
+Okno na pridávanie objektov
 
-## Workpiece
+## Obrobok
 
-In Workpiece window, change the Object Name to **Race** and change temp to **2000** F and select Object type as Porous (Plastic) as shown in Fig. L16.8. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V okne „Workpiece“ (Obrobok) zmeňte názov objektu na **Race**, nastavte teplotu na **2000** F a ako typ objektu vyberte „Porous (Plastic)“ (Pórovitý (plast)), ako je znázornené na obr. L16.8. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image0008.jpg' | relative_url }})
 
-Billet object Window
+Objekt „Billet“ – Okno
 
-### Loading Billet Geometry
+### Načítavanie geometrie polotovaru
 
-In Geometry window, load **PM_pre.igs** geometry file from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load geometry from library) option or can also be imported from DEFORM installation folder \2D\LABS directory using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) option as shown in Fig. L16.9.
+V okne Geometria načítajte súbor geometrie **PM_pre.igs** z knižnice pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) alebo ho môžete importovať z inštalačnej zložky DEFORM do adresára \2D\LABS pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru), ako je znázornené na obr. L16.9.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image0009.jpg' | relative_url }})
 
-Race Geometry window
+Okno „Geometria pretekov“
 
-### Generate Workpiece Mesh
+### Vytvorenie siete obrobku
 
-Set number of elements to **1000** and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button to generate mesh for the Race object (see Fig. L16.10.). Complete range of meshing options are available in expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) if user needs to have more control on the mesh generated. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Nastavte počet prvkov na **1000** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}), aby sa vygenerovala sieť pre objekt Race (pozri obr. L16.10.). V expertnom režime (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})) je k dispozícii kompletná škála možností vytvárania sietí, ak potrebujete mať väčšiu kontrolu nad generovanou sieťou. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00010.jpg' | relative_url }})
 
-Mesh page
+Stránka s mriežkou
 
-### Assign Workpiece Material
+### Priradiť materiál obrobku
 
-To assign material for Race, select the material ‘**AISI****-4340** ’ from material window. This can be done as shown in Fig. L16.11. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Ak chcete priradiť materiál pre Race, vyberte materiál „**AISI****-4340**“ z okna materiálov. Postupujte podľa obrázku L16.11. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00011.jpg' | relative_url }})
 
-Material page
+Stránka s materiálmi
 
-### Workpiece Density initialize
+### Inicializácia hustoty obrobku
 
-In Initialization page, click on “**Major** ” tab and define **Density** value as “**0.9** ” as shown in Fig. L16.12. and then click on ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}) button to initialize the value for entire Workpiece. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue.
+Na stránke „Inicializácia“ kliknite na kartu „**Major**“ a nastavte hodnotu **Hustota** na „**0,9**“, ako je znázornené na obr. L16.12. Následne kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_initialize_icon.jpg' | relative_url }}), aby sa táto hodnota inicializovala pre celý obrobok. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00012.jpg' | relative_url }})
 
-Initialize page
+Inicializovať stránku
 
-## Top Die
+## Horná matrica
 
-In Top Die page ( see Fig. L16.13.), select Object type as **Rigid** and Turn on **Primary****die****check****box** as Top die will have movement definition assigned to it, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Top Die“ (pozri obr. L16.13.) vyberte ako typ objektu **Rigid** a zaškrtnite **políčko „Primary die check“**, keďže hornej matrici bude priradená definícia pohybu, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00029.jpg' | relative_url }})
 
-Initialize page
+Inicializovať stránku
 
-### Loading Top Die Geometry
+### Načítavanie geometrie hornej matrice
 
-In Geometry window, load **PM_top.igs** geometry file from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load geometry from library) option or can also be imported using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})(Load geometry from a file) option from DEFORM installation folder \2D\Labs directory as shown in Fig. L16.14. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Top Die movement page.
+V okne Geometria načítajte geometrický súbor **PM_top.igs** z knižnice pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) alebo ho môžete importovať aj pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) z inštalačnej zložky programu DEFORM \2D\Labs, ako je znázornené na obr. L16.14. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Top Die movement.
 
   
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00013.jpg' | relative_url }})
 
-Top Die geometry page
+Stránka Geometria lisovacej matice
 
-### Assign Movement to Top Die
+### Priradiť pohyb k hornej kocku
 
-In Top Die Movement page, define **Speed** as **7** in/sec in **-Y** direction for this lab (See Fig. L16.15.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Bottom Die page.
+Na stránke „Top Die Movement“ nastavte pre toto laboratórne cvičenie **rýchlosť** na hodnotu **7** in/sec v smere **-Y** (pozri obr. L16.15.). Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Bottom Die“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00014.jpg' | relative_url }})
 
-Top Die Movement page
+Hlavná stránka „Pohyb matrice“
 
-## Bottom Die
+## Spodná matrica
 
-In Bottom Die page, select Object type as **Rigid** and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) (See Fig. L16.16.).
+Na stránke „Spodná forma“ vyberte typ objektu **Pevný** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) (pozri obr. L16.16.).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00015.jpg' | relative_url }})
 
-Bottom Die page
+Stránka spodnej matrice
 
-### Loading Bottom Die Geometry
+### Načítanie geometrie spodnej matrice
 
-In Geometry window, load **PM_btm.igs** geometry file from library using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})(Load geometry from library) option or can also be imported using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }})(Load geometry from a file) option from DEFORM installation folder \2D\Labs directory. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Positioning page.
+V okne Geometria načítajte geometrický súbor **PM_btm.igs** z knižnice pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) alebo ho môžete importovať pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) z inštalačného priečinka DEFORM v adresári \2D\Labs. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Positioning“ (Polohovanie).
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00016.jpg' | relative_url }})
 
-Bottom Die geometry page
+Stránka o geometrii spodnej matrice
 
-## Object Positioning
+## Umiestňovanie objektov
 
-We will first move the Top Die and Bottom Die away from the Race so that we can position both the Top Die and Bottom Die correctly with respect to Race object.
+Najskôr posunieme hornú a dolnú formu ďalej od dráhy, aby sme mohli obe formy – hornú aj dolnú – správne umiestniť vo vzťahu k objektu „Race“.
 
-To accomplish this first click on ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button. Select the Top Die, select ‘**Offset’** method and define distance vector as (x=0, y=2). Click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) to move the Top Die away from the Race. (see Fig. L16.18.) Similarly, select the Bottom Die, using “**Offset** ” method and distance vector as (x=0, y=-2) move the Bottom Die away from the Race.
+Na to najprv kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}). Vyberte hornú maticu, zvoľte metódu „**Offset**“ a nastavte vektor vzdialenosti na (x=0, y=2). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}), aby ste posunuli hornú matricu ďalej od dráhy. (pozri obr. L16.18.) Podobne vyberte spodnú matricu, použite metódu „**Offset**“ a vektor vzdialenosti (x=0, y=-2) a posuňte spodnú matricu ďalej od dráhy.
 
-We will position Top Die over the Race using Interference positioning in **-Y** direction. Select the ‘**Interference** ’ method, ‘Positioning object’ as ‘**Top********Die** ’ and Reference object as ‘**Race** ’ as shown in Fig. L16.19. Click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) to position the Top Die. Similarly, position the ‘Bottom Die’ using the interference method in +Y direction. After positioning, the setup should look like as shown in Fig. L16.20. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Contact page.
+Pomocou polohovania s kolíziou v smere **-Y** umiestnime hornú formu nad dráhu. Vyberte metódu „**Interferencia**“, ako „Polohovaný objekt“ zvoľte „**Horná matrica**“ a ako referenčný objekt zvoľte „**Dráha**“, ako je znázornené na obr. L16.19. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) umiestnite hornú matricu. Podobným spôsobom umiestnite „spodnú matricu“ pomocou metódy interferenčného polohovania v smere +Y. Po umiestnení by malo nastavenie vyzerať tak, ako je znázornené na obr. L16.20. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku „Kontakt“.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00017.jpg' | relative_url }})
 
-Offset Object positioning
+Polohovanie objektov s posunom
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00018.jpg' | relative_url }})
 
-Interference Object positioning
+Polohovanie rušivého objektu
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00019.jpg' | relative_url }})
 
-After positioning the objects
+Po umiestnení predmetov
 
-## Schedule Inter-Object Contact Relationships
+## Naplánovať vzťahy medzi objektmi
 
-In Contact page, select User type contact and click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button. It will add the relationship between the Race, Top Die and Bottom Die (see Fig. L16.21.). As the Dies are Rigid and Race is plastic, Top and Bottom Dies are considered as Master and Billet as Slave.
+Na stránke „Kontakt“ vyberte typ kontaktu „Používateľ“ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}). Tým sa pridá vzťah medzi ložiskom, hornou maticou a spodnou maticou (pozri obr. L16.21.). Keďže matice sú tuhé a ložisko je z plastu, horná a spodná matica sa považujú za „Master“ a polotovar za „Slave“.
 
-Highlight the Top **Die – Race** relationship and click the ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button to modify the contact conditions. In the friction section of the screen (see Fig. L16.21.), there is a pull-down menu that allows the user to choose the appropriate friction conditions of common forming processes.
+Zvýraznite vzťah „Top **Die – Race**“ a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) upravte podmienky kontaktu. V časti obrazovky venovanej treniu (pozri obr. L16.21.) sa nachádza roletové menu, ktoré používateľovi umožňuje vybrať vhodné podmienky trenia pre bežné tvárniace procesy.
 
-Since this is hot forming simulation and the dies are steel, use the pull down menu and select **Hot forming (lubricated)** from the list. A friction value of **0.3** will be automatically selected.
+Keďže ide o simuláciu tvárnenia za tepla a formy sú z ocele, použite rozbaľovacie menu a zo zoznamu vyberte možnosť **Tvárnenie za tepla (s mazáním)**. Hodnota trenia **0,3** sa nastaví automaticky.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00020.jpg' | relative_url }})
 
-Inter-object friction coefficient definition window
+Okno na zadanie koeficientu trenia medzi objektmi
 
-Click on![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to go back Contact page, since the friction conditions are the same for all the object pairs, ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button can be used to copy the interface properties from the first relationship to all of the others. After this is done, all relationships will have a friction of 0.3 defined as shown in Fig. L16.22. Turn on Initialize and Generate check boxes so that the contact will be initialized and generated while generating database. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define stopping controls.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) sa vrátite na stránku Kontakt, keďže podmienky trenia sú rovnaké pre všetky páry objektov, pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) môžete skopírovať vlastnosti rozhrania z prvého vzťahu do všetkých ostatných. Po vykonaní tejto operácie budú mať všetky vzťahy trenie 0,3, definované tak, ako je znázornené na obr. L16.22. Zaškrtnite políčka Initialize a Generate, aby sa kontakt inicializoval a vygeneroval počas generovania databázy. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali ovládacie prvky zastavenia.
 
   
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00021.jpg' | relative_url }})
 
-Inter-Object relationship definition for forming operation
+Definícia vzťahu medzi objektmi pre formovaciu operáciu
 
-## Define Stopping Control
+## Definícia riadenia zastavenia
 
-In stopping control window, check the Max. die stroke stopping control and define**primary die displacement** as (0,**0.915**) as shown in Fig. L16.23. Advanced stopping options are available in Expert mode (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) ). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the step controls.
+V okne riadenia zastavenia zaškrtnite políčko „Max. zdvih matrice“ a nastavte **primárny posun matrice** na (0,**0,915**), ako je znázornené na obr. L16.23. Pokročilé možnosti zastavenia sú k dispozícii v režime Expert (![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }})). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali krokové ovládacie prvky.
 
   
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00022.jpg' | relative_url }})
 
-Die stroke stopping control
+Ovládanie zastavenia zdvihu matice
 
-## Define Step Controls for Forming
+## Definovanie ovládacích prvkov krokov pre formovanie
 
-In step controls window, define **Number of steps** as **100** , **0.0092** ” as **Die displacement per step** , Step increment to save as **5** , the Top Die selected as Primary die in object page is shown as Primary die in Step page as shown in Fig. L16.24.
+V okne nastavení krokov nastavte **Počet krokov** na **100** a **0,0092** ” ako **Posun matrice na krok** , Prírastok kroku na uloženie nastavte na **5**, horná matrica vybraná ako primárna matrica na stránke objektu sa zobrazí ako primárna matrica na stránke krokov, ako je znázornené na obr. L16.24.
 
   
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00023.jpg' | relative_url }})
 
-Step controls settings
+Nastavenia ovládacích prvkov krokov
 
-## Generating Database 
+## Vytvorenie databázy 
 
-In Generate DB page, click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process, messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).  
+Na stránke „Generate DB“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby program skontroloval, či v nastavení úlohy niečo nechýba. Počas kontroly červené správy označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli definovať údaje o materiáloch).  
   
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. When the program is done writing the database, switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Akonáhle program dokončí zapisovanie databázy, prepnite do režimu simulácie kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom operácií.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00024.jpg' | relative_url }})
 
-Generate DB page
+Vytvoriť stránku databázy
 
-## Starting the Simulation
+## Spustenie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label under the simulation tab (See Fig. L16.26.), Run Options dialog will open as shown in Fig. L16.27. Use the default Continue **Run option** →“**Continue****from the last step** ” option, select **Interactive** radio button to run the simulation in interactive mode.Click on button to run the simulation.
+Kliknite na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) na karte „Simulácia“ (pozri obr. L16.26). Otvorí sa dialógové okno „Možnosti spustenia“, ako je znázornené na obr. L16.27. Použite predvolenú možnosť **Pokračovať v spustení** → „**Pokračovať****od posledného kroku**“ a vyberte prepínač **Interaktívne**, aby ste simuláciu spustili v interaktívnom režime. Kliknite na tlačidlo na spustenie simulácie.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00025.jpg' | relative_url }})
 
-Simulation options
+Možnosti simulácie
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00026.jpg' | relative_url }})
 
-Run Simulation window
+Okno „Spustiť simuláciu“
 
-## Post-Processing the Results
+## Následné spracovanie výsledkov
 
-After simulation has been completed, switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab to view results, MO post processor will open. (See Fig. L16.28.)
+Po dokončení simulácie prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}), kde si môžete prezrieť výsledky; otvorí sa postprocesor MO. (Pozri obr. L16.28.)
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00027.jpg' | relative_url }})
 
-MO Post Processor window
+Okno postprocesora MO
 
-**State Variable**
+**Stavová premenná**
 
-Click on ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) button and select **Density** from the State Variable Deformation menu, click on ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Fig. L16.29. shows density distribution in the Race at the last step of the deformation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) a z ponuky „Deformácia stavových premenných“ vyberte položku **Hustota**, potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Obr. L16.29 znázorňuje rozloženie hustoty v kanáli Race v poslednom kroku deformácie.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_16_forming_of_a_roller_bearing/2d_mobl16_image00028.jpg' | relative_url }})
 
-Plot Density state variable
+Premenná stavu „Hustota pozemkov“
 
-**Related Topics:**
+**Súvisiace témy:**
 
 [12.1. 2D Geometry Data Defining ]({{ '/docs/sk/pre_processor/12_geometry_modelling/12_1_2d_geometry_data_defining/' | relative_url }})
 

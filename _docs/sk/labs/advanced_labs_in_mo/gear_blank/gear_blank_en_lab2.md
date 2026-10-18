@@ -1,72 +1,72 @@
 ---
 lang: sk
-title: "Gear Blank EN Lab 2"
+title: "Polotovar na ozubené kolesá EN Lab 2"
 ---
 
-# Lab 2. 2D to 3D Conversion to sequence 3D operation after 2D operation
+# Cvičenie 2. Prechod z 2D do 3D: vykonanie 3D operácie po 2D operácii
 
-The next simulation will be continued in 3D mode. So to start preprocessing in 3D mode, load the results from the previous 2D simulation and convert the workpiece to 3D as described in this lab.
+Ďalšia simulácia bude pokračovať v 3D režime. Ak teda chcete spustiť predspracovanie v 3D režime, načítajte výsledky z predchádzajúcej 2D simulácie a prevedte obrobok do 3D, ako je popísané v tomto cvičení.
 
-### Add Convertor operator
+### Pridať operátor konvertora
 
-To convert the workpiece results of previous 2D operation, 2D to 3D convert operator must be added after 2D operation. Click on the ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to **2D to 3D Convertor** under **Simulation Operators** list from **Explorer** tab as shown in [Fig. L2.1.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab2/' | relative_url }}#Fig_L2_1_Adding_2D_to_3D_Convertor_Operator)
+Na prevod výsledkov obrobku z predchádzajúcej 2D operácie je potrebné po 2D operácii pridať operátor na prevod z 2D do 3D. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa položky **Konvertor z 2D na 3D** v zozname **Simulačné operátory** na karte **Explorer**, ako je znázornené na obrázku [Fig. L2.1.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab2/' | relative_url }}#Fig_L2_1_Adding_2D_to_3D_Convertor_Operator).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab2_image0001.jpg' | relative_url }})
 
-Adding 2D to 3D Convertor Operator
+Pridanie operátora na prevod 2D na 3D
 
-### Select Converter Setting
+### Výber nastavenia prevodníka
 
-Select the 2D to 3D convertor operator from operation editor to open the convertor operator. Select the ![]({{ '/assets/icons/pre_icons/mo_no_batch_setup_button.jpg' | relative_url }}) button for Setup type popup (See Fig. L2.2) to setup the problem in batch mode.
+V editore operácií vyberte operátor prevodníka 2D na 3D, čím otvoríte tento prevodník. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_no_batch_setup_button.jpg' | relative_url }}) otvoríte rozbaľovacie okno „Setup type“ (pozri obr. L2.2) a nastavte úlohu v dávkovom režime.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab2_image0002.jpg' | relative_url }})
 
-Setup type popup for operation 2D to 3D convertor
+Vyskakovacie okno s typom nastavenia pre prevodník z 2D do 3D
 
-Select **Y** is up **radio** button, confirm the **revolution****angle** is **360** and start angle is 0 as shown in Fig. L2.3\. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to select the objects to convert.
+Vyberte **Y** v hornej časti **rádio** tlačidla, overte, či je **uhol otáčania** nastavený na **360** a počiatočný uhol na 0, ako je znázornené na obr. L2.3. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vyberte objekty, ktoré chcete previesť.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab2_image0003.jpg' | relative_url }})
 
-Configuration settings window
+Okno nastavení konfigurácie
 
-### Select Conversion Objects
+### Vyberte objekty konverzie
 
-Opening operator will pass all objects. As top and bottom dies need to change for next operation, retain only Workpiece object. So select Top die object and click on ![]({{ '/assets/icons/pre_icons/mo_delete_object_button.jpg' | relative_url }}) (Delete Object) button to delete the Top die. Similarly delete Bottom die object as shown in Fig. L2.4.
+Operátor na začiatku spracovania odovzdá všetky objekty. Keďže horná a spodná matrica sa musia vymeniť pre ďalšiu operáciu, ponechajte len objekt „Workpiece“. Vyberte teda objekt „Top die“ a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_object_button.jpg' | relative_url }}) (Odstrániť objekt) odstráňte hornú matricu. Podobným spôsobom odstráňte objekt „Bottom die“, ako je znázornené na obr. L2.4.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab2_image0004.jpg' | relative_url }})
 
-Object selection window
+Okno na výber objektov
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) for objects and also workpiece windows as no changes required in workpiece window.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pre objekty a tiež pre okná obrobkov, keďže v okne obrobku nie sú potrebné žiadne zmeny.
 
-### Generate Workpiece 3D geometry
+### Vytvorenie 3D geometrie obrobku
 
-Check output geometry and confirm that geometry type is Solid, accept default number of sections and click on ![]({{ '/assets/icons/pre_icons/mo_3d_preview_button.jpg' | relative_url }}) button to generate the 3D geometry. (See Fig. L2.5)
+Skontrolujte výstupnú geometriu a uistite sa, že typ geometrie je „Solid“, potvrďte predvolený počet rezov a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_3d_preview_button.jpg' | relative_url }}) vygenerujte 3D geometriu. (Pozri obr. L2.5)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab2_image0005.jpg' | relative_url }})
 
-Geometry conversion window
+Okno na prevod geometrických jednotiek
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to generate the mesh for 3D geometry.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste vygenerovali sieť pre 3D geometriu.
 
-### Generate Workpiece 3D mesh
+### Vytvorenie 3D siete obrobku
 
-Select tetrahedron mesh type and change the **target number of elements** to **20,000**. Click the ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button to generate 3D mesh (See Fig. L2.6.).
+Vyberte typ siete „tetrahedron“ a zmeňte **cieľový počet prvkov** na **20 000**. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) vygenerujte 3D sieť (pozri obr. L2.6.).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab2_image0006.jpg' | relative_url }})
 
-Mesh conversion window
+Okno na konverziu siete
 
-If geometry or mesh or both not converted in respective windows then in **Convert** window user can convert the geometry, mesh or both for all objects at a time using ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}) button as per the selections status displayed in the table as shown in Fig. L2.7.
+Ak sa geometria alebo sieť, prípadne oboje, neprekonvertovali v príslušných oknách, potom v okne **Konvertovať** môže používateľ konvertovať geometriu, sieť alebo oboje pre všetky objekty naraz pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}) podľa stavu výberu zobrazeného v tabuľke, ako je znázornené na obr. L2.7.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab2_image0007.jpg' | relative_url }})
 
-Convert window to convert both geometry and mesh at a time
+Okno „Previesť“ slúži na súčasnú konverziu geometrie aj siete
 
-### Generate Database after conversion
+### Vytvorenie databázy po konverzii
 
-Select the Generate DB in operation tree and click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate DB required for the 3D operation.
+V strome operácií vyberte položku „Generate DB“ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vygenerovali databázu potrebnú pre 3D operáciu.
 
-The workpiece at this point will be the input for the second operation. Factors such as accurate shape, strain (work hardening), damage, metal flow, temperature distribution (when calculated) and other information will be retained.
+Obrobok sa v tomto bode stane vstupným materiálom pre druhú operáciu. Zachovajú sa faktory, ako sú presný tvar, deformácia (zpevnenie materiálu), poškodenie, tok kovu, rozloženie teploty (ak je vypočítané) a ďalšie informácie.
 
-Click on [Lab 3. Sequential 3D forge operation]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab3/' | relative_url }}) to setup Lab3
+Kliknite na [Lab 3. Sequential 3D forge operation]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab3/' | relative_url }}), aby ste nastavili Lab3

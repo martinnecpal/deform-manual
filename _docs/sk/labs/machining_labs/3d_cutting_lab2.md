@@ -1,178 +1,178 @@
 ---
 lang: sk
-title: "3D Cutting Lab2"
+title: "Laboratórium 3D rezania 2"
 ---
 
-# 3D Cutting Lab 2
+# Laboratórium 3D rezania 2
 
-2.1. Summary
+2.1. Zhrnutie
 
-2.2. Starting the 3D machining wizard
+2.2. Spustenie sprievodcu 3D obrábaním
 
-2.3. Define Machining Process data
+2.3. Definovanie údajov o obrábacom procese
 
-2.4. Defining Insert geometry
+2.4. Definovanie geometrie vložky
 
-2.5. Cutting tool positioning
+2.5. Polohovanie rezných nástrojov
 
-2.6. Assigning Tool Material
+2.6. Priradenie materiálu nástroja
 
-2.7. Generating Mesh for Tool
+2.7. Vytvorenie siete pre nástroj
 
-2.8. Workpiece Geometry
+2.8. Geometria obrobku
 
-2.9. Assigning Workpiece Material
+2.9. Priradenie materiálu obrobku
 
-2.10. Generating Mesh for Workpiece
+2.10. Vytvorenie siete pre obrobok
 
-2.11. Workpiece Boundary Condition page
+2.11. Stránka „Okrajové podmienky obrobku“
 
-2.12. Tool Positioning
+2.12. Polohovanie nástroja
 
-2.13. Tool Wear Setting
+2.13. Nastavenie opotrebenia nástroja
 
-2.14. Contact page
+2.14. Stránka s kontaktnými údajmi
 
-2.15. Step Control page
+2.15. Stránka „Step Control“
 
-2.16. Generate Database
+2.16. Vytvorenie databázy
 
-2.17. Running Simulation
+2.17. Spustenie simulácie
 
-2.18. Post Processing
+2.18. Následné spracovanie
 
-## Summary
+## Zhrnutie
 
-In this lab we will demonstrate how to setup turning lab by importing insert geometry in 3D Cutting wizard.
+V tomto cvičení si ukážeme, ako nastaviť sústruženie importovaním geometrie vložky v sprievodcovi 3D rezaním.
 
-## Starting the 3D machining wizard
+## Spustenie sprievodcu 3D obrábaním
 
-**We can open 3D Cutting wizard in two ways:**
+**Sprievodcu 3D rezaním môžeme otvoriť dvoma spôsobmi:**
 
-a. Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the **New****Problem**![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**Integrated Manufacturing Process** " radio button and Unit system as "**English** " using radio button. Define Problem Name as " **3D_turning** " and and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+a. Vytvorte nový problém buď výberom položky **Súbor![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Nový problém**, alebo kliknutím na ikonu **Nový****problém**![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Zvoľte prepínač „**Integrovaný výrobný proces**“ a ako systém jednotiek zvoľte „**Anglický**“ pomocou prepínača. Názov úlohy zadajte ako „**3D_sústruženie**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak políčko „**Zobraziť dialógové okno s možnosťami**“ nezaškrtnete, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s použitím integrovaného výrobného procesu Deform.
 
-Multiple operation wizard will open, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use "**3D_turning** " as the project name. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation. MO wizard will open, add 3D Cutting operation from the Explorer Operations list. Add the operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button available next to 3D Cutting or by drag and drop into the Operation editor.
+Otvorí sa sprievodca viacerými operáciami, v tomto bode bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „**3D_turning**“. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie. Otvorí sa sprievodca MO, zoznamu operácií v Průzkumníku pridajte operáciu 3D rezanie. Operáciu pridajte kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa položky 3D rezanie alebo jej presunutím do editora operácií.
 
-b. Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the **New****Problem![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) **icon. The Problem Setup window will appear. Select "**3D Cutting** " radio button and Unit system as "**English** " using radio button (see Fig. 3DTL2.1.). Define Problem Name as " **3D_turning** " and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem with 3D Cutting operation in MO wizard.
+b. Vytvorte nový problém buď výberom položky **Súbor![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Nový problém**, alebo kliknutím na ikonu **Nový****Problém![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) **. Zobrazí sa okno Nastavenie problému. Zvoľte prepínač „**3D rezanie**“ a ako systém jednotiek zvoľte „**anglický**“ pomocou prepínača (pozri obr. 3DTL2.1.). Názov úlohy zadajte ako „**3D_turning**“ a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) otvoríte v sprievodcovi MO novú úlohu s operáciou 3D rezania.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_cutting_lab2/image0001.jpg' | relative_url }})
 
-Problem Setup Page
+Stránka s popisom úlohy
 
-## Define Machining Process data
+## Definovanie údajov o obrábacom procese
 
-Under the ‘**Process** ’ menu, Define Cutting type as '**Turning** ', enter the Environment Heat Transfer temperature as **68F** and use default Convection coefficient **7.7e-06** BTU/sec/in^2/F. Select the **Cutting****speed (v)** as **500****in/sec** , **feed rate (f)** as **0.012****in/rev** and **Depth of cut (d)** as **0.02 in** (see Fig. 3DTL2.2.). Alternatively user can also specify rotational speed of the workpiece and part diameter instead of surface speed. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Tool page.
+V ponuke „**Proces**“ nastavte typ rezania na „**Sústruženie**“, zadajte teplotu prenosu tepla v prostredí ako **68 °F** a použite predvolený koeficient konvekcie **7,7e-06** BTU/s/in²/°F. Zvoľte **rýchlosť rezu (v)** na hodnotu **500****in/sec**, **posuv (f)** na hodnotu **0,012****in/rev** a **hĺbku rezu (d)** na hodnotu **0,02 in** (pozri obr. 3DTL2.2.). Alternatívne môže používateľ namiesto povrchovej rýchlosti zadať aj rýchlosť otáčania obrobku a priemer dielu. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka Nástroj.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_cutting_lab2/image0002.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-## Defining Insert geometry
+## Definovanie geometrie vložky
 
-In ‘**Tool** ’ page, enter the tool temperature as 68F. User can import the cutting edge geometry from a previously defined simulation keyword file or a database file using Import Object ![]({{ '/assets/icons/pre_icons/mo_import_object_button.jpg' | relative_url }}) option. For this lab we will import cutting edge geometry using the import geometry option. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to import the Insert Geometry. Click on ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) and import **DNMA432** geometry from DEFORM installation \3D\Machining\Insert\EN folder. Select the Cutting Face direction as "**Y** ", click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select the Reference point and click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). (See Fig. 3DTL2.3.).
+Na stránke „**Nástroj**“ zadajte teplotu nástroja 68F. Používateľ môže importovať geometriu rezných hrán z predtým definovaného súboru s kľúčovými slovami simulácie alebo z databázového súboru pomocou možnosti Importovať objekt ![]({{ '/assets/icons/pre_icons/mo_import_object_button.jpg' | relative_url }}). V rámci tohto cvičenia budeme importovať geometriu rezných hrán pomocou možnosti importu geometrie. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste importovali geometriu vložky. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) a importujte geometriu **DNMA432** zo zložky DEFORM installation \3D\Machining\Insert\EN. Zvoľte smer rezných plôch ako „**Y**“, kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), vyberte referenčný bod a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). (Pozri obr. 3DTL2.3.)
 
-In this lab we will position the Cutting tool manually using positioning option. Go to the Controls page by clicking on the "**Control** " option in the Operation tree.
+V tomto laboratórnom cvičení nastavíme polohu rezného nástroja ručne pomocou funkcie polohovania. Prejdite na stránku Ovládacie prvky kliknutím na položku „**Ovládanie**“ v stromovej štruktúre Operácie.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_cutting_lab2/image0003.jpg' | relative_url }})
 
-Tool geometry orientation selection page
+Stránka na výber orientácie geometrie nástroja
 
-## Cutting tool positioning
+## Polohovanie rezného nástroja
 
-We will use a -5 degree face rake and a -5 degree side rake on the tool. Click on ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) button in the Controls page. In the Object Positioning page select ![]({{ '/assets/icons/pre_icons/mo_rotational_radio_button.jpg' | relative_url }}) position and specify a rotation about the **+X** axis of "**-5** " degrees. Click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Now specify a rotation of "**5** " degrees around the **+Z** axis and click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) again. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Object Positioning page. Go back to the Tool material page by clicking on the "Tool material" option under Tool in the Operation tree.
+Na nástroji použijeme predný sklon -5 stupňov a bočný sklon -5 stupňov. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) na stránke Ovládacie prvky. Na stránke Polohovanie objektu vyberte polohu ![]({{ '/assets/icons/pre_icons/mo_rotational_radio_button.jpg' | relative_url }}) a zadajte otočenie okolo osi **+X** o „**-5**“ stupňov. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Teraz zadajte otočenie o „**5**“ stupňov okolo osi **+Z** a opäť kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte stránku „Polohovanie objektu“. Vráťte sa na stránku „Materiál nástroja“ kliknutím na možnosť „Materiál nástroja“ v časti „Nástroj“ v strome operácií.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_cutting_lab2/image0004.jpg' | relative_url }})
 
-Cutting Tool positioning
+Polohovanie rezného nástroja
 
-## Assigning Tool Material
+## Priradenie materiálu nástroja
 
-In the '**Tool materia** l’ page, choose the ‘Load material data from library’ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option, select ‘**Tool****Material** ' category and ‘**Carbide****(15% Cobalt)** ” (see Fig. 3DTL2.5.). ‘Load’ this material and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to generate Mesh.
+Na stránke „**Materiál nástroja**“ vyberte možnosť „Načítať údaje o materiáli z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), vyberte kategóriu „**Nástroj****Materiál**“ a „**Karbid****(15 % kobaltu)** “ (pozri obr. 3DTL2.5.). Načítate tento materiál a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujete sieť.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_cutting_lab2/image0005.jpg' | relative_url }})
 
-Loading Tool material
+Načítavanie materiálu pre nástroj
 
-## Generating Mesh for Tool
+## Vytvorenie siete pre nástroj
 
-After the tool geometry is generated, generate mesh with Relative mesh type with element **size****ratio** of **7** and **10000** target number of elements as shown in Fig. 3DTL2.6. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) to complete mesh generation for the workpiece. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to BCC page. In BCC observe the default Heat exchange BCC assigned for tool and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Workpiece page.
+Po vytvorení geometrie nástroja vygenerujte sieť s typom „Relative“ s pomerom veľkostí prvkov **7** a cieľovým počtom prvkov **10 000**, ako je znázornené na obr. 3DTL2.6. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}), aby ste dokončili generovanie siete pre obrobok. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku BCC. Na stránke BCC skontrolujte predvolené nastavenie výmeny tepla (Heat exchange) priradené pre nástroj a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku Workpiece.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_cutting_lab2/image0006.jpg' | relative_url }})
 
-Generating Tool mesh
+Vytvorenie siete nástroja
 
-## Workpiece Geometry
+## Geometria obrobku
 
-In the ‘Workpiece' page define workpiece as a plastic object with a temperature as 68F and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed. Click on the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) label in the ‘Workpiece geometry’ page. In the 'Workpiece Geo Primitive' page specify the workpiece details. Depending upon the workpiece diameter user can specify either a flat model or a curved model. The template will prompt for the related data, and will generate the workpiece setup in the display area. For the current lab select the ‘**Simplified****mode** ’ with a **length** of **0.3** in. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}) to create the workpiece geometry (see Fig. 3DTL2.7.). Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close this page and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to go to the Object material page.
+Na stránke „Obrobok“ definujte obrobok ako plastový objekt s teplotou 68 °F a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte. Na stránke „Geometria obrobku“ kliknite na označenie ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). Na stránke „Geometrický primitív obrobku“ zadajte podrobnosti o obrobku. V závislosti od priemeru obrobku môže používateľ zvoliť buď plochý, alebo zakrivený model. Šablóna vás vyzve na zadanie príslušných údajov a v zobrazovacej oblasti vygeneruje nastavenie obrobku. Pre aktuálne laboratórne cvičenie vyberte „**Zjednodušený****režim**“ s **dĺžkou** **0,3** palca. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}), aby ste vytvorili geometriu obrobku (pozri obr. 3DTL2.7.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste túto stránku zatvorili, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku Materiál objektu.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_cutting_lab2/image0007.jpg' | relative_url }})
 
-Defining Workpiece geometry
+Definovanie geometrie obrobku
 
-## Assigning Workpiece material
+## Priradenie materiálu obrobku
 
-In 'Object Material’ page, choose the ‘Load material data from library’ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option, select ‘**Steel** ’ category and ‘**AISI****-1045 (machining)** ’ (see Fig. 3DTL2.8.). ‘Load’ this material and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to generate Mesh.
+Na stránke „Objektový materiál“ vyberte možnosť „Načítať údaje o materiáli z knižnice“ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), vyberte kategóriu „**Oceľ**“ a „**AISI****-1045 (obrábanie)**“ (pozri obr. 3DTL2.8.). Načítate tento materiál a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujete sieť.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_cutting_lab2/image0008.jpg' | relative_url }})
 
-Loading Workpiece material form Library
+Načítanie typu materiálu obrobku z knižnice
 
-## Generating mesh for Workpiece
+## Vytvorenie siete pre obrobok
 
-After the work piece geometry is generated, generate mesh with element **size****ratio** of **7** , and minimum element size of **0.0024** inch.(Fig. 3DTL2.9.). Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) to complete mesh generation for the workpiece. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to BCC page.
+Po vytvorení geometrie obrobku vytvorte sieť s **pomerom veľkostí prvkov** **7** a minimálnou veľkosťou prvku **0,0024** palca (obr. 3DTL2.9.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}), aby ste dokončili vytvorenie siete pre obrobok. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku BCC.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_cutting_lab2/image0009.jpg' | relative_url }})
 
-Workpiece Mesh page 
+Stránka „Mriežka obrobku“ 
 
-## Workpiece Boundary Condition page
+## Stránka „Okrajové podmienky obrobku“
 
-In the ‘View Workpiece BCC’ menu, check the boundary conditions imposed on workpiece by the system (see Fig. 3DTL2.10.), and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Controls page. Note the velocity BCC assigned to the bottom surfaces away from the cutting surfaces to prevent workpiece from flying. Heat Exchange with BCC is assigned to all surfaces and temperature BCC is assigned for all surfaces except cutting surfaces.
+V ponuke „Zobraziť BCC obrobku“ skontrolujte okrajové podmienky, ktoré systém stanovil pre obrobok (pozri obr. 3DTL2.10.), a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Ovládacie prvky. Všimnite si, že rýchlostné okrajové podmienky sú priradené spodným povrchom vzdialeným od rezných plôch, aby sa zabránilo odletovaniu obrobku. Teplotné okrajové podmienky sú priradené všetkým povrchom s výnimkou rezných plôch.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_cutting_lab2/image0010.jpg' | relative_url }})
 
-Assigned Temperature Boundary Condition for workpiece
+Predpísaná teplotná okrajová podmienka pre obrobok
 
-## Tool Positioning
+## Polohovanie nástroja
 
-In the ‘Controls’ menu, click on ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}), Check the position of Insert. If Insert is not contact with workpiece using ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}) method position the Insert and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V ponuke „Ovládacie prvky“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) a skontrolujte polohu vložky. Ak vložka nie je v kontakte s obrobkom, pomocou metódy ![]({{ '/assets/icons/pre_icons/mo_interference_radio_button.jpg' | relative_url }}) nastavte polohu vložky a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-## Tool wear setting
+## Nastavenie opotrebenia nástroja
 
-In this lab we are not calculating the tool wear so, uncheck the Define model to calculate tool wear check box (see Fig. 3DTL2.11.), Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to contact page.
+V tomto laboratórnom cvičení nevypočítavame opotrebenie nástroja, preto zrušte zaškrtnutie políčka „Definovať model na výpočet opotrebenia nástroja“ (pozri obr. 3DTL2.11.) a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na ďalšiu stránku.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_cutting_lab2/image0011.jpg' | relative_url }})
 
-Tool wear setup window
+Okno nastavení opotrebenia nástrojov
 
-## Contact page
+## Stránka s kontaktnými údajmi
 
-In Contact page, use default relations. Click on **Tool - Workpiece** relation ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) button and define **shear** friction factor as **0.5** and the **interface heat transfer coefficient** as **0.01359** BTU/sec/in^2/F (as shown in Fig. 3DTL2.12.), click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Step Control page.
+Na stránke „Kontakt“ použite predvolené vzťahy. Kliknite na tlačidlo vzťahu **Nástroj – Obrobok** ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) a nastavte koeficient trenia pri **šmyku** na hodnotu **0,5** a **koeficient prenosu tepla na rozhraní** na hodnotu **0,01359** BTU/s/in²/F (ako je znázornené na obr. 3DTL2.12.), kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) na vytvorenie kontaktu. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku Riadenie krokov.
 
 ![]({{ '/assets/images/labs/machining_labs/3d_cutting_lab2/image0012.jpg' | relative_url }})
 
-Contact page
+Stránka s kontaktnými údajmi
 
-## Step Control page
+## Stránka „Ovládanie krokov“
 
-Check the ‘Simulation Controls’ and set the length of cut as ‘**0.3** in' (Full length of cut) and leave the rest as default values and proceed to generate the Database.
+Zaškrtnite políčko „Simulation Controls“ (Ovládacie prvky simulácie), nastavte dĺžku rezu na „**0,3** in“ (plná dĺžka rezu), ostatné hodnoty ponechajte v predvolenom nastavení a pokračujte vo vytvorení databázy.
 
-## Generate Database
+## Vytvoriť databázu
 
-In Generate DB page, click on the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. Observe the message in Message tab informing database generation status.
+Na stránke „Generate DB“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vygenerovali databázu. Pozrite si správu na karte „Message“, ktorá informuje o stave generovania databázy.
 
-## Running simulation
+## Spustenie simulácie
 
-Once the database has been generated switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. 3DTL2.13. Use the default **Continue****Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vytvorení databázy prejdite do simulačného režimu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom operácií. Kliknutím na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. 3DTL2.13. Použite predvolenú možnosť **Pokračovať****Spustiť** na výber možnosti „**Pokračovať od posledného kroku**“ (od kroku -1) a potom vyberte režim simulácie pomocou prepínača **Interaktívny**. Kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-To define MPI settings, click on ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}) button, Run Options window will expand and displays options to define MPI settings for simulation (max number of processors that can be defined depend on your 3D MPI license).
+Ak chcete nastaviť parametre MPI, kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_more_button.jpg' | relative_url }}). Rozbalí sa okno „Run Options“ (Možnosti spustenia), v ktorom sa zobrazia možnosti na nastavenie parametrov MPI pre simuláciu (maximálny počet procesorov, ktorý je možné nastaviť, závisí od vašej licencie 3D MPI).
 
 ![]({{ '/assets/images/labs/machining_labs/3d_cutting_lab2/image0013.jpg' | relative_url }})
 
-Run Simulation Window
+Spustiť okno simulácie
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. User can view the cutting process as the simulation proceeds to the specified cutting length from Simulation graphics.
+Priebeh simulácie môžete sledovať na kartách „Simulation Message“ a „Simulation Log“, pričom sa uistite, že je zaškrtnutá voľba ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). V priebehu simulácie až do dosiahnutia zadaného dĺžky rezu si môžete v grafickom zobrazení simulácie prezerať priebeh rezania.
 
-## Post Processing
+## Následné spracovanie
 
-When the simulation is completed, review the results by switching to Post mode using the ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) button above the Simulation tool bar. Play through the steps of the simulation and look how the chip has been formed during cutting process.
+Po dokončení simulácie si výsledky prezrite tak, že prejdete do režimu Post pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) nad panelom nástrojov Simulácia. Prejdite si jednotlivé kroky simulácie a sledujte, ako sa čip formoval počas procesu rezania.

@@ -1,238 +1,238 @@
 ---
 lang: sk
-title: "2D Steady State Machining Lab"
+title: "Laboratórium 2D obrábania v ustálenom stave"
 ---
 
-# 2D Steady State Machining Lab
+# Laboratórium 2D obrábania v ustálenom stave
 
-1.1. Problem Summary
+1.1. Zhrnutie problému
 
-1.2. Creating New Problem
+1.2. Vytvorenie nového problému
 
-1.3. Define Machining Process data
+1.3. Definovanie údajov o obrábacom procese
 
-1.4. Loading Cutting tool Coating material
+1.4. Zaťaženie rezných nástrojov – materiál povlaku
 
-1.5. Defining Cutting Tool geometry
+1.5. Definovanie geometrie rezných nástrojov
 
-1.6. Coating definition
+1.6. Definícia povlaku
 
-1.7. Assign Tool material
+1.7. Priradiť materiál nástroja
 
-1.8. Generating Tool mesh
+1.8. Vytvorenie siete nástroja
 
-1.9. Tool Boundary conditions
+1.9. Okrajové podmienky nástroja
 
-1.10. Set the Workpiece geometry data
+1.10. Nastavte údaje o geometrii obrobku
 
-1.11. Assigning Workpiece material
+1.11. Určenie materiálu obrobku
 
-1.12 Generating Mesh for workpiece
+1.12 Vytvorenie siete pre obrobok
 
-1.13. Workpiece Boundary condition page
+1.13. Stránka „Okrajové podmienky obrobku“
 
-1.14. Initialize
+1.14. Inicializácia
 
-1.15. Tool wear Setting
+1.15. Nastavenie opotrebenia nástroja
 
-1.16. Contact
+1.16. Kontakt
 
-1.17. Step Control
+1.17. Krokové riadenie
 
-1.18. Generate Database
+1.18. Vytvorenie databázy
 
-1.19. Running Simulation
+1.19. Spustenie simulácie
 
-1.20. Post Processing
+1.20. Následné spracovanie
 
-## Problem Summary
+## Zhrnutie problému
 
-This lab will briefly demonstrate how to use the machining template to prepare model data representing orthogonal cutting conditions (cutting edge is orthogonal/perpendicular to the cutting direction) to simulate chip formation process. Interactive definition of the process conditions, cutting edge, coating, material, steady state and tool stress related features are discussed here. Brief description of the orthogonal cutting conditions and how the process parameters are related to the modeling domain are indicated as shown in the Fig. 2DSSL1.1.
+V tomto laboratórnom cvičení stručne ukážeme, ako pomocou šablóny obrábania pripraviť modelové údaje reprezentujúce ortogonálne reznú situáciu (rezná hrana je ortogonálna/kolmá na smer rezu) na simuláciu procesu tvorby triesok. Tu sa venujeme interaktívnemu definovaniu procesných podmienok, reznej hrany, povlaku, materiálu, ustáleného stavu a vlastností súvisiacich s namáhaním nástroja. Stručný popis ortogonálnych podmienok rezania a vzťahu medzi parametrami procesu a modelovacou oblasťou je uvedený na obr. 2DSSL1.1.
 
 ![]({{ '/assets/images/labs/machining_labs/2d_cutting_lab/image0001.jpg' | relative_url }})
 
-Relationship between the process data and analysis domain
+Vzťah medzi procesnými údajmi a oblasťou analýzy
 
-## Creating New Problem
+## Vytvorenie nového problému
 
-**We can open 2D Cutting wizard in two ways:**
+**Sprievodcu 2D rezaním môžeme otvoriť dvoma spôsobmi:**
 
-**a.** Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **New****Problem** or by clicking the **New****Problem**![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select " **Integrated Manufacturing Process** " radio button and Unit system as "**SI** " using radio button. Define Problem Name as "**2D_CUTTING_STEADY** " and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Integrated Manufacturing Process. Multiple Operation wizard will open, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use "**2D_CUTTING_STEADY** " as the project name. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation. Integrated Manufacturing Process will open, add 2D Cutting operation from the Explorer Operations list. Add the operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button available next to 2D Cutting or by drag and drop into the Operation editor.****
+**a.** Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Nový****Problém**, alebo kliknutím na ikonu **Nový****Problém**![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Zvoľte prepínač „**Integrovaný výrobný proces**“ a ako systém jednotiek zvoľte „**SI**“ pomocou prepínača. Názov úlohy zadajte ako „**2D_CUTTING_STEADY**“ a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) otvoríte novú úlohu s použitím integrovaného výrobného procesu. Otvorí sa sprievodca viacerými operáciami, v tomto bode bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „**2D_CUTTING_STEADY**“. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otváraní operácie. Otvorí sa okno Integrovaný výrobný proces, kde pridajte operáciu 2D rezanie zo zoznamu operácií v Průzkumníku. Operáciu pridáte kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa položky 2D rezanie alebo jej presunutím do editora operácií.****
 
-**b.** Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New****Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear. Select "**2D Cutting"** radio button and Unit system as "**SI** " using radio button as shown in Fig. 2DSSL1.2. Define Problem Name as " **2D_CUTTING_STEADY** " and click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem with 2D Cutting operation in MO wizard.
+**b.** Vytvorte nový problém buď výberom položky **Súbor![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Nový****Problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému. Zvoľte prepínač „**2D rezanie**“ a ako systém jednotiek zvoľte „**SI**“ pomocou prepínača, ako je znázornené na obr. 2DSSL1.2. Názov úlohy zadajte ako „**2D_CUTTING_STEADY**“ a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) otvoríte v sprievodcovi MO novú úlohu s operáciou 2D rezania.
 
 ![]({{ '/assets/images/labs/machining_labs/2d_cutting_lab/image0002.jpg' | relative_url }})
 
-Problem Setup page
+Stránka s popisom problému
 
-## Define Machining Process data
+## Definovanie údajov o obrábacom procese
 
-Under the ‘**Process** ’ menu, Select Simulation type as '**Steady-s****tate****Analysis** ', enter the **Environment****Heat****Transfer****temperature** as **22.5** °C and use default **Convection coefficient** **0.02****N/sec/mm/C**. Select the ‘**S****urface****speed** as **250****m****/****min** and **feed****rate** as **0.15****mm/rev** ’ (see Fig. 2DSSL1.3.). Alternatively user can also specify rotational speed of the workpiece and part diameter instead of surface speed. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V ponuke „**Proces**“ vyberte typ simulácie „**Steady-state****Analýza**“, zadajte **Teplotu prenosu tepla v prostredí** na hodnotu **22,5** °C a použite predvolený **koeficient konvekcie** **0,02****N/s/mm/°C**. Zvoľte „****Povrchovú rýchlosť**“ na hodnotu **250 m/min** a ****posuv**“ na hodnotu **0,15 mm/ot**** (pozri obr. 2DSSL1.3.). Alternatívne môže používateľ namiesto povrchovej rýchlosti zadať aj rýchlosť otáčania obrobku a priemer dielu. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0003.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-## Loading Cutting tool Coating material
+## Načítavanie: Materiál povlaku rezných nástrojov
 
-In Material List page, load '**Coating-TiN'** and '**Coating-Al2O3** ' Material from **Tool_Material** category for assigning to Tool coating. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Tool page.
+Na stránke Zoznam materiálov načítajte materiály „**Coating-TiN**“ a „**Coating-Al2O3**“ z kategórie **Tool_Material**, aby ste ich mohli priradiť k povlaku nástroja. Potom klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka Nástroj.
 
-## Defining Cutting Tool geometry
+## Definovanie geometrie rezného nástroja
 
-In ‘Tool’ page, enter the tool temperature as 20°C. We can import the cutting edge geometry from a previously defined simulation keyword file or a database file using Import Object option. For this lab we will define the cutting edge geometry using the primitives available with the system. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to enter the ‘Insert Geometry’ menu (see Fig. 2DSSL1.4.) and click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). Select **#3** **geometry** in Primitive page and use default geometry parameters. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}) to create geometry. Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to come out of ‘Geometry Primitive’ menu and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed.
+Na stránke „Nástroj“ zadajte teplotu nástroja 20 °C. Geometriu rezných hrán môžeme importovať z predtým definovaného súboru s kľúčovými slovami simulácie alebo z databázového súboru pomocou možnosti „Importovať objekt“. V rámci tohto cvičenia definujeme geometriu rezných hrán pomocou primitív dostupných v systéme. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) otvoríte ponuku „Insert Geometry“ (pozri obr. 2DSSL1.4.) a kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). Na stránke „Primitive“ vyberte **#3** **geometriu** a použite predvolené parametre geometrie. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}) na vytvorenie geometrie. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) na opustenie menu „Geometry Primitive“ a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na pokračovanie.
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0004.jpg' | relative_url }})
 
-Insert Primitive Window
+Okno „Vložiť primitív“
 
-## Coating definition
+## Definícia povlaku
 
-Assign ‘Coating Material’ and thickness in Coating material table, add (![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }})) two layers of coating. For the outer layer select 10 microns as coating thickness and ‘TiN’ as the material and for the inner layer select 10 microns as the coating thickness and ‘Al2O3’ as the coating layer (see Fig. 2DSSL1.5.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed.
+V tabuľke „Povlakový materiál“ zadajte „Povlakový materiál“ a hrúbku, pridajte (![]({{ '/assets/icons/pre_icons/mo_add_icon.jpg' | relative_url }})) dve vrstvy povlaku. Pre vonkajšiu vrstvu zvoľte hrúbku povlaku 10 mikrónov a materiál „TiN“ a pre vnútornú vrstvu zvoľte hrúbku povlaku 10 mikrónov a materiál „Al2O3“ (pozri obr. 2DSSL1.5.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali.
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0005.jpg' | relative_url }})
 
-Coating layer and Material Definition
+Definícia povlakovej vrstvy a materiálu
 
-## Assign Tool material
+## Priradiť materiál nástroja
 
-In Material Window, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) to Load material data from Library and load '**WC** ' material from '**Tool_Material** ' category by clicking ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button as shown in Fig. 2DSSL1.6. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to generate Mesh for the Tool.
+V okne „Material“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}), aby ste načítali údaje o materiáli z knižnice, a načítate materiál „**WC**“ z kategórie „**Tool_Material**“ kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}), ako je znázornené na obr. 2DSSL1.6. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste vygenerovali sieť pre nástroj.
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0006.jpg' | relative_url }})
 
-Loading Tool material from Material Library
+Načítavanie materiálu nástroja z knižnice materiálov
 
-## Generating Tool mesh
+## Vytvorenie siete nástroja
 
-In the Tool mesh generation menu select ‘**700** ’ as the target number of elements for the insert and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) (see Fig. 2DSSL1.7.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed.
+V ponuke „Generovanie siete“ vyberte ako cieľový počet prvkov pre vloženie hodnotu „**700**“ a kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) (pozri obr. 2DSSL1.7.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte.
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0007.jpg' | relative_url }})
 
-Tool Mesh page
+Stránka „Tool Mesh“
 
-## Tool Boundary conditions
+## Okrajové podmienky nástroja
 
-Next step is to view the thermal boundary conditions generated by the system in the BCC menu. The program generates heat exchange with environment (part of which comes from insert contact region) and the fixed nodal temperature BCC for the surfaces away from the cutting edge (see Fig. 2DSSL1.8.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed to the workpiece setup.
+Ďalším krokom je zobrazenie teplotných okrajových podmienok vygenerovaných systémom v ponuke BCC. Program generuje výmenu tepla s okolím (ktorej časť pochádza z kontaktnej oblasti vložky) a BCC s pevnou uzlovou teplotou pre povrchy vzdialené od rezných hrán (pozri obr. 2DSSL1.8.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite k nastaveniu obrobku.
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0008.jpg' | relative_url }})
 
-Tool Boundary Condition
+Okrajová podmienka nástroja
 
-## Set the Workpiece geometry 
+## Nastavenie geometrie obrobku 
 
-In the ‘Workpiece setup’ define workpiece as a **plastic** object and temperature as **22.5** °C and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to proceed. Click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) label in the ‘Workpiece geometry’ page. Generate geometry using the parameters:
+V časti „Nastavenie obrobku“ definujte obrobok ako **plastový** objekt a teplotu ako **22,5** °C a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) pokračujte. Na stránke „Geometria obrobku“ kliknite na označenie ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}). Vygenerujte geometriu pomocou nasledujúcich parametrov:
 
-WP length (L) = 4.5, WP height (H) = 1, Cut length(L1) = 1.5, Chip height(H1) = 0.5, Contact length (D) = 0.4, R1 = 0.3, R2 = 0.1, Chip thickness (C1) = 0.165. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}) to create the workpiece geometry (see Fig. 2DSSL1.9.). Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close this geometry menu and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to go to Material page.
+Dĺžka WP (L) = 4,5, výška WP (H) = 1, dĺžka rezu (L1) = 1,5, výška špony (H1) = 0,5, dĺžka kontaktu (D) = 0,4, R1 = 0,3, R2 = 0,1, Hrúbka triesky (C1) = 0,165. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_2_button.jpg' | relative_url }}), aby ste vytvorili geometriu obrobku (pozri obr. 2DSSL1.9.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste zatvorili toto menu geometrie, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste prešli na stránku Materiál.
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0009.jpg' | relative_url }})
 
-Defining Workpiece geometry
+Definovanie geometrie obrobku
 
-## Assigning Workpiece material
+## Priradenie materiálu obrobku
 
-In ‘Workpiece material’ page, choose the option ‘import material from library’ ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) option, select ‘**Steel** ’ category and ‘**AISI****-****10****45 (machining)** ’, load this material by clicking on ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button (see [Fig. 2DSSL1.10.]()) and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to generate Mesh.
+Na stránke „Materiál obrobku“ vyberte možnosť „importovať materiál z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})), vyberte kategóriu „**Oceľ**“ a „**AISI****-****10****45 (obrábanie)**, načítajte tento materiál kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) (pozri [Fig. 2DSSL1.10.]()) a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vygenerujte sieť.
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0010.jpg' | relative_url }})
 
-Loading Workpiece material form Library
+Načítavanie typu materiálu obrobku z knižnice
 
-## Generating mesh for Workpiece
+## Vytvorenie siete pre obrobok
 
-Select **15** as**No. of elements through uncut chip thickness for the workpiece** and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) to complete mesh generation for the workpiece (see Fig. 2DSSL1.11.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to BCC page.
+Zvoľte **15** ako **počet prvkov cez hrúbku neobrobeného čipu pre obrobok** a kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}), čím dokončíte vytvorenie siete pre obrobok (pozri obr. 2DSSL1.11.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku BCC.
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0011.jpg' | relative_url }})
 
-Workpiece mesh page
+Stránka so sieťou obrobkov
 
-## Workpiece Boundary condition 
+## Okrajová podmienka obrobku 
 
-In the ‘View Workpiece BCC’ menu, check the boundary conditions imposed on workpiece by the system (see Fig. 2DSSL1.12.), and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). Note the velocity BCC assigned to the bottom edge away from the cutting surface to prevent workpiece from flying. From V13.0.1, instead of Surface Velocity (Vx) BCC, Movement BCC will be defined to +X edge and bottom edge of the Workpiece (See Fig. 2DSSL1.12. ) and movement will be defined in Movement page of the Workpiece. 
-
-  
-Beginning surface BCC is assigned to the surface (-X edge (left side) of the Workpiece) away from the cutting direction. Free surface BCC is assigned to top edge of the chip and to the surface from where Cutting is started (+X edge (right side) of the Workpiece), See Fig. 2DSSL1.13.
+V ponuke „Zobraziť okrajové podmienky obrobku“ skontrolujte okrajové podmienky, ktoré systém nastavil pre obrobok (pozri obr. 2DSSL1.12.), a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). Všímajte si okrajovú podmienku rýchlosti priradenú k spodnému okraju vzdialenému od rezných plôch, ktorá zabraňuje odletovaniu obrobku. Od verzie V13.0.1 sa namiesto okrajovej podmienky povrchovej rýchlosti (Vx) bude pre okraj +X a spodný okraj obrobku definovať okrajová podmienka pohybu (pozri obr. 2DSSL1.12.) a pohyb sa bude definovať na stránke „Pohyb“ obrobku. 
 
   
-Heat Exchange with BCC is assigned to top edge surface except top edge of the chip. Temperature BCC is assigned +X edge (right side) and bottom edge of the Workpiece, See Fig. 2DSSL1.14. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Počiatočná plocha BCC je priradená k ploche (-X hrana (ľavá strana) obrobku) vzdialenej od smeru rezania. Povrch BCC „voľný“ je priradený k hornému okraju triesky a k povrchu, od ktorého sa začína rezanie (okraj +X (pravá strana) obrobku), pozri obr. 2DSSL1.13.
+
+  
+Výmena tepla s BCC je priradená k povrchu horného okraja s výnimkou horného okraja čipu. Teplota BCC je priradená k okraju +X (pravá strana) a spodnému okraju obrobku, pozri obr. 2DSSL1.14. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0012.jpg' | relative_url }})
 
-Movement Boundary Condition for Workpiece
+Hraničná podmienka pohybu pre obrobok
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0021.jpg' | relative_url }})
 
-Free Surface BCC assigned for Workpiece
+Pre obrobok bol priradený model BCC s voľným povrchom
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0022.jpg' | relative_url }})
 
-Temperature BCC assigned for Workpiece
+Teplota BCC priradená pre obrobok
 
-## Initialization
+## Inicializácia
 
-In Initialize page, we can initialize the workpiece strain value (see Fig. 2DSSL1.15.). In this lab, we are not initializing any strain value, so click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Tool wear page.
+Na stránke „Initialize“ môžeme nastaviť počiatočnú hodnotu deformácie obrobku (pozri obr. 2DSSL1.15.). V tomto laboratórnom cvičení žiadnu hodnotu deformácie nenastavujeme, preto klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až kým sa nezobrazí stránka „Tool wear“.
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0013.jpg' | relative_url }})
 
-Initialize page
+Inicializovať stránku
 
-## Tool wear setting
+## Nastavenie opotrebenia nástroja
 
-Select Usui’s model and input coefficients a, b, please note that these (shown next to the equation) are only some typical values that can be obtained from the literature, and user is responsible for accuracy of this data (see Fig. 2DSSL1.16.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to contact page.
+Vyberte Usuiho model a zadajte koeficienty a, b. Upozorňujeme, že tieto hodnoty (uvedené vedľa rovnice) sú len typickými hodnotami, ktoré možno nájsť v odbornej literatúre, a za správnosť týchto údajov zodpovedá používateľ (pozri obr. 2DSSL1.16.). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdete na kontaktnú stránku.
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0014.jpg' | relative_url }})
 
-Tool wear setup window
+Okno nastavení opotrebenia nástrojov
 
-## Contact page
+## Stránka s kontaktnými údajmi
 
-In Contact page, use default relations. Click on **Tool - Workpiece** relation Edit ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }})button and define **shear****friction****factor** as **0.48** and the **interface****heat** **transfer****coefficient** as **39.5****N/sec/mm/C** , click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contact (as shown in Fig. 2DSSL1.17.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) unit Step control page.
+Na stránke „Kontakt“ použite predvolené vzťahy. Kliknite na tlačidlo **Nástroj – Obrobok**, vyberte vzťah „Upraviť ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }})“ a nastavte **koeficient trenia pri šmyku****** na hodnotu **0,48** a **koeficient prenosu tepla na rozhraní****** na hodnotu ****koeficient prenosu tepla** na **39,5****N/s/mm/°C**, kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) na vytvorenie kontaktu (ako je znázornené na obr. 2DSSL1.17.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránke „Kontrola krokov“.
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0015.jpg' | relative_url }})
 
-Contact page
+Stránka s kontaktnými údajmi
 
-## Step control page
+## Stránka na ovládanie krokov
 
-In Step controls page, we will use default Temperature convergence and Strain convergence method which is **UL solution: 50** along with default convergence tolerance value (as shown in Fig. 2DSSL1.18.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Step controls“ použijeme predvolenú metódu konvergencie teploty a deformácie, ktorou je **UL solution: 50**, spolu s predvolenou hodnotou tolerancie konvergencie (ako je znázornené na obr. 2DSSL1.18.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0016.jpg' | relative_url }})
 
-Step Control page
+Stránka „Kontrola krokov“
 
-## Generate Database
+## Vytvoriť databázu
 
-In Generate DB page. Click on the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. Observe the message in Message tab informing database generation status.
+Na stránke „Generate DB“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vygenerovali databázu. Pozrite si správu na karte „Message“, ktorá informuje o stave generovania databázy.
 
-## Running Simulation
+## Spustenie simulácie
 
-Once the database has been generated switch to the Simulation mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the operation tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. 2DSSL1.19. Use the default **Continue****Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** radio button. Click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation. 
+Po vytvorení databázy prejdite do simulačného režimu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom operácií. Kliknutím na názov akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. 2DSSL1.19. Použite predvolenú možnosť **Pokračovať****Spustiť** na výber možnosti „**Pokračovať od posledného kroku**“ (od kroku -1) a potom vyberte režim simulácie pomocou prepínača **Interaktívny**. Kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu. 
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0019.jpg' | relative_url }})
 
-Run Simulation window
+Okno „Spustiť simuláciu“
 
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, making sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. User can view the cutting process as the simulation proceeds to the specified cutting length from Simulation graphics.
+Priebeh simulácie môžete sledovať na kartách „Simulačné správy“ a „Simulačný protokol“, pričom sa uistite, že je zaškrtnutá možnosť ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). V priebehu simulácie až do dosiahnutia zadaného dĺžky rezu si môžete v grafickom zobrazení simulácie prezerať priebeh rezania.
 
-When the simulation is finished by reaching steady state, we can observe that the following message is added to the end of the Message file:
+Keď sa simulácia ukončí dosiahnutím ustáleného stavu, môžeme si všimnúť, že na koniec súboru Message sa pridá nasledujúca správa:
 
-Steady state thermal solution has converged
+Tepelné riešenie v ustálenom stave dosiahlo konvergenciu
 
-Steady state strain solution has converged
+Riešenie deformácie v ustálenom stave sa zbieha
 
-Steady state chip free surface computations have converged
+Výpočty voľnej hladiny čipu v ustálenom stave dosiahli konvergenciu
 
-******Message*******
+******Správa*******
 
-Steady state solution has converged
+Riešenie v ustálenom stave sa zbieha
 
-## Post Processing
+## Následné spracovanie
 
-When the simulation is completed, review the results by switching to Post mode using the ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) button above the Simulation tool bar.
+Po dokončení simulácie si výsledky prezrite tak, že prejdete do režimu Post pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) nad panelom nástrojov Simulácia.
 
-Plot Temperature State variable, play through the steps and look the temperature generated in Cutting zone (see Fig. 2DSSL1.20.) .
+Zaznačte premennú „Teplota“ a prejdite jednotlivými krokmi, pričom sledujte teplotu, ktorá vzniká v rezacej zóne (pozri obr. 2DSSL1.20).
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0018.jpg' | relative_url }})
 
-Temperature plot in Steady state Cutting operation
+Graf teploty pri rezaní v ustálenom stave
 
 ![]({{ '/assets/images/labs/machining_labs/2d_steady_state_machining_lab/image0020.jpg' | relative_url }})
 
-Damage plot for workpiece object
+Graf poškodenia pre objekt obrobku

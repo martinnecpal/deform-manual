@@ -1,9 +1,9 @@
 ---
 lang: sk
-title: "Shape Rolling Labs Main Pg"
+title: "Tvar Rolling Labs Main Pg"
 ---
 
-# Shape Rolling Labs 
+# Tvarové valcovacie laboratóriá
 
 [ALE Shape Rolling Lab1]({{ '/docs/sk/labs/shape_rolling_labs/ale_shape_rolling_lab1/' | relative_url }})
 

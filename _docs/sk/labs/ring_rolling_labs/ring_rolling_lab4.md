@@ -1,311 +1,311 @@
 ---
 lang: sk
-title: "Ring Rolling Lab4"
+title: "Krúžok valcovania Lab4"
 ---
 
 # Ring Rolling Lab4
 
-In this Lab we will be setting up simple Ring Rolling operation.
+V tomto laboratóriu nastavíme jednoduchú operáciu valcovania krúžku.
 
-4.1. Creating a New Problem
+4.1. Vytvorenie nového problému
 
-4.2. Process Page
+4.2. Stránka procesu
 
-4.3. Simulation Setup
+4.3. Nastavenie simulácie
 
-4.4. Object selection
+4.4. Výber objektu
 
-4.5. Defining Workpiece-Ring Object
+4.5. Definovanie objektu krúžku obrobku
 
-4.5.1 Defining Workpiece-Ring Object settings
+4.5.1 Definovanie nastavení objektu krúžku obrobku
 
-4.5.2 Defining Workpiece-Ring 2D cross-section
+4.5.2 Definovanie 2D prierezu krúžku obrobku
 
-4.5.3 Workpiece-Ring 2D cross section mesh generation
+4.5.3 Generovanie 2D siete prierezu krúžku obrobku
 
-4.5.4 Generating Workpiece-Ring 3D Geometry
+4.5.4 Generovanie 3D geometrie krúžku obrobku
 
-4.5.5 Generating Workpiece-Ring 3D Mesh
+4.5.5 Generovanie 3D krúžku obrobku
 
-4.5.6 Assign Workpiece-Ring Material
+4.5.6 Priradenie materiálu krúžku obrobku
 
-4.6. Defining Driving Roll Object
+4.6. Definovanie objektu hnacieho valca
 
-4.6.1. Driving roll object settings
+4.6.1. Nastavenia predmetu hnacieho valca
 
-4.6.2. Defining Driving roll 2D cross-section
+4.6.2. Definovanie 2D prierezu hnacieho valca
 
-4.6.3. Generating Driving Roll 3D Geometry
+4.6.3. Generovanie 3D geometrie hnacieho valca
 
-4.6.4. Defining Driving Roll orientation
+4.6.4. Definovanie orientácie hnacieho valca
 
-4.6.5. Defining Driving roll movement
+4.6.5. Definovanie pohybu hnacieho valca
 
-4.7. Defining Pressure Roll Object
+4.7. Definovanie objektu tlakového valca
 
-4.7.1. Defining Pressure Roll Object
+4.7.1. Definovanie objektu tlakového valca
 
-4.7.2. Defining Pressure roll 2D cross-section Page
+4.7.2. Definovanie 2D prierezu valca tlaku Strana
 
-4.7.3. Generating Pressure Roll 3D Geometry Page
+4.7.3. Stránka Generovanie 3D geometrie tlakového kotúča
 
-4.7.4. Defining Pressure Roll orientation
+4.7.4. Definovanie orientácie tlakového valca
 
-4.7.5. Defining Pressure roll movement
+4.7.5. Definovanie pohybu tlakového valca
 
-4.8. Contact Page
+4.8. Kontaktná stránka
 
-4.9. Defining Stopping Controls
+4.9. Definovanie ovládacích prvkov zastavenia
 
-4.10. Defining Step and remeshing controls Page
+4.10. Definovanie krokov a prepracovanie ovládacích prvkov Strana
 
-4.11. Generate Database
+4.11. Vytvoriť databázu
 
-4.12. Running Simulation
+4.12. Simulácia chodu
 
 4.13. Post Processing
 
-## Creating a New Problem
+## Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na ** zariadení so systémom Windows ** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), zvoľte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte * * DEFORM GUI Main * * vxx.xx. Zobrazí SA hlavné okno Deform GUI.
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in [Fig. RRL4.1.]() Select " **Integrated Manufacturing Process** " radio button and Unit system as "**English** " using radio button. Define Problem Name as "**RING_ROLL_LAB4** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})* ***Nový problém** alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Okno Nastavenie problému sa zobrazí, ako je znázornené na prepínači [Fig. RRL4.1.]() Select " * * Integrated Manufacturing Process * * " a Unit system ako "**English** " pomocou prepínača. Definujte názov problému ako "**RING_ROLL_LAB4 ** " a uistite sa, že je zapnuté začiarkavacie políčko "Zobraziť dialóg možností" (ak nezapneme začiarkavacie políčko "**Zobraziť dialóg možností ** ", potom nedostaneme dialógové okno Nový projekt v používateľskom rozhraní MO). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) a otvorte nový problém pomocou integrovaného výrobného procesu deformácie.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0001.jpg' | relative_url }})
 
-New Problem definition
+Vymedzenie problému
 
-Multiple operation wizard will open with the New Project dialog, at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session, we will use ‘**RING_ROLLING_LAB4** ’ as the project name. 3D Ring Rolling operation can be added in "New Project" dialog buy turning on First operation check band selecting Ring Rolling operation from the drop down menu (see Fig. RRL4.2.) In this lab, we will add Ring rolling operation from Explorer operation list, so do not check "First operation" check box in "New Project" dialog. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to add the operation.
+V dialógovom okne Nový projekt sa otvorí sprievodca viacerými operáciami, v tomto bode sa používateľovi zobrazí výzva na zadanie názvu projektu (systém vytvorí samostatný priečinok s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „**RING_ROLLING_LAB4 ** “. Operáciu 3D Ring Rolling je možné pridať v dialógovom okne "New Project" zapnutím First operation check band výberom operácie Ring Rolling z rozbaľovacej ponuky (pozri obr. RRL4.2.) V tomto laboratóriu pridáme operáciu valcovania krúžku zo zoznamu operácií prieskumníka, takže nezačiarknite políčko "Prvá operácia" v dialógovom okne "Nový projekt". Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v pridávaní operácie.
 
   
-Add 3D Ring Rolling operation from the Explorer Operations list. Add the operation by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button available next to **3D Ring Rolling** or user can also add by drag and drop into the Operation Editor. When we add the Ring Rolling operation, Process settings page will be opened by default (See Fig. RRL4.3.)
+Pridajte operáciu valcovania 3D prstenca zo zoznamu operácií prieskumníka. Pridajte operáciu kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}), ktoré je k dispozícii vedľa položky **3D Ring Rolling * *, alebo ho môžete pridať aj presunutím myšou do editora operácií. Keď pridáme operáciu valcovania krúžku, predvolene sa otvorí stránka Nastavenia procesu (pozri obr. RRL4.3).
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0002.jpg' | relative_url }})
 
-Adding Ring Rolling operation from New Project window
+Pridanie operácie valcovania krúžku z okna Nový projekt
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0003.jpg' | relative_url }})
 
-Adding Ring Rolling operation from Explorer
+Pridanie operácie valcovania krúžku z Prieskumníka
 
-## Process Page
+## Stránka procesu
 
-In Process page, by default "**Ring rolling (default)** " radio button will be selected (See Fig. RRL4.4.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Simulation setup.
+Na stránke Proces sa predvolene vyberie prepínač „* * Valcovanie krúžku (predvolené) * * “ (pozri obr. RRL4.4.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na nastavenie simulácie.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0004.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-## Simulation Setup
+## Nastavenie simulácie
 
-Select "**Whole part** " 3D model type radio button and keep default Thermal calculation type as "**Constant temperature (isothermal)** " in Simulation setup page as shown in Fig. RRL4.5. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Objects page.
+Vyberte prepínač „**Celá časť** “ typu 3D modelu a ponechajte predvolený typ tepelného výpočtu ako „**Konštantná teplota (izotermická)** “ na stránke nastavenia simulácie, ako je znázornené na obr. RRL4.5. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Objekty.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0005.jpg' | relative_url }})
 
-Simulation model settings in Simulation setup page
+Nastavenia simulačného modelu na stránke Nastavenia simulácie
 
-## Object selection
+Object Selection
 
-In “**Objects** ” page, we will use the current default objects as shown in Fig. RRL4.6. Minimum of 3 objects workpiece (Ring), Pressure roll (mandrel) and driving roll are required to set up a simple ring rolling operation. In this lab, we will not be using any axial roll. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Workpiece - Ring page to define Ring object.
+Na stránke „* * Objekty * * “ použijeme aktuálne predvolené objekty, ako je znázornené na obr. RRL4.6. Na nastavenie jednoduchej operácie valcovania krúžku sú potrebné minimálne 3 predmety obrobku (krúžok), tlakový valec (tŕň) a hnací valec. V tomto laboratóriu nebudeme používať žiadny axiálny valec. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Obrobok - krúžok definujete objekt krúžku.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0006.jpg' | relative_url }})
 
-Objects for ring rolling simulation setup
+Objekty pre nastavenie simulácie valcovania krúžku
 
-## Defining Workpiece-Ring Object 
+## Definovanie krúžkového objektu obrobku
 
-### Defining Workpiece-Ring Object settings
+### Definovanie nastavení objektu krúžku obrobku
 
-In Workpiece-Ring page define the **Object****temperature** as **70** °F as shown in Fig. RRL4.7., Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 2D Cross-section page.
+Na stránke Obrobok-krúžok definujte * * Objekt * *** teplotu * * ako * * 70 * * ° F, ako je znázornené na obr. RRL4.7., Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na 2D prierez.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0007.jpg' | relative_url }})
 
-Workpiece - Ring Object settings
+Obrobok - Nastavenie prstencového objektu
 
-### Defining Workpiece-Ring 2D cross-section
+### Definovanie 2D prierezu krúžku obrobku
 
-To define initial ring shape, click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) link in Workpiece-Ring 2D cross-section page and select **H****ollow cylinder** primitive, define the **Outer radius** as "**8** ", **Inner radius** as "**6** ", **H****eight** as “**2******” and****and**Corners****radius** as**"****0.25"** at all corners as shown in Fig. RRL4.8. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Geometry primitive page and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 2D Mesh page.
+Ak chcete definovať počiatočný tvar krúžku, kliknite na odkaz ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) na stránke 2D prierezu obrobku a vyberte * * H ** * * primitívny, definujte * * vonkajší polomer ** ako „* * 8 **“, * * vnútorný polomer * * ako „* * 6 * * “, * * H * *** osem * * ako „**2* *****“ a****a**rohy****polomer** ako**"**0,25"** vo všetkých rohoch, ako je znázornené na obr. RRL4.8. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte primitívnu stránku Geometria a kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na 2D povrchovú sieť.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0008.jpg' | relative_url }})
 
-Workpiece – Ring 2D cross-section geometry settings
+Obrobok – Nastavenie geometrie 2D prierezu krúžku
 
-### Workpiece-Ring 2D cross section mesh generation
+### Generovanie 2D siete prierezu obrobku
 
-To generate mesh for 2D cross-section, in 2D mesh settings, define **Target number of Elements** as **100** and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button and observe the generated mesh in display window (See Fig. RRL4.9.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 3D Geometry page.
+Ak chcete vygenerovať povrchovú sieť pre 2D prierez, v nastaveniach 2D povrchovej siete definujte **Cieľový počet prvkov** ako * *100 * * a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) a pozorujte vygenerovanú povrchovú sieť v okne displeja (pozri obr. RRL4.9.). Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na 3D geometriu.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0009.jpg' | relative_url }})
 
-Workpiece 2D Mesh settings
+Nastavenia 2D povrchovej siete obrobku
 
-### Generating Workpiece-Ring 3D Geometry
+### Generovanie 3D geometrie krúžku obrobku
 
-In 3D Geometry page, click on ![]({{ '/assets/icons/pre_icons/mo_revolve_from_2d_label.jpg' | relative_url }}) option, use the defaults values in Revolve from 2D page and click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close (See Fig. RRL4.10.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 3D Mesh page.
+Na stránke 3D Geometry kliknite na možnosť ![]({{ '/assets/icons/pre_icons/mo_revolve_from_2d_label.jpg' | relative_url }}), použite predvolené hodnoty v Revolve from 2D page a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) pre zatvorenie (pozri obr. RRL4.10.). Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na 3D povrchovú sieť.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0010.jpg' | relative_url }})
 
-Workpiece 3D geometry and settings
+Geometria a nastavenia 3D obrobku
 
-### Generating Workpiece-Ring 3D Mesh
+### Generovanie 3D krúžku obrobku
 
-In 3D Mesh page, with default value of **200** for "**Number of Revolving sections** " generate 3D mesh by clicking on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Observe the generated 3D Mesh for workpiece as shown in Fig. RRL4.11. If Ring is of non-uniform shape, then user can import the geometry and select Revolve to fit 3D shape to generate non-uniform 3D Ring Mesh. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Material page. 
+Na stránke 3D povrchová sieť s predvolenou hodnotou **200** pre „**Počet otočných sekcií** “ vytvorte 3D povrchovú sieť kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Sledujte vygenerovanú 3D sieť pre obrobok, ako je znázornené na obr. RRL4.11. Ak má krúžok nerovnomerný tvar, používateľ môže importovať geometriu a vybrať položku Otočiť tak, aby sa prispôsobil 3D tvaru, aby sa vygenerovala nerovnomerná 3D krúžková sieť. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Materiál.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0011.jpg' | relative_url }})
 
-Workpiece-Ring 3D Mesh settings and generated mesh
+Nastavenia 3D siete krúžku obrobku a vygenerovanej siete
 
-###  Assign Workpiece-Ring Material
+###  Priradiť materiál krúžku obrobku
 
-In Material page, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) icon and load the **steel** group material "**AISI-1035,COLD[70-400F(20-200C)]** " from material library window. Assign the "**AISI-1035,COLD[70-400F(20-200C)]** " material for Workpiece as shown in Fig. RRL4.12. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Driving Roll object page.
+Na stránke Materiál kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať materiál z knižnice) a načítajte * * oceľ * * skupinový materiál "**AISI-1035,COLD[70-400F (20-200C)]** " z okna knižnice materiálov. Priraďte materiál „**AISI-1035,COLD[70-400F(20-200C)]** “ pre obrobok, ako je znázornené na obr. RRL4.12. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až do stránky objektu Driving Roll.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0012.jpg' | relative_url }})
 
-Workpiece-Ring material definition
+Definícia materiálu obrobku a krúžku
 
-## Defining Driving Roll Object
+## Definovanie objektu Driving Roll
 
-### Driving roll object settings
+### Nastavenia objektu hnacieho valca
 
-Keep the name of “**Driving********Roll** ” unchanged and temperature as **68** °F as shown in Fig. RRL4.13., click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to go to the 2D cross-section geometry page.
+Meno „* * Driving ** * ***** Roll ** “ ponechajte nezmenené a teplotu * * 68 ** ° F, ako je znázornené na obr. RRL4.13., kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdete na stránku geometrie prierezu 2D.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0013.jpg' | relative_url }})
 
-Driving Roll object settings
+Nastavenia objektu Driving Roll
 
-### Defining Driving roll 2D cross-section
+### Definovanie 2D prierezu hnacieho valca
 
-In Driving Roll 2D cross-section page, click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) and select **Hollow** **cylinder** primitive, define the **Outer radius** as "**19** ", **Inner radius** as "**14** " and **H****eight** as “**10** ” as shown in Fig. RRL4.14. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Geometry primitive page and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 3D Geometry page.
+Na stránke 2D prierezu jazdy kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) a vyberte * * Dutý * * ** valec * * primitívny, definujte * * Vonkajší polomer * * ako „* * 19 **“, * * Vnútorný polomer * * ako „* * 14 * *“ a * * H * *** osem * * ako „* * 10 * * “, ako je znázornené na obr. RRL4.14. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte primitívnu stránku Geometria a kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na 3D geometriu.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0014.jpg' | relative_url }})
 
-Driving roll 2D cross section definition
+Definícia 2D prierezu hnacieho valca
 
-### Generating Driving Roll 3D Geometry
+### Generovanie 3D geometrie jazdného valca
 
-In 3D Geometry page, click on ![]({{ '/assets/icons/pre_icons/mo_revolve_from_2d_label.jpg' | relative_url }}) option, use the default value of **100** for "**Number of layers in hoop direction** " in Revolve from 2D page (see Fig. RRL4.15.) and click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Orientation page.
+Na stránke 3D Geometria kliknite na možnosť ![]({{ '/assets/icons/pre_icons/mo_revolve_from_2d_label.jpg' | relative_url }}), použite predvolenú hodnotu **100** pre „**Počet vrstiev v smere obruče ** “ na stránke Otočiť z 2D (pozri obr. RRL4.15.) a zatvorte kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Orientation.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0015.jpg' | relative_url }})
 
-Driving roll 3D geometry and settings
+3D geometria a nastavenia hnacieho valca
 
-### Defining Driving Roll orientation
+### Definovanie orientácie jazdného valca
 
-In Driving Roll orientation page, select "**Set relative distance between object center** " option and define "**Vertical distance (d)** " as **4** in and "Current object center's relative location as "**-Z** " and click on ![]({{ '/assets/icons/pre_icons/mo_apply_orientation_button.jpg' | relative_url }}) to move the Driving Roll by **2.25** in along the Z axis with respect to Ring object center (See Fig. RRL4.16.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Movement page. 
+Na stránke orientácie Driving Roll zvoľte možnosť „**Nastavte relatívnu vzdialenosť medzi stredom objektu ** “ a definujte „**Vertikálna vzdialenosť (d)** “ ako * * 4 * * v a „Relatívna poloha stredu objektu ako „**-Z** “ a kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_orientation_button.jpg' | relative_url }}), aby ste posunuli Driving Roll o ** 2.25 * * pozdĺž osi Z vzhľadom na stred objektu Ring (pozri obr. RRL4.16.). Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Pohyb.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0016.jpg' | relative_url }})
 
-Driving Roll Orientation settings
+Nastavenia orientácie jazdného valca
 
-### Defining Driving roll movement
+### Definovanie pohybu hnacieho valca
 
-Select **Angular velocity** in rotation movement controls for the driving roll and define a constant value **2** rad/sec. Notice a green rotation arrow showing rotational direction in the display window (See Fig. RRL4.17.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Object page of Pressure roll.
+Vyberte **Uhlová rýchlosť** v ovládacích prvkoch rotačného pohybu pre hnací valec a definujte konštantnú hodnotu **2** rad/s. Všimnite si zelenú šípku otáčania zobrazujúcu smer otáčania v okne displeja (pozri obr. RRL4.17.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Objekt v tlakovom valci.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0017.jpg' | relative_url }})
 
-Driving Roll Movement controls
+Ovládacie prvky pohybu hnacieho valca
 
-## Defining Pressure Roll Object 
+## Definovanie objektu tlakového valca
 
-### Defining Pressure Roll Object 
+### Definovanie objektu tlakového valca
 
-Keep the name of "**Pressure Roll** " and temperature as **68** °**F** as shown in Fig. RRL4.18. and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to go to the 2D cross-section page.
+Ponechajte názov „* * Tlakový valec * * “ a teplotu ako * * 68 * * ° * * F * *, ako je znázornené na obr. RRL4.18. a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku prierezu 2D.
 
   
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0018.jpg' | relative_url }})
 
-Pressure Roll object page
+Stránka objektu Pressure Roll
 
-### Defining Pressure roll 2D cross-section Page
+### Definovanie 2D prierezu valca tlaku Strana
 
-In Pressure Roll 2D Geometry page, click on ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) and define the co-ordinates data as shown in below Table and Fig. RRL4.19. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the Edit Window and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to 3D Geometry page.
+Na stránke Pressure Roll 2D Geometry kliknite na ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) a definujte údaje súradníc, ako je znázornené nižšie v tabuľke a na obr. RRL4.19. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) zatvorte okno úprav a kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na 3D geometriu.
 
-**X** |  **Y** |  **R**  
----|---|---  
-0 |  0 |  0  
-2 |  0 |  0  
-2 |  4.5 |  0  
-2.25 |  4.75 |  0.25  
-2.25 |  5.25 |  0.25  
-2 |  5.5 |  0  
-2 |  10 |  0  
-0 |  10 |  0  
-0 |  0 |  0  
+**X** |  **Y** |  **R**
+---|---|---
+0 |  0 |  0
+2 0
+2 (4,5 %)
+2,25 |  4,75 |  0,25
+2,25 |  5,25 |  0,25
+2 |  5,5 |  0
+2/ 10
+0-10
+0 |  0 |  0
   
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0020.jpg' | relative_url }})
 
-Pressure Roll Geometry definition
+Definícia geometrie valca tlaku
 
-### Generating Pressure Roll 3D Geometry Page
+### Stránka Generovanie 3D geometrie tlakového kotúča
 
-In 3D Geometry page, click on ![]({{ '/assets/icons/pre_icons/mo_revolve_from_2d_label.jpg' | relative_url }}) option, Use the default value of **100** for "**Number of layers in hoop direction** " in Revolve from 2D page (See Fig. RRL4.20.) and click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Orientation page.
+Na stránke 3D Geometria kliknite na možnosť ![]({{ '/assets/icons/pre_icons/mo_revolve_from_2d_label.jpg' | relative_url }}), Použite predvolenú hodnotu **100** pre „**Počet vrstiev v smere obruče ** “ na stránke Otočiť z 2D (pozri obr. RRL4.20.) a zatvorte kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}). Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Orientation.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0021.jpg' | relative_url }})
 
-Pressure roll 3D geometry and settings
+3D geometria a nastavenia tlakového valca
 
-### Defining Pressure Roll orientation
+### Definovanie orientácie tlakového valca
 
-Select "**Set relative distance between object centers** " option and define " **Vertical distance (d)** " as **4** in and "**Current object center's relative location** " as "**-Z** ", click on ![]({{ '/assets/icons/pre_icons/mo_apply_orientation_button.jpg' | relative_url }}) to move the Pressure Roll down along **Z** axis by **4.5** in (See Fig. RRL4.21.) in Pressure Roll Orientation page. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Movement page.
+Vyberte možnosť „**Nastaviť relatívnu vzdialenosť medzi stredmi objektov ** “ a definujte „ **Vertikálna vzdialenosť (d)* *“ ako * * 4 * * v a „* * Relatívna poloha stredu aktuálneho objektu ** “ ako „** -Z * * “, kliknutím na ![]({{ '/assets/icons/pre_icons/mo_apply_orientation_button.jpg' | relative_url }}) posuniete rolovanie tlaku nadol pozdĺž osi ** Z * * o *4,5** v (pozri obr. RRL4.21.) na stránke Orientácia tlakového kotúča. Kliknite na stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Movement.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0022.jpg' | relative_url }})
 
-Pressure Roll Orientation settings
+Nastavenia orientácie tlakového valca
 
-### Defining Pressure roll movement
+### Definovanie pohybu tlakového valca
 
-We will define Pressure Roll movement as "Constant" “**Speed** ” of “**0.01** in/sec” as shown in Fig. RRL4.22. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Contact page.
+Pohyb tlakového valca definujeme ako „konštantný“ „* * rýchlosť * * “ „* * 0,01 * * v/s“, ako je znázornené na obr. RRL4.22. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) až po stránku Kontakt.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0023.jpg' | relative_url }})
 
-Pressure Roll movement controls
+Ovládacie prvky pohybu tlakového valca
 
-## Contact Page
+Kontakty
 
-In Contact page, use the default shear friction value of**0.7** and click on ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) to generate contacts between driving roll and the workpiece as well as between pressure roll and the workpiece (See Fig. RRL4.23.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Stopping controls page.
+Na stránke Kontakt použite predvolenú hodnotu šmykového trenia **0,7** a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) vytvorte kontakty medzi hnacím valcom a obrobkom, ako aj medzi tlakovým valcom a obrobkom (pozri obr. RRL4.23.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na stránku Zastavenie ovládacích prvkov.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0024.jpg' | relative_url }})
 
-Inter-object relation settings 
+Nastavenia vzťahu medzi objektmi
 
-## Defining Stopping Controls
+## Definovanie ovládacích prvkov zastavenia
 
-Define **process****duration** as **10** sec as shown in Fig. RRL4.24. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Step and remeshing control page. 
+Definujte **proces****trvanie** ako **10** s, ako je znázornené na obr. RRL4.24. Kliknite na ovládaciu stránku ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Step and remeshing.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0025.jpg' | relative_url }})
 
-Stopping controls
+Ovládacie prvky zastavenia
 
-## Defining Step and remeshing controls Page
+## Definovanie krokov a prepracovanie ovládacích prvkov Strana
 
-Keep **Number of steps** as **10000** and define **Rotation** increment to save as **90** and Max allowed time step as 0.01. Keep "Remeshing control” as “5 revolutions(s)” as shown in Fig. RRL4.25. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Generate DB.
+Ponechajte **Počet krokov** ako **10000** a definujte prírastok **Rotácie** na uloženie ako **90** a maximálny povolený časový krok ako 0,01. Ponechajte „Remeshing control“ ako „5 otáčok“, ako je znázornené na obr. RRL4.25. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým nevytvoríte DB.
 
   
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0026.jpg' | relative_url }})
 
-Step and remeshing controls
+Ovládacie prvky kroku a úpravy
 
-## Generate Database
+Všeobecné
 
-In Generate DB page, click on the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button to generate the database. Observe the message in Message tab informing database generation status.
+Na stránke Generate DB kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) a vygenerujte databázu. Sledujte správu na karte Správa, ktorá informuje o stave generovania databázy.
 
-## Running Simulation
+## Simulácia behu
 
-Once the database has been generated, switch to the Simulation mode by selecting the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the object tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. RRL4.26. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po vygenerovaní databázy prepnite do režimu simulácie výberom tlačidla ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom objektov. Kliknutím na štítok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvorte dialógové okno Možnosti točenia, ako je znázornené na obr. RRL4.26. Pomocou predvolenej možnosti **Pokračovať v spustení * * vyberte možnosť „**Pokračovať z posledného kroku** “ a potom vyberte režim simulácie ako **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0027.jpg' | relative_url }})
 
-Run Simulation settings
+Spustiť nastavenia simulácie
 
   
-Monitor the progress of the simulation by looking at the Simulation Message and Simulation Log tab, make sure that the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked. User can view the Ring Rolling process as the simulation proceeds to the specified stopping criteria from Simulation graphics.
+Sledujte priebeh simulácie tak, že sa pozriete na kartu Simulačná správa a Simulačný protokol, uistite sa, že je začiarknutá možnosť ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}). Používateľ môže zobraziť proces valcovania krúžku, keď simulácia pokračuje podľa zadaných kritérií zastavenia z grafiky simulácie.
 
-## Post Processing
+Postprocessing
 
-When the simulation is completed with ‘normal stop’, review the results by switching to Post mode using the ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) button above the Simulation tool bar.  
-Play through the steps of the simulation and look how the Workpiece-Ring is formed.  
+Po dokončení simulácie s „normálnym zastavením“ skontrolujte výsledky prepnutím do režimu Post pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) nad panelom nástrojov simulácie.
+Prehrajte si kroky simulácie a pozrite sa, ako sa tvorí krúžok obrobku.
   
-Click on ![]({{ '/assets/icons/pre_icons/mo_show_single_obj_icon.jpg' | relative_url }}) Single object mode by selecting Workpiece-Ring and plot Effective Strain of the Workpiece-Ring. When we play through the steps, we can observe the increase in strain value. The Effective Stress value at the end of the simulation should look like as shown in Fig. RRL4.27.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_show_single_obj_icon.jpg' | relative_url }}) Režim jedného objektu výberom krúžku obrobku a vykreslením efektívneho namáhania krúžku obrobku. Pri prehrávaní krokov môžeme pozorovať nárast hodnoty napätia. Hodnota efektívneho napätia na konci simulácie by mala vyzerať tak, ako je znázornené na obr. RRL4.27.
 
 ![]({{ '/assets/images/labs/ring_rolling_labs/ring_rolling_lab4/image0028.jpg' | relative_url }})
 
-Effective strain at the end of simulation
+Efektívne namáhanie na konci simulácie

@@ -1,258 +1,258 @@
 ---
 lang: sk
-title: "2D Inverse Heat Lab1"
+title: "2D inverzná tepelná analýza – laboratórna práca č. 1"
 ---
 
-# 2D Inverse Heat Lab1
+# 2D inverzná tepelná analýza – laboratórna úloha č. 1
 
-**Problem Summary:**
+**Zhrnutie problému:**
 
-This lab will demonstrate how to use the Inverse Heat Transfer Wizard to determine heat transfer coefficients between workpiece and media during a heat transfer process. Temperature measurement data is needed. Heat transfer coefficients can be function of temperature or time. Multiple zones of heat-transfer coefficients are assigned to the workpiece.
+V tomto laboratórnom cvičení si ukážeme, ako pomocou sprievodcu „Inverse Heat Transfer Wizard“ určiť koeficienty prenosu tepla medzi obrobkom a médiom počas procesu prenosu tepla. Na to sú potrebné údaje z merania teploty. Koeficienty prenosu tepla môžu byť funkciou teploty alebo času. Obrobku sa priradia viaceré zóny s rôznymi koeficientmi prenosu tepla.
 
-1.1. Starting a new problem
+1.1. Vytvorenie novej úlohy
 
-1.2. Set Geometry type and mode
+1.2. Nastavenie typu a režimu geometrie
 
-1.3. Setting Process Conditions
+1.3. Nastavenie prevádzkových podmienok
 
-1.4. Defining Material
+1.4. Definícia materiálu
 
-1.5. Defining Workpiece Object
+1.5. Definovanie objektu obrobku
 
-1.6. Import geometry
+1.6. Import geometrie
 
-1.7. Generate mesh
+1.7. Vytvorenie siete
 
-1.8. Assigning Material
+1.8. Priradenie materiálu
 
-1.9. Generating Structured Mesh
+1.9. Vytvorenie štruktúrovanej siete
 
-1.10. BCC Definition
+1.10. Definícia BCC
 
-1.11. Temperature Measurement Points
+1.11. Meracie body teploty
 
-1.12. Defining Time Zones
+1.12. Definovanie časových pásiem
 
-1.13. HT Zone Partitioning
+1.13. Rozdelenie zón HT
 
-1.14. Defining Heat Transfer Zones
+1.14. Vymedzenie zón prenosu tepla
 
-1.15. Defining Step controls
+1.15. Definovanie ovládacích prvkov krokov
 
-1.16. Optimization control
+1.16. Optimalizačné riadenie
 
-1.17. Database Generation
+1.17. Vytvorenie databázy
 
-1.18. Optimization
+1.18. Optimalizácia
 
-1.19. Optimization results
+1.19. Výsledky optimalizácie
 
-## Starting a new problem
+## Vytvorenie novej úlohy
 
-Start a new Inverse Heat Transfer Wizard problem with problem ID **SIMPLE_INVHEAT**. You can do so by clicking the ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) button and choose “**2D Inverse Heat** ”, enter Problem name as "**SIMPLE_INVHEAT** " and choose “**English** ” for "Unit System" (see Fig. 2DINVL1.1.). You can select the directory under Location field and then click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) on to open Inverse Heat wizard.
+Spustite nový problém v Sprievodcovi inverzným prenosom tepla s ID problému **SIMPLE_INVHEAT**. To môžete urobiť kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) a výberom možnosti „**2D inverzný prenos tepla**“, zadajte názov úlohy ako „**SIMPLE_INVHEAT**“ a v poli „Systém jednotiek“ vyberte možnosť „**English**“ v položke „Unit System“ (pozri obr. 2DINVL1.1.). V poli „Location“ môžete vybrať adresár a potom kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) otvoriť sprievodcu inverzným prenosom tepla.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0001.jpg' | relative_url }})
 
-Problem Setup window
+Okno „Nastavenie problému“
 
-## Set Geometry type and mode
+## Nastavenie typu a režimu geometrie
 
-As the 2D Inverse Heat wizard opens, you should see a window as shown in Fig. 2DINVL1.2. Set “**Geometry****Type** ” as “**Axisymmetric** ”. If user is interested in calculating transformations or atom content due to diffusion then user can turn on respective check boxes under “**Mode** ” tab. In this lab we will not turn on any check box as we will be calculating only heat transfer co-efficients. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Po otvorení sprievodcu 2D Inverse Heat by sa malo zobraziť okno, ako je znázornené na obr. 2DINVL1.2. Nastavte „**Geometry****Type**“ na „**Axisymmetric**“. Ak má používateľ záujem o výpočet transformácií alebo obsahu atómov v dôsledku difúzie, môže zaškrtnúť príslušné políčka na karte „**Mode**“. V tomto laboratórnom cvičení nebudeme zaškrtávať žiadne políčka, pretože budeme počítať iba koeficienty prenosu tepla. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0002.jpg' | relative_url }})
 
-Initialization Window
+Okno inicializácie
 
-## Setting Process Conditions
+## Nastavenie podmienok procesu
 
-In this page user can set the environment conditions. If the process involves Quenching and heat transfer then respective check boxes can be turned on to define the environment conditions. Our process involves only heat transfer and environment temperature is constant, hence turn on “**Transfer** ” check box and define environment temperature as 68°F (see Fig. 2DINVL1.3.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na tejto stránke môže používateľ nastaviť podmienky prostredia. Ak proces zahŕňa kalenie a prenos tepla, je možné zaškrtnúť príslušné políčka a definovať tak podmienky prostredia. Náš proces zahŕňa iba prenos tepla a teplota prostredia je konštantná, preto zaškrtnite políčko „**Prenos**“ a nastavte teplotu prostredia na 68 °F (pozri obr. 2DINVL1.3.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0003.jpg' | relative_url }})
 
-Setting up Process conditions
+Nastavenie podmienok procesu
 
-## Defining Material
+## Definícia materiálu
 
-In page “Material list”, click on ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}) button to create a new material and rename the material to “**Simple** ” by clicking on the added “New Material” (see Fig. 2DINVL1.4.). Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define material properties.
+Na stránke „Zoznam materiálov“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_icon2.jpg' | relative_url }}), aby ste vytvorili nový materiál, a premenujte ho na „**Simple**“ kliknutím na pridanú položku „Nový materiál“ (pozri obr. 2DINVL1.4.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali vlastnosti materiálu.
 
-Select **Thermal** tab and enter**0.1** for **Thermal****Conductivity** , **0.2** for **Heat****Capacity** , and **0.3** for **Emissivity** as constant values as shown in Fig. 2DINVL1.5. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until “Workpiece” page.
+Vyberte kartu **Tepelné vlastnosti** a zadajte hodnotu **0,1** pre **Tepelná******tepelnej vodivosti**, **0,2** pre **tepelnú kapacitu** a **0,3** pre **emissivitu** ako konštantné hodnoty, ako je znázornené na obr. 2DINVL1.5. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Workpiece“.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0004.jpg' | relative_url }})
 
-Creating New Material
+Vytvorenie nového materiálu
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0005.jpg' | relative_url }})
 
-Defining Thermal Material properties
+Definovanie tepelných vlastností materiálov
 
-## Defining Workpiece Object
+## Definovanie objektu obrobku
 
-In workpiece page define Object Temp. as **600** °F as shown in Fig. 2DINVL1.6. Make sure the object type is **Plastic** and Primary Die check box is checked. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to geometry page.
+Na stránke obrobku nastavte teplotu objektu na **600** °F, ako je znázornené na obr. 2DINVL1.6. Uistite sa, že typ objektu je **Plast** a že je zaškrtnuté políčko Primárna forma. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku geometrie.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0006.jpg' | relative_url }})
 
-Workpiece Object Definition
+Definícia objektu obrobku
 
-## Import geometry
+## Import geometrie
 
-In “Geometry” page, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) icon and import geometry file “**SIMPLE_INVHEAT.IGS** ” from ‘/2D/LABS’ directory as shown in Fig. 2DINVL1.7.By default “Show geometry inside mark” check box will be Turned on if not Turned on the check box and click on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) label to check and correct the geometry, see Fig. 2DINVL1.7.
+Na stránke „Geometria“ kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) a importujte súbor s geometriou „**SIMPLE_INVHEAT.IGS**“ z adresára „/2D/LABS“, ako je znázornené na obr. 2DINVL1.7.V predvolenom nastavení bude zaškrtnuté políčko „Zobraziť geometriu vnútri značky“. Ak nie je zaškrtnuté, odškrtnite ho a kliknite na popisok ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), aby ste skontrolovali a opravili geometriu, pozri obr. 2DINVL1.7.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0007.jpg' | relative_url }})
 
-Geometry window
+Okno Geometria
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) and then click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button to geometry correction pop-up and then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button to come out of Geometry Correction page, see Fig. 2DINVL1.8. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to mesh page.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) a potom na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), čím sa otvorí okno na korekciu geometrie, a následne kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), čím opustíte stránku korekcie geometrie (pozri obr. 2DINVL1.8). Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku vytvárania siete.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0008.jpg' | relative_url }})
 
-Check and Correct Geometry window
+Okno „Skontroluj a oprav geometriu“
 
-## Generate mesh
+## Vytvoriť sieť
 
-While user is in “Mesh” page, expert mode can be used to access the advanced mesh options. Click on ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) icon in tool bar to change to expert mode and then enter **100** as target number of elements in “**General** ” tab for unstructured mesh, see Fig. 2DINVL1.9. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to Material page to assign material.
+Keď sa používateľ nachádza na stránke „Mesh“, môže využiť expertný režim na prístup k pokročilým nastaveniam siete. Kliknutím na ikonu ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) na paneli nástrojov prejdite do expertného režimu a potom na karte „**Všeobecné**“ zadajte **100** ako cieľový počet prvkov pre nestruktúrovanú sieť, pozri obr. 2DINVL1.9. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a prejdite na stránku „Material“ (Materiál), kde môžete priradiť materiál.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0009.jpg' | relative_url }})
 
-Defining unstructured mesh
+Definovanie nestruktúrovanej siete
 
-## Assigning Material
+## Priradenie materiálu
 
-Select material “**Simple** ” from the material list to assign to workpiece as shown in Fig. 2DINVL1.10.
+Zoznamu materiálov vyberte materiál „**Simple**“, ktorý chcete priradiť k obrobku, ako je znázornené na obr. 2DINVL1.10.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0010.jpg' | relative_url }})
 
-Assigning Material
+Priradenie materiálu
 
-## Generating Structured Mesh
+## Vytvorenie štruktúrovanej siete
 
-The structured surface mesh helps provide better thermal solution accuracy with less computing time. Hence click ![]({{ '/assets/icons/pre_icons/mo_back_button.jpg' | relative_url }}) from Material page. We will use 2 layers of structured surface mesh using coating mesh with thickness of **381****Microns** and **762****microns** for layer 1 and 2 respectively with “**Simple** ” material and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button as shown in Fig. 2DINVL1.11. Do not use “Generate Coating” button. Click ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) button for the pop-up “Do you want generate coating mesh?”. After generating mesh Zoom into the top right corner and check generated mesh for structured layers. Meshed object looks as shown in Fig. 2DINVL1.12. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until BCC page.
+Štruktúrovaná povrchová sieť prispieva k vyššej presnosti tepelného výpočtu pri kratšom výpočtovom čase. Preto na stránke „Materiál“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_back_button.jpg' | relative_url }}). Použijeme 2 vrstvy štruktúrovanej povrchovej siete s použitím povlakovej siete s hrúbkou **381****mikrónov** a **762****mikrónov** pre vrstvu 1, resp. 2 s materiálom „**Simple**“ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}), ako je znázornené na obr. 2DINVL1.11. Nepoužívajte tlačidlo „Generate Coating“. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) v kontextovom okne „Chcete vygenerovať sieť povlaku?“. Po vygenerovaní siete zväčšite zobrazenie pravého horného rohu a skontrolujte vygenerovanú sieť pre štruktúrované vrstvy. Objekt so sieťou vyzerá tak, ako je znázornené na obr. 2DINVL1.12. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka BCC.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0011.jpg' | relative_url }})
 
-Structured mesh generation using Coating mesh
+Vytváranie štruktúrovanej siete pomocou metódy „Coating mesh“
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0012.jpg' | relative_url }})
 
-Meshed Workpiece After Generating Structured Mesh
+Objekt so sieťou po vytvorení štruktúrovanej siete
 
-## BCC Definition
+## Definícia pojmu BCC
 
-By default “Heat Exchange with Environment” BCC and Axi-symmetric BCC (Vx = 0) are assigned to workpiece and these can be verified by selecting the respective BCC from the BCC tree. Select “Defined” under “Heat Exchange with Environment” BCC and then click ![]({{ '/assets/icons/pre_icons/mo_delete_bcc_button.jpg' | relative_url }}) on button to delete default BCC. Now to define “Heat Exchange with Environment” BCC, select right edge and top edge of the workpiece and then click on ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) button, assigned BCC are as shown in Fig. 2DINVL1.13. To define Symmetry on bottom edge select “Velocity” under “Deformation” BCC, then select direction as Y, make sure velocity value is zero and then select bottom edge and then click on ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) button, defined BCC are as shown in Fig. 2DINVL1.14. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until “Temperature Measurement Points” page.
+Štandardne sú obrobku priradené BCC „Výmena tepla s okolím“ a osovo symetrické BCC (Vx = 0), čo je možné overiť výberom príslušného BCC zo stromu BCC. V položke „Výmena tepla s okolím“ vyberte BCC „Definované“ a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_bcc_button.jpg' | relative_url }}), čím odstránite predvolené BCC. Teraz na definovanie BCC „Výmena tepla s prostredím“ vyberte pravý okraj a horný okraj obrobku a potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}); priradené BCC sú zobrazené na obr. 2DINVL1.13. Na definovanie symetrie na spodnom okraji vyberte „Rýchlosť“ pod BCC „Deformácia“, potom vyberte smer Y, uistite sa, že hodnota rýchlosti je nula, a potom vyberte spodný okraj a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}); definované BCC sú zobrazené na obr. 2DINVL1.14. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až sa zobrazí stránka „Body merania teploty“.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0013.jpg' | relative_url }})
 
-Defined Heat Exchange with Environment BCC
+Definovaná výmena tepla s okolím (BCC)
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0014.jpg' | relative_url }})
 
-Defined Symmetry Bcc
+Definovaná symetria Bcc
 
-## Temperature Measurement Points
+## Meracie body teploty
 
-In “Temperature Measurement Points” page, click ![]({{ '/assets/icons/pre_icons/mo_insert_row_icon.jpg' | relative_url }}) button three times and input coordinates (**0.6, 1.0**), (**1.5, 0.5**), and (**0.0, 0.0**) in the table for point 1, 2, and 3, respectively as shown in Fig. 2DINVL1.15. Thermal history data for each point can be defined by clicking on the ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_define_button.jpg' | relative_url }}) button in the last column of the table. Click on Load and load “SIMPLE_INVHEAT_P1_Thermal_History.DAT” file for point 1 from the /Labs folder and click button (see Fig. 2DINVL1.16.), similarly load SIMPLE_INVHEAT_P2_Thermal_History.DAT and SIMPLE_INVHEAT_P3_Thermal_History.DAT for point 2 and 3 respectively. “Define” button in the last column of the table will change into ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_edit_button.jpg' | relative_url }}) after you had defined the Thermal History Data for the point. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) .
+Na stránke „Body merania teploty“ trikrát kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_insert_row_icon.jpg' | relative_url }}) a zadajte súradnice (**0,6; 1,0**), (**1,5; 0,5**) a (**0,0, 0,0**) do tabuľky pre body 1, 2 a 3, ako je znázornené na obr. 2DINVL1.15. Údaje o teplotnom priebehu pre každý bod je možné definovať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_define_button.jpg' | relative_url }}) v poslednom stĺpci tabuľky. Kliknite na tlačidlo Načítať a načítajte súbor „SIMPLE_INVHEAT_P1_Thermal_History.DAT“ pre bod 1 zo zložky /Labs a kliknite na tlačidlo (pozri obr. 2DINVL1.16.), podobne načítajte súbory SIMPLE_INVHEAT_P2_Thermal_History.DAT a SIMPLE_INVHEAT_P3_Thermal_History.DAT pre bod 2, resp. 3. Tlačidlo „Define“ v poslednom stĺpci tabuľky sa po definovaní údajov o tepelnej histórii pre daný bod zmení na ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_edit_button.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0015.jpg' | relative_url }})
 
-Temperature measurement Points page
+Stránka „Body merania teploty“
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0016.jpg' | relative_url }})
 
-Thermal History Data window for Point 1
+Okno s údajmi o teplotnom vývoji pre bod 1
 
-## Defining Time Zones
+## Definovanie časových pásiem
 
-In time zones page user can define time zones for Quenching and Transfer. Since in this lab we had opted to simulate only transfer, only Transfer time zone definition is available. We would like to simulate the process for 10 sec as the last point of temperature measurement is available from thermal history is at 10 sec. So enter Start time as 0sec and End time as 10 sec. Thermal History graph of all the points within the specified time can be seen in display area, see Fig. 2DINVL1.17. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Časové zóny“ môže používateľ definovať časové zóny pre ochladzovanie a presun. Keďže sme sa v tomto laboratórnom cvičení rozhodli simulovať iba presun, je k dispozícii iba definícia časovej zóny pre presun. Chceme simulovať proces trvajúci 10 sekúnd, keďže posledný bod merania teploty, ktorý je k dispozícii z tepelnej histórie, sa nachádza v čase 10 sekúnd. Zadajte teda čas začiatku ako 0 sekúnd a čas konca ako 10 sekúnd. Graf tepelnej histórie všetkých bodov v rámci zadaného času je viditeľný v zobrazovacej oblasti, pozri obr. 2DINVL1.17. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0017.jpg' | relative_url }})
 
-Transfer Time Definition in Time Zone page
+Definícia času prenosu na stránke „Časové pásmo“
 
-## HT Zone Partitioning
+## Rozdelenie zóny HT
 
-In page “HT Zone Partioning” we can see that system has automatically generated zones based upon temperature points defined, Turn on “Display Zone” check box to verify the zones created. We can see that these zones are created without considering the symmetry on bottom edge and also the zones start and end points are on the edges hence we will redefine the partitioning so that we can delete unwanted zones. We will delete the already defined zones using “Delete All” button. By default entire outer surface edges will be considered as one zone. After deleting points, we will select three points in anti-clock wise, bottom right corner, top right corner and top left corner as shown in Fig. 2DINVL1.18. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_zone_button.jpg' | relative_url }}) to generate zones. Zones are created between the pair of points selected, see Fig. 2DINVL1.18. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „HT Zone Partitioning“ vidíme, že systém automaticky vygeneroval zóny na základe definovaných teplotných bodov. Zaškrtnite políčko „Display Zone“, aby ste si overili vytvorené zóny. Vidíme, že tieto zóny boli vytvorené bez zohľadnenia symetrie na spodnom okraji a že počiatočné a koncové body zón sa nachádzajú na okrajoch, preto predefinujeme rozdelenie tak, aby sme mohli odstrániť nepotrebné zóny. Už definované zóny odstránime pomocou tlačidla „Delete All“. Predvolene sa celé okraje vonkajšej plochy považujú za jednu zónu. Po odstránení bodov vyberieme tri body proti smeru hodinových ručičiek: pravý dolný roh, pravý horný roh a ľavý horný roh, ako je znázornené na obr. 2DINVL1.18. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_zone_button.jpg' | relative_url }}) na vytvorenie zón. Zóny sa vytvoria medzi vybranými dvojicami bodov, pozri obr. 2DINVL1.18. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0018.jpg' | relative_url }})
 
-HT Zone Partitioning window
+Okno na rozdelenie zón HT
 
-## Defining Heat Transfer Zones
+## Vymedzenie zón prenosu tepla
 
-In “Heat Transfer Zones” page, we can see that 3 zones are created, Zone #1 covering the right edge, Zone #2 covering the Top edge and Zone #3 covering the bottom symmetry edge. We do not require Zone #3, hence select Zone #3 and click on ![]({{ '/assets/icons/pre_icons/mo_delete_htz_button.jpg' | relative_url }}) button as shown in Fig. 2DINVL1.19.
+Na stránke „Zóny prenosu tepla“ vidíme, že sú vytvorené 3 zóny: zóna č. 1 pokrýva pravý okraj, zóna č. 2 pokrýva horný okraj a zóna č. 3 pokrýva spodný symetrický okraj. Zóna č. 3 nie je potrebná, preto ju vyberieme a klikneme na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_htz_button.jpg' | relative_url }}), ako je znázornené na obr. 2DINVL1.19.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0019.jpg' | relative_url }})
 
-Deleting Unwanted Zone #3
+Odstránenie nežiaducej zóny č. 3
 
-After deleting unwanted Zone #3, click on ![]({{ '/assets/icons/pre_icons/mo_iniitialize_htc_button.jpg' | relative_url }}) button to define control points and limits, make sure HTC function is based on temperature. By default system will add some control points, we will delete them for this lab and use four points. Click on ![]({{ '/assets/icons/pre_icons/mo_delete_all_button2.jpg' | relative_url }}) button and delete all rows except 4 rows and then enter four values **300** , **400** , **500** and **600** , see Fig. 2DINVL1.20. Make sure interpolation method is Linear and initial guess, lower and upper bounds are fine. Click on![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) button, Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close Initializing Window.
+Po odstránení nepotrebnej zóny č. 3 kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_iniitialize_htc_button.jpg' | relative_url }}), aby ste definovali regulačné body a limity; uistite sa, že funkcia HTC je založená na teplote. Systém štandardne pridá niekoľko regulačných bodov; pre účely tohto cvičenia ich odstránime a použijeme štyri body. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_delete_all_button2.jpg' | relative_url }}) a odstráňte všetky riadky okrem 4 riadkov a potom zadajte štyri hodnoty **300**, **400**, **500** a **600**, pozri obr. 2DINVL1.20. Uistite sa, že metóda interpolácie je Lineárna a počiatočný odhad, dolná a horná hranica sú v poriadku. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}), kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste zatvorili okno inicializácie.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0020.jpg' | relative_url }})
 
-Deleting Unwanted Zone #3
+Odstránenie nežiaducej zóny č. 3
 
-Control points and limits settings can be set for each zone separately using ![]({{ '/assets/icons/pre_icons/mo_edit..._button.jpg' | relative_url }}) button next Zone in “Heat Transfer Zones” page, see Fig. 2DINVL1.20. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until “Step” page.
+Nastavenia kontrolných bodov a limitov je možné nastaviť pre každú zónu samostatne pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_edit..._button.jpg' | relative_url }}) vedľa položky „Zone“ na stránke „Heat Transfer Zones“ (Zóny prenosu tepla), pozri obr. 2DINVL1.20. Klikajte na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Step“ (Krok).
 
-## Defining Step controls
+## Definovanie ovládacích prvkov krokov
 
-In “Step” page, change “Temperature change per step” to **5.0** and leave other values to defaults as shown in Fig. 2DINVL1. 21. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Step“ zmeňte hodnotu „Zmena teploty na jeden krok“ na **5,0** a ostatné hodnoty ponechajte na predvolených hodnotách, ako je znázornené na obr. 2DINVL1. 21. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0021.jpg' | relative_url }})
 
-Defining Step controls
+Definovanie ovládacích prvkov krokov
 
-## Optimization control
+## Optimalizačné riadenie
 
-In “Optimization Control” page as shown in Fig. 2DINVL1.22., all default settings are fine, so click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Optimization Control“, ako je znázornené na obr. 2DINVL1.22., sú všetky predvolené nastavenia v poriadku, preto kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0022.jpg' | relative_url }})
 
-Optimization control window
+Okno riadenia optimalizácie
 
-## Database Generation
+## Vytvorenie databázy
 
-In DB Generation page click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) to verify the set up for errors and warnings, you should see a message “Data Valid!” if there are no errors. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) to generate Database.
+Na stránke „DB Generation“ kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali nastavenie z hľadiska chýb a varovaní. Ak nie sú žiadne chyby, mala by sa zobraziť správa „Data Valid!“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vygenerovali databázu.
 
-## Optimization
+## Optimalizácia
 
-After Database is generated switch to ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab above the object tree and click on ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) to start the optimization, see Fig. 2DINVL1.23. You can see a message “MULTIPLE OPERATION COMPLETED.” at the end of Simulation Log file after optimization is completed.
+Po vytvorení databázy prejdite na kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom objektov a kliknutím na ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) spustite optimalizáciu, pozri obr. 2DINVL1.23. Po dokončení optimalizácie sa na konci súboru protokolu simulácie zobrazí správa „MULTIPLE OPERATION COMPLETED.“.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0023.jpg' | relative_url }})
 
-Running Optimization
+Optimalizácia behu
 
-## Optimization results
+## Výsledky optimalizácie
 
-To view optimization results switch to Post mode by clicking on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) tab. In Tools” page under “Tools” you can see two icons (see Fig. 2DINVL1.24.),
+Ak chcete zobraziť výsledky optimalizácie, prepnite do režimu „Post“ kliknutím na kartu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}). Na stránke „Nástroje“ v časti „Nástroje“ uvidíte dve ikony (pozri obr. 2DINVL1.24.),
 
-![]({{ '/assets/icons/pre_icons/mo_inverse_heat_optimal_htc.jpg' | relative_url }}) ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) To view Optimized HTC values.
+![]({{ '/assets/icons/pre_icons/mo_inverse_heat_optimal_htc.jpg' | relative_url }}) ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Zobrazenie optimalizovaných hodnôt HTC.
 
-![]({{ '/assets/icons/pre_icons/mo_inverse_heat_local_objective_button.jpg' | relative_url }}) ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) To view simulated temperature values at Temperature Measurement Points.
+![]({{ '/assets/icons/pre_icons/mo_inverse_heat_local_objective_button.jpg' | relative_url }}) ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Zobrazenie simulovaných hodnôt teploty v bodoch merania teploty.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0024.jpg' | relative_url }})
 
-Post Tools to view Optimization Results
+Nástroje príspevku na zobrazenie výsledkov optimalizácie
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_optimal_htc.jpg' | relative_url }}) to view optimized HTC values for each zone, a Heat Transfer Zone window will open as shown in Fig. 2DINVL1.25. Select each zone and click on ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_view_thermal_icon.jpg' | relative_url }}) to view optimized HTC values, see Fig. 2DINVL1.26. for Zone #1 optimized HTC values.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_optimal_htc.jpg' | relative_url }}) zobrazíte optimalizované hodnoty HTC pre každú zónu; otvorí sa okno „Heat Transfer Zone“ (Zóna prenosu tepla), ako je znázornené na obr. 2DINVL1.25. Vyberte každú zónu a kliknite na ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_view_thermal_icon.jpg' | relative_url }}), aby ste si prezreli optimalizované hodnoty HTC; optimalizované hodnoty HTC pre zónu č. 1 nájdete na obr. 2DINVL1.26.
 
-![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) can be used to view objective value history, see Fig. 2DINVL1.27.
+Pomocou ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) je možné zobraziť históriu objektívnych hodnôt, pozri obr. 2DINVL1.27.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0025.jpg' | relative_url }})
 
-Heat Transfer Zones Window in Post Tab
+Okno „Zóny prenosu tepla“ na karte „Príspevok“
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0026.jpg' | relative_url }})
 
-Optimized HTC values for Zone #1
+Optimalizované hodnoty HTC pre zónu č. 1
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0027.jpg' | relative_url }})
 
-Objective Value History
+Cieľ Hodnota História
 
-The local objective optimization result can be viewed using ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_local_objective_button.jpg' | relative_url }}), it gives the comparison between the experimental temperature and the simulated temperature values when the optimized heat transfer coefficient values are used. These values can be saved if necessary using ![]({{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}) button (see Fig. 2DINVL1.28.). User can select a point (See Figure 28) and click on ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_view_thermal_icon.jpg' | relative_url }}) to plot the comparison between the experimental temperature and the simulated temperature values or ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_view_all_button.jpg' | relative_url }}) to plot for all values, Fig. 2DINVL1.29. shows the comparison between the experimental temperature and the simulated temperature values for Point 1.
+Výsledok lokálnej optimalizácie je možné zobraziť pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_local_objective_button.jpg' | relative_url }}); poskytuje porovnanie medzi experimentálnymi a simulovanými hodnotami teploty pri použití optimalizovaných hodnôt koeficientu prenosu tepla. Tieto hodnoty je možné v prípade potreby uložiť pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_save_icon.jpg' | relative_url }}) (pozri obr. 2DINVL1.28.). Používateľ môže vybrať bod (pozri obr. 28) a kliknúť na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_view_thermal_icon.jpg' | relative_url }}), aby sa zobrazil graf porovnania medzi experimentálnymi a simulovanými hodnotami teploty, alebo na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_inverse_heat_view_all_button.jpg' | relative_url }}), aby sa zobrazil graf pre všetky hodnoty, obr. 2DINVL1.29. ukazuje porovnanie medzi experimentálnymi a simulovanými hodnotami teploty pre bod 1.
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0028.jpg' | relative_url }})
 
-Temperature Measurement Points in Post
+Miesta merania teploty v stĺpe
 
 ![]({{ '/assets/images/labs/inverse_heat_labs/2d_inverse_heat_lab1/image0029.jpg' | relative_url }})
 
-Local Objective Optimization Result for Point 1
+Výsledok lokálnej optimalizácie pre bod 1

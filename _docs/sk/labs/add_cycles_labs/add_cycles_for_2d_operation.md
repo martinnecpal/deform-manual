@@ -1,214 +1,214 @@
 ---
 lang: sk
-title: "Add Cycles for 2D Operation"
+title: "Pridať cykly pre 2D operáciu"
 ---
 
-# Add Cycles for 2D Operation
+# Pridať cykly pre 2D operáciu
 
-1.1. Introduction
+1.1. Úvod
 
-1.2. Opening project file
+1.2. Otvorenie súboru projektu
 
-1.3. Setting the MO Project
+1.3. Nastavenie projektu MO
 
-1.3.1. Operation 1 : Furnace operation
+1.3.1. Operácia 1: Prevádzka pece
 
-1.3.2. Operation 2 : Air transfer operation
+1.3.2. Operácia 2: Operácia leteckého prevozu
 
-1.3.3. Operation 3 : Rest on die
+1.3.3. Operácia 3: Odpočinok na matrici
 
-1.3.4. Operation 4 : Forming
+1.3.4. Operácia 4: Tvarovanie
 
-1.4. Modifying the operation 4
+1.4. Úprava operácie 4
 
-1.5. Scheduled Positioning
+1.5. Plánované umiestnenie
 
-1.6. Generate Database
+1.6. Vytvorenie databázy
 
-1.7. Adding cycles
+1.7. Pridávanie cyklov
 
-1.8. Cycles page
+1.8. Stránka „Cycles“
 
-1.9. Post Processing
+1.9. Následné spracovanie
 
-## Introduction
+## Úvod
 
-The objective of this lab is to run a MO operation using cycles. If user needs to run the same deformation operation with multiple fresh parts using the same die set, we can use the ‘Cycle’ feature.
+Cieľom tohto laboratórneho cvičenia je spustiť operáciu MO pomocou cyklov. Ak potrebuje používateľ spustiť tú istú deformačnú operáciu na viacerých nových dieloch s použitím tej istej sady foriem, môžeme využiť funkciu „Cyklus“.
 
-## Opening project file
+## Otvorenie súboru projektu
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. L1.1. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** " radio button in unit field. Define Problem Name as " ******Add_cycles_2D_lab1** " and make sure the “**Show option dialog** ” check box is turned on (if we do not turn on the “Show option dialog” check box, then we will not get the New Project dialog). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new problem using the Deform Integrated Manufacturing Process.
+Vytvorte novú úlohu buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nová úloha**, alebo kliknutím na ikonu Nová úloha ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie úlohy, ako je znázornené na obr. L1.1. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte prepínač „**Angličtina**“. Názov úlohy zadajte ako „******Add_cycles_2D_lab1**“ a uistite sa, že je zaškrtnuté políčko „**Zobraziť dialógové okno s možnosťami**“ (ak nezaškrtnete políčko „Zobraziť dialógové okno s možnosťami“, nezobrazí sa vám dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s využitím integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg' | relative_url }})
 
-Problem defining window
+Problém s definovaním okna
 
-MO wizard will open along with project naming window, defined problem name is updated as ‘**Add_cycles_2D_lab1** ’ as the project name and selected unit system updated, click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to add project.
+Spustí sa sprievodca MO spolu s oknom na zadanie názvu projektu; definovaný názov úlohy sa aktualizuje na „**Add_cycles_2D_lab1**“ ako názov projektu a aktualizuje sa vybraný systém jednotiek. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pridáte projekt.
 
-## Setting the MO Project
+## Nastavenie projektu MO
 
-Initially we will simulate the MO (multiple operation) problem with four operations (3 Heat transfer and 1 Forming operation) in batch mode then we will add cycles for the Forming operation. So add three 2D Heat transfer operations and one 2D Forming operation (see Fig. L1.2.).
+Najskôr budeme simulovať problém MO (viacnásobná operácia) so štyrmi operáciami (3 operácie prenosu tepla a 1 operácia tvárnenia) v dávkovom režime, potom pridáme cykly pre operáciu tvárnenia. Pridajte teda tri 2D operácie prenosu tepla a jednu 2D operáciu tvárnenia (pozri obr. L1.2.).
 
 ![]({{ '/assets/images/labs/add_cycles_labs/add_cycles_for_2d_operation/image001.jpg' | relative_url }})
 
-Adding Heat Transfer and Forming operations
+Pridanie operácií prenosu tepla a tvárnenia
 
-###  Operation 1 : Furnace operation
+###  Operácia 1: Prevádzka pece
 
-  * Select Geometry type as 2D Axisymmetric.
+  * Ako typ geometrie vyberte „2D osovo symetrická“.
 
-  * Select heat transfer type as Heat in furnace.
+  * Ako typ prenosu tepla vyberte možnosť „Teplo v peci“.
 
-  * In process condition page, define the Heating time as 3600 sec, Environment Temperature as 2000°F and Convection coefficient as 7.7e-6 Btu/sec/in^2/F.
+  * Na stránke s podmienkami procesu nastavte čas ohrevu na 3600 sekúnd, teplotu okolia na 2000 °F a koeficient konvekcie na 7,7e-6 Btu/sek/in²/F.
 
-  * Turn on Heat transfer check box only in the Simulation controls page.
+  * Zaškrtávacie políčko „Prenos tepla“ zaškrtnite iba na stránke „Ovládacie prvky simulácie“.
 
-  * In Material window, load the material **AISI** -**8620** from DEFORM Material library, from Steel category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option.
+  * V okne „Materiál“ načítajte materiál **AISI** -**8620** z knižnice materiálov DEFORM v kategórii „Oceľ“ pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice).
 
-  * Add only one object in the Objects page.
+  * Na stránke „Objekty“ pridajte len jeden objekt.
 
-  * In workpiece page define the workpiece temperature as 68°F.
+  * Na stránke s obrobkom nastavte teplotu obrobku na 68 °F.
 
-  * In Workpiece Geometry page, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})(Load Geometry from Library) button and import ‘**Disk_wkp****.****igs** ’ from 2D\LABS Location. Check and correct the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option.
+  * Na stránke „Geometria obrobku“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) a naimportujte súbor „**Disk_wkp****.****igs**“ z priečinka 2D\LABS. Geometriu skontrolujte a opravte pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}).
 
-  * Generate the mesh using 2000 elements.
+  * Vytvorte sieť s použitím 2000 prvkov.
 
-  * To assign material for workpiece select the material ‘**AISI****-8620** ’ from material window.
+  * Ak chcete obrobku priradiť materiál, vyberte v okne materiálov materiál „**AISI****-8620**“.
 
-  * In step controls page, Set the number of simulation steps as 100 at 36sec each and saving every 10 steps
+  * Na stránke „Nastavenia krokov“ nastavte počet simulačných krokov na 100, pričom dĺžka každého kroku je 36 sekúnd, a uložte nastavenia každých 10 krokov
 
-  * Generate the DB and click ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) to go to next operation.
+  * Vytvorte databázu a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) prejdite k ďalšej operácii.
 
-### Operation 2 : Air transfer operation
+### Operácia 2: Letecká preprava
 
-  * Select heat transfer type as Transfer through Air.
+  * Ako typ prenosu tepla vyberte možnosť „Prenos vzduchom“.
 
-  * In process condition page, define the Transfer time as 15 sec, Environment Temperature as 68°F and Convection coefficient as 7.7e-6 Btu/sec/in^2/F.
+  * Na stránke s podmienkami procesu nastavte čas prenosu na 15 sekúnd, teplotu prostredia na 68 °F a koeficient konvekcie na 7,7e-6 Btu/s/in²/F.
 
-  * Since workpiece is a Read from DB object we don't have to define any other object properties.
+  * Keďže obrobok je objekt typu „Read from DB“, nemusíme definovať žiadne ďalšie vlastnosti objektu.
 
-  * In Step Controls window define number of steps as 15 at 1 sec increment and saving at every 5 steps.
+  * V okne „Step Controls“ nastavte počet krokov na 15 s krokom 1 sekunda a ukladanie každých 5 krokov.
 
-  * Visit the DB generation page and click ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) to go to next operation.
+  * Prejdite na stránku generovania databázy a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) prejdite k ďalšej operácii.
 
-### Operation3 : Rest on die
+### Operácia 3: Odpočinok na kockách
 
-  * Select heat transfer type as Rest on die.
+  * Ako typ prenosu tepla vyberte možnosť „Rest on die“.
 
-  * In process condition page, define the Transfer time as 4sec, Environment Temperature as 68°F and Convection coefficient as 7.7e-6 Btu/sec/in^2/F.
+  * Na stránke s podmienkami procesu nastavte čas prenosu na 4 s, teplotu prostredia na 68 °F a konvekčný koeficient na 7,7e-6 Btu/s/in²/F.
 
-  * In Top die Geometry page, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) ( Load Geometry from Library) button and import ‘**Disk_top****.igs** ' from 2D\LABS Location. Check and correct the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option.
+  * Na stránke „Top die Geometry“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) a načítajte súbor „**Disk_top****.igs**“ z priečinka 2D\LABS. Geometriu skontrolujte a opravte pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}).
 
-  * Generate the mesh using 600 elements.
+  * Vytvorte sieť s použitím 600 prvkov.
 
-  * In Top die material page, load the material **AISI-H13** from DEFORM Material library.
+  * Na stránke „Top die material“ načítajte materiál **AISI-H13** z knižnice materiálov DEFORM.
 
-  * In Bottom die Geometry page, click on ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) ( Load Geometry from Library) button and import ‘**Disk_btm****.igs** ' from 2D\LABS Location. Check and correct the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option.
+  * Na stránke „Geometria spodnej matrice“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) a načítajte súbor „**Disk_btm****.igs**“ z adresára 2D\LABS. Geometriu skontrolujte a opravte pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}).
 
-  * Generate the mesh using 600 elements.
+  * Vytvorte sieť s použitím 600 prvkov.
 
-  * In Bottom die material page, select the material **AISI-H13** from material window.
+  * Na stránke „Materiál spodnej matrice“ vyberte v okne materiálov materiál **AISI-H13**.
 
-  * Position the Top die using Offset positioning (x=0, y=4) towards Y direction.
+  * Umiestnite hornú matricu pomocou posunu (x=0, y=4) v smere osi Y.
 
-  * In scheduled positioning page, define the bottom die Position as interference positioning with respect to workpiece in Y direction.
+  * Na stránke „Plánované polohovanie“ definujte polohu spodnej formy ako polohu s kolíziou vo vzťahu k obrobku v smere osi Y.
 
-  * Add one relation in contact page as Bottom die as Master and Workpiece as slave, Click on ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) button, select Free resting in the pull down menu for the Heat transfer coefficient under Thermal tab.
+  * Na stránke „Kontakt“ pridajte jeden vzťah, kde „Spodná forma“ bude ako „Hlavný prvok“ a „Obrobok“ ako „Podriadený prvok“. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_button.jpg' | relative_url }}) a v roletovom menu na karte „Tepelná“ vyberte pre koeficient prenosu tepla možnosť „Voľný kontakt“.
 
-  * In Step Controls window define number of steps as 10 at 0.4 sec increment and saving at every 2 steps.
+  * V okne „Step Controls“ nastavte počet krokov na 10 s krokom 0,4 sekundy a ukladanie po každých 2 krokoch.
 
-  * Visit the DB generation page and click ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) to go to next operation.
+  * Prejdite na stránku generovania databázy a kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_opr_button.jpg' | relative_url }}) prejdite k ďalšej operácii.
 
-### Operation 4 : Forming
+### Operácia 4: Tvarovanie
 
-  * In objects page, add three Objects.
+  * Na stránke „Objekty“ pridajte tri objekty.
 
-  * In workpiece page, select the Read from DB radio button.
+  * Na stránke „Obrobok“ vyberte volič „Načítať z databázy“.
 
-  * Similarly, select Read from DB radio button for other two objects also.
+  * Podobne vyberte aj pre ostatné dva objekty volič „Čítať z databázy“.
 
-  * In Top die Movement page, assign a constant die movement of 1 in/sec in the negative 'Y’ direction.
+  * Na stránke „Top die Movement“ nastavte konštantný pohyb formy s hodnotou 1 palec/sekundu v zápornom smere osi „Y“.
 
-  * In scheduled positioning page, define the Top die Position as interference positioning with respect to workpiece in negative Y direction.
+  * Na stránke „Plánované polohovanie“ definujte hornú polohu matrice ako polohu s kolíziou vo vzťahu k obrobku v zápornom smere osi Y.
 
-  * In contact page for all default relations, define the Hot forming (lubricated) from the list. A friction value of 0.3 will automatically be selected.
+  * Na stránke „Kontakt“ pre všetky predvolené vzťahy vyberte zo zoznamu možnosť „Tepelné tvárnenie (s mazáním)“. Automaticky sa vyberie hodnota trenia 0,3.
 
-  * In step controls window, define the number of steps as 100, at 0.0725” per step of die movement, step increment to save as 10 for the primary die (which is object number 2 in this operation).
+  * V okne „Step Controls“ nastavte počet krokov na 100, rýchlosť posuvu matrice na 0,0725” na krok a krok prírastku na 10 pre primárnu maticu (ktorá je v tejto operácii objektom č. 2).
 
-  * Visit the DB generation page, save the project and select the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab.
+  * Prejdite na stránku na generovanie databázy, uložte projekt a vyberte kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}).
 
-  * Start the simulation by clicking the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label, use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button.
+  * Simuláciu spustíte kliknutím na akčný štítok ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), pomocou predvolenej možnosti **Pokračovať v behu** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}).
 
-  * After the completion of the simulation switch to Post to post processing.
+  * Po dokončení simulácie prejdite na fázu Post na následné spracovanie.
 
-  * After post processing switch to preprocessor by clicking ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) tab.
+  * Po dokončení následného spracovania prejdite do predspracovávacieho modulu kliknutím na kartu ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}).
 
-##  Modifying the operation 4
+##  Úprava operácie 4
 
-In the ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) tab, select the operation 4 (Forming operation) and click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Workpiece page.
+Na karte ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) vyberte operáciu 4 (tvarovacia operácia) a klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka „Obrobok“.
 
-### Workpiece
+### Obrobok
 
-In the workpiece page change the object type to plastic from Read from DB (see Fig. L1.3.). When we change the object type to plastic we will see the workpiece object of the 4th operation first step. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until Scheduled Positioning page.
+Na stránke „Obrobok“ zmeňte typ objektu na „plast“ v položke „Načítať z databázy“ (pozri obr. L1.3.). Po zmene typu objektu na „plast“ sa zobrazí objekt obrobku pre prvý krok 4. operácie. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), až kým sa nezobrazí stránka „Naplánované polohovanie“.
 
 ![]({{ '/assets/images/labs/add_cycles_labs/add_cycles_for_2d_operation/image002.jpg' | relative_url }})
 
-Workpiece page
+Stránka obrobku
 
-## Scheduled Positioning
+## Plánované polohovanie
 
-In the scheduled positioning page, we must make sure that top die is scheduled to position on the top of the workpiece. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until DB generation page.
+Na stránke plánovaného umiestnenia sa musíme uistiť, že horná matrica je naplánovaná tak, aby bola umiestnená na hornej strane obrobku. Klikajte na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka generovania databázy.
 
-## Generate Database
+## Vytvoriť databázu
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) action label to check the problem. Generate a database by clicking ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) action label.
+Kliknite na názov akcie ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby ste skontrolovali problém. Vytvorte databázu kliknutím na názov akcie ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
-When we click on the![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), we will get a popup of Lost steps, it will ask that all steps available under 4th operation will be lost if we generate the database. Click ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) for the popup. (see Fig. L1.4.)
+Keď klikneme na ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), zobrazí sa nám okienko s upozornením na stratu krokov, v ktorom budeme upozornení, že ak vytvoríme databázu, všetky kroky dostupné v rámci 4. operácie budú stratené. Na toto okienko kliknite na ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}). (pozri obr. L1.4.)
 
 ![]({{ '/assets/images/labs/add_cycles_labs/add_cycles_for_2d_operation/image003.jpg' | relative_url }})
 
-Lost steps popup
+Vyskakovacie okno „Stratené kroky“
 
-## Adding cycles
+## Pridávanie cyklov
 
-After generating DB select the operation editor, right click on the 4th operation and select the Add cycles. (see Fig. L1.5.)
+Po vytvorení databázy vyberte editor operácií, kliknite pravým tlačidlom myši na štvrtú operáciu a vyberte možnosť „Pridať cykly“ (pozri obr. L1.5.).
 
 ![]({{ '/assets/images/labs/add_cycles_labs/add_cycles_for_2d_operation/image004.jpg' | relative_url }})
 
-Adding Cycles
+Pridávanie cyklov
 
-## Cycles page
+## Stránka Cycles
 
-After adding Cycles click on apply to accept the default number of cycles as **5** and save the wizard (see Fig. L1.6.). Switch to the Simulation mode by selecting the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) button above the object tree. Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. L1.7. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Po pridaní cyklov kliknite na tlačidlo „Apply“, aby ste potvrdili predvolený počet cyklov **5** a uložili sprievodcu (pozri obr. L1.6.). Prejdite do režimu simulácie výberom tlačidla ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) nad stromom objektov. Kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. L1.7. Použite predvolenú možnosť **Pokračovať v spustení**, aby ste vybrali možnosť „**Pokračovať od posledného kroku**“, potom vyberte režim simulácie **Interaktívny** a kliknite na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) na spustenie simulácie.
 
 ![]({{ '/assets/images/labs/add_cycles_labs/add_cycles_for_2d_operation/image005.jpg' | relative_url }})
 
-Add cycles window
+Okno „Pridať cykly“
 
 ![]({{ '/assets/images/labs/add_cycles_labs/add_cycles_for_2d_operation/image006.jpg' | relative_url }})
 
-Simulation mode window
+Okno režimu simulácie
 
-## Post Processing
+## Následné spracovanie
 
-In step Browser, we can see the steps of Cycles operation (see Fig. L1.8.). Play the steps to see all cycle operations.
+V kroku „Prehliadač“ môžeme vidieť jednotlivé kroky operácie Cycles (pozri obr. L1.8.). Prehrajte si jednotlivé kroky, aby ste videli všetky operácie cyklu.
 
 ![]({{ '/assets/images/labs/add_cycles_labs/add_cycles_for_2d_operation/image007.jpg' | relative_url }})
 
-Post window
+Okno príspevku
 
-**State Variable:**
+**Stavová premenná:**
 
-Select Strain-Effective from post tools to look at the amount of deformation the workpiece has undergone. Click the ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) icon to bring up the State Variable window, select Strain-Effective state variable, select Solid shading by clicking on Solid display button and select ![]({{ '/assets/icons/post_icons/mo_local_scaling_radio_button.jpg' | relative_url }}) as the Scaling option. This option will use the Local Min and Max effective strain as the extremes on the color bar. Scaling, Shading and other contour plot setting can also be changed from RMB options on Color bar. Play through the steps of the simulation to observe the accumulation of strain (see Fig. L1.9.). Temperature plot shows the workpiece temperature along with dies temperature, since we made the dies as read from DB objects in forming operation, same dies used for all cycle operation and we can see the temperature change of dies for cycle operations (see Fig. L1.11.).
+V nástrojoch príspevku vyberte možnosť „Strain-Effective“, aby ste si prezreli mieru deformácie, ktorú obrobok utrpel. Kliknutím na ikonu ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) otvoríte okno „State Variable“ (Stavová premenná), vyberte stavovú premennú „Strain-Effective“ (Efektívne deformácie), vyberte vyplnenie „Solid“ (Plná farba) kliknutím na tlačidlo „Solid display“ (Zobrazenie plnou farbou) a ako možnosť „Scaling“ (Mierka) vyberte ![]({{ '/assets/icons/post_icons/mo_local_scaling_radio_button.jpg' | relative_url }}). Táto možnosť použije lokálne minimálne a maximálne efektívne deformácie ako krajné hodnoty na farebnej lište. Mierku, tieňovanie a ďalšie nastavenia kontúrového grafu je možné zmeniť aj pomocou možností pravého tlačidla myši na farebnej lište. Prejdite jednotlivými krokmi simulácie a sledujte akumuláciu deformácie (pozri obr. L1.9.). Graf teploty zobrazuje teplotu obrobku spolu s teplotou lisovacích foriem, keďže sme lisovacie formy vytvorili na základe údajov z objektov databázy v operácii tvárnenia, pre všetky operácie cyklu sa používajú rovnaké lisovacie formy a môžeme sledovať zmenu teploty lisovacích foriem počas operácií cyklu (pozri obr. L1.11.).
 
 ![]({{ '/assets/images/labs/add_cycles_labs/add_cycles_for_2d_operation/image008.jpg' | relative_url }})
 
-Strain effective plot
+Graf efektívneho napätia
 
 ![]({{ '/assets/images/labs/add_cycles_labs/add_cycles_for_2d_operation/image009.jpg' | relative_url }})
 
-Stress Effective plot
+Graf pôsobenia napätia
 
 ![]({{ '/assets/images/labs/add_cycles_labs/add_cycles_for_2d_operation/image010.jpg' | relative_url }})
 
-Temperature plot
+Graf teploty

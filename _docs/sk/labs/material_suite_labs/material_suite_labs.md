@@ -1,6 +1,6 @@
 ---
 lang: sk
-title: "Material Suite Labs"
+title: "Laboratóriá Material Suite"
 ---
 
 # Material Suite Labs
@@ -17,7 +17,7 @@ title: "Material Suite Labs"
 
 [SIESTA Lab]({{ '/docs/sk/labs/material_suite_labs/siesta_lab/' | relative_url }})
 
-**Material Parameters Fitting Labs**
+** Parametre materiálu Montážne laboratóriá**
 
 [Flow Stress Fitting Lab]({{ '/docs/sk/labs/material_suite_labs/material_parameters_fitting_labs/flow_stress_fitting_lab/' | relative_url }})
 

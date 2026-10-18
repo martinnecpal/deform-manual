@@ -1,430 +1,430 @@
 ---
 lang: sk
-title: "Gear Blank EN Lab 1"
+title: "Polotovar na ozubené kolesá EN Laboratórium 1"
 ---
 
-# Lab 1.2D upset operation
+# Laboratórna práca 1.2D – operácia deformácie
 
-### Create a new problem
+### Vytvoriť nový problém
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte položku DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte položku **DEFORM GUI Main** vxx.xx. Zobrazí sa okno DEFORM GUI Main.
 
-Create a new problem either by selecting **File![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in [Fig. L1.1.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_1_New_Problem_setup_window) Select " **Integrated Manufacturing Process** " radio button and Unit system as "**English** " using radio button. Define Problem Name as "**Gear** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie problému, ako je znázornené na obrázku [Fig. L1.1.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_1_New_Problem_setup_window). Zvoľte prepínač „**Integrovaný výrobný proces**“ a ako systém jednotiek zvoľte „**Angličtina**“ pomocou prepínača. Názov úlohy zadajte ako „**Gear**“ a uistite sa, že je zaškrtnuté políčko „Zobraziť dialógové okno s možnosťami“ (ak nezaškrtnete políčko „**Zobraziť dialógové okno s možnosťami**“, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém pomocou integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg' | relative_url }})
 
-New Problem setup window
+Okno na zadanie nového problému
 
-Multiple operation wizard will open, At this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use ‘******Gear** ** **’ as the project name and confirm that First operation check box is unchecked as we will add operation later and use the default (home) directory as shown in [Fig. L1.2.](#Fig_L1_2_MO%20New%20Project%20window) Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to continue to open new project. This lab will be referenced in future labs so it is important to use the name above.
+Otvorí sa sprievodca viacerými operáciami. V tomto bode bude používateľ vyzvaný, aby zadal názov projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názov tejto relácie. V tejto relácii použijeme ako názov projektu „******Gear** ** **“ a uistíme sa, že políčko „Prvá operácia“ nie je zaškrtnuté, keďže operáciu pridáme neskôr, a použijeme predvolený (domovský) adresár, ako je znázornené v [Fig. L1.2.](#Fig_L1_2_MO%20New%20Project%20window). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) pokračujte v otváraní nového projektu. Na túto laboratórnu úlohu sa budeme odvolávať v budúcich laboratórnych úlohách, preto je dôležité použiť vyššie uvedený názov.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0002.jpg' | relative_url }})
 
-MO New Project window
+Okno „Nový projekt“ v programe MO
 
-### Open Preprocessor
+### Otvoriť preprocesor
 
-Add the **2D Forming operation** as first operation from Explorer tab as shown in [Fig. L1.3.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_3_Adding_2D_Forming_operation_from_operation_explorer)
+Pridajte **operáciu 2D tvárnenia** ako prvú operáciu z karty Explorer, ako je znázornené na obrázku [Fig. L1.3.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_3_Adding_2D_Forming_operation_from_operation_explorer)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0003.jpg' | relative_url }})
 
-Adding 2D Forming operation from operation explorer
+Pridanie 2D tvárnej operácie z prehliadača operácií
 
-Change the default operation title to "**upset** " from Forming by selecting the title in the operation editor as shown in [Fig. L1.4.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_4_Renaming_operation_title_to_upset) and press **Enter** keyboard button.
+Zmeňte predvolený názov operácie z „Forming“ na „**upset**“ tak, že v editore operácií vyberiete názov, ako je znázornené na obrázku [Fig. L1.4.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_4_Renaming_operation_title_to_upset), a stlačíte klávesu **Enter**.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0004.jpg' | relative_url }})
 
-Renaming operation title to upset
+Zmena názvu operácie na „upset“
 
-### Select Geometry type and Simulation Modes
+### Výber typu geometrie a režimov simulácie
 
-Confirm the geometry type selected is **Axi-symmetric** in Geometry type page, then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Typ geometrie“ overte, či je zvolený typ geometrie **Axi-symetrický**, a potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-In this lab we will be showing how to setup simple Isothermal problem, so in Simulation controls page, **uncheck** the **Heat transfer mode** check box (See [Fig. L1.5.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_5_Simulation_control_window)). then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V tomto laboratórnom cvičení ukážeme, ako nastaviť jednoduchú izotermickú úlohu. Na stránke „Simulation controls“ (Ovládacie prvky simulácie) **zrušte zaškrtnutie** políčka **Heat transfer mode** (Režim prenosu tepla) (pozri [Fig. L1.5.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_5_Simulation_control_window)). Následne kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0005.jpg' | relative_url }})
 
-Simulation control window
+Okno riadenia simulácie
 
-### Add material from Library
+### Pridať materiál z knižnice
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button as shown in [Fig. L1.6.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_6_Loading_material_from_library) Select the **Steel_at_Extended_Temperatures** category, then A**ISI-8620[1550-2200F(850 -1200C)]** and click the ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať materiál z knižnice), ako je znázornené na obrázku [Fig. L1.6.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_6_Loading_material_from_library). Vyberte kategóriu **Steel_at_Extended_Temperatures**, potom A**ISI-8620[1550-2200F(850 -1200C)]** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0006.jpg' | relative_url }})
 
-Loading material from library
+Načítavanie materiálu z knižnice
 
-Material is loaded to material list, click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) for Material list window. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) for Material properties windows as we use the default properties in database for this lab.
+Materiál sa načíta do zoznamu materiálov. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby sa otvorilo okno „Zoznam materiálov“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby sa otvorilo okno „Vlastnosti materiálu“, keďže v tomto cvičení používame predvolené vlastnosti z databázy.
 
-### Set number of Objects
+### Nastaviť počet objektov
 
-The forging operation to be simulated requires a workpiece and a top and bottom die. If there aren't already three objects, add the three objects by clicking the ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) (insert object) button, Workpiece and two dies. Object window looks as shown in [Fig. L1.7.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_7_Objects_window_to_Add_or_Delete_the_objects) Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Simulovaná operácia kovania vyžaduje obrobok a hornú a dolnú matricu. Ak ešte nemáte tri objekty, pridajte ich kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_object_button.jpg' | relative_url }}) (vložiť objekt): obrobok a dve matrice. Okno s objektmi vyzerá tak, ako je znázornené na obrázku [Fig. L1.7.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_7_Objects_window_to_Add_or_Delete_the_objects). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0007.jpg' | relative_url }})
 
-Objects window to Add or Delete the objects
+Okno „Objekty“ na pridávanie alebo odstraňovanie objektov
 
-Before we proceed further, go to **Options**![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Preferences** menu option and ensure that**Y- axis** is up is the preferred upward axis. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button.
+Než budeme pokračovať ďalej, prejdite do položky ponuky **Možnosti**![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) **Nastavenia** a uistite sa, že ako preferovaná os smerujúca nahor je nastavená **os Y**. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
 
-**Graphic Display Icons**
+**Ikony na grafickom displeji**
 
-_**Icon**_ |  _**Function**_ |  _**Description**_  
+_**Ikona**_ |  _**Funkcia**_ |  _**Popis**_  
 ---|---|---  
-![]({{ '/assets/icons/pre_icons/mo_shading_mode_icon.jpg' | relative_url }}) |  View shaded objects |  Displays all objects shaded without a mesh  
-![]({{ '/assets/icons/pre_icons/mo_wirefrane_mode_icon.jpg' | relative_url }}) |  View mesh only |  Displays all objects unshaded with a mesh  
-![]({{ '/assets/icons/pre_icons/mo_shade_wireframe_icon.jpg' | relative_url }}) |  View shaded mesh |  Displays all objects shaded with a mesh  
-![]({{ '/assets/icons/pre_icons/mo_feature_line_mode_icon.jpg' | relative_url }}) |  View surface patch |  Only the feature lines of the objects are shown  
-![]({{ '/assets/icons/pre_icons/mo_refresh_icon.jpg' | relative_url }}) |  Refresh |  Refreshes the DISPLAY window and clears previous measuring lines  
-![]({{ '/assets/icons/pre_icons/mo_fit_all_icon.jpg' | relative_url }}) |  Fit view |  Fits all objects into the DISPLAY window  
-![]({{ '/assets/icons/pre_icons/mo_capture_screen_image_to_file_icon.jpg' | relative_url }}) |  Capture image |  Captures the DISPLAY window and saves it to a file  
-![]({{ '/assets/icons/pre_icons/mo_capture_screen_to_clip_board_icon.jpg' | relative_url }}) |  Capture image to clipboard |  Captures DISPLAY window and saves in memory clipboard  
+![]({{ '/assets/icons/pre_icons/mo_shading_mode_icon.jpg' | relative_url }}) |  Zobraziť tieňované objekty |  Zobrazí všetky objekty, ktoré sú tieňované bez siete  
+![]({{ '/assets/icons/pre_icons/mo_wirefrane_mode_icon.jpg' | relative_url }}) |  Zobraziť len sieť |  Zobrazí všetky objekty bez tieňovania s sieťou  
+![]({{ '/assets/icons/pre_icons/mo_shade_wireframe_icon.jpg' | relative_url }}) |  Zobraziť tieňované sieťové modely |  Zobrazí všetky objekty tieňované pomocou sieťového modelu  
+![]({{ '/assets/icons/pre_icons/mo_feature_line_mode_icon.jpg' | relative_url }}) |  Zobraziť povrchovú náplasť |  Zobrazujú sa iba charakteristické čiary objektov  
+![]({{ '/assets/icons/pre_icons/mo_refresh_icon.jpg' | relative_url }}) |  Obnoviť |  Obnoví okno DISPLAY a vymaže predchádzajúce meracie čiary  
+![]({{ '/assets/icons/pre_icons/mo_fit_all_icon.jpg' | relative_url }}) |  Zobraziť prispôsobenie |  Všetky objekty sa zmestia do okna DISPLAY  
+![]({{ '/assets/icons/pre_icons/mo_capture_screen_image_to_file_icon.jpg' | relative_url }}) |  Zachytiť obrázok |  Zachytí okno DISPLAY a uloží ho do súboru  
+![]({{ '/assets/icons/pre_icons/mo_capture_screen_to_clip_board_icon.jpg' | relative_url }}) |  Zaznamenať obrázok do schránky |  Zaznamená okno DISPLAY a uloží ho do pamäťovej schránky  
   
-### Define Workpiece general object data
+### Definovanie všeobecných údajov o obrobku
 
-Accept the default object name Workpiece. Assign the temperature as **2250** °F and confirm the object type selected is **plastic**. (See [Fig. L1.8.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_8_Workpiece_object_window)). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button.
+Prijmite predvolený názov objektu „Workpiece“. Nastavte teplotu na **2250** °F a potvrďte, že vybraný typ objektu je **plast**. (Pozri [Fig. L1.8.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_8_Workpiece_object_window)). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0008.jpg' | relative_url }})
 
-Workpiece object window
+Okno objektu obrobku
 
-Note:
+Poznámka:
 
-The Import Object button on the General tab is for importing data from a different DEFORM problem keyword or database. In most setups, you will use the “Import Geometry” option on the next tab.
+Tlačidlo „Importovať objekt“ na karte „Všeobecné“ slúži na import údajov z iného kľúčového slova úlohy DEFORM alebo z inej databázy. Vo väčšine prípadov budete používať možnosť „Importovať geometriu“ na nasledujúcej karte.
 
-### Create workpiece geometry from primitive
+### Vytvorenie geometrie obrobku z primitívu
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) button to create a geometry within DEFORM. Select **cylinder** type. The workpiece diameter is 5.00", so you will define a radius of **2.50** ", **height** of **8.15** ”, with **corner****radii** of **0.10** ”. Enter a **radius** of 2.50, a **Height** of 8.15, R1 & R2 of 0.10 (see [Fig. L1.9.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_9_2D_axi-symmetric_geometry_primitive_window)). Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) button and then observe the geometry in graphics window.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), aby ste v programe DEFORM vytvorili geometriu. Vyberte typ **valec**. Priemer obrobku je 5,00", takže nastavíte polomer **2,50**", **výšku** **8,15**” a **polomery rohov** **0,10**”. Zadajte **polomer** 2,50, **výšku** 8,15 a R1 a R2 0,10 (pozri [Fig. L1.9.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_9_2D_axi-symmetric_geometry_primitive_window)). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) a potom si prezrite geometriu v grafickom okne.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0009.jpg' | relative_url }})
 
-2D axi-symmetric geometry primitive window
+Okno s 2D osovo-symetrickými geometrickými prvkami
 
-**Display Manipulation**
+**Manipulácia s displejom**
 
-Functions that manipulate the DISPLAY window (such as Pan, Zoom, Magnify, and Rotate) can be activated using icons at the top of the Pre-processor window. These functions also have easy keyboard/mouse combination hotkeys that allow you to quickly perform these functions. Once you have read about these functions, feel free to use them to manipulate the view of the Billet in the DISPLAY window.
+Funkcie na manipuláciu s oknom DISPLAY (napríklad Posun, Zväčšenie, Zväčšenie a Otočenie) je možné aktivovať pomocou ikon v hornej časti okna predprocesora. Tieto funkcie majú tiež jednoduché klávesové skratky kombinujúce klávesy a myš, ktoré vám umožňujú rýchlo ich vykonať. Akonáhle si prečítate informácie o týchto funkciách, neváhajte ich použiť na úpravu zobrazenia polotovaru v okne DISPLAY.
 
-**Display Icons**
+**Ikony na displeji**
 
-_**Icon**_ |  _**Function**_ |  _**Description**_  
+_**Ikona**_ |  _**Funkcia**_ |  _**Popis**_  
 ---|---|---  
-![]({{ '/assets/icons/pre_icons/mo_pan_icon.jpg' | relative_url }}) |  Pan |  The objects in the DISPLAY window can be dynamically panned up, down, left, or right by moving the mouse while holding the left mouse button. (Shortcut: Shift + Left Mouse Button)  
-![]({{ '/assets/icons/pre_icons/mo_zoom_icon.jpg' | relative_url }}) |  Zoom |  The DISPLAY window can be dynamically zoomed in or out by holding the left mouse button and moving the mouse up or down. (Shortcut: Alt + Left Mouse Button)  
-![]({{ '/assets/icons/pre_icons/mo_box_zoom_icon.jpg' | relative_url }}) |  Magnify |  A portion of the DISPLAY window can to be magnified by clicking and holding the left mouse button at one corner of the zoom box and dragging the cursor to create a window encompassing the zoom area. (Shortcut: Ctrl + Alt + Left Mouse Button)  
+![]({{ '/assets/icons/pre_icons/mo_pan_icon.jpg' | relative_url }}) |  Posúvanie |  Objekty v okne DISPLAY je možné dynamicky posúvať nahor, nadol, doľava alebo doprava pohybom myši pri stlačenom ľavom tlačidle myši. (Klávesová skratka: Shift + ľavé tlačidlo myši)  
+![]({{ '/assets/icons/pre_icons/mo_zoom_icon.jpg' | relative_url }}) |  Zväčšenie/zmenšenie |  Okno DISPLAY je možné dynamicky zväčšiť alebo zmenšiť tak, že podržíte ľavé tlačidlo myši a pohybujete ňou nahor alebo nadol. (Klávesová skratka: Alt + ľavé tlačidlo myši)  
+![]({{ '/assets/icons/pre_icons/mo_box_zoom_icon.jpg' | relative_url }}) |  Zväčšiť |  Časť okna DISPLAY je možné zväčšiť tak, že kliknete a podržíte ľavé tlačidlo myši v jednom rohu rámčeka na zväčšenie a pretiahnutím kurzora vytvoríte okno, ktoré ohraničuje oblasť zväčšenia. (Klávesová skratka: Ctrl + Alt + ľavé tlačidlo myši)  
   
-**Point Selection**
+**Výber bodu**
 
-Point coordinates and distances between points can be obtained from the current display.
+Súradnice bodov a vzdialenosti medzi bodmi je možné získať z aktuálneho zobrazenia.
 
-**Point Selection Icons**
+**Ikony na výber bodov**
 
-_**Icon**_ |  _**Function**_ |  _**Description**_  
+_**Ikona**_ |  _**Funkcia**_ |  _**Popis**_  
 ---|---|---  
-![]({{ '/assets/icons/pre_icons/mo_measure_tool_icon.jpg' | relative_url }}) |  Measure |  Distances between any two points can be measured by clicking the first point and then clicking the second point. The measuring line will remain on the screen until the Refresh button is clicked.  
-![]({{ '/assets/icons/pre_icons/mo_select_icon.jpg' | relative_url }}) |  Select |  This is the default display mode and is used to select and get information about nodes and element faces. This is also the mode to be used when measuring.  
+![]({{ '/assets/icons/pre_icons/mo_measure_tool_icon.jpg' | relative_url }}) |  Meranie |  Vzdialenosti medzi ľubovoľnými dvoma bodmi je možné zmerať kliknutím na prvý bod a následným kliknutím na druhý bod. Meracie čiaročka zostane na obrazovke, kým nekliknete na tlačidlo „Obnoviť“.  
+![]({{ '/assets/icons/pre_icons/mo_select_icon.jpg' | relative_url }}) |  Vybrať |  Toto je predvolený režim zobrazenia, ktorý slúži na výber uzlov a plôch prvkov a na získavanie informácií o nich. Tento režim sa používa aj pri meraní.  
   
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to generate workpiece mesh.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste vytvorili sieť obrobku.
 
-### Generate Mesh for workpiece
+### Vytvoriť sieť pre obrobok
 
-The default target **number of elements** is **1000**. Accept the default number of elements and click the ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button to generate the mesh for workpiece as shown in [Fig. L1.10.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_10_Mesh_generation_window)
+Predvolený cieľový **počet prvkov** je **1000**. Potvrďte predvolený počet prvkov a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) vygenerujte sieť pre obrobok, ako je znázornené na obrázku [Fig. L1.10.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_10_Mesh_generation_window)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0010.jpg' | relative_url }})
 
-Mesh generation window
+Okno na generovanie siete
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to assign material for workpiece.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste obrobku priradili materiál.
 
-### Assign Material to Workpiece
+### Priradiť materiál k obrobku
 
-Click on the **AISI-8620[1550-2200F(850 -1200C)]** in the material window to assign the material to the workpiece as shown in [Fig. L1.11.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_11_Object_Material_Assigning_window)
+Kliknite na položku **AISI-8620[1550–2200 °F (850–1200 °C)]** v okne materiálov, aby ste obrobku priradili tento materiál, ako je znázornené na obrázku [Fig. L1.11.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_11_Object_Material_Assigning_window)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0011.jpg' | relative_url }})
 
-Object Material Assigning window
+Okno na priradenie materiálu objektu
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to assign the workpiece boundary conditions.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste nastavili okrajové podmienky obrobku.
 
-### Assign Workpiece boundary condition
+### Nastavenie okrajovej podmienky obrobku
 
-By default Velocity constraint Vx=0 boundary conditions assigned along the centerline as the Geometry type selection is Axi-symmetric. Confirm that the velocity is set to zero and the X direction is selected by selecting the line “X, Fixed” that appears in the Boundary Conditions tree and observing the graphics window (see [Fig. L1.12.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_12_Workpiece_Boundary_Conditions_window)).
+V predvolenom nastavení sú pozdĺž stredovej osi priradené okrajové podmienky s rýchlostným obmedzením Vx=0, keďže typ geometrie je nastavený na „Axi-symmetric“. Overte, či je rýchlosť nastavená na nulu a či je vybraný smer X, a to výberom riadku „X, Fixed“, ktorý sa zobrazí v stromovej štruktúre „Boundary Conditions“, a pozorovaním grafického okna (pozri [Fig. L1.12.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_12_Workpiece_Boundary_Conditions_window)).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0012.jpg' | relative_url }})
 
-Workpiece Boundary Conditions window
+Okno „Okrajové podmienky obrobku“
 
-If this line is not present, boundary conditions have not been added. In such case use the edge tool ![]({{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }}) and then click on any node on the center line of the workpiece to select all the nodes on that edge, then click on ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) button to apply the settings.
+Ak táto čiara chýba, znamená to, že neboli pridané okrajové podmienky. V takom prípade použite nástroj na vytvorenie hrany ![]({{ '/assets/icons/pre_icons/mo_bcc_edge_icon.jpg' | relative_url }}) a potom kliknite na ľubovoľný uzol na stredovej čiare obrobku, aby ste vybrali všetky uzly na danej hrane, a následne kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) na uplatnenie nastavení.
 
-Click on **Top die** in operation tree as there is no Movement, Property and Initialize settings to vary for workpiece object.
+Kliknite na položku **Horná matrica** v strome operácií, keďže pre objekt obrobku nie je možné meniť nastavenia „Pohyb“, „Vlastnosti“ a „Inicializácia“.
 
-### Defining Top die general object data
+### Definovanie všeobecných údajov o objekte „Top die“
 
-Keep the Top die default temperature as 68°F and confirm the object type selected is **rigid** and selected as Primary die as shown in [Fig. L1.13.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_13_Top_die_object_window)
+Nastavte predvolenú teplotu hornej formy na 68 °F a skontrolujte, či je ako typ objektu zvolená možnosť **tuhý** a či je táto forma zvolená ako primárna, ako je znázornené na obrázku [Fig. L1.13.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_13_Top_die_object_window)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0013.jpg' | relative_url }})
 
-Top die object window
+Okno s objektom „Top die“
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to define the top die geometry.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali geometriu hornej matrice.
 
-### Import and edit the Top die geometry
+### Import a úprava geometrie hornej matrice
 
-Import the top die geometry from an igs file. Click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load geometry from library) button and open (import) the file “**Flat_dies_ENG****.****igs** ”. This can also be imported using ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Load geometry from a file) button by browsing the geometry file path. The geometry for top die is located in DEFORM installation folder \2D\Labs directory.
+Načítajte geometriu hornej matrice zo súboru IGS. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať geometriu z knižnice) a otvorte (načítajte) súbor „**Flat_dies_ENG****.****igs**“. Túto geometriu je možné importovať aj pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_import_file_icon.jpg' | relative_url }}) (Načítať geometriu zo súboru) vyhľadaním cesty k súboru s geometriou. Geometria hornej matrice sa nachádza v inštalačnej zložke programu DEFORM v adresári \2D\Labs.
 
-Because there is more than one geometry in this file, you will need to select ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}) for popup informing this to open geometry automatically for editing the geometry. (See [Fig. L1.14.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_14_Top_die_Geometry_window))
+Keďže tento súbor obsahuje viac ako jednu geometriu, budete musieť v kontextovom menu vybrať možnosť ![]({{ '/assets/icons/pre_icons/mo_yes_button.jpg' | relative_url }}), aby sa automaticky otvorila príslušná geometria na úpravy. (Pozri [Fig. L1.14.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_14_Top_die_Geometry_window))
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0014.jpg' | relative_url }})
 
-Top die Geometry window
+Okno „Geometria hornej matrice“
 
-Geometry editor will be opened, select the ![]({{ '/assets/icons/pre_icons/mo_xyr_button.jpg' | relative_url }}) button above the geometry table to activate all geometry editing tool bar options. Use ![]({{ '/assets/icons/pre_icons/mo_area select.jpg' | relative_url }}) (Area select) icon, draw a box around the lower geometry to select it. and press Delete keyboard button to keep only upper geometry (See [Fig. L1.15.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_15_Boundary_selection_from_Geometry_editor_for_top_die)). Selected geometry can also be deleted by selecting the boundary to delete using ![]({{ '/assets/icons/pre_icons/mo_delete_selected.jpg' | relative_url }}) (Select deleted) icon.
+Otvorí sa editor geometrie. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_xyr_button.jpg' | relative_url }}) nad tabuľkou geometrie aktivujete všetky možnosti na paneli nástrojov na úpravu geometrie. Pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_area select.jpg' | relative_url }}) (Výber oblasti) nakreslite obdĺžnik okolo spodnej geometrie, aby ste ju vybrali, a stlačte kláves Delete, čím zachováte iba hornú geometriu (pozri [Fig. L1.15.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_15_Boundary_selection_from_Geometry_editor_for_top_die)). Vybranú geometriu môžete odstrániť aj tak, že pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_delete_selected.jpg' | relative_url }}) (Výber na odstránenie) vyberiete hranicu, ktorú chcete odstrániť.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0015.jpg' | relative_url }})
 
-Boundary selection from Geometry editor for top die
+Výber hraníc v editore geometrie pre hornú formu
 
-It is necessary to visually check the geometry orientation on the part. Click on the ![]({{ '/assets/icons/pre_icons/mo_show_inside.jpg' | relative_url }}) (Show inside) icon from top geometry tool bar to show the geometry orientation as shown in [Fig. L1.16.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_16_Reversing_the_direction_of_the_geometry_orientation) Also select ![]({{ '/assets/icons/pre_icons/mo_show_vertex_numbers_icon.jpg' | relative_url }}) (Show vertex numbers) icon to observe the direction of geometry boundary creation using numbering order of the geometry vertices, clockwise direction of creation will have the geometry orientation inside. The shading / arrows of geometry orientation should be towards inside of the part. If it is towards outside, use the ![]({{ '/assets/icons/pre_icons/mo_reverse_direction.jpg' | relative_url }}) (Reverse direction) icon and click on the geometry boundary to be reversed as shown in [Fig. L1.16.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_16_Reversing_the_direction_of_the_geometry_orientation) Click ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to close the geometry editing.
+Je potrebné vizuálne skontrolovať orientáciu geometrie na diele. Kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_show_inside.jpg' | relative_url }}) (Zobraziť vnútornú stranu) v hornom paneli nástrojov geometrie, aby sa zobrazila orientácia geometrie, ako je znázornené na obrázku [Fig. L1.16.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_16_Reversing_the_direction_of_the_geometry_orientation). Vyberte tiež ikonu ![]({{ '/assets/icons/pre_icons/mo_show_vertex_numbers_icon.jpg' | relative_url }}) (Zobraziť čísla vrcholov), aby ste mohli sledovať smer vytvárania hranice geometrie pomocou poradia číslovania vrcholov geometrie; pri vytváraní v smere hodinových ručičiek bude orientácia geometrie smerovať dovnútra. Tienenie / šípky orientácie geometrie by mali smerovať dovnútra dielu. Ak smerujú von, použite ikonu ![]({{ '/assets/icons/pre_icons/mo_reverse_direction.jpg' | relative_url }}) (Obrátiť smer) a kliknite na hranicu geometrie, ktorú chcete obrátiť, ako je znázornené na obrázku [Fig. L1.16.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_16_Reversing_the_direction_of_the_geometry_orientation). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) uzavrite úpravy geometrie.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0016.jpg' | relative_url }})
 
-Reversing the direction of the geometry orientation
+Zmena smeru orientácie geometrie
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) button to open the Check and Correct Geometry menu. Change the Geometry **open/close/auto** type to open and click the ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}) button. You should receive a message that the geometry is legal as shown in [Fig. L1.17.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_17_Check_and_correct_geometry_window_for_top_die_geometry) Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to exit the menu.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}), čím otvoríte ponuku „Skontrolovať a opraviť geometriu“. Zmeňte typ geometrie **otvoriť/zatvoriť/automaticky** na „otvoriť“ a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_and_correct_geo_button.jpg' | relative_url }}). Malo by sa vám zobraziť hlásenie, že geometria je platná, ako je znázornené na obrázku [Fig. L1.17.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_17_Check_and_correct_geometry_window_for_top_die_geometry). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) opustíte ponuku.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0017.jpg' | relative_url }})
 
-Check and correct geometry window for top die geometry
+Okno na kontrolu a opravu geometrie hornej matrice
 
-The geometry checking tool should be used on every 2D geometry you bring into DEFORM, even if the geometry looks legal.
+Nástroj na kontrolu geometrie by ste mali použiť na každú 2D geometriu, ktorú importujete do programu DEFORM, aj keď geometria vyzerá správne.
 
-Click on the **Movement** under **Top****die** in operation tree as this is an isothermal simulation there is no need to generate mesh or assign material to top die.
+Kliknite na položku **Pohyb** pod položkou **Horná forma** v strome operácií; keďže ide o izotermickú simuláciu, nie je potrebné vytvárať sieť ani priraďovať materiál k hornej forme.
 
-### Assigning movement controls to top die
+### Priradenie ovládacích prvkov pohybu k hornej kocky
 
-The default mode is constant **speed**. Input a value of **3** in/sec for the **Constant** value and confirm that the Direction is **-Y** as shown in [Fig. L1.18.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_18_Top_die_movement_controls_window)
+Predvoleným režimom je konštantná **rýchlosť**. Do poľa **Constant** zadajte hodnotu **3** in/sec a overte, či je smer nastavený na **-Y**, ako je znázornené na obrázku [Fig. L1.18.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_18_Top_die_movement_controls_window)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0018.jpg' | relative_url }})
 
-Top die movement controls window
+Okno s ovládacími prvkami pre pohyb hornej matrice
 
-Click on the **Bottom****die** in operation tree as there is no changes to do in top die property window.
+Kliknite na **spodnú****matricu** v strome operácií, keďže vo okne vlastností hornej matrice nie je potrebné vykonávať žiadne zmeny.
 
-### Defining Bottom die general object data
+### Definovanie všeobecných údajov o spodnej matrici
 
-Keep the Bottom die default temperature 68°F and confirm its object type is **rigid**. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) button to define the bottom die geometry.
+Nechajte predvolenú teplotu spodnej formy na hodnote 68 °F a overte, či je typ objektu **tuhý**. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) definujte geometriu spodnej formy.
 
-### Creating bottom die geometry from geometry editor
+### Vytvorenie geometrie spodnej matrice v editore geometrie
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}) button to define the bottom die geometry from geometry editor. Make sure **XYR** format is selected in geometry table. To define the geometry, enter the geometry points in table form as shown in [Fig. L1.19.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_19_Bottom_die_geometry_table_with_geometry)
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_edit_lable.jpg' | relative_url }}), aby ste v editore geometrie definovali geometriu spodnej matrice. Uistite sa, že v tabuľke geometrie je vybraný formát **XYR**. Geometriu definujte tak, že body geometrie zadáte do tabuľky tak, ako je to znázornené na obrázku [Fig. L1.19.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_19_Bottom_die_geometry_table_with_geometry).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0019.jpg' | relative_url }})
 
-Bottom die geometry table with geometry
+Tabuľka geometrie spodnej matrice s geometriou
 
-These points will trace out the geometry in a counter clockwise fashion to ensure that the geometry orientation is on the inside of the geometry as shown in [Fig. L1.20.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_20_Bottom_die_geometry_orientation)
+Tieto body budú vymedzovať geometriu proti smeru hodinových ručičiek, aby sa zabezpečilo, že orientácia geometrie bude smerovať dovnútra geometrie, ako je znázornené na obrázku [Fig. L1.20.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_20_Bottom_die_geometry_orientation)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0020.jpg' | relative_url }})
 
-Bottom die geometry orientation
+Orientácia geometrie spodnej matrice
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to close the geometry definition and click on the **Positioning** in operation tree to open the objects positioning window.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste uzavreli definíciu geometrie, a kliknite na položku **Polohovanie** v strome operácií, čím otvoríte okno na polohovanie objektov.
 
-### Confirm position and generate contact
+### Potvrdiť pozíciu a vytvoriť kontakt
 
-**Confirm position**
+**Potvrdiť pozíciu**
 
-The geometries should be in the correct position. Confirm that the workpiece is positioned on top of the bottom die and that the top die is positioned against the workpiece as shown in [Fig. L1.21.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_21_Correct_objects_positioning) Further positioning is not required for this operation.
+Geometrické prvky by mali byť v správnej polohe. Uistite sa, že obrobok je umiestnený na spodnej matrici a že horná matrica je priložená k obrobku, ako je znázornené na obrázku [Fig. L1.21.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_21_Correct_objects_positioning). Ďalšie polohovanie nie je pre túto operáciu potrebné.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0021.jpg' | relative_url }})
 
-Correct objects positioning
+Správne umiestnenie objektov
 
-Click on the **Contact** in operation tree to open the Inter-Object window, as there is no need of Scheduled positioning for this operation.
+Kliknutím na položku **Kontakt** v strome operácií otvoríte okno „Medzi objektmi“, keďže pre túto operáciu nie je potrebné naplánované polohovanie.
 
-Note:
+Poznámka:
 
-Scheduled positioning is explained in [lab3]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Lab3_Sequential_3D_forge_operation).
+Postup plánovaného umiestnenia je vysvetlený v dokumente [lab3]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Lab3_Sequential_3D_forge_operation).
 
-**Inter-Object Relationships: Assign Friction; Generate contact**
+**Vzťahy medzi objektmi: Nastavenie trenia; Vytvorenie kontaktu**
 
-DEFORM will automatically create default Master-Slave relationships using ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) button create three relationships as shown in [Fig. L1.22.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_22_Inter_object_window_and_Objects_with_inter-object_contacts_display) DEFORM will create three relationships. Two where each tool is the master and the workpiece is the slave. The third relationship will be a (Workpiece – Workpiece) relationship. This relationship will allow self contact of the workpiece if a fold develops.
+DEFORM automaticky vytvorí predvolené vzťahy typu „Master-Slave“ pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), čím vzniknú tri vzťahy, ako je znázornené na obrázku [Fig. L1.22.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_22_Inter_object_window_and_Objects_with_inter-object_contacts_display). DEFORM vytvorí tri vzťahy. Dva z nich budú také, v ktorých je každý nástroj hlavným prvkom a obrobok podriadeným prvkom. Tretí vzťah bude vzťahom typu (obrobok – obrobok). Tento vzťah umožní samokontakt obrobku v prípade, že dôjde k ohybu.
 
-Click on the Edit button for one of the relationships. Under the **Friction**![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Value** box, use the Constant drop down menu to select **Hot****forging**(lubricated) **0.3**. If you have experience that suggests that a different friction value would give better results for your process, you can enter that value directly in this field. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to exit the menu. Click ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) to apply the friction value to the two other relationships.
+Kliknite na tlačidlo „Edit“ pri jednom z vzťahov. V poli **Friction**![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Value** použite roletové menu „Constant“ a vyberte položku **Hot****forging**(lubricated) **0.3**. Ak máte skúsenosti, ktoré naznačujú, že iná hodnota trenia by pre váš proces priniesla lepšie výsledky, môžete túto hodnotu zadať priamo do tohto poľa. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) opustíte ponuku. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) použijete túto hodnotu trenia na ďalšie dva vzťahy.
 
-Next, assign contact. Initial contact conditions provide a starting condition for the finite element solver. After the solver calculation starts, contact is automatically updated.
+Ďalej priraďte kontakt. Počiatočné podmienky kontaktu predstavujú východiskovú situáciu pre riešiteľ konečných prvkov. Po spustení výpočtu riešiteľa sa kontakt automaticky aktualizuje.
 
-The ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerance) button calculates tolerances for contact generation. Click the ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerance) button followed by the ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) button (at bottom of the inter-object window). You should see the contact nodes on the workpiece where contact has been generated. See [Fig. L1.22.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_22_Inter_object_window_and_Objects_with_inter-object_contacts_display) for how the Inter object window looks and contact generation is displayed in graphics window.
+Tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerancia) vypočíta tolerancie pre vytvorenie kontaktov. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerancia) a následne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_all_button.jpg' | relative_url }}) (v spodnej časti okna medzi objektmi). Mali by ste vidieť uzly kontaktu na obrobku, kde bol kontakt vygenerovaný. Pozrite si [Fig. L1.22.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_22_Inter_object_window_and_Objects_with_inter-object_contacts_display), kde je zobrazené, ako vyzerá okno Inter object a ako sa generovanie kontaktu zobrazuje v grafickom okne.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0022.jpg' | relative_url }})
 
-Inter object window and Objects with inter-object contacts display
+Okno medzi objektmi a zobrazenie objektov s kontaktmi medzi objektmi
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to set primary die stroke stopping controls.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste nastavili primárne ovládacie prvky zastavenia zdvihu matrice.
 
-### Set Primary die stroke
+### Nastavenie zdvihu primárneho valca
 
-Input stopping criteria that will stop the simulation when the tool has moved **6.25** ’’. Input 6.25 into the **Max****die****stroke**(**Y** direction) field as shown in [Fig. L1.23.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_23_Primary_die_displacement_Max_die_stroke_stopping_controls)
+Zadajte kritériá ukončenia, ktoré zastavia simuláciu, keď sa nástroj posunie o **6,25** ’’. Do poľa **Max****die****stroke** (smer **Y**) zadajte hodnotu 6,25, ako je znázornené v súbore [Fig. L1.23.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_23_Primary_die_displacement_Max_die_stroke_stopping_controls)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0023.jpg' | relative_url }})
 
-Primary die displacement (Max die stroke) stopping controls
+Ovládacie prvky na zastavenie primárneho posunu formy (maximálny zdvih formy)
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to continue with assigning Step controls.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste pokračovali v priraďovaní ovládacích prvkov krokov.
 
-### Assign Step controls
+### Priradiť ovládacie prvky krokov
 
-Select the ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) (Switch to expert mode) icon (from header tool bar) to access advanced simulation controls settings because remesh criteria should be defined for this simulation.
+Kliknite na ikonu ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) (Prejsť do expertného režimu) (na paneli nástrojov v hlavičke), aby ste získali prístup k nastaveniam pokročilých ovládacích prvkov simulácie, pretože pre túto simuláciu je potrebné definovať kritériá pre vytvorenie novej siete.
 
-Observe the simulation title updated to "**upset** " as renamed in operation editor in Main tab. Go to the **Simulation****Steps** tab.
+Všimnite si, že názov simulácie sa zmenil na „**upset**“, tak ako ste ho premenovali v editore operácií na karte „Hlavné“. Prejdite na kartu **Simulácia****Kroky**.
 
-DEFORM uses a two-step process to establish the total punch movement distance:
+DEFORM používa dvojfázový postup na stanovenie celkovej vzdialenosti pohybu razníka:
 
-On the **Simulation Steps** tab, the number of steps and save interval is defined. On the **Step****Increment** tab, the time or tool movement per time step is defined. If no other stopping controls are defined, total simulation length will be approximately the **step increment** * **number of steps**.
+Na karte **Simulačné kroky** sa nastavuje počet krokov a interval ukladania. Na karte **Krok****Prírastok** sa definuje čas alebo pohyb nástroja na jeden časový krok. Ak nie sú definované žiadne ďalšie kontrolné mechanizmy zastavenia, celková dĺžka simulácie bude približne rovná **prírastku kroku** * **počtu krokov**.
 
-For this operation, the tool needs to move 6.25’’ to produce the desired shape. For a simple upset like this, 75 steps should be sufficient. Change the **Number of Simulation Steps** to **75**. Change the **Step Increment to Save** to **5** as shown in [Fig. L1.24.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_24_Advanced_Step_controls_Simulations_steps_tab)
+Na vykonanie tejto operácie sa musí nástroj posunúť o 6,25’’, aby sa dosiahol požadovaný tvar. Na takéto jednoduché vyťahovanie by malo stačiť 75 krokov. Zmeňte **Počet simulačných krokov** na **75**. Zmeňte **Krok na uloženie** na **5**, ako je znázornené v [Fig. L1.24.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_24_Advanced_Step_controls_Simulations_steps_tab)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0024.jpg' | relative_url }})
 
-Advanced Step controls Simulations steps tab
+Pokročilé nastavenia – karta „Kroky simulácie“
 
-Next, go to **Step****Increment**. The die displacement value is the total distance you want the tool to travel (6.25’’) divided by the number of steps (75). Use the With Die Displacement option to define a die displacement of **0.083** ’’ (6.25 / 75) as shown in [Fig. L1.25.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/' | relative_url }}#Fig_L1_25_Advanced_Step_controls_Step_increment_tab)
+Ďalej prejdite na **Krok****Prírastok**. Hodnota posunu matrice predstavuje celkovú vzdialenosť, ktorú má nástroj prekonať (6,25’’), vydelenú počtom krokov (75). Pomocou možnosti „With Die Displacement“ (S posunom matrice) nastavte posun matrice na hodnotu **0,083** ’’ (6,25 / 75), ako je znázornené na obrázku [Fig. L1.25.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/' | relative_url }}#Fig_L1_25_Advanced_Step_controls_Step_increment_tab).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0025.jpg' | relative_url }})
 
-Advanced Step controls Step increment tab
+Karta „Krok“ v nastaveniach „Pokročilé“
 
-On the **Stop** tab, optional specific stopping control can be specified, which can be based on:
+Na karte **Zastavenie** je možné nastaviť voliteľné špecifické riadenie zastavenia, ktoré môže byť založené na:
 
-\- forming load on object 2 (the punch or moving die)
+\- pôsobenie zaťaženia na objekt 2 (razník alebo pohyblivú matricu)
 
-\- total movement of object 2
+\- celkový posun objektu 2
 
-\- reaching a critical distance or measurement between points on two different tools.
+\- dosiahnutie kritickej vzdialenosti alebo rozmeru medzi bodmi na dvoch rôznych nástrojoch.
 
-Stopping controls reflect the **Primary die displacement** (Y direction) field 6.25’’ defined in stopping controls window earlier in guided mode.
+Ovládacie prvky zastavenia odrážajú hodnotu 6,25’’ v poli **Primárny posun matrice** (smer Y), ktorá bola predtým definovaná v okne ovládacích prvkov zastavenia v režime vedenia.
 
-Go to the **Remesh Criteria** Tab. The **Interference Depth** value should be half of a small element edge length. Measure the length of one of the smaller elements, divide by 2 and place the value in the interference depth field (See [Fig. L1.26.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_26_Advanced_Step_controls_Remesh_criteria_tab)). You should get a number around 0.02’’. A remesh will be triggered if one of the tools is able to penetrate into the workpiece by a distance of 0.02’’.
+Prejdite na kartu **Kritériá pregenerovania siete**. Hodnota **Hĺbka interferencie** by mala predstavovať polovicu dĺžky hrany malého prvku. Zmerajte dĺžku jedného z menších prvkov, vydelte ju 2 a túto hodnotu zadajte do poľa pre hĺbku interferencie (pozri [Fig. L1.26.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_26_Advanced_Step_controls_Remesh_criteria_tab)). Mali by ste dostať hodnotu okolo 0,02’’. Prepočítanie siete sa spustí, ak niektorý z nástrojov dokáže preniknúť do obrobku do vzdialenosti 0,02’’.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0026.jpg' | relative_url }})
 
-Advanced Step controls Remesh criteria tab
+Karta „Kritériá pre výpočet novej siete“ v nástroji Advanced Step
 
-Now click on **Movement** under Top die in operation tree to check the top die movement preview because step and movement definition must be defined before previewing movement.
+Teraz kliknite na položku **Pohyb** pod položkou „Horná matrica“ v strome operácií, aby ste si prezreli náhľad pohybu hornej matrice, pretože pred zobrazením náhľadu pohybu je potrebné definovať krok a pohyb.
 
-### Confirm Movement
+### Potvrdiť pohyb
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_preview_icon.jpg' | relative_url }}) (Preview object movement) button in the lower right hand corner of the screen (See [Fig. L1.18.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_18_Top_die_movement_controls_window)). Click on the ![]({{ '/assets/icons/pre_icons/mo_movement_play_button.jpg' | relative_url }}) (play) button (See [Fig. L1.27.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_27_Top_die_movement_preview_window)) and watch the top die move through the workpiece. This tool will confirm that your tool is moving in the correct direction and that you have enough steps to complete the stroke.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_preview_icon.jpg' | relative_url }}) (Náhľad pohybu objektu) v pravom dolnom rohu obrazovky (pozri [Fig. L1.18.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_18_Top_die_movement_controls_window)). Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_movement_play_button.jpg' | relative_url }}) (prehrávanie) (pozri [Fig. L1.27.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_27_Top_die_movement_preview_window)) a sledujte, ako sa horná matica pohybuje cez obrobok. Tento nástroj potvrdí, že sa váš nástroj pohybuje správnym smerom a že máte dostatok krokov na dokončenie zdvihu.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0027.jpg' | relative_url }})
 
-Top die movement preview window
+Okno s náhľadom pohybu hornej matrice
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to exit the menu and click on **Generate****DB** in the operation tree to go for DB generation.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}), aby ste opustili ponuku, a v strome operácií kliknite na **Generate****DB**, čím spustíte generovanie databázy.
 
-### Data checking and database generation
+### Kontrola údajov a vytvorenie databázy
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button as shown in [Fig. L1.28.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_28_DB_generation_window) The data checking system will confirm that all of the data is appropriate for running a simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), ako je znázornené na obrázku [Fig. L1.28.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_28_DB_generation_window). Systém kontroly údajov potvrdí, že všetky údaje sú vhodné na spustenie simulácie.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0028.jpg' | relative_url }})
 
-DB generation window
+Okno na generovanie databázy
 
-Red marks indicate missing or incorrect data that will prevent a simulation from running. It is necessary to correct the error before the database can be generated.
+Červené označenia signalizujú chýbajúce alebo nesprávne údaje, ktoré zabránia spusteniu simulácie. Pred vytvorením databázy je potrebné chybu opraviť.
 
-Yellow marks indicate data which may be suspect and should be reviewed. These should be investigated carefully, as they might result in system instability or erroneous (incorrect) results.
+Žlté značky označujú údaje, ktoré môžu byť pochybné a mali by sa preveriť. Tieto údaje je potrebné dôkladne preskúmať, pretože môžu spôsobiť nestabilitu systému alebo chybné (nesprávne) výsledky.
 
-Review the data checking information. If there are no yellow or red marks, click the ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}) button.
+Preverte informácie o kontrole údajov. Ak sa nezobrazujú žiadne žlté ani červené značky, kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}).
 
-You should look for the words: **Database has been generated**. When you see this you can be confident that your inputs have been saved to the database and you are now ready to run the simulation.
+Mali by ste hľadať text: **Databáza bola vytvorená**. Keď sa vám tento text zobrazí, môžete si byť istí, že vaše údaje boli uložené do databázy a teraz ste pripravení spustiť simuláciu.
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode button (above the operation tree) to start the simulation.
+Kliknutím na tlačidlo „![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode“ (nad stromom operácií) spustíte simuláciu.
 
-### Run and monitor a simulation
+### Spustenie a sledovanie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Run Options“ (Možnosti spustenia). Pomocou predvolenej možnosti **Continue Run** (Pokračovať v spustení) vyberte možnosť „**Continue from the last step**“ (Pokračovať od posledného kroku), potom nastavte režim simulácie na **Interactive** (Interaktívny) a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0029.jpg' | relative_url }})
 
-Running the simulation from MO simulation mode
+Spustenie simulácie z režimu simulácie MO
 
-Simulation status update in simulation jobs, simulation and log messages can be observed from other tabs.
+Aktualizácie stavu simulácie v simulačných úlohách, ako aj simulačné a protokolové správy je možné sledovať na iných kartách.
 
-The graphics region will display Simulation graphics. In Simulation graphics you can observe the progress of a simulation as it is running, by default it updates the last saved step. To update the current step user has to select the right click option Monitoring Current step.
+V grafickej oblasti sa zobrazí grafika simulácie. V grafike simulácie môžete sledovať priebeh simulácie počas jej vykonávania; štandardne sa tu aktualizuje posledný uložený krok. Ak chce používateľ aktualizovať aktuálny krok, musí kliknúť pravým tlačidlom myši a zvoliť možnosť „Monitorovanie aktuálneho kroku“.
 
-It is good practice to watch the first few steps of a simulation in simulation graphics mode to confirm that the tool movements and workpiece deformation are proceeding as expected.
+Osvedčeným postupom je sledovať prvých niekoľko krokov simulácie v grafickom režime simulácie, aby ste sa uistili, že pohyby nástroja a deformácia obrobku prebiehajú podľa očakávaní.
 
-Limited view controls are available in the simulation graphics view. In addition, the following zoom controls are available:
+V grafickom zobrazení simulácie sú k dispozícii obmedzené ovládacie prvky pre zobrazenie. Okrem toho sú k dispozícii nasledujúce ovládacie prvky pre priblíženie:
 
-\- **ctrl** – **left****mouse** : window zoom
+\- **Ctrl** – **ľavé tlačidlo myši**: zmenšenie/zväčšenie okna
 
-\- **alt** – **left****mouse** : dynamic zoom
+\- **alt** – **ľavé tlačidlo myši** : dynamické priblíženie
 
-\- **shift** – **left****mouse** : pan
+\- **shift** – **ľavé tlačidlo myši** : posun
 
-User can also change the Hot keys under **Options![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Preferences ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Hot Key.**
+Používateľ môže tiež zmeniť klávesové skratky v časti **Možnosti![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Nastavenia ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) Klávesové skratky.**
 
-These functions can be used to better view details of the workpiece as the simulation is running. When the simulation is completed, the image in the Simulation Graphics viewer will disappear. The message file (default view in main window) and log file will indicate that the simulation has been completed on the last line.
+Tieto funkcie možno využiť na lepší prehľad o podrobnostiach obrobku počas prebiehajúcej simulácie. Po dokončení simulácie sa obrázok v prehliadači Simulation Graphics skryje. V poslednom riadku súboru so správami (predvolené zobrazenie v hlavnom okne) a v súbore protokolu bude uvedené, že simulácia bola dokončená.
 
-When the simulation is completed, click the ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode button to review results.
+Po dokončení simulácie kliknite na tlačidlo „![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode“, aby ste si prezreli výsledky.
 
-### Review results in Post Mode
+### Výsledky kontroly v režime príspevku
 
-The graphics window displays the results of the calculation.
+V grafickom okne sa zobrazujú výsledky výpočtu.
 
-The saved steps are listed in a step browser at the bottom of the graphics window as shown in [Fig. L1.30.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_30_Step_browser_for_upset_operation)
+Uložené kroky sú zobrazené v prehliadači krokov v spodnej časti grafického okna, ako je znázornené na obrázku [Fig. L1.30.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_30_Step_browser_for_upset_operation)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0030.jpg' | relative_url }})
 
-Step browser for upset operation
+Krokový prehliadač pre prevádzku v núdzovom režime
 
-The play controls can be used to:
+Ovládacie prvky hry slúžia na:
 
-![]({{ '/assets/icons/pre_icons/mo_preview_play_button.jpg' | relative_url }}) **Play forward** : Displays the steps one by one until the last step is displayed from the current selected step.
+![]({{ '/assets/icons/pre_icons/mo_preview_play_button.jpg' | relative_url }}) **Prehrávanie dopredu**: Zobrazuje kroky jeden po druhom, až kým sa od aktuálne vybraného kroku nezobrazí posledný krok.
 
-![]({{ '/assets/icons/pre_icons/mo_preview_stop_button.jpg' | relative_url }}) **Stop** : Stops the playing (forward or backward) of steps.
+![]({{ '/assets/icons/pre_icons/mo_preview_stop_button.jpg' | relative_url }}) **Stop** : Zastaví prehrávanie (dopredu alebo dozadu) krokov.
 
-**![]({{ '/assets/icons/pre_icons/mo_preview_one step_forward_button.jpg' | relative_url }})Single step forward** : Move to the next saved step in the step list.
+**![]({{ '/assets/icons/pre_icons/mo_preview_one step_forward_button.jpg' | relative_url }})Jeden krok vpred** : Prejsť na ďalší uložený krok v zozname krokov.
 
-![]({{ '/assets/icons/pre_icons/mo_preview_last_step_button.jpg' | relative_url }}) **Jump to the end** : Fast forward to the last saved step in the step list.
+![]({{ '/assets/icons/pre_icons/mo_preview_last_step_button.jpg' | relative_url }}) **Preskočiť na koniec** : Preskočí na posledný uložený krok v zozname krokov.
 
-![]({{ '/assets/icons/pre_icons/mo_preview_play_back_button.jpg' | relative_url }}) **Play backward** : Displays the steps one by one in reverse order until the first step is displayed from the current selected step.
+![]({{ '/assets/icons/pre_icons/mo_preview_play_back_button.jpg' | relative_url }}) **Prehrávať spätne**: Zobrazuje kroky jeden po druhom v opačnom poradí, až kým sa od aktuálne vybraného kroku nezobrazí prvý krok.
 
-![]({{ '/assets/icons/pre_icons/mo_preview_one_step_back_button.jpg' | relative_url }}) **Single step backward** : Rewind the step list back to one saved step.
+![]({{ '/assets/icons/pre_icons/mo_preview_one_step_back_button.jpg' | relative_url }}) **Jeden krok späť**: Posuňte zoznam krokov späť o jeden uložený krok.
 
-**![]({{ '/assets/icons/pre_icons/mo_preview_last_step_button.jpg' | relative_url }})Jump to the beginning** : Rewind the step list back to the first saved step.
+**![]({{ '/assets/icons/pre_icons/mo_preview_last_step_button.jpg' | relative_url }})Preskočiť na začiatok** : Vrátiť zoznam krokov späť na prvý uložený krok.
 
-**Play through the simulation.**
+**Prejdite si simuláciu.**
 
-**Load – stroke plot**
+**Graf závislosti zaťaženia od zdvihu**
 
-Click the ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) (load-stroke) icon in the post tools. Plot the Y load vs. Stroke for the top die by selecting ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) button. The graph displays load at any point through the simulation (See [Fig. L1.31.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_31_Velocity_vector_plot_with_Load_stroke_graph_for_top_die)). The vertical step tracer bar indicates the current step. Clicking at any point on the load stroke plot (or any graph in DEFORM) will display the results at that step. The graph may be hidden or removed by right clicking on the graph item at the bottom of the tree.
+Kliknite na ikonu ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) (zaťaženie – zdvih) v nástrojoch príspevku. Vykreslite graf závislosti zaťaženia (Y) na zdvihu pre hornú maticu výberom tlačidla ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}). Graf zobrazuje zaťaženie v ľubovoľnom bode simulácie (pozri [Fig. L1.31.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_31_Velocity_vector_plot_with_Load_stroke_graph_for_top_die)). Vertikálny indikátor krokov označuje aktuálny krok. Kliknutím na ľubovoľný bod na grafe zaťaženia v závislosti od zdvihu (alebo na akýkoľvek graf v programe DEFORM) sa zobrazia výsledky v danom kroku. Graf je možné skryť alebo odstrániť kliknutím pravým tlačidlom myši na položku grafu v spodnej časti stromu.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to exit from Load stroke window to plot the state variables.
+Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) opustíte okno „Load stroke“ a môžete vykresliť stavové premenné.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0031.jpg' | relative_url }})
 
-Velocity vector plot with Load stroke graph for top die
+Graf rýchlostného vektora s grafom zdvihu zaťaženia pre hornú matricu
 
-**State variable plots**
+**Grafy stavových premenných**
 
-  * **Velocity plot**
+  * **Graf rýchlosti**
 
-Select step **75**(or any other intermediate step on the step selection bar). Click the ![]({{ '/assets/icons/post_icons/mo_vel_sv_icon.jpg' | relative_url }}) (Total Velocity) state variable icon in the **Post tools![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})** **State****Variables** short cuts. Click the ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) icon to open the state variable properties dialog. Select the Vector Plot display type and click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) button to apply the changes. The instantaneous velocities are displayed as vectors at the selected time step. Colors are included to highlight the magnitude of the velocity. (See [Fig. L1.31.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_31_Velocity_vector_plot_with_Load_stroke_graph_for_top_die))
+Vyberte krok **75** (alebo akýkoľvek iný medzistupeň na lište výberu krokov). Kliknite na ikonu stavovej premennej ![]({{ '/assets/icons/post_icons/mo_vel_sv_icon.jpg' | relative_url }}) (Celková rýchlosť) v skratkách **Post tools![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})** **State****Variables**. Kliknutím na ikonu ![]({{ '/assets/icons/post_icons/mo_state_variable_icon.jpg' | relative_url }}) otvoríte dialógové okno s vlastnosťami stavovej premennej. Vyberte typ zobrazenia Vektorový graf a kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}) potvrďte zmeny. Okamžité rýchlosti sa zobrazujú ako vektory v zvolenom časovom kroku. Farby slúžia na zvýraznenie veľkosti rýchlosti. (Pozri [Fig. L1.31.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_31_Velocity_vector_plot_with_Load_stroke_graph_for_top_die))
 
-  * **Effective strain plot**
+  * **Graf efektívneho napätia**
 
-Select **Strain![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Effective****** from state variable dialog ![]({{ '/assets/icons/post_icons/mo_deformation_icon.jpg' | relative_url }}) (Deformation) variables list. This represents the amount of deformation during the simulated process. In cold forming, this is related to work hardening.
+V dialógovom okne so stavovými premennými vyberte zoznam premenných ![]({{ '/assets/icons/post_icons/mo_deformation_icon.jpg' | relative_url }}) (Deformácia) položku **Strain![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }}) ****Effective******. Táto hodnota predstavuje veľkosť deformácie počas simulovaného procesu. Pri tvárnení za studena súvisí s pracovným spevnením.
 
-Play through the simulation and watch how strain evolves as the part forms. The state variable scales to the maximum value anywhere in the simulation.
+Prejdite si simuláciu a sledujte, ako sa deformácia vyvíja počas tvarovania dielu. Premenná stavu dosahuje maximálnu hodnotu kdekoľvek v priebehu simulácie.
 
-Select **Local** scaling and click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Play through the simulation. At each step, the state variables rescale to the maximum value at that step.
+Vyberte **Lokálne** škálovanie a kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Spustite simuláciu. V každom kroku sa stavové premenné preškálujú na maximálnu hodnotu v danom kroku.
 
-Select Solid display and click ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). The contour borders become sharp edges (See [Fig. L1.32.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_32_Effective_strain_state_variable_contour_at_local,_global_scale)).
+Vyberte možnosť „Solid display“ a kliknite na ![]({{ '/assets/icons/pre_icons/mo_apply_button.jpg' | relative_url }}). Obrysy sa zmenia na ostré hrany (pozri [Fig. L1.32.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab1/' | relative_url }}#Fig_L1_32_Effective_strain_state_variable_contour_at_local,_global_scale)).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab1_image0032.jpg' | relative_url }})
 
-Effective strain state variable contour at local, global scale
+Kontúra efektívnej premennej deformácie v miestnom a globálnom meradle
 
-When you are finished viewing results, click to exit from State variable window. The scale and plot type can also be changed from right click options on contour bar.
+Keď dokončíte prezeranie výsledkov, kliknutím zatvorte okno „State variable“. Mierku a typ grafu je možné zmeniť aj pomocou možností, ktoré sa zobrazia po kliknutí pravým tlačidlom myši na lištu s vrstevnicami.
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) mode button to switch to Pre mode to continue with the Next lab 2.
+Kliknutím na tlačidlo režimu ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) prejdete do režimu „Pre“ a budete môcť pokračovať v ďalšom laboratórnom cvičení č. 2.
 
-Click on [Lab 2. 2D to 3D Conversion to sequence 3D operation after 2D operation]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab2/' | relative_url }}) to setup Lab6.
+Kliknite na [Lab 2. 2D to 3D Conversion to sequence 3D operation after 2D operation]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab2/' | relative_url }}), aby ste nastavili Lab6.

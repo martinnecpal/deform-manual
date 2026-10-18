@@ -1,116 +1,116 @@
 ---
 lang: sk
-title: "Gear Blank SI Lab 4"
+title: "Polotovar na ozubené koleso SI Lab 4"
 ---
 
-# Lab 4. 3D Non-isothermal Air transfer operation
+# Laboratórna práca č. 4. 3D neizotermický proces prenosu vzduchu
 
-Create a new project named **Gear_t** in DEFORM as explained in lab1. This is a two operation simulation. Operation 1 is heat transfer only, representing movement of the workpiece from the heater to the tools. Operation 2 is forging, with temperature calculations enabled.
+V programe DEFORM vytvorte nový projekt s názvom **Gear_t** podľa pokynov v laboratórnej úlohe 1. Ide o simuláciu pozostávajúcu z dvoch operácií. Operácia 1 sa týka výlučne prenosu tepla a znázorňuje pohyb obrobku z ohrievača k nástrojom. Operácia 2 je kovanie s povolenými výpočtami teploty.
 
-### Add and name operation
+### Operácia pridania a pomenovania
 
-Add the 3D Heat Transfer operation from Explorer tab as shown in [Fig. L4.1.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_1_Adding_3D_Heat_Transfer_operation_and_selecting_process_window_settings)
+Pridajte operáciu „3D Heat Transfer“ z karty „Explorer“, ako je znázornené na obrázku [Fig. L4.1.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_1_Adding_3D_Heat_Transfer_operation_and_selecting_process_window_settings)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab4_image0001.jpg' | relative_url }})
 
-Adding 3D Heat Transfer operation and selecting process window settings
+Pridanie operácie 3D prenosu tepla a výber nastavení procesného okna
 
-Confirm Transfer through Air selected in Heat transfer window. Change the operation name to “**Transfer From Heater** ” in operation editor as shown in [Fig. L4.2.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_2_Naming_operation_as_Transfer_From_Heater) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Potvrďte voľbu „Prenos vzduchom“ v okne „Prenos tepla“. V editore operácií zmeňte názov operácie na „**Prenos z ohrievača**“, ako je znázornené na obrázku [Fig. L4.2.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_2_Naming_operation_as_Transfer_From_Heater). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab4_image0002.jpg' | relative_url }})
 
-Naming operation as Transfer From Heater
+Pomenovanie operácie ako „Prenos z ohrievača“
 
-### Define Process Condition
+### Definovanie podmienok procesu
 
-Set **Transfer****time** to **15** seconds (see [Fig. L4.3.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_3_Process_condition_settings_window)), representing a 15 second transfer from the furnace (or induction coils) to the tooling. Keep the default ambient air **Environment temperature** **20** °C and **Convection****coefficient****0.02** N/sec/mm/C values and click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until object window. In this operation only one object will be handled, so click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define workpiece.
+Nastavte ****čas prenosu**** na **15** sekúnd (pozri [Fig. L4.3.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_3_Process_condition_settings_window)), čo zodpovedá 15-sekundovému prenosu z pece (alebo indukčných cievok) do nástroja. Nechajte predvolené hodnoty **Teploty okolia** **20** °C a **Koeficientu konvekcie****0,02** N/s/mm/°C a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí okno objektu. V tejto operácii sa bude spracovávať len jeden objekt, preto kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) na definovanie obrobku.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab4_image0003.jpg' | relative_url }})
 
-Process condition settings window
+Okno nastavení prevádzkových podmienok
 
-### Define Workpiece general object data
+### Definovanie všeobecných údajov o obrobku
 
-Set the temperature to**1******232.** 22**°C and confirm that object type is **Plastic** as shown in [Fig. L4.4.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_4_Workpiece_object_general_definition_window) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to create the geometry from primitive.
+Nastavte teplotu na **1******232.** 22**°C a overte, či je typ objektu **Plast**, ako je znázornené v [Fig. L4.4.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_4_Workpiece_object_general_definition_window). Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) vytvorte geometriu z primitívu.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab4_image0004.jpg' | relative_url }})
 
-Workpiece object general definition window
+Okno so všeobecnou definíciou objektu obrobku
 
-### Create 3D primitive geometry
+### Vytvorenie 3D primitívnej geometrie
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}) to create a workpiece. Select a **Cylinder** from the icon list on the left. Define the workpiece **Diameter**(2R) as **127** mm and the **Height**(H) as **207.01** mm, with Corner radius (r) of **2.54** mm, Note that the height direction of the primitive is Z. Click ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) to create geometry. (See [Fig. L4.5.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_5_3D_geometry_primitive_window)) 
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_define_primitive_label.jpg' | relative_url }}), aby ste vytvorili obrobok. Zo zoznamu ikon vľavo vyberte **Valec**. Nastavte **priemer** (2R) obrobku na **127** mm a **výšku** (H) na **207,01** mm s polomerom rohu (r) **2,54** mm. Upozorňujeme, že smer výšky primitívu je Z. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button2.jpg' | relative_url }}) na vytvorenie geometrie. (Pozrite [Fig. L4.5.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_5_3D_geometry_primitive_window)) 
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab4_image0005.jpg' | relative_url }})
 
-3D geometry primitive window
+Okno s 3D geometrickými primitívami
 
-Once the geometry is available geometry tools like Check, Fix, Scale, Reverse, ..etc will be available in geometry window as shown in [Fig. L4.6.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_6_Geometry_window_options)
+Akonáhle bude geometria k dispozícii, v okne geometrie budú dostupné nástroje na prácu s geometriou, ako napríklad „Check“, „Fix“, „Scale“, „Reverse“ atď., ako je znázornené na obrázku [Fig. L4.6.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_6_Geometry_window_options)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab4_image0006.jpg' | relative_url }})
 
-Geometry window options
+Možnosti okna „Geometria“
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) until mesh page.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), kým sa nezobrazí stránka so sieťou.
 
-### Generate Mesh for Workpiece
+### Vytvorenie siete pre obrobok
 
-In Mesh page window change the preprocessor setup mode to Expert by using the ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) (Switch to expert mode) icon from the tool bar. Expert mode will provide more options for detailed settings. Define **Target number of Elements** as **20,000** elements and click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) button. Select **Absolute** mesh type, define mesh element size as **2.5** as shown in [Fig. L4.7.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_7_Advanced_mesh_settings), so for remeshing it uses Absolute mesh type. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to assign material.
+V okne stránky „Mesh“ zmeňte režim nastavení preprocesora na „Expert“ pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_expert_mode_icon.jpg' | relative_url }}) (Prejsť do režimu Expert) na paneli nástrojov. Režim „Expert“ ponúka viac možností pre podrobné nastavenia. Nastavte **Cieľový počet prvkov** na **20 000** prvkov a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}). Vyberte typ siete **Absolute**, nastavte veľkosť prvkov siete na hodnotu **2,5**, ako je znázornené na obrázku [Fig. L4.7.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_7_Advanced_mesh_settings), aby sa pri premenovaní siete použil typ Absolute. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) priraďte materiál.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab4_image0007.jpg' | relative_url }})
 
-Advanced mesh settings
+Pokročilé nastavenia mriežky
 
-### Load and assign material for workpiece
+### Načítanie a priradenie materiálu k obrobku
 
-Click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button as shown in [Fig. L1.16.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L1_16_Reversing_the_direction_of_the_geometry_orientation) Select the **Steel_at_Extended_Temperatures** category, then **AISI-8620[1550-2200F(850 -1200C)]** and click the ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať materiál z knižnice), ako je znázornené na obrázku [Fig. L1.16.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L1_16_Reversing_the_direction_of_the_geometry_orientation). Vyberte kategóriu **Steel_at_Extended_Temperatures**, potom **AISI-8620[1550-2200F(850 -1200C)]** a kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}).
 
-Click on **AISI-8620[1550-2200F(850 -1200C)]** to assign material for workpiece. Confirm the assigning from object tree displaying the material name next to material and in Assigned material information text above the material list as shown in [Fig. L1.11.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L1_11_Object_Material_Assigning_window) Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define boundary condition.
+Kliknite na **AISI-8620[1550–2200 °F (850–1200 °C)]**, aby ste obrobku priradili materiál. Potvrďte priradenie v strome objektov, kde sa názov materiálu zobrazí vedľa položky „materiál“ a v texte „Informácie o priradenom materiáli“ nad zoznamom materiálov, ako je znázornené na obrázku [Fig. L1.11.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L1_11_Object_Material_Assigning_window). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali okrajové podmienky.
 
-### Define boundary condition
+### Definovanie okrajovej podmienky
 
-Define the Heat Exchange with Environment boundary condition for the workpiece. Default BCC's are assigned, If not click on the Heat Exchange with branch. Select the entire surface of the workpiece by clicking the ![]({{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}) (Select All) button in the Pick nodes window (on the left of the tool bar below explorer). Once you have selected the nodes, click on the ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) (add boundary condition) button. Click on the Defined branch to make sure the boundary condition is defined. (See [Fig. L4.8.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_8_Confirming_boundary_condition_definition_by_selecting_Defined_branch))
+Pre obrobok definujte okrajovú podmienku „Výmena tepla s okolím“. Predvolené okrajové podmienky sú priradené; ak nie, kliknite na vetvu „Výmena tepla s okolím“. Vyberte celý povrch obrobku kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}) (Vybrať všetko) v okne „Výber uzlov“ (vľavo na paneli nástrojov pod prehliadačom). Po výbere uzlov kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_bcc_button.jpg' | relative_url }}) (pridať okrajovú podmienku). Kliknite na vetvu „Defined“, aby ste sa uistili, že je okrajová podmienka definovaná. (Pozri [Fig. L4.8.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_8_Confirming_boundary_condition_definition_by_selecting_Defined_branch))
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab4_image0008.jpg' | relative_url }})
 
-Confirming boundary condition definition by selecting Defined branch
+Potvrdenie definície okrajovej podmienky výberom vetvy „Defined“
 
-Click on **Step** branch in operation tree to define Step controls
+Kliknite na vetvu **Krok** v strome operácií, aby ste definovali ovládacie prvky kroku
 
-### Define Step controls
+### Nastavenie ovládacích prvkov krokov
 
-Switch to Guided mode ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}), set **Number of Steps** as **60** , **Step****increment** as **5** steps and Solution step definition **Time** as **0.25** **sec** for Heat Transfer operation (see [Fig. L4.9.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_9_Guided_mode_Step_controls)).
+Prepnite do režimu s návodom ![]({{ '/assets/icons/pre_icons/mo_guided_mode.jpg' | relative_url }}), nastavte **Počet krokov** na **60**, **Krok****prírastok** na **5** krokov a definíciu kroku riešenia **Čas** na **0,25** **sek** pre operáciu prenosu tepla (pozri [Fig. L4.9.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_9_Guided_mode_Step_controls)).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab4_image0009.jpg' | relative_url }})
 
-Guided mode Step controls
+Ovládacie prvky v režime s navádzaním
 
-### Generate DB and Submit to Simulate
+### Vytvoriť databázu a odoslať na simuláciu
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) and review the data checking information. Confirm no errors in data definition. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}). Confirm that Database is generated and run the simulation.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) a skontrolujte informácie o overovaní údajov. Uistite sa, že v definícii údajov nie sú žiadne chyby. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}). Uistite sa, že bola vygenerovaná databáza, a spustite simuláciu.
 
-Click on the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) MO Mode button (above the operation tree) to start the simulation.
+Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) MO Mode (nad stromom operácií) spustíte simuláciu.
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog. Use the default **Continue Run** option to select “**Continue from the last step** ” option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation.
+Kliknutím na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) otvoríte dialógové okno „Možnosti spustenia“. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“, potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu.
 
-Monitor simulation from Simulation graphics and Simulation messages. The message file and log file will indicate that the simulation has been completed on the last line. Click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode button to review results.
+Simuláciu môžete sledovať v oknách „Simulačná grafika“ a „Simulačné správy“. V poslednom riadku súboru správ a protokolu sa zobrazí informácia, že simulácia bola dokončená. Kliknutím na tlačidlo „![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode“ si môžete prezrieť výsledky.
 
-### Review Air transfer Results
+### Prehľad výsledkov leteckého prepravy
 
-After the simulation is completed, review the temperature loss in the workpiece, especially the corners.
+Po dokončení simulácie skontrolujte teplotné straty v obrobku, najmä v rohoch.
 
-Click on the ![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }}) (Plot Temperature) state variable icon from post tools. Right click on the mouse with the pointer on top the color bar and select Colorbar type / Temperature for a more realistic color selection as shown in [Fig. L4.10.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_10_Temperature_State_variable_plot_with_color_bar_type_Temperature)
+Kliknite na ikonu stavovej premennej ![]({{ '/assets/icons/post_icons/mo_temp_sv.jpg' | relative_url }}) (Zobraziť teplotu) v nástrojoch grafu. Kliknite pravým tlačidlom myši s kurzorom nad farebným pruhom a vyberte možnosť „Typ farebného pruhu / Teplota“, čím získate realistickejší výber farieb, ako je znázornené na obrázku [Fig. L4.10.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_10_Temperature_State_variable_plot_with_color_bar_type_Temperature).
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab4_image0010.jpg' | relative_url }})
 
-Temperature State variable plot with color bar type Temperature
+Graf premennej „Teplota“ s farebným pruhom typu „Teplota“
 
-Click the **Summary**![]({{ '/assets/icons/post_icons/mo_summary_icon.jpg' | relative_url }}) icon. Go to the ![]({{ '/assets/icons/post_icons/mo_thermal_sv_icon.jpg' | relative_url }}) (Thermal) tab and ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) the max and min thermal values. This plots the highest and lowest temperature anywhere in the workpiece at each step as shown in [Fig. L4.11.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_11_Temperature_summary_plot)
+Kliknite na ikonu **Súhrn**![]({{ '/assets/icons/post_icons/mo_summary_icon.jpg' | relative_url }}). Prejdite na kartu ![]({{ '/assets/icons/post_icons/mo_thermal_sv_icon.jpg' | relative_url }}) (Tepelné) a zadajte ![]({{ '/assets/icons/post_icons/mo_plot_button.jpg' | relative_url }}) maximálne a minimálne teplotné hodnoty. Tým sa v každom kroku vykreslia najvyššia a najnižšia teplota kdekoľvek v obrobku, ako je znázornené na obrázku [Fig. L4.11.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Fig_L4_11_Temperature_summary_plot)
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_si/lab4_image0011.jpg' | relative_url }})
 
-Temperature summary plot
+Graf s prehľadom teplôt
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) mode button to switch to Pre mode to continue with the sequential forming operation in [Lab 5.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Lab5_3D_Non-isothermal_Forming_operation)
+Kliknutím na tlačidlo režimu ![]({{ '/assets/icons/pre_icons/mo_pre_mode_button.jpg' | relative_url }}) prejdete do režimu Pre, aby ste mohli pokračovať v postupnom tvárnení v režime [Lab 5.]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab4/' | relative_url }}#Lab5_3D_Non-isothermal_Forming_operation)
 
-Click on [Gear Blank SI Lab 5]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab5/' | relative_url }}) to continue with the sequential forming operation.
+Kliknite na [Gear Blank SI Lab 5]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_si_lab5/' | relative_url }}), aby ste pokračovali v operácii postupného tvárnenia.

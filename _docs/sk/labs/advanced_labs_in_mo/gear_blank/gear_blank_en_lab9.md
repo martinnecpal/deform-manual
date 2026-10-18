@@ -1,114 +1,114 @@
 ---
 lang: sk
-title: "Gear Blank EN Lab 9"
+title: "Polotovar na ozubené kolesá EN Lab 9"
 ---
 
-# Lab 9 Hydraulic Press
+# Laboratórna práca č. 9: Hydraulický lis
 
-### Duplicate Project
+### Duplicitný projekt
 
-Start DEFORM and create a new project named **Gear_p**.
+Spustite program DEFORM a vytvorte nový projekt s názvom **Gear_p**.
 
-Add **3D Forming operation** and click on ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}) (Import database) in the File menu. Open the “**Gear****.****DB** ” file. Select the first step of the third (Forge) operation and click![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
+Pridajte **operáciu 3D tvarovania** a v ponuke Súbor kliknite na položku ![]({{ '/assets/icons/pre_icons/mo_import_icon.jpg' | relative_url }}) (Importovať databázu). Otvorte súbor „**Gear****.****DB**“. Vyberte prvý krok tretej operácie (Kovanie) a kliknite na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}).
 
-### Define simulation Controls
+### Definovanie ovládacích prvkov simulácie
 
-In this lab we show how to setup Hydraulic press controls for a non-isothermal simulation with heat transfer calculations for both workpiece and dies. So in **Simulation controls** check **Heat Transfer** checkbox status if not turned on, turn on the Heat Transfer checkbox.
+V tomto laboratórnom cvičení ukážeme, ako nastaviť ovládacie prvky hydraulického lisu pre neizotermickú simuláciu s výpočtami prenosu tepla pre obrobok aj lisovacie formy. V časti **Ovládacie prvky simulácie** skontrolujte stav začiarkavacieho políčka **Prenos tepla**; ak nie je začiarknuté, začiarknite ho.
 
-### Define Boundary condition for Workpiece
+### Definovanie okrajovej podmienky pre obrobok
 
-Click on **Workpiece Boundary condition** branch and define Heat exchange with environment boundary condition for entire object using ![]({{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}) (Select all) icon, if system not assigned automatically.
+Kliknite na vetvu **Okrajová podmienka obrobku** a definujte okrajovú podmienku „Výmena tepla s okolím“ pre celý objekt pomocou ikony ![]({{ '/assets/icons/pre_icons/mo_select_all_icon.jpg' | relative_url }}) (Vybrať všetko), ak systém túto podmienku nepriradil automaticky.
 
-### Define Heat transfer with Top die
+### Vysvetlenie prenosu tepla pomocou hornej formy
 
-Click on **Top****die** branch in operation tree and set temperature to **300** °F.
+Kliknite na vetvu **Top****die** v prevádzkovom strome a nastavte teplotu na **300** °F.
 
-We'll mesh both tools in order to simulate the temperature of the die. Click on **Mesh** branch in operation tree and set **20000** elements. Click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}).
+Oba nástroje prepojíme, aby sme simulovali teplotu matrice. Kliknite na vetvu **Mesh** v strome operácií a nastavte **20000** prvkov. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}).
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and click the ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material from library) button and select the **Die_material** category, then **AISI-H-13**. Assign the loaded material by selecting it in material list.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), potom na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať materiál z knižnice) a vyberte kategóriu **Die_material**, následne **AISI-H-13**. Načítaný materiál priraďte tak, že ho vyberiete zo zoznamu materiálov.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and define **Heat exchange with environment boundary condition** for entire object except top surface as shown in Fig. L9.1.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a nastavte **hraničnú podmienku výmeny tepla s okolím** pre celý objekt s výnimkou hornej plochy, ako je znázornené na obr. L9.1.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab6_image0001.jpg' | relative_url }})
 
-Top die Heat exchange with environment boundary condition surfaces
+Horná forma – výmena tepla s povrchmi okrajových podmienok prostredia
 
-### Define Hydraulic Press
+### Definícia hydraulického lisu
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to change the movement controls for Top die. Select **Hydraulic** press from the top row of radio buttons. Enter:
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste zmenili ovládacie prvky pohybu hornej matrice. Z horného riadku prepínačov vyberte možnosť **Hydraulický** lis. Zadajte:
 
-\- **Speed**(Constant): **2.5** in/sec (See Fig. L9.2.)
+\- **Rýchlosť** (konštantná): **2,5** palca/sek. (pozri obr. L9.2.)
 
-\- Check **Power****limit** and enter data using ![]({{ '/assets/icons/pre_icons/mo_define..._button2.jpg' | relative_url }}) button as shown in below Fig. L9.3.
+\- Skontrolujte **limit výkonu** a zadajte údaje pomocou tlačidla ![]({{ '/assets/icons/pre_icons/mo_define..._button2.jpg' | relative_url }}), ako je znázornené na obr. L9.3 nižšie.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab9_image0002.jpg' | relative_url }})
 
-Hydraulic press movement definition main tab
+Hlavná záložka s definíciou pohybu hydraulického lisu
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab9_image0003.jpg' | relative_url }})
 
-Power limit definition
+Definícia výkonového limitu
 
-Input a **stopping****limit**(max load of primary die) of **4000** klb in the **Y** direction. So select **Dwell** controls tab and define **Maximum****load** as **4000** klb in **Y** data field as shown in Fig. L9.4.
+Zadajte **zastavovací limit** (maximálne zaťaženie primárnej matrice) **4000** klb v smere **Y**. Vyberte teda kartu **Dwell** a v poli **Y** nastavte **Maximálne****zaťaženie** na hodnotu **4000** klb, ako je znázornené na obr. L9.4.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab9_image0004.jpg' | relative_url }})
 
-Hydraulic press stopping load defined in dwell controls tab
+Zastavovacie zaťaženie hydraulického lisu definované na karte „Ovládanie zdržania“
 
-### Define Heat transfer with Bottom die
+### Definícia prenosu tepla pomocou spodnej matrice
 
-Similar to Top die Heat transfer definition define **Bottom****die** initial Temperature to **300** °F and Mesh of **50000** Elements. (See Section[ 6.4 Define Heat transfer with Top die]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab6/' | relative_url }}#6_4_Define_Heat_transfer_with_Top_die))
+Podobne ako v definícii prenosu tepla pre hornú formu nastavte počiatočnú teplotu **spodnej****formy** na **300** °F a sieť s **50 000** prvkami. (Pozri časť [ 6.4 Define Heat transfer with Top die]({{ '/docs/sk/labs/advanced_labs_in_mo/gear_blank/gear_blank_en_lab6/' | relative_url }}#6_4_Define_Heat_transfer_with_Top_die))
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and select **AISI-H-13** from material list to assign material. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define the **Heat exchange with environment boundary condition** and select all surfaces except bottom surface as shown in Fig. L9.5.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a zo zoznamu materiálov vyberte **AISI-H-13**, aby ste priradili materiál. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste definovali **hraničnú podmienku výmeny tepla s okolím**, a vyberte všetky povrchy okrem spodného povrchu, ako je znázornené na obr. L9.5.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab6_image0003.jpg' | relative_url }})
 
-Bottom die Heat exchange with environment boundary condition surfaces
+Spodná forma – Výmena tepla s povrchmi okrajových podmienok prostredia
 
-Click on **Contact** in operation tree to define inter-object relation ship.
+Kliknite na položku **Kontakt** v strome operácií, aby ste definovali vzťah medzi objektmi.
 
-### Define Inter-object relation ship
+### Definícia vzťahov medzi objektmi
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) for any relation and add **heat****transfer****coefficient** of **0.004**. Click on ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}) to add for other relationships. Click the ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerance) button followed by the ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) button (at bottom of the inter-object window). You should see the contact nodes on the workpiece where contact has been generated. See Fig. L9.6. for how the Inter object window looks and contact generation display in graphics window.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_edit_button.jpg' | relative_url }}) pre ľubovoľný vzťah a zadajte **koeficient prenosu tepla** s hodnotou **0,004**. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_add_default_relations_button.jpg' | relative_url }}), aby ste pridali ďalšie vzťahy. Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_tolerance_icon.jpg' | relative_url }}) (Tolerancia) a následne na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_apply_to_all_button.jpg' | relative_url }}) (v spodnej časti okna medzi objektmi). Mali by ste vidieť kontaktné uzly na obrobku, kde bol kontakt vygenerovaný. Pozrite si obr. L9.6., kde je zobrazené, ako vyzerá okno medzi objektmi a zobrazenie generovania kontaktu v grafickom okne.
 
 ![]({{ '/assets/images/labs/advanced_labs_in_mo/gear_blank/gear_blank_en/lab6_image0004.jpg' | relative_url }})
 
-Top and bottom die contact with workpiece
+Horná a spodná matrica prichádzajú do styku s obrobkom
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to define stopping controls.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste nastavili ovládacie prvky zastavenia.
 
-### Define Stopping and Simulation Step controls
+### Nastavenie ovládacích prvkov zastavenia a simulačného kroku
 
-The Stopping controls **maximum****load** of **primary****die**(4000 klb) defined in primary die movement controls is reflected in stopping controls. Uncheck the Distance between die stopping controls imported from DB.
+V nastaveniach zastavenia sa zohľadňuje **maximálne****zaťaženie** **primárnej****matrice** (4000 klb), definované v nastaveniach pohybu primárnej matrice. Zrušte zaškrtnutie políčka „Vzdialenosť medzi nastaveniami zastavenia matrice“ importovaného z databázy.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) and keep the step controls definition imported from DB.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) a zachovajte definíciu ovládacích prvkov krokov importovanú z databázy.
 
-Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to check and generate DB.
+Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}), aby ste skontrolovali a vygenerovali databázu.
 
-### Generate Database and Run the simulation
+### Vytvorenie databázy a spustenie simulácie
 
-Check and Generate database and click on the ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) Mode button (above the operation tree) to start the simulation.
+Zaškrtnite políčko „Skontrolovať a vygenerovať databázu“ a kliknite na tlačidlo „Režim ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }})“ (nad stromom operácií), aby ste spustili simuláciu.
 
-Run simulation, after completing running click on ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode button to review results.
+Spustite simuláciu a po jej dokončení kliknite na tlačidlo „![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) Mode“, aby ste si prezreli výsledky.
 
-### Review Results
+### Výsledky hodnotenia
 
-In the postprocessor, go to the ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) [Graph (load-stroke)] plot, and plot the Top die velocity (Y speed) vs. Stroke.
+V postprocesore prejdite na graf ![]({{ '/assets/icons/post_icons/mo_load_stroke_icon.jpg' | relative_url }}) [Graf (zaťaženie – zdvih)] a vyneste graf rýchlosti hornej matrice (rýchlosť na osi Y) v závislosti od zdvihu.
 
-Plot the Y Load vs. Time.
+Zobrazte graf závislosti zaťaženia Y na čase.
 
-Note the temperature buildup in the die cavity near the surface. 
+Všimnite si nárast teploty v dutine formy v blízkosti povrchu. 
 
 * * *
 
-Optional exercise – time permitting
+Voliteľné cvičenie – ak to čas dovolí
 
-\- Compare the maximum load with the simulation using a constant speed approximation.
+\- Porovnajte maximálne zaťaženie so simuláciou, pri ktorej sa používa aproximácia s konštantnou rýchlosťou.
 
-\- Compare the process time with the simulation using a constant speed approximation.
+\- Porovnajte dobu trvania procesu so simuláciou, pri ktorej sa používa aproximácia s konštantnou rýchlosťou.
 
-\- Rerun the **Gear** problem with meshed tooling and by turning on **Heat transfer** check box option. Use the same inputs for the die mesh, material and temperature. Compare the temperature on the center surface of the bottom die between a constant speed approximation and this case using a hydraulic press model.
+\- Znovu spustite výpočet problému **Gear** so sieťovým modelom nástrojov a zaškrtnutím políčka **Prenos tepla**. Použite rovnaké vstupné údaje pre sieťovú modeláciu matrice, materiál a teplotu. Porovnajte teplotu na stredovej ploche spodnej matrice medzi aproximáciou s konštantnou rýchlosťou a týmto prípadom s využitím modelu hydraulického lisu.
 
-\- Export graph data and import into Excel or another program. You can right click on any graph and select Export graph data to create a text file output.
+\- Exportujte údaje z grafu a importujte ich do programu Excel alebo iného programu. Akýmkoľvek grafom môžete kliknúť pravým tlačidlom myši a vybrať možnosť „Exportovať údaje z grafu“, čím vytvoríte výstupný textový súbor.
 
 * * *

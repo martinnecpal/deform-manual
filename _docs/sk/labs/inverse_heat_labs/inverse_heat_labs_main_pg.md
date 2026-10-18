@@ -1,6 +1,6 @@
 ---
 lang: sk
-title: "Inverse Heat Labs Main Pg"
+title: "Hlavná stránka Inverse Heat Labs"
 ---
 
 # Inverse Heat Labs 

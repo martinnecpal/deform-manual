@@ -1,290 +1,290 @@
 ---
 lang: sk
-title: "Tee Non Isothermal Forging Lab"
+title: "Laboratórium neizotermického kovania Tee Non"
 ---
 
-# Tee Non isothermal Forging Lab
+# Laboratórium neizotermického kovania Tee Non
 
-In this lab we will setup simple Tee Non isothermal operation where both Workpiece and Dies are having mesh.
+V tomto laboratórnom cvičení nastavíme jednoduchý neizotermický proces typu „Tee“, pri ktorom majú obrobok aj matrice sieťovú štruktúru.
 
-1.1. Creating a New Problem
+1.1. Vytvorenie nového problému
 
-1.2. Adding 3D Forming Express operation - Tee Forging
+1.2. Pridanie operácie v programe 3D Forming Express – Kovanie T-kusov
 
-1.3. Process
+1.3. Proces
 
-1.4. Thermal Calculation
+1.4. Tepelný výpočet
 
-1.5. Number of Object selection
+1.5. Výber počtu objektov
 
-1.6. Workpiece
+1.6. Obrobok
 
-1.7. Top Die
+1.7. Horná matrica
 
-1.8. Bottom Die
+1.8. Spodná matrica
 
-1.9. Object Positioning
+1.9. Polohovanie objektov
 
-1.10. Contact page
+1.10. Stránka s kontaktnými údajmi
 
-1.11. Primary Die stroke
+1.11. Zdvih primárneho lisovacieho nástroja
 
-1.12. Stopping controls
+1.12. Ovládacie prvky na zastavenie
 
-1.13. Simulation controls
+1.13. Ovládacie prvky simulácie
 
-1.14. Generate DB
+1.14. Vytvorenie databázy
 
-1.15. Running simulation
+1.15. Spustenie simulácie
 
-1.16. Postprocessing
+1.16. Následné spracovanie
 
-## Creating a New Problem
+## Vytvorenie nového problému
 
-On a **Windows machine** , go to the ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}) button select DEFORM-v1x.xxx (.xxx indicates version number E.g. v14.0.2) and select **DEFORM GUI Main** vxx.xx from the menu. The DEFORM GUI Main window will appear, as shown in Fig. 3DTEEL1.1.
+Na **počítači so systémom Windows** prejdite na tlačidlo ![]({{ '/assets/icons/pre_icons/windows_start.jpg' | relative_url }}), vyberte DEFORM-v1x.xxx (.xxx označuje číslo verzie, napr. v14.0.2) a z ponuky vyberte **DEFORM GUI Main** vxx.xx. Zobrazí sa okno DEFORM GUI Main, ako je znázornené na obr. 3DTEEL1.1.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0001.jpg' | relative_url }})
 
-DEFORM GUI Main window
+Hlavné okno programu DEFORM GUI
 
-Create a new problem either by selecting **File** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**New Problem** or by clicking the New Problem ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}) icon. The Problem Setup window will appear as shown in Fig. 3DTEEL1.2. Select "**Integrated Manufacturing Process** " radio button and unit system as "**English** " radio button in unit field. Define Problem Name as " **TeeNonIso** " and make sure the “Show option dialog” check box is turned on (if we do not turn on the “**Show option dialog** ” check box, then we will not get the New Project dialog in MO UI). Then click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) button to open a new Problem using the Deform Integrated Manufacturing Process.
+Vytvorte nový problém buď výberom položky **Súbor** ![]({{ '/assets/icons/pre_icons/arrow_front.jpg' | relative_url }})**Nový problém**, alebo kliknutím na ikonu Nový problém ![]({{ '/assets/icons/pre_icons/mo_new_problem_icon.jpg' | relative_url }}). Zobrazí sa okno Nastavenie úlohy, ako je znázornené na obr. 3DTEEL1.2. Vyberte prepínač „**Integrovaný výrobný proces**“ a v poli jednotiek vyberte prepínač „**Anglický**“. Názov úlohy zadajte ako „**TeeNonIso**“ a uistite sa, že je zaškrtnuté políčko „Zobraziť dialógové okno s možnosťami“ (ak nezaškrtnete políčko „**Zobraziť dialógové okno s možnosťami**“, v používateľskom rozhraní MO sa nezobrazí dialógové okno Nový projekt). Potom kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}), aby ste otvorili nový problém s využitím integrovaného výrobného procesu Deform.
 
 ![]({{ '/assets/images/labs/basic_labs/2d_labs/lab_01_geometry_manipulation/image0002.jpg' | relative_url }})
 
-Problem type selection window
+Okno na výber typu problému
 
-Integrated Manufacturing Process will open (see Fig. 3DTEEL1.3.), at this point user will be prompted to specify a project name (system will create a separate folder with this project name) and title for this session. In this session we will use "************TeeNonIso**** " as the project name. Click on ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) to continue to open the operation.
+Otvorí sa okno „Integrated Manufacturing Process“ (pozri obr. 3DTEEL1.3.), kde bude používateľ vyzvaný na zadanie názvu projektu (systém vytvorí samostatnú zložku s týmto názvom projektu) a názvu tejto relácie. V tejto relácii použijeme ako názov projektu „************TeeNonIso****“. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_ok_button.jpg' | relative_url }}) pokračujte v otvorení operácie.
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0003.jpg' | relative_url }})
 
-Problem location selection window
+Okno na výber miesta problému
 
-## Adding 3D Forming Express operation - Tee Forging
+## Pridanie operácie v programe 3D Forming Express – Kovanie T-kusov
 
-Once you click on Finish button, a Multiple Operation wizard will open to setup the problem. Add 3**D Forming Express** operation from Operations list in Explorer. Operation can be added by clicking on ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) button next to 3D Forming express operation or user can also add by drag and drop into the Operation Editor.
+Po kliknutí na tlačidlo „Dokončiť“ sa otvorí sprievodca viacerými operáciami, v ktorom môžete nastaviť daný problém. Zo zoznamu operácií v Průzkumníku pridajte operáciu 3**D Forming Express**. Operáciu môžete pridať kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_add_operation_icon.jpg' | relative_url }}) vedľa operácie 3D Forming Express alebo ju môžete pridať aj pretiahnutím do Editoru operácií.
 
-**Changing operation name**
+**Zmena názvu operácie**
 
-Change the Operation name to "**Tee_Forging** " by double click on Forming field in Operation editor as shown in Fig. 3DTEEL1.4.
+Zmeňte názov operácie na „**Tee_Forging**“ dvojitým kliknutím na pole „Forming“ v editore operácií, ako je znázornené na obr. 3DTEEL1.4.
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0004.jpg' | relative_url }})
 
-Editing Operation Name
+Úprava názvu operácie
 
-## Process
+## Postup
 
-In **Process** page, select Process type as Hot Forging by selecting **Hot Forging** radio button. For this lab, we will simulate the whole part, by default Whole part will be selected if not select Geometry type as Whole part. The shape complexity and simulation accuracy slider bars influence the mesh settings and number of time steps used in the simulation. This in turn, influences the run time and level of details available in the simulation. For this simulation, set Object shape complexity as **Moderate** and Accuracy as **Fast** , as shown in Fig. 3DTEEL1.5. Then click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke **Proces** vyberte typ procesu „Kovanie za tepla“ kliknutím na prepínač **Kovanie za tepla**. V rámci tohto cvičenia budeme simulovať celý diel; ak nezvolíte typ geometrie „Celý diel“, táto možnosť bude predvolene vybraná. Posuvníky „Zložitosť tvaru“ a „Presnosť simulácie“ ovplyvňujú nastavenia siete a počet časových krokov použitých v simulácii. To zase ovplyvňuje dobu behu a úroveň detailov dostupných v simulácii. Pre túto simuláciu nastavte zložitosť tvaru objektu na **Stredná** a presnosť na **Rýchla**, ako je znázornené na obr. 3DTEEL1.5. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0005.jpg' | relative_url }})
 
-Process page
+Stránka procesu
 
-## Thermal Calculation
+## Tepelný výpočet
 
-In this operation, We will calculate temperature change in the workpiece and dies, so select **Calculate****Temperature****in****Workpiece****and****Dies** radio button (see Fig. 3DTEEL1.6.). Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V tejto operácii vypočítame zmenu teploty v obrobku a formách, preto vyberte prepínač **Vypočítať****teplotu****v****obrobku****a****formách** (pozri obr. 3DTEEL1.6.). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0006.jpg' | relative_url }})
 
-Thermal Calculation page
+Stránka „Tepelné výpočty“
 
-## Number of Object selection
+## Výber počtu objektov
 
-In this lab we will use**1 workpiece and 2 dies** , use default selection as shown in Fig. 3DTEEL1.7. and Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V tomto laboratórnom cvičení použijeme **1 obrobok a 2 matrice**, použijeme predvolený výber tak, ako je znázornené na obr. 3DTEEL1.7, a klikneme na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0007.jpg' | relative_url }})
 
-Number of Objects selection page
+Stránka na výber počtu objektov
 
-## Workpiece
+## Obrobok
 
-The workpiece will have an initial temperature of 2250F, change the Workpiece **Temperature** to **2150** °F. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). (See Fig. 3DTEEL1.8.)
+Obrobok bude mať počiatočnú teplotu 2250 °F. Zmeňte **teplotu** obrobku na **2150** °F. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}). (Pozri obr. 3DTEEL1.8.)
 
-**Note** : there is an ![]({{ '/assets/icons/pre_icons/mo_import_object.._button.jpg' | relative_url }}) button on the “object” page. This is for importing complete object data from another object data file.
+**Poznámka**: Na stránke „objekt“ sa nachádza tlačidlo ![]({{ '/assets/icons/pre_icons/mo_import_object.._button.jpg' | relative_url }}). Slúži na import kompletných údajov o objekte z iného súboru s údajmi o objektoch.
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0008.jpg' | relative_url }})
 
-Object page
+Stránka objektu
 
-### Import Workpiece Geometry
+### Import geometrie obrobku
 
-Click on Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button in Geometry page and import **TeeBillet.stl** file.
+Kliknite na tlačidlo „Načítať geometriu z knižnice ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})“ na stránke „Geometria“ a načítajte súbor **TeeBillet.stl**.
 
-Check the Geometry by clicking on ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) action label. The “Geometry Checking Result” window contains a description of what constitutes a legal geometry as shown in Fig. 3DTEEL1.9. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Skontrolujte geometriu kliknutím na akčný štítok ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Okno „Výsledok kontroly geometrie“ obsahuje popis toho, čo predstavuje správnu geometriu, ako je znázornené na obr. 3DTEEL1.9. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0009.jpg' | relative_url }})
 
-Check geometry page
+Prejdite na stránku s geometriou
 
-### Generating Mesh for Workpiece
+### Vytvorenie siete pre obrobok
 
-Reduce the number of mesh elements on the workpiece to about 14,000. We will do this to get fast run times during training. Select the **User****defined** type radio button and change the **T******ar** get number of Elements** to **14000** as shown in**** Fig. 3DTEEL1.10. and generate Mesh. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Znížte počet prvkov siete na obrobku na približne 14 000. Urobíme to s cieľom dosiahnuť rýchle časy výpočtu počas trénovania. Vyberte prepínač typu **User****defined** a zmeňte hodnotu **T******ar** get number of Elements** na **14000**, ako je znázornené na**** obr. 3DTEEL1.10, a vygenerujte sieť. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0010.jpg' | relative_url }})
 
-Workpiece mesh page
+Stránka so sieťou obrobkov
 
-### Assign Material for Workpiece
+### Priradiť materiál k obrobku
 
-In Material window, load the material **AISI-316[70-2020F(20-1100C)]** from DEFORM Material library, from **Stainless_steel** category using ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Load material data from library) option. This can be done as shown in Fig. 3DTEEL1.11. by clicking ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}) button. Material can also be loaded from Materials list in Explorer. Then click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V okne „Material“ načítajte materiál **AISI-316[70-2020F(20-1100C)]** z knižnice materiálov DEFORM, z kategórie **Stainless_steel**, pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) (Načítať údaje o materiáli z knižnice). To je možné vykonať tak, ako je znázornené na obr. 3DTEEL1.11, kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_load_button.jpg' | relative_url }}). Materiál je možné načítať aj zo zoznamu materiálov v prehliadači. Potom kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0011.jpg' | relative_url }})
 
-Material window
+Okno s materiálmi
 
-### Workpiece Boundary Condition
+### Okrajové podmienky obrobku
 
-In Boundary condition page, check the default assigned Heat exchange with Environment BCC for Workpiece, it should be assigned for whole surface of object as shown in Fig. 3DTEEL1.12., if it is not assigned by default assign manually. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Okrajové podmienky“ skontrolujte, či je pre obrobok predvolene priradená okrajová podmienka „Výmena tepla s prostredím“; táto podmienka by mala byť priradená k celému povrchu objektu, ako je znázornené na obr. 3DTEEL1.12. Ak nie je predvolene priradená, priraďte ju ručne. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0012.jpg' | relative_url }})
 
-Heat Exchange with environment Boundary condition
+Výmena tepla s okolím – okrajová podmienka
 
-## Top Die
+## Horná matrica
 
-In top die page, initialize Temperature of Top die to **300** °F, click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Top die“ nastavte teplotu hornej formy na **300** °F a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Import Top die geometry
+### Import geometrie hornej matrice
 
-Click on Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button, import **TeeTop.stl** file. Then check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknite na tlačidlo „Načítať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a importujte súbor **TeeTop.stl**. Následne skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Generate Mesh for Top die geometry
+### Vytvorenie siete pre geometriu hornej matrice
 
-Generate mesh for the Top Die using system type mesh settings value by click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) option as shown in Fig. 3DTEEL1.13. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Vytvorte sieť pre hornú matricu pomocou hodnoty nastavení siete typu systému kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}), ako je znázornené na obr. 3DTEEL1.13. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0013.jpg' | relative_url }})
 
-Top die mesh page
+Hlavná stránka o sieťovine
 
-### Assign Top die material
+### Určiť materiál hornej formy
 
-Import **AISI-H-13** material from material library and assign to top die as shown in Fig. 3DTEEL1.14. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Načítajte materiál **AISI-H-13** z knižnice materiálov a priraďte ho k hornej matrici, ako je znázornené na obr. 3DTEEL1.14. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-**Note** :This mesh is only used for temperature calculations. The geometry is still used for the deformation part of the calculations.
+**Poznámka**: Táto sieť sa používa iba na výpočty teploty. Geometria sa naďalej používa na výpočty deformácie.
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0014.jpg' | relative_url }})
 
-Top die Material page
+Hlavná stránka o materiáloch na výlisky
 
-### Assign heat Exchange with Environment Boundary condition
+### Priradenie tepelnej výmeny s okrajovou podmienkou prostredia
 
-In Boundary condition page, check the default assigned Heat exchange with Environment BCC for Top Die, it should be assigned for whole surface of object as shown in Fig. 3DTEEL1.15., if it is not assigned by default assign manually. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Okrajové podmienky“ skontrolujte, či je pre hornú matricu predvolene priradená okrajová podmienka „Výmena tepla s prostredím“; táto podmienka by mala byť priradená k celému povrchu objektu, ako je znázornené na obr. 3DTEEL1.15. Ak nie je predvolene priradená, priraďte ju ručne. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0015.jpg' | relative_url }})
 
-Assigned Heat Exchange with Environment BCC for Top die
+Priradená výmena tepla s prostredím BCC pre hornú formu
 
-### Assign Movement for Top die
+### Priradiť pohyb hornej kocky
 
-Under the movement options, select speed option. Be sure movement is in the **–Z** direction and enter a **speed** of **10** in/sec as shown in Fig. 3DTEEL1.16. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+V nastaveniach pohybu vyberte možnosť rýchlosti. Uistite sa, že pohyb prebieha v smere **–Z**, a zadajte **rýchlosť** **10** palcov za sekundu, ako je znázornené na obr. 3DTEEL1.16. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0016.jpg' | relative_url }})
 
-Top die movement page
+Hlavná stránka o pohybe matrice
 
-## Bottom Die
+## Spodná matrica
 
-In Bottom die page, initialize Temperature of Bottom die to **300** °F, Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Spodná forma“ nastavte teplotu spodnej formy na **300** °F a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Import Bottom Die
+### Import spodnej formy
 
-Click on Load Geometry from Library ![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }}) button, import **TeeBottom.stl** file. Then check the geometry using ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}) option. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknite na tlačidlo „Načítať geometriu z knižnice“ (![]({{ '/assets/icons/pre_icons/mo_load_from_library_icon.jpg' | relative_url }})) a importujte súbor **TeeBottom.stl**. Následne skontrolujte geometriu pomocou možnosti ![]({{ '/assets/icons/pre_icons/mo_check_label.jpg' | relative_url }}). Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Generate mesh
+### Vytvoriť sieť
 
-Generate mesh for the system type mesh settings value by click on ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) option. Click on ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) to material page.
+Kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_generate_mesh.jpg' | relative_url }}) vygenerujte sieť pre hodnotu nastavení typu systému. Kliknutím na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}) prejdite na stránku materiálov.
 
-### Assign Bottom die material
+### Určiť materiál spodnej matrice
 
-Select the **AISI-H-13** material from Material list to assign it to Bottom Die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Zo zoznamu materiálov vyberte materiál **AISI-H-13** a priraďte ho k spodnej matrici. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-### Assign Heat Exchange with Environment BCC
+### Priradiť výmenu tepla s prostredím BCC
 
-In Boundary condition page, check the default assigned Heat exchange with Environment BCC for Bottom Die, it should be assigned for whole surface of object as shown in Fig. 3DTEEL1.17., if it is not assigned by default assign manually. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Na stránke „Okrajové podmienky“ skontrolujte, či je pre spodnú formu predvolene priradená okrajová podmienka „Výmena tepla s okolím“; táto podmienka by mala byť priradená k celému povrchu objektu, ako je znázornené na obr. 3DTEEL1.17. Ak nie je predvolene priradená, priraďte ju ručne. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0017.jpg' | relative_url }})
 
-Assigned Heat Exchange with Environment BCC for Bottom die
+Priradená výmena tepla s prostredím BCC pre spodnú formu
 
-## Object Positioning
+## Umiestňovanie objektov
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) option object positioning will open, use the mouse to position the billet over the die cavity using both translation and rotation. Then use drop positioning to allow the billet to settle into the die cavity (see Fig. 3DTEEL1.18.), then use interference position to Top die on the Workpiece. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Kliknutím na možnosť ![]({{ '/assets/icons/pre_icons/mo_positioning_objects_button.jpg' | relative_url }}) sa otvorí okno na umiestnenie objektu; pomocou myši umiestnite polotovar nad dutinu formy pomocou posunu aj otáčania. Následne použite funkciu „drop positioning“, aby sa polotovar usadil v dutine formy (pozri obr. 3DTEEL1.18.), a potom použite funkciu „interference position“ na umiestnenie hornej formy na obrobok. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0018.jpg' | relative_url }})
 
-Object positioning page
+Stránka o umiestňovaní objektov
 
-## Contact page
+## Stránka s kontaktnými údajmi
 
-Select **User****defined** \- “**Hot****forging (lubricated)** ” for friction condition. Click ![]({{ '/assets/icons/pre_icons/mo_generate_contact_nodes_label.jpg' | relative_url }}). DEFORM will automatically mark the nodes that are initially in contact with the die. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Ako podmienku trenia vyberte **užívateľsky definované** – „**Kovanie za tepla (s mazáním)**“. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_generate_contact_nodes_label.jpg' | relative_url }}). Program DEFORM automaticky označí uzly, ktoré sú spočiatku v kontakte s lisovacou formou. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
-## Primary Die stroke
+## Zdvih primárneho valca
 
-We will forge to a flash thickness of 0.250”. Measure the current distance between the top and bottom die (see Fig. 3DTEEL1.19.), subtract 0.250, and use this as an estimated primary die stroke.
+Budeme kovať na hrúbku 0,250”. Zmerajte aktuálnu vzdialenosť medzi hornou a spodnou matricou (pozri obr. 3DTEEL1.19.), od tejto hodnoty odčítajte 0,250 a túto hodnotu použite ako odhadovaný primárny zdvih matrice.
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0019.jpg' | relative_url }})
 
-Primary Die Stroke page
+Hlavná stránka o zdvihu matrice
 
-## Stopping controls
+## Ovládacie prvky na zastavenie
 
-We want to stop when the dies are 0.25 in apart. Check **Distance between objects** check box, Enter a value of **0.25** in. Select a point on the bottom surface of the top die and a second point on the top surface of the bottom die as shown in Fig. 3DTEEL1.20. Click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Chceme zastaviť, keď budú matrice od seba vzdialené 0,25 palca. Zaškrtnite políčko **Vzdialenosť medzi objektmi**, zadajte hodnotu **0,25** palca. Vyberte bod na spodnej ploche hornej formy a druhý bod na hornej ploche spodnej formy, ako je znázornené na obr. 3DTEEL1.20. Kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0020.jpg' | relative_url }})
 
-Stopping controls page
+Stránka ovládacích prvkov zastavenia
 
-## Simulation controls
+## Ovládacie prvky simulácie
 
-Accept he Default simulation controls as shown in Fig. 3DTEEL1.21., click ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
+Použite predvolené ovládacie prvky simulácie, ako je znázornené na obr. 3DTEEL1.21, a kliknite na ![]({{ '/assets/icons/pre_icons/mo_next_button.jpg' | relative_url }}).
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0021.jpg' | relative_url }})
 
-Simulation controls page
+Stránka s ovládacími prvkami simulácie
 
-## Generate DB
+## Vytvoriť databázu
 
-In Generate DB page. Click the ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}) button to have the program check to see if anything was missed in the problem setup. During the checking process,
+Na stránke „Generate DB“ kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_check_data_button.jpg' | relative_url }}), aby program skontroloval, či v nastavení úlohy niečo nechýba. Počas kontroly
 
-Messages in the red color signify data that needs to be fixed before a simulation can be run (such as when you forget to define any material data).
+Správy v červenej farbe označujú údaje, ktoré je potrebné opraviť pred spustením simulácie (napríklad ak ste zabudli definovať údaje o materiáloch).
 
-Click on ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }})button to generate the database. When the program is done writing the database, click on ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}) tab to run simulation.
+Kliknite na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_generate_database.jpg' | relative_url }}), aby ste vytvorili databázu. Keď program dokončí zapisovanie databázy, kliknite na kartu ![]({{ '/assets/icons/pre_icons/mo_simulation_mode_button.jpg' | relative_url }}), aby ste spustili simuláciu.
 
-## Running simulation
+## Spustenie simulácie
 
-Click on the ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}) action label to open the Run Options dialog as shown in Fig. 3DTEEL1.22. Use the default **Continue Run** option to select “**Continue from the last step** ” (from step -1) option and then select the Simulation mode as **Interactive** and click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button to run the simulation. As we click on ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) button simulation starts.
+Kliknite na popisok akcie ![]({{ '/assets/icons/simulator_icons/mo_run_label_button.jpg' | relative_url }}), čím otvoríte dialógové okno „Run Options“ (Možnosti spustenia), ako je znázornené na obr. 3DTEEL1.22. Pomocou predvolenej možnosti **Pokračovať v spustení** vyberte možnosť „**Pokračovať od posledného kroku**“ (od kroku -1), potom nastavte režim simulácie na **Interaktívny** a kliknutím na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) spustite simuláciu. Po kliknutí na tlačidlo ![]({{ '/assets/icons/simulator_icons/mo_run_job_button.jpg' | relative_url }}) sa spustí simulácia.
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0022.jpg' | relative_url }})
 
-Run Simulation window
+Okno „Spustiť simuláciu“
 
-The progress of the simulation can be monitored as it is running by looking at the Simulation Message tab and Simulation Graphics from the Graphics display region in Simulation mode. As long as the ![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }}) option is checked in Simulation Message tab, which is the default setting, the Message file will refresh automatically.
+Priebeh simulácie je možné počas jej vykonávania sledovať na karte „Simulation Message“ a v časti „Simulation Graphics“ v oblasti zobrazenia „Graphics“ v režime simulácie. Pokiaľ je na karte „Simulation Message“ zaškrtnutá voľba „![]({{ '/assets/icons/simulator_icons/mo_auto_update_option.jpg' | relative_url }})“ (čo je predvolené nastavenie), súbor správ sa bude automaticky aktualizovať.
 
-The Message file provides information about which simulation step the simulation is currently on and also gives information dealing with how well the simulation is running.
+Súbor „Message“ obsahuje informácie o tom, v ktorom simulačnom kroku sa simulácia práve nachádza, a zároveň poskytuje údaje o tom, ako dobre simulácia prebieha.
 
-When the simulation is finished without any issues, check the messages in Message file, when operation completes we will see messages as, "THE DISTANCE BETWEEN TWO OBJECTS ( 2 3): 0.25000000 HAS REACHED THE SPECIFIED LIMIT 0.25000000 "
+Keď simulácia prebehne bez problémov, skontrolujte správy v súbore správ; po dokončení operácie sa zobrazia správy typu: „VZDIALENOSŤ MEDZI DVOMA OBJEKTAMI (2 3): 0,25000000 DOSIAHLA ŠPECIFIKOVANÝ LIMIT 0,25000000“
 
-## Post processing
+## Následné spracovanie
 
-After completion of Simulation, switch to ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) mode for post processing. Click on ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}) button in Step Browser to see all saved steps as shown in Fig. 3DTEEL1.23.
+Po dokončení simulácie prejdite do režimu ![]({{ '/assets/icons/pre_icons/mo_post_mode_button.jpg' | relative_url }}) na účely následného spracovania. Kliknutím na tlačidlo ![]({{ '/assets/icons/pre_icons/mo_all_button.jpg' | relative_url }}) v prehliadači krokov si môžete zobraziť všetky uložené kroky, ako je znázornené na obr. 3DTEEL1.23.
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0023.jpg' | relative_url }})
 
-Post mode
+Režim príspevku
 
-Make the dies transparent turn on the ![]({{ '/assets/icons/pre_icons/mo_show_cotact_icon.jpg' | relative_url }}) display contact nodes, play through the simulation and observe the fill pattern as shown in Fig. 3DTEEL1.24.
+Nastavte priehľadnosť výsekových foriem, zapnite kontaktné uzly zobrazenia ![]({{ '/assets/icons/pre_icons/mo_show_cotact_icon.jpg' | relative_url }}), spustite simuláciu a sledujte vzor vyplnenia, ako je znázornené na obr. 3DTEEL1.24.
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0024.jpg' | relative_url }})
 
-Post mode showing objects in transparency mode
+Režim zobrazenia, v ktorom sa objekty zobrazujú v režime priehľadnosti
 
-**State variable** :
+**Stavová premenná** :
 
-Plot the Temperature and strain variable for Workpiece and observe the plots as shown in Fig. 3DTEEL1.25. and Fig. 3DTEEL1.26.
+Zaznačte premenné teploty a deformácie obrobku a sledujte grafy tak, ako je znázornené na obr. 3DTEEL1.25 a obr. 3DTEEL1.26.
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0025.jpg' | relative_url }})
 
-Temperature state variable plot
+Graf premennej teploty
 
 ![]({{ '/assets/images/labs/forming_express_labs/3d_tee_non_isothermal_forging_lab/image0026.jpg' | relative_url }})
 
-Strain Effective variable plot
+Graf závislosti medznej deformácie od premennej
